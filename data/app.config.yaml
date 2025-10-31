@@ -1,0 +1,35 @@
+fetch:
+  max-pages-per-staff: 2
+  max-kb-per-page: 100
+  allowlist-domains:
+    - "oslonyehoyskole.no"
+    - "nva.sikt.no"
+    - "scholar.google.com"
+    - "orcid.org"
+  offline-snapshots-dir: "data/offline_snapshots"
+
+cache:
+  enabled: true
+  retention-days: 14
+  directory: "data/cache"
+
+results:
+  max-candidates: 10
+  min-similarity-score: 0.25
+  diversity-weight: 0.1
+
+ui:
+  allow-department-filter: true
+  language: "no"
+  export-formats:
+    - "pdf"
+    - "json"
+
+security:
+  allow-file-types:
+    - "pdf"
+    - "docx"
+    - "pptx"
+    - "txt"
+    - "md"
+  max-upload-mb: 10

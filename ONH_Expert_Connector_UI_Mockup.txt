@@ -1,0 +1,191 @@
+ONH Expert Connector — UI Mock-up Description (for Codex)
+
+Overall Principles
+- Single-page app (SPA) with minimal steps.
+- No login anywhere.
+- Teacher provides topic text and optional files, optionally filters by department, gets a ranked list of staff with reasons and links.
+- Shortlist and export available. No email generation. No campus/language filters. No “methods expert” toggle.
+
+Primary Screen States
+1) Home / Input
+2) Review Themes
+3) Results
+4) Shortlist / Export
+
+Global UI Elements
+- Top bar: App title “ONH Expert Connector”; right side: “Shortlist (n)” button opens Shortlist panel/drawer.
+- Toast/alert area (top-right) for success/warning messages.
+- Modal component (reusable) for “View Sources” (shows citations/links used for a staff member’s reasoning).
+
+Color/Style
+- Neutral background; simple ONH-like accent (one color).
+- Large readable text; AA contrast at minimum.
+- Keyboard accessible, tab order predictable, aria-labels for form elements.
+
+----------------------------------------------------------------------------------------------------
+1) Home / Input
+----------------------------------------------------------------------------------------------------
+Goal: Teacher enters topic text, optionally uploads files, and sets the optional department filter.
+
+Layout:
+- Container centered, width ~900px.
+- Section: “Describe your course or material”
+  - <textarea id="topicInput" placeholder="Skriv noen avsnitt om tema, læringsmål, pensum, osv." aria-label="Topic description">
+  - Character counter (soft limit: 3000 chars).
+- Section: “Legg til filer (valgfritt)”
+  - <input type="file" id="fileUpload" multiple accept=".pdf,.docx,.pptx,.txt,.md">
+  - Small note: “Maks 10 MB per fil. Støttede formater: PDF, DOCX, PPTX, TXT, MD.”
+- Section: “Avdeling (valgfritt) ”
+  - <select id="departmentFilter">
+    - <option value="">Alle</option>
+    - (Populate from staff.yaml unique departments)
+- Action row:
+  - <button id="analyzeBtn">Analyser tema</button>  (primary action)
+  - Button is disabled until topic text OR at least one file is provided.
+- Footer hint text: “Appen leser kun offentlig tilgjengelige sider du har forhåndsgodkjent i staff.yaml.”
+
+State & Validation:
+- If file exceeds size/type, show inline error next to file picker.
+- If network/fetch blocked by allowlist, show toast warning with the blocked domain.
+- “Analyser tema” transitions to Review Themes state.
+
+----------------------------------------------------------------------------------------------------
+2) Review Themes
+----------------------------------------------------------------------------------------------------
+Goal: Let teacher see and adjust extracted topics/keywords before matching.
+
+Layout:
+- Header: “Gjennomgå temaer” + small “Tilbake” link to Home.
+- “Foreslåtte temaer” (chips) section:
+  - Render chips from the analysis: e.g., <span class="chip">helseatferd</span>
+  - Each chip has an “x” remove button.
+  - <input id="addChipInput" placeholder="Legg til tema..."> + <button id="addChipBtn">Legg til</button>
+- Read-only preview of first 400–600 chars of normalized text derived from uploaded files (for transparency).
+- Action row:
+  - <button id="runMatchBtn">Finn relevante ansatte</button> (primary)
+  - <button id="backToInputBtn">Tilbake</button>
+
+Behavior:
+- Removing/adding chips updates the payload to /match.
+- Department filter persists from Home; show it read-only here or allow changing in a small dropdown.
+
+----------------------------------------------------------------------------------------------------
+3) Results
+----------------------------------------------------------------------------------------------------
+Goal: Show a ranked list of staff with “why matched” explanations and source links. Allow shortlist.
+
+Layout: Two-column responsive layout
+- Left column (filters/sorting) ~280px
+  - “Avdeling” dropdown: same as Home; changing refilters immediately.
+  - Sort dropdown: “Relevans (standard) | Nylige publikasjoner | Alfabetisk” (optional; default: Relevans)
+  - Results count summary: “Viser N av M treff”
+- Right column (cards list) flexible width
+  - For each staff candidate (Card component):
+    - Header row:
+      - Name (h3) + department (badge)
+      - Score indicator (0–100) small meter with tooltip (“kombinert nøkkelord + semantisk treff”)
+    - Why matched (2–4 sentences), grounded in evidence.
+      - Inline citation anchors like [1], [2].
+      - “Vis kilder” link-button opens modal with source snippet list:
+        - Source list: Title or URL host; per item show the exact sentence(s) used (up to 2–3 lines) + “Åpne lenke”
+    - Actions row:
+      - <button class="secondary" data-id="X" aria-label="Legg til kortliste">Legg til kortliste</button>
+- Empty state:
+  - If no matches: “Ingen treff. Prøv å legge til/endre temaer eller fjern avdelingsfilteret.”
+  - Provide a “Tilbake til temaer” button.
+- Pagination or “last inn mer” if > 10 results.
+
+Interactions:
+- “Legg til kortliste” toggles to “Fjern fra kortliste” and updates the header counter (“Shortlist (n)”).
+- Clicking “Vis kilder” opens a modal:
+  - Modal title: “Kilder brukt for: {Staff Name}”
+  - List each source with: favicon/host, page title (if available), and quoted snippet(s). Links open in new tab.
+
+Performance Hints (UI-level):
+- Lazy render cards with intersection observers if list > 20 (rare).
+- Skeleton loaders for cards while matching runs.
+
+----------------------------------------------------------------------------------------------------
+4) Shortlist / Export
+----------------------------------------------------------------------------------------------------
+Goal: Let teacher review saved candidates and export.
+
+Access:
+- Opened by clicking “Shortlist (n)” in the top bar (drawer or dedicated page).
+
+Layout (Drawer or Page):
+- Title: “Kortliste”
+- For each shortlisted staff:
+  - Mini card: Name, Department, the top 1–2 sentence “why matched”, and a small “[Kilder]” link (reuses the same modal component).
+  - Optional free-form notes <textarea class="note"> for the teacher (local only).
+  - Remove button.
+- Actions row:
+  - <button id="exportPDFBtn">Eksporter som PDF</button>
+  - <button id="exportJSONBtn">Eksporter som JSON</button>
+
+Behavior:
+- PDF export includes: timestamp, original topic text, active department filter, each staff with their “why” and source links.
+- JSON export includes full data payload used by the UI for portability.
+- Shortlist is held in local app state (and optionally saved in /outputs/exports when user exports).
+
+----------------------------------------------------------------------------------------------------
+Accessibility & i18n
+- All interactive elements have aria-labels and focus states.
+- Keyboard-only navigation supported (Enter/Space activation, Escape to close modals).
+- Language strings in a simple key map to enable later English/Norwegian switches (UI text defaults to Norwegian as indicated above).
+
+----------------------------------------------------------------------------------------------------
+Component IDs / Classes (suggested)
+- #topicInput, #fileUpload, #departmentFilter, #analyzeBtn
+- #runMatchBtn, #backToInputBtn
+- .chip, #addChipInput, #addChipBtn
+- .resultsSidebar, #resultsSort, #resultsCount
+- .resultCard, .resultHeader, .resultWhy, .resultActions, .resultScore
+- .shortlistDrawer, .shortlistItem, .note
+- #exportPDFBtn, #exportJSONBtn
+- .modal, .modalHeader, .modalBody, .modalClose
+
+----------------------------------------------------------------------------------------------------
+State & API Contracts (UI perspective)
+- POST /analyze-topic
+  - Input: { text: string, files?: [File], department?: string }
+  - Output: { themes: string[], normalizedPreview: string }
+- POST /match
+  - Input: { themes: string[], department?: string }
+  - Output: {
+      results: [{
+        id: string,
+        name: string,
+        department: string,
+        score: number,
+        why: string,                // 2–4 sentences, grounded
+        citations: [{
+          id: string,               // e.g., [1], [2]
+          title?: string,
+          url: string,
+          snippet: string
+        }]
+      }],
+      total: number
+    }
+- GET /shortlist
+  - Output: { items: [...] }
+- POST /shortlist (replace)
+  - Input: { items: [...] }
+
+----------------------------------------------------------------------------------------------------
+Empty/Error States
+- File parse error: inline message next to file; allow removing/re-adding.
+- Fetch blocked by allowlist: toast warning with domain name and a link to “Les mer” (help page).
+- No themes extracted: suggest manual chip addition.
+- No matches: suggest removing department filter or refining topic text.
+
+----------------------------------------------------------------------------------------------------
+Non-Goals (reiterated)
+- No login.
+- No email/message generation.
+- No campus/language filters.
+- No researcher/admin UI.
+- No continuous crawling (only fetch allowed URLs from staff.yaml at match time).
+
+This description is intended to be immediately implementable by Codex: start with static HTML/CSS for the four states, wire up buttons and modals, then connect the API endpoints.

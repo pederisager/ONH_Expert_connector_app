@@ -1,0 +1,11 @@
+llm_model:
+  name: "llama3.1:8b-instruct-q4_0"
+  backend: "ollama"
+  endpoint: "http://localhost:11434"
+  purpose: "generate explanations"
+
+embedding_model:
+  name: "nomic-embed-text"
+  backend: "ollama"
+  endpoint: "http://localhost:11434"
+  device: "cpu"

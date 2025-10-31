@@ -1,0 +1,372 @@
+"""API routers for the ONH Expert Connector."""
+
+from __future__ import annotations
+
+import asyncio
+import hashlib
+from typing import Any, Literal, Sequence
+
+import httpx
+from fastapi import APIRouter, HTTPException, Request, UploadFile, status
+from pydantic import BaseModel, Field
+
+from .cache_manager import CacheManager
+from .config_loader import AppConfig
+from .exporter import ShortlistExporter
+from .fetch_utils import FetchNotAllowedError, FetchUtils
+from .file_parser import FileParser, UnsupportedFileTypeError
+from .llm_explainer import LLMExplainer
+from .match_engine import MatchEngine, PageContent, StaffDocument, StaffProfile, extract_themes
+from .shortlist_store import ShortlistStore
+
+router = APIRouter()
+
+
+# --------------------------------------------------------------------------- #
+# Pydantic schemas
+# --------------------------------------------------------------------------- #
+
+
+class AnalyzeTopicResponse(BaseModel):
+    themes: list[str]
+    normalized_preview: str = Field(alias="normalizedPreview")
+
+
+class MatchRequest(BaseModel):
+    themes: list[str]
+    department: str | None = None
+
+
+class Citation(BaseModel):
+    id: str
+    title: str
+    url: str
+    snippet: str
+
+
+class MatchItem(BaseModel):
+    id: str
+    name: str
+    department: str
+    profile_url: str
+    score: float
+    why: str
+    citations: list[Citation]
+    score_breakdown: dict[str, float] = Field(alias="scoreBreakdown")
+
+
+class MatchResponse(BaseModel):
+    results: list[MatchItem]
+    total: int
+
+
+class ShortlistItem(BaseModel):
+    id: str
+    name: str
+    department: str
+    why: str | None = None
+    citations: list[Citation] | None = None
+    notes: str | None = None
+    score: float | None = None
+
+    model_config = {"extra": "allow"}
+
+
+class ShortlistPayload(BaseModel):
+    items: list[ShortlistItem]
+
+
+class ConfigResponse(BaseModel):
+    departments: list[str]
+    ui: dict[str, Any]
+    security: dict[str, Any]
+
+
+class ExportRequest(BaseModel):
+    format: Literal["pdf", "json"]
+    metadata: dict[str, Any] | None = None
+
+
+# --------------------------------------------------------------------------- #
+# Helpers
+# --------------------------------------------------------------------------- #
+
+
+def _validate_text_input(text: str, file_texts: Sequence[str]) -> str:
+    combined = " ".join(part for part in [text.strip(), *file_texts] if part)
+    if not combined:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Mangler tematisk innhold. Skriv tekst eller last opp filer.",
+        )
+    return combined
+
+
+async def _read_files(
+    *,
+    files: Sequence[UploadFile] | None,
+    file_parser: FileParser,
+    app_config: AppConfig,
+) -> list[str]:
+    if not files:
+        return []
+
+    allowed_suffixes = {f".{suffix.lower().lstrip('.')}" for suffix in app_config.security.allow_file_types}
+    max_bytes = app_config.security.max_upload_mb * 1024 * 1024
+    parsed_texts: list[str] = []
+
+    for upload in files:
+        if upload.filename is None:
+            continue
+        suffix = "." + upload.filename.split(".")[-1].lower()
+        if allowed_suffixes and suffix not in allowed_suffixes:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Filtypen {suffix} er ikke tillatt.",
+            )
+        content = await upload.read()
+        if len(content) > max_bytes:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Filen {upload.filename} overstiger maks størrelse på {app_config.security.max_upload_mb} MB.",
+            )
+        try:
+            parsed_texts.append(file_parser.parse_bytes(upload.filename, content))
+        except UnsupportedFileTypeError as exc:
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc)) from exc
+
+    return parsed_texts
+
+
+async def _fetch_staff_documents(
+    *,
+    staff_profiles: Sequence[StaffProfile],
+    fetch_utils: FetchUtils,
+    cache_manager: CacheManager,
+    max_pages: int,
+) -> list[StaffDocument]:
+    async with httpx.AsyncClient(follow_redirects=True, timeout=30.0) as client:
+        tasks = [
+            _fetch_single_staff(profile, client, fetch_utils, cache_manager, max_pages)
+            for profile in staff_profiles
+        ]
+        documents = await asyncio.gather(*tasks)
+    return [doc for doc in documents if doc.pages]
+
+
+async def _fetch_single_staff(
+    profile: StaffProfile,
+    client: httpx.AsyncClient,
+    fetch_utils: FetchUtils,
+    cache_manager: CacheManager,
+    max_pages: int,
+) -> StaffDocument:
+    pages: list[PageContent] = []
+    for url in profile.sources[:max_pages]:
+        cache_key = f"fetch::{url}"
+        cached = cache_manager.get(cache_key)
+        if cached:
+            pages.append(PageContent(**cached))
+            continue
+        try:
+            page_data = await fetch_utils.fetch_page(client, url)
+        except FetchNotAllowedError:
+            continue
+        except httpx.HTTPError:
+            continue
+        cleaned = {
+            "url": page_data["url"],
+            "title": page_data.get("title") or "",
+            "text": page_data.get("text", "")[: fetch_utils.max_bytes_per_page],
+        }
+        cache_manager.set(cache_key, cleaned)
+        pages.append(PageContent(**cleaned))
+    return StaffDocument(profile=profile, pages=pages)
+
+
+def _hash_id(name: str, profile_url: str) -> str:
+    digest = hashlib.sha1(f"{name}:{profile_url}".encode("utf-8")).hexdigest()
+    return digest[:12]
+
+
+async def _maybe_generate_explanations(
+    results: list[MatchItem],
+    llm_explainer: LLMExplainer,
+    themes: Sequence[str],
+) -> None:
+    tasks = []
+    for result in results:
+        snippets = [citation.snippet for citation in result.citations]
+        if not snippets:
+            continue
+        tasks.append(llm_explainer.generate(result.name, snippets, themes))
+
+    if not tasks:
+        return
+
+    explanations = await asyncio.gather(*tasks, return_exceptions=True)
+    idx = 0
+    for result in results:
+        if not result.citations:
+            continue
+        explanation = explanations[idx]
+        idx += 1
+        if isinstance(explanation, Exception):
+            continue
+        cleaned = explanation.strip()
+        if cleaned:
+            result.why = cleaned
+
+
+def _request_state(request: Request):
+    return request.app.state
+
+
+# --------------------------------------------------------------------------- #
+# Routes
+# --------------------------------------------------------------------------- #
+
+
+@router.post("/analyze-topic", response_model=AnalyzeTopicResponse)
+async def analyze_topic(request: Request) -> AnalyzeTopicResponse:
+    state = _request_state(request)
+    file_parser: FileParser = state.file_parser
+    app_config: AppConfig = state.app_config
+
+    form = await request.form()
+    text_value = str(form.get("text") or "")
+    upload_items = [item for item in form.getlist("files") if isinstance(item, UploadFile)]
+
+    files = upload_items or None
+    parsed_texts = await _read_files(files=files, file_parser=file_parser, app_config=app_config)
+    combined_text = _validate_text_input(text_value, parsed_texts)
+
+    themes = extract_themes(combined_text, top_k=8)
+    preview = combined_text[:600]
+
+    return AnalyzeTopicResponse(themes=themes, normalizedPreview=preview)
+
+
+@router.post("/match", response_model=MatchResponse)
+async def match(request: Request, payload: MatchRequest) -> MatchResponse:
+    if not payload.themes:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Listen med temaer kan ikke være tom.")
+
+    state = _request_state(request)
+    app_config: AppConfig = state.app_config
+    match_engine: MatchEngine = state.match_engine
+    fetch_utils: FetchUtils = state.fetch_utils
+    cache_manager: CacheManager = state.cache_manager
+    staff_profiles: list[StaffProfile] = state.staff_profiles
+    llm_explainer: LLMExplainer = state.llm_explainer
+
+    if payload.department:
+        filtered_staff = [profile for profile in staff_profiles if profile.department == payload.department]
+    else:
+        filtered_staff = staff_profiles
+
+    if not filtered_staff:
+        return MatchResponse(results=[], total=0)
+
+    documents = await _fetch_staff_documents(
+        staff_profiles=filtered_staff,
+        fetch_utils=fetch_utils,
+        cache_manager=cache_manager,
+        max_pages=app_config.fetch.max_pages_per_staff,
+    )
+
+    if not documents:
+        return MatchResponse(results=[], total=0)
+
+    ranked = match_engine.rank(
+        documents=documents,
+        themes=payload.themes,
+        department_filter=payload.department,
+        max_candidates=app_config.results.max_candidates,
+        diversity_weight=app_config.results.diversity_weight,
+    )
+
+    filtered_ranked = [
+        result
+        for result in ranked
+        if result.score_breakdown["semantic"] >= app_config.results.min_similarity_score
+    ]
+    if not filtered_ranked and ranked:
+        # Fall back to top matches when semantic similarity is low but other signals
+        # (keywords, tags) still indicate relevance. Keeps the UI populated while
+        # highlighting that tuning may be required.
+        filtered_ranked = [candidate for candidate in ranked if candidate.score > 0] or ranked[:1]
+
+    results: list[MatchItem] = []
+    for match in filtered_ranked:
+        item = MatchItem(
+            id=_hash_id(match.staff.name, match.staff.profile_url),
+            name=match.staff.name,
+            department=match.staff.department,
+            profile_url=match.staff.profile_url,
+            score=match.score,
+            why=match.explanation,
+            citations=[Citation(**citation) for citation in match.citations],
+            scoreBreakdown=match.score_breakdown,
+        )
+        results.append(item)
+
+    await _maybe_generate_explanations(results, llm_explainer, payload.themes)
+
+    return MatchResponse(results=results, total=len(results))
+
+
+@router.get("/shortlist", response_model=ShortlistPayload)
+async def get_shortlist(request: Request) -> ShortlistPayload:
+    state = _request_state(request)
+    shortlist_store: ShortlistStore = state.shortlist_store
+    items = shortlist_store.load()
+    return ShortlistPayload(items=[ShortlistItem.model_validate(item) for item in items])
+
+
+@router.post("/shortlist", response_model=ShortlistPayload)
+async def save_shortlist(request: Request, payload: ShortlistPayload) -> ShortlistPayload:
+    state = _request_state(request)
+    shortlist_store: ShortlistStore = state.shortlist_store
+    shortlist_store.save([item.model_dump(mode="json") for item in payload.items])
+    return payload
+
+
+@router.get("/config", response_model=ConfigResponse)
+async def get_config(request: Request) -> ConfigResponse:
+    state = _request_state(request)
+    app_config: AppConfig = state.app_config
+    staff_profiles: list[StaffProfile] = state.staff_profiles
+
+    departments = sorted({profile.department for profile in staff_profiles})
+    return ConfigResponse(
+        departments=departments,
+        ui={
+            "allowDepartmentFilter": app_config.ui.allow_department_filter,
+            "language": app_config.ui.language,
+            "exportFormats": app_config.ui.export_formats,
+        },
+        security={
+            "maxUploadMb": app_config.security.max_upload_mb,
+            "allowFileTypes": app_config.security.allow_file_types,
+        },
+    )
+
+
+@router.post("/shortlist/export")
+async def export_shortlist(request: Request, payload: ExportRequest) -> dict[str, str]:
+    state = _request_state(request)
+    shortlist_store: ShortlistStore = state.shortlist_store
+    exporter: ShortlistExporter = state.shortlist_exporter
+
+    items = shortlist_store.load()
+    if not items:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Kortlisten er tom.")
+
+    path = exporter.export(payload.format, items, payload.metadata)
+    try:
+        project_root = exporter.base_dir.parent.parent
+        relative = path.relative_to(project_root)
+    except ValueError:
+        relative = path.relative_to(exporter.base_dir.parent)
+    return {"path": str(relative)}

@@ -1,0 +1,128 @@
+ONH Expert Connector — staff.yaml Template and Folder Structure
+
+=========================================
+1. staff.yaml (template)
+=========================================
+# This file lists all staff that the app can match against.
+# Admins maintain this file manually (no syncing).
+
+# Each staff member has:
+# - name: Full name
+# - department: Department/faculty at ONH
+# - profile_url: Main ONH profile page
+# - sources: List of public URLs that may contain info about their research or expertise.
+#             These are the ONLY pages the app will fetch and read.
+# - tags: Optional keywords for their main topics/methods/fields (helps matching)
+# Example entries:
+
+- name: "Dr. Ada Example"
+  department: "Psykologi og helse"
+  profile_url: "https://oslonyehoyskole.no/om-oss/ansatte/ada-example"
+  sources:
+    - "https://oslonyehoyskole.no/om-oss/ansatte/ada-example"
+    - "https://scholar.google.com/citations?user=EXAMPLE123"
+    - "https://orcid.org/0000-0002-EXAMPLE"
+  tags:
+    - "klinisk psykologi"
+    - "atferdsendring"
+    - "helseintervensjon"
+
+- name: "Prof. Bjørn Demo"
+  department: "Økonomi og ledelse"
+  profile_url: "https://oslonyehoyskole.no/om-oss/ansatte/bjorn-demo"
+  sources:
+    - "https://oslonyehoyskole.no/om-oss/ansatte/bjorn-demo"
+  tags:
+    - "forretningsstrategi"
+    - "markedsføring"
+    - "digital transformasjon"
+
+# You can add as many staff entries as needed.
+# Each person’s “sources” must be a small finite list (no auto-crawling).
+# The app will fetch only these pages when searching.
+
+=========================================
+2. models.yaml (example)
+=========================================
+# Controls which models to use locally.
+# All files/models are local or served by Ollama (if installed).
+
+llm_model:
+  name: "llama3.2:3b-instruct-q4"   # Example if using Ollama
+  backend: "ollama"                 # or "local"
+  purpose: "generate explanations"
+
+embedding_model:
+  name: "all-MiniLM-L6-v2"
+  backend: "sentence-transformers"
+  device: "cpu"                     # or "cuda"
+
+=========================================
+3. app.config.yaml (example)
+=========================================
+fetch:
+  max_pages_per_staff: 2
+  max_kb_per_page: 100
+  allowlist_domains:
+    - "oslonyehoyskole.no"
+    - "scholar.google.com"
+    - "orcid.org"
+
+cache:
+  enabled: true
+  retention_days: 14
+
+results:
+  max_candidates: 10
+  min_similarity_score: 0.25
+
+ui:
+  allow_department_filter: true
+  language: "no"  # Interface language
+  export_formats: ["pdf", "json"]
+
+security:
+  allow_file_types: ["pdf", "docx", "pptx", "txt", "md"]
+  max_upload_mb: 10
+
+=========================================
+4. Folder Structure (prototype)
+=========================================
+
+onh_expert_connector/
+├── app/
+│   ├── main.py                # Flask/FastAPI or Express backend entry
+│   ├── routes.py              # Endpoints: /analyze-topic, /match, /shortlist
+│   ├── match_engine.py        # Matching logic (BM25 + embeddings + re-ranking)
+│   ├── llm_explainer.py       # Generates explanations (grounded on snippets)
+│   ├── fetch_utils.py         # Fetch/parse HTML content (with allowlist check)
+│   ├── file_parser.py         # PDF/DOCX/TXT parsing
+│   ├── config_loader.py       # Loads YAML configs
+│   ├── cache_manager.py       # Optional text/embedding cache
+│   └── static/                # JS/CSS front-end files
+│       ├── index.html         # Minimal UI: text box, file upload, results list
+│       ├── styles.css
+│       └── app.js
+│
+├── data/
+│   ├── staff.yaml
+│   ├── models.yaml
+│   ├── app.config.yaml
+│   └── cache/                 # Optional local cache folder
+│
+├── models/                    # Local model files (if not using Ollama)
+│   └── README.txt
+│
+├── outputs/
+│   └── exports/               # PDFs/JSONs for shortlists
+│
+├── requirements.txt           # Python dependencies (or package.json if JS backend)
+└── README.md                  # Project documentation
+
+=========================================
+5. Notes for Codex Setup
+=========================================
+- The folder structure is lightweight and self-contained.
+- The only files admins edit manually are in /data (YAML configs).
+- All text processing and AI work happens locally.
+- Codex can start by building `app/main.py` and `app/static/index.html` first.

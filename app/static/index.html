@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <title>ONH Expert Connector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <noscript>Vennligst aktiver JavaScript for å bruke ONH Expert Connector.</noscript>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div class="top-bar__title">
+          <h1>ONH Expert Connector</h1>
+          <p>Finn interne eksperter med dokumenterte treff.</p>
+        </div>
+        <div class="top-bar__actions">
+          <button id="shortlistButton" class="btn-secondary" aria-haspopup="dialog">
+            Kortliste (0)
+          </button>
+        </div>
+      </header>
+
+      <main id="viewContainer" class="main-content">
+        <section id="homeView" class="view active" aria-label="Start">
+          <div class="section-header">
+            <h2>Beskriv kurset eller materialet</h2>
+            <p>Legg inn tekst og eventuelle filer. Avdelingsfilter er valgfritt.</p>
+          </div>
+          <form id="topicForm" class="card" autocomplete="off">
+            <label class="form-label" for="topicInput">Tema (tekst)</label>
+            <textarea
+              id="topicInput"
+              name="text"
+              placeholder="Skriv noen avsnitt om tema, læringsmål, pensum, osv."
+              aria-label="Tema beskrivelse"
+              rows="8"
+              maxlength="3200"
+              required
+            ></textarea>
+            <div class="input-meta">
+              <span id="charCounter">0 / 3200</span>
+            </div>
+
+            <label class="form-label" for="fileUpload">Legg til filer (valgfritt)</label>
+            <input
+              id="fileUpload"
+              type="file"
+              name="files"
+              multiple
+              aria-describedby="fileHelp"
+              accept=".pdf,.docx,.pptx,.txt,.md"
+            />
+            <p id="fileHelp" class="help-text">
+              Maks 10 MB per fil. Støttede formater: PDF, DOCX, PPTX, TXT, MD.
+            </p>
+
+            <label class="form-label" for="departmentFilter">Avdeling (valgfritt)</label>
+            <select id="departmentFilter" name="department">
+              <option value="">Alle</option>
+            </select>
+
+            <div class="form-actions">
+              <button id="analyzeBtn" class="btn-primary" type="submit" disabled>
+                Analyser tema
+              </button>
+            </div>
+          </form>
+          <p class="disclaimer">
+            Appen leser kun sider som er whitelisted i <code>data/staff.yaml</code> og henter kildeutdrag akkurat når du søker.
+          </p>
+        </section>
+
+        <section id="themesView" class="view" aria-label="Gjennomgå temaer">
+          <div class="section-header">
+            <div>
+              <h2>Gjennomgå foreslåtte temaer</h2>
+              <p>Rediger listen før du søker etter ansatte.</p>
+            </div>
+            <button id="backToInputBtn" class="btn-text">Tilbake</button>
+          </div>
+
+          <div class="card">
+            <h3>Foreslåtte temaer</h3>
+            <div id="themesChips" class="chip-list" role="list"></div>
+            <div class="chip-actions">
+              <input
+                id="addChipInput"
+                type="text"
+                placeholder="Legg til tema…"
+                aria-label="Legg til tema"
+              />
+              <button id="addChipBtn" class="btn-secondary" type="button">Legg til</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Normalisert tekst</h3>
+            <p id="normalizedPreview" class="preview-text">Ingen data ennå.</p>
+          </div>
+
+          <div class="form-actions">
+            <button id="runMatchBtn" class="btn-primary" type="button">Finn relevante ansatte</button>
+          </div>
+        </section>
+
+        <section id="resultsView" class="view" aria-label="Resultater">
+          <div class="results-grid">
+            <aside class="results-sidebar">
+              <h3>Filtre</h3>
+              <label class="form-label" for="resultsDepartmentFilter">Avdeling</label>
+              <select id="resultsDepartmentFilter">
+                <option value="">Alle</option>
+              </select>
+
+              <label class="form-label" for="resultsSort">Sorter</label>
+              <select id="resultsSort">
+                <option value="score">Relevans (standard)</option>
+                <option value="recent">Nylige publikasjoner</option>
+                <option value="alpha">Alfabetisk</option>
+              </select>
+
+              <p id="resultsCount" class="results-count">Ingen treff ennå.</p>
+
+              <button id="backToThemesBtn" class="btn-text">Tilbake til temaer</button>
+            </aside>
+
+            <div class="results-list" id="resultsList" aria-live="polite"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <aside id="shortlistDrawer" class="shortlist-drawer" aria-hidden="true">
+      <div class="shortlist-header">
+        <h2>Kortliste</h2>
+        <button id="closeShortlistBtn" class="icon-button" aria-label="Lukk kortliste">×</button>
+      </div>
+      <div id="shortlistItems" class="shortlist-items"></div>
+      <div class="shortlist-actions">
+        <button id="exportPDFBtn" class="btn-secondary">Eksporter som PDF</button>
+        <button id="exportJSONBtn" class="btn-primary">Eksporter som JSON</button>
+      </div>
+    </aside>
+
+    <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-header">
+          <h2 id="modalTitle">Kilder</h2>
+          <button id="modalCloseBtn" class="icon-button" aria-label="Lukk modal">×</button>
+        </div>
+        <div id="modalBody" class="modal-body"></div>
+      </div>
+    </div>
+
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <script src="/static/app.js" type="module"></script>
+  </body>
+</html>
