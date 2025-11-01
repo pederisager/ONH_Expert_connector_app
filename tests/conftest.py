@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import httpx
 import pytest
-from fastapi.testclient import TestClient
+import pytest_asyncio
+from fastapi import FastAPI
+from httpx import ASGITransport, AsyncClient
 
 from app.cache_manager import CacheManager
 from app.exporter import ShortlistExporter
@@ -11,20 +13,26 @@ from app.match_engine import MatchEngine, StaffProfile
 from app.shortlist_store import ShortlistStore
 
 
-@pytest.fixture
-def client(tmp_path, monkeypatch) -> TestClient:
+async def _prepare_app(
+    tmp_path,
+    monkeypatch,
+    *,
+    staff_profiles: list[StaffProfile] | None = None,
+) -> tuple[AsyncClient, FastAPI]:
     app = create_app()
 
     app.state.match_engine = MatchEngine()
 
     cache_dir = tmp_path / "cache"
+    cache_dir.mkdir(parents=True, exist_ok=True)
     app.state.cache_manager = CacheManager(directory=cache_dir, retention_days=1, enabled=True)
 
     exports_dir = tmp_path / "exports"
+    exports_dir.mkdir(parents=True, exist_ok=True)
     app.state.shortlist_store = ShortlistStore(exports_dir / "shortlist.json")
     app.state.shortlist_exporter = ShortlistExporter(exports_dir)
 
-    app.state.staff_profiles = [
+    default_profiles = staff_profiles or [
         StaffProfile(
             name="Test Forsker",
             department="Psykologi",
@@ -33,6 +41,7 @@ def client(tmp_path, monkeypatch) -> TestClient:
             tags=["psykologi", "helse"],
         )
     ]
+    app.state.staff_profiles = default_profiles
 
     async def fake_fetch_page(self, client_http, url):  # type: ignore[override]
         return {
@@ -47,36 +56,48 @@ def client(tmp_path, monkeypatch) -> TestClient:
     monkeypatch.setattr(app.state.fetch_utils.__class__, "fetch_page", fake_fetch_page, raising=False)
     monkeypatch.setattr(app.state.llm_explainer.__class__, "generate", fake_generate, raising=False)
 
-    return TestClient(app)
+    transport = ASGITransport(app=app)
+    async_client = AsyncClient(transport=transport, base_url="http://testserver", timeout=10.0)
+    async_client.app = app  # type: ignore[attr-defined]
+    return async_client, app
 
 
-@pytest.fixture
-def offline_client(tmp_path, monkeypatch) -> TestClient:
-    app = create_app()
+@pytest_asyncio.fixture
+async def client(tmp_path, monkeypatch):
+    async_client, app = await _prepare_app(tmp_path, monkeypatch)
+    try:
+        yield async_client
+    finally:
+        await async_client.aclose()
 
-    app.state.match_engine = MatchEngine()
 
-    cache_dir = tmp_path / "cache"
-    app.state.cache_manager = CacheManager(directory=cache_dir, retention_days=1, enabled=True)
-
-    exports_dir = tmp_path / "exports"
-    app.state.shortlist_store = ShortlistStore(exports_dir / "shortlist.json")
-    app.state.shortlist_exporter = ShortlistExporter(exports_dir)
-
-    app.state.staff_profiles = [
-        profile for profile in app.state.staff_profiles if profile.name == "Alex Gillespie"
+@pytest_asyncio.fixture
+async def offline_client(tmp_path, monkeypatch):
+    profiles = [
+        StaffProfile(
+            name="Alex Gillespie",
+            department="Psykologi",
+            profile_url="https://oslonyehoyskole.no/om-oss/Ansatte/Alex-Gillespie",
+            sources=[
+                "https://oslonyehoyskole.no/om-oss/Ansatte/Alex-Gillespie",
+                "https://nva.sikt.no/research-profile/1306894",
+            ],
+            tags=["psykologi"],
+        )
     ]
-    if not app.state.staff_profiles:
-        raise RuntimeError("Alex Gillespie profile missing from staff.yaml")
+    async_client, app = await _prepare_app(tmp_path, monkeypatch, staff_profiles=profiles)
 
     async def fake_generate(self, staff_name, snippets, themes):  # type: ignore[override]
         return f"{staff_name} matcher {', '.join(themes)} basert på offline testdata."
 
     monkeypatch.setattr(app.state.llm_explainer.__class__, "generate", fake_generate, raising=False)
 
-    async def offline_get(self, url, timeout=30.0):  # type: ignore[override]
+    async def offline_get(self, url, timeout=30.0, follow_redirects=True):  # type: ignore[override]
         raise httpx.RequestError("offline", request=httpx.Request("GET", url))
 
     monkeypatch.setattr(httpx.AsyncClient, "get", offline_get, raising=False)
 
-    return TestClient(app)
+    try:
+        yield async_client
+    finally:
+        await async_client.aclose()

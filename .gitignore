@@ -1,0 +1,22 @@
+# Virtual environments
+.venv/
+
+# Python cache artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Pytest cache
+.pytest_cache/
+
+# Generated data / exports
+data/cache/
+data/index/
+data/offline_snapshots/
+outputs/
+
+# Misc
+*.sqlite3
+*.db
+*.log

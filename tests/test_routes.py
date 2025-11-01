@@ -2,11 +2,14 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import pytest
 
-def test_analyze_topic_returns_themes(client) -> None:
-    response = client.post(
+
+@pytest.mark.asyncio
+async def test_analyze_topic_returns_themes(client) -> None:
+    response = await client.post(
         "/analyze-topic",
-        data={"text": "Psykologi og helse ved Oslo Nye Høyskole."},
+        json={"text": "Psykologi og helse ved Oslo Nye Høyskole."},
     )
     assert response.status_code == 200
     data = response.json()
@@ -14,8 +17,9 @@ def test_analyze_topic_returns_themes(client) -> None:
     assert "normalizedPreview" in data
 
 
-def test_match_endpoint_returns_ranked_result(client) -> None:
-    response = client.post(
+@pytest.mark.asyncio
+async def test_match_endpoint_returns_ranked_result(client) -> None:
+    response = await client.post(
         "/match",
         json={"themes": ["psykologi", "helse"], "department": "Psykologi"},
     )
@@ -26,7 +30,8 @@ def test_match_endpoint_returns_ranked_result(client) -> None:
     assert top["citations"]
 
 
-def test_shortlist_persistence_and_export(client, tmp_path) -> None:
+@pytest.mark.asyncio
+async def test_shortlist_persistence_and_export(client, tmp_path) -> None:
     shortlist_payload = {
         "items": [
             {
@@ -47,14 +52,14 @@ def test_shortlist_persistence_and_export(client, tmp_path) -> None:
         ]
     }
 
-    save_response = client.post("/shortlist", json=shortlist_payload)
+    save_response = await client.post("/shortlist", json=shortlist_payload)
     assert save_response.status_code == 200
 
-    fetch_response = client.get("/shortlist")
+    fetch_response = await client.get("/shortlist")
     assert fetch_response.status_code == 200
     assert fetch_response.json()["items"][0]["name"] == "Test Forsker"
 
-    export_response = client.post(
+    export_response = await client.post(
         "/shortlist/export",
         json={"format": "pdf", "metadata": {"topic": "Psykologi"}},
     )
@@ -65,8 +70,9 @@ def test_shortlist_persistence_and_export(client, tmp_path) -> None:
     assert export_path.exists()
 
 
-def test_match_endpoint_offline_snapshot(offline_client) -> None:
-    response = offline_client.post(
+@pytest.mark.asyncio
+async def test_match_endpoint_offline_snapshot(offline_client) -> None:
+    response = await offline_client.post(
         "/match",
         json={
             "themes": [

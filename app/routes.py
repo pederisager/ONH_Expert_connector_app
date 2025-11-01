@@ -233,12 +233,22 @@ async def analyze_topic(request: Request) -> AnalyzeTopicResponse:
     file_parser: FileParser = state.file_parser
     app_config: AppConfig = state.app_config
 
-    form = await request.form()
-    text_value = str(form.get("text") or "")
-    upload_items = [item for item in form.getlist("files") if isinstance(item, UploadFile)]
+    content_type = (request.headers.get("content-type") or "").lower()
+    files: list[UploadFile] | None = None
+    parsed_texts: list[str]
 
-    files = upload_items or None
-    parsed_texts = await _read_files(files=files, file_parser=file_parser, app_config=app_config)
+    if "application/json" in content_type:
+        payload = await request.json()
+        text_value = str(payload.get("text") or "")
+        parsed_texts = []
+    else:
+        form = await request.form()
+        text_value = str(form.get("text") or "")
+        upload_items = [item for item in form.getlist("files") if isinstance(item, UploadFile)]
+
+        files = upload_items or None
+        parsed_texts = await _read_files(files=files, file_parser=file_parser, app_config=app_config)
+
     combined_text = _validate_text_input(text_value, parsed_texts)
 
     themes = extract_themes(combined_text, top_k=8)

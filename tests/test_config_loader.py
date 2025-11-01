@@ -8,6 +8,8 @@ def test_load_app_config_has_expected_defaults() -> None:
     assert config.fetch.max_pages_per_staff == 2
     assert "oslonyehoyskole.no" in config.fetch.allowlist_domains
     assert config.results.max_candidates == 10
+    assert config.rag.chunk_size == 400
+    assert config.rag.index_root.endswith("data/index")
     assert config.security.max_upload_mb == 10
 
 

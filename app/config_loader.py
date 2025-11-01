@@ -41,6 +41,17 @@ class ResultsConfig(BaseModel):
     diversity_weight: float = Field(alias="diversity-weight", default=0.1)
 
 
+class RagConfig(BaseModel):
+    index_root: str = Field(alias="index-root", default="data/index")
+    chunk_size: int = Field(alias="chunk-size", default=400)
+    chunk_overlap: int = Field(alias="chunk-overlap", default=60)
+    max_chunks_per_profile: int = Field(alias="max-chunks-per-profile", default=40)
+    embedding_model: str = Field(
+        alias="embedding-model", default="sentence-transformers/all-MiniLM-L6-v2"
+    )
+    embedding_batch_size: int = Field(alias="embedding-batch-size", default=32)
+
+
 class UIConfig(BaseModel):
     allow_department_filter: bool = Field(alias="allow-department-filter", default=True)
     language: str = "no"
@@ -56,6 +67,7 @@ class AppConfig(BaseModel):
     fetch: FetchConfig
     cache: CacheConfig
     results: ResultsConfig
+    rag: RagConfig
     ui: UIConfig
     security: SecurityConfig
 

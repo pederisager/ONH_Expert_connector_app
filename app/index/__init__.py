@@ -2,5 +2,18 @@
 
 from __future__ import annotations
 
-__all__ = []
+from .chunking import Chunker, SimpleTokenizer, normalize_text
+from .models import Chunk, IndexPaths, SourceLink, StaffRecord
+from .vector_store import LocalVectorStore, SearchResult
 
+__all__ = [
+    "Chunk",
+    "Chunker",
+    "IndexPaths",
+    "LocalVectorStore",
+    "SearchResult",
+    "SimpleTokenizer",
+    "SourceLink",
+    "StaffRecord",
+    "normalize_text",
+]

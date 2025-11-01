@@ -18,6 +18,14 @@ results:
   min-similarity-score: 0.25
   diversity-weight: 0.1
 
+rag:
+  index-root: "data/index"
+  chunk-size: 400
+  chunk-overlap: 60
+  max-chunks-per-profile: 40
+  embedding-model: "sentence-transformers/all-MiniLM-L6-v2"
+  embedding-batch-size: 32
+
 ui:
   allow-department-filter: true
   language: "no"
