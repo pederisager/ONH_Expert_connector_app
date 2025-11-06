@@ -1,0 +1,3858 @@
+﻿Meny 
+* Cristin REST API
+* Release notes
+* API Resources (v2)
+* JSON Schemas (v2)
+Cristin API v2 
+Resources
+Resources
+Current API version: 2.20.1 
+
+Table of ContentsSubjectDescriptionFiltering on languageUsing the lang parameterSearch and sortUsing the search and sort parameters Total count of itemsThe X-Total-Count header PaginationUsing the pagination parametersResourceDescriptionGET biobanks?{parameters}Search for biobanksGET biobanks/{id}Retrieve biobank by idPOST biobanks Create a biobankPATCH biobanks/{id} Modify an existing biobankGET biobanks/{id}/projects Retrieve projects related to a biobank by its idGET biobanks/materialsShow list of all valid biobank material codesGET countriesList supported countriesGET fundings?{parameters}Search for fundings/grantsGET fundings/{id}Retrieve funding/grant by idGET fundings/{id}/projectsRetrieve projects related to a funding/grant by its idGET fundings/{id}/resultsRetrieve results related to a funding/grant by its idGET fundings/sourcesShow list of all available funding sourcesGET institutions?{parameters}Search for institutionsGET institutions/{id}Retrieve institution by idGET keywords?{parameters}Search for keywordsGET keywords/{id}Retrieve keyword by idPOST keywords Create a new keywordGET persons?{parameters}Search for personsGET persons/{id}Retrieve person by idPOST persons Create a new personPATCH persons/{id} Modify an existing personGET persons/orcid Retrieve all person ids having an orcidGET persons/resolve Resolve person by National Identity Number (NIN)GET persons/{pid}/affiliations Retrieve affiliations of a given personPOST persons/{id}/affiliations Create affiliation of a given personGET persons/{pid}/affiliations/{aid} Retrieve an affiliation of a given personPATCH persons/{pid}/affiliations/{aid} Modify an affiliation of a given personDELETE persons/{pid}/affiliations/{aid} Delete an affiliation of a given personGET persons/affiliations/positionsRetrieve position codes for persons' affiliationsGET persons/{pid}/institutions/{iid} Retrieve person information specific to an institutionPATCH persons/{pid}/institutions/{iid} Modify person information specific to an institutionGET persons/{pid}/picture Retrieve profile picture for a given personPUT persons/{pid}/picture Store profile picture for a given personGET persons/{id}/users Retrieve all user accounts for a specific personPOST persons/{id}/users Create a new user account for a personPATCH persons/{pid}/users/{accountid} Modify person user account specific to an institutionGET persons/{id}/resultsRetrieve results by person idGET projects?{parameters}Search for projectsGET projects/{id}Retrieve project by idPOST projects Create a projectPATCH projects/{id} Modify an existing projectGET projects/{id}/biobanks Retrieve a project's related biobanks by project idGET projects/{id}/datasets Retrieve project datasets by project idPOST projects/{id}/datasets Create a dataset for a projectPUT projects/{id}/datasets Update the whole collection of datasets for a projectGET projects/participants/rolesShow all valid project participant roles (role codes)GET results?{parameters}Search for resultsGET results/{id}Retrieve result by idGET results/{id}/chaptersRetrieve result's chapters by result id, applicable only for books with chapters GET results/{id}/contributorsRetrieve result's contributors by result idGET results/categoriesShow list of all valid result category codesGET units?{parameters}Search for unitsGET units/{id}Retrieve unit by idGET units/{id}/resultsRetrieve results by unit idFiltering on language Filtering on language 
+Using the 'lang' parameter
+System data
+For fields like 'institution_name' the text may be given in system data languages. System data languages are predefined in Cristin system and cannot be altered by the users. They are:
+* Norwegian Bokmål (nb)
+* Norwegian Nynorsk (nn)
+* English (en)
+Filtering: These fields will be filtered on the language given by the request parameter 'lang'. The client may request one or several, comma-separated language codes.
+Fallback language rules: If language is not specified in the url the default language English is used. If the specified language doesn't exist for a particular item, the data for this item will be given in 'Norwegian Bokmål'.
+https://api.cristin.no/v2/institutions/2012?lang=nb
+{
+  "cristin_institution_id": 2012,
+  "institution_name": {
+	"nb": "Oslo universitetssykehus HF"
+  },
+  ...
+}
+
+https://api.cristin.no/v2/institutions/2012?lang=en
+{
+  "cristin_institution_id": 2012,
+  "institution_name": {
+	"en": "Oslo University Hospital"
+  },
+  ...
+}
+
+https://api.cristin.no/v2/institutions/2012?lang=en,nb
+{
+  "cristin_institution_id": 2012,
+  "institution_name": {
+	"nb": "Oslo universitetssykehus HF",
+	"en": "Oslo University Hospital"
+  },
+  ...
+}
+Default language: If the 'lang' parameter is omitted, system data will be returned in English
+https://api.cristin.no/v2/institutions/2012
+{
+  "cristin_institution_id": 2012,
+  "institution_name": {
+	"en": "Oslo University Hospital"
+  },
+  ...
+}
+Fallback language: If the requested language doesn't exist for a field, the data for this field will be given in 'Norwegian Bokmål'
+https://api.cristin.no/v2/projects/257?lang=nn
+{
+  "cristin_project_id": "257",
+  ...
+  "coordinating_institution": {
+	"institution": {
+	  "cristin_institution_id": "185",
+	  "institution_name": {
+		"nn": "Universitetet i Oslo" //data for 'nn' exists
+	  },
+	  "url": "https://api.cristin.no/v2/institutions/185"
+	},
+	"unit": {
+	  "cristin_unit_id": "185.90.0.0",
+	  ...
+	}
+  },
+  "institutions_responsible_for_research": [
+	{
+	  "institution": {
+		"cristin_institution_id": "254.0.0.0",
+		"institution_name": {
+		  "nb": "NLA Høgskolen" //data for 'nn' doesn't exist, fallback to 'nb'
+	  },
+	  "unit": { ... }
+	}
+  ...
+  ],
+ ...
+}
+User data
+Other fields like 'title' may be given in several languages (user data languages) and are not limited to the three system data languages. These fields will not be affected by the 'lang' parameter. 
+
+https://api.cristin.no/v2/projects?id=257&lang=nb
+[
+  {
+	"cristin_project_id": "257",
+	"title": {
+	  "da": "Elektrokardiografisk kvantisering af reversibel iskæmisk celleskade mm. test av låste felt",
+	  "nb": "BOKMÅL - Electrocardiographic quantisation of reversible ischemic cell damage and stuff. Test av låste felt",
+	  "nn": "Sekundærtittel på norsk for prosjekt 257. test av låste felt"
+	},
+	"main_language": "da",
+	"url": "https://api.cristin.no/v2/projects/257"
+  }
+]
+Search and sort Search and sort 
+Search
+Search for items by a combination of filter parameters. With a combination of parameters, an intersection of the sets from each parameter search will be returned.
+Please notice that a search may return an empty list. 
+Sort
+Sorts on certain fields in ascending (asc) or descending (desc) order. This is documented for each service.
+The parameter 'sort' can occur more than once and the sorting will be executed according to the sort parameter order.
+Parameter 'sort' takes the extra value of 'asc' or 'desc', e.g.: ../results?sort=category asc&sort=year_published desc
+Many endpoints also support sorting by score, which sorts by relevance or how well an item matches the search terms. For example: ../results?sort=score desc returns the most relevant results first.
+If the 'sort' parameter is omitted, a default sort order will be used. 
+Duplicate parameters Duplicate parameters 
+Duplicate parameters
+Some parameters can be used more than once in the same query. Parameters that allow duplicates are marked and refer back to this section. 
+Parameters that do not refer to this section may cause an error if duplicated. 
+Duplicate parameters can be used to narrow the search even more, e.g ../projects?keyword=wind energy&keyword=data analysis 
+Total count Total Count 
+The response of a search will return a 'X-Total-Count' header with the total number of hits.
+This can be used to calculate the total number of pages in a paginated response. 
+Pagination Pagination 
+Services like the search services that return many items will divide the requested items over one or several requests ("pages").
+PaginationParameterTypeDescriptionpageStringPage number. First page is 1. Default if omitted is 1.per_pageStringNumber of items per page. Maximum is 1000. Default if omitted is 100.Using the Link header
+Given a requested page and number of items, either specified by the client or default, the response will contain the URLs for the next and the previous page in the Link header, with the pagination parameters set accordingly. 
+On the first and last page, the URLs for the previous and next page, respectively, will be omitted. 
+Link header examples
+Linebreak is included for readability. 
+* First page with more items available will contain a header like the following:
+Link: <https://api.cristin.no/v2/institutions?page=2&per_page=100>; rel="next" 
+* Second page with still more items available will contain a header like the following:
+Link: <https://api.cristin.no/v2/institutions?page=3&per_page=100>;rel="next", 
+<https://api.cristin.no/v2/institutions?page=1&per_page=100>;rel="prev" 
+* Page with no more items available will contain a header like the following:
+Link: <https://api.cristin.no/v2/institutions?page=21&per_page=1000>; rel="prev" 
+Examples
+These examples returns all institutions known to Cristin and paginates the result. The response shows the Link header and part of the body.
+* Paginated with 100 items (default) per page and starting with page 1 with items 1, 2, 3 ... 100. 
+https://api.cristin.no/v2/institutions 
+Respone, pagination header:
+Link: <http://api.cristin.no/v2/institutions?lang=en&page=2&per_page=100> rel="next"
+Response body:
+[
+	{
+		"cristin_institution_id": "1",
+		"institution_name": {
+			"nb": "Privatperson"
+		},
+		"acronym": "PRIVAT",
+		"cristin_user_institution": false,
+		"url": "https://api.cristin.no/v2/institutions/1"
+	},
+	{
+		"cristin_institution_id": "150",
+		"institution_name": {
+			"en": "Norwegian School of Sport Sciences"
+		},
+		"acronym": "NIH",
+		"country": "NO",
+		"cristin_user_institution": true,
+		"url": "https://api.cristin.no/v2/institutions/150"
+	},
+	... (98 items more)
+]
+* Returns page 10, with 100 items (default) per page (items 1001, 1002, 1003 ... 1100 on this page).
+https://api.cristin.no/v2/institutions?page=10   
+Respone, pagination header:
+Link:
+<https://api.cristin.no/v2/institutions?lang=en&page=11&per_page=100>; rel="next",
+<https://api.cristin.no/v2/institutions?lang=en&page=9&per_page=100>; rel="prev"
+Response body:
+[
+	{
+		"cristin_institution_id": "1",
+		"institution_name": {
+			"nb": "Privatperson"
+		},
+		"acronym": "PRIVAT",
+		"cristin_user_institution": false,
+		"url": "https://api.cristin.no/v2/institutions/1"
+	},
+	{
+		"cristin_institution_id": "150",
+		"institution_name": {
+			"en": "Norwegian School of Sport Sciences"
+		},
+		"acronym": "NIH",
+		"country": "NO",
+		"cristin_user_institution": true,
+		"url": "https://api.cristin.no/v2/institutions/150"
+	},
+	... (98 items more)
+]
+* Returns page 1, with 30 items per page (items 1, 2, 3, ... 30 on this page).
+https://api.cristin.no/v2/institutions?per_page=30   
+Respone, pagination header:
+Link: <https://api.cristin.no/v2/institutions?lang=en&page=2&per_page=30> rel="next"
+Response body:
+[
+	{
+		"cristin_institution_id": "1",
+		"institution_name": {
+			"nb": "Privatperson"
+		},
+		"acronym": "PRIVAT",
+		"cristin_user_institution": false,
+		"url": "https://api.cristin.no/v2/institutions/1"
+	},
+	{
+		"cristin_institution_id": "150",
+		"institution_name": {
+			"en": "Norwegian School of Sport Sciences"
+		},
+		"acronym": "NIH",
+		"country": "NO",
+		"cristin_user_institution": true,
+		"url": "https://api.cristin.no/v2/institutions/150"
+	},
+	... (28 items more)
+]
+* Returns page 2, with 30 items per page (items 30, 31, 32, ... 60 on this page).
+https://api.cristin.no/v2/institutions?page=2&per_page=30   
+Respone, pagination header:
+Link: <https://api.cristin.no/v2/institutions?name=oslo&lang=en&page=3&per_page=30> rel="next",
+<https://api.cristin.no/v2/institutions?name=oslo&lang=en&page=1&per_page=30>; rel="prev"
+Response body:
+[
+	{
+		"cristin_institution_id": "254",
+		"institution_name": {
+			"en": "NLA University College"
+		},
+		"acronym": "NLA",
+		"country": "NO",
+		"cristin_user_institution": true,
+		"url": "https://api.cristin.no/v2/institutions/254"
+	},
+	{
+		"cristin_institution_id": "255",
+		"institution_name": {
+			"en": "Ansgar School of Theology and Mission"
+		},
+		"acronym": "ATH",
+		"country": "NO",
+		"cristin_user_institution": true,
+		"url": "https://api.cristin.no/v2/institutions/255"
+	},
+	... (28 items more)
+
+]
+GET biobanks?{parameters} GET biobanks?{parameters} 
+Search for biobanks by a combination of filter parameters.
+GET biobanksParameterTypeDescriptionidStringCristin id of the biobanknameStringName of the biobank, or part of the name.institutionStringCristin id, acronym, name, or part of the name of the coordinating institution of the biobank. modified_sinceStringOnly biobanks that have been created or modified since this date will be returned. Format: YYYY-MM-DD. projectStringCristin id of a project related to one or more biobanks langStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationtypeStringType of biobank. Can be "specificbiobank" or "generalbiobank"Examples
+* https://api.cristin.no/v2/biobanks?institution=uio&modified_since=2015-12-10 
+* [ {
+*   "cristin_biobank_id" : "517881EE",
+*   "name" : {
+* 	"en" : "BB4 JoseR test biobank v2"
+*   },
+*   "main_language" : "en",
+*   "url" : "https://api.cristin.no/v2/biobanks/517881"
+* }, {
+*   "cristin_biobank_id" : "517755",
+*   "name" : {
+* 	"nb" : "NAVN PÅ SPESIFIKK BIOBANK1"
+*   },
+*   "main_language" : "nb",
+*   "url" : "https://api.cristin.no/v2/biobanks/517755"
+* }, {
+*   "cristin_biobank_id" : "515207",
+*   "name" : {
+* 	"nb" : "Spesifikk biobank"
+*   },
+*   "main_language" : "nb",
+*   "url" : "https://api.cristin.no/v2/biobanks/515207"
+* }, {
+*   "cristin_biobank_id" : "515181",
+*   "name" : {
+* 	"en" : "NAME OF NEW SPESIFIC BIOBANK"
+*   },
+*   "main_language" : "en",
+*   "url" : "https://api.cristin.no/v2/biobanks/515181"
+* }, {
+*   "cristin_biobank_id" : "515173",
+*   "name" : {
+* 	"nb" : "BIOBANK SØR-ØST B"
+*   },
+*   "main_language" : "nb",
+*   "url" : "https://api.cristin.no/v2/biobanks/515173"
+* }, {
+*   "cristin_biobank_id" : "515166",
+*   "name" : {
+* 	"nb" : "BIOBANK SØR-ØST A"
+*   },
+*   "main_language" : "nb",
+*   "url" : "https://api.cristin.no/v2/biobanks/515166"
+* }, {
+*   "cristin_biobank_id" : "515137",
+*   "name" : {
+* 	"nb" : "BB3 JoseR test Biobank"
+*   },
+*   "main_language" : "nb",
+*   "url" : "https://api.cristin.no/v2/biobanks/515137"
+* }, {
+*   "cristin_biobank_id" : "515136",
+*   "name" : {
+* 	"nb" : "BB2 JoseR test Biobank"
+*   },
+*   "main_language" : "nb",
+*   "url" : "https://api.cristin.no/v2/biobanks/515136"
+* } ]
+								
+* https://api.cristin.no/v2/biobanks?name=test+biobank 
+* [ {
+*   "cristin_biobank_id" : "517881",
+*   "name" : {
+* 	"en" : "BB4 JoseR test biobank v2"
+*   },
+*   "main_language" : "en",
+*   "url" : "https://api.cristin.no/v2/biobanks/517881"
+* }, {
+*   "cristin_biobank_id" : "515137",
+*   "name" : {
+* 	"nb" : "BB3 JoseR test Biobank"
+*   },
+*   "main_language" : "nb",
+*   "url" : "https://api.cristin.no/v2/biobanks/515137"
+* }, {
+*   "cristin_biobank_id" : "515136",
+*   "name" : {
+* 	"nb" : "BB2 JoseR test Biobank"
+*   },
+*   "main_language" : "nb",
+*   "url" : "https://api.cristin.no/v2/biobanks/515136"
+* }, {
+*   "cristin_biobank_id" : "515059",
+*   "name" : {
+* 	"nb" : "BB1 JoseR test Biobank"
+*   },
+*   "main_language" : "nb",
+*   "url" : "https://api.cristin.no/v2/biobanks/515059"
+* } ]
+								
+* https://api.cristin.no/v2/biobanks?id=515131 
+* [ {
+*   "cristin_biobank_id" : "515131",
+*   "name" : {
+* 	"nb" : "Behandlingsbiobank"
+*   },
+*   "main_language" : "nb",
+*   "url" : "https://api.cristin.uio.no/v2/biobanks/515131"
+* } ]
+								
+Response
+Returns a JSON object that conforms to the biobank summary JSON schema. The response will be paginated. 
+HTTP Status Codes
+* 200 - Ok, returns a list of biobank summaries.
+* 400 - Bad request, returned if the filter parameters are invalid.
+GET biobanks/{id} GET biobanks/{id} 
+Retrieve a biobank by its id.
+GET biobanksParameterTypeDescriptionidStringThe Cristin id of the biobanklangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/biobanks/515145 
+* {
+*   "cristin_biobank_id" : "515145",
+*   "type" : "SPECIFICBIOBANK",
+*   "name" : {
+* 	"en" : "Diagnostic biobank",
+* 	"nb" : "Diagnostisk biobank"
+*   },
+*   "main_language" : "en",
+*   "start_date" : "2015-10-21T00:00:00.000Z",
+*   "stored_until_date" : "2016-03-01T12:00:00.000Z",
+*   "status" : "CONCLUDED",
+*   "created" : {
+* 	"source_short_name" : "REK",
+* 	"date" : "2016-11-21T13:36:16.000Z"
+*   },
+*   "last_modified" : {
+* 	"source_short_name" : "REK",
+* 	"date" : "2016-11-21T14:14:02.000Z"
+*   },
+*   "coordinating_institution" : {
+* 	"institution" : {
+* 	  "cristin_institution_id" : "2012",
+* 	  "institution_name" : {
+* 		"en" : "Oslo University Hospital"
+* 	  },
+* 	  "url" : "https://api.cristin.no/v2/institutions/2012"
+* 	},
+* 	"unit" : {
+* 	  "cristin_unit_id" : "2012.0.0.0",
+* 	  "unit_name" : {
+* 		"en" : "Oslo University Hospital"
+* 	  },
+* 	  "url" : "https://api.cristin.no/v2/units/2012.0.0.0"
+* 	}
+*   },
+*   "coordinator" : {
+* 	"cristin_person_id" : "12345",
+* 	"first_name" : "John",
+* 	"surname" : "Smith",
+* 	"url" : "https://api.cristin.no/v2/persons/12345"
+*   },
+*   "associated_project" : {
+* 	"cristin_project_id" : "515132",
+* 	"title" : {
+* 	  "nb" : "ZZ46 JoseR test POST projects eksempel"
+* 	},
+* 	"url" : "https://api.cristin.no/v2/projects/515132"
+*   },
+*   "external_sources" : [ {
+* 	"source_short_name" : "REK",
+* 	"source_reference_id" : "REKbiobank B1"
+*   } ],
+*   "approvals" : [ {
+* 	"approved_date" : "2016-01-10T00:00:00.000Z",
+* 	"approved_by" : "REK",
+* 	"approval_status" : "APPROVED",
+* 	"application_code" : "BIOBANK",
+* 	"approval_reference_id" : "REKbiobank B1"
+*   } ],
+*   "biobank_materials" : [ {
+* 	"material_code" : "23"
+*   }, {
+* 	"material_code" : "24",
+* 	"other_material_description" : "An exotic material"
+*   }, {
+* 	"material_code" : "3"
+*   } ]
+* }
+								
+Response
+Returns a JSON object that conforms to the biobank JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the biobank.
+* 307 - Redirect, returned if the biobank was merged or moved into another biobank.
+* 400 - Returned if the id is invalid
+* 404 - Returned if there is no content with the given id
+POST biobanks POST biobanks 
+Create a new biobank. (This request requires authentication.)
+The request must have Content-Type: application/json and the payload must conform to the POST biobank JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+Examples
+* POST biobank example payload 
+* {
+*   "type": "SPECIFICBIOBANK",
+*   "name": {
+* 	"nb": "Biobank test 1"
+*   },
+*   "stored_until_date": "2016-03-01T12:00:00.000Z",
+*   "coordinating_institution": {
+* 	"unit": {
+* 	  "cristin_unit_id": "185.35.51.20"
+* 	}
+*   },
+*   "coordinator": {
+* 	"cristin_person_id": "10275",
+* 	"email": "joser@fsat.no"
+*   },
+*   "associated_project": {
+* 	"cristin_project_id": "257"
+*   },
+*   "external_sources": [
+* 	{
+* 	  "source_reference_id": "REKbiobank B1"
+* 	}
+*   ],
+*   "approvals": [
+* 	{
+* 	  "approved_date": "2016-01-10T00:00:00.000Z",
+* 	  "approved_by": "REK",
+* 	  "approval_status": "APPROVED",
+* 	  "approval_reference_id": "REKbiobank B1"
+* 	}
+*   ],
+*   "biobank_materials": [
+* 	{
+* 	  "material_code": "3"
+* 	},
+* 	{
+* 	  "material_code": "24",
+* 	  "other_material_description": "Description of materials relevant for this biobank"
+* 	}
+*   ]
+* }
+								
+Response
+HTTP Status Codes
+* 201 - Created, returns a JSON representation of the newly created biobank, along with a HTTP header Location containing the URL of the biobank. 
+* 400 - Bad request, returned if the supplied JSON content is invalid. The response will contain relevant error messages and warnings. 
+PATCH biobanks/{id} PATCH biobanks/{id} 
+Modify an existing biobank. (This request requires authentication.)
+PATCH biobanksParameterTypeDescriptionidStringThe Cristin id of the biobankThe request must have Content-Type: application/merge-patch+json and the payload must conform to the PATCH biobank JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+PATCH updates one or more fields of the resource following the JSON Merge Patch strategy: Fields that are included in the request are overwritten, while fields not included in the request remain unaltered. 
+Unrecognized fields or fields that are not part of the PATCH biobank JSON schema are currently silently ignored.
+Examples
+* PATCH biobank example payload 
+* {
+*   "name": {
+* 	"en": "Biobank test new name"
+*   },
+*   "stored_until_date": "2016-02-01T12:00:00.000Z",
+*   "coordinating_institution": {
+* 	"institution": {
+* 	  "cristin_institution_id": "2012"
+* 	}
+*   },
+*   "coordinator": {
+* 	"cristin_person_id": "10275",
+* 	"email": "my@email.com"
+*   },
+*   "biobank_materials": [
+* 	{
+* 	  "material_code": "23"
+* 	},
+* 	{
+* 	  "material_code": "24",
+* 	  "other_material_description": "An exotic material"
+* 	},
+* 	{
+* 	  "material_code": "3"
+* 	}
+*   ]
+* }
+								
+Response
+HTTP Status Codes
+* 204 - No content, returned upon successful modification.
+* 400 - Bad request, returned if the supplied JSON content is invalid. The response will contain relevant error messages and warnings. 
+* 403 - Forbidden, returned if this particular biobank cannot be modified.
+* 404 - Not found, returned if there is no biobank with this id.
+GET biobanks/{id}/projects GET biobanks/{id}/projects 
+Retrieve projects related to a biobank by its id
+GET biobank projectsParameterTypeDescriptionidStringThe Cristin id of the biobanklangStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationsortStringSorts on 'start_date' and/or 'end_date'. See Search and sort
+Default sort order is on 'cristin_project_id' in ascending order.fieldsString'fields=all' gives a list of project objects with all available fields.
+If this parameter is omitted, a list of project summaries with fewer fields will be returned. Examples
+* https://api.cristin.no/v2/biobanks/550056/projects?per_page=2 
+* [
+*     {
+*         "cristin_project_id": "567036",
+*         "title": {
+*             "nb": "Arvelige bevegelsesforstyrrelser og andre monogenetiske nevrologiske sykdommer"
+*         },
+*         "main_language": "nb",
+*         "start_date": "2012-09-01T00:00:00.000Z",
+*         "end_date": "2020-12-31T00:00:00.000Z",
+*         "url": "https://api.cristin.no/v2/projects/567036"
+*     },
+*     {
+*         "cristin_project_id": "632139",
+*         "title": {
+*             "en": "Evidence-Based Practice in Education",
+*             "nb": "Kunnskapsbasert praksis i utdanning"
+*         },
+*         "main_language": "nb",
+*         "start_date": "2015-03-24T00:00:00.000Z",
+*         "end_date": "2020-12-31T00:00:00.000Z",
+*         "url": "https://api.cristin.no/v2/projects/632139"
+*     }
+* ]
+								
+Response
+HTTP Status Codes
+* 200 - Ok, returns a list of project summaries.
+* 400 - Bad request, returned if the filter parameters are invalid. 
+* 404 - Not found, returned if there is no biobank with this id.
+Returns a list of JSON objects. The list conforms to the projects summary JSON schema. The response will be paginated. 
+Response headers
+* X-Total-Count - total number of hits
+* Link - pagination previous and next page
+GET biobanks/materials GET biobanks/materials 
+Show list of all valid biobank material codes.
+GET biobanks/materialsParameterTypeDescriptionlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/biobanks/materials 
+* [
+* 	{
+* 		"code": "1",
+* 		"name": {
+* 			"en": "Whole blood"
+* 		}
+* 	},
+* 	{
+* 		"code": "10",
+* 		"name": {
+* 			"en": "Cytology"
+* 		}
+* 	},
+* 	{
+* 		"code": "11",
+* 		"name": {
+* 			"en": "Autopsy material"
+* 		}
+* 	},
+* 	{
+* 		"code": "12",
+* 		"name": {
+* 			"en": "Dental material"
+* 		}
+* 	},
+* 	{
+* 		"code": "13",
+* 		"name": {
+* 			"en": "Bone"
+* 		}
+* 	},
+* 	{
+* 		"code": "14",
+* 		"name": {
+* 			"en": "Bone marrow"
+* 		}
+* 	},
+* 	{
+* 		"code": "15",
+* 		"name": {
+* 			"en": "DNA extracted"
+* 		}
+* 	},
+* 	{
+* 		"code": "16",
+* 		"name": {
+* 			"en": "RNA extracted"
+* 		}
+* 	},
+* 	{
+* 		"code": "17",
+* 		"name": {
+* 			"en": "Amniotic fluid"
+* 		}
+* 	},
+* 	{
+* 		"code": "18",
+* 		"name": {
+* 			"en": "Breastmilk"
+* 		}
+* 	},
+* 	{
+* 		"code": "19",
+* 		"name": {
+* 			"en": "Body fluid"
+* 		}
+* 	},
+* 	{
+* 		"code": "2",
+* 		"name": {
+* 			"en": "Serum"
+* 		}
+* 	},
+* 	{
+* 		"code": "20",
+* 		"name": {
+* 			"en": "Cerebrospinal fluid"
+* 		}
+* 	},
+* 	{
+* 		"code": "21",
+* 		"name": {
+* 			"en": "Hair and nails"
+* 		}
+* 	},
+* 	{
+* 		"code": "22",
+* 		"name": {
+* 			"en": "Egg cell"
+* 		}
+* 	},
+* 	{
+* 		"code": "23",
+* 		"name": {
+* 			"en": "Sperm"
+* 		}
+* 	},
+* 	{
+* 		"code": "24",
+* 		"name": {
+* 			"en": "Other materiale"
+* 		}
+* 	},
+* 	{
+* 		"code": "3",
+* 		"name": {
+* 			"en": "Plasma"
+* 		}
+* 	},
+* 	{
+* 		"code": "4",
+* 		"name": {
+* 			"en": "Cells"
+* 		}
+* 	},
+* 	{
+* 		"code": "5",
+* 		"name": {
+* 			"en": "Urine"
+* 		}
+* 	},
+* 	{
+* 		"code": "6",
+* 		"name": {
+* 			"en": "Feces"
+* 		}
+* 	},
+* 	{
+* 		"code": "7",
+* 		"name": {
+* 			"en": "Saliva"
+* 		}
+* 	},
+* 	{
+* 		"code": "8",
+* 		"name": {
+* 			"en": "Mucosal sample"
+* 		}
+* 	},
+* 	{
+* 		"code": "9",
+* 		"name": {
+* 			"en": "Biopsy material"
+* 		}
+* 	}
+* ]
+								
+Response
+Returns a JSON object that contains an array with all valid biobank materials and conforms to the database codes JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of biobank materials.
+GET countries GET countries 
+List all supported countries.
+GET countriesParameterTypeDescriptionlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/countries 
+* [{
+*   "code" : "AF",
+*   "code_alpha3" : "AFG",
+*   "name" : {
+*     "en" : "Afghanistan"
+*   }
+* }, {
+*   "code" : "AL",
+*   "code_alpha3" : "ALB",
+*   "name" : {
+*     "en" : "Albania"
+*   }
+* },
+* ...
+* ]
+								
+* https://api.cristin.no/v2/countries?lang=nb,en 
+* [{
+*   "code" : "AF",
+*   "code_alpha3" : "AFG",
+*   "name" : {
+*     "en" : "Afghanistan",
+*     "nb" : "Afghanistan"
+*   }
+* }, {
+*   "code" : "AL",
+*   "code_alpha3" : "ALB",
+*   "name" : {
+*     "en" : "Albania",
+*     "nb" : "Albania"
+*   }
+* },
+* ...
+* ]
+								
+Response
+Returns a JSON object that contains an array with countries and conforms to the country codes JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of countries.
+GET fundings?{parameters} GET fundings?{parameters} 
+Search for fundings
+GET fundingsParameterTypeDesciptionidStringThe Cristin id of the funding.funding_source_nameStringFunding source name e.g: Research Council of Norwayfunding_sourceStringFunding source code e.g: NFRproject_codeStringProject code is the internal reference number used by funding sourcefundingStringFunding source code e.g: NFR, and project_code together separated by ':'
+'NFR:1234' means 'funding_source': 'NFR' with 'project_code': '1234'langStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationfieldsString'fields=all' gives a list of funding objects with all available fields. If this parameter is omitted, a list of funding summaries with fewer fields will be returned.Examples
+* https://api.cristin.no/v2/fundings?id=1287 
+* [
+*     {
+*         "cristin_funding_id": "1287",
+*         "project_code": "225345",
+*         "funding_source": {
+*             "code": "NFR",
+*             "name": {
+*                 "en": "Research Council of Norway (RCN)"
+*             }
+*         },
+*         "url": "https://api.cristin.no/v2/fundings/1287"
+*     }
+* ]
+								
+* https://api.cristin.no/v2/fundings?fields=all 
+* [
+*   {
+*     "cristin_funding_id": "9145",
+*     "project_code": "90E101.76",
+*     "funding_source": {
+*       "code": "SINTEF",
+*       "name": {
+*         "en": "SINTEF "
+*       }
+*     },
+*     "url": "http://api.cristin.no/v2/fundings/9145",
+*     "projects": {
+*       "count": 0,
+*       "link": "http://api.cristin.no/v2/fundings/9145/projects"
+*     },
+*     "results": {
+*       "count": 1,
+*       "link": "http://api.cristin.no/v2/fundings/9145/results"
+*     }
+*   },
+* ...
+* ]
+                            
+* https://api.cristin.no/v2/fundings?funding_source=NFR 
+https://api.cristin.no/v2/fundings?funding_source_name=Research Council of Norway 
+* [
+*   {
+*     "cristin_funding_id": "9142",
+*     "project_code": "226171",
+*     "funding_source": {
+*       "code": "NFR",
+*       "name": {
+*         "en": "Research Council of Norway (RCN)"
+*       }
+*     },
+*     "url": "http://api.cristin.no/v2/fundings/9142"
+*   },
+*   {
+*     "cristin_funding_id": "9141",
+*     "project_code": "243644",
+*     "funding_source": {
+*       "code": "NFR",
+*       "name": {
+*         "en": "Research Council of Norway (RCN)"
+*       }
+*     },
+*     "url": "http://api.cristin.no/v2/fundings/9141"
+*   },
+*     ...
+* ]
+                            
+Response
+Returns a JSON object that conforms to the fundings JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the list of fundings.
+* 400 - Bad request, any query paramters are invalid
+GET fundings/{id} GET funding/{id} 
+Retrieves a funding by its id.
+GET fundingsParameterTypeDescriptionidStringThe Cristin id of the funding.langStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/fundings/8   
+* {
+*     "cristin_funding_id": "8",
+*     "project_code": "213263",
+*     "funding_source": {
+*         "code": "NFR",
+*         "name": {
+*             "en": "Research Council of Norway (RCN)"
+*         }
+*     }
+* }
+								
+Response
+Returns a JSON object that conforms to the funding JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the funding
+* 400 - Bad request, returned if the id is invalid
+* 404 - Not found, returned if no funding with this id could be found
+GET fundings/{id}/projects GET fundings/{id}/projects 
+Retrieves projects related to a funding by its id.
+GET fundings/{id}/projectsParameterTypeDescriptionidStringThe Cristin id of the funding.pageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/fundings/1287/projects   
+* [
+*     {
+*         "cristin_project_id": "416163",
+*         "title": {
+*             "en": "Increased use of wood in urban areas/ Wood Be Better"
+*         },
+*         "main_language": "en",
+*         "start_date": "2013-01-01T00:00:00.000Z",
+*         "end_date": "2018-04-01T00:00:00.000Z",
+*         "url": "https://api.cristin.no/v2/projects/416163"
+*     },
+*     {
+*         "cristin_project_id": "436186",
+*         "title": {
+*             "en": "PHD project"
+*         },
+*         "main_language": "en",
+*         "start_date": "2013-09-01T00:00:00.000Z",
+*         "end_date": "2016-08-31T00:00:00.000Z",
+*         "url": "https://api.cristin.no/v2/projects/436186"
+*     },
+*     {
+*         "cristin_project_id": "475556",
+*         "title": {
+*             "en": "Increased use of wood in urban areas."
+*         },
+*         "main_language": "en",
+*         "start_date": "2013-01-01T00:00:00.000Z",
+*         "end_date": "2017-03-31T00:00:00.000Z",
+*         "url": "https://api.cristin.no/v2/projects/475556"
+*     },
+*     {
+*         "cristin_project_id": "475949",
+*         "title": {
+*             "en": "Increased use of wood in urban areas"
+*         },
+*         "main_language": "en",
+*         "start_date": "2013-01-01T00:00:00.000Z",
+*         "end_date": "2016-12-31T00:00:00.000Z",
+*         "url": "https://api.cristin.no/v2/projects/475949"
+*     }
+* ]
+								
+Response
+Returns a JSON object that conforms to the funding JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the list of projects
+* 400 - Bad request, returned if the id is invalid
+* 404 - Not found, returned if no funding with this id could be found
+GET fundings/{id}/results GET funding/{id}/results 
+Retrieves results related to a funding by its id.
+GET fundings/{id}/resultsParameterTypeDescriptionidStringThe Cristin id of the funding.pageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationlangStringTwo letter language code. Using the 'lang' parameter Examples
+* https://api.cristin.no/v2/fundings/5/results   
+* [
+* 	{
+*         "category": {
+*             "code": "LECTURE",
+*             "name": {
+*                 "en": "Lecture"
+*             }
+*         },
+*         "contributors": {
+*             "url": "https://api.cristin.no/v2/results/1520502/contributors"
+*         },
+*         "cristin_result_id": "1520502",
+*         "original_language": "en",
+*         "title": {
+*             "en": "Nanoparticles for heterogeneous catalysis of industrial relevant processes"
+*         },
+*         "year_published": "2017",
+*         "url": "https://api.cristin.no/v2/results/1520502",
+*         "event": {
+*             "name": "ICAFM2017",
+*             "location": "Chennai",
+*             "date_from": "2017-01-06T00:00:00.000Z",
+*             "date_to": "2017-01-08T00:00:00.000Z"
+*         }
+*     }, {
+*         "category": {
+*             "code": "ACADEMICLECTURE",
+*             "name": {
+*                 "en": "Academic lecture"
+*             }
+*         },
+*         "contributors": {
+*             "url": "https://api.cristin.no/v2/results/1520506/contributors"
+*         },
+*         "cristin_result_id": "1520506",
+*         "original_language": "en",
+*         "title": {
+*             "en": "Operando Investigations of Surfaces for NOx Abatement Catalysis"
+*         },
+*         "year_published": "2017",
+*         "url": "https://api.cristin.no/v2/results/1520506",
+*         "event": {
+*             "name": "ICAFM2017",
+*             "location": "Chennai",
+*             "date_from": "2017-01-06T00:00:00.000Z",
+*             "date_to": "2017-01-08T00:00:00.000Z"
+*         }
+*     },
+* 	...
+* ]
+					
+Response
+Returns a JSON object that conforms to the funding JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the list of results
+* 400 - Bad request, returned if the id is invalid
+* 404 - Not found, returned if no funding with this id could be found
+GET fundings/sources GET fundings/sources 
+Show list of all available funding sources.
+GET fundings/sourcesParameterTypeDescriptionlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/fundings/sources 
+* [
+*     {
+*         "code" : "EC/FP7",
+*         "name" : {
+*             "en" : "EC/FP7"
+*         }
+*     },
+*     {
+*         "code" : "NFR",
+*         "name" : {
+*             "en" : "Research Council of Norway (RCN)"
+*         }
+*     },
+*     ...
+* ]
+								
+Response
+Returns a JSON object that contains an array with all available funding sources and conforms to the database codes JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of funding sources.
+GET institutions?{parameters} GET institutions?{parameters} 
+Search for institutions by a combination of filter parameters.
+GET institutionsParameterTypeDescriptionidStringCristin id of the institutionnameStringName or acronym of the institutioncountryStringTwo letter country code (ISO 3166-1 alpha-2)cristin_institutionBooleanIf institution is an identified cristin institution or not (true/false)langStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationExamples
+* https://api.cristin.no/v2/institutions?name=OUS&lang=en 
+* [
+* 	{
+* 		"cristin_institution_id": "2012",
+* 		"institution_name": {
+* 			"en": "Oslo University Hospital"
+* 		},
+* 		"acronym": "OUS",
+* 		"country": "NO",
+* 		"cristin_user_institution": true,
+* 		"url": "https://api7.cristin-test.uio.no/v2/institutions/2012"
+* 	}
+* ]
+								
+* https://api.cristin.no/v2/institutions?name=høgskolen+i+buskerud 
+* [
+* 	{
+* 		"cristin_institution_id": "222",
+* 		"institution_name": {
+* 			"en": "University of South-Eastern Norway"
+* 		},
+* 		"old_name": "Høgskolen i Buskerud (gml nr 205)",
+* 		"acronym": "USN",
+* 		"country": "NO",
+* 		"cristin_user_institution": true,
+* 		"url": "https://api7.cristin-test.uio.no/v2/institutions/222"
+* 	}
+* ]
+								
+* https://api.cristin.no/v2/institutions?name=center+technology 
+* [
+* 	{
+* 		"cristin_institution_id": "44400261",
+* 		"institution_name": {
+* 			"en": "Center for Environmental Planning and Technology University"
+* 		},
+* 		"acronym": "CEPT",
+* 		"country": "IN",
+* 		"cristin_user_institution": false,
+* 		"url": "https://api.cristin.no/v2/institutions/44400261"
+* 	}
+* ]
+								
+* https://api.cristin.no/v2/institutions?name=stavanger 
+* [
+* 	{
+* 		"cristin_institution_id": "217",
+* 		"institution_name": {
+* 			"en": "University of Stavanger"
+* 		},
+* 		"acronym": "UIS",
+* 		"country": "NO",
+* 		"cristin_user_institution": true,
+* 		"url": "https://api.cristin.no/v2/institutions/217"
+* 	},
+* 	{
+* 		"cristin_institution_id": "1162",
+* 		"institution_name": {
+* 			"nb": "Folkeuniversitetet Stavanger"
+* 		},
+* 		"acronym": "FUSTAVANG",
+* 		"country": "NO",
+* 		"cristin_user_institution": false,
+* 		"url": "https://api.cristin.no/v2/institutions/1162"
+* 	},
+* 	...
+* ]
+								
+* https://api.cristin.no/v2/institutions?id=254 
+* [
+* 	{
+* 		"cristin_institution_id": "254",
+* 		"institution_name": {
+* 			"en": "NLA University College"
+* 		},
+* 		"acronym": "NLA",
+* 		"country": "NO",
+* 		"cristin_user_institution": true,
+* 		"url": "https://api.cristin.no/v2/institutions/254"
+* 	}
+* ]
+								
+* https://api.cristin.no/v2/institutions?country=DE 
+* [
+* 	{
+* 		"cristin_institution_id": "14400000",
+* 		"institution_name": {
+* 			"en": "Germany"
+* 		},
+* 		"acronym": "TYSKLAND",
+* 		"country": "DE",
+* 		"cristin_user_institution": false,
+* 		"url": "https://api.cristin.no/v2/institutions/14400000"
+* 	},
+* 	{
+* 		"cristin_institution_id": "14400001",
+* 		"institution_name": {
+* 			"nb": "Akademie der Bildenden Künste München"
+* 		},
+* 		"acronym": "AdBKM",
+* 		"country": "DE",
+* 		"cristin_user_institution": false,
+* 		"url": "https://api.cristin.no/v2/institutions/14400001"
+* 	},
+* 	...
+* ]
+								
+Response
+Returns a JSON object that contains an array with matching institutions and conforms to the institutions summary JSON schema. The response will be paginated. 
+HTTP Status Codes
+* 200 - Ok, returns list of institution summaries.
+* 400 - Bad request, returned if the filter parameters are invalid.
+GET institutions/{id} GET institutions/{id} 
+Retrieve an institution by its id.
+GET institutionsParameterTypeDescriptionidStringThe Cristin id of the institutionlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/institutions/7502?lang=nb 
+* {
+* 	"cristin_institution_id": "7502",
+* 	"institution_name": {
+* 		"nb": "Folkehelseinstituttet"
+* 	},
+* 	"acronym": "FHI",
+* 	"country": "NO",
+* 	"cristin_user_institution": true,
+* 	"corresponding_unit": {
+* 		"cristin_unit_id": "7502.0.0.0",
+* 		"url": "https://api.cristin.no/v2/units/7502.0.0.0"
+* 	}
+* }
+								
+* https://api.cristin.no/v2/institutions/205/ 
+* {
+* 	"cristin_institution_id": "222",
+* 	"institution_name": {
+* 		"en": "University of South-Eastern Norway"
+* 	},
+* 	"acronym": "USN",
+* 	"country": "NO",
+* 	"cristin_user_institution": true,
+* 	"corresponding_unit": {
+* 		"cristin_unit_id": "222.0.0.0",
+* 		"url": "https://api.cristin.no/v2/units/222.0.0.0"
+* 	}
+* }
+								
+Response
+Returns a JSON object that conforms to the institution JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the institution.
+* 307 - Redirect, returned if the institution was merged into another institution.
+* 400 - Returned if the id is invalid
+* 404 - Returned if there is no content with the given id
+GET keywords?{parameters} GET keywords?{parameters} 
+Search for keywords by name or browse all.
+GET keywordsParameterTypeDescriptionnameStringThe name of the keyword (that is, the keyword itself), or a part thereof, in any of the supported languages.langStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationExamples
+* https://api.cristin.no/v2/keywords?name=foo 
+* [
+*     {
+*         "code": "1971",
+*         "name": {
+*             "en": "Food"
+*         }
+*     },
+*     {
+*         "code": "1972",
+*         "name": {
+*             "en": "Food Classification"
+*         }
+*     },
+*     ...
+* ]
+								
+* https://api.cristin.no/v2/keywords?name=foo&lang=nb,en 
+* [
+*     {
+*         "code": "1971",
+*         "name": {
+*             "nb": "Mat",
+*             "en": "Food"
+*         }
+*     },
+*     {
+*         "code": "1972",
+*         "name": {
+*             "nb": "Matklassifikasjon",
+*             "en": "Food Classification"
+*         }
+*     },
+*     ...
+* ]
+								
+Response
+Returns a JSON object that contains an array with matching keywords and conforms to the database codes JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of keywords.
+* 400 - Bad request, returned if the filter parameters are invalid.
+GET keyword/{id} GET keywords/{id} 
+Retrieve keyword by identifier.
+GET keywordParameterTypeDescriptionidStringCristin id of the keyword.langStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/keywords/1197 
+* {
+*   "code" : "1197",
+*   "name" : {
+*     "en" : "Educational management",
+*     "nb" : "Utdanningsledelse"
+*   }
+* }
+								
+Response
+Returns a JSON object that contains a keyword and conforms to the database codes JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a keyword.
+* 404 - Returned if there is no content with the given id
+POST keywords POST keywords 
+Create a new keyword. (This request requires authentication.)
+The request payload must conform to the POST Keyword JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+POST create a new keyword using the supplied languages and returns the newly created keyword as it will be shown in subsequent GET requests. If lang parameter is not supplied only the default language 'en' will be shown, but the other languages will be stored as well. 
+Unrecognized fields or fields that are not part of the POST keyword JSON schema are currently silently ignored.
+Examples
+* POST keyword example payload 
+* {
+*   "name": {
+*     "en": "Keyword english",
+*     "nb": "Bokmål nøkkelord",
+*     "nn": "Nynorsk nøkkelord"
+*   }
+* }
+								
+Response
+Returns a JSON object that conforms to the Database codes JSON schema. 
+HTTP Status Codes
+* 201 - Created, returned upon successful insertion.
+* 400 - Bad request, returned if the supplied JSON content is invalid. The response will contain relevant error messages and warnings. 
+Response headers
+* Location - Link to the created resource
+GET persons?{parameters} GET persons?{parameters} 
+Search for persons by a combination of filter parameters.
+GET personsParameterTypeDescriptionidStringCristin id of the personnational_idStringThe eleven-digit Norwegian national id of the person (this parameter requires authorization)nameStringFirst name, surname, or parts thereof of the personinstitutionStringCristin id, acronym, name, or part of the name of an institution the person is affiliated with parent_unit_idStringId (e.g. unit=185.53.18.10) of a parent unit. Returns all persons affiliated with the given unit as well as its subunits. The paramter 'levels' can be used to narrow the scope. levelsStringHow many levels down from 'parent_unit_id' will be included in the search.'levels=1' will return persons affiliated with 'parent_unit_id', 'levels=2' will also include persons affiliated with that unit's direct subunit, and so on.
+'levels' can also be used by itself to search for all persons registered to a known cristin unit down to the given level. 
+'levels' is a number between 1 and 32. userStringA person's username in Cristin together with the institution id separated by ':'
+'askeladd:185' means Cristin user 'askeladd' from the institution '185'pageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationverifiedBooleanShow either verified or unverified persons only. Defaults to 'true'sortStringSorts on 'name' and/or 'id'. See Search and sort
+Sort order 'name' is using surname before first name. Default sort order is on 'name' in ascending order. Examples
+* https://api.cristin.no/v2/persons?id=30621 
+* [
+* 	{
+* 		"first_name": "Ole Sylvester",
+* 		"surname": "Jensen",
+* 		"url": "https://api.cristin.no/v2/persons/30621",
+* 		"cristin_person_id": "30621"
+* 	}
+* ]
+								
+* https://api.cristin.no/v2/persons?name=Ole+sylvester+jensen 
+* [
+* 	{
+* 		"first_name": "Ole Sylvester",
+* 		"surname": "Jensen",
+* 		"url": "https://api.cristin.no/v2/persons/30621",
+* 		"cristin_person_id": "30621"
+* 	}
+* ]
+								
+* https://api.cristin.no/v2/persons?name=anne&institution=uio 
+* [
+* 	{
+* 		"first_name": "Anne Maren",
+* 		"surname": "Aabøe",
+* 		"url": "https://api.cristin.no/v2/persons/420490",
+* 		"cristin_person_id": "420490"
+* 	},
+* 	{
+* 		"first_name": "Anne",
+* 		"surname": "Aaen-Stockdale",
+* 		"url": "https://api.cristin.no/v2/persons/515001",
+* 		"cristin_person_id": "515001"
+* 	},
+* 	...
+* ]
+								
+Response
+Returns a JSON object that contains an array with matching persons and conforms to the persons summary JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of person summaries.
+* 400 - Bad request, returned if the filter parameters are invalid.
+GET persons/{id} GET persons/{id} 
+Retrieve a person by their id.
+GET personsParameterTypeDescriptionidStringCristin id of the person. 
+Alternatively, calling GET persons/ORCID:####-####-####-#### will attempt to resolve the person's verified ORCID and return a HTTP 307 redirect to the corresponding Cristin id. langStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/persons/250?lang=en 
+* {
+* 	"cristin_person_id": "250",
+* 	"first_name": "Patrick",
+* 	"surname": "Diemling",
+* 	"identified_cristin_person": true,
+* 	"cristin_profile_url": "https://app.cristin.no/persons/show.jsf?id=250",
+* 	"affiliations": [
+* 		{
+* 			"institution": {
+* 				"cristin_institution_id": "185",
+* 				"url": "https://api.cristin.no/v2/institutions/185"
+* 			},
+* 			"unit": {
+* 				"cristin_unit_id": "185.14.32.0",
+* 				"url": "https://api.cristin.no/v2/units/185.14.32.0"
+* 			},
+* 			"active": false,
+* 			"position": {
+* 				"en": "Guest"
+* 			}
+* 		}
+* 	]
+* }
+								
+* https://api.cristin.no/v2/persons/10 
+* {
+* 	"cristin_person_id": "10",
+* 	"first_name": "Bedada Mergo",
+* 	"surname": "Egne",
+* 	"identified_cristin_person": true,
+* 	"cristin_profile_url": "https://app.cristin.no/persons/show.jsf?id=10",
+* 	"affiliations": [
+* 		{
+* 			"institution": {
+* 				"cristin_institution_id": "185",
+* 				"url": "https://api.cristin.no/v2/institutions/185"
+* 			},
+* 			"unit": {
+* 				"cristin_unit_id": "185.18.0.0",
+* 				"url": "https://api.cristin.no/v2/units/185.18.0.0"
+* 			},
+* 			"active": false,
+* 			"position": {
+* 				"en": "Guest"
+* 			}
+* 		},
+* 		{
+* 			"institution": {
+* 				"cristin_institution_id": "185",
+* 				"url": "https://api.cristin.no/v2/institutions/185"
+* 			},
+* 			"unit": {
+* 				"cristin_unit_id": "185.18.1.0",
+* 				"url": "https://api.cristin.no/v2/units/185.18.1.0"
+* 			},
+* 			"active": false,
+* 			"position": {
+* 				"en": "Guest"
+* 			}
+* 		}
+* 	],
+*         "detailed_affiliations": [
+*                 {
+*                         "id": "12345",
+*                         "affiliation": {
+*                                 "institution": {
+*                                         "cristin_institution_id": "185",
+*                                         "url": "https://api.cristin.no/v2/institutions/185"
+*                                 },
+*                                 "unit": {
+*                                         "cristin_unit_id": "185.18.1.0",
+*                                         "url": "https://api.cristin.no/v2/units/185.18.1.0"
+*                                 }
+*                         },
+*                         "active": true,
+*                         "position": {
+*                                 "code": "M0000029",
+*                                 "name": {
+*                                         "en": "Guest"
+*                                 },
+*                                 "enabled": false
+*                         },
+*                         "start_date": "2008-01-01T00:00:00.000Z",
+*                         "end_date": "2019-12-31T00:00:00.000Z",
+*                         "fte_percentage": 100.0,
+*                         "url": "https://api.cristin.no/v2/persons/10/affiliations/12345"
+*                 }
+*         ],
+*   "background": {
+*     "no": "Har erfaring fra helsesektoren"
+*   }
+* }
+								
+Response
+Returns a JSON object that conforms to the person JSON schema. Information may be truncated depending on client authorization. 
+HTTP Status Codes
+* 200 - Ok, returns the person.
+* 307 - Redirect, returned if the requested person id can be resolved to a different person id.
+* 400 - Returned if the id is invalid
+* 404 - Returned if there is no content with the given id
+POST persons POST persons 
+Create a new person. (This request requires authentication.)
+The request payload must conform to the POST person JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+POST create a new person using the supplied fields and returns the newly created person as it will be shown in subsequent GET requests. 
+Unrecognized fields or fields that are not part of the POST person JSON schema are currently silently ignored.
+Examples
+* POST person example payload 
+* {
+*   "first_name": "Ola Petter",
+*   "surname": "Nordmann",
+*   "first_name_preferred": "Ola",
+*   "surname_preferred": null,
+*   "norwegian_national_id": "12345698765",
+*   "reserved": false,
+*   "detailed_affiliations": [
+*     {
+*       "affiliation": {
+*         "unit": {
+*           "cristin_unit_id": "2012.0.0.0"
+*         }
+*       },
+*       "position": {
+*         "code": "1087"
+*       },
+*       "start_date": "2021-03-01T12:00:00.000Z",
+*       "end_date": "2022-03-01T12:00:00.000Z",
+*       "fte_percentage": 100
+*     }
+*   ],
+*   "background": {
+*     "no": "Har erfaring fra helsesektoren"
+*   }
+* }
+* 
+								
+Request
+Request headers
+* Cristin-Representing-Institution - Mandatory if payload has detailed_affiliations or person_nvi. Only create detailed_affiliations or person_nvi data at this Cristin institution. Takes a cristin institution id, or the string 'any' for any institution 
+Response
+Returns a JSON object that conforms to the person JSON schema. 
+HTTP Status Codes
+* 201 - Created, returned upon successful insertion.
+* 400 - Bad request, returned if the supplied JSON content is invalid. The response will contain relevant error messages and warnings. 
+Response headers
+* Location - Link to the created resource
+PATCH persons/{id} PATCH persons/{id} 
+Modify an existing person. (This request requires authentication.)
+PATCH personsParameterTypeDescriptionidStringThe Cristin id of the personThe request must have Content-Type: application/merge-patch+json and the payload must conform to the PATCH person JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+PATCH updates one or more fields of the resource following the JSON Merge Patch strategy: Fields that are included in the request are overwritten, while fields not included in the request remain unaltered. 
+Unrecognized fields or fields that are not part of the PATCH person JSON schema are currently silently ignored.
+Examples
+* PATCH person example payload 
+* {
+*   "orcid": {
+* 	"id": "0000-0002-3121-1236"
+*   },
+*   "first_name": "Ola Petter",
+*   "surname": "Nordmann",
+*   "first_name_preferred": "Ola",
+*   "surname_preferred": null,
+*   "detailed_affiliations": [
+*     {
+*       "affiliation": {
+*         "unit": {
+*           "cristin_unit_id": "2012.0.0.0"
+*         }
+*       },
+*       "position": {
+*         "code": "1087"
+*       },
+*       "start_date": "2021-03-01T12:00:00.000Z",
+*       "end_date": "2022-03-01T12:00:00.000Z",
+*       "fte_percentage": 100
+*     }
+*   ],
+*   "background": {
+*     "no": "Har erfaring fra helsesektoren"
+*   }
+* }
+* 
+								
+Request
+Request headers
+* Cristin-Representing-Institution - Mandatory if updating detailed_affiliations or person_nvi. Only update detailed_affiliations or person_nvi data at this Cristin institution. Takes a cristin institution id, or the string 'any' for any institution 
+Response
+HTTP Status Codes
+* 204 - No content, returned upon successful modification.
+* 400 - Bad request, returned if the supplied JSON content is invalid. The response will contain relevant error messages and warnings. 
+* 403 - Forbidden, returned if this particular person cannot be modified.
+* 404 - Not found, returned if there is no person with this id.
+GET persons/orcid GET persons/orcid 
+List person ids having an orcid. (This request requires authentication.)
+Examples
+* https://api.cristin.no/v2/persons/orcid 
+* [
+*   {
+*     "cristin_person_id": "1234",
+*     "orcid": {
+*       "id": "1234-5678-1234-5678"
+*     }
+*   },
+*   {
+*     "cristin_person_id": "4321",
+*     "orcid": {
+*       "id": "4321-1234-4321-123X"
+*     }
+*   }
+* ]
+								
+Response
+Returns a JSON array that contains objects of person id and their corresponding orcid if that person has an orcid. Conforms to the persons orcid JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of person ids and their orcid.
+GET persons/resolve GET persons/resolve 
+Resolve a person by their National Identity Number (NIN). (This request requires authentication.)
+GET persons/resolveParameterTypeDescriptionnational_idStringNational Identity Number (11 digits) of the person to retrievelangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/persons/resolve?national_id=12345678901 
+* {
+*   "cristin_person_id": "1234",
+*   "first_name": "Ola",
+*   "surname": "Nordmann",
+*   "affiliations": [
+*     {
+*       "institution": {
+*         "cristin_institution_id": "185",
+*         "institution_name": {
+*           "en": "University of Oslo"
+*         }
+*       },
+*       "unit": {
+*         "cristin_unit_id": "185.15.21.0",
+*         "unit_name": {
+*           "en": "Department of Informatics"
+*         }
+*       }
+*     }
+*   ]
+* }
+								
+Response
+Returns a JSON object that conforms to the person JSON schema. 
+HTTP Status Codes
+200 OK: Person found and returned
+400 Bad Request: Invalid NIN format
+404 Not Found: Person not found with given NIN 
+GET persons/{pid}/affiliations GET persons/{pid}/affiliations 
+List of a given person's affiliations / employments. (This request requires authentication.)
+GET persons/{pid}/affiliationsParameterTypeDescriptionpidStringCristin id of the personlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/persons/738/affiliations?lang=nb 
+* [
+*     {
+*         "id": "1016",
+*         "affiliation": {
+*             "institution": {
+*                 "cristin_institution_id": "20202",
+*                 "url": "https://api.cristin.no/v2/institutions/20202"
+*             },
+*             "unit": {
+*                 "cristin_unit_id": "20202.0.0.0",
+*                 "url": "https://api.cristin.no/v2/units/20202.0.0.0"
+*             }
+*         },
+*         "active": true,
+*         "position": {
+*             "code": "M0000029",
+*             "name": {
+*                 "nb": "Gjest"
+*             },
+*             "enabled": false
+*         },
+*         "start_date": "2008-01-01T00:00:00.000Z",
+*         "fte_percentage": 100.0,
+*         "url": "https://api.cristin.no/v2/persons/738/affiliations/1016"
+*     },
+*     {
+*         "id": "1014",
+*         "affiliation": {
+*             "institution": {
+*                 "cristin_institution_id": "185",
+*                 "url": "https://api.cristin.no/v2/institutions/185"
+*             },
+*             "unit": {
+*                 "cristin_unit_id": "185.39.55.20",
+*                 "url": "https://api.cristin.no/v2/units/185.39.55.20"
+*             }
+*         },
+*         "active": false,
+*         "position": {
+*             "code": "M0000029",
+*             "name": {
+*                 "nb": "Gjest"
+*             },
+*             "enabled": false
+*         },
+*         "start_date": "2017-12-01T00:00:00.000Z",
+*         "end_date": "2019-12-31T00:00:00.000Z",
+*         "url": "https://api.cristin.no/v2/persons/738/affiliationss/1014"
+*     }
+* ]
+								
+Response
+Returns a JSON array of objects containing and describing affiliations / employments, conforming to the affiliations JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of affiliations.
+* 400 - Bad request, returned if the person id is invalid
+Response headers
+* X-Total-Count - total number of hits
+* Link - pagination previous and next page
+This endpoint is not currently paginated, but clients should implement handling of these headers in case pagination is introduced later. 
+POST persons/{id}/affiliations POST persons/{id}/affiliations 
+Create a new affiliation / employment for a person. (This request requires authentication.)
+POST persons/{pid}/affiliationsParameterTypeDescriptionpidStringCristin id of the personlangStringTwo letter language code. Using the 'lang' parameterThe request payload must conform to the POST person affiliation JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+Creates a new affiliation / employment for a person using the supplied fields and returns the result as a HTTP status code. 
+Unrecognized fields or fields that are not part of the POST affiliation JSON schema are currently silently ignored.
+Examples
+* POST person example payload 
+* {
+*     "affiliation" : {
+*         "unit": {
+*             "cristin_unit_id": "2012.0.0.0"
+*         }
+*     },
+*     "position": {
+*         "code": "1087"
+*     },
+*     "start_date": "2021-03-01T12:00:00.000Z",
+*     "end_date": "2022-03-01T12:00:00.000Z",
+*     "fte_percentage": 100
+* }
+								
+Request
+Request headers
+* Cristin-Representing-Institution - Mandatory. Only allow creation of affiliation at this Cristin institution. Takes a number corresponding to top level institution identifier, or the string 'any' for any institution
+Response
+HTTP Status Codes
+* 201 - Created, returned upon successful insertion, along with a JSON representation of the newly created affiliation.
+* 400 - Bad request, returned if the supplied JSON content is invalid. The response will contain relevant error messages and warnings. 
+Response headers
+* Location - Link to the created resource
+GET persons/{pid}/affiliations/{aid} GET persons/{pid}/affiliations/{aid} 
+Retrieve a particular affiliation / employment of a person. (This request requires authentication.)
+GET persons/{pid}/affiliations/{aid}ParameterTypeDescriptionpidStringCristin id of the personaidStringCristin id of the affiliationlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/persons/738/affiliations/1016?lang=nb 
+* {
+*     "id": "1016",
+*     "affiliation": {
+*         "institution": {
+*             "cristin_institution_id": "20202",
+*             "url": "https://api.cristin.no/v2/institutions/20202"
+*         },
+*         "unit": {
+*             "cristin_unit_id": "20202.0.0.0",
+*             "url": "https://api.cristin.no/v2/units/20202.0.0.0"
+*         }
+*     },
+*     "active": true,
+*     "position": {
+*         "code": "M0000029",
+*         "name": {
+*             "nb": "Gjest"
+*         },
+*         "enabled": false
+*     },
+*     "start_date": "2008-01-01T00:00:00.000Z",
+*     "fte_percentage": 100.0,
+*     "url": "https://api.cristin.no/v2/persons/738/affiliations/1016"
+* }
+								
+Response
+Returns a JSON object containing and describing a particular affiliation / employment, conforming to the GET affiliation JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of affiliations.
+* 400 - Bad request, returned if ids are invalid.
+* 404 - Not found, returned if no affiliation can be found for the given ids.
+PATCH persons/{pid}/affiliations/{aid} PATCH persons/{pid}/affiliations/{aid} 
+Modify an affiliation / employment of a given person. (This request requires authentication.)
+PATCH persons/{pid}/affiliations/{aid}ParameterTypeDescriptionpidStringCristin id of the personaidStringCristin id of the affiliationThe request must have Content-Type: application/merge-patch+json and the payload must conform to the PATCH person affiliation JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+PATCH updates one or more fields of the resource following the JSON Merge Patch strategy: Fields that are included in the request are overwritten, while fields not included in the request remain unaltered. 
+Unrecognized fields or fields that are not part of the JSON schema are currently silently ignored.
+Examples
+* https://api.cristin.no/v2/persons/738/affiliations/1015 
+* {
+*     "affiliation": {
+*         "unit": {
+*             "cristin_unit_id": "2012.9.20.0"
+*         }
+*     },
+*     "position": {
+*         "code": "M0000002"
+*     },
+*     "start_date": "2009-01-01T00:00:00.000Z",
+*     "end_date": "2012-12-31T00:00:00.000Z",
+*     "fte_percentage": 100.0
+* }
+								
+Request
+Request headers
+* Cristin-Representing-Institution - Mandatory. Only allow update of affiliation at this Cristin institution. Takes a number corresponding to top level institution identifier, or the string 'any' for any institution
+Response
+HTTP Status Codes
+* 204 - No content, the information on that affiliation was updated
+* 400 - Bad request, returned if the ids are invalid or there were problems with the payload
+* 404 - Not found, returned if the person or affiliation ids do not exist
+DELETE persons/{pid}/affiliations/{aid} DELETE persons/{pid}/affiliations/{aid} 
+Delete person affiliation / employment specific to an institution. (This request requires authentication.)
+DELETE one person affiliation / employment per institutionParameterTypeDescriptionpidStringCristin id of the personaidStringCristin id of the affiliationRequest
+Request headers
+* Cristin-Representing-Institution - Mandatory. Only allow deletion of affiliation at this Cristin institution. Takes a number corresponding to top level institution identifier, or the string 'any' for any institution
+Response
+HTTP Status Codes
+* 200 - Ok, returned upon successful deletion
+* 400 - Bad request, returned if the ids are invalid
+* 404 - Not found, returned if no match could be found for the given ids
+GET persons/affiliations/positions GET persons/affiliations/positions 
+List of person affiliation / employment position codes which can be retrieved in optional requested language.
+GET persons/affiliations/positionsParameterTypeDescriptionlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/persons/affiliations/positions?lang=nb 
+* [
+*   {
+*     "code": "1060",
+*     "name": {
+*       "nb": "Avdelingsdirektør"
+*     },
+*     "enabled": true
+*   },
+*   {
+*     "code": "1061",
+*     "name": {
+*       "nb": "Assist. direktør"
+*     },
+*     "enabled": true
+*   }
+* ]
+								
+Response
+Returns a JSON array of objects containing and describing position codes, conforming to the position codes JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of position codes.
+Response headers
+* X-Total-Count - total number of hits
+* Link - pagination previous and next page
+This endpoint is not currently paginated, but clients should implement handling of these headers in case pagination is introduced later. 
+GET persons/{pid}/institutions/{iid} GET persons/{pid}/institutions/{iid} 
+Retrieve person information specific to an institution. (This request requires authentication.)
+GET person data per institutionParameterTypeDescriptionpidStringCristin id of the personiidStringCristin id of the institutionExamples
+* https://api.cristin.no/v2/persons/738/institutions/185 
+* {
+*     "phone": "+47 96xx xxxx",
+*     "email": "daniel.yyyy@medisin.uio.no
+* }
+                                
+Response
+Returns a JSON object that conforms to the person-at-institution JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns information on that person at the given institution
+* 400 - Bad request, returned if the ids are invalid
+* 404 - Not found, returned if no data could be found for the given ids
+PATCH persons/{pid}/institutions/{iid} PATCH persons/{pid}/institutions/{iid} 
+Modify person information specific to an institution. (This request requires authentication.)
+PATCH person data per institutionParameterTypeDescriptionpidStringCristin id of the personiidStringCristin id of the institutionThe request must have Content-Type: application/merge-patch+json and the payload must conform to the PATCH person information JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+PATCH updates one or more fields of the resource following the JSON Merge Patch strategy: Fields that are included in the request are overwritten, while fields not included in the request remain unaltered. 
+Unrecognized fields or fields that are not part of the JSON schema are currently silently ignored.
+Examples
+* PATCH person information example payload 
+* {
+*     "phone": "+47 96xx xxxx",
+*     "email": "daniel.yyyy@medisin.uio.no
+* }
+								
+Response
+HTTP Status Codes
+* 204 - No content, the information on that person at the given institution was updated
+* 400 - Bad request, returned if the ids are invalid or there were problems with the payload
+* 404 - Not found, returned if the person or institution ids do not exist
+GET persons/{id}/picture GET persons/{id}/picture 
+Retrieve profile picture for a given person.
+GET person pictureParameterTypeDescriptionidStringCristin id of the personResponse
+Returns binary content of type image/jpeg 
+HTTP Status Codes
+* 200 - Ok, returns the profile picture
+* 400 - Bad request, returned if supplied id is invalid
+* 404 - Not found, returned if no person matches the supplied id, or the person has no profile picture
+PUT persons/{id}/picture PUT persons/{id}/picture 
+Store profile picture for a given person. (This request requires authentication.)
+The request must declare the header Content-Type: image/jpeg and the payload must contain corresponding binary data. Size restrictions may apply. 
+PUT person pictureParameterTypeDescriptionidStringCristin id of the personResponse
+HTTP Status Codes
+* 204 - No content, stores the profile picture
+* 400 - Bad request, returned if supplied id is invalid
+* 404 - Not found, returned if no person matches the supplied id
+* 415 - Unsupported media type, returned if the content type is not accepted
+GET persons/{id}/users GET persons/{id}/users 
+Retrieve all registered user accounts for a specific person. (This request requires authentication.)
+GET person user account data per institutionParameterTypeDescriptionidStringCristin id of the personExamples
+* https://api.cristin.no/v2/persons/1234/users 
+* [
+*     {
+*         "institution": {
+*             "cristin_institution_id": "185",
+*             "url": "https://api.cristin.no/v2/institutions/185"
+*         },
+*         "username": "myuser",
+*         "locked": false,
+*         "url": "https://api.cristin.no/v2/persons/1234/users/myuser:185"
+*     },
+*     {
+*         "institution": {
+*             "cristin_institution_id": "20202",
+*             "url": "https://api.cristin.no/v2/institutions/20202"
+*         },
+*         "username": "myuseragain",
+*         "locked": false,
+*         "url": "https://api.cristin.no/v2/persons/1234/users/myuseragain:20202"
+*     }
+* ]
+                                
+Response
+Returns a JSON object that conforms to the Person user account list JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of that person's user accounts.
+* 400 - Bad request, returned if supplied id is invalid
+* 404 - Not found, returned if no user matches the supplied id
+POST persons/{id}/users POST persons/{id}/users 
+Create a new user account for a person. (This request requires authentication.)
+The request payload must conform to the POST person user account JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. Note that the API will convert usernames to lowercase. 
+Creates a new user account for a person using the supplied fields and returns the newly created user account as it will be shown in subsequent GET requests. 
+Unrecognized fields or fields that are not part of the POST user account JSON schema are currently silently ignored.
+Examples
+* POST person example payload 
+* {
+*     "institution": {
+*         "cristin_institution_id": "185"
+*     },
+*     "username": "bob",
+*     "locked": false
+* }
+* 
+								
+Response
+Returns a JSON object that conforms to the person user account JSON schema. 
+HTTP Status Codes
+* 201 - Created, returned upon successful insertion.
+* 404 - Not found, returned if no user matches id.
+* 400 - Bad request, returned if the supplied JSON content is invalid. The response will contain relevant error messages and warnings. 
+Response headers
+* Location - Link to the created resource
+PATCH persons/{pid}/users/{accountid} PATCH persons/{pid}/users/{accountid} 
+Modify person user account specific to an institution. (This request requires authentication.)
+PATCH person user account per institutionParameterTypeDescriptionpidStringCristin id of the personaccountidStringA person's account id, composed of the username and institution id separated by ':', e.g. askeladd:185The request must have Content-Type: application/merge-patch+json and the payload must conform to the PATCH person user account JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+PATCH updates one or more fields of the resource following the JSON Merge Patch strategy: Fields that are included in the request are overwritten, while fields not included in the request remain unaltered. 
+Unrecognized fields or fields that are not part of the JSON schema are currently silently ignored.
+Examples
+* PATCH person information example payload 
+* {
+*     "locked": false
+* }
+								
+Response
+HTTP Status Codes
+* 204 - No content, the information on that person at the given institution was updated
+* 400 - Bad request, returned if the ids are invalid or there were problems with the payload
+* 404 - Not found, returned if the person or institution ids do not exist or does not have an account
+GET persons/{id}/results GET persons/{id}/results 
+Retrieve results by person id.
+GET person resultsParameterTypeDescriptionidStringCristin id of the personlangStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationExamples
+* https://api.cristin.no/v2/persons/23610/results 
+* [
+* 	{
+* 		"category": {
+* 			"code": "MONOGRAPACA",
+* 			"name": {
+* 				"en": "Academic monograph"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/persons/1602037/contributors"
+* 		},
+* 		"cristin_result_id": "1602037",
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Boomtown: Runaway Globalisation in Coastal Queensland"
+* 		},
+* 		"year_published": "2018",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/1602037",
+* 		"publisher": {
+* 			"name": "Pluto Press"
+* 		}
+* 	},
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/persons/1602035/contributors"
+* 		},
+* 		"cristin_result_id": "1602035",
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Being irrelevant in a relevant way; Anthropology and the public wisdom"
+* 		},
+* 		"year_published": "2018",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/1602035",
+* 		"journal": {
+* 			"name": "Kritisk Etnografi: Swedish Journal of Anthropology"
+* 		}
+* 	},
+* 	...
+* ]
+								
+* https://api.cristin.no/v2/persons/383170/results 
+* [
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/persons/1573108/contributors"
+* 		},
+* 		"cristin_result_id": "1573108",
+* 		"links": [
+* 			{
+* 				"url_type": "DOI",
+* 				"url": "https://doi.org/10.1038/nclimate3419"
+* 			}
+* 		],
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Assigning historic responsibility for extreme weather events"
+* 		},
+* 		"year_published": "2017",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/1573108",
+* 		"journal": {
+* 			"name": "Nature Climate Change"
+* 		}
+* 	},
+* 	{
+* 		"category": {
+* 			"code": "POSTER",
+* 			"name": {
+* 				"en": "Poster"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/persons/1562728/contributors"
+* 		},
+* 		"cristin_result_id": "1562728",
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Climate response to ozone perturbations at different altitudes and latitudes"
+* 		},
+* 		"year_published": "2017",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/1562728"
+* 	},
+* ]
+								
+Response
+Returns a list of JSON objects that conforms to the results JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of results for that person.
+* 400 - Bad request, returned if the id is invalid
+* 404 - Not found, returned if the person id could not be found
+GET projects?{parameters} GET projects?{parameters} 
+Search for projects by a combination of filter parameters.
+GET projectsParameterTypeDescriptionidStringCristin id of the projecttitleStringTitle of the project, or part of the titleinstitutionStringCristin id, acronym, name, or part of the name of the coordinating institutionuserStringA person's username in Cristin together with the institution id separated by ':'
+'askeladd:185' means Cristin user 'askeladd' from the institution '185' biobankStringBiobank id. 'biobank' can be used more than once. See Duplicate parametersproject_managerStringCristin id, name or part of the name of the project manager.participantStringCristin id, name or part of the name of a participant of the project. 
+'participant' can be used more than once. See Duplicate parameters approval_reference_idStringReference id of a project approval.approved_byStringCode for the authority that evaluated a project approval.creatorStringCristin person id of the person who registered the projectmodified_sinceStringOnly projects that have been modified since this date will be returned. Format: YYYY-MM-DD keywordStringKeyword search. '?keyword=wind energy' makes a search for projects with keywords equal to or a substring of
+'wind energy'. 'keyword' can be used more than once. See Duplicate parameters unitStringId (e.g. unit=185.53.18.10)parent_unit_idStringId (e.g. unit=185.53.18.10) of a parent unit. Returns all projects under the given unit as well as its child units. The paramter 'levels' can be used to narrow the scope. levelsStringHow many levels down from 'parent_unit_id' will be included in the search.'levels=1' will return projects registered to 'parent_unit_id'.
+'levels' can also be used by itself to search for all projects registered to a known cristin unit down to the given level. 
+'levels' is a number between 1 and 32. statusStringStatus of the projects. One of three values: [active, concluded, not started]. Projects without an end date are assumed to be active if start date has passed. project_codeStringProject code is the internal reference number used by funding sourcefunding_sourceStringFunding source code e.g: NFRfundingStringFunding source code e.g: NFR, and project_code together separated by ':'
+'NFR:1234' means 'funding_source': 'NFR' with 'project_code': '1234'multipleStringMatches multiple fields using only this one param, those being 'id', 'title', 'project_manager', 'participant' and 'project_code'langStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationsortStringSorts on 'start_date' and/or 'end_date' and/or 'name'. See Search and sort
+Default sort order is on 'cristin_project_id' in ascending order. Examples
+* https://api.cristin.no/v2/projects?id=539326 
+* [{
+* 	"cristin_project_id": "539326",
+* 	"title": {
+* 		"en": "Work package 4: Communication of death in nursing homes: a multi-cultural and multi-religious setting"
+* 	},
+* 	"main_language": "en",
+* 	"url": "https://api.cristin.no/v2/projects/539326"
+* }]
+								
+* https://api.cristin.no/v2/projects?title=heart&institution=diakon&modified_since=2014-02-01 
+* [{
+* 	"cristin_project_id": "435010",
+* 	"title": {
+* 		"no": "A multicenter,randomized,double-blind,placebo-controlled phase IIIb study to evaluate the efficacy, safety and tolerability of Serelaxin when added to standard therapy in acute heart failure patients(RELAX-2 trial)"
+* 	},
+* 	"main_language": "no",
+* 	"url": "https://api.cristin.no/v2/projects/435010"
+* 
+* }, {
+* 	"cristin_project_id": "414934",
+* 	"title": {
+* 		"no": "Utprøving av en kunnskapsbasert undervisningsmodell relatert til barn med\r\nmedfødt hjertefeil",
+* 		"en": "Evaluation of a knowledge-based teaching model for students and nurses in\r\nneonatal unit related to children with congenital heart disease"
+* 	},
+* 	"main_language": "no",
+* 	"url": "https://api.cristin.no/v2/projects/414934"
+* }]
+								
+Response
+Returns a JSON object that conforms to the projects summary JSON schema. The response will be paginated. 
+HTTP Status Codes
+* 200 - Ok, returns a list of project summaries.
+* 400 - Bad request, returned if the filter parameters are invalid.
+GET projects/{id} GET projects/{id} 
+Retrieve a project by its id. Projects that are not published can be retrieved by authenticating as the project's creator.
+GET projectsParameterTypeDescriptionidStringThe Cristin id of the projectlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/projects/435010 
+* {
+* 	"cristin_project_id": "435010",
+* 	"publishable": true,
+* 	"published": true,
+* 	"title": {
+* 		"no": "A multicenter,randomized,double-blind,placebo-controlled phase IIIb study to evaluate the efficacy, safety and tolerability of Serelaxin when added to standard therapy in acute heart failure patients(RELAX-2 trial)"
+* 	},
+* 	"main_language": "no",
+* 	"start_date": "2013-11-15T00:00:00.000Z",
+* 	"end_date": "2016-11-15T00:00:00.000Z",
+* 	"status": "CONCLUDED",
+* 	"created": {
+* 		"date": "2014-01-09T08:35:03.000Z"
+* 	},
+* 	"last_modified": {
+* 		"date": "2014-02-10T14:07:51.000Z"
+* 	},
+* 	"coordinating_institution": {
+* 		"institution": {
+* 			"cristin_institution_id": "1990",
+* 			"institution_name": {
+* 				"en": "Diakonhjemmet Hospital"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/institutions/1990"
+* 		},
+* 		"unit": {
+* 			"cristin_unit_id": "1990.11.0.0",
+* 			"unit_name": {
+* 				"nb": "Medisinsk avdeling"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/1990.11.0.0"
+* 		}
+* 	},
+* 	"project_funding_sources": [
+* 		{
+* 			"funding_source_code": "OTHER",
+* 			"funding_source_name": {
+* 				"en": "Other"
+* 			}
+* 		}
+* 	],
+* 	"participants": [
+* 		{
+* 			"cristin_person_id": "11546",
+* 			"first_name": "Erik",
+* 			"surname": "Øie",
+* 			"url": "https://api7.cristin-test.uio.no/v2/persons/11546",
+* 			"roles": [
+* 				{
+* 					"role_code": "PRO_MANAGER",
+* 					"institution": {
+* 						"cristin_institution_id": "1990"
+* 					},
+* 					"unit": {
+* 						"cristin_unit_id": "1990.11.0.0",
+* 						"unit_name": {
+* 							"nb": "Medisinsk avdeling"
+* 						}
+* 					}
+* 				}
+* 			]
+* 		}
+* 	],
+* 	"approvals": [
+* 		{
+* 			"approved_date": "2014-01-09T08:40:39.000Z",
+* 			"approved_by": "REK",
+* 			"approval_status": "APPLIED",
+* 			"application_code": "ETICHAPPR"
+* 		}
+* 	],
+*   "related_projects": [
+*       "https://api.cristin.no/v2/projects/12345",
+*       "https://api.cristin.no/v2/projects/98765"
+* 	],
+*   "contact_info": {
+*       "contact_person": "John Smith",
+*       "institution": "NTNU",
+*       "email": "John@ntnu.no",
+*       "phone": "44332211"
+*   },
+*   "creator": {
+*       "cristin_person_id": "12345",
+*       "first_name": "John",
+*       "surname": "Smith",
+*       "roles": [
+*           {
+*               "unit": {
+*                   "cristin_unit_id": "185.90.0.0"
+*               }
+*           }
+*       ]
+*   }
+* }
+								
+Response
+Returns a JSON object that conforms to the project JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the project.
+* 307 - Redirect, returned if the project was merged or moved into another project.
+* 400 - Bad request, returned if the id is invalid
+* 401 - Unauthorized, returned if the project is not published and the request didn't include authentication. 
+* 403 - Forbidden, returned if the project is not published and the supplied authentication is incorrect for the project. 
+* 404 - Returned if there is no content with the given id
+GET projects/categories GET projects/categories 
+Show list of all project categories.
+ParameterTypeDescriptionlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/projects/categories?lang=nb 
+* [
+* 	{
+* 		"code": "BASICRESEARCH",
+* 		"name": {
+* 			"nb": "Grunnforskning"
+* 		}
+* 	},
+* 	{
+* 		"code": "APPLIEDRESEARCH",
+* 		"name": {
+* 			"nb": "Anvendt forskning"
+* 		}
+* 	},
+* 	{
+* 		"code": "ACADEMICDEV",
+* 		"name": {
+* 			"nb": "Faglig utviklingsarbeid"
+* 		}
+* 	},
+* 	{
+* 		"code": "NORARTRES",
+* 		"name": {
+* 			"nb": "Program for kunstnerisk utviklingsarbeid"
+* 		}
+* 	},
+* 	{
+* 		"code": "SHAREDCOST",
+* 		"name": {
+* 			"nb": "Bidragsprosjekt"
+* 		}
+* 	},
+* 	{
+* 		"code": "COMISSIONED",
+* 		"name": {
+* 			"nb": "Oppdragsprosjekt"
+* 		}
+* 	},
+* 	{
+* 		"code": "PHD",
+* 		"name": {
+* 			"nb": "Doktorgradsprosjekt"
+* 		}
+* 	},
+* 	{
+* 		"code": "INHOUSE",
+* 		"name": {
+* 			"nb": "Internt prosjekt"
+* 		}
+* 	},
+* 	{
+* 		"code": "EDUCATIONAL",
+* 		"name": {
+* 			"nb": "Pedagogisk utvilklingsarbeid"
+* 		}
+* 	}
+* ]
+								
+Response
+Returns a JSON object that contains an array with all project categories to the database codes JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of project categories. 
+POST projects POST projects 
+Create a new project. (This request requires authentication.)
+The request must have Content-Type: application/json and the payload must conform to the POST project JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+Examples
+* POST project example payload 
+* {
+* 	"title": {
+* 		"nb": "POST projects eksempel med beskrivelse-felter på norsk bokmål (nb)"
+* 	},
+* 	"coordinating_institution": {
+* 		"institution": {
+* 			"cristin_institution_id": "42800095"
+* 		}
+* 	},
+* 	"institutions_responsible_for_research": [
+* 		{
+* 			"institution": {
+* 				"cristin_institution_id": "185"
+* 			}
+* 		},
+* 		{
+* 			"unit": {
+* 				"cristin_unit_id": "185.39.55.20"
+* 			}
+* 		},
+* 		{
+* 			"institution": {
+* 				"cristin_institution_id": "9200"
+* 			}
+* 		}
+* 	],
+* 	"main_language": "nb",
+* 	"start_date": "2015-10-21T12:00:00.000Z",
+* 	"end_date": "2015-12-23T12:00:00.000Z",
+* 	"participants": [
+* 		{
+* 			"cristin_person_id": "654321",
+* 			"email": "kari@nordmann.no",
+* 			"roles": [
+* 				{
+* 					"role_code": "PRO_PARTICIPANT",
+* 					"institution": {
+* 						"cristin_institution_id": "203"
+* 					}
+* 				},
+* 				{
+* 					"role_code": "PRO_MANAGER",
+* 					"institution": {
+* 						"cristin_institution_id": "203"
+* 					}
+* 				}
+* 			]
+* 		},
+* 		{
+* 			"first_name": "Espen",
+* 			"surname": "Askeladd",
+* 			"email": "espen.askeladd@eventyr.no",
+* 			"phone": "99887766",
+* 			"roles": [
+* 				{
+* 					"role_code": "PRO_PARTICIPANT",
+* 					"institution": {
+* 						"cristin_institution_id": "7480"
+* 					}
+* 				}
+* 			]
+* 		},
+* 		{
+* 			"cristin_person_id": "738",
+* 			"roles": [
+* 				{
+* 					"role_code": "PRO_PARTICIPANT",
+* 					"unit": {
+* 						"cristin_unit_id": "185.33.0.0"
+* 					}
+* 				}
+* 			]
+* 		}
+* 	],
+* 	"popular_scientific_summary": {
+* 		"nb": "Detaljer om pop. vit. sammendrag."
+* 	},
+* 	"method": {
+* 		"nb": "<p>Eksempel på tekst med flere avsnitt.</p><p>Formatert med enkel Html.</p>"
+* 	},
+* 	"source_reference_id": "REK mappenr 1",
+* 	"health_project_type": "DRUGSTUDY",
+* 	"clinical_trial_phase": "2",
+* 	"approvals": [
+* 		{
+* 			"approved_date": "2015-04-10T00:00:00.000Z",
+* 			"approved_by": "REK",
+* 			"approval_status": "APPROVED"
+* 		}
+* 	],
+*   "related_projects": [
+*       "https://api.cristin.no/v2/projects/12345",
+*       "https://api.cristin.no/v2/projects/98765"
+* 	],
+*   "contact_info": {
+*       "contact_person": "John Smith",
+*       "institution": "NTNU",
+*       "email": "John@ntnu.no",
+*       "phone": "44332211"
+*   },
+*   "project_categories": [
+*     {
+*       "code": "BASICRESEARCH"
+*     },
+*     {
+*       "code": "APPLIEDRESEARCH"
+*     }
+*   ],
+*   "keywords": [
+*     {
+*       "code": "1200"
+*     },
+*     {
+*       "code": "1204"
+*     }
+*   ],
+*   "project_funding_sources": [
+* 		{
+* 			"funding_source_code": "NFR",
+* 			"project_code": "162783-051"
+* 		}
+* 	],
+*   "creator": {
+*       "cristin_person_id": "12345",
+*       "roles": [
+*           {
+*               "unit": {
+*                   "cristin_unit_id": "185.90.0.0"
+*               }
+*           }
+*       ]
+*   }
+* }
+* 
+								
+Response
+HTTP Status Codes
+* 201 - Created, returns a JSON representation of the newly created project, along with a HTTP header Location containing the URL of the project. 
+* 400 - Bad request, returned if the supplied JSON content is invalid. The response will contain relevant error messages and warnings. 
+PATCH projects/{id} PATCH projects/{id} 
+Modify an existing project. (This request requires authentication.)
+PATCH projectsParameterTypeDescriptionidStringThe Cristin id of the projectThe request must have Content-Type: application/merge-patch+json and the payload must conform to the PATCH project JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+PATCH updates one or more fields of the resource following the JSON Merge Patch strategy: Fields that are included in the request are overwritten, while fields not included in the request remain unaltered. 
+Unrecognized fields or fields that are not part of the PATCH project JSON schema are currently silently ignored.
+Examples
+* PATCH project example payload 
+* {
+*   "title": {
+* 	"en": "New title for project"
+*   },
+*   "coordinating_institution": {
+* 	"institution": {
+* 	  "cristin_institution_id": "2012"
+* 	}
+*   },
+*   "institutions_responsible_for_research": [
+* 	{
+* 	  "institution": {
+* 		"cristin_institution_id": "185"
+* 	  }
+* 	},
+* 	{
+* 	  "institution": {
+* 		"cristin_institution_id": "9200"
+* 	  }
+* 	}
+*   ],
+*   "start_date": "2015-10-21T12:00:00.000Z",
+*   "end_date": "2017-12-23T12:00:00.000Z",
+*   "participants": [
+* 	{
+* 	  "cristin_person_id": "10275",
+* 	  "email": "my@email.com",
+* 	  "roles": [
+* 		{
+* 		  "role_code": "PRO_MANAGER",
+* 		  "institution": {
+* 			"cristin_institution_id": "203"
+* 		  }
+* 		}
+* 	  ]
+* 	}
+*   ],
+*   "related_projects": [
+*       "https://api.cristin.no/v2/projects/12345",
+*       "https://api.cristin.no/v2/projects/98765"
+*   ],
+*   "academic_summary": {
+*     "en": "Some academic summary",
+*     "nb": "Et vitenskapelig sammendrag"
+*   },
+*   "popular_scientific_summary": {
+*     "en": "Some popular scientific summary",
+*     "nb": "Et populærvitenskapelig sammendrag"
+*   },
+*   "method": {
+*     "en": "Some method",
+*     "nb": "En eller annen metode"
+*   },
+*   "equipment": {
+*     "en": "Description of equipment",
+*     "nb": "Beskrivelse utstyr"
+*   },
+*   "main_language": "en",
+*   "contact_info": {
+*       "contact_person": "John Smith",
+*       "institution": "NTNU",
+*       "email": "John@ntnu.no",
+*       "phone": "44332211"
+*   },
+*   "project_categories": [
+*     {
+*       "code": "BASICRESEARCH"
+*     },
+*     {
+*       "code": "APPLIEDRESEARCH"
+*     }
+*   ],
+*   "keywords": [
+*     {
+*       "code": "1200"
+*     },
+*     {
+*       "code": "1204"
+*     }
+*   ],
+*   "project_funding_sources": [
+*     {
+*       "funding_source_code": "NFR",
+*       "project_code": "162783-051"
+*     }
+*   ]
+* }
+* 
+								
+Response
+HTTP Status Codes
+* 204 - No content, returned upon successful modification.
+* 400 - Bad request, returned if the supplied JSON content is invalid. The response will contain relevant error messages and warnings. 
+* 403 - Forbidden, returned if this particular project cannot be modified.
+* 404 - Not found, returned if there is no project with this id.
+GET projects/{id}/biobanks GET projects/{id}/biobanks 
+Retrieve a project's related biobanks 
+GET projectParameterTypeDescriptionlangStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationExamples
+* https://api.cristin.no/v2/projects/632139/biobanks 
+* [
+*   {
+*     "cristin_biobank_id": "550056",
+*     "name": {
+*       "nb": "Forskningsbiobank for Avdeling for Revmatologi, Hud- og Infeksjonssykdommer"
+*     },
+*     "main_language": "nb",
+*     "url": "https://api.cristin.no/v2/biobanks/550056",
+*     "biobank_id": "BBR-3096"
+*   }
+* ]
+								
+* https://api.cristin.no/v2/projects/567036/biobanks 
+* [
+*   {
+*     "cristin_biobank_id": "533895",
+*     "name": {
+*       "nb": "Gynekologiske svulster"
+*     },
+*     "main_language": "nb",
+*     "url": "https://api.cristin.no/v2/biobanks/533895",
+*     "biobank_id": "BBR-3005"
+*   },
+*   {
+*     "cristin_biobank_id": "541249",
+*     "name": {
+*       "nb": "Nutrition Biobank"
+*     },
+*     "main_language": "nb",
+*     "url": "https://api.cristin.no/v2/biobanks/541249",
+*     "biobank_id": "BBR-3079"
+*   },
+*   {
+*     "cristin_biobank_id": "550056",
+*     "name": {
+*       "nb": "Forskningsbiobank for Avdeling for Revmatologi, Hud- og Infeksjonssykdommer"
+*     },
+*     "main_language": "nb",
+*     "url": "https://api.cristin.no/v2/biobanks/550056",
+*     "biobank_id": "BBR-3096"
+*   }
+* ]
+								
+* https://api.cristin.no/v2/projects/567036/biobanks?&lang=en&page=2&per_page=1 
+* [
+*   {
+*     "cristin_biobank_id": "541249",
+*     "name": {
+*       "nb": "Nutrition Biobank"
+*     },
+*     "main_language": "nb",
+*     "url": "https://api.cristin.no/v2/biobanks/541249",
+*     "biobank_id": "BBR-3079"
+*   }
+* ]
+								
+Response
+Returns a list of JSON objects. The list conforms to the biobanks summary JSON schema . The response will be paginated. 
+HTTP Status Codes
+* 200 - OK, returns the project's related biobanks 
+* 400 - Bad request, returned if the filter parameters are invalid 
+Response headers
+* X-Total-Count - total number of hits
+* Link - pagination previous and next page
+GET projects/{id}/datasets GET projects/{id}/datasets 
+Retrieve a projects datasets
+GET projectsParameterTypeDescriptionidStringThe Cristin id of the projectExamples
+* https://api.cristin.no/v2/projects/515072/datasets 
+* [ {
+*   "cristin_dataset_id" : "168",
+*   "doi" : "10.5067/dryad.10f4q69"
+* }, {
+*   "cristin_dataset_id" : "167",
+*   "doi" : "10.5067/dryad.10f4q68"
+* }, {
+*   "cristin_dataset_id" : "169",
+*   "dataset_url" : "http://api.domain.com/dataset005"
+* } ]
+								
+Response
+Returns a list of JSON objects. The list conforms to the GET project datasets response JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the project's datasets.
+* 403 - Forbidden, the project is not published.
+* 404 - Not found, returned if there is no project with this id.
+POST projects/{id}/datasets POST projects/{id}/datasets 
+Create a new project dataset. (This request requires authentication.)
+POST projectsParameterTypeDescriptionidStringThe Cristin id of the projectThe request must have Content-Type: application/json and the payload must conform to the POST project datasets request JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+Examples
+* POST project dataset as URL example payload 
+* {
+*   "dataset_url": "http://api.mydomain.com/dataset001"
+* }
+* 
+								
+* POST project dataset as DOI example payload 
+* {
+*   "doi": "10.5067/dryad.10f4q55"
+* }
+* 
+								
+Response
+Returns a JSON object that conforms to the POST project datasets response JSON schema. 
+HTTP Status Codes
+* 200 - OK, returns a JSON representation of the (single) newly created project dataset, along with a HTTP header Location containing the URL of all the project's datasets. 
+* 400 - Bad request, returned if the supplied JSON content is invalid. The response will contain relevant error messages and warnings. e.g. if the supplied dataset already exists in the project. 
+* 403 - Forbidden, returned if the project cannot be accessed. 
+* 404 - Not found, returned if there is no project with this id. 
+PUT projects/{id}/datasets PUT projects/{id}/datasets 
+Update the whole collection of datasets of a project by removing all previously attached datasets and replacing them with a new collection. (This request requires authentication.) 
+PUT projectParameterTypeDescriptionidStringThe Cristin id of the projectThe request must have Content-Type: application/json and the payload must conform to the PUT project datasets request JSON schema. Use the schema validator. Additional constraints on the JSON fields apply. 
+Examples
+* PUT project datasets example payload 
+* [
+*   {
+* 	"doi": "10.5067/dryad.10f4q68"
+*   },
+*   {
+* 	"doi": "10.5067/dryad.10f4q69"
+*   },
+*   {
+* 	"dataset_url": "http://api.domain.com/dataset002"
+*   }
+* ]
+* 
+								
+Response
+Returns a list of JSON objects. The list conforms to the PUT project datasets response JSON schema. 
+HTTP Status Codes
+* 200 - OK, returns a JSON representation of the updated / replaced collection of the project's datasets, along with a HTTP header Location containing the URL of this collection. 
+* 400 - Bad request, returned if the supplied JSON content is invalid. The response will contain relevant error messages and warnings. 
+* 403 - Forbidden, returned if the project cannot be accessed. 
+* 404 - Not found, returned if there is no project with this id. 
+GET /projects/participants/roles GET /projects/participants/roles 
+Show list of all valid project participant roles.
+GET /projects/participants/rolesParameterTypeDescriptionlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/participants/roles?lang=nb 
+* [
+* 	{
+* 		"code": "PRO_MANAGER",
+* 		"name": {
+* 			"nb": "Prosjektleder"
+* 		}
+* 	},
+* 	{
+* 		"code": "PRO_PARTICIPANT",
+* 		"name": {
+* 			"nb": "Prosjektdeltaker"
+* 		}
+* 	},
+* 	{
+* 		"code": "PRO_LMANAGER",
+* 		"name": {
+* 			"nb": "Lokalt ansvarlig"
+* 		}
+* 	}
+* ]
+* 
+								
+Response
+Returns a JSON object that contains an array with all valid project participant roles and conforms to the database codes JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of project participant roles.
+GET results?{parameters} GET results?{parameters} 
+Search for results (publications) by combining queries with filters. See Search and sort
+ParameterTypeDescriptionidStringThe Cristin id of the resultdoiStringDOI name (e.g. doi=10.1000/123456)titleStringThe title of the resultcontributorStringAuthor's name or Cristin person idissnStringThe issn of the resultunitStringId (e.g. unit=185.53.18.10)institutionStringId (one number, e.g. institution=185), name or acronym of the institution the contributors belong to userStringA person's username in Cristin together with the institution id separated by ':'
+'askeladd:185' means Cristin user 'askeladd' from the institution '185' categoryStringResult category code, category codespublished_sinceStringResults published since and inclusive the given year, (yyyy), e.g: 2005published_beforeStringResults published before and inclusive the given year, (yyyy), e.g: 2017created_sinceStringResults created since and inclusive the given date, (yyyy-mm-dd), e.g: 2005-03-17created_beforeStringResults created before and inclusive the given date, (yyyy-mm-dd), e.g: 2005-03-17modified_sinceStringResults modified since and inclusive the given date, (yyyy-mm-dd), e.g: 2005-03-17modified_beforeStringResults modified before and inclusive the given date, (yyyy-mm-dd), e.g: 2005-03-17year_reportedStringThe year a result was reportedproject_codeStringProject code is the internal reference number used by funding sourcefunding_sourceStringFunding source code e.g: NFRfundingStringFunding source code e.g: NFR, and project_code together separated by ':'
+'NFR:1234' means 'funding_source': 'NFR' with 'project_code': '1234'langStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationsortStringSorts on 'category' and/or 'year_published'. See Search and sort
+Default sort order is on 'cristin_result_id' in ascending order. fieldsString'fields=all' gives a list of result objects with all available fields.
+If this parameter is omitted, a list of result summaries with fewer fields will be returned. Examples
+The list of results given by the response, has been trunctated in most of these examples.
+* https://api.cristin.no/v2/results?doi=10.1080/17445302.2014.954303 
+* [
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/results/1184268/contributors"
+* 		},
+* 		"cristin_result_id": "1184268",
+* 		"links": [
+* 			{
+* 				"url_type": "ARKIV",
+* 				"url": "http://hdl.handle.net/11250/2463596"
+* 			},
+* 			{
+* 				"url_type": "DOI",
+* 				"url": "https://doi.org/10.1080/17445302.2014.954303"
+* 			}
+* 		],
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Influence of sigma-phase precipitation on the impact behaviour of duplex stainless steel pipe fittings"
+* 		},
+* 		"year_published": "2016",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/1184268",
+* 		"journal": {
+* 			"name": "Ships and Offshore Structures",
+* 			"publisher": {
+* 				"name": "Woodhead Publishing Limited"
+* 			}
+* 		}
+* 	}
+* ]
+* https://api.cristin.no/v2/results?doi=10.1080/17445302.2014.954303&fields=all 
+* [
+*   {
+* 	"category": {
+* 	  "code": "ARTICLE",
+* 	  "name": {
+* 		"en": "Academic article"
+* 	  }
+* 	},
+* 	"contributors": {
+* 	  "url": "https://api.cristin.no/v2/results/1184268/contributors"
+* 	},
+* 	"cristin_result_id": "1184268",
+* 	"created": {
+* 	  "date": "2014-12-12T08:35:39.000Z"
+* 	},
+* 	"funding_sources": [
+* 	  {
+* 		"funding_source_code": "NFR",
+* 		"project_code": "237885",
+* 		"funding_source_name": {
+* 		  "en": "Research Council of Norway (RCN)"
+* 		}
+* 	  }
+* 	],
+* 	"import_sources": [
+* 	  {
+* 		"source_name": "SCOPUS",
+* 		"source_reference_id": "2-s2.0-84951269640"
+* 	  }
+* 	],
+* 	"last_modified": {
+* 	  "date": "2017-08-02T10:32:12.000Z"
+* 	},
+* 	"links": [
+* 	  {
+* 		"url_type": "ARKIV",
+* 		"url": "http://hdl.handle.net/11250/2463596"
+* 	  },
+* 	  {
+* 		"url_type": "DOI",
+* 		"url": "https://doi.org/10.1080/17445302.2014.954303"
+* 	  }
+* 	],
+* 	"open_access": "green",
+* 	"original_language": "en",
+* 	"projects": [
+* 	  {
+* 		"cristin_project_id": "501781",
+* 		"title": {
+* 		  "no": "237885/NFR"
+* 		},
+* 		"url": "https://api.cristin.no/v2/projects/501781"
+* 	  }
+* 	],
+* 	"title": {
+* 	  "en": "Influence of sigma-phase precipitation on the impact behaviour of duplex stainless steel pipe fittings"
+* 	},
+* 	"year_published": "2016",
+* 	"year_reported": "2016",
+* 	"url": "https://api.cristin.no/v2/results/1184268",
+* 	"journal": {
+* 	  "name": "Ships and Offshore Structures",
+* 	  "publisher": {
+* 		"name": "Woodhead Publishing Limited"
+* 	  },
+* 	  "international_standard_numbers": [
+* 		{
+* 		  "type": "printed",
+* 		  "value": "1744-5302"
+* 		},
+* 		{
+* 		  "type": "electronic",
+* 		  "value": "1754-212X"
+* 		}
+* 	  ],
+* 	  "nvi_level": "1"
+* 	},
+* 	"year_online": "2014",
+* 	"volume": "11",
+* 	"issue": "1"
+*   }
+* ]
+* https://api.cristin.no/v2/results?unit=194.64.20.0 
+* [
+* 	{
+* 		"category": {
+* 			"code": "CHAPTERACADEMIC",
+* 			"name": {
+* 				"en": "Academic chapter/article/Conference paper"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/results/511843/contributors"
+* 		},
+* 		"cristin_result_id": "511843",
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Reliability Centered Maintenance for Floating Offshore Wind Energy Production System"
+* 		},
+* 		"year_published": "2010",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/511843",
+* 		"part_of": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/results/511842"
+* 		},
+* 		"pages": {
+* 			"from": "128",
+* 			"to": "135"
+* 		}
+* 	},
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/results/511882/contributors"
+* 		},
+* 		"cristin_result_id": "511882",
+* 		"links": [
+* 			{
+* 				"url_type": "DOI",
+* 				"url": "https://doi.org/10.1016/S1001-6058(09)60238-9"
+* 			}
+* 		],
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Numerical Study of Planning Vessels in Waves"
+* 		},
+* 		"year_published": "2010",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/511882",
+* 		"journal": {
+* 			"name": "Journal of Hydrodynamics"
+* 		}
+* 	},
+* 	...
+* ]
+		
+* https://api.cristin.no/v2/results?contributor=Dahl&institution=UIO&published_since=2004&published_before=2010&category=ARTICLE 
+* [
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/results/356250/contributors"
+* 		},
+* 		"cristin_result_id": "356250",
+* 		"links": [
+* 			{
+* 				"url_type": "DOI",
+* 				"url": "https://doi.org/10.1016/j.laa.2008.12.023"
+* 			}
+* 		],
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Permutation matrices related to Sudoku"
+* 		},
+* 		"year_published": "2009",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/356250",
+* 		"journal": {
+* 			"name": "Linear Algebra and its Applications"
+* 		}
+* 	},
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/results/336898/contributors"
+* 		},
+* 		"cristin_result_id": "336898",
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Transportation matrices with staircase patterns and majorization"
+* 		},
+* 		"year_published": "2008",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/336898",
+* 		"journal": {
+* 			"name": "Linear Algebra and its Applications"
+* 		}
+* 	},
+* 	... (list trunctated)
+* ]
+* 
+* 
+							
+* https://api.cristin.no/v2/results?funding_source=NFR&published_since=2010&published_before=2011 
+* [
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/results/511358/contributors"
+* 		},
+* 		"cristin_result_id": "511358",
+* 		"links": [
+* 			{
+* 				"url_type": "DOI",
+* 				"url": "https://doi.org/10.1213/ANE.0b013e3181e058d7"
+* 			}
+* 		],
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Global Warming Potential of Inhaled Anesthetics: Application to Clinical Use"
+* 		},
+* 		"year_published": "2010",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/511358",
+* 		"journal": {
+* 			"name": "Anesthesia and Analgesia"
+* 		}
+* 	},
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/results/511397/contributors"
+* 		},
+* 		"cristin_result_id": "511397",
+* 		"links": [
+* 			{
+* 				"url_type": "DOI",
+* 				"url": "https://doi.org/10.1186/1476-4598-9-173"
+* 			}
+* 		],
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Identification and characterization of retinoblastoma gene mutations disturbing apoptosis in human breast cancers"
+* 		},
+* 		"year_published": "2010",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/511397",
+* 		"journal": {
+* 			"name": "Molecular Cancer"
+* 		}
+* 	},
+* 	... (list trunctated)
+* ]
+							
+* https://api.cristin.no/v2/results?funding_source=NFR&project_code=185143&category=ARTICLE 
+* [
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/results/796564/contributors"
+* 		},
+* 		"cristin_result_id": "796564",
+* 		"original_language": "nb",
+* 		"title": {
+* 			"nb": "Husarbeidets grenser : når kunnskap erstattes med skam"
+* 		},
+* 		"year_published": "2010",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/796564",
+* 		"journal": {
+* 			"name": "Tidsskrift for kjønnsforskning"
+* 		}
+* 	},
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/results/1061980/contributors"
+* 		},
+* 		"cristin_result_id": "1061980",
+* 		"links": [
+* 			{
+* 				"url_type": "DOI",
+* 				"url": "https://doi.org/10.4315/0362-028X.JFP-12-269"
+* 			}
+* 		],
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Food safety practices among Norwegian consumers"
+* 		},
+* 		"year_published": "2013",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/1061980",
+* 		"journal": {
+* 			"name": "Journal of Food Protection"
+* 		}
+* 	},
+* 	...
+* ]
+							
+* https://api.cristin.no/v2/results?created_since=2017-04-01&created_before=2017-04-30&category=ARTICLE 
+* [
+*   {
+* 	"category": {
+* 	  "code": "ARTICLE",
+* 	  "name": {
+* 		"en": "Academic article"
+* 	  }
+* 	},
+* 	"contributors": {
+* 	  "url": "https://api.cristin.no/v2/results/1464981/contributors"
+* 	},
+* 	"cristin_result_id": "1464981",
+* 	"links": [
+* 	  {
+* 		"url_type": "DOI",
+* 		"url": "https://doi.org/10.1136/acupmed-2013-010441"
+* 	  }
+* 	],
+* 	"original_language": "en",
+* 	"title": {
+* 	  "en": "Effect of acupuncture at HT7 on heart rate variability: An exploratory study"
+* 	},
+* 	"year_published": "2015",
+* 	"url": "https://api.cristin.no/v2/results/1464981",
+* 	"journal": {
+* 	  "name": "Acupuncture in Medicine"
+* 	}
+*   },
+*   {
+* 	"category": {
+* 	  "code": "ARTICLE",
+* 	  "name": {
+* 		"en": "Academic article"
+* 	  }
+* 	},
+* 	"contributors": {
+* 	  "url": "https://api.cristin.no/v2/results/1465035/contributors"
+* 	},
+* 	"cristin_result_id": "1465035",
+* 	"original_language": "en",
+* 	"title": {
+* 	  "en": "Best Practices in Immigration Service Planning"
+* 	},
+* 	"year_published": "2003",
+* 	"url": "https://api.cristin.no/v2/results/1465035",
+* 	"journal": {
+* 	  "name": "Journal of policy analysis and management"
+* 	}
+*   },	...
+* ]
+* 
+* https://api.cristin.no/v2/results?modified_since=2018-01-01&unit=194.64.20.0 
+* [
+*   {
+* 	"category": {
+* 	  "code": "ACADEMICLECTURE",
+* 	  "name": {
+* 		"en": "Academic lecture"
+* 	  }
+* 	},
+* 	"contributors": {
+* 	  "url": "https://api.cristin.no/v2/results/1091801/contributors"
+* 	},
+* 	"cristin_result_id": "1091801",
+* 	"original_language": "en",
+* 	"title": {
+* 	  "en": "Health, safety and environmental challenges in exposed aquaculture production‐an investigation of fish farmers experiences"
+* 	},
+* 	"year_published": "2013",
+* 	"url": "https://api.cristin.no/v2/results/1091801"
+*   },
+*   {
+* 	"category": {
+* 	  "code": "CHAPTERACADEMIC",
+* 	  "name": {
+* 		"en": "Academic chapter/article/Conference paper"
+* 	  }
+* 	},
+* 	"contributors": {
+* 	  "url": "https://api.cristin.no/v2/results/1072182/contributors"
+* 	},
+* 	"cristin_result_id": "1072182",
+* 	"links": [
+* 	  {
+* 		"url_type": "DOI",
+* 		"url": "https://doi.org/10.1115/OMAE2013-11033"
+* 	  }
+* 	],
+* 	...
+* ]
+* https://api.cristin.no/v2/results?issn=0962-1067&title=chronic inflammatory polyarthritis 
+* [
+*   {
+*     "category": {
+*       "code": "ARTICLE",
+*       "name": {
+*         "en": "Academic article"
+*       }
+*     },
+*     "contributors": {
+*       "url": "https://api.cristin.no/v2/results/1043208/contributors"
+*     },
+*     "cristin_result_id": "1043208",
+*     "date_published": "2013-07-22T00:00:00.000Z",
+*     "links": [
+*       {
+*         "url_type": "FULLTEKST",
+*         "url": "http://onlinelibrary.wiley.com/doi/10.1111/jocn.12353/pdf"
+*       },
+*       {
+*         "url_type": "DOI",
+*         "url": "https://doi.org/10.1111/jocn.12353"
+*       }
+*     ],
+*     "original_language": "en",
+*     "title": {
+*       "en": "Long-term effects of a nurse-led group and individual patient education programme for patients with chronic inflammatory polyarthritis - a randomised controlled trial"
+*     },
+*     "year_published": "2014",
+*     "url": "https://api.cristin.no/v2/results/1043208",
+*     "journal": {
+*       "name": "Journal of Clinical Nursing"
+*     },
+*     "pages": {
+*       "from": "1005",
+*       "to": "1017"
+*     }
+*   }
+* ]
+Response
+Returns a JSON object that conforms to the results JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the results
+* 400 - Bad request, returned if the filter parameters are invalid
+Response headers
+* X-Total-Count - total number of hits
+* Link - pagination previous and next page
+GET results/{id} GET results/{id} 
+Retrieves a result (publication) by its id.
+GET resultsParameterTypeDescriptionidStringThe Cristin id of the result.langStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/results/123456  (Article) 
+* {
+*     "category": {
+*         "code": "ARTICLE",
+*         "name": {
+*             "en": "Academic article"
+*         }
+*     },
+*     "channel": {
+*         "title": "Tidsskrift for Den norske legeforening"
+*     },
+*     "contributors": {
+*         "url": "https://api.cristin.no/v2/results/123456/contributors",
+*         "count": 4,
+*         "preview": [
+*             {
+*                 "first_name": "H.",
+*                 "surname": "Solli"
+*             },
+*             {
+*                 "first_name": "AB",
+*                 "surname": "Da Silva"
+*             },
+*             {
+*                 "first_name": "Reidar K",
+*                 "surname": "Lie"
+*             },
+*             {
+*                 "first_name": "D",
+*                 "surname": "Bruusgaard"
+*             }
+*         ]
+*     },
+*     "cristin_result_id": "123456",
+*     "created": {
+*         "date": "2006-02-11T03:15:34.000Z"
+*     },
+*     "last_modified": {
+*         "date": "2013-10-21T12:13:12.000Z"
+*     },
+*     "open_access": "gold",
+*     "original_language": "no",
+*     "title": {
+*         "no": "Biomedisinsk sykdomsmodell og materielle kriterier ...."
+*     },
+*     "year_published": "2005",
+*     "year_reported": "2005",
+*     "url": "https://api.cristin.no/v2/results/123456",
+*     "journal": {
+*         "cristin_journal_id": "54321",
+*         "name": "Current molecular medicine",
+*         "publisher": {
+*             "cristin_publisher_id": "2345",
+*             "name": "Borham Science Publishers",
+*             "url": "http://borhamscience.com/",
+*             "nvi_level": "1"
+*         },
+*         "international_standard_numbers": [
+*             {
+*                 "type": "printed",
+*                 "value": "1234-5678"
+*             },
+*             {
+*                 "type": "electronic",
+*                 "value": "4321-1234"
+*             }
+*         ],
+*         "nvi_level": "1"
+*     },
+*     "volume": "125",
+*     "pages": {
+*         "from": "3293",
+*         "to": "3296"
+*     }
+* }
+								
+* https://api.cristin.no/v2/results/642244  (Book) 
+* {
+*     "category": {
+*         "code": "MONOGRAPHACA",
+*         "name": {
+*             "en": "Academic monograph"
+*         }
+*     },
+*     "channel": {
+*         "title": "Universitetsforlaget"
+*     },
+*     "classification": {
+*         "keywords": [
+*             {
+*                 "code": "1877",
+*                 "name": {
+*                     "en": "The Reformation"
+*                 }
+*             },
+*             {
+*                 "code": "1281",
+*                 "name": {
+*                     "en": "History"
+*                 }
+*             },
+*             {
+*                 "code": "4962",
+*                 "name": {
+*                     "en": "Ecclesiastical history"
+*                 }
+*             },
+*             {
+*                 "code": "5549",
+*                 "name": {
+*                     "en": "Europe"
+*                 }
+*             }
+*         ]
+*     },
+*     "cristin_result_id": "642244",
+*     "created": {
+*         "date": "2001-05-09T00:00:00.000Z"
+*     },
+*     "import_sources": [
+*         {
+*             "source_name": "FORSKDOK",
+*             "source_reference_id": "r01013331"
+*         }
+*     ],
+*     "last_modified": {
+*         "date": "2001-05-09T00:00:00.000Z"
+*     },
+*     "open_access": "none",
+*     "original_language": "nb",
+*     "title": {
+*         "nb": "Tro og politikk : en reformasjonshistorie"
+*     },
+*     "year_published": "2001",
+*     "url": "https://api.cristin.no/v2/results/642244",
+*     "number_of_pages": "239",
+*     "publisher": {
+*         "cristin_publisher_id": "427",
+*         "name": "Universitetsforlaget",
+*         "place": "Oslo",
+*         "url": "http://www.universitetsforlaget.no/",
+*         "nvi_level": "1"
+*     },
+*     "international_standard_numbers": [
+*         {
+*             "type": "printed",
+*             "value": "82-15-00057-6"
+*         }
+*     ]
+* }
+								
+* https://api.cristin.no/v2/results/640135  (Chapter) 
+* {
+* 	"category": {
+* 		"code": "CHAPTERACADEMIC",
+* 		"name": {
+* 			"en": "Academic chapter/article/Conference paper"
+* 		}
+* 	},
+* 	"contributors": {
+* 		"url": "https://api.cristin.no/v2/results/640135/contributors"
+* 	},
+* 	"cristin_result_id": "640135",
+* 	"created": {
+* 		"date": "2006-01-05T00:00:00.000Z"
+* 	},
+* 	"import_sources": [
+* 		{
+* 			"source_name": "FORSKDOK",
+* 			"source_reference_id": "r06000687"
+* 		}
+* 	],
+* 	"last_modified": {
+* 		"date": "2014-07-09T13:37:25.000Z"
+* 	},
+* 	"open_access": "none",
+* 	"original_language": "nb",
+* 	"title": {
+* 		"nb": "Om sykepleie"
+* 	},
+* 	"year_published": "2005",
+* 	"url": "https://api.cristin.no/v2/results/640135",
+* 	"part_of": {
+* 		"url": "https://api.cristin.no/v2/results/18511"
+* 	},
+* 	"pages": {
+* 		"from": "13",
+* 		"to": "27",
+* 		"count": "15"
+* 	}
+* }
+								
+* https://api.cristin.no/v2/results/999247  (Media contribution) 
+* {
+*     "category": {
+*         "code": "MEDIAINTERVIEW",
+*         "name": {
+*             "en": "Media Interview"
+*         }
+*     },
+*     "contributors": {
+*         "url": "https://api.cristin.no/v2/results/999247/contributors",
+*         "count": 2,
+*         "preview": [
+*             {
+*                 "first_name": "Kristina",
+*                 "surname": "Bjureke"
+*             },
+*             {
+*                 "first_name": "Torstein",
+*                 "surname": "Helleve"
+*             }
+*         ]
+*     },
+*     "cristin_result_id": "999247",
+*     "created": {
+*         "date": "2013-01-28T16:30:15.000Z"
+*     },
+*     "last_modified": {
+*         "date": "2013-01-28T16:30:15.000Z"
+*     },
+*     "date_published": "2011-12-24T00:00:00.000Z",
+*     "open_access": "none",
+*     "original_language": "nn",
+*     "title": {
+*         "nn": "-Meir utforsking i undervisninga!"
+*     },
+*     "year_published": "2011",
+*     "url": "https://api.cristin.no/v2/results/999247",
+*     "media_type": {
+*         "code": "INTERNETT",
+*         "code_name": {
+*             "en": "Internet"
+*         }
+*     },
+*     "place": "NHM's nettsider http://www.nhm.uio.no/om/aktuelle-saker/2012"
+* }
+								
+Response
+Returns a JSON object that conforms to the results JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the result
+* 307 - Redirect, returned if the result was merged or moved into another result.
+* 400 - Bad request, returned if the id is invalid
+* 404 - Not found, returned if no result with this id could be found
+GET results/{id}/chapters GET results/{id}/chapters 
+Retrieves chapters of the result by result id.
+GET chaptersParameterTypeDescriptionidStringThe Cristin id of the result.langStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/results/7420/chapters 
+* [ {
+*   "url" : "https://api.cristin.no/v2/results/54180"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/54247"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/913987"
+* } ]
+								
+* https://api.cristin.no/v2/results/2745/chapters 
+* [ {
+*   "url" : "https://api.cristin.no/v2/results/38697"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/38705"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/38706"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/38707"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/38708"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/38711"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/38712"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/38738"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/38739"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/38740"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/730679"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/791376"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/791380"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/667923"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/611759"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/626130"
+* }, {
+*   "url" : "https://api.cristin.no/v2/results/656717"
+* } ]
+								
+Response
+Returns a JSON object that conforms to the chapters JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the result
+* 307 - Redirect, returned if the result was merged or moved into another result.
+* 400 - Bad request, returned if the id is invalid
+* 404 - Not found, returned if there is no result with the given id
+GET results/{id}/contributors GET results/{id}/contributors 
+Retrieves contributors of the result by result id.
+GET contributorsParameterTypeDescriptionidStringThe Cristin id of the result.langStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationExamples
+* https://api.cristin.no/v2/results/987654321/contributors 
+* [
+* 	{
+* 		"cristin_person_id": "3829",
+* 		"first_name": "Tom",
+* 		"last_name": "Clausen",
+* 		"order": 1,
+* 		"affiliations": [
+* 			{
+* 				"role_code": "FORFATTER",
+* 				"role": {
+* 					"code": "FORFATTER",
+* 					"name": {
+* 						"en": "Author"
+* 					}
+* 				},
+* 				"institution": {
+* 					"cristin_institution_id": "194",
+* 					"url": "https://api.cristin.no/v2/institutions/194"
+* 				},
+* 				"unit": {
+* 					"cristin_unit_id": "194.65.30.0",
+* 					"url": "https://api.cristin.no/v2/units/194.65.30.0"
+* 				}
+* 			}
+* 		],
+* 		"url": "https://api.cristin.no/v2/persons/38329"
+* 	},
+* 	{
+* 		"cristin_person_id": "4855",
+* 		"first_name": "Anders",
+* 		"last_name": "Grossmann",
+* 		"order": 2,
+* 		"affiliations": [
+* 			{
+* 				"role_code": "FORFATTER",
+* 				"role": {
+* 					"code": "FORFATTER",
+* 					"name": {
+* 						"en": "Author"
+* 					}
+* 				},
+* 				"institution": {
+* 					"cristin_institution_id": "194",
+* 					"url": "https://api.cristin.no/v2/institutions/194"
+* 				},
+* 				"unit": {
+* 					"cristin_unit_id": "194.65.20.0",
+* 					"url": "https://api.cristin.no/v2/units/194.65.20.0"
+* 				}
+* 			}
+* 		],
+* 		"url": "https://api.cristin.no/v2/persons/40855"
+* 	}
+* ]
+								
+Response
+Returns a JSON object that conforms to the contributors JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the result
+* 307 - Redirect, returned if the result was merged or moved into another result.
+* 400 - Bad request, returned if the id is invalid
+* 404 - Not found, returned if there is no result with the given id
+GET results/categories GET results/categories 
+Show list of all valid result category codes.
+GET results/categoriesParameterTypeDescriptionlangStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/results/categories?lang=en 
+* [
+* 	{
+* 		"code": "ARTICLE",
+* 		"name": {
+* 			"en": "Academic article"
+* 		}
+* 	},
+* 	{
+* 		"code": "LEDER",
+* 		"name": {
+* 			"en": "Editorial"
+* 		}
+* 	},
+* 	{
+* 		"code": "LESERINNLEGG",
+* 		"name": {
+* 			"en": "Reader opinion piece"
+* 		}
+* 	},
+* 	...
+* ]
+							
+Response
+Returns a JSON object that contains an array with all valid result categories and conforms to the database codes JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns a list of result categories with descriptions.
+GET units?{parameters} GET units?{parameters} 
+Search for units (organizational units) by a combination of filter parameters.
+GET unitsParameterTypeDesciptionidStringThe Cristin id of the unit (four numbers separated by dots)nameStringName or acronym of the unitinstitutionStringId (one number, e.g. institution=185), name or acronym of the institutionparent_unit_idStringReturns all the subunits that belong to this unitlevelsStringHow many levels down from parent_unit_id will be included in the search. 'levels=1' will return 'parent_unit_id's direct children.
+Can also be used by itself to search for all units known to Cristin down to the given level.
+'levels' is a number between 1 and 32. countryStringTwo letter country code (ISO 3166-1 alpha-2)langStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationsortStringSorts on 'id' or 'name_nb' or 'name_en' or 'name_nn'. See Search and sort
+Default sort order is on 'cristin_unit_id' in ascending order. Examples
+* https://api.cristin.no/v2/units?id=185.53.18.11 
+* [
+* 	{
+* 		"cristin_unit_id": "185.53.18.11",
+* 		"unit_name": {
+* 			"en": "Department of Microbiology"
+* 		},
+* 		"institution": {
+* 			"acronym": "UIO"
+* 		},
+* 		"url": "https://api7.cristin-test.uio.no/v2/units/185.53.18.11"
+* 	}
+* ]
+								
+* https://api.cristin.no/v2/units?id=2012.0.0.0&lang=en 
+* [
+* 	{
+* 		"cristin_unit_id": "2012.0.0.0",
+* 		"unit_name": {
+* 			"en": "Oslo University Hospital"
+* 		},
+* 		"institution": {
+* 			"acronym": "OUS"
+* 		},
+* 		"url": "https://api7.cristin-test.uio.no/v2/units/2012.0.0.0"
+* 	}
+* ]
+								
+* https://api.cristin.no/v2/units?name=UIO&lang=en 
+* [
+* 	{
+* 		"cristin_unit_id": "185.0.0.0",
+* 		"unit_name": {
+* 			"en": "University of Oslo"
+* 		},
+* 		"institution": {
+* 			"acronym": "UIO"
+* 		},
+* 		"url": "https://api7.cristin-test.uio.no/v2/units/185.0.0.0"
+* 	},
+* 	{
+* 		"cristin_unit_id": "185.90.0.0",
+* 		"unit_name": {
+* 			"nb": "Universitetet i Oslo"
+* 		},
+* 		"institution": {
+* 			"acronym": "UIO"
+* 		},
+* 		"url": "https://api7.cristin-test.uio.no/v2/units/185.90.0.0"
+* 	},
+* 	...
+* ]
+* 
+								
+* https://api.cristin.no/v2/units?institution=185&name=medisin&lang=nb 
+* [
+* 	{
+* 		"cristin_unit_id": "185.15.4.50",
+* 		"unit_name": {
+* 			"nb": "Biofysikk og medisinsk fysikk"
+* 		},
+* 		"institution": {
+* 			"acronym": "UIO"
+* 		},
+* 		"url": "https://api7.cristin-test.uio.no/v2/units/185.15.4.50"
+* 	},
+* 	{
+* 		"cristin_unit_id": "185.16.17.51",
+* 		"unit_name": {
+* 			"nb": "Oral kirurgi og oral medisin"
+* 		},
+* 		"institution": {
+* 			"acronym": "UIO"
+* 		},
+* 		"url": "https://api7.cristin-test.uio.no/v2/units/185.16.17.51"
+* 	},
+* 	...
+* ]
+* 
+								
+* https://api.cristin.no/v2/units?institution=uio&name=medisin fakultet 
+* [
+* 	{
+* 		"cristin_unit_id": "185.50.0.0",
+* 		"unit_name": {
+* 			"en": "Faculty of Medicine"
+* 		},
+* 		"institution": {
+* 			"acronym": "UIO"
+* 		},
+* 		"url": "https://api7.cristin-test.uio.no/v2/units/185.50.0.0"
+* 	},
+* 	{
+* 		"cristin_unit_id": "185.50.1.15",
+* 		"unit_name": {
+* 			"en": "Finance section - Faculty of Medicine"
+* 		},
+* 		"institution": {
+* 			"acronym": "UIO"
+* 		},
+* 		"url": "https://api7.cristin-test.uio.no/v2/units/185.50.1.15"
+* 	}
+* ]
+* 
+								
+* https://api.cristin.no/v2/units?parent_unit_id=194.14.0.0 
+* [
+* 	{
+* 		"cristin_unit_id": "194.14.30.0",
+* 		"unit_name": {
+* 			"en": "NTNU University Library"
+* 		},
+* 		"institution": {
+* 			"acronym": "NTNU"
+* 		},
+* 		"url": "https://api7.cristin-test.uio.no/v2/units/194.14.30.0"
+* 	}
+* ]
+* 
+								
+* https://api.cristin.no/v2/units?parent_unit_id=194.14.0.0&name=architecture (No hits, returns an empty list) 
+* []
+* 
+								
+Response
+Returns a JSON object that conforms to the unit summary JSON schema. The response will be paginated. 
+HTTP Status Codes
+* 200 - Ok, returns the units.
+* 400 - Bad request, returned if the filter parameters are invalid
+* 404 - Not found, returned if the unit id could not be found
+GET units/{id} GET units/{id} 
+Retrieve a unit (organizational unit) by its id.
+GET unitsParameterTypeDesciptionidStringThe Cristin id of the unit (four numbers separated by dots).langStringTwo letter language code. Using the 'lang' parameterExamples
+* https://api.cristin.no/v2/units/185.53.18.14 (This unit does not have subunits) 
+* {
+* 	"cristin_unit_id": "185.53.18.14",
+* 	"unit_name": {
+* 		"en": "Department of Medical Biochemistry"
+* 	},
+* 	"institution": {
+* 		"cristin_institution_id": "185",
+* 		"url": "https://api7.cristin-test.uio.no/v2/institutions/185"
+* 	},
+* 	"parent_unit": {
+* 		"cristin_unit_id": "185.53.18.0",
+* 		"unit_name": {
+* 			"en": "Division of Laboratory Medicine"
+* 		},
+* 		"url": "https://api7.cristin-test.uio.no/v2/units/185.53.18.0",
+*     "country": "NO"
+* 	},
+*   "country": "NO"
+* }
+* 
+								
+* https://api.cristin.no/v2/units/2012.0.0.0 (This is the top unit, the institution itself, with its direct subunits) 
+* {
+* 	"cristin_unit_id": "2012.0.0.0",
+* 	"unit_name": {
+* 		"en": "Oslo University Hospital"
+* 	},
+* 	"institution": {
+* 		"cristin_institution_id": "2012",
+* 		"url": "https://api7.cristin-test.uio.no/v2/institutions/2012"
+* 	},
+* 	"subunits": [
+* 		{
+* 			"cristin_unit_id": "2012.1.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Mental Health and Addiction "
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.1.0.0",
+*       "country": "NO"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.2.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Medicine"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.2.0.0",
+*       "country": "NO"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.6.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Cardiovascular and Pulmonary Diseases"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.6.0.0",
+*       "country": "NO"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.8.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Emergencies and Critical Care"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.8.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.9.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Diagnostics and Intervention"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.9.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.10.0.0",
+* 			"unit_name": {
+* 				"en": "Oslo Hospital Services"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.10.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.11.0.0",
+* 			"unit_name": {
+* 				"en": "CEO Executive Staff"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.11.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.21.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Head, Neck and Reconstructive Surgery"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.21.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.22.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Clinical Neuroscience"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.22.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.23.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Orthopaedic Surgery"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.23.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.24.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Paediatric and Adolescent Medicine"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.24.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.25.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Gynaecology and Obstetrics"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.25.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.26.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Surgery, Inflammatory Medicine and Transplantation"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.26.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.27.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Cancer Medicine"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.27.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.28.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Radiology and Nuclear Medicine"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.28.0.0"
+* 		},
+* 		{
+* 			"cristin_unit_id": "2012.29.0.0",
+* 			"unit_name": {
+* 				"en": "Division of Prehospital Service"
+* 			},
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/2012.29.0.0"
+* 		}
+* 	],
+*   "country": "NO"
+* }
+* 
+								
+Response
+Returns a JSON object that conforms to the unit JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the unit.
+* 400 - Bad request, returned if the id is invalid
+* 403 - Forbidden, returned if this particular unit cannot be accessed.
+* 404 - Not found, returned if there is no content with the given id
+GET units/{id}/results GET units/{id} 
+Retrieve results for a unit (organizational unit) by its id.
+GET unit resultsParameterTypeDesciptionidStringThe Cristin id of the unit (four numbers separated by dots).langStringTwo letter language code. Using the 'lang' parameterpageStringPage number. See Paginationper_pageStringNumber of items per page. See PaginationExamples
+* https://api.cristin.no/v2/units/185.53.18.14/results 
+* [
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/1602574/contributors"
+* 		},
+* 		"cristin_result_id": "1602574",
+* 		"links": [
+* 			{
+* 				"url_type": "DOI",
+* 				"url": "https://doi.org/10.1167/iovs.18-2476"
+* 			}
+* 		],
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Activation of the EGF receptor by histamine receptor subtypes stimulates mucin secretion in conjunctival goblet cells"
+* 		},
+* 		"year_published": "2018",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/1602574",
+* 		"journal": {
+* 			"name": "Investigative Ophthalmology and Visual Science"
+* 		}
+* 	},
+* 	{
+* 		"category": {
+* 			"code": "ARTICLE",
+* 			"name": {
+* 				"en": "Academic article"
+* 			}
+* 		},
+* 		"contributors": {
+* 			"url": "https://api7.cristin-test.uio.no/v2/units/1600011/contributors"
+* 		},
+* 		"cristin_result_id": "1600011",
+* 		"links": [
+* 			{
+* 				"url_type": "DOI",
+* 				"url": "https://doi.org/10.1038/s41431-017-0088-9"
+* 			}
+* 		],
+* 		"original_language": "en",
+* 		"title": {
+* 			"en": "Biallelic variants in KIF14 cause intellectual disability with microcephaly"
+* 		},
+* 		"year_published": "2018",
+* 		"url": "https://api7.cristin-test.uio.no/v2/results/1600011",
+* 		"journal": {
+* 			"name": "European Journal of Human Genetics",
+* 			"publisher": {
+* 				"name": "Nature Publishing Group"
+* 			}
+* 		}
+* 	},
+* 	...
+* ]
+								
+Response
+Returns a JSON object that conforms to the results JSON schema. 
+HTTP Status Codes
+* 200 - Ok, returns the results for the unit.
+* 400 - Bad request, returned if the id is invalid
+* 404 - Not found, returned if no unit with this id could be found
+
+Cristin rest api 
+To the top of page 
+CONTACT 
+CRISTIN WEB INTERFACE 
+The service is provided by
+
+Norwegian Agency for Shared Services in Education and Research

@@ -17,3 +17,5 @@ Adopt Conventional Commits (`feat:`, `fix:`, `docs:`) and limit subject lines to
 
 ## Security & Configuration Tips
 Never add external domains to `data/app.config.yaml` without approval; keep `allowlist_domains` tight. Store staff metadata solely in `data/staff.yaml` and cite their public sources. Scrub uploads in `fetch_utils.py` for unsupported MIME types and enforce the `max_upload_mb` guardrails. Rotate cache contents by respecting `retention_days`, and document experimental model changes inside `models/README.txt`.
+
+If future agents detect that the Cristin API endpoints have stopped responding, assume the service may have been deprecated and immediately notify the requester. Suggest rebuilding the integration against the current NVA REST API as a fallback.
