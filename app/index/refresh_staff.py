@@ -3,25 +3,39 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import difflib
 import json
 import logging
 import os
+import re
 import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Iterable, Sequence
+from typing import Any, Iterable, Mapping, Sequence
 from urllib.parse import quote_plus, urljoin, urlparse
 
 import httpx
+import yaml
 from bs4 import BeautifulSoup
+
+from ..config_loader import AppConfig, ModelsConfig, load_app_config, load_models_config
+from .builder import DummyEmbeddingBackend, StaffIndexBuilder
+from .chunking import Chunker
+from .embeddings import EmbeddingBackend, SentenceTransformerBackend
+from .models import IndexPaths, SourceLink, StaffRecord
+from .vector_store import LocalVectorStore
 
 
 BASE_URL = "https://oslonyehoyskole.no"
 STAFF_LIST_ENDPOINT = f"{BASE_URL}/ansatte/ansatte_data"
-ROLE_KEYWORDS = ("professor", "førsteamanuensis", "høyskolelektor")
+DEFAULT_ROLE_KEYWORDS = ("professor", "førsteamanuensis", "høyskolelektor")
 NVA_BASE_URL = "https://nva.sikt.no"
 LOGGER = logging.getLogger("refresh_staff")
+CONTACT_EMAIL_PATTERN = re.compile(
+    r"var\s+ansatte_e_post\s*=\s*['\"]([^'\"]+)['\"]", re.IGNORECASE
+)
+EXPERT_PAGE_URL = f"{BASE_URL}/Forskning/Finn-en-ekspert"
 
 
 @dataclass(slots=True)
@@ -32,6 +46,19 @@ class StaffListing:
     title: str
     department: str
     profile_url: str
+    slug: str
+    image_url: str | None = None
+    tags: list[str] = field(default_factory=list)
+
+
+@dataclass(slots=True)
+class CsvStaffEntry:
+    """Admin-curated staff record sourced from staff.csv."""
+
+    name: str
+    profile_url: str
+    department: str
+    nva_profile_url: str | None
     slug: str
 
 
@@ -44,6 +71,8 @@ class StaffProfile:
     html_path: Path
     sources: list[str] = field(default_factory=list)
     nva_profile_url: str | None = None
+    email: str | None = None
+    phone: str | None = None
 
     def add_source(self, url: str) -> None:
         if url not in self.sources:
@@ -98,6 +127,38 @@ def build_parser() -> argparse.ArgumentParser:
         type=int,
         default=8,
         help="Maximum number of NVA API search hits to inspect per staff member.",
+    )
+    parser.add_argument(
+        "--academic-only",
+        action="store_true",
+        help="Restrict ingestion to common academic titles (Professor/Førsteamanuensis/Høyskolelektor).",
+    )
+    parser.add_argument(
+        "--role-keyword",
+        dest="role_keywords",
+        action="append",
+        help="Restrict staff to titles containing this case-insensitive keyword. Repeat the flag to add multiple keywords. Defaults to include all roles.",
+    )
+    parser.add_argument(
+        "--records-output",
+        type=Path,
+        help="Optional path to write extracted staff records as JSONL for debugging.",
+    )
+    parser.add_argument(
+        "--index-root",
+        type=Path,
+        help="Override the target directory for the vector index (defaults to rag.index-root).",
+    )
+    parser.add_argument(
+        "--skip-index",
+        action="store_true",
+        help="Skip embedding/index generation even after refreshing staff metadata.",
+    )
+    parser.add_argument(
+        "--staff-csv",
+        type=Path,
+        default=Path("staff.csv"),
+        help="Path to staff.csv containing the allowlisted staff entries.",
     )
     return parser
 
@@ -199,9 +260,49 @@ def slug_from_profile_url(profile_url: str) -> str:
     return slug
 
 
-def should_include_role(title: str) -> bool:
-    lowered = title.lower()
-    return any(keyword in lowered for keyword in ROLE_KEYWORDS)
+def load_staff_allowlist(csv_path: Path) -> list[CsvStaffEntry]:
+    if not csv_path.exists():
+        raise FileNotFoundError(f"staff CSV not found: {csv_path}")
+    entries: list[CsvStaffEntry] = []
+    with csv_path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        required_columns = {"Name", "ONH_profile", "Department"}
+        missing = required_columns - set(reader.fieldnames or [])
+        if missing:
+            raise ValueError(
+                f"staff CSV is missing required columns: {', '.join(sorted(missing))}"
+            )
+        for row in reader:
+            name = (row.get("Name") or "").strip()
+            profile_url = (row.get("ONH_profile") or "").strip()
+            department = (row.get("Department") or "").strip()
+            nva_url = (row.get("NVA_profile") or "").strip() or None
+            if not name or not profile_url:
+                LOGGER.debug("Skipping CSV row with missing name/profile URL: %s", row)
+                continue
+            try:
+                slug = slug_from_profile_url(profile_url)
+            except ValueError as exc:
+                LOGGER.warning("Skipping CSV row with invalid profile URL (%s): %s", profile_url, exc)
+                continue
+            entry = CsvStaffEntry(
+                name=name,
+                profile_url=profile_url,
+                department=department or "Ukjent",
+                nva_profile_url=nva_url,
+                slug=slug,
+            )
+            entries.append(entry)
+    if not entries:
+        raise ValueError(f"No valid staff entries found in {csv_path}")
+    return entries
+
+
+def should_include_role(title: str, keywords: Sequence[str]) -> bool:
+    if not keywords:
+        return True
+    lowered = title.casefold()
+    return any(keyword in lowered for keyword in keywords)
 
 
 def normalize_person_name(value: str) -> str:
@@ -237,11 +338,25 @@ def name_similarity(candidate: str, target: str) -> float:
     return difflib.SequenceMatcher(None, candidate_norm, target_norm).ratio()
 
 
+def _find_profile_container(soup: BeautifulSoup) -> Tag:
+    containers = soup.find_all("div", class_="col-md-8 col-lg-8")
+    if not containers:
+        raise ValueError("Expected profile content container not found.")
+    container = None
+    for candidate in containers:
+        if candidate.find(class_="sidebar"):
+            continue
+        if candidate.find_all(["p", "h2", "h3", "h4", "li"]):
+            container = candidate
+            break
+    if container is None:
+        container = containers[0]
+    return container
+
+
 def extract_profile_summary(html: str) -> str:
     soup = BeautifulSoup(html, "html.parser")
-    container = soup.find("div", class_="col-md-8 col-lg-8")
-    if container is None:
-        raise ValueError("Expected profile content container not found.")
+    container = _find_profile_container(soup)
     texts: list[str] = []
     for element in container.find_all(["h2", "h3", "h4", "p", "li"]):
         text = element.get_text(separator=" ", strip=True)
@@ -251,19 +366,155 @@ def extract_profile_summary(html: str) -> str:
     return summary
 
 
+def extract_profile_title(html: str) -> str | None:
+    soup = BeautifulSoup(html, "html.parser")
+    container = _find_profile_container(soup)
+    title_element = container.find(class_="ansatte_stilling") or soup.find(
+        class_="ansatte_stilling"
+    )
+    if title_element is None:
+        heading = container.find(["h2", "h3"], class_="ansatte_stilling") or soup.find(
+            ["h2", "h3"], class_="ansatte_stilling"
+        )
+        title_element = heading
+    if title_element is None:
+        heading = container.find(["h2", "h3"]) or soup.find(["h2", "h3"])
+        title_element = heading
+    if title_element is None:
+        return None
+    text = title_element.get_text(separator=" ", strip=True)
+    return text or None
+
+
+def parse_tags(raw: Any) -> list[str]:
+    if raw is None:
+        return []
+    if isinstance(raw, list):
+        values = raw
+    else:
+        cleaned = str(raw or "").replace(";", ",")
+        values = cleaned.split(",")
+    return [item.strip() for item in values if item and item.strip()]
+
+
+def extract_contact_details(html: str) -> tuple[str | None, str | None]:
+    email: str | None = None
+    phone: str | None = None
+
+    email_match = CONTACT_EMAIL_PATTERN.search(html)
+    if email_match:
+        candidate = email_match.group(1).strip()
+        if candidate:
+            email = candidate
+
+    soup = BeautifulSoup(html, "html.parser")
+    phone_container = soup.select_one("div.telephone span")
+    if phone_container:
+        candidate = phone_container.get_text(strip=True)
+        if candidate:
+            phone = candidate
+    return email, phone
+
+
+def load_expert_topics(
+    fetcher: SnapshotFetcher,
+    csv_entries: Sequence[CsvStaffEntry],
+) -> dict[str, list[str]]:
+    """Return mapping of staff slug to expert topics from Finn-en-ekspert."""
+
+    snapshot_path = fetcher.snapshot_dir / "experts" / "experts.html"
+    try:
+        html = fetcher.fetch_text(EXPERT_PAGE_URL, snapshot_path)
+    except Exception as exc:  # pragma: no cover - network guard
+        LOGGER.warning("Unable to fetch expert topic listing: %s", exc)
+        return {}
+
+    soup = BeautifulSoup(html, "html.parser")
+    tables = soup.find_all("table", class_="table")
+    if not tables:
+        LOGGER.warning("Expert topic tables not found on Finn-en-ekspert page.")
+        return {}
+
+    name_index: dict[str, list[str]] = {}
+    for entry in csv_entries:
+        key = normalize_person_name(entry.name)
+        name_index.setdefault(key, []).append(entry.slug)
+
+    topics: dict[str, set[str]] = {}
+
+    for table in tables:
+        for row in table.find_all("tr"):
+            cells = row.find_all("td")
+            if len(cells) != 2:
+                continue
+            topic_raw = cells[0].get_text(" ", strip=True)
+            if not topic_raw:
+                continue
+            if cells[0].find("strong"):
+                continue
+            topic = " ".join(topic_raw.split())
+            anchors = cells[1].find_all("a")
+            if not anchors:
+                continue
+            for anchor in anchors:
+                name = anchor.get_text(" ", strip=True)
+                if not name:
+                    continue
+                key = normalize_person_name(name)
+                matches = name_index.get(key)
+                if not matches:
+                    LOGGER.debug("Expert topic '%s' references unknown staff '%s'.", topic, name)
+                    continue
+                if len(matches) > 1:
+                    LOGGER.warning(
+                        "Ambiguous expert match for name '%s'; skipping topic '%s'.",
+                        name,
+                        topic,
+                    )
+                    continue
+                slug = matches[0]
+                topics.setdefault(slug, set()).add(topic)
+
+    enriched = {slug: sorted(values) for slug, values in topics.items() if values}
+    LOGGER.info("Enriched expert tags for %d staff from Finn-en-ekspert.", len(enriched))
+    return enriched
+
+
 class StaffCollector:
     """Pipeline for gathering Oslo Nye staff roster information."""
 
-    def __init__(self, fetcher: SnapshotFetcher) -> None:
+    def __init__(
+        self,
+        fetcher: SnapshotFetcher,
+        *,
+        csv_entries_order: Sequence[CsvStaffEntry],
+        csv_entries: Mapping[str, CsvStaffEntry],
+        expert_topics: Mapping[str, Sequence[str]] | None = None,
+        role_keywords: Sequence[str] | None = None,
+    ) -> None:
         self.fetcher = fetcher
+        self._role_keywords = tuple(keyword.casefold() for keyword in (role_keywords or ()))
+        self._csv_entries_order = list(csv_entries_order)
+        self._csv_entries = dict(csv_entries)
+        self._allowed_slugs = {entry.slug for entry in self._csv_entries_order}
+        self._expert_topics = {
+            slug: list(topics) for slug, topics in (expert_topics or {}).items()
+        }
 
     def collect_staff_profiles(self) -> list[StaffProfile]:
         listings = self._load_listings()
+        listing_by_slug = {listing.slug: listing for listing in listings}
         profiles: list[StaffProfile] = []
-        for listing in listings:
+        for entry in self._csv_entries_order:
+            listing = listing_by_slug.get(entry.slug)
+            if listing is None:
+                listing = self._listing_from_csv_entry(entry)
             profile = self._collect_profile(listing)
-            if profile is not None:
-                profiles.append(profile)
+            if profile is None:
+                LOGGER.warning("Failed to collect profile for %s (%s)", entry.name, entry.profile_url)
+                continue
+            self._apply_csv_overrides(profile, entry)
+            profiles.append(profile)
         return profiles
 
     def _load_listings(self) -> list[StaffListing]:
@@ -275,7 +526,7 @@ class StaffCollector:
         for entry in payload:
             try:
                 title = str(entry.get("field_ansatte_stilling", "")).strip()
-                if not should_include_role(title):
+                if not should_include_role(title, self._role_keywords):
                     continue
                 name = str(entry.get("field_ansatte_navn") or entry.get("title") or "").strip()
                 if not name:
@@ -286,6 +537,10 @@ class StaffCollector:
                     continue
                 profile_url = normalize_profile_url(profile_path)
                 slug = slug_from_profile_url(profile_url)
+                if self._allowed_slugs and slug not in self._allowed_slugs:
+                    continue
+                image_url = str(entry.get("field_top_bilde") or "").strip() or None
+                tags = parse_tags(entry.get("field_tags"))
             except Exception as exc:  # pragma: no cover - defensive guard
                 LOGGER.warning("Skipping entry due to parsing error: %s (%s)", entry, exc)
                 continue
@@ -295,10 +550,26 @@ class StaffCollector:
                 department=department or "Ukjent",
                 profile_url=profile_url,
                 slug=slug,
+                image_url=image_url,
+                tags=tags,
             )
+            csv_entry = self._csv_entries.get(slug)
+            if csv_entry:
+                listing.name = csv_entry.name
+                listing.department = csv_entry.department
+                listing.profile_url = csv_entry.profile_url
             listings.append(listing)
         LOGGER.info("Collected %d staff listings matching role filter.", len(listings))
         return listings
+
+    def _listing_from_csv_entry(self, entry: CsvStaffEntry) -> StaffListing:
+        return StaffListing(
+            name=entry.name,
+            title="",
+            department=entry.department,
+            profile_url=entry.profile_url,
+            slug=entry.slug,
+        )
 
     def _collect_profile(self, listing: StaffListing) -> StaffProfile | None:
         snapshot_rel = Path("staff") / listing.slug / "profile.html"
@@ -317,14 +588,33 @@ class StaffCollector:
         except ValueError as exc:
             LOGGER.warning("Profile parsing issue for %s: %s", listing.name, exc)
             summary = ""
-
+        title = extract_profile_title(html)
+        if title:
+            listing.title = title
+        email, phone = extract_contact_details(html)
         sources = [listing.profile_url]
         return StaffProfile(
             listing=listing,
             summary_text=summary,
             html_path=snapshot_path,
             sources=sources,
+            email=email,
+            phone=phone,
         )
+
+    def _apply_csv_overrides(self, profile: StaffProfile, entry: CsvStaffEntry) -> None:
+        listing = profile.listing
+        listing.name = entry.name
+        listing.department = entry.department
+        listing.profile_url = entry.profile_url
+        expert_tags = self._expert_topics.get(entry.slug)
+        if expert_tags:
+            listing.tags = list(expert_tags)
+        else:
+            listing.tags = []
+        if entry.nva_profile_url:
+            profile.nva_profile_url = entry.nva_profile_url
+            profile.add_source(entry.nva_profile_url)
 
 
 class NvaResolver:
@@ -568,6 +858,186 @@ class NvaResolver:
         return urljoin(NVA_BASE_URL, url if url.startswith("/") else f"/{url}")
 
 
+def dedupe_preserve_order(items: Iterable[str]) -> list[str]:
+    seen: set[str] = set()
+    results: list[str] = []
+    for item in items:
+        if not item:
+            continue
+        if item not in seen:
+            seen.add(item)
+            results.append(item)
+    return results
+
+
+def prepare_staff_metadata(profiles: Sequence[StaffProfile]) -> list[dict[str, Any]]:
+    entries: list[dict[str, Any]] = []
+
+    def sort_key(profile: StaffProfile) -> tuple[str, str]:
+        listing = profile.listing
+        return (listing.department.casefold(), listing.name.casefold())
+
+    for profile in sorted(profiles, key=sort_key):
+        listing = profile.listing
+        entry_items: list[tuple[str, Any]] = [("name", listing.name)]
+        if listing.title:
+            entry_items.append(("title", listing.title))
+        entry_items.append(("department", listing.department))
+        entry_items.append(("profile_url", listing.profile_url))
+        if profile.email:
+            entry_items.append(("email", profile.email))
+        if profile.phone:
+            entry_items.append(("phone", profile.phone))
+        if listing.image_url:
+            entry_items.append(("image_url", listing.image_url))
+        entry_items.append(("sources", dedupe_preserve_order(profile.sources)))
+        entry_items.append(("tags", list(listing.tags)))
+        entry = {key: value for key, value in entry_items}
+        entries.append(entry)
+    return entries
+
+
+def write_staff_yaml(
+    entries: Sequence[dict[str, Any]],
+    path: Path,
+    *,
+    dry_run: bool,
+) -> None:
+    serialized = yaml.safe_dump(
+        list(entries),
+        sort_keys=False,
+        allow_unicode=True,
+        default_flow_style=False,
+    )
+    if dry_run:
+        existing = path.read_text(encoding="utf-8") if path.exists() else ""
+        diff = list(
+            difflib.unified_diff(
+                existing.splitlines(),
+                serialized.splitlines(),
+                str(path),
+                f"{path} (new)",
+                lineterm="",
+            )
+        )
+        if diff:
+            for line in diff:
+                print(line)
+            LOGGER.info("Dry run complete. Diff printed above.")
+        else:
+            LOGGER.info("Dry run complete. No changes detected for %s.", path)
+        return
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(serialized, encoding="utf-8")
+    LOGGER.info("Updated %s with %d staff entries.", path, len(entries))
+
+
+def profiles_to_records(profiles: Sequence[StaffProfile]) -> list[StaffRecord]:
+    records: list[StaffRecord] = []
+    for profile in profiles:
+        listing = profile.listing
+        sources = [SourceLink(url=url) for url in dedupe_preserve_order(profile.sources)]
+        record = StaffRecord(
+            slug=listing.slug,
+            name=listing.name,
+            title=listing.title,
+            department=listing.department,
+            summary=profile.summary_text,
+            sources=sources,
+            tags=list(listing.tags),
+        )
+        records.append(record)
+    return records
+
+
+def write_records_jsonl(records: Sequence[StaffRecord], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as handle:
+        for record in records:
+            payload = {
+                "slug": record.slug,
+                "name": record.name,
+                "title": record.title,
+                "department": record.department,
+                "summary": record.summary,
+                "sources": [link.url for link in record.sources],
+                "tags": record.tags,
+            }
+            handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
+    LOGGER.info("Wrote %d staff records to %s.", len(records), path)
+
+
+def _resolve_embedder(
+    models_config: ModelsConfig,
+    app_config: AppConfig,
+) -> EmbeddingBackend:
+    embedding_model = models_config.embedding_model
+    backend = (embedding_model.backend or "").replace("_", "-").lower()
+    if backend in {"sentence-transformers", "sentence transformers", "st"}:
+        try:
+            return SentenceTransformerBackend(
+                model_name=embedding_model.name,
+                batch_size=app_config.rag.embedding_batch_size,
+                device=embedding_model.device,
+            )
+        except ImportError as exc:  # pragma: no cover - environment specific
+            LOGGER.warning(
+                "sentence-transformers backend unavailable (%s); falling back to dummy embeddings.",
+                exc,
+            )
+        except Exception as exc:  # pragma: no cover - defensive guard
+            LOGGER.warning(
+                "Failed to initialize sentence-transformers backend (%s); falling back to dummy embeddings.",
+                exc,
+            )
+    else:
+        if backend:
+            LOGGER.warning(
+                "Embedding backend '%s' is not supported by the offline builder; falling back to dummy embeddings.",
+                backend,
+            )
+        else:
+            LOGGER.warning(
+                "Embedding backend not specified; falling back to dummy embeddings."
+            )
+    return DummyEmbeddingBackend()
+
+
+def build_index_from_records(
+    records: Sequence[StaffRecord],
+    *,
+    app_config: AppConfig,
+    models_config: ModelsConfig,
+    index_root: Path,
+) -> None:
+    if not records:
+        LOGGER.warning("No staff records with content available; skipping index build.")
+        return
+
+    chunker = Chunker(
+        chunk_size=app_config.rag.chunk_size,
+        chunk_overlap=app_config.rag.chunk_overlap,
+        max_chunks=app_config.rag.max_chunks_per_profile,
+    )
+    embedder = _resolve_embedder(models_config, app_config)
+    paths = IndexPaths(root=index_root)
+    vector_store = LocalVectorStore(paths.vectors_dir)
+    builder = StaffIndexBuilder(
+        paths=paths,
+        chunker=chunker,
+        embedder=embedder,
+        vector_store=vector_store,
+    )
+    summary = builder.build(records)
+    LOGGER.info(
+        "Index build complete: %d staff processed, %d chunks generated, %d skipped.",
+        summary.processed_staff,
+        summary.total_chunks,
+        len(summary.skipped_staff),
+    )
+
+
 def configure_logging(verbose: bool) -> None:
     level = logging.DEBUG if verbose else logging.INFO
     logging.basicConfig(
@@ -582,6 +1052,17 @@ def main(argv: list[str] | None = None) -> int:
 
     configure_logging(args.verbose)
 
+    role_keywords: tuple[str, ...]
+    if args.role_keywords:
+        role_keywords = tuple(keyword.casefold() for keyword in args.role_keywords if keyword)
+    elif args.academic_only:
+        role_keywords = tuple(keyword.casefold() for keyword in DEFAULT_ROLE_KEYWORDS)
+    else:
+        role_keywords = tuple()
+
+    csv_entries = load_staff_allowlist(args.staff_csv)
+    csv_entries_by_slug = {entry.slug: entry for entry in csv_entries}
+
     fetcher = SnapshotFetcher(snapshot_dir=args.snapshot_dir, offline=args.offline)
     if args.nva_api_key:
         LOGGER.info("NVA API key supplied; API lookup enabled.")
@@ -590,9 +1071,15 @@ def main(argv: list[str] | None = None) -> int:
             "NVA API key not provided; relying on cached API snapshots or HTML search."
         )
 
-    profiles: list[StaffProfile]
     with fetcher:
-        collector = StaffCollector(fetcher)
+        expert_topics = load_expert_topics(fetcher, csv_entries)
+        collector = StaffCollector(
+            fetcher,
+            csv_entries_order=csv_entries,
+            csv_entries=csv_entries_by_slug,
+            expert_topics=expert_topics,
+            role_keywords=role_keywords,
+        )
         profiles = collector.collect_staff_profiles()
         resolver = NvaResolver(
             fetcher,
@@ -608,7 +1095,33 @@ def main(argv: list[str] | None = None) -> int:
     )
     LOGGER.info("Dry run: %s", "yes" if args.dry_run else "no")
 
-    # Further processing (NVA discovery, YAML update) is handled in subsequent steps.
+    metadata_entries = prepare_staff_metadata(profiles)
+    LOGGER.info("Prepared metadata for %d staff entries.", len(metadata_entries))
+    write_staff_yaml(metadata_entries, args.output, dry_run=args.dry_run)
+
+    if args.dry_run:
+        LOGGER.info("Dry run requested; skipping record export and index build.")
+        return 0
+
+    records = profiles_to_records(profiles)
+    if args.records_output:
+        write_records_jsonl(records, args.records_output)
+
+    if args.skip_index:
+        LOGGER.info("Index build skipped (--skip-index).")
+        return 0
+
+    app_config = load_app_config()
+    models_config = load_models_config()
+    index_root = args.index_root or Path(app_config.rag.index_root)
+    LOGGER.info("Building index under %s", index_root)
+    build_index_from_records(
+        records,
+        app_config=app_config,
+        models_config=models_config,
+        index_root=index_root,
+    )
+
     return 0
 
 
