@@ -85,13 +85,18 @@ class StaffIndexBuilder:
             "department": record.department,
             "title": record.title,
             "tags": record.tags,
+            "profile_url": record.profile_url,
         }
         source_url = record.primary_source().url if record.primary_source() else ""
         chunks = self.chunker.chunk_text(
             staff_slug=record.slug,
             text=record.summary,
             source_url=source_url,
-            metadata={"department": record.department, "title": record.title},
+            metadata={
+                "department": record.department,
+                "title": record.title,
+                "profile_url": record.profile_url,
+            },
         )
         # Attach richer metadata post-chunking to avoid shared references.
         for chunk in chunks:

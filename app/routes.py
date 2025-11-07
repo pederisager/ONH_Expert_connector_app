@@ -4,10 +4,12 @@ from __future__ import annotations
 
 import asyncio
 import hashlib
+import logging
 from typing import Any, Literal, Sequence
 
 import httpx
 from fastapi import APIRouter, HTTPException, Request, UploadFile, status
+from fastapi.responses import Response
 from pydantic import BaseModel, Field
 
 from .cache_manager import CacheManager
@@ -15,11 +17,15 @@ from .config_loader import AppConfig
 from .exporter import ShortlistExporter
 from .fetch_utils import FetchNotAllowedError, FetchUtils
 from .file_parser import FileParser, UnsupportedFileTypeError
+from .index.models import Chunk
 from .llm_explainer import LLMExplainer
 from .match_engine import MatchEngine, PageContent, StaffDocument, StaffProfile, extract_themes
+from .rag import EmbeddingRetriever, RetrievalQuery
 from .shortlist_store import ShortlistStore
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
+CITATION_SNIPPET_LIMIT = 280
 
 
 # --------------------------------------------------------------------------- #
@@ -53,6 +59,18 @@ class MatchItem(BaseModel):
     why: str
     citations: list[Citation]
     score_breakdown: dict[str, float] = Field(alias="scoreBreakdown")
+
+
+@router.head("/queue", include_in_schema=False)
+async def queue_probe_head() -> Response:
+    """Silence health-check HEAD probes from local reverse proxies."""
+
+    return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
+@router.get("/queue", include_in_schema=False)
+async def queue_probe_get() -> dict[str, str]:
+    return {"status": "idle"}
 
 
 class MatchResponse(BaseModel):
@@ -218,6 +236,94 @@ async def _maybe_generate_explanations(
             result.why = cleaned
 
 
+def _rag_query_from_themes(themes: Sequence[str]) -> str:
+    return " ".join(theme.strip() for theme in themes if theme.strip()).strip()
+
+
+def _match_via_retriever(
+    *,
+    retriever: EmbeddingRetriever,
+    payload: MatchRequest,
+    max_candidates: int,
+) -> list[MatchItem]:
+    query_text = _rag_query_from_themes(payload.themes)
+    if not query_text:
+        return []
+    try:
+        results = retriever.retrieve(
+            RetrievalQuery(
+                text=query_text,
+                department=payload.department,
+                top_k=max_candidates,
+            )
+        )
+    except Exception as exc:  # pragma: no cover - defensive
+        logger.error("Retriever failed for '%s': %s", query_text, exc)
+        return []
+
+    items: list[MatchItem] = []
+    for result in results:
+        item = _retrieval_result_to_match_item(result, payload.themes)
+        if item:
+            items.append(item)
+    return items
+
+
+def _retrieval_result_to_match_item(result, themes: Sequence[str]) -> MatchItem | None:
+    if not result.chunks:
+        return None
+
+    primary_chunk = result.chunks[0]
+    department = str(
+        primary_chunk.metadata.get("department")
+        or result.metadata.get("department")
+        or ""
+    )
+    profile_url = str(
+        primary_chunk.metadata.get("profile_url") or primary_chunk.source_url or ""
+    )
+    display_name = result.staff_name or str(primary_chunk.metadata.get("name") or result.staff_slug)
+    citations = _chunks_to_citations(result.chunks)
+
+    why_default = (
+        f"{display_name} matcher {', '.join(themes) or 'temaet'} basert på semantisk treff."
+    )
+    return MatchItem(
+        id=_hash_id(display_name, profile_url or result.staff_slug),
+        name=display_name,
+        department=department,
+        profile_url=profile_url or primary_chunk.source_url or "",
+        score=result.score,
+        why=why_default,
+        citations=citations,
+        scoreBreakdown={
+            "semantic": result.score,
+            "keywords": 0.0,
+            "tags": 0.0,
+        },
+    )
+
+
+def _chunks_to_citations(chunks: Sequence[Chunk]) -> list[Citation]:
+    citations: list[Citation] = []
+    for idx, chunk in enumerate(chunks, start=1):
+        snippet = chunk.text.strip()
+        if not snippet:
+            continue
+        snippet = snippet[:CITATION_SNIPPET_LIMIT].rstrip()
+        title = str(chunk.metadata.get("source_title") or chunk.metadata.get("name") or "Kilde")
+        url = chunk.source_url or str(chunk.metadata.get("profile_url") or "")
+        citations.append(
+            Citation(
+                id=f"[{idx}]",
+                title=title or "Kilde",
+                url=url,
+                snippet=snippet,
+            )
+        )
+    return citations
+
+
 def _request_state(request: Request):
     return request.app.state
 
@@ -265,10 +371,28 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
     state = _request_state(request)
     app_config: AppConfig = state.app_config
     match_engine: MatchEngine = state.match_engine
+    retriever: EmbeddingRetriever | None = getattr(state, "embedding_retriever", None)
+    vector_index_ready: bool = getattr(state, "vector_index_ready", False)
     fetch_utils: FetchUtils = state.fetch_utils
     cache_manager: CacheManager = state.cache_manager
     staff_profiles: list[StaffProfile] = state.staff_profiles
     llm_explainer: LLMExplainer = state.llm_explainer
+
+    if retriever and vector_index_ready:
+        rag_results = _match_via_retriever(
+            retriever=retriever,
+            payload=payload,
+            max_candidates=app_config.results.max_candidates,
+        )
+        if not retriever.is_active:
+            state.vector_index_ready = False
+            logger.warning(
+                "Vector index disabled (%s). Falling back to legacy matcher.",
+                retriever.disabled_reason,
+            )
+        if rag_results:
+            await _maybe_generate_explanations(rag_results, llm_explainer, payload.themes)
+            return MatchResponse(results=rag_results, total=len(rag_results))
 
     if payload.department:
         filtered_staff = [profile for profile in staff_profiles if profile.department == payload.department]

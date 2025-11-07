@@ -5,7 +5,6 @@ llm_model:
   purpose: "generate explanations"
 
 embedding_model:
-  name: "nomic-embed-text"
-  backend: "ollama"
-  endpoint: "http://localhost:11434"
-  device: "cpu"
+  name: "sentence-transformers/all-MiniLM-L6-v2"
+  backend: "sentence_transformers"
+  device: "cuda"

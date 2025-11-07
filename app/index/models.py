@@ -23,6 +23,7 @@ class StaffRecord:
     name: str
     title: str
     department: str
+    profile_url: str
     summary: str
     sources: list[SourceLink] = field(default_factory=list)
     tags: list[str] = field(default_factory=list)
@@ -72,4 +73,3 @@ class IndexPaths:
     @property
     def manifests_dir(self) -> Path:
         return self.root / "manifests"
-

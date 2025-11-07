@@ -8,6 +8,26 @@ from httpx import ASGITransport, AsyncClient
 
 from app.cache_manager import CacheManager
 from app.exporter import ShortlistExporter
+from app.index import embedder_factory
+from app.index.builder import DummyEmbeddingBackend
+
+
+class TestSentenceTransformerBackend:
+    def __init__(self, model_name, batch_size=32, device="cpu"):
+        self.model_name = model_name
+        self.batch_size = batch_size
+        self.device = device
+        self._dummy = DummyEmbeddingBackend()
+
+    def embed(self, texts):
+        return self._dummy.embed(texts)
+
+    def embed_one(self, text):
+        return self._dummy.embed_one(text)
+
+
+embedder_factory.SentenceTransformerBackend = TestSentenceTransformerBackend  # type: ignore[attr-defined]
+
 from app.main import create_app
 from app.match_engine import MatchEngine, StaffProfile
 from app.shortlist_store import ShortlistStore
@@ -22,6 +42,8 @@ async def _prepare_app(
     app = create_app()
 
     app.state.match_engine = MatchEngine()
+    app.state.embedding_retriever = None
+    app.state.vector_index_ready = False
 
     cache_dir = tmp_path / "cache"
     cache_dir.mkdir(parents=True, exist_ok=True)

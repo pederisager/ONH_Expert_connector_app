@@ -35,19 +35,15 @@ The API serves the static UI from `app/static` at the root path.
    ```bash
    source .venv/bin/activate
    ```
-4. **Ensure Ollama is running.** Start the local service in another terminal if needed (examples: `ollama serve`, `launchctl load /Library/LaunchDaemons/com.ollama.ollama.plist`, or `sudo systemctl start ollama`).
-5. **Confirm required models are available (first boot or after updates to `data/models.yaml`).**
-  ```bash
-  ollama pull nomic-embed-text
-  ollama pull llama3.1:8b-instruct-q4_0
-  ```
+4. **Ensure the embedding backend is ready.** The default configuration uses `sentence-transformers` with CUDA; make sure your virtualenv has `torch`/`sentence-transformers` installed (see “GPU embeddings” below) and that `nvidia-smi` shows your GPU. If you switch back to Ollama, start `ollama serve` separately.
+5. **Confirm required models are available (first boot or after updates to `data/models.yaml`).** For SentenceTransformers, download the specified Hugging Face model ahead of time (`python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')"`). For Ollama-based setups, run `ollama pull` for the configured models.
 6. **Install or update Python dependencies (first boot or requirements change only).**
   ```bash
   pip install -r requirements.txt
   ```
 7. **Build or refresh the retrieval index (after editing `data/staff.yaml` or when sources change).**
    ```bash
-   python -m app.index.build  # placeholder command; implement during RAG migration
+   python -m app.index.build
    ```
 8. **Run the API with live reload.**
   ```bash
@@ -58,6 +54,24 @@ The API serves the static UI from `app/static` at the root path.
 ## Local models
 
 Model choices live in `data/models.yaml`. Download the referenced LLM and embedding checkpoints ahead of time (for example via Ollama) and update the config if you pick different variants.
+
+## GPU embeddings
+
+The retriever defaults to `sentence-transformers/all-MiniLM-L6-v2` running on CUDA (`data/models.yaml`). To actually leverage your GPU:
+
+1. Install CUDA-enabled PyTorch plus `sentence-transformers` inside the virtualenv:
+   ```bash
+   pip install --upgrade "torch==2.4.1" --index-url https://download.pytorch.org/whl/cu121
+   pip install sentence-transformers
+   ```
+2. Verify access with `python -c "import torch; print(torch.cuda.is_available())"` and `nvidia-smi`.
+3. Rebuild the index so embeddings are regenerated on the GPU:
+   ```bash
+   python -m app.index.build --verbose
+   ```
+4. Start the API (`uvicorn app.main:app --reload`). If CUDA is missing, `app/index/embedder_factory.py` logs a warning and retries on CPU, so you still get a working retriever.
+
+If you prefer Ollama for embeddings, set `embedding_model.backend` back to `ollama`, configure `endpoint`, and rebuild the index after the Ollama service is running (optionally with GPU acceleration).
 
 ## Offline test scenario
 

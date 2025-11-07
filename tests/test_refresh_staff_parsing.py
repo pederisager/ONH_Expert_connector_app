@@ -122,6 +122,7 @@ def test_profiles_to_records_returns_staff_records() -> None:
     assert record.slug == "gamma-person"
     assert record.tags == ["tema"]
     assert record.summary == "En kort tekst."
+    assert record.profile_url.endswith("/gamma-person")
     assert [link.url for link in record.sources] == [
         "https://example.org/gamma",
         "https://example.org/gamma-2",

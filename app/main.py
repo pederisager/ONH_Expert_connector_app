@@ -15,9 +15,11 @@ from .config_loader import load_app_config, load_models_config, load_staff_profi
 from .exporter import ShortlistExporter
 from .fetch_utils import FetchUtils
 from .file_parser import FileParser
+from .index import IndexPaths, LocalVectorStore, create_embedding_backend
 from .llm_explainer import LLMExplainer
 from .match_engine import MatchEngine
 from .shortlist_store import ShortlistStore
+from .rag import EmbeddingRetriever
 
 
 APP_ROOT = Path(__file__).resolve().parent
@@ -69,6 +71,18 @@ def create_app() -> FastAPI:
         embedding_endpoint=models_config.embedding_model.endpoint,
     )
 
+    index_root = (PROJECT_ROOT / app_config.rag.index_root).resolve()
+    index_paths = IndexPaths(root=index_root)
+    vector_store = LocalVectorStore(index_paths.vectors_dir)
+    retriever_embedder = create_embedding_backend(models_config, app_config=app_config)
+    embedding_retriever = EmbeddingRetriever(
+        vector_store=vector_store,
+        embedder=retriever_embedder,
+        min_score=app_config.results.min_similarity_score,
+        max_chunks_per_staff=3,
+    )
+    vector_index_ready = len(vector_store) > 0
+
     app.state.app_config = app_config
     app.state.models_config = models_config
     app.state.staff_profiles = staff_profiles
@@ -79,6 +93,9 @@ def create_app() -> FastAPI:
     app.state.llm_explainer = llm_explainer
     app.state.shortlist_store = shortlist_store
     app.state.shortlist_exporter = shortlist_exporter
+    app.state.vector_store = vector_store
+    app.state.embedding_retriever = embedding_retriever
+    app.state.vector_index_ready = vector_index_ready
 
     app.include_router(routes.router)
 

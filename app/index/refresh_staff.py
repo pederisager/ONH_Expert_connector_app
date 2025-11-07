@@ -20,9 +20,9 @@ import yaml
 from bs4 import BeautifulSoup
 
 from ..config_loader import AppConfig, ModelsConfig, load_app_config, load_models_config
-from .builder import DummyEmbeddingBackend, StaffIndexBuilder
+from .builder import StaffIndexBuilder
 from .chunking import Chunker
-from .embeddings import EmbeddingBackend, SentenceTransformerBackend
+from .embedder_factory import create_embedding_backend
 from .models import IndexPaths, SourceLink, StaffRecord
 from .vector_store import LocalVectorStore
 
@@ -943,6 +943,7 @@ def profiles_to_records(profiles: Sequence[StaffProfile]) -> list[StaffRecord]:
             name=listing.name,
             title=listing.title,
             department=listing.department,
+            profile_url=listing.profile_url,
             summary=profile.summary_text,
             sources=sources,
             tags=list(listing.tags),
@@ -960,48 +961,13 @@ def write_records_jsonl(records: Sequence[StaffRecord], path: Path) -> None:
                 "name": record.name,
                 "title": record.title,
                 "department": record.department,
+                "profile_url": record.profile_url,
                 "summary": record.summary,
                 "sources": [link.url for link in record.sources],
                 "tags": record.tags,
             }
             handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
     LOGGER.info("Wrote %d staff records to %s.", len(records), path)
-
-
-def _resolve_embedder(
-    models_config: ModelsConfig,
-    app_config: AppConfig,
-) -> EmbeddingBackend:
-    embedding_model = models_config.embedding_model
-    backend = (embedding_model.backend or "").replace("_", "-").lower()
-    if backend in {"sentence-transformers", "sentence transformers", "st"}:
-        try:
-            return SentenceTransformerBackend(
-                model_name=embedding_model.name,
-                batch_size=app_config.rag.embedding_batch_size,
-                device=embedding_model.device,
-            )
-        except ImportError as exc:  # pragma: no cover - environment specific
-            LOGGER.warning(
-                "sentence-transformers backend unavailable (%s); falling back to dummy embeddings.",
-                exc,
-            )
-        except Exception as exc:  # pragma: no cover - defensive guard
-            LOGGER.warning(
-                "Failed to initialize sentence-transformers backend (%s); falling back to dummy embeddings.",
-                exc,
-            )
-    else:
-        if backend:
-            LOGGER.warning(
-                "Embedding backend '%s' is not supported by the offline builder; falling back to dummy embeddings.",
-                backend,
-            )
-        else:
-            LOGGER.warning(
-                "Embedding backend not specified; falling back to dummy embeddings."
-            )
-    return DummyEmbeddingBackend()
 
 
 def build_index_from_records(
@@ -1020,7 +986,7 @@ def build_index_from_records(
         chunk_overlap=app_config.rag.chunk_overlap,
         max_chunks=app_config.rag.max_chunks_per_profile,
     )
-    embedder = _resolve_embedder(models_config, app_config)
+    embedder = create_embedding_backend(models_config, app_config=app_config)
     paths = IndexPaths(root=index_root)
     vector_store = LocalVectorStore(paths.vectors_dir)
     builder = StaffIndexBuilder(

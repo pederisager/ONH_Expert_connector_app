@@ -3,8 +3,8 @@
 from __future__ import annotations
 
 import importlib
-from dataclasses import dataclass
-from typing import Protocol, Sequence
+from dataclasses import dataclass, field
+from typing import Any, Protocol, Sequence
 
 import numpy as np
 
@@ -35,6 +35,7 @@ class SentenceTransformerBackend:
     model_name: str
     batch_size: int = 32
     device: str | None = None
+    _model: Any = field(init=False, repr=False)
 
     def __post_init__(self) -> None:
         sentence_transformer_cls = self._resolve_class()

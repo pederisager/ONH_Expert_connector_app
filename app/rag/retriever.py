@@ -2,15 +2,18 @@
 
 from __future__ import annotations
 
+import logging
 from dataclasses import dataclass, field
 from typing import Sequence
 
 import numpy as np
 
-from app.index.chunking import Chunker
 from app.index.embeddings import EmbeddingBackend
 from app.index.models import Chunk
 from app.index.vector_store import LocalVectorStore, SearchResult
+
+
+LOGGER = logging.getLogger("rag.embedding-retriever")
 
 
 @dataclass(slots=True)
@@ -46,8 +49,12 @@ class EmbeddingRetriever:
         self.min_score = min_score
         self.max_chunks_per_staff = max_chunks_per_staff
         self.oversample_factor = max(1, oversample_factor)
+        self._active = True
+        self._disabled_reason: str | None = None
 
     def retrieve(self, query: RetrievalQuery) -> list[RetrievalResult]:
+        if not self._active:
+            return []
         if not query.text.strip():
             return []
 
@@ -56,12 +63,29 @@ class EmbeddingRetriever:
             raise ValueError("embed_one must return a 1D vector")
 
         oversample = max(query.top_k * self.oversample_factor, query.top_k)
-        raw_results = self.vector_store.search(
-            query_vector, top_k=oversample, min_score=self.min_score
-        )
+        try:
+            raw_results = self.vector_store.search(
+                query_vector, top_k=oversample, min_score=self.min_score
+            )
+        except ValueError as exc:
+            self._active = False
+            self._disabled_reason = str(exc)
+            LOGGER.warning(
+                "Vector store search disabled: %s. Rebuild the index to re-enable RAG.",
+                exc,
+            )
+            return []
         grouped = self._group_results(raw_results, query)
         sorted_results = sorted(grouped.values(), key=lambda item: item.score, reverse=True)
         return sorted_results[: query.top_k]
+
+    @property
+    def is_active(self) -> bool:
+        return self._active
+
+    @property
+    def disabled_reason(self) -> str | None:
+        return self._disabled_reason
 
     def _group_results(
         self, results: Sequence[SearchResult], query: RetrievalQuery
@@ -88,4 +112,3 @@ class EmbeddingRetriever:
                     entry.chunks.append(chunk)
 
         return grouped
-

@@ -24,6 +24,13 @@
   - Introduced reusable chunking utilities (`app/index/chunking.py`) with tokenizer abstractions and comprehensive tests.
   - Added `LocalVectorStore` and embedding helpers to persist chunk vectors locally, plus normalization helpers and coverage.
   - Implemented `StaffIndexBuilder` (`app/index/builder.py`) that consumes `StaffRecord` data, produces chunk snapshots, writes manifests, and persists vectors (with a deterministic `DummyEmbeddingBackend` for offline runs). Covered by `tests/test_index_builder.py`.
+- **Curated records + build CLI:**
+  - Added `app/index/records_loader.py` (with `tests/test_records_loader.py`) to merge curated `data/staff.yaml` metadata with extracted JSONL summaries before indexing.
+  - Landed a standalone CLI (`python -m app.index.build`) that wires configs, the curated loader, and the existing builder so the retrieval index can be rebuilt without re-scraping staff data.
+  - Introduced `app/index/embedder_factory.py` to instantiate embedding backends from `data/models.yaml`, including a guarded Ollama client fallback to the dummy embedder when endpoints/devices are missing.
+- **Data refresh + CLI run-through:**
+  - Re-generated `data/staff.yaml` and `data/staff_records.jsonl` in offline mode so the curated roster matches the latest cached ONH snapshots (NVA matches still pending real API access).
+  - Executed `python -m app.index.build`, which now auto-falls back to `DummyEmbeddingBackend` when Ollama is unreachable, producing a fresh `data/index/` snapshot (87 staff, 105 chunks).
 - **Runtime RAG stubs (S5 preview):**
   - Added `app/rag/retriever.py` providing an embedding-based retriever that groups chunk hits per staff member with department filtering.
   - Added `tests/test_retriever.py` exercising retrieval grouping and filter handling.
@@ -33,8 +40,7 @@
 - Once the API key arrives, validate live requests against `https://api.nva.unit.no/search/resources` and record representative JSON snapshots for regression tests.
 - Capture per-staff NVA profile pages (HTML/JSON) and extract publication metadata required for the future index builder.
 - Reconcile new data with existing `data/staff.yaml` (merge, sort by department/name, remove outdated entries).
-- Implement diff report + dry-run output before writing YAML.
-- Wire the new index builder into a `python -m app.index.build` CLI that pulls summaries from snapshots + resolver output, then emits fresh vectors/chunks.
+- Capture and commit representative `data/index/` artifacts (chunks, manifest, vectors) once the production embedding backend is available so regression tests can validate retrieval quality against a stable snapshot.
 - Add tests covering the YAML merge/diff logic and NVA JSON parsing once the API path is confirmed.
 - Integrate the retriever stub with `/match`, gradually retiring the legacy match engine in favour of chunk-level evidence.
 

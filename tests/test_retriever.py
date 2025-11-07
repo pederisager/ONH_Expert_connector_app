@@ -84,3 +84,21 @@ def test_embedding_retriever_applies_department_filter(tmp_path) -> None:
     results = retriever.retrieve(RetrievalQuery(text="psykologi", department="Psykologi", top_k=5))
     assert len(results) == 1
     assert results[0].staff_slug == "alpha"
+
+
+def test_embedding_retriever_disables_on_dimension_mismatch(tmp_path) -> None:
+    store = LocalVectorStore(tmp_path / "vectors")
+    builder_embedder = KeywordEmbedder()
+    chunks = [_make_chunk("alpha", "psykologi", 0)]
+    store.add(builder_embedder.embed([chunks[0].text]), chunks)
+
+    class LongerEmbedder(KeywordEmbedder):
+        def _vectorize(self, text: str) -> np.ndarray:
+            base = super()._vectorize(text)
+            return np.concatenate([base, np.array([1.0], dtype=np.float32)])
+
+    retriever = EmbeddingRetriever(vector_store=store, embedder=LongerEmbedder())
+    results = retriever.retrieve(RetrievalQuery(text="psykologi", top_k=1))
+    assert results == []
+    assert retriever.is_active is False
+    assert "dimensionality" in (retriever.disabled_reason or "")

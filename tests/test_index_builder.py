@@ -16,6 +16,7 @@ def _make_record(slug: str, summary: str) -> StaffRecord:
         name=f"Navn {slug}",
         title="Førsteamanuensis",
         department="Psykologi",
+        profile_url=f"https://example.com/{slug}",
         summary=summary,
         sources=[SourceLink(url=f"https://example.com/{slug}")],
     )
