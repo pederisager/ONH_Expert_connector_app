@@ -1,5 +1,8 @@
 # Repository Guidelines
 
+## Agent Maintenance
+Codex must automatically update this document whenever its changes introduce, remove, or materially alter guidance that future agents need to follow. Make that edit in the same task so the new expectations are captured immediately. Skip touching `AGENTS.md` for routine prompts that leave the policies and workflows unchanged.
+
 ## Project Structure & Module Organization
 Keep feature code under `app/` with `main.py` as the FastAPI entry point and routers in `routes.py`. RAG components should be split between the offline index builder (`app/index/` packages) and the online retriever/orchestrator (`app/rag/` helpers) that power `/match`. Legacy utilities (`match_engine.py`, `llm_explainer.py`, `fetch_utils.py`, `file_parser.py`) remain until fully refactored or wrapped by the new flow. Front-end assets live in `app/static/` (plain HTML/CSS/JS). Configuration, curated data, and generated indexes sit in `data/` (`staff.yaml`, `models.yaml`, `app.config.yaml`, `index/`); treat YAML files as the source of truth. Use `models/` for large model checkpoints and `outputs/exports/` for generated PDFs/JSON. Mirror modules with test files under `tests/`.
 
