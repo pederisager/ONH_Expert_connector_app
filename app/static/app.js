@@ -183,7 +183,7 @@ function handleFileChange() {
 function updateAnalyzeButtonState() {
   const textValue = elements.topicInput.value || "";
   state.topicText = textValue;
-  const hasText = textValue.trim().length > 20;
+  const hasText = textValue.trim().length > 0;
   const hasFiles = elements.fileUpload.files && elements.fileUpload.files.length > 0;
   elements.analyzeBtn.disabled = !(hasText || hasFiles) || state.isAnalyzing;
 }
@@ -202,6 +202,14 @@ async function handleAnalyze(event) {
   if (state.isAnalyzing) return;
 
   const topicText = elements.topicInput.value || "";
+  const trimmedText = topicText.trim();
+  const files = elements.fileUpload.files || [];
+  const hasFiles = files.length > 0;
+  if (!trimmedText && !hasFiles) {
+    showToast("Legg inn en kort beskrivelse eller last opp filer før du analyserer.", "warning");
+    return;
+  }
+
   state.topicText = topicText;
   state.isAnalyzing = true;
   updateAnalyzeButtonState();
@@ -213,7 +221,6 @@ async function handleAnalyze(event) {
     if (state.selectedDepartment) {
       formData.append("department", state.selectedDepartment);
     }
-    const files = elements.fileUpload.files || [];
     for (const file of files) {
       formData.append("files", file, file.name);
     }
