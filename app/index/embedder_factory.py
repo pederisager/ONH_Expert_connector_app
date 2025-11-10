@@ -17,6 +17,48 @@ from .embeddings import EmbeddingBackend, SentenceTransformerBackend
 LOGGER = logging.getLogger("rag.embedder-factory")
 
 
+def _probe_torch_capabilities() -> tuple[bool, bool] | None:
+    """Return (cuda_available, mps_available) if torch imports, else None."""
+
+    try:  # pragma: no cover - runtime probe
+        import torch  # type: ignore[import-not-found]
+    except Exception:  # pragma: no cover - runtime probe
+        return None
+
+    cuda_available = bool(getattr(torch, "cuda", None) and torch.cuda.is_available())
+    mps_backend = getattr(torch.backends, "mps", None)
+    mps_available = bool(mps_backend and torch.backends.mps.is_available())
+    return (cuda_available, mps_available)
+
+
+def _resolve_embedding_device(preferred: str | None) -> str:
+    """Resolve the requested device, preferring GPU/MPS when available."""
+
+    requested_clean = (preferred or "auto").strip()
+    requested_normalized = requested_clean.lower()
+    if requested_normalized == "gpu":
+        requested_normalized = "cuda"
+        requested_clean = "cuda"
+
+    capabilities = _probe_torch_capabilities()
+    cuda_available = bool(capabilities and capabilities[0])
+    mps_available = bool(capabilities and capabilities[1])
+
+    if requested_normalized.startswith("cuda"):
+        return requested_clean if cuda_available else "cpu"
+    if requested_normalized == "mps":
+        return "mps" if mps_available else "cpu"
+    if requested_normalized == "cpu":
+        return "cpu"
+    if requested_normalized in {"auto", ""}:
+        if cuda_available:
+            return "cuda"
+        if mps_available:
+            return "mps"
+        return "cpu"
+    return requested_clean or "cpu"
+
+
 def create_embedding_backend(
     models_config: ModelsConfig,
     *,
@@ -29,11 +71,11 @@ def create_embedding_backend(
 
     if backend in {"sentence-transformers", "sentence transformers", "st"}:
         batch_size = app_config.rag.embedding_batch_size if app_config else 32
-        preferred_device = (embedding_model.device or "cpu").strip() or "cpu"
+        resolved_device = _resolve_embedding_device(embedding_model.device)
         return _create_sentence_transformer_backend(
             model_name=embedding_model.name,
             batch_size=batch_size,
-            device=preferred_device,
+            device=resolved_device,
         )
 
     if backend == "ollama":

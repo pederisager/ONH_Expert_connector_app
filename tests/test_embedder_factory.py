@@ -32,6 +32,7 @@ def test_sentence_transformer_cuda_falls_back_to_cpu(monkeypatch):
                 raise RuntimeError("CUDA init failed")
 
     monkeypatch.setattr(embedder_factory, "SentenceTransformerBackend", StubBackend)
+    monkeypatch.setattr(embedder_factory, "_probe_torch_capabilities", lambda: (True, False))
 
     backend = embedder_factory.create_embedding_backend(
         _models_config(backend="sentence_transformers", device="cuda"),
@@ -48,6 +49,7 @@ def test_sentence_transformer_missing_dependency_returns_dummy(monkeypatch):
         raise ImportError("missing sentence-transformers")
 
     monkeypatch.setattr(embedder_factory, "SentenceTransformerBackend", raising_backend)
+    monkeypatch.setattr(embedder_factory, "_probe_torch_capabilities", lambda: (False, False))
 
     backend = embedder_factory.create_embedding_backend(
         _models_config(backend="sentence_transformers", device="cpu"),
@@ -55,3 +57,37 @@ def test_sentence_transformer_missing_dependency_returns_dummy(monkeypatch):
     )
 
     assert isinstance(backend, DummyEmbeddingBackend)
+
+
+def test_sentence_transformer_auto_prefers_cuda_when_available(monkeypatch):
+    class StubBackend:
+        def __init__(self, *, model_name, batch_size, device):  # type: ignore[override]
+            self.device = device
+
+    monkeypatch.setattr(embedder_factory, "SentenceTransformerBackend", StubBackend)
+    monkeypatch.setattr(embedder_factory, "_probe_torch_capabilities", lambda: (True, False))
+
+    backend = embedder_factory.create_embedding_backend(
+        _models_config(backend="sentence_transformers", device=None),
+        app_config=_app_config(batch_size=12),
+    )
+
+    assert isinstance(backend, StubBackend)
+    assert backend.device == "cuda"
+
+
+def test_sentence_transformer_auto_falls_back_to_cpu_without_accelerator(monkeypatch):
+    class StubBackend:
+        def __init__(self, *, model_name, batch_size, device):  # type: ignore[override]
+            self.device = device
+
+    monkeypatch.setattr(embedder_factory, "SentenceTransformerBackend", StubBackend)
+    monkeypatch.setattr(embedder_factory, "_probe_torch_capabilities", lambda: (False, False))
+
+    backend = embedder_factory.create_embedding_backend(
+        _models_config(backend="sentence_transformers", device=None),
+        app_config=_app_config(batch_size=12),
+    )
+
+    assert isinstance(backend, StubBackend)
+    assert backend.device == "cpu"

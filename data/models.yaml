@@ -7,4 +7,4 @@ llm_model:
 embedding_model:
   name: "sentence-transformers/all-MiniLM-L6-v2"
   backend: "sentence_transformers"
-  device: "cuda"
+  device: "auto"

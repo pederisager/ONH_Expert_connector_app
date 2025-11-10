@@ -2,11 +2,12 @@
 
 from __future__ import annotations
 
+import logging
 from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
 from . import routes
@@ -20,6 +21,8 @@ from .llm_explainer import LLMExplainer
 from .match_engine import MatchEngine
 from .shortlist_store import ShortlistStore
 from .rag import EmbeddingRetriever
+
+LOGGER = logging.getLogger(__name__)
 
 
 APP_ROOT = Path(__file__).resolve().parent
@@ -96,16 +99,29 @@ def create_app() -> FastAPI:
     app.state.vector_store = vector_store
     app.state.embedding_retriever = embedding_retriever
     app.state.vector_index_ready = vector_index_ready
+    app.state.staff_document_cache = {}
 
     app.include_router(routes.router)
 
     static_dir = APP_ROOT / "static"
+    favicon_path = static_dir / "favicon.png"
     app.mount("/static", StaticFiles(directory=static_dir), name="static")
+
+    @app.on_event("startup")
+    async def warm_staff_documents() -> None:  # pragma: no cover - startup hook
+        try:
+            await routes.warm_staff_document_cache(app.state)
+        except Exception as exc:  # noqa: BLE001 - log and continue
+            LOGGER.warning("Klarte ikke å varme opp dokumentcache: %s", exc)
 
     @app.get("/", response_class=HTMLResponse, include_in_schema=False)
     async def serve_index() -> HTMLResponse:  # pragma: no cover - simple file read
         index_path = static_dir / "index.html"
         return HTMLResponse(index_path.read_text(encoding="utf-8"))
+
+    @app.get("/favicon.ico", include_in_schema=False)
+    async def serve_favicon() -> FileResponse:
+        return FileResponse(favicon_path, media_type="image/png")
 
     return app
 

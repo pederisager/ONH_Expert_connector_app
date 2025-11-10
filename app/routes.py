@@ -19,12 +19,20 @@ from .fetch_utils import FetchNotAllowedError, FetchUtils
 from .file_parser import FileParser, UnsupportedFileTypeError
 from .index.models import Chunk
 from .llm_explainer import LLMExplainer
-from .match_engine import MatchEngine, PageContent, StaffDocument, StaffProfile, extract_themes
+from .match_engine import (
+    MatchEngine,
+    PageContent,
+    StaffDocument,
+    StaffProfile,
+    extract_themes,
+    tokenize,
+)
 from .rag import EmbeddingRetriever, RetrievalQuery
 from .shortlist_store import ShortlistStore
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
+PAGE_TEXT_CHAR_LIMIT = 8000
 CITATION_SNIPPET_LIMIT = 280
 
 
@@ -59,6 +67,7 @@ class MatchItem(BaseModel):
     why: str
     citations: list[Citation]
     score_breakdown: dict[str, float] = Field(alias="scoreBreakdown")
+    keywords: list[str] = Field(default_factory=list)
 
 
 @router.head("/queue", include_in_schema=False)
@@ -86,6 +95,7 @@ class ShortlistItem(BaseModel):
     citations: list[Citation] | None = None
     notes: str | None = None
     score: float | None = None
+    keywords: list[str] | None = None
 
     model_config = {"extra": "allow"}
 
@@ -156,20 +166,162 @@ async def _read_files(
     return parsed_texts
 
 
+def _staff_doc_cache_key(profile: StaffProfile, max_pages: int) -> str:
+    digest = hashlib.sha1(f"{profile.profile_url}|{max_pages}".encode("utf-8")).hexdigest()
+    return f"staffdoc::{digest}"
+
+
+def _remember_staff_document(
+    *,
+    cache_key: str,
+    sources: Sequence[str],
+    pages: Sequence[PageContent],
+    memory_cache: dict[str, dict[str, object]] | None,
+) -> None:
+    if memory_cache is None or not pages:
+        return
+    memory_cache[cache_key] = {
+        "sources": list(sources),
+        "pages": tuple(pages),
+    }
+
+
+def _load_cached_staff_document(
+    *,
+    profile: StaffProfile,
+    cache_manager: CacheManager,
+    max_pages: int,
+    memory_cache: dict[str, dict[str, object]] | None,
+) -> StaffDocument | None:
+    cache_key = _staff_doc_cache_key(profile, max_pages)
+    expected_sources = profile.sources[:max_pages]
+
+    if memory_cache is not None:
+        entry = memory_cache.get(cache_key)
+        if entry and entry.get("sources") == expected_sources:
+            pages = list(entry.get("pages") or [])
+            if pages:
+                return StaffDocument(profile=profile, pages=pages)
+
+    cached = cache_manager.get(cache_key)
+    if not cached:
+        return None
+    if cached.get("sources") != expected_sources:
+        return None
+    pages_payload = cached.get("pages") or []
+    if not pages_payload:
+        return None
+    try:
+        pages = [PageContent(**page) for page in pages_payload if page.get("text")]
+    except (TypeError, ValueError):
+        return None
+    if not pages:
+        return None
+    _remember_staff_document(
+        cache_key=cache_key,
+        sources=expected_sources,
+        pages=pages,
+        memory_cache=memory_cache,
+    )
+    return StaffDocument(profile=profile, pages=pages)
+
+
+def _store_staff_document(
+    *,
+    profile: StaffProfile,
+    cache_manager: CacheManager,
+    max_pages: int,
+    pages: Sequence[PageContent],
+    memory_cache: dict[str, dict[str, object]] | None,
+) -> None:
+    if not pages:
+        return
+    sources = profile.sources[:max_pages]
+    payload = {
+        "sources": sources,
+        "pages": [
+            {
+                "url": page.url,
+                "title": page.title,
+                "text": page.text,
+            }
+            for page in pages
+        ],
+    }
+    cache_key = _staff_doc_cache_key(profile, max_pages)
+    cache_manager.set(cache_key, payload)
+    _remember_staff_document(cache_key=cache_key, sources=sources, pages=pages, memory_cache=memory_cache)
+
+
 async def _fetch_staff_documents(
     *,
     staff_profiles: Sequence[StaffProfile],
     fetch_utils: FetchUtils,
     cache_manager: CacheManager,
     max_pages: int,
+    memory_cache: dict[str, dict[str, object]] | None = None,
 ) -> list[StaffDocument]:
-    async with httpx.AsyncClient(follow_redirects=True, timeout=30.0) as client:
-        tasks = [
-            _fetch_single_staff(profile, client, fetch_utils, cache_manager, max_pages)
-            for profile in staff_profiles
-        ]
-        documents = await asyncio.gather(*tasks)
-    return [doc for doc in documents if doc.pages]
+    doc_map: dict[str, StaffDocument] = {}
+    pending_profiles: list[StaffProfile] = []
+
+    for profile in staff_profiles:
+        cached = _load_cached_staff_document(
+            profile=profile,
+            cache_manager=cache_manager,
+            max_pages=max_pages,
+            memory_cache=memory_cache,
+        )
+        if cached is not None:
+            doc_map[profile.profile_url] = cached
+        else:
+            pending_profiles.append(profile)
+
+    if pending_profiles:
+        async with httpx.AsyncClient(follow_redirects=True, timeout=30.0) as client:
+            tasks = [
+                _fetch_single_staff(
+                    profile,
+                    client,
+                    fetch_utils,
+                    cache_manager,
+                    max_pages,
+                    memory_cache,
+                )
+                for profile in pending_profiles
+            ]
+            fetched = await asyncio.gather(*tasks)
+        for profile, document in zip(pending_profiles, fetched):
+            if document.pages:
+                doc_map[profile.profile_url] = document
+
+    ordered: list[StaffDocument] = []
+    for profile in staff_profiles:
+        document = doc_map.get(profile.profile_url)
+        if document is not None:
+            ordered.append(document)
+    return ordered
+
+
+async def warm_staff_document_cache(state) -> None:
+    try:
+        staff_profiles: list[StaffProfile] = state.staff_profiles
+        fetch_utils: FetchUtils = state.fetch_utils
+        cache_manager: CacheManager = state.cache_manager
+        max_pages: int = state.app_config.fetch.max_pages_per_staff
+        memory_cache = getattr(state, "staff_document_cache", None)
+    except AttributeError:
+        return
+
+    if not staff_profiles:
+        return
+
+    await _fetch_staff_documents(
+        staff_profiles=staff_profiles,
+        fetch_utils=fetch_utils,
+        cache_manager=cache_manager,
+        max_pages=max_pages,
+        memory_cache=memory_cache,
+    )
 
 
 async def _fetch_single_staff(
@@ -178,6 +330,7 @@ async def _fetch_single_staff(
     fetch_utils: FetchUtils,
     cache_manager: CacheManager,
     max_pages: int,
+    memory_cache: dict[str, dict[str, object]] | None,
 ) -> StaffDocument:
     pages: list[PageContent] = []
     for url in profile.sources[:max_pages]:
@@ -195,11 +348,19 @@ async def _fetch_single_staff(
         cleaned = {
             "url": page_data["url"],
             "title": page_data.get("title") or "",
-            "text": page_data.get("text", "")[: fetch_utils.max_bytes_per_page],
+            "text": page_data.get("text", "")[: PAGE_TEXT_CHAR_LIMIT],
         }
         cache_manager.set(cache_key, cleaned)
         pages.append(PageContent(**cleaned))
-    return StaffDocument(profile=profile, pages=pages)
+    document = StaffDocument(profile=profile, pages=pages)
+    _store_staff_document(
+        profile=profile,
+        cache_manager=cache_manager,
+        max_pages=max_pages,
+        pages=pages,
+        memory_cache=memory_cache,
+    )
+    return document
 
 
 def _hash_id(name: str, profile_url: str) -> str:
@@ -284,23 +445,31 @@ def _retrieval_result_to_match_item(result, themes: Sequence[str]) -> MatchItem 
     )
     display_name = result.staff_name or str(primary_chunk.metadata.get("name") or result.staff_slug)
     citations = _chunks_to_citations(result.chunks)
+    keywords = _collect_chunk_keywords(result.chunks)
+    semantic_score = max(0.0, min(1.0, float(result.score)))
+    keyword_score = _keyword_overlap_score(result.chunks, themes)
+    tag_score = _tag_overlap_score(keywords, themes)
+    adjusted_score = min(1.0, semantic_score + 0.1 * keyword_score + 0.15 * tag_score)
 
     why_default = (
         f"{display_name} matcher {', '.join(themes) or 'temaet'} basert på semantisk treff."
     )
+    if keywords:
+        why_default += f" Nøkkelord: {', '.join(keywords[:4])}."
     return MatchItem(
         id=_hash_id(display_name, profile_url or result.staff_slug),
         name=display_name,
         department=department,
         profile_url=profile_url or primary_chunk.source_url or "",
-        score=result.score,
+        score=round(adjusted_score, 4),
         why=why_default,
         citations=citations,
         scoreBreakdown={
-            "semantic": result.score,
-            "keywords": 0.0,
-            "tags": 0.0,
+            "semantic": round(semantic_score, 4),
+            "keywords": round(keyword_score, 4),
+            "tags": round(tag_score, 4),
         },
+        keywords=keywords,
     )
 
 
@@ -322,6 +491,51 @@ def _chunks_to_citations(chunks: Sequence[Chunk]) -> list[Citation]:
             )
         )
     return citations
+
+
+def _collect_chunk_keywords(chunks: Sequence[Chunk]) -> list[str]:
+    keywords: list[str] = []
+    seen: set[str] = set()
+    for chunk in chunks:
+        raw_tags = chunk.metadata.get("tags") if chunk.metadata else None
+        if not isinstance(raw_tags, list):
+            continue
+        for tag in raw_tags:
+            if not isinstance(tag, str):
+                continue
+            normalized = tag.strip()
+            if not normalized:
+                continue
+            lowered = normalized.lower()
+            if lowered in seen:
+                continue
+            seen.add(lowered)
+            keywords.append(normalized)
+    return keywords
+
+
+def _keyword_overlap_score(chunks: Sequence[Chunk], themes: Sequence[str]) -> float:
+    theme_tokens = {theme.strip().lower() for theme in themes if theme.strip()}
+    if not theme_tokens:
+        return 0.0
+    text_tokens: set[str] = set()
+    for chunk in chunks:
+        text_tokens.update(tokenize(chunk.text))
+    if not text_tokens:
+        return 0.0
+    overlap = len(theme_tokens & text_tokens)
+    return overlap / max(1, len(theme_tokens))
+
+
+def _tag_overlap_score(keywords: Sequence[str], themes: Sequence[str]) -> float:
+    if not keywords or not themes:
+        return 0.0
+    keyword_tokens = {tag.strip().lower() for tag in keywords if tag.strip()}
+    theme_tokens = {theme.strip().lower() for theme in themes if theme.strip()}
+    if not keyword_tokens or not theme_tokens:
+        return 0.0
+    overlap = len(keyword_tokens & theme_tokens)
+    return overlap / max(1, len(keyword_tokens))
 
 
 def _request_state(request: Request):
@@ -407,6 +621,7 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
         fetch_utils=fetch_utils,
         cache_manager=cache_manager,
         max_pages=app_config.fetch.max_pages_per_staff,
+        memory_cache=getattr(state, "staff_document_cache", None),
     )
 
     if not documents:
@@ -433,6 +648,9 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
 
     results: list[MatchItem] = []
     for match in filtered_ranked:
+        score_breakdown = dict(match.score_breakdown)
+        if "keyword" in score_breakdown and "keywords" not in score_breakdown:
+            score_breakdown["keywords"] = score_breakdown.pop("keyword")
         item = MatchItem(
             id=_hash_id(match.staff.name, match.staff.profile_url),
             name=match.staff.name,
@@ -441,7 +659,8 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
             score=match.score,
             why=match.explanation,
             citations=[Citation(**citation) for citation in match.citations],
-            scoreBreakdown=match.score_breakdown,
+            scoreBreakdown=score_breakdown,
+            keywords=list(match.staff.tags),
         )
         results.append(item)
 

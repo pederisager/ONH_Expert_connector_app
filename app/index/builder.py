@@ -80,29 +80,77 @@ class StaffIndexBuilder:
         self.paths.manifests_dir.mkdir(parents=True, exist_ok=True)
 
     def _chunks_for_record(self, record: StaffRecord) -> list[Chunk]:
-        metadata = {
-            "name": record.name,
+        chunks: list[Chunk] = []
+        primary_source = record.primary_source()
+        summary_source_url = primary_source.url if primary_source else record.profile_url
+        base_metadata = {
             "department": record.department,
             "title": record.title,
-            "tags": record.tags,
             "profile_url": record.profile_url,
+            "source_title": record.name,
+            "source_kind": "profile",
+            "tags": list(record.tags),
         }
-        source_url = record.primary_source().url if record.primary_source() else ""
-        chunks = self.chunker.chunk_text(
+
+        summary_chunks = self.chunker.chunk_text(
             staff_slug=record.slug,
             text=record.summary,
-            source_url=source_url,
-            metadata={
+            source_url=summary_source_url,
+            metadata=base_metadata,
+        )
+        chunks.extend(summary_chunks)
+
+        if record.cristin_results:
+            chunks.extend(self._chunks_from_cristin_results(record))
+
+        default_tags = list(record.tags)
+        for chunk in chunks:
+            chunk.metadata.setdefault("name", record.name)
+            existing_tags = chunk.metadata.get("tags")
+            if isinstance(existing_tags, list) and existing_tags:
+                # Preserve order while de-duplicating.
+                seen: set[str] = set()
+                deduped: list[str] = []
+                for tag in existing_tags:
+                    lowered = tag.lower()
+                    if lowered in seen:
+                        continue
+                    seen.add(lowered)
+                    deduped.append(tag)
+                chunk.metadata["tags"] = deduped
+            else:
+                chunk.metadata["tags"] = list(default_tags)
+        return chunks
+
+    def _chunks_from_cristin_results(self, record: StaffRecord) -> list[Chunk]:
+        cristin_chunks: list[Chunk] = []
+        for result in record.cristin_results:
+            text = result.as_text()
+            if not text:
+                continue
+            source_url = result.source_url or record.profile_url
+            combined_tags = list(dict.fromkeys([*record.tags, *(result.tags or [])])) if (record.tags or result.tags) else []
+            metadata = {
                 "department": record.department,
                 "title": record.title,
                 "profile_url": record.profile_url,
-            },
-        )
-        # Attach richer metadata post-chunking to avoid shared references.
-        for chunk in chunks:
-            chunk.metadata.setdefault("name", record.name)
-            chunk.metadata.setdefault("tags", record.tags)
-        return chunks
+                "source_title": result.title or "Cristin-resultat",
+                "source_kind": "cristin",
+                "cristin_result_id": result.cristin_result_id,
+                "cristin_year": result.year,
+                "cristin_category": result.category_name,
+                "venue": result.venue,
+                "tags": combined_tags,
+            }
+            cristin_chunks.extend(
+                self.chunker.chunk_text(
+                    staff_slug=record.slug,
+                    text=text,
+                    source_url=source_url,
+                    metadata=metadata,
+                )
+            )
+        return cristin_chunks
 
     def _write_chunks_snapshot(self, slug: str, chunks: Iterable[Chunk]) -> None:
         payload = [self._chunk_to_dict(chunk) for chunk in chunks]

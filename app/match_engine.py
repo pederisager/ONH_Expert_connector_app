@@ -5,7 +5,7 @@ from __future__ import annotations
 import logging
 import re
 from collections import Counter
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from threading import Lock
 from typing import Any, Iterable, Sequence
 from urllib.parse import urlparse
@@ -73,14 +73,23 @@ class PageContent:
     text: str
 
 
+MAX_COMBINED_TEXT_CHARS = 6000
+
+
 @dataclass(slots=True)
 class StaffDocument:
     profile: StaffProfile
     pages: list[PageContent]
+    _combined_cache: str | None = field(init=False, default=None, repr=False)
 
     @property
     def combined_text(self) -> str:
-        return "\n".join(page.text for page in self.pages if page.text)
+        if self._combined_cache is None:
+            combined = "\n".join(page.text for page in self.pages if page.text)
+            if len(combined) > MAX_COMBINED_TEXT_CHARS:
+                combined = combined[:MAX_COMBINED_TEXT_CHARS]
+            self._combined_cache = combined
+        return self._combined_cache
 
 
 @dataclass(slots=True)
@@ -370,7 +379,7 @@ class MatchEngine:
                     citations=citations,
                     score_breakdown={
                         "semantic": round(semantic_score, 4),
-                        "keyword": round(keyword_score, 4),
+                        "keywords": round(keyword_score, 4),
                         "tags": round(tag_score, 4),
                         "department_bonus": round(department_bonus, 4),
                     },

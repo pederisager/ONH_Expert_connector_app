@@ -284,6 +284,32 @@ input[type="file"]:focus {
   color: #30364a;
 }
 
+.keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.keyword-label {
+  font-weight: 600;
+  color: #2b2f3a;
+}
+
+.keyword-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.keyword-chip {
+  background: #eef3fd;
+  color: #1f3c78;
+  border-radius: 999px;
+  padding: 0.15rem 0.75rem;
+  font-size: 0.8rem;
+}
+
 .result-actions {
   display: flex;
   align-items: center;

@@ -1,13 +1,18 @@
 from __future__ import annotations
 
 from pathlib import Path
+import types
 
 import pytest
 
+from app import routes
+from app.cache_manager import CacheManager
 from app.index.builder import DummyEmbeddingBackend
 from app.index.models import Chunk
 from app.index.vector_store import LocalVectorStore
+from app.match_engine import StaffProfile
 from app.rag.retriever import EmbeddingRetriever
+from app.fetch_utils import FetchUtils
 
 
 @pytest.mark.asyncio
@@ -138,3 +143,43 @@ async def test_match_endpoint_prefers_rag_when_index_ready(client, tmp_path_fact
     top = data["results"][0]
     assert top["name"] == "RAG Forsker"
     assert top["citations"][0]["snippet"].startswith("Psykologi og helse")
+
+
+@pytest.mark.asyncio
+async def test_staff_document_cache_reuse(tmp_path) -> None:
+    cache_manager = CacheManager(directory=tmp_path / "cache", retention_days=1, enabled=True)
+    fetch_utils = FetchUtils(allowlist_domains=["example.com"], max_kb_per_page=10)
+
+    fetch_calls = {"count": 0}
+
+    async def fake_fetch_page(self, client_http, url):  # type: ignore[override]
+        fetch_calls["count"] += 1
+        return {"url": url, "title": "Stub", "text": "Lang tekst for caching."}
+
+    fetch_utils.fetch_page = types.MethodType(fake_fetch_page, fetch_utils)
+
+    profile = StaffProfile(
+        name="Cache Test",
+        department="Helsefag",
+        profile_url="https://example.com/profile",
+        sources=["https://example.com/source"],
+        tags=[],
+    )
+
+    docs_first = await routes._fetch_staff_documents(  # type: ignore[attr-defined]
+        staff_profiles=[profile],
+        fetch_utils=fetch_utils,
+        cache_manager=cache_manager,
+        max_pages=1,
+    )
+    assert fetch_calls["count"] == 1
+    assert docs_first and docs_first[0].combined_text
+
+    docs_second = await routes._fetch_staff_documents(  # type: ignore[attr-defined]
+        staff_profiles=[profile],
+        fetch_utils=fetch_utils,
+        cache_manager=cache_manager,
+        max_pages=1,
+    )
+    assert fetch_calls["count"] == 1, "Expected cached StaffDocument to skip fetch"
+    assert docs_second and docs_second[0].combined_text == docs_first[0].combined_text

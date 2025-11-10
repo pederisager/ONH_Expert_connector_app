@@ -397,6 +397,7 @@ function renderResults() {
 
   state.results.forEach((result) => {
     const inShortlist = state.shortlist.some((item) => item.id === result.id);
+    const keywordHtml = renderKeywordSection(result.keywords);
     const card = document.createElement("article");
     card.className = "result-card";
     card.innerHTML = `
@@ -408,6 +409,7 @@ function renderResults() {
         <div class="score-indicator">Score: ${result.score.toFixed(1)}</div>
       </div>
       <p class="result-why">${result.why}</p>
+      ${keywordHtml}
       <div class="result-actions">
         <button class="btn-secondary" data-action="toggle-shortlist" data-id="${result.id}">
           ${inShortlist ? "Fjern fra kortliste" : "Legg til kortliste"}
@@ -451,6 +453,7 @@ function toggleShortlistItem(resultId) {
       why: result.why,
       citations: result.citations || [],
       score: result.score,
+      keywords: result.keywords || [],
       notes: "",
     });
     showToast("Lagt til i kortlisten.");
@@ -472,12 +475,14 @@ function renderShortlist() {
   state.shortlist.forEach((item) => {
     const card = document.createElement("div");
     card.className = "shortlist-card";
+    const keywordHtml = renderKeywordSection(item.keywords);
     card.innerHTML = `
       <div>
         <strong>${item.name}</strong>
         <div class="department-pill">${item.department}</div>
       </div>
       <p>${item.why}</p>
+      ${keywordHtml}
       <div>
         ${(item.citations || [])
           .map(
@@ -492,6 +497,22 @@ function renderShortlist() {
     elements.shortlistItems.appendChild(card);
   });
 
+}
+
+function renderKeywordSection(keywords) {
+  if (!Array.isArray(keywords) || keywords.length === 0) {
+    return "";
+  }
+  const chips = keywords
+    .slice(0, 8)
+    .map((keyword) => `<span class="keyword-chip">${keyword}</span>`)
+    .join("");
+  return `
+    <div class="keyword-list">
+      <span class="keyword-label">Nøkkelord:</span>
+      <div class="keyword-chips">${chips}</div>
+    </div>
+  `;
 }
 
 function handleShortlistInput(event) {

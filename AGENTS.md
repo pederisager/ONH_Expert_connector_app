@@ -16,10 +16,13 @@ Keep feature code under `app/` with `main.py` as the FastAPI entry point and rou
 
 Staff `tags` in `data/staff.yaml` now surface as "Nøkkelord" on the results/cards UI and contribute to the RAG score, so keep them descriptive, deduplicated, and localized where possible.
 
+Staff documents fetched from ONH/NVA sources are cached as whole `StaffDocument` objects (see `routes._fetch_staff_documents`) and warmed during FastAPI startup so repeat "Finn relevante ansatte" queries stay responsive. Preserve this cache and update the invalidation rules if you change how sources are assembled. `StaffDocument.combined_text` is capped at roughly 6k characters to keep TF-IDF costs predictable; adjust tests and docs if you tweak that limit.
+
 ## Build, Test, and Development Commands
 Create a virtual environment before installing dependencies: `python -m venv .venv && source .venv/bin/activate`. Install Python packages with `pip install -r requirements.txt`. Build or refresh the retrieval index after editing `data/staff.yaml` or source content (`python -m app.index.build`). Run the API locally with `uvicorn app.main:app --reload` so the static UI served from `app/static` stays current. Run the full suite with `pytest` (add `--cov=app` before merging). Static assets are plain files in `app/static`—no bundler is needed. The default embedding backend is `sentence-transformers` on CUDA; ensure the virtualenv has CUDA-enabled PyTorch + `sentence-transformers`, or update `data/models.yaml` to another backend (e.g., Ollama) and rebuild the index if you deviate. Leaving `embedding_model.device` empty or set to `auto` now lets the embedder factory auto-detect CUDA (then MPS, then CPU) for both the offline index builder and online retriever—only pin it to `cpu` if you explicitly need to disable accelerators.
 
 - Keep `data/cristin/results.jsonl` refreshed (`python -m app.index.cristin.sync ...`) before running `python -m app.index.build`. The builder now merges up to five Cristin/NVA research results per staff member into the RAG chunks so "Vis kilder" surfaces NVA references whenever available.
+- Profile `/match` hot spots with `python scripts/profile_match.py ...` (see `docs/performance_profiling.md`). The script reuses the production helpers and records per-stage timings (Cristin/NVA merge, TF-IDF, embeddings, LLM explainer) so we can justify performance tweaks before merging.
 
 You have access to the mpc tool context7. Use it for documentation lookup whenever that would be beneficial to solving a task. 
 

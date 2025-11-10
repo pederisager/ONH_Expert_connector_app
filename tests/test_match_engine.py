@@ -1,6 +1,13 @@
 from __future__ import annotations
 
-from app.match_engine import MatchEngine, PageContent, StaffDocument, StaffProfile, extract_themes
+from app.match_engine import (
+    MAX_COMBINED_TEXT_CHARS,
+    MatchEngine,
+    PageContent,
+    StaffDocument,
+    StaffProfile,
+    extract_themes,
+)
 
 
 def test_extract_themes_returns_keywords() -> None:
@@ -37,3 +44,16 @@ def test_match_engine_ranks_staff_member() -> None:
     assert result.staff.name == "Test Forsker"
     assert result.score > 0
     assert result.citations
+
+
+def test_staff_document_combined_text_trims() -> None:
+    profile = StaffProfile(
+        name="Test",
+        department="Helse",
+        profile_url="https://example.com/profile",
+        sources=["https://example.com/page"],
+        tags=[],
+    )
+    long_text = "A" * (MAX_COMBINED_TEXT_CHARS + 100)
+    doc = StaffDocument(profile=profile, pages=[PageContent(url="https://example.com", title="Stub", text=long_text)])
+    assert len(doc.combined_text) == MAX_COMBINED_TEXT_CHARS

@@ -29,6 +29,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="Path to the JSONL file with staff summaries (default: data/staff_records.jsonl).",
     )
     parser.add_argument(
+        "--cristin-results",
+        type=Path,
+        default=Path("data/cristin/results.jsonl"),
+        help="Path to the Cristin results JSONL file (default: data/cristin/results.jsonl).",
+    )
+    parser.add_argument(
         "--app-config",
         type=Path,
         default=Path("data/app.config.yaml"),
@@ -45,6 +51,12 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         default=None,
         help="Override the target directory for the vector index (default: rag.index-root).",
+    )
+    parser.add_argument(
+        "--max-cristin-results",
+        type=int,
+        default=5,
+        help="Maximum Cristin results per staff member to embed (default: 5).",
     )
     parser.add_argument(
         "--verbose",
@@ -75,6 +87,8 @@ def main(argv: list[str] | None = None) -> int:
     records = load_curated_records(
         staff_yaml_path=args.staff_yaml,
         records_jsonl_path=args.records_jsonl,
+        cristin_results_path=args.cristin_results,
+        max_cristin_results=max(1, args.max_cristin_results),
     )
     logging.info("Loaded %d staff records. Building index in %s", len(records), index_root)
 
