@@ -16,6 +16,16 @@ def test_extract_themes_returns_keywords() -> None:
     assert "psykologi" in themes
 
 
+def test_extract_themes_prefers_phrases_over_fillers() -> None:
+    text = (
+        "Vi trenger undervisning om digital sikkerhet og personvern i helseteknologi. "
+        "Digital sikkerhet skal gi studentene praksis i datasikkerhet."
+    )
+    themes = extract_themes(text, top_k=3)
+    assert any(theme == "digital sikkerhet" for theme in themes)
+    assert "vi" not in themes
+
+
 def test_match_engine_ranks_staff_member() -> None:
     profile = StaffProfile(
         name="Test Forsker",

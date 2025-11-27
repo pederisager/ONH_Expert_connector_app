@@ -183,3 +183,31 @@ async def test_staff_document_cache_reuse(tmp_path) -> None:
     )
     assert fetch_calls["count"] == 1, "Expected cached StaffDocument to skip fetch"
     assert docs_second and docs_second[0].combined_text == docs_first[0].combined_text
+
+
+def test_build_normalized_preview_prefers_sentences() -> None:
+    text = (
+        "Første setning beskriver psykologi. Andre setning utdyper helseperspektivet. "
+        "Tredje setning er overflødig."
+    )
+    preview = routes._build_normalized_preview(text, limit=80)
+    assert preview.endswith(".")
+    assert "overflødig" not in preview
+
+
+def test_chunks_to_citations_maps_cristin_to_nva_url() -> None:
+    chunk = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-0001",
+        text="Resultatet beskriver digital sikkerhet og personvern i undervisning.",
+        order=0,
+        token_count=12,
+        source_url="https://api.cristin.no/v2/results/123456",
+        metadata={
+            "name": "Test Forsker",
+            "cristin_result_id": "123456",
+        },
+    )
+    citations = routes._chunks_to_citations([chunk])
+    assert citations
+    assert citations[0].url == "https://nva.sikt.no/registration/123456"

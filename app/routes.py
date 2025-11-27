@@ -5,6 +5,7 @@ from __future__ import annotations
 import asyncio
 import hashlib
 import logging
+import re
 from typing import Any, Literal, Sequence
 
 import httpx
@@ -33,7 +34,8 @@ from .shortlist_store import ShortlistStore
 router = APIRouter()
 logger = logging.getLogger(__name__)
 PAGE_TEXT_CHAR_LIMIT = 8000
-CITATION_SNIPPET_LIMIT = 280
+CITATION_SNIPPET_LIMIT = 3000
+PREVIEW_CHAR_LIMIT = 1200
 
 
 # --------------------------------------------------------------------------- #
@@ -128,6 +130,110 @@ def _validate_text_input(text: str, file_texts: Sequence[str]) -> str:
             detail="Mangler tematisk innhold. Skriv tekst eller last opp filer.",
         )
     return combined
+
+
+def _build_normalized_preview(text: str, limit: int = PREVIEW_CHAR_LIMIT) -> str:
+    normalized = re.sub(r"\s+", " ", (text or "")).strip()
+    if not normalized:
+        return ""
+
+    sentences = re.split(r"(?<=[.!?])\s+", normalized)
+    preview_parts: list[str] = []
+    total = 0
+    truncated = False
+
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if not sentence:
+            continue
+        projected = total + len(sentence) + (1 if preview_parts else 0)
+        if preview_parts and projected > limit:
+            truncated = True
+            break
+        preview_parts.append(sentence)
+        total = projected
+        if total >= limit:
+            truncated = total > limit
+            break
+
+    if not preview_parts:
+        preview = normalized[:limit]
+        truncated = len(normalized) > len(preview)
+    else:
+        preview = " ".join(preview_parts)
+
+    if len(preview) > limit:
+        truncated = True
+        preview = preview[:limit]
+        last_space = preview.rfind(" ")
+        if last_space > int(limit * 0.6):
+            preview = preview[:last_space]
+
+    preview = preview.strip()
+    if not preview:
+        return ""
+
+    if truncated or len(preview) < len(normalized):
+        return preview.rstrip(",; ") + "..."
+    return preview
+
+
+def _extract_citation_snippet(text: str, themes: Sequence[str], limit: int = CITATION_SNIPPET_LIMIT) -> str:
+    """Pick the most relevant portion of a chunk for downstream LLM use."""
+
+    normalized = re.sub(r"\s+", " ", (text or "")).strip()
+    if not normalized:
+        return ""
+    if len(normalized) <= limit:
+        return normalized
+
+    sentences = re.split(r"(?<=[.!?])\s+", normalized)
+    sentences = [sentence.strip() for sentence in sentences if sentence.strip()]
+
+    theme_tokens = {
+        token
+        for theme in themes
+        for token in tokenize(theme)
+        if len(token) > 2
+    }
+
+    best_snippet = normalized[:limit].rstrip()
+    best_score = -1 if theme_tokens else 0
+
+    if sentences:
+        for start_idx in range(len(sentences)):
+            window: list[str] = []
+            total_len = 0
+            total_score = 0
+
+            for sentence in sentences[start_idx:]:
+                projected = total_len + len(sentence) + (1 if window else 0)
+                if window and projected > limit:
+                    break
+                window.append(sentence)
+                total_len = projected
+
+                if theme_tokens:
+                    lowered = sentence.lower()
+                    total_score += sum(lowered.count(token) for token in theme_tokens)
+
+            if not window:
+                continue
+
+            if (
+                total_score > best_score
+                or (total_score == best_score and total_len > len(best_snippet))
+            ):
+                best_score = total_score
+                best_snippet = " ".join(window)
+
+    if len(best_snippet) > limit:
+        best_snippet = best_snippet[:limit]
+        last_space = best_snippet.rfind(" ")
+        if last_space > int(limit * 0.6):
+            best_snippet = best_snippet[:last_space]
+
+    return best_snippet.strip()
 
 
 async def _read_files(
@@ -444,7 +550,7 @@ def _retrieval_result_to_match_item(result, themes: Sequence[str]) -> MatchItem 
         primary_chunk.metadata.get("profile_url") or primary_chunk.source_url or ""
     )
     display_name = result.staff_name or str(primary_chunk.metadata.get("name") or result.staff_slug)
-    citations = _chunks_to_citations(result.chunks)
+    citations = _chunks_to_citations(result.chunks, themes)
     keywords = _collect_chunk_keywords(result.chunks)
     semantic_score = max(0.0, min(1.0, float(result.score)))
     keyword_score = _keyword_overlap_score(result.chunks, themes)
@@ -473,15 +579,28 @@ def _retrieval_result_to_match_item(result, themes: Sequence[str]) -> MatchItem 
     )
 
 
-def _chunks_to_citations(chunks: Sequence[Chunk]) -> list[Citation]:
+def _resolve_citation_url(chunk: Chunk) -> str:
+    metadata = chunk.metadata or {}
+    cristin_id = metadata.get("cristin_result_id")
+    if isinstance(cristin_id, str) and cristin_id.strip():
+        return f"https://nva.sikt.no/registration/{cristin_id.strip()}"
+
+    url = chunk.source_url or str(metadata.get("profile_url") or "")
+    if url.startswith("https://api.cristin.no/v2/results/"):
+        cristin_id = url.rstrip("/").split("/")[-1]
+        if cristin_id:
+            return f"https://nva.sikt.no/registration/{cristin_id}"
+    return url
+
+
+def _chunks_to_citations(chunks: Sequence[Chunk], themes: Sequence[str]) -> list[Citation]:
     citations: list[Citation] = []
     for idx, chunk in enumerate(chunks, start=1):
-        snippet = chunk.text.strip()
+        snippet = _extract_citation_snippet(chunk.text, themes)
         if not snippet:
             continue
-        snippet = snippet[:CITATION_SNIPPET_LIMIT].rstrip()
         title = str(chunk.metadata.get("source_title") or chunk.metadata.get("name") or "Kilde")
-        url = chunk.source_url or str(chunk.metadata.get("profile_url") or "")
+        url = _resolve_citation_url(chunk)
         citations.append(
             Citation(
                 id=f"[{idx}]",
@@ -572,7 +691,7 @@ async def analyze_topic(request: Request) -> AnalyzeTopicResponse:
     combined_text = _validate_text_input(text_value, parsed_texts)
 
     themes = extract_themes(combined_text, top_k=8)
-    preview = combined_text[:600]
+    preview = _build_normalized_preview(combined_text)
 
     return AnalyzeTopicResponse(themes=themes, normalizedPreview=preview)
 

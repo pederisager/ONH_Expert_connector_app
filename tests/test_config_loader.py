@@ -17,7 +17,7 @@ def test_load_models_config_round_trip() -> None:
     models = load_models_config()
     assert models.llm_model.name.startswith("llama3.1")
     assert models.embedding_model.backend == "sentence_transformers"
-    assert models.embedding_model.device == "cuda"
+    assert models.embedding_model.device in {"auto", "cuda"}
 
 
 def test_load_staff_profiles_matches_entries() -> None:

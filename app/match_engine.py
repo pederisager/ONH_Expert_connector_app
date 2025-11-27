@@ -50,6 +50,53 @@ STOPWORDS = {
     "har",
     "kan",
     "skal",
+    "vi",
+    "oss",
+    "deg",
+    "dere",
+    "du",
+    "jeg",
+    "meg",
+    "dette",
+    "disse",
+    "vår",
+    "vårt",
+    "våre",
+    "deres",
+    "blir",
+    "trenger",
+    "behov",
+    "ønsker",
+    "må",
+    "måtte",
+    "vil",
+    "ville",
+    "bør",
+    "burde",
+    "kun",
+    "bare",
+    "hele",
+    "gjerne",
+    "please",
+    "need",
+    "needs",
+    "needed",
+    "help",
+    "support",
+    "would",
+    "could",
+    "should",
+    "must",
+    "want",
+    "wants",
+    "looking",
+    "seek",
+    "seeking",
+    "about",
+    "into",
+    "onto",
+    "over",
+    "under",
 }
 
 TOKEN_PATTERN = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ]+", re.UNICODE)
@@ -105,17 +152,76 @@ def tokenize(text: str) -> list[str]:
     return [token.lower() for token in TOKEN_PATTERN.findall(text)]
 
 
+def _is_meaningful_token(token: str) -> bool:
+    if not token or len(token) <= 2:
+        return False
+    if token in STOPWORDS:
+        return False
+    if token.isdigit() or any(char.isdigit() for char in token):
+        return False
+    return True
+
+
+def _split_into_phrases(tokens: Sequence[str]) -> list[tuple[list[str], int]]:
+    phrases: list[tuple[list[str], int]] = []
+    current: list[str] = []
+    start_idx = 0
+    for index, token in enumerate(tokens):
+        normalized = token.lower()
+        if not _is_meaningful_token(normalized):
+            if current:
+                phrases.append((current.copy(), start_idx))
+                current.clear()
+            continue
+        if not current:
+            start_idx = index
+        current.append(normalized)
+    if current:
+        phrases.append((current.copy(), start_idx))
+    return phrases
+
+
+def _score_phrase(words: Sequence[str], counts: Counter[str]) -> float:
+    if not words:
+        return 0.0
+    frequency = float(sum(counts.get(word, 0) for word in words))
+    if frequency == 0:
+        return 0.0
+    length_bonus = 1.0 + 0.3 * max(0, len(words) - 1)
+    diversity_bonus = 1.0 + 0.1 * max(0, len(set(words)) - 1)
+    return frequency * (length_bonus + diversity_bonus / 2)
+
+
 def extract_themes(text: str, top_k: int = 8) -> list[str]:
-    tokens = [token for token in tokenize(text) if token not in STOPWORDS and len(token) > 2]
-    counts = Counter(tokens)
-    ordered = [word for word, _ in counts.most_common(top_k * 2)]
-    unique: list[str] = []
-    for word in ordered:
-        if word not in unique:
-            unique.append(word)
-        if len(unique) >= top_k:
-            break
-    return unique
+    tokens = tokenize(text)
+    meaningful_tokens = [token for token in tokens if _is_meaningful_token(token)]
+    if not meaningful_tokens:
+        return []
+
+    counts = Counter(meaningful_tokens)
+    scored_phrases: list[tuple[float, int, str]] = []
+    seen: set[str] = set()
+    for words, start_idx in _split_into_phrases(tokens):
+        normalized_phrase = " ".join(words).strip()
+        if not normalized_phrase or normalized_phrase in seen:
+            continue
+        score = _score_phrase(words, counts)
+        if score <= 0:
+            continue
+        scored_phrases.append((score, start_idx, normalized_phrase))
+        seen.add(normalized_phrase)
+
+    scored_phrases.sort(key=lambda item: (-item[0], item[1]))
+    themes: list[str] = [phrase for _, _, phrase in scored_phrases[:top_k]]
+
+    if len(themes) < top_k:
+        for word, _ in counts.most_common(top_k * 2):
+            if word not in themes:
+                themes.append(word)
+            if len(themes) >= top_k:
+                break
+
+    return themes[:top_k]
 
 
 def _sentence_split(text: str) -> list[str]:
