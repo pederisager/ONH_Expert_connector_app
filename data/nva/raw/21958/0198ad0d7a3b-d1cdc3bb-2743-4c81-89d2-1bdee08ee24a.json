@@ -1,0 +1,259 @@
+{
+  "identifier": "0198ad0d7a3b-d1cdc3bb-2743-4c81-89d2-1bdee08ee24a",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68420047.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:16:16.393280382Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "15",
+        "pages": {
+          "end": "169",
+          "type": "Range",
+          "begin": "169"
+        },
+        "issue": "3",
+        "type": "JournalLeader"
+      },
+      "publicationContext": {
+        "identifier": "9861E199-046E-48B8-B885-115CD0C73241",
+        "year": "2016",
+        "name": "Journal of Military Ethics",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/9861E199-046E-48B8-B885-115CD0C73241/2016",
+        "type": "Journal",
+        "onlineIssn": "1502-7589",
+        "printIssn": "1502-7570",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=9861E199-046E-48B8-B885-115CD0C73241"
+      },
+      "doi": "https://doi.org/10.1080/15027570.2016.1257850"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Editors’ Introduction",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Henrik Syse",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Martin L. Cook",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68420047.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "U.S. Naval War College",
+              "en": "U.S. Naval War College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Henrik Syse",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Martin L. Cook",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68420047.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "U.S. Naval War College",
+              "en": "U.S. Naval War College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2016",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:26:38.395224706Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/9861E199-046E-48B8-B885-115CD0C73241/2016"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:26:38.395224706Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "1446885"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85007251518"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0d7a3b-d1cdc3bb-2743-4c81-89d2-1bdee08ee24a",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:26:38.395224706Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68420047.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "U.S. Naval War College",
+        "en": "U.S. Naval War College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nn": "PRIO - Institutt for fredsforsking",
+        "nb": "PRIO - Institutt for fredsforskning",
+        "en": "PRIO - Peace Research Institute Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

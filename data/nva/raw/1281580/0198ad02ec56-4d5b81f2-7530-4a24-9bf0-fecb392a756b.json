@@ -1,0 +1,498 @@
+{
+  "identifier": "0198ad02ec56-4d5b81f2-7530-4a24-9bf0-fecb392a756b",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:11:00.476114454Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "PopularScienceArticle"
+      },
+      "publicationContext": {
+        "identifier": "986AC4C4-1D86-4EB0-8102-8AB482C9E8CF",
+        "year": "2023",
+        "name": "Social Psychological Review",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/986AC4C4-1D86-4EB0-8102-8AB482C9E8CF/2023",
+        "type": "Journal",
+        "printIssn": "2396-9601",
+        "scientificValue": "Unassigned",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/nvakanal?pid=986AC4C4-1D86-4EB0-8102-8AB482C9E8CF"
+      },
+      "doi": "https://doi.org/10.53841/bpsspr.2023.25.1.9"
+    },
+    "contributorsCount": 10,
+    "mainTitle": "How can social psychologists become more participatory in\r\ntheir research? A reflection on working ‘with’ communities and\r\nparticipants rather than ‘on’ them",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Melis Uluğ Özden",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Marieke Zoodsma",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ella Marie Sandbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ella Marie Sandbakken",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ana Figueiredo",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Carolina Rocha",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Thia Sagherian-Dickey",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Yasemin Gulsum Acar",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Marie Moss",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/143",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+            "type": "Organization",
+            "labels": {
+              "nb": "Metode, arbeids-, kultur- og sosialpsyk",
+              "en": "Metode, arbeids-, kultur- og sosialpsyk"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Rim Saab",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Yue Ting Woo",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Melis Uluğ Özden",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Marieke Zoodsma",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ella Marie Sandbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ella Marie Sandbakken",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ana Figueiredo",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Carolina Rocha",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Thia Sagherian-Dickey",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Yasemin Gulsum Acar",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Marie Moss",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/143",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+            "type": "Organization",
+            "labels": {
+              "nb": "Metode, arbeids-, kultur- og sosialpsyk",
+              "en": "Metode, arbeids-, kultur- og sosialpsyk"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Rim Saab",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Yue Ting Woo",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:15:06.710115922Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/986AC4C4-1D86-4EB0-8102-8AB482C9E8CF/2023"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:15:06.710115922Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2165965"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad02ec56-4d5b81f2-7530-4a24-9bf0-fecb392a756b",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:15:06.710115922Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Metode, arbeids-, kultur- og sosialpsyk",
+                    "en": "Metode, arbeids-, kultur- og sosialpsyk"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykologisk institutt",
+                "en": "Department of Psychology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Marie Moss",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/143",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ella Marie Sandbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

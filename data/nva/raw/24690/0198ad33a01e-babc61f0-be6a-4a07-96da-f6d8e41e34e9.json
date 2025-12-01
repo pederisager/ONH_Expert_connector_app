@@ -1,0 +1,354 @@
+{
+  "identifier": "0198ad33a01e-babc61f0-be6a-4a07-96da-f6d8e41e34e9",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.7.20",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "http://www.routledge.com/books/details/9780415747325/",
+      "type": "AssociatedLink",
+      "relation": "mention"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:43:39.475232880Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "190",
+          "type": "Range",
+          "begin": "177"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9780415747325"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "FAE3940D-29AB-45F5-9190-6242B3BB7596",
+                "year": "2015",
+                "name": "Routledge",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/FAE3940D-29AB-45F5-9190-6242B3BB7596/2015",
+                "type": "Publisher",
+                "scientificValue": "LevelTwo",
+                "isbnPrefix": "978-90-5702,978-90-265,978-1-907322,978-1-906540,978-1-874719,978-1-870905,978-1-85996,978-1-85941,978-1-84872,978-1-84407,978-1-84392,978-1-84169,978-1-58391,978-1-4128,978-1-4106,978-1-032,978-0-9627232,978-0-906348,978-0-902879,978-0-901286,978-0-88163,978-0-8247,978-0-8240,978-0-8133,978-0-7890,978-0-7146,978-0-419,978-0-4158,978-0-415,978-0-3673,978-0-367,978-0-340,978-0-291",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=FAE3940D-29AB-45F5-9190-6242B3BB7596"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Emerging Economies and Challenges to Sustainability: Theories, strategies, local realities",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Arve Hansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/428863",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Ulrikke Bryn Wethal",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/309586",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad44cf1b-9919a0cb-22c3-4da7-bd90-100529973cdb",
+        "type": "Anthology"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Mining, Development and Environmental Sustainability in Peru",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jemima García-Godos",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22592",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.7.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.7.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt Sosiologi/samfunnsgeografi, Samfunnsgeografi"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jemima García-Godos",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22592",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.7.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.7.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt Sosiologi/samfunnsgeografi, Samfunnsgeografi"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2015",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1034"
+  },
+  "createdDate": "2025-08-15T10:08:18.462848009Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:10:05.244254871Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "1163959"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad33a01e-babc61f0-be6a-4a07-96da-f6d8e41e34e9",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:08:18.462848009Z",
+  "scientificIndex": {
+    "year": "2015",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "By- og regionforskningsinstituttet NIBR",
+                "en": "Norwegian Institute for Urban and Regional Research"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Senter for velferds- og arbeidslivsforskning",
+            "en": "Centre for Welfare and Labour Research"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.7.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.7.20",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Institutt Sosiologi/samfunnsgeografi, Samfunnsgeografi"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for sosiologi og samfunnsgeografi",
+                "en": "Sosiologi og samfunnsgeografi"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

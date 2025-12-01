@@ -1,0 +1,766 @@
+{
+  "identifier": "0198ad0e0af4-cd24e52d-bd3a-43c1-8ff5-572d05475da0",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.23.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uib@184.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:38:23.573969125Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "84",
+        "pages": {
+          "end": "77",
+          "type": "Range",
+          "begin": "61"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "00EEA4CF-9701-4BB8-9C8A-277299AC4417",
+        "year": "2013",
+        "name": "Journal of Proteomics",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/00EEA4CF-9701-4BB8-9C8A-277299AC4417/2013",
+        "type": "Journal",
+        "onlineIssn": "1876-7737",
+        "printIssn": "1874-3919",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=00EEA4CF-9701-4BB8-9C8A-277299AC4417"
+      },
+      "doi": "https://doi.org/10.1016/j.jprot.2013.03.027"
+    },
+    "contributorsCount": 9,
+    "mainTitle": "Proteomics identifies molecular networks affected by tetradecylthioacetic acid and fish oil supplemented diets",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Krzysztof  Wrzesinski",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ileana R. Léon",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Katarzyna Kulej",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Richard R. Sprenger",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Jostein Christensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.23.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kirurgisk klinikk",
+              "en": "Surgical Clinic"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 1",
+              "en": "Department of Clinical Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Nørregaard Jensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/26133",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Adelina Rogowska-Wrzesinska",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Krzysztof  Wrzesinski",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ileana R. Léon",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Katarzyna Kulej",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Richard R. Sprenger",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Jostein Christensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.23.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kirurgisk klinikk",
+              "en": "Surgical Clinic"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 1",
+              "en": "Department of Clinical Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Nørregaard Jensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/26133",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Adelina Rogowska-Wrzesinska",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2013",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:27:15.444304862Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/00EEA4CF-9701-4BB8-9C8A-277299AC4417/2013"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:27:15.444304862Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uib",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-84877141059"
+    },
+    {
+      "sourceName": "cristin@uib",
+      "type": "CristinIdentifier",
+      "value": "1110594"
+    },
+    {
+      "sourceName": "ISI",
+      "type": "AdditionalIdentifier",
+      "value": "000321229300005"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0e0af4-cd24e52d-bd3a-43c1-8ff5-572d05475da0",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:27:15.444304862Z",
+  "scientificIndex": {
+    "year": "2013",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Klinisk institutt 2",
+                "en": "Department of Clinical Science"
+              }
+            },
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Klinisk institutt 1",
+                "en": "Department of Clinical Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Jostein Christensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44314",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Syddansk Universitet",
+        "en": "University of Southern Denmark"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Hjerteavdelingen",
+            "en": "Dept. of Heart Disease"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.23.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Kirurgisk klinikk",
+            "en": "Surgical Clinic"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Jostein Christensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44314",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Helse Bergen HF - Haukeland universitetssykehus",
+        "en": "Bergen Hospital Trust - Haukeland University Hospital"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

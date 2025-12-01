@@ -1,0 +1,555 @@
+{
+  "identifier": "0198ad4162ad-c184b52e-dc8d-4f7e-8000-72242a8ff07f",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/68401845.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/11200039.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/61200051.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/80500023.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68401689.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/14100000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:41:19.383660517Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "153",
+        "pages": {
+          "end": "614",
+          "type": "Range",
+          "begin": "610"
+        },
+        "issue": "3",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "3474102D-8381-457B-B9BB-1E862DF207A8",
+        "year": "2023",
+        "name": "Journal of Nutrition",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/3474102D-8381-457B-B9BB-1E862DF207A8/2023",
+        "type": "Journal",
+        "onlineIssn": "1541-6100",
+        "printIssn": "0022-3166",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=3474102D-8381-457B-B9BB-1E862DF207A8"
+      },
+      "doi": "https://doi.org/10.1016/j.tjnut.2023.01.027"
+    },
+    "contributorsCount": 8,
+    "mainTitle": "Limitations of the Food Compass Nutrient Profiling System",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Flaminia Ortenzi",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sveits",
+              "en": "Switzerland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Kolby",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Kolby",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Mark Lawrence",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "AU",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/80500023.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Deakin University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Frédéric Leroy",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11200039.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Vrije Universiteit Brussel"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Stella Nordhagen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sveits",
+              "en": "Switzerland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Stuart M. Phillips",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CA",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/61200051.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "McMaster University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Stephan van Vliet",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401689.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Utah State University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ty Beal",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401845.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of California"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Flaminia Ortenzi",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sveits",
+              "en": "Switzerland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Kolby",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Kolby",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Mark Lawrence",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "AU",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/80500023.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Deakin University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Frédéric Leroy",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11200039.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Vrije Universiteit Brussel"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Stella Nordhagen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sveits",
+              "en": "Switzerland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Stuart M. Phillips",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CA",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/61200051.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "McMaster University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Stephan van Vliet",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401689.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Utah State University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ty Beal",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401845.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of California"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:23:20.237338368Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/3474102D-8381-457B-B9BB-1E862DF207A8/2023"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:23:20.237338368Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2150713"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85150344347"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad4162ad-c184b52e-dc8d-4f7e-8000-72242a8ff07f",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:23:20.237338368Z",
+  "scientificIndex": {
+    "year": "2023",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401689.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Utah State University"
+      }
+    },
+    {
+      "countryCode": "AU",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/80500023.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Deakin University"
+      }
+    },
+    {
+      "countryCode": "CH",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Sveits",
+        "en": "Switzerland"
+      }
+    },
+    {
+      "countryCode": "BE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/11200039.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Vrije Universiteit Brussel"
+      }
+    },
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401845.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of California"
+      }
+    },
+    {
+      "countryCode": "CA",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/61200051.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "McMaster University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Marit Kolby",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -16,13 +16,42 @@ See `ONH_Expert_Connector_Concept.txt` and `backend_analysis_process.md` for ful
 ## Getting started
 
 ```bash
-python -m venv .venv  # run only to (re)create .venv
+python3 -m venv .venv  # run only to (re)create .venv
 source .venv/bin/activate
 pip install -r requirements.txt  # only run once
 uvicorn app.main:app --reload
 ```
 
 The API serves the static UI from `app/static` at the root path.
+
+## NVA API keys and data refresh
+
+- Place your NVA API credentials in `nva_api_keys_test.json` or `nva_api_keys_prod.json` (these files are git-ignored). Structure:
+  ```json
+  {
+    "clientId": "<client id>",
+    "clientSecret": "<client secret>",
+    "tokenUrl": "<oauth token endpoint>"
+  }
+  ```
+- One-shot refresh after editing `staff.csv` (test example):
+  ```bash
+  bash scripts/update_staff.sh
+  ```
+  or point at prod:
+  ```bash
+  bash scripts/update_staff.sh nva_api_keys_prod.json https://api.nva.unit.no
+  ```
+- The script will: refresh `data/staff.yaml` + `data/staff_records.jsonl` from `staff.csv`, sync NVA publications to `data/nva/results.jsonl`, and rebuild the index under `data/index/`.
+  If the GPU build fails, it automatically retries on CPU.
+- Fetch publications from the NVA API manually (test example):
+  ```bash
+  python -m app.index.nva.sync --key-file nva_api_keys_test.json --base-url https://api.test.nva.aws.unit.no --output data/nva/results.jsonl
+  ```
+- Rebuild the local retrieval index after syncing data:
+  ```bash
+  python -m app.index.build --nva-results data/nva/results.jsonl
+  ```
 
 ## Daily run checklist
 

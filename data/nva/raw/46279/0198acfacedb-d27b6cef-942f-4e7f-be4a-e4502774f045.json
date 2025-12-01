@@ -1,0 +1,381 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/465586",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://link.springer.com/article/10.1007/s10869-024-09958-3#citeas",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    },
+    {
+      "identifier": "9bb7d397-86f7-4d5b-b29c-527bf3b6bc91",
+      "license": {
+        "name": "CC-BY",
+        "type": "License",
+        "value": "https://creativecommons.org/licenses/by/4.0",
+        "labels": {
+          "nb": "Creative Commons - Navngivelse",
+          "en": "Creative Commons - Attribution"
+        }
+      },
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIB",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-18T16:03:28.444421796Z"
+      },
+      "size": "860314",
+      "publisherVersion": "PublishedVersion",
+      "name": "s10869-024-09958-3.pdf",
+      "mimeType": "application/pdf",
+      "publishedDate": "2025-08-18T16:03:28.756121405Z",
+      "type": "OpenFile",
+      "legalNote": "Copyright 2024 the authors"
+    },
+    {
+      "identifier": "39ea3a17-223d-4397-911c-2dd228270a95",
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIB",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-18T16:03:28.444435039Z"
+      },
+      "size": "7481",
+      "name": "dublin_core.xml",
+      "mimeType": "application/xml",
+      "type": "HiddenFile"
+    }
+  ],
+  "fundings": [
+    {
+      "source": {
+        "identifier": "UIB",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/UIB",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Universitetet i Bergen",
+          "en": "University of Bergen"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "source": {
+        "identifier": "PHS",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/PHS",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Politihøgskolen",
+          "en": "Norwegian Police University College"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "40",
+        "pages": {
+          "type": "Range"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "46957614-F4AB-48A2-B625-FE63375A851E",
+        "year": "2024",
+        "name": "Journal of business and psychology",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/46957614-F4AB-48A2-B625-FE63375A851E/2024",
+        "type": "Journal",
+        "onlineIssn": "1573-353X",
+        "printIssn": "0889-3268",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=46957614-F4AB-48A2-B625-FE63375A851E"
+      },
+      "doi": "https://doi.org/10.1007/s10869-024-09958-3"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "To Add or to Multiply? Gender, Sexual Minority Status, and Sexual Harassment in the Norwegian Police Service",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Does being a sexual minority member heighten the risk of sexual harassment to the same extent for women and men? We compare two perspectives on the interaction between gender and sexual minority status in predicting exposure to sexual harassment: gender and sexual minority status as independent risk factors (additive effects) versus sexual minority status as a stronger risk factor for men (interactive effects). In a representative survey among N = 4386 employees from the Norwegian Police Service, we found support for the additive perspective. Women, OR = 2.46, 95% CI [2.12, 2.89], and sexual minorities, OR = 2.51, 95% CI [1.81, 3.48], had higher odds of being targeted by sexual harassment. We do not find that sexual minority status is a stronger risk factor for men than for women but that sexual minority status increases the odds of being targeted with sexual harassment for both women and men. The effect of the interaction between gender and sexual minority status (OR = 0.80, 95% CI [0.39, 1.63]) was too small to be significant in our sample. We discuss methodological challenges in studying low-frequency events such as sexual harassment from an intersectional perspective. The group most at risk for being sexually harassed at work in the NPS is sexual minority women. Norway is characterized by gender equality and legal protection of sexual minorities. This does not seem to cancel out the effects that violations of gender ideals have on the likelihood of being harassed.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hege Høivik Bye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hege Høivik Bye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/46957614-F4AB-48A2-B625-FE63375A851E/2024"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "brage@bora",
+      "type": "HandleIdentifier",
+      "value": "https://hdl.handle.net/11250/3192030"
+    },
+    {
+      "sourceName": "cristin@phs",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85194695664"
+    },
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "2273798"
+    }
+  ],
+  "filesStatus": "hasPublicFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acfacedb-d27b6cef-942f-4e7f-be4a-e4502774f045",
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for samfunnspsykologi",
+                "en": "Department of Psychosocial Science"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det psykologiske fakultet",
+            "en": "Faculty of Psychology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Hege Høivik Bye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47557",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    }
+  ],
+  "identifier": "0198acfacedb-d27b6cef-942f-4e7f-be4a-e4502774f045",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:55:27.934809896Z",
+  "createdDate": "2025-08-15T09:06:14.875759548Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-18T16:03:29.049002545Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:06:14.875759548Z",
+  "scientificIndex": {
+    "year": "2024",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

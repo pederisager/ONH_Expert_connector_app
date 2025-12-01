@@ -1,0 +1,481 @@
+{
+  "identifier": "0198ad0bf59f-c8b1a2dc-cfa7-4aa2-8326-7e5ffc8bca48",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "nofima@7543.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T19:42:06.378450196Z",
+  "fundings": [
+    {
+      "identifier": "10028",
+      "source": {
+        "identifier": "NOFIMA",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NOFIMA",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Nofima AS",
+          "en": "Nofima AS"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "Lecture"
+      },
+      "publicationContext": {
+        "name": "2nd Norwegian Food Market Research Conference",
+        "place": {
+          "countryCode": "NO",
+          "name": "Ås",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2015-11-04T00:00:00Z",
+          "to": "2015-11-05T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Traditional sushi for modern consumers; a comparison between sushi consumption behaviour in Japan and Norway",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Themistoklis Altintzoglou",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/55600",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Morten Heide",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/56014",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen ved UiT",
+              "en": "Tromsø University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Pirjo Honkanen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/57333",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Themistoklis Altintzoglou",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/55600",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Morten Heide",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/56014",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen ved UiT",
+              "en": "Tromsø University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Pirjo Honkanen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/57333",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2015",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:24:58.911512241Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:24:58.911512241Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@nofima",
+      "type": "CristinIdentifier",
+      "value": "1287746"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0bf59f-c8b1a2dc-cfa7-4aa2-8326-7e5ffc8bca48",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:24:58.911512241Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0"
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Handelshøgskolen ved UiT",
+                        "en": "Tromsø University Business School"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Fakultetsledelse BFE-fak"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Fakultet for biovitenskap, fiskeri og økonomi",
+                "en": "Faculty of Biosciences, Fisheries and Economics"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Universitetet i Tromsø - Norges arktiske universitet"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Tromsø - Norges arktiske universitet",
+        "en": "UiT The Arctic University of Norway"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Markedsforskning",
+                "en": "Marketing Research"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Divisjon Sjømat",
+            "en": "Division Seafood"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Pirjo Honkanen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/57333",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Themistoklis Altintzoglou",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/55600",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Morten Heide",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/56014",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "NOFIMA",
+        "en": "Nofima, Norwegian Institute of Food, Fisheries and Aquaculture Research"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

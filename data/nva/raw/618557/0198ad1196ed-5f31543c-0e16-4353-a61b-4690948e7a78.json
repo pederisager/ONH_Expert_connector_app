@@ -1,0 +1,397 @@
+{
+  "identifier": "0198ad1196ed-5f31543c-0e16-4353-a61b-4690948e7a78",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:13:53.431361158Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "493C41BC-207F-4EE8-95DE-DC290DF354EE",
+        "year": "2025",
+        "name": "Journal of Social Psychology",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/493C41BC-207F-4EE8-95DE-DC290DF354EE/2025",
+        "type": "Journal",
+        "onlineIssn": "1940-1183",
+        "printIssn": "0022-4545",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=493C41BC-207F-4EE8-95DE-DC290DF354EE"
+      },
+      "doi": "https://doi.org/10.1080/00224545.2025.2482014"
+    },
+    "contributorsCount": 4,
+    "mainTitle": "What is empathy for laypeople?–A replication study of Hall, Schwartz, and Duong (2021)",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johanna Katarina Blomster Lyshol",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/657246",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Rafael Valdece Sousa Bastos",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Peder Mortvedt Isager",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/618557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Peder Mortvedt Isager",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/618557",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Magnus Helgheim Blystad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/674004",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Magnus Helgheim Blystad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/674004",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Peder Mortvedt Isager",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/618557",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Magnus Helgheim Blystad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/674004",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johanna Katarina Blomster Lyshol",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/657246",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Rafael Valdece Sousa Bastos",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Peder Mortvedt Isager",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/618557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Peder Mortvedt Isager",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/618557",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Magnus Helgheim Blystad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/674004",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Magnus Helgheim Blystad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/674004",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Peder Mortvedt Isager",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/618557",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Magnus Helgheim Blystad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/674004",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2025",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:31:07.885825600Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/493C41BC-207F-4EE8-95DE-DC290DF354EE/2025"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:31:07.885825600Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-105002576245"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2372752"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad1196ed-5f31543c-0e16-4353-a61b-4690948e7a78",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:31:07.885825600Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Peder Mortvedt Isager",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/618557",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Magnus Helgheim Blystad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/674004",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykologisk institutt",
+                "en": "Department of Psychology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Peder Mortvedt Isager",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/618557",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,494 @@
+{
+  "identifier": "0198ad0aa370-d5cf2457-fb9e-43c3-98f9-19de0a089187",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.1.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:03:17.247193735Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "Senter for kjønnsforskning",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "NORA 2022",
+        "place": {
+          "countryCode": "NO",
+          "name": "Oslo",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2022-06-20T00:00:00Z",
+          "to": "2022-06-22T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "The need to belong: at work",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Tatanya Valland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15656",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tatanya Valland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15656",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Tatanya Valland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15656",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tanja Haraldsdottir Nordberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11189",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Arbeidsforskningsinstituttet AFI",
+              "en": "Work Research Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marie-Louise Damen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Tatanya Valland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15656",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Tatanya Valland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15656",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tatanya Valland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15656",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Tatanya Valland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15656",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tanja Haraldsdottir Nordberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11189",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Arbeidsforskningsinstituttet AFI",
+              "en": "Work Research Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marie-Louise Damen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Tatanya Valland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15656",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2022",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:23:32.336915913Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:23:32.336915913Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "2042438"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0aa370-d5cf2457-fb9e-43c3-98f9-19de0a089187",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:23:32.336915913Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.1.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Arbeidsforskningsinstituttet AFI",
+                "en": "Work Research Institute"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Senter for velferds- og arbeidslivsforskning",
+            "en": "Centre for Welfare and Labour Research"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tanja Haraldsdottir Nordberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11189",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Marie-Louise Damen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Tatanya Valland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15656",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,277 @@
+{
+  "identifier": "0198ad0c99f5-186d78a4-4adc-4a53-8209-c947ba338da7",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.11.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "umb@192.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:32:35.387234219Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "19",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "1",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "A5AD4047-122B-4BFE-9BBE-28125E66CC7C",
+        "year": "2024",
+        "name": "Proceedings of the European Conference on Innovation and Entrepreneurship, ECIE",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/A5AD4047-122B-4BFE-9BBE-28125E66CC7C/2024",
+        "type": "Journal",
+        "onlineIssn": "2049-1069",
+        "printIssn": "2049-1050",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=A5AD4047-122B-4BFE-9BBE-28125E66CC7C"
+      },
+      "doi": "https://doi.org/10.34190/ecie.19.1.2764"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Between control and complexity: RRI in the Norwegian Biotechnology Advisory Board",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Olga Mikhailova",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627238",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "School of Economics, Innovation, and Technology",
+              "en": "School of Economics, Innovation, and Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Olga Mikhailova",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627238",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "School of Economics, Innovation, and Technology",
+              "en": "School of Economics, Innovation, and Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:25:40.981465179Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/A5AD4047-122B-4BFE-9BBE-28125E66CC7C/2024"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:25:40.981465179Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@umb",
+      "type": "CristinIdentifier",
+      "value": "2367511"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0c99f5-186d78a4-4adc-4a53-8209-c947ba338da7",
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "Fjernet BI-tilhørighet på førsteforfatter. AH/BI 19.3.",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T09:25:40.981465179Z",
+  "scientificIndex": {
+    "year": "2024",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "School of Economics, Innovation, and Technology",
+            "en": "School of Economics, Innovation, and Technology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høyskolen Kristiania",
+        "en": "Kristiania University of Applied Sciences"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.11.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Handelshøgskolen"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Olga Mikhailova",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627238",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs miljø- og biovitskaplege universitet",
+        "nb": "Norges miljø- og biovitenskapelige universitet"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

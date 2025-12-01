@@ -1,0 +1,164 @@
+{
+  "identifier": "0198ad10a685-a90f6665-d2ba-4770-8be8-6f60797c406b",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:11:51.030148743Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "Lecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "Institutt for statsvitenskap (ISIR) ved Oslo Nye Høyskole",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "Politikk og pandemi",
+        "place": {
+          "countryCode": "NO",
+          "name": "Oslo, Norge",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2021-08-27T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "\"Innkalling til dugnad\" - Politisk kommunikasjon i koronakrisen",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ella Marie Sandbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ella Marie Sandbakken",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ella Marie Sandbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ella Marie Sandbakken",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2021",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:30:06.341959457Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:30:06.341959457Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "1981251"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad10a685-a90f6665-d2ba-4770-8be8-6f60797c406b",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:30:06.341959457Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ella Marie Sandbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,768 @@
+{
+  "identifier": "0198ad25490b-2448b39c-6869-4717-a664-81b5865e1747",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.6.6.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uis@217.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:28:43.241137097Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "36",
+        "pages": {
+          "type": "Range"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "5DB288CB-D8BF-45B5-9722-63764FD22115",
+        "year": "1999",
+        "name": "Journal of Medical Genetics",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/5DB288CB-D8BF-45B5-9722-63764FD22115/1999",
+        "type": "Journal",
+        "onlineIssn": "1468-6244",
+        "printIssn": "0022-2593",
+        "scientificValue": "Unassigned",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=5DB288CB-D8BF-45B5-9722-63764FD22115"
+      }
+    },
+    "contributorsCount": 6,
+    "mainTitle": "A new gene (DYX3) for dyslexia is located on chromosome 2",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Finn Egil Tønnessen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.6.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nasjonalt senter for leseopplæring og leseforsking",
+              "en": "National Centre for Reading Education and Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Toril Fagerheim",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisbeth Tranebjærg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Toril Fagerheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Finn Egil Tønnessen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Universitetet i Stavanger",
+              "en": "University of Stavanger"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Peter Raeymaekers",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisbeth Tranebjærg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Toril Fagerheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Finn Egil Tønnessen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Universitetet i Stavanger",
+              "en": "University of Stavanger"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisbeth Tranebjærg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Toril Fagerheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Finn Egil Tønnessen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Universitetet i Stavanger",
+              "en": "University of Stavanger"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lisbeth Tranebjærg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisbeth Tranebjærg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Toril Fagerheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Finn Egil Tønnessen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Universitetet i Stavanger",
+              "en": "University of Stavanger"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Herbert Lubs",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisbeth Tranebjærg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Toril Fagerheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Finn Egil Tønnessen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Universitetet i Stavanger",
+              "en": "University of Stavanger"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Finn Egil Tønnessen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.6.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nasjonalt senter for leseopplæring og leseforsking",
+              "en": "National Centre for Reading Education and Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Toril Fagerheim",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisbeth Tranebjærg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Toril Fagerheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Finn Egil Tønnessen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Universitetet i Stavanger",
+              "en": "University of Stavanger"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Peter Raeymaekers",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisbeth Tranebjærg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Toril Fagerheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Finn Egil Tønnessen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Universitetet i Stavanger",
+              "en": "University of Stavanger"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisbeth Tranebjærg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Toril Fagerheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Finn Egil Tønnessen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Universitetet i Stavanger",
+              "en": "University of Stavanger"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lisbeth Tranebjærg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisbeth Tranebjærg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Toril Fagerheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Finn Egil Tønnessen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Universitetet i Stavanger",
+              "en": "University of Stavanger"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Herbert Lubs",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisbeth Tranebjærg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Toril Fagerheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Finn Egil Tønnessen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Universitetet i Stavanger",
+              "en": "University of Stavanger"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "1999",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:52:38.667424085Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/5DB288CB-D8BF-45B5-9722-63764FD22115/1999"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:52:38.667424085Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "FORSKDOK",
+      "type": "AdditionalIdentifier",
+      "value": "r99015690"
+    },
+    {
+      "sourceName": "cristin@uis",
+      "type": "CristinIdentifier",
+      "value": "736764"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad25490b-2448b39c-6869-4717-a664-81b5865e1747",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:52:38.667424085Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.6.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Nasjonalt senter for leseopplæring og leseforsking",
+                "en": "National Centre for Reading Education and Research"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for utdanningsvitenskap og humaniora",
+            "en": "Faculty of Arts and Education"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Lisbeth Tranebjærg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/58349",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Marit Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Toril Fagerheim",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/58397",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Finn Egil Tønnessen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/332391",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Stavanger",
+        "en": "University of Stavanger"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

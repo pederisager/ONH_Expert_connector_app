@@ -1,0 +1,336 @@
+{
+  "identifier": "0198ad3145a9-d119931d-6c0b-4ed5-af83-71954866d575",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:16:59.917504442Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "62",
+          "type": "Range",
+          "begin": "42"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9780748696208"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "D0E5A5B5-D46D-4F6D-8263-8A83D07E831E",
+                "year": "2015",
+                "name": "Edinburgh University Press",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/D0E5A5B5-D46D-4F6D-8263-8A83D07E831E/2015",
+                "type": "Publisher",
+                "scientificValue": "LevelTwo",
+                "isbnPrefix": "978-0-7486",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=D0E5A5B5-D46D-4F6D-8263-8A83D07E831E"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Northern Neighbours. Scotland and Norway since 1800",
+          "contributors": [
+            {
+              "identity": {
+                "name": "John Marshall Bryden",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/391291",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Ottar Brox",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/57365",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Lesley Riddoch",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/406715",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad3d4cfa-73b8435f-2a49-4fab-909d-a70003101ea0",
+        "type": "Anthology"
+      },
+      "doi": "https://doi.org/10.3366/edinburgh/9780748696208.003.0003"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Cousins divided? Development in and of political institutions in Scotland and Norway since 1814",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øivind Bratberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17738",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for Statsvitenskap",
+              "en": "Institutt for Statsvitenskap"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øivind Bratberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17738",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for Statsvitenskap",
+              "en": "Institutt for Statsvitenskap"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2015",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1168"
+  },
+  "createdDate": "2025-08-15T10:05:44.233230358Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:09:47.909676343Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "1239503"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad3145a9-d119931d-6c0b-4ed5-af83-71954866d575",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:05:44.233230358Z",
+  "scientificIndex": {
+    "year": "2015",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for Statsvitenskap",
+                "en": "Institutt for Statsvitenskap"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Norsk senter for menneskerettigheter",
+                "en": "Norwegian Centre for Human Rights"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det juridiske fakultet",
+            "en": "Faculty of Law"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Øivind Bratberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17738",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

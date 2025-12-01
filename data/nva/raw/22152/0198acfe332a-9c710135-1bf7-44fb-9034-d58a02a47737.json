@@ -1,0 +1,325 @@
+{
+  "identifier": "0198acfe332a-9c710135-1bf7-44fb-9034-d58a02a47737",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:19:51.113019922Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "44",
+          "type": "Range",
+          "begin": "26"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9781842771761"
+              ],
+              "additionalIdentifiers": [
+                {
+                  "sourceName": "ISBN",
+                  "type": "AdditionalIdentifier",
+                  "value": "1842771760"
+                }
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "5D1D56A2-27C4-4D65-B8F5-81315B62C1FD",
+                "year": "2002",
+                "name": "Zed Books",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/5D1D56A2-27C4-4D65-B8F5-81315B62C1FD/2002",
+                "discontinued": "2021",
+                "type": "Publisher",
+                "scientificValue": "Unassigned",
+                "isbnPrefix": "978-1-84277,978-1-78032",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=5D1D56A2-27C4-4D65-B8F5-81315B62C1FD"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Ethiopia Since the Derg",
+          "contributors": [
+            {
+              "identity": {
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22152"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Lovise Aalen",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Siegfried Pausewang",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad22e6b5-88940a41-643c-4cba-8d80-1b3fae61472f",
+        "type": "Anthology"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "A Process of Democratisation of Control? The Historical and Political Context",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Lovise Aalen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Siegfried Pausewang",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Lovise Aalen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Siegfried Pausewang",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2002",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:09:57.162545093Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:02:29.984695063Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "72517"
+    },
+    {
+      "sourceName": "FORSKDOK",
+      "type": "AdditionalIdentifier",
+      "value": "73947"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acfe332a-9c710135-1bf7-44fb-9034-d58a02a47737",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:09:57.162545093Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Norsk senter for menneskerettigheter",
+                "en": "Norwegian Centre for Human Rights"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det juridiske fakultet",
+            "en": "Faculty of Law"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

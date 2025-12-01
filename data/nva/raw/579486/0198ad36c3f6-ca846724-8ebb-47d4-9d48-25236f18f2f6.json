@@ -1,0 +1,368 @@
+{
+  "identifier": "0198ad36c3f6-ca846724-8ebb-47d4-9d48-25236f18f2f6",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fni@7430.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.kas.de/documents/272774/272823/Looking+North.pdf/b26c2789-c097-16b9-ffc3-8e51be096123?version=1.0&t=1630920796762",
+      "type": "AssociatedLink",
+      "relation": "dataset"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:00:38.269963310Z",
+  "fundings": [
+    {
+      "identifier": "485",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "518",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "302176",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/302176",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "156",
+          "type": "MonographPages"
+        },
+        "type": "ReportResearch"
+      },
+      "publicationContext": {
+        "publisher": {
+          "valid": "true",
+          "name": "Konrad Adenauer Stiftung",
+          "type": "UnconfirmedPublisher"
+        },
+        "type": "Report"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Looking North: The European Union and Arctic Security from a Nordic and German Perspective",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "As the world has gained interest in the climatic, economic and political\r\ndevelopments in the Arctic over the last decade, the role of Nordic\r\ncountries in regional and European security affairs has also been on the\r\nlimelight. Some have taken the opportunity to argue that this should lead\r\nNordic countries1—Denmark, Finland, Iceland, Norway and Sweden—to\r\ncloser cooperation, even integration. The increased tension with the\r\nRussian Federation from 2014 onwards has only made this argument\r\nmore apparent, as the Nordics attempt to safeguard their multi-track\r\napproach to Russia, including both dialogue and deterrence at the same\r\ntime.\r\nSeen from afar, Nordic countries tend to look rather similar—\r\nsmall, highly developed democracies with a strong welfare state, market\r\nliberalism, a shared and overlapping history and, apart from Finland, a\r\ncommon language family. However, when we look more closely at these\r\ncountries, their security concerns and their approaches to the Arctic,\r\ndifferences stand out.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Raspotnik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen",
+              "en": "Nord University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Raspotnik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Raspotnik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Raspotnik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen",
+              "en": "Nord University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Raspotnik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Raspotnik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2021",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1032"
+  },
+  "createdDate": "2025-08-15T10:11:44.246540154Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:11:44.246540154Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fni",
+      "type": "CristinIdentifier",
+      "value": "1932791"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad36c3f6-ca846724-8ebb-47d4-9d48-25236f18f2f6",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:11:44.246540154Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Handelshøgskolen",
+            "en": "Nord University Business School"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Nord universitet",
+        "en": "Nord University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Raspotnik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Fridtjof Nansens institutt",
+        "en": "Fridtjof Nansen Institute"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

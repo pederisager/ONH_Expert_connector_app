@@ -1,0 +1,800 @@
+{
+  "identifier": "0198ad433cf6-57f5424d-0a39-450c-a4a7-7f0cf8b5bc69",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fhi@7502.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:47:18.805033363Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "269",
+          "type": "MonographPages"
+        },
+        "type": "ReportResearch"
+      },
+      "publicationContext": {
+        "publisher": {
+          "valid": "true",
+          "name": "Folkehelseinstitutet",
+          "type": "UnconfirmedPublisher"
+        },
+        "type": "Report"
+      }
+    },
+    "contributorsCount": 7,
+    "mainTitle": "Folkehelserapporten 2014: Psykisk helse blant barn og unge.",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Jens Christoffer Skogen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Reneflot",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ingri Myklestad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/14622",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ellinor F. Major",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/9656",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Folkehelseinstituttet",
+              "en": "Norwegian Institute of Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Kjeldsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for barns helse og utvikling",
+              "en": "Child Health and Development"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ann Kristin Knudsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44956",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ingri Myklestad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14622",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for psykisk helse",
+              "en": "Department of Mental Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ragnar Nesvåg",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Reneflot",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ingri Myklestad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/14622",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ellinor F. Major",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/9656",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Folkehelseinstituttet",
+              "en": "Norwegian Institute of Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Reneflot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Reneflot",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ingri Myklestad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/14622",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ellinor F. Major",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/9656",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Folkehelseinstituttet",
+              "en": "Norwegian Institute of Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ellinor F. Major",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/9656",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Folkehelse og forebygging",
+              "en": "Public Health and Prevention"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Jens Christoffer Skogen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Reneflot",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ingri Myklestad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/14622",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ellinor F. Major",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/9656",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Folkehelseinstituttet",
+              "en": "Norwegian Institute of Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Kjeldsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for barns helse og utvikling",
+              "en": "Child Health and Development"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ann Kristin Knudsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44956",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ingri Myklestad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14622",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for psykisk helse",
+              "en": "Department of Mental Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ragnar Nesvåg",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Reneflot",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ingri Myklestad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/14622",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ellinor F. Major",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/9656",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Folkehelseinstituttet",
+              "en": "Norwegian Institute of Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Reneflot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Reneflot",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ingri Myklestad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/14622",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ellinor F. Major",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/9656",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Folkehelseinstituttet",
+              "en": "Norwegian Institute of Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ellinor F. Major",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/9656",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Folkehelse og forebygging",
+              "en": "Public Health and Prevention"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2014",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1085"
+  },
+  "createdDate": "2025-08-15T10:25:21.654932629Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:25:21.654932629Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fhi",
+      "type": "CristinIdentifier",
+      "value": "1726027"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad433cf6-57f5424d-0a39-450c-a4a7-7f0cf8b5bc69",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:25:21.654932629Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for samfunnspsykologi",
+                "en": "Department of Psychosocial Science"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det psykologiske fakultet",
+            "en": "Faculty of Psychology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ann Kristin Knudsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44956",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Avdeling for psykisk helse",
+                "en": "Department of Mental Health"
+              }
+            },
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Avdeling for barns helse og utvikling",
+                "en": "Child Health and Development"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Folkehelse og forebygging",
+            "en": "Public Health and Prevention"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anne Reneflot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Anne Kjeldsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ingri Myklestad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14622",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ellinor F. Major",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/9656",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Folkehelseinstituttet",
+        "en": "Norwegian Institute of Public Health"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

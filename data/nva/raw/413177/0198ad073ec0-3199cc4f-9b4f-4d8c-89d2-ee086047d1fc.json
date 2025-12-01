@@ -1,0 +1,266 @@
+{
+  "identifier": "0198ad073ec0-3199cc4f-9b4f-4d8c-89d2-ee086047d1fc",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/5932.5.1.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/5932.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/5932.5.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:15:23.214808288Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/5932.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "MediaFeatureArticle"
+      },
+      "publicationContext": {
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/9D7972B0-9B0D-4AF3-B5AB-6E9E334A5EC8/2022",
+        "type": "MediaContributionPeriodical"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Ytringsfrihet eller (selv)sensur – vi lever alle under pisken!",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Johan Bergh",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Roger Hammersland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/575095",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.5.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.5.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forskningsavdelingen, Makroøkonomi",
+              "en": "Department, Macroeconomics"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Johan Bergh",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Roger Hammersland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/575095",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.5.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.5.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forskningsavdelingen, Makroøkonomi",
+              "en": "Department, Macroeconomics"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "5",
+      "year": "2022",
+      "type": "PublicationDate",
+      "day": "10"
+    }
+  },
+  "createdDate": "2025-08-15T09:19:49.952245210Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:19:49.952245210Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2023066"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad073ec0-3199cc4f-9b4f-4d8c-89d2-ee086047d1fc",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:19:49.952245210Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.5.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.5.1.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Forskningsavdelingen, Makroøkonomi",
+                "en": "Department, Macroeconomics"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.5.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Forskningsavdelingen",
+            "en": "Research Department"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Roger Hammersland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/575095",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Statistisk sentralbyrå",
+        "en": "Statistics Norway"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

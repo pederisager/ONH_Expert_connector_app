@@ -1,0 +1,316 @@
+{
+  "identifier": "0198ad06ecca-f30b2bb5-9faf-4425-a771-805e332f22d5",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/14100048.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bi@158.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:46:02.850329890Z",
+  "fundings": [
+    {
+      "identifier": "247725",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/247725",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "European Public Relations Education and Research Association",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "19th Annual EUPRERA Congress",
+        "place": {
+          "countryCode": "GB",
+          "name": "London",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2017-10-12T00:00:00Z",
+          "to": "2017-10-14T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Inclusiveness and Moderation in Social Media Dialogues",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kateryna Maltseva",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Fleck Matthes",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100048.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hochschule Luzern",
+              "en": "Lucerne University of Applied Sciences and Arts"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christian Fieseler",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/583524",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kateryna Maltseva",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Fleck Matthes",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100048.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hochschule Luzern",
+              "en": "Lucerne University of Applied Sciences and Arts"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christian Fieseler",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/583524",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2017",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:19:28.970485310Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:19:28.970485310Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bi",
+      "type": "CristinIdentifier",
+      "value": "1505141"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad06ecca-f30b2bb5-9faf-4425-a771-805e332f22d5",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:19:28.970485310Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for kommunikasjon og kultur",
+            "en": "Department of Communication and Culture"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Christian Fieseler",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/583524",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Kateryna Maltseva",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Handelshøyskolen BI",
+        "en": "BI Norwegian Business School"
+      }
+    },
+    {
+      "countryCode": "CH",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100048.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Hochschule Luzern",
+        "en": "Lucerne University of Applied Sciences and Arts"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

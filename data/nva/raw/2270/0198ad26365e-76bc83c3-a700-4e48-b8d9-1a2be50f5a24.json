@@ -1,0 +1,178 @@
+{
+  "identifier": "0198ad26365e-76bc83c3-a700-4e48-b8d9-1a2be50f5a24",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uis@217.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:33:10.018503363Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "name": "Open and Disctance learning (ODL)",
+        "place": {
+          "type": "UnconfirmedPlace"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Traditional teaching methods and the method open and distance learning in teacher training",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fakultet for utdanningsvitenskap og humaniora",
+              "en": "Faculty of Arts and Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fakultet for utdanningsvitenskap og humaniora",
+              "en": "Faculty of Arts and Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "1999",
+      "type": "PublicationDate"
+    },
+    "tags": [
+      "Læring",
+      "Methods",
+      "Learning",
+      "Teaching",
+      "Metoder",
+      "Undervisning / pedagogikk"
+    ]
+  },
+  "createdDate": "2025-08-15T09:53:39.422273803Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:53:39.422273803Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uis",
+      "type": "CristinIdentifier",
+      "value": "736180"
+    },
+    {
+      "sourceName": "FORSKDOK",
+      "type": "AdditionalIdentifier",
+      "value": "r98027841"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad26365e-76bc83c3-a700-4e48-b8d9-1a2be50f5a24",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:53:39.422273803Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.6.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for utdanningsvitenskap og humaniora",
+            "en": "Faculty of Arts and Education"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Marit Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Stavanger",
+        "en": "University of Stavanger"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

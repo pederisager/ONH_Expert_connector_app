@@ -1,0 +1,299 @@
+{
+  "identifier": "0198ad21c8c4-9dc944c4-22c3-41dd-9922-99f25408c2d4",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.8.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fhs@1627.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:01:40.656048097Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "338",
+          "type": "Range",
+          "begin": "319"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9788202535025"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "665CFA70-B6E5-408F-B969-47844CA13B26",
+                "year": "2018",
+                "name": "Cappelen Damm Akademisk",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/665CFA70-B6E5-408F-B969-47844CA13B26/2018",
+                "type": "Publisher",
+                "scientificValue": "LevelOne",
+                "isbnPrefix": "978-82-456,978-82-02",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=665CFA70-B6E5-408F-B969-47844CA13B26"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Interaction: ‘Samhandling’\r\nUnder Risk: A Step Ahead of the Unforeseen",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Glenn-Egil Torgersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/36014",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad1119cc-a7fa3e65-ca1f-44bd-8006-ba8ffaf6ffc3",
+        "type": "Anthology"
+      },
+      "doi": "https://doi.org/10.23865/noasp.36.ch17"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Samhandling and Trust in Military Leadership Structures",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.8.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Johan Bergh",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ole Boe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Boe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.8.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Stabsskolen",
+              "en": "Norwegian Defence Command and Staff College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.8.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Johan Bergh",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ole Boe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Boe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.8.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Stabsskolen",
+              "en": "Norwegian Defence Command and Staff College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2018",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1027"
+  },
+  "createdDate": "2025-08-15T09:48:49.220940262Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:07:49.057358601Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fhs",
+      "type": "CristinIdentifier",
+      "value": "1618928"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad21c8c4-9dc944c4-22c3-41dd-9922-99f25408c2d4",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:48:49.220940262Z",
+  "scientificIndex": {
+    "year": "2018",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.8.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Stabsskolen",
+            "en": "Norwegian Defence Command and Staff College"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ole Boe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Forsvarets høgskole",
+        "en": "Norwegian Defence University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

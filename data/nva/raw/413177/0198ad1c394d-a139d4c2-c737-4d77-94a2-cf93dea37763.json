@@ -1,0 +1,532 @@
+{
+  "identifier": "0198ad1c394d-a139d4c2-c737-4d77-94a2-cf93dea37763",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.59.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.58.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.58.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hive@222.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.aftenposten.no/meninger/debatt/i/eJkJ0R/ja-det-naavaerende-forsvaret-er-en-eksistensiell-trussel-mot-norge",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:47:00.969391635Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "MediaFeatureArticle"
+      },
+      "publicationContext": {
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/3FDBC393-0218-442C-8AAA-AD7CC33C91C6/2023",
+        "type": "MediaContributionPeriodical"
+      }
+    },
+    "contributorsCount": 5,
+    "mainTitle": "Ja, det nåværende Forsvaret er en eksistensiell trussel mot Norge",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Herner Sæverot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/9674",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk, religion og samfunnsfag",
+              "en": "Department of Pedagogy, Religion and Social Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Leif Inge Magnussen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/351049",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.58.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.58.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for maritime operasjoner",
+              "en": "Department of Maritime operations"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Johan Bergh",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Boe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ole Boe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Glenn-Egil Torgersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/36014",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Educational Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Herner Sæverot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/9674",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk, religion og samfunnsfag",
+              "en": "Department of Pedagogy, Religion and Social Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Leif Inge Magnussen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/351049",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.58.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.58.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for maritime operasjoner",
+              "en": "Department of Maritime operations"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Johan Bergh",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Boe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ole Boe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Glenn-Egil Torgersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/36014",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Educational Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "3",
+      "year": "2023",
+      "type": "PublicationDate",
+      "day": "10"
+    }
+  },
+  "createdDate": "2025-08-15T09:42:44.813201592Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:42:44.813201592Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hive",
+      "type": "CristinIdentifier",
+      "value": "2133447"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad1c394d-a139d4c2-c737-4d77-94a2-cf93dea37763",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:42:44.813201592Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ole Boe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.58.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.58.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for maritime operasjoner",
+                "en": "Department of Maritime operations"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.58.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for teknologi, naturvitenskap og maritime fag",
+            "en": "Faculty of Technology, Natural Sciences and Maritime Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Leif Inge Magnussen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/351049",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Universitetet i Søraust-Noreg",
+        "nb": "Universitetet i Sørøst-Norge",
+        "en": "University of South-Eastern Norway"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.7.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Institutt for pedagogikk",
+        "en": "Department of Educational Science"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for pedagogikk, religion og samfunnsfag",
+                "en": "Department of Pedagogy, Religion and Social Studies"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for lærarutdanning, kultur og idrett",
+            "en": "Faculty of Education, Arts and Sports"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Herner Sæverot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/9674",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høgskulen på Vestlandet",
+        "en": "Western Norway University of Applied Sciences"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

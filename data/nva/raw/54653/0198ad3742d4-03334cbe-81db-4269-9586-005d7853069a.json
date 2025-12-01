@@ -1,0 +1,453 @@
+{
+  "identifier": "0198ad3742d4-03334cbe-81db-4269-9586-005d7853069a",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.20"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "nofima@7543.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0"
+  },
+  "handle": "https://hdl.handle.net/11250/2711257",
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:21:33.806168057Z",
+  "fundings": [
+    {
+      "identifier": "194050",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/194050",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "11194",
+      "source": {
+        "identifier": "NOFIMA",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NOFIMA",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Nofima AS",
+          "en": "Nofima AS"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "E3D664B0-555D-47B3-80B3-7812CB6E3EEC",
+        "year": "2020",
+        "name": "British Food Journal",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/E3D664B0-555D-47B3-80B3-7812CB6E3EEC/2020",
+        "type": "Journal",
+        "onlineIssn": "1758-4108",
+        "printIssn": "0007-070X",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=E3D664B0-555D-47B3-80B3-7812CB6E3EEC"
+      },
+      "doi": "https://doi.org/10.1108/BFJ-11-2019-0835"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "The role of identity and gender in seafood cooking skills",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen ved UiT i Tromsø"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siril Alm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/392019",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Themistoklis Altintzoglou",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/55600",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen ved UiT i Tromsø"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siril Alm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/392019",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Themistoklis Altintzoglou",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/55600",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2020",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:12:16.724918244Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/E3D664B0-555D-47B3-80B3-7812CB6E3EEC/2020"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:12:16.724918244Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@nofima",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85095954389"
+    },
+    {
+      "sourceName": "cristin@nofima",
+      "type": "CristinIdentifier",
+      "value": "1849133"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad3742d4-03334cbe-81db-4269-9586-005d7853069a",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:12:16.724918244Z",
+  "scientificIndex": {
+    "year": "2020",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0"
+                        }
+                      ],
+                      "hasPart": [
+                        {
+                          "partOf": [
+                            {
+                              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0"
+                            }
+                          ],
+                          "countryCode": "NO",
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.20",
+                          "type": "Organization",
+                          "labels": {
+                            "nb": "Handelshøgskolen ved UiT i Tromsø"
+                          }
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Handelshøgskolen ved UiT",
+                        "en": "Tromsø University Business School"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Fakultetsledelse BFE-fak"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Fakultet for biovitenskap, fiskeri og økonomi",
+                "en": "Faculty of Biosciences, Fisheries and Economics"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Universitetet i Tromsø - Norges arktiske universitet"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Tromsø - Norges arktiske universitet",
+        "en": "UiT The Arctic University of Norway"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Markedsforskning",
+                "en": "Marketing Research"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Divisjon Sjømat",
+            "en": "Division Seafood"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Themistoklis Altintzoglou",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/55600",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Siril Alm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/392019",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "NOFIMA",
+        "en": "Nofima, Norwegian Institute of Food, Fisheries and Aquaculture Research"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

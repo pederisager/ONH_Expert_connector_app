@@ -1,0 +1,239 @@
+{
+  "identifier": "0198ad206857-8c27fb04-7f89-45b5-90cf-bce69b48e090",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fni@7430.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://doi.org/10.1093/acrefore/9780190846626.013.731",
+      "type": "AssociatedLink",
+      "relation": "dataset"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:19:04.583395881Z",
+  "fundings": [
+    {
+      "identifier": "562",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "343154",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/343154",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "547",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9780190846626"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "239F1C9D-8585-4961-B96A-05B4CEBCAF6B",
+                "year": "2024",
+                "name": "Oxford University Press",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/239F1C9D-8585-4961-B96A-05B4CEBCAF6B/2024",
+                "type": "Publisher",
+                "scientificValue": "LevelTwo",
+                "isbnPrefix": "978-0-19",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=239F1C9D-8585-4961-B96A-05B4CEBCAF6B"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Oxford Research Encyclopedia of International Studies",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Nukhet Sandal",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad18e6bc-a38c3735-248a-43e8-b5ae-64e561e11626",
+        "type": "Anthology"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "The Arctic in International Relations",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1032"
+  },
+  "createdDate": "2025-08-15T09:47:18.999574397Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:07:38.111474023Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fni",
+      "type": "CristinIdentifier",
+      "value": "2263328"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad206857-8c27fb04-7f89-45b5-90cf-bce69b48e090",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:47:18.999574397Z",
+  "scientificIndex": {
+    "year": "2024",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Fridtjof Nansens institutt",
+        "en": "Fridtjof Nansen Institute"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

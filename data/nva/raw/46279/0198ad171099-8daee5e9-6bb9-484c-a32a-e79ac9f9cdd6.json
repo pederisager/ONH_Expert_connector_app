@@ -1,0 +1,556 @@
+{
+  "identifier": "0198ad171099-8daee5e9-6bb9-484c-a32a-e79ac9f9cdd6",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.fagbokforlaget.no/Betydningen-av-%C3%A5-m%C3%B8tes/I9788245037999?utm_campaign=9788245037999&utm_medium=email&utm_source=Nyhetsbrev",
+      "type": "AssociatedLink",
+      "relation": "mention"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:27:57.813992703Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "189",
+          "type": "MonographPages"
+        },
+        "type": "BookAnthology"
+      },
+      "publicationContext": {
+        "isbnList": [
+          "9788245037999"
+        ],
+        "publisher": {
+          "valid": "true",
+          "identifier": "D0CC505A-1A53-4AA1-B6C9-D886FE2E6351",
+          "year": "2022",
+          "name": "Fagbokforlaget",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/D0CC505A-1A53-4AA1-B6C9-D886FE2E6351/2022",
+          "type": "Publisher",
+          "scientificValue": "LevelOne",
+          "isbnPrefix": "978-82-450",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=D0CC505A-1A53-4AA1-B6C9-D886FE2E6351"
+        },
+        "type": "Book",
+        "revision": "Unrevised"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Betydningen av å møtes: Relasjoner som grunnlag for læring og undervisning",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Aslaug Grov Almås",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47084",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk, religion og samfunnsfag",
+              "en": "Department of Pedagogy, Religion and Social Studies"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dag Roness",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46614",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Ulvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49440",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Aslaug Grov Almås",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47084",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk, religion og samfunnsfag",
+              "en": "Department of Pedagogy, Religion and Social Studies"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dag Roness",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46614",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Ulvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49440",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2022",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1027"
+  },
+  "createdDate": "2025-08-15T09:37:06.713721667Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/D0CC505A-1A53-4AA1-B6C9-D886FE2E6351/2022"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:37:06.713721667Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "2024329"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad171099-8daee5e9-6bb9-484c-a32a-e79ac9f9cdd6",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:37:06.713721667Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for pedagogikk, religion og samfunnsfag",
+                "en": "Department of Pedagogy, Religion and Social Studies"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for lærarutdanning, kultur og idrett",
+            "en": "Faculty of Education, Arts and Sports"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Aslaug Grov Almås",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47084",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høgskulen på Vestlandet",
+        "en": "Western Norway University of Applied Sciences"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for pedagogikk",
+                "en": "Department of Education"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det psykologiske fakultet",
+            "en": "Faculty of Psychology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Aslaug Grov Almås",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47084",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Marit Ulvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49440",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Dag Roness",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46614",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

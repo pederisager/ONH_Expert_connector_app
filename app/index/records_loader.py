@@ -10,28 +10,28 @@ from urllib.parse import urlparse
 
 from app.config_loader import StaffEntry, load_staff_entries
 
-from .models import CristinResultSnippet, SourceLink, StaffRecord
+from .models import NvaPublicationSnippet, SourceLink, StaffRecord
 
 
 LOGGER = logging.getLogger(__name__)
-DEFAULT_CRISTIN_RESULTS_PATH = Path("data/cristin/results.jsonl")
-MAX_CRISTIN_RESULTS = 5
+DEFAULT_NVA_RESULTS_PATH = Path("data/nva/results.jsonl")
+MAX_NVA_RESULTS = 5
 
 
 def load_curated_records(
     *,
     staff_yaml_path: Path | None = None,
     records_jsonl_path: Path | None = None,
-    cristin_results_path: Path | None = None,
-    max_cristin_results: int = MAX_CRISTIN_RESULTS,
+    nva_results_path: Path | None = None,
+    max_nva_results: int = MAX_NVA_RESULTS,
 ) -> list[StaffRecord]:
     """Merge staff metadata (YAML) with narrative summaries (JSONL)."""
 
     staff_entries = load_staff_entries(staff_yaml_path)
     summaries_by_slug = _load_records_jsonl(records_jsonl_path)
-    cristin_by_employee = _load_cristin_results(
-        cristin_results_path,
-        max_results=max(1, max_cristin_results),
+    nva_by_employee = _load_nva_results(
+        nva_results_path,
+        max_results=max(1, max_nva_results),
     )
 
     missing_slugs: list[str] = []
@@ -53,10 +53,10 @@ def load_curated_records(
         json_sources = raw_summary.get("sources") or []
         merged_sources = _dedupe_preserve_order([*entry.sources, *json_sources])
 
-        cristin_results: list[CristinResultSnippet] = []
+        nva_publications: list[NvaPublicationSnippet] = []
         nva_id = _extract_nva_person_id(entry)
         if nva_id:
-            cristin_results = list(cristin_by_employee.get(nva_id, []))
+            nva_publications = list(nva_by_employee.get(nva_id, []))
 
         record = StaffRecord(
             slug=slug,
@@ -67,7 +67,7 @@ def load_curated_records(
             summary=summary_text,
             sources=[SourceLink(url=url) for url in merged_sources],
             tags=list(entry.tags),
-            cristin_results=cristin_results,
+            nva_publications=nva_publications,
         )
         records.append(record)
 
@@ -110,17 +110,17 @@ def _load_records_jsonl(path: Path | None) -> dict[str, dict[str, object]]:
     return summaries
 
 
-def _load_cristin_results(
+def _load_nva_results(
     path: Path | None,
     *,
     max_results: int,
-) -> dict[str, list[CristinResultSnippet]]:
-    target = path or DEFAULT_CRISTIN_RESULTS_PATH
+) -> dict[str, list[NvaPublicationSnippet]]:
+    target = path or DEFAULT_NVA_RESULTS_PATH
     if not target.exists():
-        LOGGER.info("Fant ikke Cristin-data på %s. Hopper over forskningsresultater i RAG.", target)
+        LOGGER.info("Fant ikke NVA-data på %s. Hopper over forskningsresultater i RAG.", target)
         return {}
 
-    grouped: dict[str, list[CristinResultSnippet]] = {}
+    grouped: dict[str, list[NvaPublicationSnippet]] = {}
     with target.open("r", encoding="utf-8") as handle:
         for line in handle:
             text = line.strip()
@@ -128,18 +128,21 @@ def _load_cristin_results(
                 continue
             payload = json.loads(text)
             employee_id = _coerce_str(payload.get("employee_id"))
-            result_id = _coerce_str(payload.get("cristin_result_id"))
+            result_id = _coerce_str(
+                payload.get("nva_publication_id")
+                or payload.get("publication_id")
+            )
             if not employee_id or not result_id:
                 continue
-            snippet = CristinResultSnippet(
-                cristin_result_id=result_id,
+            snippet = NvaPublicationSnippet(
+                publication_id=result_id,
                 title=_coerce_str(payload.get("title")),
-                summary=_coerce_str(payload.get("summary")),
+                abstract=_coerce_str(payload.get("abstract")),
                 venue=_coerce_str(payload.get("venue")),
-                category_name=_coerce_str(payload.get("category_name")),
-                year=_coerce_str(payload.get("year_published")),
+                category=_coerce_str(payload.get("category")),
+                year=_coerce_str(payload.get("year")),
                 tags=[tag for tag in payload.get("tags", []) if isinstance(tag, str)],
-                source_url=_normalize_cristin_source_url(
+                source_url=_normalize_nva_source_url(
                     _coerce_str(payload.get("source_url")),
                     result_id,
                 ),
@@ -147,7 +150,7 @@ def _load_cristin_results(
             grouped.setdefault(employee_id, []).append(snippet)
 
     for employee_id, snippets in grouped.items():
-        snippets.sort(key=_cristin_sort_key, reverse=True)
+        snippets.sort(key=_nva_sort_key, reverse=True)
         grouped[employee_id] = snippets[:max_results]
     return grouped
 
@@ -168,10 +171,10 @@ def _extract_nva_person_id(entry: StaffEntry) -> str | None:
     return None
 
 
-def _normalize_cristin_source_url(url: str | None, result_id: str) -> str:
+def _normalize_nva_source_url(url: str | None, result_id: str) -> str:
     if url:
         return url
-    return f"https://api.cristin.no/v2/results/{result_id}"
+    return f"https://api.nva.unit.no/publication/{result_id}"
 
 
 def _coerce_str(value: object) -> str | None:
@@ -183,12 +186,12 @@ def _coerce_str(value: object) -> str | None:
     return str(value)
 
 
-def _cristin_sort_key(snippet: CristinResultSnippet) -> tuple[int, int, int, str]:
-    has_summary = 1 if snippet.summary else 0
+def _nva_sort_key(snippet: NvaPublicationSnippet) -> tuple[int, int, int, str]:
+    has_abstract = 1 if snippet.abstract else 0
     tag_bonus = min(len(snippet.tags), 5)
     year_value = _year_to_int(snippet.year)
     title = snippet.title or ""
-    return (has_summary, tag_bonus, year_value, title.lower())
+    return (has_abstract, tag_bonus, year_value, title.lower())
 
 
 def _year_to_int(year: str | None) -> int:

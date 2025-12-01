@@ -1,0 +1,847 @@
+{
+  "identifier": "0198ad46e0b1-1e103942-b2e5-48c0-b365-1c63c47065e3",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900065.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12100044.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900060.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10300061.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12700075.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10300027.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/50000007.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/14100024.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:34:27.191005431Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "27",
+        "pages": {
+          "end": "392",
+          "type": "Range",
+          "begin": "378"
+        },
+        "issue": "4",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "30F48CFA-9179-4B10-BD7D-7932AAC4DC88",
+        "year": "2023",
+        "name": "Personality and Social Psychology Review",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/30F48CFA-9179-4B10-BD7D-7932AAC4DC88/2023",
+        "type": "Journal",
+        "onlineIssn": "1532-7957",
+        "printIssn": "1088-8683",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=30F48CFA-9179-4B10-BD7D-7932AAC4DC88"
+      },
+      "doi": "https://doi.org/10.1177/10888683221145756"
+    },
+    "contributorsCount": 13,
+    "mainTitle": "Social Psychology of and for World-Making",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Séamus A. Power",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tania Zittoun",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100024.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Université de Neuchâtel",
+              "en": "University of Neuchâtel"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Sanne Akkerman",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12700075.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universiteit Utrecht",
+              "en": "Utrecht University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aalborg Universitet",
+              "en": "Aalborg University"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brady Wagoner",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Alex Gillespie",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Martina Cabra",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100024.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Université de Neuchâtel",
+              "en": "University of Neuchâtel"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Flora Cornish",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Hana Hawlina",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100024.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Université de Neuchâtel",
+              "en": "University of Neuchâtel"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Brett Heasman",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "York St John University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Kesi Mahendran",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900060.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "The Open University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Charis Psaltis",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CY",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/50000007.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Panepistimio Kyprou",
+              "en": "University of Cyprus"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "11",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Antti Rajala",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "FI",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10300061.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Itä-Suomen Yliopisto",
+              "en": "University of Eastern Finland"
+            }
+          },
+          {
+            "countryCode": "FI",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10300027.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Oulun yliopisto",
+              "en": "University of Oulu"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "12",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Angela Veale",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100044.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Coláiste na hOllscoile Corcaigh",
+              "en": "University College Cork"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "13",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brady Wagoner",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Alex Gillespie",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Séamus A. Power",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tania Zittoun",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100024.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Université de Neuchâtel",
+              "en": "University of Neuchâtel"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Sanne Akkerman",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12700075.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universiteit Utrecht",
+              "en": "Utrecht University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aalborg Universitet",
+              "en": "Aalborg University"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brady Wagoner",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Alex Gillespie",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Martina Cabra",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100024.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Université de Neuchâtel",
+              "en": "University of Neuchâtel"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Flora Cornish",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Hana Hawlina",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100024.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Université de Neuchâtel",
+              "en": "University of Neuchâtel"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Brett Heasman",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "York St John University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Kesi Mahendran",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900060.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "The Open University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Charis Psaltis",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CY",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/50000007.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Panepistimio Kyprou",
+              "en": "University of Cyprus"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:29:20.177575735Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/30F48CFA-9179-4B10-BD7D-7932AAC4DC88/2023"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:29:20.177575735Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2138751"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85146155170"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad46e0b1-1e103942-b2e5-48c0-b365-1c63c47065e3",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:29:20.177575735Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "CH",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100024.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Université de Neuchâtel",
+        "en": "University of Neuchâtel"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Aalborg Universitet",
+        "en": "Aalborg University"
+      }
+    },
+    {
+      "countryCode": "CY",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/50000007.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Panepistimio Kyprou",
+        "en": "University of Cyprus"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900060.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "The Open University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "NL",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12700075.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universiteit Utrecht",
+        "en": "Utrecht University"
+      }
+    },
+    {
+      "countryCode": "FI",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10300027.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Oulun yliopisto",
+        "en": "University of Oulu"
+      }
+    },
+    {
+      "countryCode": "IE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100044.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Coláiste na hOllscoile Corcaigh",
+        "en": "University College Cork"
+      }
+    },
+    {
+      "countryCode": "FI",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10300061.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Itä-Suomen Yliopisto",
+        "en": "University of Eastern Finland"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Københavns Universitet",
+        "en": "University of Copenhagen"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900065.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "York St John University"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "London School of Economics and Political Science",
+        "en": "London School of Economics and Political Science"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

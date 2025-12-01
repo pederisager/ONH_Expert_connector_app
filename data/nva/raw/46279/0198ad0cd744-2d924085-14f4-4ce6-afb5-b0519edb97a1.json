@@ -1,0 +1,431 @@
+{
+  "identifier": "0198ad0cd744-2d924085-14f4-4ce6-afb5-b0519edb97a1",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.unak.is/static/files/pdf-skjol/2024/01.10.24-final-loggaesla-og-samfelagid.pdf",
+      "type": "AssociatedLink",
+      "relation": "dataset"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:54:27.549386902Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "name": "The 7th Policing and Society Conference",
+        "place": {
+          "countryCode": "IS",
+          "name": "Akureyri",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2024-10-02T00:00:00Z",
+          "to": "2024-10-03T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "The role of physical activity in musculoskeletal pain conditions among police employees: methodological considerations",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lillis Marie-Louise Elisabeth Rabbing",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/749008",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lillis Marie-Louise Elisabeth Rabbing",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/749008",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lillis Marie-Louise Elisabeth Rabbing",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/749008",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eva  Langvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/38006",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for psykologi",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lillis Marie-Louise Elisabeth Rabbing",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/749008",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lillis Marie-Louise Elisabeth Rabbing",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/749008",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lillis Marie-Louise Elisabeth Rabbing",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/749008",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eva  Langvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/38006",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for psykologi",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:25:56.676382981Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:25:56.676382981Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "2313940"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0cd744-2d924085-14f4-4ce6-afb5-b0519edb97a1",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:25:56.676382981Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Lillis Marie-Louise Elisabeth Rabbing",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/749008",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for psykologi",
+                "en": "Department of Psychology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for samfunns- og utdanningsvitenskap",
+            "en": "Faculty of Social and Educational Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Eva  Langvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/38006",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs teknisk-naturvitskaplege universitet",
+        "nb": "Norges teknisk-naturvitenskapelige universitet",
+        "en": "Norwegian University of Science and Technology"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

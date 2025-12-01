@@ -1,0 +1,207 @@
+{
+  "identifier": "0198ad255ff4-3c45fcc3-4a64-41ef-89af-ba0b3497bfc9",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:30:32.615785222Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "238",
+          "type": "Range",
+          "begin": "218"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9788205487673"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "48A77EB2-3300-4B76-B0E6-ACF1895FA2D5",
+                "year": "2016",
+                "name": "Gyldendal Akademisk",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/48A77EB2-3300-4B76-B0E6-ACF1895FA2D5/2016",
+                "type": "Publisher",
+                "scientificValue": "LevelOne",
+                "isbnPrefix": "978-82-054,978-82-05",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=48A77EB2-3300-4B76-B0E6-ACF1895FA2D5"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Den digitale lærergenerasjonen: Utfordringer og muligheter",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Ingrid Helleve",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/52514",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Aslaug Grov Almås",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47084",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad2539c7-b04b6d58-c383-4cf1-a28d-0519d3ae9540",
+        "type": "Anthology"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Etikk, sosiale medier og lærerutdanning",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2016",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1085"
+  },
+  "createdDate": "2025-08-15T09:52:44.532009882Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:08:19.640776121Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "1338531"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad255ff4-3c45fcc3-4a64-41ef-89af-ba0b3497bfc9",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:52:44.532009882Z",
+  "scientificIndex": {
+    "year": "2016",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

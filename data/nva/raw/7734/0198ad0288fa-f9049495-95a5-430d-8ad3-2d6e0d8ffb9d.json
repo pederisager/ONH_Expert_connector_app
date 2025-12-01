@@ -1,0 +1,288 @@
+{
+  "identifier": "0198ad0288fa-f9049495-95a5-430d-8ad3-2d6e0d8ffb9d",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.59.3.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.59.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hive@222.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  },
+  "handle": "https://hdl.handle.net/11250/3180822",
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://medietidsskrift.no/wp-content/uploads/2024/10/MHT-41-2024-Brazier-og-Brandal-IDO.pdf",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:06:49.998063829Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "33",
+          "type": "Range",
+          "begin": "10"
+        },
+        "issue": "1",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "3A0D0ACB-098A-4641-A159-072BDF98A9EC",
+        "year": "2024",
+        "name": "Mediehistorisk tidsskrift",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/3A0D0ACB-098A-4641-A159-072BDF98A9EC/2024",
+        "type": "Journal",
+        "onlineIssn": "2464-4277",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=3A0D0ACB-098A-4641-A159-072BDF98A9EC"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Norge som propagandaslagmark: Britisk og tysk påvirkningsarbeid under første verdenskrig",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nikolai Brandal",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eirik Brazier",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/533995",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kultur, religion og samfunnsfag",
+              "en": "Department of Culture, Religion and Social Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nikolai Brandal",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eirik Brazier",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/533995",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kultur, religion og samfunnsfag",
+              "en": "Department of Culture, Religion and Social Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:14:41.274907631Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/3A0D0ACB-098A-4641-A159-072BDF98A9EC/2024"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:14:41.274907631Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hive",
+      "type": "CristinIdentifier",
+      "value": "2349063"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0288fa-f9049495-95a5-430d-8ad3-2d6e0d8ffb9d",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:14:41.274907631Z",
+  "scientificIndex": {
+    "year": "2024",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.3.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for kultur, religion og samfunnsfag",
+                "en": "Department of Culture, Religion and Social Studies"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for humaniora, idretts- og utdanningsvitenskap",
+            "en": "Faculty of Humanities, Sports and Educational Science"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Eirik Brazier",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/533995",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Universitetet i Søraust-Noreg",
+        "nb": "Universitetet i Sørøst-Norge",
+        "en": "University of South-Eastern Norway"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,383 @@
+{
+  "identifier": "0198ad4f5f74-c6b1d339-f28d-49d2-8bf3-5aeb7d9ba7af",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/53400000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/53400055.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/41600004.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hive@222.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  },
+  "handle": "https://hdl.handle.net/11250/3123580",
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.mdpi.com/2227-7099/11/10/240",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:34:47.344869408Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "11",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "10",
+        "articleNumber": "240",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "AB91F404-D598-452F-83B3-A2F860243A7F",
+        "year": "2023",
+        "name": "Economies",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/AB91F404-D598-452F-83B3-A2F860243A7F/2023",
+        "type": "Journal",
+        "onlineIssn": "2227-7099",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=AB91F404-D598-452F-83B3-A2F860243A7F"
+      },
+      "doi": "https://doi.org/10.3390/economies11100240"
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Trade Openness and Inflation Rate in China: Empirical Evidence from Time Series Data",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "This study empirically examines the influence of trade openness on the rate of inflation by focusing on the Chinese economy. The study utilizes data covering the period 1987–2019 and employs the autoregressive distributed lag model (ARDL) for the extraction of results from the designed models. The results of the study indicate that trade openness has indeed impacted the rate of inflation not only negatively but also significantly. This means that trade openness could be used as a tool to fight against higher inflation. Similarly, government expenditure, economic growth, exchange rate and money supply positively affect inflation. Money supply and government expenditures positively affect the rate of inflation in the short run. The study has important policy implications for the Chinese economy.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Muhammad Tahir",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400055.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "COMSATS University Islamabad",
+              "en": "COMSATS University Islamabad"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Norulazidah Omar Ali",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/41600004.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Brunei Darussalam"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Imran Naseem",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Pakistan",
+              "en": "Pakistan"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+              "en": "Department of Business, History and Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Muhammad Tahir",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400055.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "COMSATS University Islamabad",
+              "en": "COMSATS University Islamabad"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Norulazidah Omar Ali",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/41600004.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Brunei Darussalam"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Imran Naseem",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Pakistan",
+              "en": "Pakistan"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+              "en": "Department of Business, History and Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "9",
+      "year": "2023",
+      "type": "PublicationDate",
+      "day": "1"
+    }
+  },
+  "createdDate": "2025-08-15T10:38:36.916360791Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/AB91F404-D598-452F-83B3-A2F860243A7F/2023"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:38:36.916360791Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hive",
+      "type": "CristinIdentifier",
+      "value": "2188282"
+    },
+    {
+      "sourceName": "cristin@hive",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85175001864"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad4f5f74-c6b1d339-f28d-49d2-8bf3-5aeb7d9ba7af",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:38:36.916360791Z",
+  "scientificIndex": {
+    "year": "2023",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "PK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400055.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "COMSATS University Islamabad",
+        "en": "COMSATS University Islamabad"
+      }
+    },
+    {
+      "countryCode": "BN",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/41600004.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of Brunei Darussalam"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+                "en": "Department of Business, History and Social Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "USN Handelshøyskolen",
+            "en": "USN School of Business"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Universitetet i Søraust-Noreg",
+        "nb": "Universitetet i Sørøst-Norge",
+        "en": "University of South-Eastern Norway"
+      }
+    },
+    {
+      "countryCode": "PK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Pakistan",
+        "en": "Pakistan"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

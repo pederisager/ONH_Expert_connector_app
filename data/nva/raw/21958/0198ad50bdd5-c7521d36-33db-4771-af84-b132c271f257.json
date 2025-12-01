@@ -1,0 +1,191 @@
+{
+  "identifier": "0198ad50bdd5-c7521d36-33db-4771-af84-b132c271f257",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "prio@7435.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://press.nordicopenaccess.no/index.php/noasp/catalog/book/37",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:39:19.683981570Z",
+  "fundings": [
+    {
+      "identifier": "220797",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/220797",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "26",
+          "type": "Range",
+          "begin": "15"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9788202591007"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "665CFA70-B6E5-408F-B969-47844CA13B26",
+                "year": "2018",
+                "name": "Cappelen Damm Akademisk",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/665CFA70-B6E5-408F-B969-47844CA13B26/2018",
+                "type": "Publisher",
+                "scientificValue": "LevelOne",
+                "isbnPrefix": "978-82-456,978-82-02",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=665CFA70-B6E5-408F-B969-47844CA13B26"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Norge etter 22. juli: Forhandlinger om verdier, identiteter og et motstandsdyktig samfunn",
+          "contributors": [
+            {
+              "identity": {
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/21958"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad2e8357-fd3ccc2b-655e-4c7d-a507-970bc1f5a3a1",
+        "type": "Anthology"
+      },
+      "doi": "https://doi.org/10.23865/noasp.37.ch1"
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Hva er egentlig verdier? Tanker etter 22. juli",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2018",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1034"
+  },
+  "createdDate": "2025-08-15T10:40:06.613668878Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:13:13.659879752Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@prio",
+      "type": "CristinIdentifier",
+      "value": "1675922"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad50bdd5-c7521d36-33db-4771-af84-b132c271f257",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:40:06.613668878Z",
+  "scientificIndex": {
+    "year": "2018",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nn": "PRIO - Institutt for fredsforsking",
+        "nb": "PRIO - Institutt for fredsforskning",
+        "en": "PRIO - Peace Research Institute Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

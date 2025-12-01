@@ -1,0 +1,313 @@
+{
+  "identifier": "0198ad28209c-adebaf31-0dce-4b58-bee7-c4f93250afa2",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://journalisten.no/amund-djuve-arbeidsmiljo-birthe-eriksen/julie-meldte-ifra-om-arbeidsmiljoet-dn-brukte-36-dager-pa-a-svare-advokater-mener-dn-kunne-gjort-mer/438483",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:05:50.341463660Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaInterview"
+      },
+      "publicationContext": {
+        "medium": {
+          "type": "Internet"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "Journalisten.no"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "«Julie» meldte ifra om arbeidsmiljøet, DN brukte 36 dager på å svare: Advokater mener DN kunne gjort mer",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Journalist"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Guro Flaarønning",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Journalist"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nils Martin Silvola",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/891153",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Birthe Eriksen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46506",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for rettsvitenskap og styring",
+              "en": "Department of Law and Governance"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Journalist"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Guro Flaarønning",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Journalist"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nils Martin Silvola",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/891153",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Birthe Eriksen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46506",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for rettsvitenskap og styring",
+              "en": "Department of Law and Governance"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "12",
+      "year": "2020",
+      "type": "PublicationDate",
+      "day": "4"
+    }
+  },
+  "createdDate": "2025-08-15T09:55:44.924667345Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:55:44.924667345Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "1856173"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad28209c-adebaf31-0dce-4b58-bee7-c4f93250afa2",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:55:44.924667345Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for rettsvitenskap og styring",
+            "en": "Department of Law and Governance"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Birthe Eriksen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46506",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Handelshøyskolen BI",
+        "en": "BI Norwegian Business School"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,316 @@
+{
+  "identifier": "0198ad27b7d8-ec5fb9ba-267a-4227-95d0-c2d2f9dd5b6d",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13700016.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13700024.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:36:25.199452097Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "175",
+          "type": "MonographPages"
+        },
+        "type": "BookAnthology"
+      },
+      "publicationContext": {
+        "isbnList": [
+          "9781800735408"
+        ],
+        "publisher": {
+          "valid": "true",
+          "identifier": "90FFA1A7-487D-4CAD-813E-0A1EB5DD3CEF",
+          "year": "2022",
+          "name": "Berghahn Books",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/90FFA1A7-487D-4CAD-813E-0A1EB5DD3CEF/2022",
+          "type": "Publisher",
+          "scientificValue": "LevelTwo",
+          "isbnPrefix": "978-1-84545,978-0-436",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=90FFA1A7-487D-4CAD-813E-0A1EB5DD3CEF"
+        },
+        "type": "Book",
+        "revision": "Unrevised"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Historical reenactment : New ways of experiencing history",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Mario Carretero",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700016.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidad Autónoma de Madrid",
+              "en": "Autonomous University of Madrid"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aalborg Universitet",
+              "en": "Aalborg University"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brady Wagoner",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Everardo Perez-Manjarrez",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700024.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidad Nacional de Educación a Distancia (UNED)",
+              "en": "National University for Distance Education, Madrid"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Mario Carretero",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700016.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidad Autónoma de Madrid",
+              "en": "Autonomous University of Madrid"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aalborg Universitet",
+              "en": "Aalborg University"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brady Wagoner",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Everardo Perez-Manjarrez",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700024.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidad Nacional de Educación a Distancia (UNED)",
+              "en": "National University for Distance Education, Madrid"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2022",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1168"
+  },
+  "createdDate": "2025-08-15T09:55:18.104200482Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/90FFA1A7-487D-4CAD-813E-0A1EB5DD3CEF/2022"
+  ],
+  "childPublications": [
+    "0198acfddcaa-da0d1ec6-55f9-42bc-9e8c-81bfe80d4d18"
+  ],
+  "modifiedDate": "2025-08-15T09:55:18.104200482Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2062902"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad27b7d8-ec5fb9ba-267a-4227-95d0-c2d2f9dd5b6d",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:55:18.104200482Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "ES",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700024.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universidad Nacional de Educación a Distancia (UNED)",
+        "en": "National University for Distance Education, Madrid"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Aalborg Universitet",
+        "en": "Aalborg University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "ES",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700016.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universidad Autónoma de Madrid",
+        "en": "Autonomous University of Madrid"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

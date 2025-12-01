@@ -1,0 +1,191 @@
+{
+  "identifier": "0198acf65c12-e70c9100-0bc4-472f-b80c-9e2e600da36b",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:28:49.950680399Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "20",
+          "type": "Range",
+          "begin": "20"
+        },
+        "type": "JournalLetter"
+      },
+      "publicationContext": {
+        "identifier": "721DA21A-8F44-4C2A-A9C6-832B7FBDE3F0",
+        "year": "2008",
+        "name": "Klassekampen",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/721DA21A-8F44-4C2A-A9C6-832B7FBDE3F0/2008",
+        "type": "Journal",
+        "printIssn": "0805-3839",
+        "scientificValue": "Unassigned",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/nvakanal?pid=721DA21A-8F44-4C2A-A9C6-832B7FBDE3F0"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Reelt dilemma i Afrika (ICC)",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "8",
+      "year": "2008",
+      "type": "PublicationDate",
+      "day": "14"
+    }
+  },
+  "createdDate": "2025-08-15T09:01:23.346310758Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/721DA21A-8F44-4C2A-A9C6-832B7FBDE3F0/2008"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:01:23.346310758Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "493012"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acf65c12-e70c9100-0bc4-472f-b80c-9e2e600da36b",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:01:23.346310758Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Norsk senter for menneskerettigheter",
+                "en": "Norwegian Centre for Human Rights"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det juridiske fakultet",
+            "en": "Faculty of Law"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

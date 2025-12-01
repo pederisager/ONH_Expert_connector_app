@@ -1,0 +1,473 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/411053",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "http://blogs.helsinki.fi/tepe-2013/",
+      "type": "AssociatedLink",
+      "relation": "mention"
+    }
+  ],
+  "fundings": [
+    {
+      "source": {
+        "identifier": "EI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/EI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Egen institusjon",
+          "en": "Own institution"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Egen institusjon",
+        "en": "Own institution"
+      }
+    },
+    {
+      "source": {
+        "identifier": "UIB",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/UIB",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Universitetet i Bergen",
+          "en": "University of Bergen"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "Cicero Learning, http://www.cicero.fi/sivut2 ",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "TEPE, Teacher Education Policy in Europe Conference",
+        "place": {
+          "countryCode": "FI",
+          "name": "Helsinki",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2013-05-16T00:00:00Z",
+          "to": "2013-05-18T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "The role of teacher education in ethics in relation to negative experiences on social media",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "The role of teacher education in ethics in relation to negative experiences on social media. Aims: This study examined the role of teacher education and specifically whether the ethics training is perceived as adequate in relation to how preservice teachers (n=475) evaluate negative experiences on social media. Theoretical framework: The “model of ethical dilemmas in teaching” by Shapiro and Stefkovich (2011). The model can be illustrated by six circles with the area of “Best interest of the student” in the middle, as were the best interest of the student the centre of a flower and the five other areas its leaves. The five areas that surround the best interest of the student are (1) Personal Codes of Ethics, (2) Individual Professional Codes, (3), Standards of the Profession, (4), Professional Code of Ethics and (5), Ethics of the Community. Other factors that play a part are such as (A) clashing codes, (B) professional judgement and (C) professional decision making (Shapiro & Stefkovich, 2011). The assumption of the model is that there are different areas of ethics. One of them is the professional arena. If teacher training in ethics is perceived by preservice teachers as having no impact, do these preservice teachers experience similar and evaluate their negative experiences similar to preservice teachers that experience that teachers training in ethics has been adequate? Methodology: Data from preservice secondary teachers in their third and fourth years of study and students enrolled in the program for Post Graduate Certificate in Education (PGCE) were collected from six teacher education institutions located in the north, middle and eastern parts of Norway during 2011 (Helleve et al., submitted). The presentation will present some preliminary findings and discuss theoretical and educational significance of these. Keywords: SNS, preservice teachers, teacher education, school, negative experiences",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Aslaug Grov Almås",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47084",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk, religion og samfunnsfag",
+              "en": "Department of Pedagogy, Religion and Social Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ingrid Helleve",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52514",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Aslaug Grov Almås",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47084",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk, religion og samfunnsfag",
+              "en": "Department of Pedagogy, Religion and Social Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ingrid Helleve",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52514",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for pedagogikk",
+              "en": "Department of Education"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2013",
+      "type": "PublicationDate"
+    }
+  },
+  "publicationContextUris": [],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "1030008"
+    }
+  ],
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad29c98f-b3626425-82f3-4a98-bc95-e512b7cf7239",
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.42.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for pedagogikk",
+                "en": "Department of Education"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det psykologiske fakultet",
+            "en": "Faculty of Psychology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ingrid Helleve",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52514",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.2.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for pedagogikk, religion og samfunnsfag",
+                "en": "Department of Pedagogy, Religion and Social Studies"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for lærarutdanning, kultur og idrett",
+            "en": "Faculty of Education, Arts and Sports"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Aslaug Grov Almås",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47084",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høgskulen på Vestlandet",
+        "en": "Western Norway University of Applied Sciences"
+      }
+    }
+  ],
+  "identifier": "0198ad29c98f-b3626425-82f3-4a98-bc95-e512b7cf7239",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:22:42.277927648Z",
+  "createdDate": "2025-08-15T09:57:33.711174369Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:57:33.711174369Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:57:33.711174369Z",
+  "scientificIndex": {},
+  "status": "PUBLISHED"
+}

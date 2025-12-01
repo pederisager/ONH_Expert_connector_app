@@ -1,0 +1,428 @@
+{
+  "identifier": "0198ad07f54e-b0980347-9f4a-4bc2-82b9-1fb1c26940ed",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/53400009.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68400816.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/54400000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hive@222.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T18:02:05.007169523Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "120",
+          "type": "Range",
+          "begin": "105"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9780367818784"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "FAE3940D-29AB-45F5-9190-6242B3BB7596",
+                "year": "2021",
+                "name": "Routledge",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/FAE3940D-29AB-45F5-9190-6242B3BB7596/2021",
+                "type": "Publisher",
+                "scientificValue": "LevelTwo",
+                "isbnPrefix": "978-90-5702,978-90-265,978-1-907322,978-1-906540,978-1-874719,978-1-870905,978-1-85996,978-1-85941,978-1-84872,978-1-84407,978-1-84392,978-1-84169,978-1-58391,978-1-4128,978-1-4106,978-1-032,978-0-9627232,978-0-906348,978-0-902879,978-0-901286,978-0-88163,978-0-8247,978-0-8240,978-0-8133,978-0-7890,978-0-7146,978-0-419,978-0-4158,978-0-415,978-0-3673,978-0-367,978-0-340,978-0-291",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=FAE3940D-29AB-45F5-9190-6242B3BB7596"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Foundations of a Sustainable Economy : Moral, Ethical and Religious Perspectives",
+          "contributors": [
+            {
+              "identity": {
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/331273"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Toseef Azid",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Robert Dahlstrøm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/340071",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad0c21bf-b3f6c246-0e96-4ce9-b61b-a9e2e91fd572",
+        "type": "Anthology"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Sustainability and Behavior of Islamic Market",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Toseef Azid",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400816.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Wayne State University"
+            }
+          },
+          {
+            "countryCode": "SA",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/54400000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Saudi-Arabia",
+              "en": "Saudi Arabia"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Umar Burki",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+              "en": "Department of Business, History and Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Muhammad Omer Chaudhry",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/400339",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400009.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Bahauddin Zakariya University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Toseef Azid",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400816.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Wayne State University"
+            }
+          },
+          {
+            "countryCode": "SA",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/54400000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Saudi-Arabia",
+              "en": "Saudi Arabia"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Umar Burki",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+              "en": "Department of Business, History and Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Muhammad Omer Chaudhry",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/400339",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400009.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Bahauddin Zakariya University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2021",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1034"
+  },
+  "createdDate": "2025-08-15T09:20:36.686239174Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:04:02.760673878Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hive",
+      "type": "CristinIdentifier",
+      "value": "1953357"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad07f54e-b0980347-9f4a-4bc2-82b9-1fb1c26940ed",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:20:36.686239174Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400816.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Wayne State University"
+      }
+    },
+    {
+      "countryCode": "PK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400009.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Bahauddin Zakariya University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+                "en": "Department of Business, History and Social Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "USN Handelshøyskolen",
+            "en": "USN School of Business"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Universitetet i Søraust-Noreg",
+        "nb": "Universitetet i Sørøst-Norge",
+        "en": "University of South-Eastern Norway"
+      }
+    },
+    {
+      "countryCode": "SA",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/54400000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Saudi-Arabia",
+        "en": "Saudi Arabia"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

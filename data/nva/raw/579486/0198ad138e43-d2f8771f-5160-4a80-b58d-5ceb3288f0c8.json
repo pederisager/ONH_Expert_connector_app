@@ -1,0 +1,297 @@
+{
+  "identifier": "0198ad138e43-d2f8771f-5160-4a80-b58d-5ceb3288f0c8",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fni@7430.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://tv.nrk.no/serie/helgemorgen-tv/202210/DNRR62007522/avspiller#t=37m39s",
+      "type": "AssociatedLink",
+      "relation": "dataset"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:42:26.113079960Z",
+  "fundings": [
+    {
+      "identifier": "531",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "302343",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/302343",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "486",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "315163",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/315163",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "515",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaParticipationInRadioOrTv"
+      },
+      "publicationContext": {
+        "format": "Video",
+        "medium": {
+          "type": "TV"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "NRK Helgemorgen"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Svalbard dras med i Ukraina-krigen (Svalbard is dragged into the Ukraine war)",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen",
+              "en": "Nord University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen",
+              "en": "Nord University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "10",
+      "year": "2022",
+      "type": "PublicationDate",
+      "day": "15"
+    }
+  },
+  "createdDate": "2025-08-15T09:33:16.739473024Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:33:16.739473024Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fni",
+      "type": "CristinIdentifier",
+      "value": "2061823"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad138e43-d2f8771f-5160-4a80-b58d-5ceb3288f0c8",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:33:16.739473024Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Handelshøgskolen",
+            "en": "Nord University Business School"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Nord universitet",
+        "en": "Nord University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Fridtjof Nansens institutt",
+        "en": "Fridtjof Nansen Institute"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

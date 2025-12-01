@@ -1,0 +1,242 @@
+{
+  "identifier": "0198ad0a7b77-70fa8d1d-754d-4f1d-b4d0-8994205cf85e",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.29.1.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/626377",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:01:47.954936922Z",
+  "fundings": [
+    {
+      "identifier": "189861",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/189861",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "189861",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Norges forskningsråd",
+        "en": "Research Council of Norway (RCN)"
+      }
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "58",
+          "type": "Range",
+          "begin": "58"
+        },
+        "type": "JournalLetter"
+      },
+      "publicationContext": {
+        "identifier": "96E0A3EB-EE06-4231-8BD1-8A6FA8990377",
+        "year": "2010",
+        "name": "Dagbladet",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/96E0A3EB-EE06-4231-8BD1-8A6FA8990377/2010",
+        "type": "Journal",
+        "onlineIssn": "0807-2043",
+        "printIssn": "0805-3766",
+        "scientificValue": "Unassigned",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/nvakanal?pid=96E0A3EB-EE06-4231-8BD1-8A6FA8990377"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Udokumenterte beskyldninger",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Benedicte Bull",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24133",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.29.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Senter for utvikling og miljø",
+              "en": "Senter for utvikling og miljø"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Benedicte Bull",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24133",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.29.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Senter for utvikling og miljø",
+              "en": "Senter for utvikling og miljø"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "5",
+      "year": "2010",
+      "type": "PublicationDate",
+      "day": "6"
+    }
+  },
+  "createdDate": "2025-08-15T09:23:22.103786263Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/96E0A3EB-EE06-4231-8BD1-8A6FA8990377/2010"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:23:22.103786263Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "491923"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0a7b77-70fa8d1d-754d-4f1d-b4d0-8994205cf85e",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:23:22.103786263Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.29.1.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Senter for utvikling og miljø",
+            "en": "Senter for utvikling og miljø"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Benedicte Bull",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24133",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

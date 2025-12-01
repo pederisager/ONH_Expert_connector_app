@@ -1,0 +1,269 @@
+{
+  "identifier": "0198ad428a26-4c581273-0a18-4b8a-bfc3-4552c953f50c",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hib@203.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:00:33.425169044Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "Lecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "Fylkesmannen i Trøndelag",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "Webinar om skolemåltider",
+        "place": {
+          "countryCode": "NO",
+          "name": "Digitalt Team-møte",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2020-09-08T00:00:00Z",
+          "to": "2020-09-08T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Elevenes vaner og oppfatninger av skolemåltider. Resultat fra evaluering skolemåltid ved Verdalsøra ungdomsskole i Trøndelag",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for idrett, kosthald og naturfag",
+              "en": "Department of Sport, Food and Natural Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eldbjørg Fossgard",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48989",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fakultet for lærarutdanning, kultur og idrett",
+              "en": "Faculty of Education, Arts and Sports"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for idrett, kosthald og naturfag",
+              "en": "Department of Sport, Food and Natural Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eldbjørg Fossgard",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48989",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fakultet for lærarutdanning, kultur og idrett",
+              "en": "Faculty of Education, Arts and Sports"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2020",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:24:35.878638138Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:24:35.878638138Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hib",
+      "type": "CristinIdentifier",
+      "value": "1828122"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad428a26-4c581273-0a18-4b8a-bfc3-4552c953f50c",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:24:35.878638138Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for idrett, kosthald og naturfag",
+                "en": "Department of Sport, Food and Natural Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for lærarutdanning, kultur og idrett",
+            "en": "Faculty of Education, Arts and Sports"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Eldbjørg Fossgard",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48989",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høgskulen på Vestlandet",
+        "en": "Western Norway University of Applied Sciences"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

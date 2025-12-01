@@ -1,0 +1,530 @@
+{
+  "identifier": "0198ad41b654-9faddbd6-a2c9-4212-99f1-5a938c6cb943",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fni@7430.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  },
+  "handle": "https://hdl.handle.net/10852/101306",
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:12:41.483733729Z",
+  "fundings": [
+    {
+      "identifier": "393",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "257614",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/257614",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "22",
+          "type": "Range",
+          "begin": "3"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9780755618392"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "2BB939C1-7225-47FE-AE54-8D9AF5E87311",
+                "year": "2022",
+                "name": "Bloomsbury Academic",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/2BB939C1-7225-47FE-AE54-8D9AF5E87311/2022",
+                "type": "Publisher",
+                "scientificValue": "LevelOne",
+                "isbnPrefix": "978-16-204015,978-1-5013,978-0-8578",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=2BB939C1-7225-47FE-AE54-8D9AF5E87311"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Marine Resources, Climate Change and International Management Regimes",
+          "contributors": [
+            {
+              "identity": {
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400609"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/906903"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad19048f-7575fbcf-f904-4d40-b54f-06d1dc1ea70c",
+        "type": "Anthology"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Introduction: Climate Change and Resilient Fisheries Management",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Olav Schram Stokke",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/400609",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Schram Stokke",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400609",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Raspotnik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for Statsvitenskap",
+              "en": "Institutt for Statsvitenskap"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Schram Stokke",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400609",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Raspotnik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Raspotnik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Schram Stokke",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400609",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Raspotnik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Olav Schram Stokke",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/400609",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Schram Stokke",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400609",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Raspotnik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for Statsvitenskap",
+              "en": "Institutt for Statsvitenskap"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Schram Stokke",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400609",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Raspotnik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Raspotnik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Schram Stokke",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400609",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Raspotnik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2022",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1032"
+  },
+  "createdDate": "2025-08-15T10:23:41.652934398Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:11:35.277593839Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fni",
+      "type": "CristinIdentifier",
+      "value": "2048978"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad41b654-9faddbd6-a2c9-4212-99f1-5a938c6cb943",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:23:41.652934398Z",
+  "scientificIndex": {
+    "year": "2022",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for Statsvitenskap",
+                "en": "Institutt for Statsvitenskap"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Olav Schram Stokke",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/400609",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Olav Schram Stokke",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/400609",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Raspotnik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/906903",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Fridtjof Nansens institutt",
+        "en": "Fridtjof Nansen Institute"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

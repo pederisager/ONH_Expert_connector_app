@@ -1,0 +1,834 @@
+{
+  "identifier": "0198ad2ebc64-c7cd1fee-26e9-4c26-9152-ef24eb6747ec",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.5.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.17.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uib@184.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:47:22.183003215Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferencePoster"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "American heart Association",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "Scientific Sessions of the American Heart Association",
+        "place": {
+          "countryCode": "US",
+          "name": "Los Angeles",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2012-11-03T00:00:00Z",
+          "to": "2012-11-07T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 11,
+    "mainTitle": "Circulation 2012;126:A18411(poster). Dietary Intake of n-3 Long-Chain Polyunsaturated Fatty Acids, Diabetes Mellitus and Risk of Myocardial Infarction in Patients with Suspected Coronary Artery Disease",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Background: A high intake of n-3 long-chain polyunsaturated fatty acids (LCPUFAs) is usually recommended in secondary prevention of coronary heart disease, particularly in patients with high triglyceride levels. Furthermore, a beneficial effect has been observed in patients with heart failure, who are frequently insulin resistant. Objective: The aim was to study the influence of impaired glucose metabolism and diabetes mellitus on the relation between dietary intake of n-3 LCPUFAs and risk of acute myocardial infarction (AMI) in patients undergoing coronary angiography for suspected coronary artery disease in 2000-2004. Design: This study included 2378 participants of the Western Norway B-Vitamin Intervention Trial (WENBIT). Daily intakes of n-3 LCPUFAs were estimated based on average dietary intakes during the last year as reported in a food-frequency questionnaire at baseline. Hazard ratios (HRs (95% CI)) of AMI (fatal and non-fatal) according to n-3 LCPUFA intake were calculated using Cox-regression adjusted for cardiovascular risk factors by comparing upper vs. lowest tertile and as trend across tertiles. Patients were followed until 31 December 2006.\r\n\r\nResults: Mean age of the participants was 62 years and 80% were male. Patients were sub-grouped into non-diabetics (HbA1c <5.7%), pre-diabetics (HbA1c ≥5.7%), and diabetics (diagnosed), and were also stratified according to median triglyceride levels. Among patients with diabetes there was a significantly reduced risk of AMI in the upper vs. the lowest tertile of n-3 LCPUFA intake, multivariate HR (95% CIs) 0.34 (0.14, 0.82), P for trend=0.008. In non-diabetic patients with HbA1c <5.7% there was an increased risk of AMI in the upper tertile of n-3 LCPUFA intake, 1.97 (1.05, 3.67), P for trend=0.02. Risk estimates were strengthened in their respective directions in both diabetic and non-diabetic patients with triglyceride levels above median. No risk associations were seen in pre-diabetics.\r\n\r\nConclusions: Among patients with established coronary artery disease, a high intake of n-3 LCPUFAs was associated with a reduced risk of AMI in diabetic patients and an increased risk of AMI in non-diabetic patients. The effects were particularly pronounced in those with elevated triglyceride levels. ",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ottar Nygård",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50489",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.17.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for indremedisin"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Strand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47139",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.17.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for indremedisin"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eva Kristine Ringdal Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47906",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marta Ebbing",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/45014",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.5.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Helsedata og digitalisering",
+              "en": "Health Data and Digitalisation"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gard Frodal Svingen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/384335",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hall Schartum-Hansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50881",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.17.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for indremedisin"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Reinhard Seifert",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46583",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Klaus Mayer",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dennis W.T. Nilsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50215",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.17.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for indremedisin"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "11",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jan Erik Nordrehaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50188",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.17.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for indremedisin"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ottar Nygård",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50489",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.17.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for indremedisin"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Strand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47139",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.17.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for indremedisin"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eva Kristine Ringdal Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47906",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marta Ebbing",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/45014",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.5.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Helsedata og digitalisering",
+              "en": "Health Data and Digitalisation"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gard Frodal Svingen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/384335",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hall Schartum-Hansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50881",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.17.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for indremedisin"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Reinhard Seifert",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46583",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Klaus Mayer",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dennis W.T. Nilsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50215",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.17.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for indremedisin"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2012",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:02:58.020181455Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:02:58.020181455Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uib",
+      "type": "CristinIdentifier",
+      "value": "966685"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad2ebc64-c7cd1fee-26e9-4c26-9152-ef24eb6747ec",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:02:58.020181455Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.17.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for indremedisin"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Dennis W.T. Nilsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50215",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Jan Erik Nordrehaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50188",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ottar Nygård",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50489",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Elin Strand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47139",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.5.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Helsedata og digitalisering",
+            "en": "Health Data and Digitalisation"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Marta Ebbing",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/45014",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Folkehelseinstituttet",
+        "en": "Norwegian Institute of Public Health"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Hjerteavdelingen",
+            "en": "Dept. of Heart Disease"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Hall Schartum-Hansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50881",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Eva Kristine Ringdal Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47906",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Reinhard Seifert",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46583",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Gard Frodal Svingen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/384335",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Helse Bergen HF - Haukeland universitetssykehus",
+        "en": "Bergen Hospital Trust - Haukeland University Hospital"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

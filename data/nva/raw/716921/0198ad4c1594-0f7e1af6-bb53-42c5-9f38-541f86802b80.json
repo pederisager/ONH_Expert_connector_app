@@ -1,0 +1,354 @@
+{
+  "identifier": "0198ad4c1594-0f7e1af6-bb53-42c5-9f38-541f86802b80",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/14400285.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bi@158.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:34:10.220546376Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "190",
+          "type": "Range",
+          "begin": "176"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9781317150633"
+              ],
+              "additionalIdentifiers": [
+                {
+                  "sourceName": "ISBN",
+                  "type": "AdditionalIdentifier",
+                  "value": "1317150635"
+                }
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "FAE3940D-29AB-45F5-9190-6242B3BB7596",
+                "year": "2017",
+                "name": "Routledge",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/FAE3940D-29AB-45F5-9190-6242B3BB7596/2017",
+                "type": "Publisher",
+                "scientificValue": "LevelTwo",
+                "isbnPrefix": "978-90-5702,978-90-265,978-1-907322,978-1-906540,978-1-874719,978-1-870905,978-1-85996,978-1-85941,978-1-84872,978-1-84407,978-1-84392,978-1-84169,978-1-58391,978-1-4128,978-1-4106,978-1-032,978-0-9627232,978-0-906348,978-0-902879,978-0-901286,978-0-88163,978-0-8247,978-0-8240,978-0-8133,978-0-7890,978-0-7146,978-0-419,978-0-4158,978-0-415,978-0-3673,978-0-367,978-0-340,978-0-291",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=FAE3940D-29AB-45F5-9190-6242B3BB7596"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Communicating Corporate Social Responsibility in the Digital Era",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Adam Lindgreen",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Joëlle Vanhamme",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Rebecca Watkins",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad497ebf-a3d460dc-de50-426b-90ed-a978acd97efa",
+        "type": "Anthology"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Hedonic Stakeholder Engagement. Bridging the Online Participation Gap Through Gamification.",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christian Fieseler",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/583524",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kateryna Maltseva",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christian Hoffman",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400285.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universität Leipzig",
+              "en": "University of Leipzig"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christian Fieseler",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/583524",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kateryna Maltseva",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christian Hoffman",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400285.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universität Leipzig",
+              "en": "University of Leipzig"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2017",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1034"
+  },
+  "createdDate": "2025-08-15T10:35:01.396848376Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:12:43.491845255Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bi",
+      "type": "CristinIdentifier",
+      "value": "1565063"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad4c1594-0f7e1af6-bb53-42c5-9f38-541f86802b80",
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "Endret til vitenskapelig. Boka bestilt. 14/2 PSR",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T10:35:01.396848376Z",
+  "scientificIndex": {
+    "year": "2017",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for kommunikasjon og kultur",
+            "en": "Department of Communication and Culture"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Christian Fieseler",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/583524",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Kateryna Maltseva",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Handelshøyskolen BI",
+        "en": "BI Norwegian Business School"
+      }
+    },
+    {
+      "countryCode": "DE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400285.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universität Leipzig",
+        "en": "University of Leipzig"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

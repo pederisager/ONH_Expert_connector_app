@@ -1,0 +1,775 @@
+{
+  "identifier": "0198ad0adb9e-82d84e33-1328-4004-a25b-52759608c663",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uib@184.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "identifier": "874d8d6d-8903-4180-b3b5-d47b654acf4b",
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIB",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-18T16:09:28.897644964Z"
+      },
+      "size": "3444",
+      "name": "dublin_core.xml",
+      "mimeType": "application/xml",
+      "type": "HiddenFile"
+    },
+    {
+      "identifier": "be03acc8-6360-43ab-a425-cf5aaa0b5669",
+      "license": {
+        "name": "COPYRIGHT-ACT",
+        "type": "License",
+        "value": "https://nva.sikt.no/license/copyright-act/1.0",
+        "labels": {
+          "nb": "Generelle bruksvilkår",
+          "en": "General Terms of Use"
+        }
+      },
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIB",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-18T16:09:28.897632378Z"
+      },
+      "size": "487309",
+      "name": "Rapport_BBRG_2007.pdf",
+      "mimeType": "application/pdf",
+      "publishedDate": "2025-08-18T16:09:29.103832369Z",
+      "type": "OpenFile"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:36:54.440450771Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "83",
+          "type": "MonographPages"
+        },
+        "type": "ReportResearch"
+      },
+      "publicationContext": {
+        "isbnList": [
+          "9788291713410"
+        ],
+        "series": {
+          "type": "UnconfirmedSeries"
+        },
+        "publisher": {
+          "valid": "true",
+          "identifier": "CBCE38D7-C6C6-4CE9-BCED-D64610033E9B",
+          "year": "2007",
+          "name": "Universitetet i Bergen",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/CBCE38D7-C6C6-4CE9-BCED-D64610033E9B/2007",
+          "type": "Publisher",
+          "scientificValue": "Unassigned",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=CBCE38D7-C6C6-4CE9-BCED-D64610033E9B"
+        },
+        "type": "Report"
+      }
+    },
+    "contributorsCount": 9,
+    "mainTitle": "Et brutalt arbeidsmiljø? En undersøkelse av mobbing, konflikter og destruktiv ledelse i norsk arbeidsliv",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ståle Einarsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46178",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Målfrid Tangedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/53275",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Skogstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Stig Berge Matthiesen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/45793",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Merethe Schanke Aasland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52664",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Morten Birkeland Nielsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47178",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lars Glasø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49781",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lars Johan Hauge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47868",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ståle Einarsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46178",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Målfrid Tangedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/53275",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Skogstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Stig Berge Matthiesen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/45793",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Merethe Schanke Aasland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52664",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Morten Birkeland Nielsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47178",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lars Glasø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49781",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lars Johan Hauge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47868",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2007",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:23:46.718440554Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/CBCE38D7-C6C6-4CE9-BCED-D64610033E9B/2007"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-18T16:09:29.330307626Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uib",
+      "type": "CristinIdentifier",
+      "value": "315184"
+    },
+    {
+      "sourceName": "brage@bora",
+      "type": "HandleIdentifier",
+      "value": "https://hdl.handle.net/1956/2381"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "hasPublicFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0adb9e-82d84e33-1328-4004-a25b-52759608c663",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:23:46.718440554Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for samfunnspsykologi",
+                "en": "Department of Psychosocial Science"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det psykologiske fakultet",
+            "en": "Faculty of Psychology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ståle Einarsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46178",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Anders Skogstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50734",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Merethe Schanke Aasland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52664",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Lars Glasø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49781",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Stig Berge Matthiesen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/45793",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Målfrid Tangedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/53275",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Lars Johan Hauge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47868",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Morten Birkeland Nielsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47178",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

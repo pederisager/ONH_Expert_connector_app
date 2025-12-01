@@ -1,0 +1,463 @@
+{
+  "identifier": "0198ad145b8f-93dde6b1-719c-4c03-b310-dc81636abae6",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.13.1.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/5932.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "umb@192.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:12:04.952426701Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/5932.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "24",
+        "pages": {
+          "end": "287",
+          "type": "Range",
+          "begin": "263"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "51DC1C82-C3A3-4EC7-9C47-ACD6E489CD11",
+        "year": "2001",
+        "name": "Agricultural Economics",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/51DC1C82-C3A3-4EC7-9C47-ACD6E489CD11/2001",
+        "type": "Journal",
+        "onlineIssn": "1574-0862",
+        "printIssn": "0169-5150",
+        "scientificValue": "Unassigned",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=51DC1C82-C3A3-4EC7-9C47-ACD6E489CD11"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Structural adjustment and soil degradation in Tanzania A CGE model with endogenous soil productivity",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Henrik Wiig",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Vegard Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/50104",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jens Bernt Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/317250",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Noregs miljø- og biovitskaplege universitet",
+              "nb": "Norges miljø- og biovitenskapelige universitet"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jens Bernt Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317250",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for internasjonale miljø- og utviklingsstudier"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Solveig Glomsrød",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Statistisk sentralbyrå",
+              "en": "Statistics Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Vegard Iversen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50104",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Henrik Wiig",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Vegard Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/50104",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jens Bernt Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/317250",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Noregs miljø- og biovitskaplege universitet",
+              "nb": "Norges miljø- og biovitenskapelige universitet"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Henrik Wiig",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Vegard Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/50104",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jens Bernt Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/317250",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Noregs miljø- og biovitskaplege universitet",
+              "nb": "Norges miljø- og biovitenskapelige universitet"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jens Bernt Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317250",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for internasjonale miljø- og utviklingsstudier"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Solveig Glomsrød",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Statistisk sentralbyrå",
+              "en": "Statistics Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Vegard Iversen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50104",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Henrik Wiig",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Vegard Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/50104",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jens Bernt Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/317250",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Noregs miljø- og biovitskaplege universitet",
+              "nb": "Norges miljø- og biovitenskapelige universitet"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2001",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:34:09.295410996Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/51DC1C82-C3A3-4EC7-9C47-ACD6E489CD11/2001"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:34:09.295410996Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@umb",
+      "type": "CristinIdentifier",
+      "value": "745464"
+    },
+    {
+      "sourceName": "FORSKDOK",
+      "type": "AdditionalIdentifier",
+      "value": "r01012633"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad145b8f-93dde6b1-719c-4c03-b310-dc81636abae6",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:34:09.295410996Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/5932.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Statistisk sentralbyrå",
+        "en": "Statistics Norway"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.1.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for internasjonale miljø- og utviklingsstudier"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Landskap og samfunn"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Vegard Iversen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50104",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Jens Bernt Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317250",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs miljø- og biovitskaplege universitet",
+        "nb": "Norges miljø- og biovitenskapelige universitet"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

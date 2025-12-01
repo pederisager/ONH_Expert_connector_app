@@ -1,0 +1,184 @@
+{
+  "identifier": "0198ad235b67-0aeeb3d9-97ed-47ec-8435-b8c5f35c0772",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T19:35:39.129429123Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaInterview"
+      },
+      "publicationContext": {
+        "medium": {
+          "type": "Internet"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "VG Nett"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "\"Den største krisen for norsk fredsdiplomati i nyere tid\"",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "9",
+      "year": "2007",
+      "type": "PublicationDate",
+      "day": "12"
+    }
+  },
+  "createdDate": "2025-08-15T09:50:32.295306102Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:50:32.295306102Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "277190"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad235b67-0aeeb3d9-97ed-47ec-8435-b8c5f35c0772",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:50:32.295306102Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Norsk senter for menneskerettigheter",
+                "en": "Norwegian Centre for Human Rights"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det juridiske fakultet",
+            "en": "Faculty of Law"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

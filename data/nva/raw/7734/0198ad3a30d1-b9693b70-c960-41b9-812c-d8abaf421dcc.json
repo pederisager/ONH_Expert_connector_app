@@ -1,0 +1,271 @@
+{
+  "identifier": "0198ad3a30d1-b9693b70-c960-41b9-812c-d8abaf421dcc",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.59.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.59.3.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hive@222.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:03:07.747196140Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaParticipationInRadioOrTv"
+      },
+      "publicationContext": {
+        "format": "Sound",
+        "medium": {
+          "type": "Radio"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "NRK Studio 2"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "80 år siden angrepet mot Pearl Harbor",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eirik Brazier",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/533995",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kultur, religion og samfunnsfag",
+              "en": "Department of Culture, Religion and Social Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nikolai Brandal",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eirik Brazier",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/533995",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kultur, religion og samfunnsfag",
+              "en": "Department of Culture, Religion and Social Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nikolai Brandal",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "12",
+      "year": "2021",
+      "type": "PublicationDate",
+      "day": "7"
+    }
+  },
+  "createdDate": "2025-08-15T10:15:28.721138476Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:15:28.721138476Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hive",
+      "type": "CristinIdentifier",
+      "value": "2006566"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad3a30d1-b9693b70-c960-41b9-812c-d8abaf421dcc",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:15:28.721138476Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.3.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for kultur, religion og samfunnsfag",
+                "en": "Department of Culture, Religion and Social Studies"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.59.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for humaniora, idretts- og utdanningsvitenskap",
+            "en": "Faculty of Humanities, Sports and Educational Science"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Eirik Brazier",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/533995",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Universitetet i Søraust-Noreg",
+        "nb": "Universitetet i Sørøst-Norge",
+        "en": "University of South-Eastern Norway"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,164 @@
+{
+  "identifier": "0198ad2efd3a-2e1f8ce8-756f-46d7-8d1c-b4f26c14470e",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.rfi.fr/fr/afrique/20220826-%C3%A9thiopie-frappe-a%C3%A9rienne-meurtri%C3%A8re-sur-la-capitale-du-tigr%C3%A9-mekele",
+      "type": "AssociatedLink",
+      "relation": "dataset"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:40:26.763484715Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaInterview"
+      },
+      "publicationContext": {
+        "format": "Sound",
+        "medium": {
+          "type": "Radio"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "Rfi (Radio France International)"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Éthiopie: frappe aérienne meurtriere sur la capitale du Tigré, Mekele",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/fra",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Kjetil Tronvoll",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Kjetil Tronvoll",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "8",
+      "year": "2022",
+      "type": "PublicationDate",
+      "day": "26"
+    }
+  },
+  "createdDate": "2025-08-15T10:03:14.618696632Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:03:14.618696632Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2172083"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad2efd3a-2e1f8ce8-756f-46d7-8d1c-b4f26c14470e",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:03:14.618696632Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

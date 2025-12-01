@@ -1,0 +1,192 @@
+{
+  "identifier": "0198ad186bb1-06518c65-2ca3-4c6e-9096-481f4f66f9d0",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hio@215.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T18:19:01.345398752Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "Lecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "SAIH Lillehammer",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "SAIH seminar om hjelperprosjekt for Colombia",
+        "place": {
+          "name": "Lillehammer",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2016-10-24T00:00:00Z",
+          "to": "2016-10-24T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Colombias fredsprosess",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2016",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:38:35.569016254Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:38:35.569016254Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hio",
+      "type": "CristinIdentifier",
+      "value": "1425204"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad186bb1-06518c65-2ca3-4c6e-9096-481f4f66f9d0",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:38:35.569016254Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "By- og regionforskningsinstituttet NIBR",
+                "en": "Norwegian Institute for Urban and Regional Research"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Senter for velferds- og arbeidslivsforskning",
+            "en": "Centre for Welfare and Labour Research"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

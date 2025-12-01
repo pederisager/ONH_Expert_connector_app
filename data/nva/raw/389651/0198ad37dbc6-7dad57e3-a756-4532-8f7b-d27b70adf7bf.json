@@ -1,0 +1,647 @@
+{
+  "identifier": "0198ad37dbc6-7dad57e3-a756-4532-8f7b-d27b70adf7bf",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/14400292.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.20",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.65.20.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.65.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:05:31.188446594Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "19",
+        "pages": {
+          "end": "633",
+          "type": "Range",
+          "begin": "621"
+        },
+        "issue": "7",
+        "type": "AcademicLiteratureReview"
+      },
+      "publicationContext": {
+        "identifier": "AEB3FB5C-8799-40CC-8A66-D394C2C2C488",
+        "year": "2017",
+        "name": "Colorectal Disease",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/AEB3FB5C-8799-40CC-8A66-D394C2C2C488/2017",
+        "type": "Journal",
+        "onlineIssn": "1463-1318",
+        "printIssn": "1462-8910",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=AEB3FB5C-8799-40CC-8A66-D394C2C2C488"
+      },
+      "doi": "https://doi.org/10.1111/codi.13748"
+    },
+    "contributorsCount": 6,
+    "mainTitle": "Tobacco smoking and the risk of diverticular disease - a systematic review and meta-analysis of prospective studies",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Dagfinn Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.20.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnsmedisin og sykepleie",
+              "en": "Department of Public Health and Nursing"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Abhijit Sen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/635348",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.20.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnsmedisin og sykepleie",
+              "en": "Department of Public Health and Nursing"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Michael Fred Leitzmann",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400292.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universität Regensburg",
+              "en": "University of Regensburg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Serena Tonstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14852",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forebyggende medisin, seksjon for",
+              "en": "Section for Preventive Cardiology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Teresa Norat",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lars Johan Vatten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/40996",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.20.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnsmedisin og sykepleie",
+              "en": "Department of Public Health and Nursing"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Dagfinn Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.20.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnsmedisin og sykepleie",
+              "en": "Department of Public Health and Nursing"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Abhijit Sen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/635348",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.20.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnsmedisin og sykepleie",
+              "en": "Department of Public Health and Nursing"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Michael Fred Leitzmann",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400292.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universität Regensburg",
+              "en": "University of Regensburg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Serena Tonstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14852",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forebyggende medisin, seksjon for",
+              "en": "Section for Preventive Cardiology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Teresa Norat",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lars Johan Vatten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/40996",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.20.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnsmedisin og sykepleie",
+              "en": "Department of Public Health and Nursing"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2017",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:12:55.878481746Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/AEB3FB5C-8799-40CC-8A66-D394C2C2C488/2017"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:12:55.878481746Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "1500675"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85021819914"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad37dbc6-7dad57e3-a756-4532-8f7b-d27b70adf7bf",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:12:55.878481746Z",
+  "scientificIndex": {
+    "year": "2017",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "DE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400292.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universität Regensburg",
+        "en": "University of Regensburg"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.20",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Forebyggende medisin, seksjon for",
+                    "en": "Section for Preventive Cardiology"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Endokrinologi, sykelig overvekt og foreb. Med., avd. for",
+                "en": "Department of Endocrinology, Morbid Obesity and Preventive Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Medisinsk klinikk",
+            "en": "Division of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Serena Tonstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14852",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.20.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for samfunnsmedisin og sykepleie",
+                "en": "Department of Public Health and Nursing"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.65.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for medisin og helsevitenskap",
+            "en": "Faculty of Medicine and Health Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Lars Johan Vatten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/40996",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Abhijit Sen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/635348",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs teknisk-naturvitskaplege universitet",
+        "nb": "Norges teknisk-naturvitenskapelige universitet",
+        "en": "Norwegian University of Science and Technology"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Imperial College London"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

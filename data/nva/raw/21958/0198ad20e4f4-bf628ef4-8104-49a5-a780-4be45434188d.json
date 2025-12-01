@@ -1,0 +1,282 @@
+{
+  "identifier": "0198ad20e4f4-bf628ef4-8104-49a5-a780-4be45434188d",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/2552750",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "prio@7435.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://open.spotify.com/episode/1GQoquQhhDRByGSjV5bblr?si=f695158c53c34d49",
+      "type": "AssociatedLink",
+      "relation": "dataset"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:15:25.591462715Z",
+  "fundings": [
+    {
+      "identifier": "303344",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Norges forskningsråd",
+        "en": "Research Council of Norway (RCN)"
+      }
+    },
+    {
+      "identifier": "303344",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/303344",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaParticipationInRadioOrTv"
+      },
+      "publicationContext": {
+        "medium": {
+          "type": "Internet"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "FAIR Ethics in Peace Negotiations. Podcast (Spotify/Apple) "
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Trust and Fairness in the Iran Nuclear (JCPOA) Negotiation",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "ProgrammeLeader"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kristoffer Liden",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7036",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "ProgrammeLeader"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gregory Reichberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/318938",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "ProgrammeLeader"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kristoffer Liden",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7036",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "ProgrammeLeader"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gregory Reichberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/318938",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "7",
+      "year": "2023",
+      "type": "PublicationDate",
+      "day": "31"
+    }
+  },
+  "createdDate": "2025-08-15T09:47:50.900000168Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:47:50.900000168Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@prio",
+      "type": "CristinIdentifier",
+      "value": "2374780"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad20e4f4-bf628ef4-8104-49a5-a780-4be45434188d",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:47:50.900000168Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nn": "PRIO - Institutt for fredsforsking",
+        "nb": "PRIO - Institutt for fredsforskning",
+        "en": "PRIO - Peace Research Institute Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

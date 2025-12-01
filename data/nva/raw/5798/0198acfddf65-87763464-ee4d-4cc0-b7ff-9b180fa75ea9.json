@@ -1,0 +1,1297 @@
+{
+  "identifier": "0198acfddf65-87763464-ee4d-4cc0-b7ff-9b180fa75ea9",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.10.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.4.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.4.50",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.10",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "ous@2012.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:36:09.556547300Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "27",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "1",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "D2C21E6A-E71E-448A-97A5-B2953E62FA00",
+        "year": "2025",
+        "name": "Journal of Cardiovascular Magnetic Resonance",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/D2C21E6A-E71E-448A-97A5-B2953E62FA00/2025",
+        "type": "Journal",
+        "onlineIssn": "1532-429X",
+        "printIssn": "1097-6647",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=D2C21E6A-E71E-448A-97A5-B2953E62FA00"
+      },
+      "doi": "https://doi.org/10.1016/j.jocmr.2025.101849"
+    },
+    "contributorsCount": 7,
+    "mainTitle": "Non-invasive estimation of left ventricular chamber stiffness using cardiovascular magnetic resonance and echocardiography",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ida Marie Hauge-Iversen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lili Zhang",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Einar Sjaastad Nordén",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ivar Sjaastad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Linn Stordahl Espeland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Oslo",
+              "en": "University of Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Einar Sjaastad Nordén",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lili Zhang",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Einar Sjaastad Nordén",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ivar Sjaastad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Linn Stordahl Espeland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.10",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Arne Olav Melleby",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/386717",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Oslo",
+              "en": "University of Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Linn Stordahl Espeland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lili Zhang",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Einar Sjaastad Nordén",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ivar Sjaastad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Linn Stordahl Espeland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Oslo",
+              "en": "University of Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lili Zhang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lili Zhang",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Einar Sjaastad Nordén",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ivar Sjaastad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Linn Stordahl Espeland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Oslo",
+              "en": "University of Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ivar Sjaastad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Inst. eksperimentell med. forsk, Ullevål",
+              "en": "Institute for Experimental Medical Research IEMR"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.10",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Emil Knut Stenersen Espe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lili Zhang",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Einar Sjaastad Nordén",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ivar Sjaastad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Linn Stordahl Espeland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.4.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.4.50",
+            "type": "Organization",
+            "labels": {
+              "nb": "Biofysikk og medisinsk fysikk",
+              "en": "Biophysics and Medical Physics"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ida Marie Hauge-Iversen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lili Zhang",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Einar Sjaastad Nordén",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ivar Sjaastad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Linn Stordahl Espeland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Oslo",
+              "en": "University of Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Einar Sjaastad Nordén",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lili Zhang",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Einar Sjaastad Nordén",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ivar Sjaastad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Linn Stordahl Espeland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.10",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Arne Olav Melleby",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/386717",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Oslo",
+              "en": "University of Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Linn Stordahl Espeland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lili Zhang",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Einar Sjaastad Nordén",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ivar Sjaastad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Linn Stordahl Espeland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Oslo",
+              "en": "University of Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lili Zhang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lili Zhang",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Einar Sjaastad Nordén",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ivar Sjaastad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Linn Stordahl Espeland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Oslo",
+              "en": "University of Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ivar Sjaastad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Inst. eksperimentell med. forsk, Ullevål",
+              "en": "Institute for Experimental Medical Research IEMR"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.10",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Emil Knut Stenersen Espe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lili Zhang",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Einar Sjaastad Nordén",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ivar Sjaastad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Linn Stordahl Espeland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.4.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.4.50",
+            "type": "Organization",
+            "labels": {
+              "nb": "Biofysikk og medisinsk fysikk",
+              "en": "Biophysics and Medical Physics"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2025",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:09:35.717504286Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/D2C21E6A-E71E-448A-97A5-B2953E62FA00/2025"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:09:35.717504286Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@ous",
+      "type": "CristinIdentifier",
+      "value": "2362651"
+    },
+    {
+      "sourceName": "cristin@ous",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85217410826"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acfddf65-87763464-ee4d-4cc0-b7ff-9b180fa75ea9",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:09:35.717504286Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.10.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Inst. eksperimentell med. forsk, Ullevål",
+                "en": "Institute for Experimental Medical Research IEMR"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.6.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Hjerte-, lunge- og karklinikken",
+            "en": "Division of Cardiovascular and Pulmonary Diseases"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Lili Zhang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10238",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Einar Sjaastad Nordén",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ida Marie Hauge-Iversen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ivar Sjaastad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Linn Stordahl Espeland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1513565",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Emil Knut Stenersen Espe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.4.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.4.50",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Biofysikk og medisinsk fysikk",
+                    "en": "Biophysics and Medical Physics"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.4.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Fysisk institutt",
+                "en": "Department of physics"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det matematisk-naturvitenskapelige fakultet",
+            "en": "Faculty of Mathematics and Natural Sciences"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Universitetet i Oslo",
+            "en": "University of Oslo"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0"
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.10",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Institutt for eksperimentell medisinsk forskning",
+                        "en": "Institute for Experimental Medical Research"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Hjerte-, lunge- og karklinikken",
+                    "en": "Clinic for Cardiovascular and Pulmonary Diseases"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for klinisk medisin",
+                "en": "Institute of Clinical Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Einar Sjaastad Nordén",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/783773",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Emil Knut Stenersen Espe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ivar Sjaastad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

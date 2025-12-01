@@ -195,19 +195,19 @@ def test_build_normalized_preview_prefers_sentences() -> None:
     assert "overflødig" not in preview
 
 
-def test_chunks_to_citations_maps_cristin_to_nva_url() -> None:
+def test_chunks_to_citations_maps_nva_url() -> None:
     chunk = Chunk(
         staff_slug="slug",
         chunk_id="slug-0001",
         text="Resultatet beskriver digital sikkerhet og personvern i undervisning.",
         order=0,
         token_count=12,
-        source_url="https://api.cristin.no/v2/results/123456",
+        source_url="https://api.nva.unit.no/publication/abc123",
         metadata={
             "name": "Test Forsker",
-            "cristin_result_id": "123456",
+            "nva_publication_id": "abc123",
         },
     )
-    citations = routes._chunks_to_citations([chunk])
+    citations = routes._chunks_to_citations([chunk], themes=[])
     assert citations
-    assert citations[0].url == "https://nva.sikt.no/registration/123456"
+    assert citations[0].url == "https://nva.sikt.no/registration/abc123"

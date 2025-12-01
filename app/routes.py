@@ -581,15 +581,21 @@ def _retrieval_result_to_match_item(result, themes: Sequence[str]) -> MatchItem 
 
 def _resolve_citation_url(chunk: Chunk) -> str:
     metadata = chunk.metadata or {}
-    cristin_id = metadata.get("cristin_result_id")
-    if isinstance(cristin_id, str) and cristin_id.strip():
-        return f"https://nva.sikt.no/registration/{cristin_id.strip()}"
+    publication_id = metadata.get("nva_publication_id")
+    if isinstance(publication_id, str) and publication_id.strip():
+        return f"https://nva.sikt.no/registration/{publication_id.strip()}"
 
     url = chunk.source_url or str(metadata.get("profile_url") or "")
-    if url.startswith("https://api.cristin.no/v2/results/"):
-        cristin_id = url.rstrip("/").split("/")[-1]
-        if cristin_id:
-            return f"https://nva.sikt.no/registration/{cristin_id}"
+    nva_prefixes = (
+        "https://api.nva.unit.no/publication/",
+        "https://api.test.nva.aws.unit.no/publication/",
+    )
+    for prefix in nva_prefixes:
+        if url.startswith(prefix):
+            pub_id = url.rstrip("/").split("/")[-1]
+            if pub_id:
+                return f"https://nva.sikt.no/registration/{pub_id}"
+
     return url
 
 

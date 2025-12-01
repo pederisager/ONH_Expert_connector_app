@@ -1,0 +1,387 @@
+{
+  "identifier": "0198ad09abfc-4ce342e3-4506-4e20-9916-f87b92d07620",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.7.6.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.7.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:31:49.779225217Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "name": "Folkehelsekonferansen 2024",
+        "place": {
+          "countryCode": "NO",
+          "name": "Tønsberg",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2024-10-24T00:00:00Z",
+          "to": "2024-10-25T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "The activity program «Food Jungle» and its impact on food and meals at after-school programs in Norway.",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ulrike Liisberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eli Kristin Aadland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/329927",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lukasz Andrzej Derdowski",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603375",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.7.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.7.6.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "NHS - Institutt for ledelse og tjenesteutvikling",
+              "en": "NHS - Department of Leadership and Service Innovation"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ulrike Liisberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eli Kristin Aadland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/329927",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lukasz Andrzej Derdowski",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603375",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.7.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.7.6.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "NHS - Institutt for ledelse og tjenesteutvikling",
+              "en": "NHS - Department of Leadership and Service Innovation"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:22:28.988353287Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:22:28.988353287Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2357094"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad09abfc-4ce342e3-4506-4e20-9916-f87b92d07620",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:22:28.988353287Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.7.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.7.6.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "NHS - Institutt for ledelse og tjenesteutvikling",
+                "en": "NHS - Department of Leadership and Service Innovation"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.7.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Lukasz Andrzej Derdowski",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603375",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Stavanger",
+        "en": "University of Stavanger"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for ernæring og folkehelse",
+                "en": "Department of Nutrition and Public Health"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helse- og idrettsvitenskap",
+            "en": "Faculty of Health and Sport Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Eli Kristin Aadland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/329927",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Agder",
+        "en": "University of Agder"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ulrike Liisberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

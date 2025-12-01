@@ -1,0 +1,249 @@
+{
+  "identifier": "0198ad51af8d-993c9191-1b54-4315-97aa-ee52098f843f",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7425.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fhs@1627.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:03:41.016388878Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7425.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "MediaFeatureArticle"
+      },
+      "publicationContext": {
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/18919EB0-BF41-4023-9F80-D248D7CA57DC/2012",
+        "type": "MediaContributionPeriodical"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Authoritarian Legacy Still Weighs Heavily on Middle East",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "kjetil Selvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21504",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7425.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "kjetil Selvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/21504",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fafo Institutt for arbeidslivs- og velferdsforskning",
+              "en": "The Fafo Institute for Labour and Social Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Stig Stenslie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22593",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for forsvarsstudier",
+              "en": "Norwegian Institute for Defence Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "kjetil Selvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21504",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7425.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "kjetil Selvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/21504",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fafo Institutt for arbeidslivs- og velferdsforskning",
+              "en": "The Fafo Institute for Labour and Social Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Stig Stenslie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22593",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for forsvarsstudier",
+              "en": "Norwegian Institute for Defence Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "5",
+      "year": "2012",
+      "type": "PublicationDate",
+      "day": "24"
+    }
+  },
+  "createdDate": "2025-08-15T10:41:08.493453798Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:41:08.493453798Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fhs",
+      "type": "CristinIdentifier",
+      "value": "930200"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad51af8d-993c9191-1b54-4315-97aa-ee52098f843f",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:41:08.493453798Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for forsvarsstudier",
+            "en": "Norwegian Institute for Defence Studies"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Stig Stenslie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22593",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Forsvarets høgskole",
+        "en": "Norwegian Defence University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7425.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "kjetil Selvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21504",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Fafo Institutt for arbeidslivs- og velferdsforskning",
+        "en": "The Fafo Institute for Labour and Social Research"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

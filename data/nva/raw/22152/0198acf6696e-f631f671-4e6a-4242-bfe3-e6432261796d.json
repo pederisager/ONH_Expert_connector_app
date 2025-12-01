@@ -1,0 +1,191 @@
+{
+  "identifier": "0198acf6696e-f631f671-4e6a-4242-bfe3-e6432261796d",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T18:22:24.621943396Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "Lecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "Fellesrådet for Afrika/Ethiopian Common Forum, Norway",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "Can Ethiopia break the impasse to democracy?",
+        "place": {
+          "name": "Oslo",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2006-06-08T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Post election Ethiopia: Wither Democracy",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2006",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:01:26.766828715Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:01:26.766828715Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "99901"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acf6696e-f631f671-4e6a-4242-bfe3-e6432261796d",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:01:26.766828715Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Norsk senter for menneskerettigheter",
+                "en": "Norwegian Centre for Human Rights"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det juridiske fakultet",
+            "en": "Faculty of Law"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

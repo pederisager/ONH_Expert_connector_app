@@ -1,0 +1,652 @@
+{
+  "identifier": "0198ad0b8246-08e75492-2466-46b9-8719-b8c8543d2b7d",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/465586",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:13:21.327382577Z",
+  "fundings": [
+    {
+      "source": {
+        "identifier": "PHS",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/PHS",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Politihøgskolen",
+          "en": "Norwegian Police University College"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "source": {
+        "identifier": "UIB",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/UIB",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Universitetet i Bergen",
+          "en": "University of Bergen"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "C09B7CF3-271D-4108-AD75-9300954D6828",
+        "year": "2020",
+        "name": "Police Quarterly (PQ)",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/C09B7CF3-271D-4108-AD75-9300954D6828/2020",
+        "type": "Journal",
+        "onlineIssn": "1552-745X",
+        "printIssn": "1098-6111",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=C09B7CF3-271D-4108-AD75-9300954D6828"
+      },
+      "doi": "https://doi.org/10.1177/1098611120976024"
+    },
+    "contributorsCount": 5,
+    "mainTitle": "Diversity in Education and Organization:From Political Aims to Practice in the Norwegian Police Service",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Egge",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327992",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hege Høivik Bye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mariann Stærkebye Leirvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Egge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327992",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Egge",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327992",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jaishankar Ganapathy",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Egge",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327992",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Egge",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327992",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hege Høivik Bye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mariann Stærkebye Leirvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Egge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327992",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Egge",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327992",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jaishankar Ganapathy",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Egge",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327992",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2020",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:24:29.382411736Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/C09B7CF3-271D-4108-AD75-9300954D6828/2020"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:24:29.382411736Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "1857878"
+    },
+    {
+      "sourceName": "cristin@phs",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85097311634"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0b8246-08e75492-2466-46b9-8719-b8c8543d2b7d",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:24:29.382411736Z",
+  "scientificIndex": {
+    "year": "2020",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Marit Egge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327992",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Jaishankar Ganapathy",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "By- og regionforskningsinstituttet NIBR",
+                "en": "Norwegian Institute for Urban and Regional Research"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Senter for velferds- og arbeidslivsforskning",
+            "en": "Centre for Welfare and Labour Research"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Mariann Stærkebye Leirvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for samfunnspsykologi",
+                "en": "Department of Psychosocial Science"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det psykologiske fakultet",
+            "en": "Faculty of Psychology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Hege Høivik Bye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47557",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

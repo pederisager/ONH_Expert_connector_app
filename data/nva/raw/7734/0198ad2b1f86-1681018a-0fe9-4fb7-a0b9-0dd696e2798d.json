@@ -1,0 +1,334 @@
+{
+  "identifier": "0198ad2b1f86-1681018a-0fe9-4fb7-a0b9-0dd696e2798d",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/2626824",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hive@222.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T18:18:08.662183794Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "500",
+          "type": "MonographPages"
+        },
+        "type": "BookAnthology"
+      },
+      "publicationContext": {
+        "isbnList": [
+          "9788282651684"
+        ],
+        "publisher": {
+          "valid": "true",
+          "identifier": "41883300-5B16-49CE-957C-531F91527865",
+          "year": "2016",
+          "name": "Dreyer Forlag A/S",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/41883300-5B16-49CE-957C-531F91527865/2016",
+          "type": "Publisher",
+          "scientificValue": "LevelOne",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=41883300-5B16-49CE-957C-531F91527865"
+        },
+        "type": "Book",
+        "revision": "Unrevised"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Den dannede opprører: Bernt Hagtvet 70 år",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/und",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for arkeologi, konservering og historie",
+              "en": "Department of Archaeology, Conservation and History"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dag Einar Thorsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18009",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for industriell økonomi, strategi og statsvitenskap",
+              "en": "Department of Business, Strategy and Political Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for arkeologi, konservering og historie",
+              "en": "Department of Archaeology, Conservation and History"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dag Einar Thorsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18009",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for industriell økonomi, strategi og statsvitenskap",
+              "en": "Department of Business, Strategy and Political Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2016",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:59:01.254194497Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/41883300-5B16-49CE-957C-531F91527865/2016"
+  ],
+  "childPublications": [
+    "0198ad14721b-aa88fe53-f836-4226-82b6-a98c5f4d03e0",
+    "0198ad15bf26-19f40947-c8a9-4898-b1ae-6347dae0e142",
+    "0198ad2a1eb1-b0903909-61ff-4fdc-b2cc-e4bf1ca7f73f",
+    "0198ad2c16d7-6551dec8-de34-4ff0-99e0-ea6079957baa",
+    "0198ad2c1995-8e74afa4-15b6-4bd0-b7dc-344a4a9a0d3b",
+    "0198ad2c526a-785e0c79-771f-4e06-abe6-10925cbaa628",
+    "0198ad2cafdb-5f4a24a5-bb6f-4d2e-a5c8-613ae1c3a77d",
+    "0198ad2dff49-0e0e5c05-392c-43ed-b285-a318d56d34c2",
+    "0198ad38aef2-a276242d-42ab-4e30-8d1e-163a5850f4e0",
+    "0198ad414b45-6c1c2f97-1551-446a-bfcc-7f5da00238f9",
+    "0198ad4b7e6c-afe45de2-cb60-4f6b-825e-926f91d15db3"
+  ],
+  "modifiedDate": "2025-08-15T09:59:01.254194497Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hive",
+      "type": "CristinIdentifier",
+      "value": "1340129"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad2b1f86-1681018a-0fe9-4fb7-a0b9-0dd696e2798d",
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "Ikke forfatteradresser i boken. Redaktørenes adresse på smussomslag. ML/HSN 270516",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T09:59:01.254194497Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for industriell økonomi, strategi og statsvitenskap",
+                "en": "Department of Business, Strategy and Political Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "USN Handelshøyskolen",
+            "en": "USN School of Business"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Dag Einar Thorsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18009",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Universitetet i Søraust-Noreg",
+        "nb": "Universitetet i Sørøst-Norge",
+        "en": "University of South-Eastern Norway"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for arkeologi, konservering og historie",
+                "en": "Department of Archaeology, Conservation and History"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det humanistiske fakultet",
+            "en": "Faculty of Humanities"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,394 @@
+{
+  "identifier": "0198ad326a87-6c6c6255-e479-49db-b4a9-06c8e11b5778",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T19:33:05.516956734Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "298",
+          "type": "MonographPages"
+        },
+        "type": "BookAnthology"
+      },
+      "publicationContext": {
+        "isbnList": [
+          "9788282650410"
+        ],
+        "publisher": {
+          "valid": "true",
+          "identifier": "41883300-5B16-49CE-957C-531F91527865",
+          "year": "2012",
+          "name": "Dreyer Forlag A/S",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/41883300-5B16-49CE-957C-531F91527865/2012",
+          "type": "Publisher",
+          "scientificValue": "LevelOne",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=41883300-5B16-49CE-957C-531F91527865"
+        },
+        "type": "Book",
+        "revision": "Unrevised"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Politikk og religion. En farlig kombinasjon?",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øystein Sørensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23000",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Historie",
+              "en": "Historie"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bernt Hagtvet",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23060",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for Statsvitenskap",
+              "en": "Institutt for Statsvitenskap"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Arne Steine",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17109",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for arkeologi, konservering og historie",
+              "en": "Department of Archaeology, Conservation and History"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øystein Sørensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23000",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Historie",
+              "en": "Historie"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bernt Hagtvet",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23060",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for Statsvitenskap",
+              "en": "Institutt for Statsvitenskap"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Arne Steine",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17109",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for arkeologi, konservering og historie",
+              "en": "Department of Archaeology, Conservation and History"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2012",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:06:59.207573922Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/41883300-5B16-49CE-957C-531F91527865/2012"
+  ],
+  "childPublications": [
+    "0198acf6a84b-55027290-1b3c-43be-b8cf-11ca1d1753b9",
+    "0198ad010514-7e57da93-a740-45f7-8998-0dc7ddd2a212",
+    "0198ad1f220d-e9a6bad0-15cf-46df-bdb2-fe2e014cf038",
+    "0198ad1f3f5c-47555716-c565-40be-ad32-1a533e8007eb",
+    "0198ad2372d1-0ddc4d94-f631-4c74-af0a-607b49d19d16",
+    "0198ad31a183-53978025-d5d8-4d37-a599-f943f83ef3f2"
+  ],
+  "modifiedDate": "2025-08-15T10:06:59.207573922Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "932815"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad326a87-6c6c6255-e479-49db-b4a9-06c8e11b5778",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:06:59.207573922Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.8.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for Statsvitenskap",
+                "en": "Institutt for Statsvitenskap"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Historie",
+                    "en": "Historie"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for arkeologi, konservering og historie",
+                "en": "Department of Archaeology, Conservation and History"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det humanistiske fakultet",
+            "en": "Faculty of Humanities"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Bernt Hagtvet",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23060",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Øystein Sørensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23000",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Arne Steine",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17109",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

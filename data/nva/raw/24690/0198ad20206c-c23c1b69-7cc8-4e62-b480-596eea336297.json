@@ -1,0 +1,347 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/513663",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hio@215.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "http://www.hioa.no/extension/hioa/design/hioa/images/nibr/files/filer/KronikkDN220313.pdf",
+      "type": "AssociatedLink",
+      "relation": "dataset"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "227174",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Norges forskningsråd",
+        "en": "Research Council of Norway (RCN)"
+      }
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "41",
+          "type": "Range",
+          "begin": "40"
+        },
+        "type": "MediaFeatureArticle"
+      },
+      "publicationContext": {
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/AE953D55-22FE-4543-A5B1-0C718D78214F/2013",
+        "type": "MediaContributionPeriodical"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Brasiliansk oljebrems",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Yuri Kasahara",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3832",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Einar Braathen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44680",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Yuri Kasahara",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3832",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Einar Braathen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44680",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "3",
+      "year": "2013",
+      "type": "PublicationDate",
+      "day": "22"
+    }
+  },
+  "publicationContextUris": [],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hio",
+      "type": "CristinIdentifier",
+      "value": "1353926"
+    }
+  ],
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad20206c-c23c1b69-7cc8-4e62-b480-596eea336297",
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "By- og regionforskningsinstituttet NIBR",
+                "en": "Norwegian Institute for Urban and Regional Research"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Senter for velferds- og arbeidslivsforskning",
+            "en": "Centre for Welfare and Labour Research"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Einar Braathen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44680",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Yuri Kasahara",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3832",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    }
+  ],
+  "identifier": "0198ad20206c-c23c1b69-7cc8-4e62-b480-596eea336297",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:06:27.873796719Z",
+  "createdDate": "2025-08-15T09:47:00.588600976Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:47:00.588600976Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:47:00.588600976Z",
+  "scientificIndex": {},
+  "status": "PUBLISHED"
+}

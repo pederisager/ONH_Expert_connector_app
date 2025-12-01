@@ -1,0 +1,419 @@
+{
+  "identifier": "0198ad47d658-88924847-47f2-4d6d-a750-9df23e1d906f",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.67.25.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hive@222.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://bjorkneshoyskole.no/aktuelt/podcaster/hva-skjer-med-verden",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T18:13:30.897141571Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaInterview"
+      },
+      "publicationContext": {
+        "medium": {
+          "type": "Internet"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "Hva skjer med verden?"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Spesial: Internasjonal politikk etter Trump.",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dag Einar Thorsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18009",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for industriell økonomi, strategi og statsvitenskap",
+              "en": "Department of Business, Strategy and Political Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bernt Hagtvet",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23060",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Torbjørn Lindstrøm Knutsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/38358",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sosiologi og statsvitenskap",
+              "en": "Department of Sociology and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Journalist"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nikolai Brandal",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dag Einar Thorsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18009",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for industriell økonomi, strategi og statsvitenskap",
+              "en": "Department of Business, Strategy and Political Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bernt Hagtvet",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23060",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Torbjørn Lindstrøm Knutsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/38358",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sosiologi og statsvitenskap",
+              "en": "Department of Sociology and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Journalist"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nikolai Brandal",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "1",
+      "year": "2021",
+      "type": "PublicationDate",
+      "day": "20"
+    }
+  },
+  "createdDate": "2025-08-15T10:30:23.064955235Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:30:23.064955235Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hive",
+      "type": "CristinIdentifier",
+      "value": "1877708"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad47d658-88924847-47f2-4d6d-a750-9df23e1d906f",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:30:23.064955235Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.25.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for sosiologi og statsvitenskap",
+                "en": "Department of Sociology and Political Science"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for samfunns- og utdanningsvitenskap",
+            "en": "Faculty of Social and Educational Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Torbjørn Lindstrøm Knutsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/38358",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs teknisk-naturvitskaplege universitet",
+        "nb": "Norges teknisk-naturvitenskapelige universitet",
+        "en": "Norwegian University of Science and Technology"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for industriell økonomi, strategi og statsvitenskap",
+                "en": "Department of Business, Strategy and Political Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "USN Handelshøyskolen",
+            "en": "USN School of Business"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Dag Einar Thorsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18009",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Universitetet i Søraust-Noreg",
+        "nb": "Universitetet i Sørøst-Norge",
+        "en": "University of South-Eastern Norway"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

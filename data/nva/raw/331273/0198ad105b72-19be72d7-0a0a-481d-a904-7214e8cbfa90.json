@@ -1,0 +1,372 @@
+{
+  "identifier": "0198ad105b72-19be72d7-0a0a-481d-a904-7214e8cbfa90",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/54400000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/53400055.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hive@222.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:30:29.410236838Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "8",
+        "pages": {
+          "end": "10",
+          "type": "Range",
+          "begin": "1"
+        },
+        "articleNumber": "100056",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "6F303506-1B16-4F7E-84B6-E2D1D6B1FD5A",
+        "year": "2022",
+        "name": "Resources, Environment and Sustainability",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/6F303506-1B16-4F7E-84B6-E2D1D6B1FD5A/2022",
+        "type": "Journal",
+        "onlineIssn": "2666-9161",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=6F303506-1B16-4F7E-84B6-E2D1D6B1FD5A"
+      },
+      "doi": "https://doi.org/10.1016/j.resenv.2022.100056"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Terrorism and Environmental Sustainability: Empirical Evidence from the MENA region",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "This study provides a unique perspective in environmental sustainability and research domain by linking climate change and terrorism, which is a new and unexplored factor of environmental sustainability. Through a newly developed predictive model, this study assessed the impact of terrorism on environmental sustainability in the MENA region countries for the time span of 2002–2019 This study also tested the validity of the Environmental Kuznets Curve (EKC) hypothesis. The empirical results indicate that terrorism is harmful for environmental sustainability as it increases CO2 emissions, while trade openness and urbanization have a favorable influence on environmental sustainability as they are negatively associated with CO2 emissions. The results also revealed a positive and statistically significant relationship between energy consumption and CO2 emissions. Empirically, the results confirmed the validity of the EKC hypothesis in the MENA region. The causality exercise shows a one-way causality from CO2 emissions and urbanization towards terrorism. Similarly, a unilateral causality is witnessed from energy consumption towards urbanization and from per capita income towards CO2 emissions. Finally, a two-way causality is detected between trade and terrorism, energy consumption and terrorism and between per capita income and terrorism. These empirical findings provide valuable insights for various stakeholders, i.e., government authorities, policymakers, regulators, practitioners, and researchers.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Muhammad Tahir",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400055.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "COMSATS University Islamabad",
+              "en": "COMSATS University Islamabad"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Umar Burki",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+              "en": "Department of Business, History and Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Toseef Azid",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SA",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/54400000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Saudi-Arabia",
+              "en": "Saudi Arabia"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Muhammad Tahir",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400055.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "COMSATS University Islamabad",
+              "en": "COMSATS University Islamabad"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Umar Burki",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+              "en": "Department of Business, History and Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Toseef Azid",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SA",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/54400000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Saudi-Arabia",
+              "en": "Saudi Arabia"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2022",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:29:47.122394702Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/6F303506-1B16-4F7E-84B6-E2D1D6B1FD5A/2022"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:29:47.122394702Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hive",
+      "type": "CristinIdentifier",
+      "value": "2015083"
+    },
+    {
+      "sourceName": "cristin@hive",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85127338936"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad105b72-19be72d7-0a0a-481d-a904-7214e8cbfa90",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:29:47.122394702Z",
+  "scientificIndex": {
+    "year": "2022",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "SA",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/54400000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Saudi-Arabia",
+        "en": "Saudi Arabia"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+                "en": "Department of Business, History and Social Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "USN Handelshøyskolen",
+            "en": "USN School of Business"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Universitetet i Søraust-Noreg",
+        "nb": "Universitetet i Sørøst-Norge",
+        "en": "University of South-Eastern Norway"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "PK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/53400055.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "COMSATS University Islamabad",
+        "en": "COMSATS University Islamabad"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,180 @@
+{
+  "identifier": "0198ad130f82-24caa150-9492-4c27-adae-85d649e856f1",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/2552750",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "prio@7435.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:19:00.646166789Z",
+  "fundings": [
+    {
+      "identifier": "303344",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/303344",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "303344",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Norges forskningsråd",
+        "en": "Research Council of Norway (RCN)"
+      }
+    }
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "West Chester University",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "Reconciliation, Dialogue, and Peace",
+        "place": {
+          "countryCode": "US",
+          "name": "Pennsylvania",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2023-03-24T00:00:00Z",
+          "to": "2023-03-25T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Reconciliation, Dialogue, and Peace",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:32:44.290886095Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:32:44.290886095Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@prio",
+      "type": "CristinIdentifier",
+      "value": "2374435"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad130f82-24caa150-9492-4c27-adae-85d649e856f1",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:32:44.290886095Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nn": "PRIO - Institutt for fredsforsking",
+        "nb": "PRIO - Institutt for fredsforskning",
+        "en": "PRIO - Peace Research Institute Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

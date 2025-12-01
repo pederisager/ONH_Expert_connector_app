@@ -1,0 +1,584 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10500002.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10600028.0.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/2621885",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://polamk.fi/en/northern-police-research-webinar",
+      "type": "AssociatedLink",
+      "relation": "mention"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "137287",
+      "source": {
+        "identifier": "NORDFORSK",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NORDFORSK",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Nordforsk",
+          "en": "Nordforsk"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "137287",
+      "source": {
+        "identifier": "NORDFORSK",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NORDFORSK",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Nordforsk",
+          "en": "Nordforsk"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Nordforsk",
+        "en": "Nordforsk"
+      }
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "The Police University College (FI) and SIPR (UK)",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "Northern Police Research Webinar",
+        "place": {
+          "name": "Online",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2024-01-19T00:00:00Z",
+          "to": "2024-01-19T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 7,
+    "mainTitle": "Understanding and Intervening against Sexual Harassment at work (UISH)",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "How sexual harassment (SH) is understood and intervened against in the police? SH is an intersectional phenomenon. Different forms of social inequality, oppression and discrimination interact in it and potentially hinder the development of a safe, inclusive and sustainable working life for police employees and others.  Sexual harassment is approached in UISH from three perspectives: (1) bystanders, (2) harassed/exposed, and (3) harassers.\r\n\r\nThe ‘bystander perspective’ (1) build upon the fact that most cases of SH (e.g., slurs, humour, and verbal comments) occur in a work group. The ‘harassed and exposed perspective’ (2) is based on already existing studies documenting intersectional differences (e.g., gender) in perceived and actual acts of SH within the police. UISH aims at developing “in-group forum” initiative to prevent and intervene against SH as well as mapping practices of receptivity and resistance to SH initiatives. The ‘perpetrator perspective’ (3) covers those who harass and expose others to harassment, as well as the human and structural factors enabling harassment and placing different levels of risk based on for instance age, gender, race, sexual orientation, and position on different employees in the police. Designing research with ‘perpetrator perspective’ is methodologically challenging.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Silje Lundgren",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Linköpings universitet",
+              "en": "Linköping University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Malin Wieslander",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Linköpings universitet",
+              "en": "Linköping University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Finnborg Salome Steinþórsdóttir",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IS",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10500002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Háskóli Íslands",
+              "en": "University of Iceland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Gyða Margrét Pétursdóttir",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IS",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10500002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Háskóli Íslands",
+              "en": "University of Iceland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Laufey Axelsdottir",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IS",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10500002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Háskóli Íslands",
+              "en": "University of Iceland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tale Røijen Størdal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1697096",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for psykologi",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Silje Lundgren",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Linköpings universitet",
+              "en": "Linköping University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Malin Wieslander",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Linköpings universitet",
+              "en": "Linköping University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Finnborg Salome Steinþórsdóttir",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IS",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10500002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Háskóli Íslands",
+              "en": "University of Iceland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Gyða Margrét Pétursdóttir",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IS",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10500002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Háskóli Íslands",
+              "en": "University of Iceland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Laufey Axelsdottir",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IS",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10500002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Háskóli Íslands",
+              "en": "University of Iceland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tale Røijen Størdal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1697096",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for psykologi",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    }
+  },
+  "publicationContextUris": [],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "2238340"
+    }
+  ],
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad031064-ef0694d2-ca5c-49c9-8c77-9ad70934859d",
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "countryCode": "IS",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10500002.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Háskóli Íslands",
+        "en": "University of Iceland"
+      }
+    },
+    {
+      "countryCode": "SE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600028.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Linköpings universitet",
+        "en": "Linköping University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for psykologi",
+                "en": "Department of Psychology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for samfunns- og utdanningsvitenskap",
+            "en": "Faculty of Social and Educational Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tale Røijen Størdal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1697096",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs teknisk-naturvitskaplege universitet",
+        "nb": "Norges teknisk-naturvitenskapelige universitet",
+        "en": "Norwegian University of Science and Technology"
+      }
+    }
+  ],
+  "identifier": "0198ad031064-ef0694d2-ca5c-49c9-8c77-9ad70934859d",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:15:32.032474435Z",
+  "createdDate": "2025-08-15T09:15:15.940921991Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:15:15.940921991Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:15:15.940921991Z",
+  "scientificIndex": {},
+  "status": "PUBLISHED"
+}

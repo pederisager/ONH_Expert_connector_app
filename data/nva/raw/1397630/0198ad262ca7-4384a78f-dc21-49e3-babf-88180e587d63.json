@@ -1,0 +1,251 @@
+{
+  "identifier": "0198ad262ca7-4384a78f-dc21-49e3-babf-88180e587d63",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:19:50.026058522Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "EncyclopediaChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9783031403019"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "06A19C54-F15A-4D3E-BE4B-87DFC7C6BE13",
+                "year": "2023",
+                "name": "Palgrave Macmillan",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/06A19C54-F15A-4D3E-BE4B-87DFC7C6BE13/2023",
+                "type": "Publisher",
+                "scientificValue": "LevelTwo",
+                "isbnPrefix": "978-1-4039,978-0-7329,978-0-230",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=06A19C54-F15A-4D3E-BE4B-87DFC7C6BE13"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "The Palgrave Encyclopedia of Memory Studies",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Lucas Manuel Bietti",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1293597",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Martin Pogačar",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198acfce293-93d89a93-9288-401c-8db5-980130234e95",
+        "type": "Anthology"
+      },
+      "doi": "https://doi.org/10.1007/978-3-030-93789-8_38-2"
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Frederic Bartlett",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aalborg Universitet",
+              "en": "Aalborg University"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brady Wagoner",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aalborg Universitet",
+              "en": "Aalborg University"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brady Wagoner",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1085"
+  },
+  "createdDate": "2025-08-15T09:53:36.935578829Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:08:23.645010220Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2258808"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad262ca7-4384a78f-dc21-49e3-babf-88180e587d63",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:53:36.935578829Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Aalborg Universitet",
+        "en": "Aalborg University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Københavns Universitet",
+        "en": "University of Copenhagen"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

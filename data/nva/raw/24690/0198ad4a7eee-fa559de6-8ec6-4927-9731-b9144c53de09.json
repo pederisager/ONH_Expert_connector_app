@@ -1,0 +1,439 @@
+{
+  "identifier": "0198ad4a7eee-fa559de6-8ec6-4927-9731-b9144c53de09",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/29600002.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.13.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/29600003.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "umb@192.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+  },
+  "handle": "https://hdl.handle.net/11250/2566613",
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:11:10.140666777Z",
+  "fundings": [
+    {
+      "identifier": "178757",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/178757",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "41",
+        "pages": {
+          "end": "69",
+          "type": "Range",
+          "begin": "61"
+        },
+        "articleNumber": "JLUP1625",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "56E8BDCC-0EE7-4EB8-9030-5B1419240D2A",
+        "year": "2014",
+        "name": "Land Use Policy",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/56E8BDCC-0EE7-4EB8-9030-5B1419240D2A/2014",
+        "type": "Journal",
+        "onlineIssn": "1873-5754",
+        "printIssn": "0264-8377",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=56E8BDCC-0EE7-4EB8-9030-5B1419240D2A"
+      },
+      "doi": "https://doi.org/10.1016/j.landusepol.2014.05.003"
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Lineage and land reforms in Malawi: Do matrilineal and patrilineal landholding systems represent a problem for land reforms in Malawi?",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Based on government statistics and interviews with villagers across Malawi this article argues that customary matrilineal and patrilineal land tenure systems serve to weaken security of land tenure for some family members as well as obstructing the creation of gender-neutral inheritance of lands. Data from the National Census of Agriculture and Livestock 2007and the 2008 Population and Housing Census are used to characterize marriage systems and landholding patterns of local communities. Marriage systems correspond to customary land-tenure patterns of matrilineal or patrilineal cultures. The differences between the two ways of land holding represent a challenge for land reforms aimed at unifying rules for land tenure and land devolution. Drawing on an analogy of the resilience of the patrilineal land holding system in Norway, we argue that it will be difficult to remove the preferential rights of lineage members directly. We recommend that, instead of creating a unified national system, existing land rights should be formally recognized and circumscribed by fair procedures. A well-designed landholding system should aim to ease the transitions of diverse customary tenure systems towards the requirements of a modern large-scale society. ",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Erling Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/36481",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eiendom og juss"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Daimon Kambewa",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "MW",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/29600002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Malawi - Branch: Bunda College of Agriculture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Alister Munthali",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "MW",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/29600003.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Malawi - Branch: Chancellor College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Erling Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/36481",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eiendom og juss"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Daimon Kambewa",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "MW",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/29600002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Malawi - Branch: Bunda College of Agriculture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Alister Munthali",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "MW",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/29600003.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Malawi - Branch: Chancellor College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2014",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:33:17.294129317Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/56E8BDCC-0EE7-4EB8-9030-5B1419240D2A/2014"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:33:17.294129317Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@umb",
+      "type": "CristinIdentifier",
+      "value": "1135827"
+    },
+    {
+      "sourceName": "cristin@umb",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-84901622535"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad4a7eee-fa559de6-8ec6-4927-9731-b9144c53de09",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:33:17.294129317Z",
+  "scientificIndex": {
+    "year": "2014",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for eiendom og juss"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Landskap og samfunn"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Erling Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/36481",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs miljø- og biovitskaplege universitet",
+        "nb": "Norges miljø- og biovitenskapelige universitet"
+      }
+    },
+    {
+      "countryCode": "MW",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/29600003.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of Malawi - Branch: Chancellor College"
+      }
+    },
+    {
+      "countryCode": "MW",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/29600002.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of Malawi - Branch: Bunda College of Agriculture"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "By- og regionforskningsinstituttet NIBR",
+                "en": "Norwegian Institute for Urban and Regional Research"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Senter for velferds- og arbeidslivsforskning",
+            "en": "Centre for Welfare and Labour Research"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

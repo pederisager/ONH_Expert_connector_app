@@ -1,0 +1,1097 @@
+{
+  "identifier": "0198ad418ce4-05352747-2289-4670-a442-96b62ce145bc",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/14400240.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.70.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.13",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "ous@2012.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  },
+  "handle": "https://hdl.handle.net/10852/71621",
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:33:36.392706174Z",
+  "fundings": [
+    {
+      "identifier": "2013021",
+      "source": {
+        "identifier": "HSØ",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/HS%C3%98",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Helse Sør-Øst RHF",
+          "en": "South-Eastern Norway Regional Health Authority"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "240476",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/240476",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "NS9021K",
+      "source": {
+        "identifier": "SIGMA2",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/SIGMA2",
+        "type": "FundingSource",
+        "labels": {
+          "nn": "Sigma2",
+          "nb": "Sigma2",
+          "en": "Sigma2"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "249988",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/249988",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "28",
+        "pages": {
+          "end": "4048",
+          "type": "Range",
+          "begin": "4036"
+        },
+        "issue": "11",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "0A46C4AB-8B69-4D54-A14C-DD9289E47269",
+        "year": "2018",
+        "name": "Cerebral Cortex",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/0A46C4AB-8B69-4D54-A14C-DD9289E47269/2018",
+        "type": "Journal",
+        "onlineIssn": "1460-2199",
+        "printIssn": "1047-3211",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=0A46C4AB-8B69-4D54-A14C-DD9289E47269"
+      },
+      "doi": "https://doi.org/10.1093/cercor/bhy196"
+    },
+    "contributorsCount": 10,
+    "mainTitle": "Ca2+ signals in astrocytes facilitate spread of epileptiform activity",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjell Heuser",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7742",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Cecilie Nome",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/645037",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.13",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Klas Pettersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/8811",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Knut Sindre Åbjørsbråten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/410061",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Vidar Jensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22757",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Wannan Tang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/506470",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rolf Sprengel",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/387847",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400240.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Ruprecht-Karls-Universität Heidelberg",
+              "en": "University of Heidelberg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Erik Taubøll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17624",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.13",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Erlend Arnulf Nagelhus",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14392",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rune Enger",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10829",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjell Heuser",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7742",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Cecilie Nome",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/645037",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.13",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Klas Pettersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/8811",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Knut Sindre Åbjørsbråten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/410061",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Vidar Jensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22757",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Wannan Tang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/506470",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rolf Sprengel",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/387847",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400240.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Ruprecht-Karls-Universität Heidelberg",
+              "en": "University of Heidelberg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Erik Taubøll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17624",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.13",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Erlend Arnulf Nagelhus",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14392",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rune Enger",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10829",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Nevrologisk avdeling",
+              "en": "Department of Neurology"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+            "type": "Organization",
+            "labels": {
+              "nb": "Gliaceller",
+              "en": "Glial cells"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2018",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:23:31.044108979Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/0A46C4AB-8B69-4D54-A14C-DD9289E47269/2018"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:23:31.044108979Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@ous",
+      "type": "CristinIdentifier",
+      "value": "1634008"
+    },
+    {
+      "sourceName": "cristin@ous",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85054891155"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad418ce4-05352747-2289-4670-a442-96b62ce145bc",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:23:31.044108979Z",
+  "scientificIndex": {
+    "year": "2018",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.70.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Nevrologisk avdeling",
+                "en": "Department of Neurology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.22.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Nevroklinikken",
+            "en": "Division of Clinical Neuroscience"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kjell Heuser",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7742",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Erlend Arnulf Nagelhus",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14392",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Erik Taubøll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17624",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Rune Enger",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10829",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0"
+                        }
+                      ],
+                      "hasPart": [
+                        {
+                          "partOf": [
+                            {
+                              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50"
+                            }
+                          ],
+                          "countryCode": "NO",
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.57",
+                          "type": "Organization",
+                          "labels": {
+                            "nb": "Gliaceller",
+                            "en": "Glial cells"
+                          }
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.50",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Seksjon for fysiologi",
+                        "en": "Division of Physiology"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Avdeling for molekylærmedisin",
+                    "en": "Department of Molecular Medicine"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for medisinske basalfag",
+                "en": "Institute of Basic Medical Sciences"
+              }
+            },
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.0"
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.13",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Nevrologisk avdeling",
+                        "en": "Department of Neurology"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.42.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Nevroklinikken",
+                    "en": "Division of Clinical Neuroscience"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for klinisk medisin",
+                "en": "Institute of Clinical Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Knut Sindre Åbjørsbråten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/410061",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Klas Pettersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/8811",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Wannan Tang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/506470",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Erik Taubøll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17624",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Vidar Jensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22757",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Rune Enger",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10829",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Cecilie Nome",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/645037",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Erlend Arnulf Nagelhus",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14392",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "countryCode": "DE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400240.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Ruprecht-Karls-Universität Heidelberg",
+        "en": "University of Heidelberg"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

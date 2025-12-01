@@ -1,0 +1,285 @@
+{
+  "identifier": "0198ad1bffae-c5de9127-a588-449e-b27a-7c775746497b",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/44400235.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/35900093.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://isaconf.confex.com/isaconf/forum2025/meetingapp.cgi/Paper/159494",
+      "type": "AssociatedLink",
+      "relation": "mention"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:52:53.557428985Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "ISA",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "ISA Forum of Sociology",
+        "place": {
+          "countryCode": "MA",
+          "name": "Rabat",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2025-07-06T00:00:00Z",
+          "to": "2025-07-11T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Whistleblowing at Work: Whither Sustainability...",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Premilla D'Cruz",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/44400235.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Indian Institute of Management Ahmedabad",
+              "en": "Indian Institute of Management Ahmedabad"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tina Uys",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ZA",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/35900093.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Johannesburg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Premilla D'Cruz",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/44400235.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Indian Institute of Management Ahmedabad",
+              "en": "Indian Institute of Management Ahmedabad"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tina Uys",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ZA",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/35900093.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Johannesburg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2025",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:42:30.062090441Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:42:30.062090441Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "2392625"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad1bffae-c5de9127-a588-449e-b27a-7c775746497b",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:42:30.062090441Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "IN",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/44400235.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Indian Institute of Management Ahmedabad",
+        "en": "Indian Institute of Management Ahmedabad"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "countryCode": "ZA",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/35900093.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of Johannesburg"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,298 @@
+{
+  "identifier": "0198ad25ff8a-d2617a88-9e32-4d27-8b16-897a48c15e66",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:00:02.901969269Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "31",
+        "pages": {
+          "end": "766",
+          "type": "Range",
+          "begin": "752"
+        },
+        "issue": "4",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "C9397BFF-3B5F-494E-BB17-FF73106909E1",
+        "year": "2023",
+        "name": "Journal of Contingencies and Crisis Management",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/C9397BFF-3B5F-494E-BB17-FF73106909E1/2023",
+        "type": "Journal",
+        "onlineIssn": "1468-5973",
+        "printIssn": "0966-0879",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=C9397BFF-3B5F-494E-BB17-FF73106909E1"
+      },
+      "doi": "https://doi.org/10.1111/1468-5973.12478"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "It depends who you ask: Divergences in staff and external stakeholder narratives about the causes of a healthcare failure",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "E. Julie Hald",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Alex Gillespie",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tom W. Reader",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "E. Julie Hald",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Alex Gillespie",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tom W. Reader",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:53:25.386301668Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/C9397BFF-3B5F-494E-BB17-FF73106909E1/2023"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:53:25.386301668Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85161430544"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2157346"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad25ff8a-d2617a88-9e32-4d27-8b16-897a48c15e66",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:53:25.386301668Z",
+  "scientificIndex": {
+    "year": "2023",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "London School of Economics and Political Science",
+        "en": "London School of Economics and Political Science"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

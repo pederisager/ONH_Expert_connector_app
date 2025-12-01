@@ -1,0 +1,175 @@
+{
+  "identifier": "0198ad032d39-e038aa55-099a-43a9-9d5b-6cf8db36a9e6",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hibo@204.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://radio.nrk.no/serie/distriktsprogram-nordland/DKNO01009919/27-05-2019?fbclid=IwAR1S9JBhfxMX1Lp_AgFvQbT-_RnC6q5iQC0GJ_M_oCFmere0wRWtuoh827w#t=1h12m8.04s",
+      "type": "AssociatedLink",
+      "relation": "dataset"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:20:03.218131893Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaInterview"
+      },
+      "publicationContext": {
+        "format": "Sound",
+        "medium": {
+          "type": "Radio"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "NRK P1"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Sikkerhetspolitikk i nord",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen",
+              "en": "Nord University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen",
+              "en": "Nord University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "5",
+      "year": "2019",
+      "type": "PublicationDate",
+      "day": "27"
+    }
+  },
+  "createdDate": "2025-08-15T09:15:23.321264408Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:15:23.321264408Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hibo",
+      "type": "CristinIdentifier",
+      "value": "1704939"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad032d39-e038aa55-099a-43a9-9d5b-6cf8db36a9e6",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:15:23.321264408Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Handelshøgskolen",
+            "en": "Nord University Business School"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Nord universitet",
+        "en": "Nord University"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

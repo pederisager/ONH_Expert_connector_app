@@ -1,0 +1,305 @@
+{
+  "identifier": "0198ad1fccfa-7fef5163-d626-4149-a40e-b6071458dac6",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/150.35.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+    "https://api.test.nva.aws.unit.no/cristin/organization/150.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "nih@150.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/150.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://open.spotify.com/episode/6VsyZxJ88AUrexSL9Hk3Ew?si=61e6d737d84d4ab1",
+      "type": "AssociatedLink",
+      "relation": "dataset"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:21:47.117862951Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/150.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaParticipationInRadioOrTv"
+      },
+      "publicationContext": {
+        "format": "Sound",
+        "medium": {
+          "type": "Radio"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "Podkast, Psykt interessant"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Kan media påvirke våre oppfatninger om kjønn?",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Erik Carlquist",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15657",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+            "type": "Organization",
+            "labels": {
+              "nb": "Metode, arbeids-, kultur- og sosialpsyk",
+              "en": "Metode, arbeids-, kultur- og sosialpsyk"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "ProgrammeLeader"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Linn Engdahl-Høgåsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1477405",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/150.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/150.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for lærerutdanning og friluftslivsstudier",
+              "en": "Department of teacher education and outdoor life studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Erik Carlquist",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15657",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+            "type": "Organization",
+            "labels": {
+              "nb": "Metode, arbeids-, kultur- og sosialpsyk",
+              "en": "Metode, arbeids-, kultur- og sosialpsyk"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "ProgrammeLeader"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Linn Engdahl-Høgåsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1477405",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/150.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/150.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for lærerutdanning og friluftslivsstudier",
+              "en": "Department of teacher education and outdoor life studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "10",
+      "year": "2020",
+      "type": "PublicationDate",
+      "day": "26"
+    }
+  },
+  "createdDate": "2025-08-15T09:46:39.226654556Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:46:39.226654556Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@nih",
+      "type": "CristinIdentifier",
+      "value": "2368654"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad1fccfa-7fef5163-d626-4149-a40e-b6071458dac6",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:46:39.226654556Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Metode, arbeids-, kultur- og sosialpsyk",
+                    "en": "Metode, arbeids-, kultur- og sosialpsyk"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykologisk institutt",
+                "en": "Department of Psychology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Erik Carlquist",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15657",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/150.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/150.35.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for lærerutdanning og friluftslivsstudier",
+            "en": "Department of teacher education and outdoor life studies"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/150.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Linn Engdahl-Høgåsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1477405",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Norges idrettshøgskole",
+        "en": "Norwegian School of Sport Sciences"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

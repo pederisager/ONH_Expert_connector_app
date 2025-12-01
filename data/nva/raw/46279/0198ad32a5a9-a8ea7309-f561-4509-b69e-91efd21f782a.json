@@ -1,0 +1,308 @@
+{
+  "identifier": "0198ad32a5a9-a8ea7309-f561-4509-b69e-91efd21f782a",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/465586",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uib@184.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:42:02.623624491Z",
+  "fundings": [
+    {
+      "source": {
+        "identifier": "PHS",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/PHS",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Politihøgskolen",
+          "en": "Norwegian Police University College"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "source": {
+        "identifier": "UIB",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/UIB",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Universitetet i Bergen",
+          "en": "University of Bergen"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "5",
+          "type": "Range",
+          "begin": "4"
+        },
+        "issue": "1",
+        "type": "MediaFeatureArticle"
+      },
+      "publicationContext": {
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/ED9E9CE2-5A00-4CD1-AE50-398E9446CBCC/2013",
+        "type": "MediaContributionPeriodical"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Ledelse av mangfold i politiet",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "abstract": "Siden mangfoldsåret 2008 har politiet arbeidet med «Plan for mangfoldsarbeidet i politi- og lensmannsetaten» (Politidirektoratet, 2008). Som den første sentrale strategiske plan i politiet som dekker hele mangfoldsbegrepet er hensikten å arbeide målrettet og systematisert. Strategien er å integrere mangfold som en naturlig del av den ordinære virksomheten. På vei inn i det siste året for mangfoldsplanens virketid vil vi i den artikkelen fokusere på kulturelt mangfold i politiet. For å gi noen innspill til ledelse av mangfold i politiet i praksis vil vi knytte en modell for akkulturasjon sammen med funn fra en undersøkelse av hvordan politistudenter med flerkulturell bakgrunn tilpasser seg studiemiljøet.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hege Høivik Bye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hege Høivik Bye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for samfunnspsykologi",
+              "en": "Department of Psychosocial Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2013",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:07:14.345526984Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:07:14.345526984Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uib",
+      "type": "CristinIdentifier",
+      "value": "1019167"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad32a5a9-a8ea7309-f561-4509-b69e-91efd21f782a",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:07:14.345526984Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.35.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for samfunnspsykologi",
+                "en": "Department of Psychosocial Science"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det psykologiske fakultet",
+            "en": "Faculty of Psychology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Hege Høivik Bye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47557",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

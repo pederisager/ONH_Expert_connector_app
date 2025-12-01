@@ -1,0 +1,273 @@
+{
+  "identifier": "0198ad3c4a69-5f32ec3e-28e1-419c-b625-2d8065b1f430",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/223.15.40.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/223.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/223.15.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hvo@223.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/223.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:43:44.988432971Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/223.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "PopularScienceArticle"
+      },
+      "publicationContext": {
+        "identifier": "02388C69-F74E-448B-A8EB-0DA35FA0F63E",
+        "year": "2020",
+        "name": "“1914-1918-online. International Encyclopedia of the First World War",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/02388C69-F74E-448B-A8EB-0DA35FA0F63E/2020",
+        "type": "Journal",
+        "scientificValue": "Unassigned",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/nvakanal?pid=02388C69-F74E-448B-A8EB-0DA35FA0F63E"
+      },
+      "doi": "https://doi.org/10.15463/ie1418.11474"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Intelligence and Espionage (Norway)",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ola Teige",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18263",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Historisk institutt",
+              "en": "Department of History"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nikolai Brandal",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ola Teige",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18263",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Historisk institutt",
+              "en": "Department of History"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nikolai Brandal",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2020",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:17:46.345265016Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/02388C69-F74E-448B-A8EB-0DA35FA0F63E/2020"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:17:46.345265016Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hvo",
+      "type": "CristinIdentifier",
+      "value": "1822007"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad3c4a69-5f32ec3e-28e1-419c-b625-2d8065b1f430",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:17:46.345265016Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.40.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Historisk institutt",
+                "en": "Department of History"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Avdeling for samfunnsfag og historie",
+            "en": "Faculty of Social Sciences and History"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ola Teige",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18263",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Høgskulen i Volda",
+        "nb": "Høgskulen i Volda",
+        "en": "Volda University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,171 @@
+{
+  "identifier": "0198ad47bd64-d9bdc982-6ebd-48bd-8a50-8325f261366f",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fhs@1627.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "http://tja.eu/nordomradene/bryr-eu-nord-norge/",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:04:26.241914020Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "MediaFeatureArticle"
+      },
+      "publicationContext": {
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/B62AFE82-F155-4846-97B0-9F0EB21C7ED9/2015",
+        "type": "MediaContributionPeriodical"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Hvorfor bryr EU seg om Nord-Norge?",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for forsvarsstudier",
+              "en": "Norwegian Institute for Defence Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for forsvarsstudier",
+              "en": "Norwegian Institute for Defence Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "12",
+      "year": "2015",
+      "type": "PublicationDate",
+      "day": "3"
+    }
+  },
+  "createdDate": "2025-08-15T10:30:16.676058151Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:30:16.676058151Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fhs",
+      "type": "CristinIdentifier",
+      "value": "1369629"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad47bd64-d9bdc982-6ebd-48bd-8a50-8325f261366f",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:30:16.676058151Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for forsvarsstudier",
+            "en": "Norwegian Institute for Defence Studies"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Forsvarets høgskole",
+        "en": "Norwegian Defence University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

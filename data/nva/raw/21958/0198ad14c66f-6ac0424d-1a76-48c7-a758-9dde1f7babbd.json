@@ -1,0 +1,340 @@
+{
+  "identifier": "0198ad14c66f-6ac0424d-1a76-48c7-a758-9dde1f7babbd",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.33.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.33.70",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "prio@7435.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:44:42.761781771Z",
+  "fundings": [
+    {
+      "identifier": "179566",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/179566",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "1B45673E-15DA-4E33-91B5-6600C998DEDD",
+        "year": "2012",
+        "name": "Philosophy Compass",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/1B45673E-15DA-4E33-91B5-6600C998DEDD/2012",
+        "type": "Journal",
+        "onlineIssn": "1747-9991",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=1B45673E-15DA-4E33-91B5-6600C998DEDD"
+      },
+      "doi": "https://doi.org/10.1111/j.1747-9991.2011.00458.x"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "The Ethics of War. Part I: Historical Trends",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Endre Begby",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/425",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.33.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.33.70",
+            "type": "Organization",
+            "labels": {
+              "nb": "Senter for studier av rasjonell, språklig og moralsk handling",
+              "en": "Centre for the Study of Mind in Nature"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gregory Martin Reichberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/318938",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Endre Begby",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/425",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.33.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.33.70",
+            "type": "Organization",
+            "labels": {
+              "nb": "Senter for studier av rasjonell, språklig og moralsk handling",
+              "en": "Centre for the Study of Mind in Nature"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gregory Martin Reichberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/318938",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2012",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:34:36.655405838Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/1B45673E-15DA-4E33-91B5-6600C998DEDD/2012"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:34:36.655405838Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@prio",
+      "type": "CristinIdentifier",
+      "value": "898925"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad14c66f-6ac0424d-1a76-48c7-a758-9dde1f7babbd",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:34:36.655405838Z",
+  "scientificIndex": {
+    "year": "2012",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nn": "PRIO - Institutt for fredsforsking",
+        "nb": "PRIO - Institutt for fredsforskning",
+        "en": "PRIO - Peace Research Institute Oslo"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.33.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.33.70",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Senter for studier av rasjonell, språklig og moralsk handling",
+                    "en": "Centre for the Study of Mind in Nature"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.33.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for filosofi, idé- og kunsthistorie og klassiske språk",
+                "en": "Department of Philosophy, Classics, History of Art and Ideas"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det humanistiske fakultet",
+            "en": "Faculty of Humanities"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Endre Begby",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/425",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

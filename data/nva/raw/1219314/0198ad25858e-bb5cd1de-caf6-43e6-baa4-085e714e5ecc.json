@@ -1,0 +1,654 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/80500023.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/5700.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10600006.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/689019",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "identifier": "7e13a9b7-df69-45f9-82f6-323b73e87142",
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIA",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-09-17T12:09:03.330006571Z"
+      },
+      "size": "10521",
+      "name": "dublin_core.xml",
+      "mimeType": "application/xml",
+      "type": "HiddenFile"
+    },
+    {
+      "identifier": "d2eb7d65-9f2a-419a-b680-5a815e132566",
+      "license": {
+        "name": "CC-BY",
+        "type": "License",
+        "value": "https://creativecommons.org/licenses/by/4.0",
+        "labels": {
+          "nb": "Creative Commons - Navngivelse",
+          "en": "Creative Commons - Attribution"
+        }
+      },
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIA",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-09-17T12:09:03.329992073Z"
+      },
+      "size": "1750934",
+      "publisherVersion": "PublishedVersion",
+      "name": "Article.pdf",
+      "mimeType": "application/pdf",
+      "publishedDate": "2025-09-17T12:09:03.551215892Z",
+      "type": "OpenFile",
+      "legalNote": "© 2024 The Author(s)"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "689019",
+      "source": {
+        "identifier": "UIA",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/UIA",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Universitetet i Agder",
+          "en": "University of Agder"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "63",
+        "pages": {
+          "end": "17",
+          "type": "Range",
+          "begin": "1"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "657F8FAB-D6FA-4438-856F-DD9F2A5D26FB",
+        "year": "2024",
+        "name": "European Journal of Nutrition",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/657F8FAB-D6FA-4438-856F-DD9F2A5D26FB/2024",
+        "type": "Journal",
+        "onlineIssn": "1436-6215",
+        "printIssn": "1436-6207",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=657F8FAB-D6FA-4438-856F-DD9F2A5D26FB"
+      },
+      "doi": "https://doi.org/10.1007/s00394-024-03453-4"
+    },
+    "contributorsCount": 6,
+    "mainTitle": "Micronutrient intake and status in young vegans, lacto-ovo-vegetarians, pescatarians, flexitarians, and omnivores",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Purpose: Whether youth who follow plant-based diets in Nordic countries meet their dietary needs for micronutrients remains unclear. This study aims to evaluate micronutrient intake and status in Norwegian youth following vegan, lacto-ovo-vegetarian, pescatarian, flexitarian and omnivore diets. Methods: Cross-sectional design, with healthy 16-to-24-year-olds (n = 165). Participants were asked to complete a questionnaire and four 24-hour dietary recalls. Dried blood spots (DBS) and spot-urine samples were collected for analysis of methyl malonic acid (MMA) (n = 65), haemoglobin (Hb) (n = 164) and urinary iodine concentration (UIC) (n = 163). Results: Vegans reported highest habitual supplement usage of multivitamin (58%), B12 (90%) and macroalgae consumption (32%), while flexitarians reported highest habitual usage of omega-3 supplements (56%). For daily supplement usage, vegans reported highest use of multivitamins (42%), B12 (79%), iodine (37%) and iron (63%). Increased risk of inadequate intake (energy-adjusted) were found for vitamin D (60% within lacto-ovo-vegetarians), selenium (70% within lacto-ovo-vegetarians, 65% within omnivores), and iodine (63% within vegans). Median MMA levels suggest low risk of insufficient B12 status across all groups (MMA 0.04‒0.37µmol/l) and 2% had MMA levels indicating possible B12 deficiency and 8% had elevated levels. Median Hb levels indicated low risk of anemia across all groups (≥ 12.0 females, ≥ 13.0 g/dl males), though 7% had Hb values indicating risk of mild anemia and 4% risk of moderate anemia. The median UIC indicates mild iodine deficiency in all groups (UIC < 100 µg/l), except vegans, who were moderately iodine deficient (UIC < 50 µg/l). Conclusions: Our study indicated that the participating youth had low risk of inadequate intake of most micronutrients, partly due to high supplement usage. However, for iodine, vitamin D, and selenium higher risk of inadequate intake was found. UIC corroborated the low iodine intake among vegans. Thus, we suggest iodine status of youth in Norway should be monitored, especially among young fertile women who omits dietary iodine sources, until a mandatory iodine fortification program is implemented. Furthermore, we suggest that food education on how to secure sufficient nutrients from food in general should be provided to the Norwegian youth population, especially how to secure adequate intake of vitamin D, selenium and iodine.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christel Larsson",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600006.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Göteborgs universitet",
+              "en": "University of Gothenburg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Claire Margerison",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "AU",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/80500023.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Deakin University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Isabelle Mulkerrins",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600006.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Göteborgs universitet",
+              "en": "University of Gothenburg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7056",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/5700.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftforeningen",
+              "en": "Norwegian Cancer Society"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Dagfinn Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/7056",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anine Christine Medin",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/507618",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christel Larsson",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600006.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Göteborgs universitet",
+              "en": "University of Gothenburg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Claire Margerison",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "AU",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/80500023.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Deakin University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Isabelle Mulkerrins",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600006.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Göteborgs universitet",
+              "en": "University of Gothenburg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7056",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/5700.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftforeningen",
+              "en": "Norwegian Cancer Society"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Dagfinn Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/7056",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anine Christine Medin",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/507618",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    },
+    "tags": [
+      "Diet",
+      "Youth",
+      "Dietary assessment",
+      "Nutrition status",
+      "Nutrient intake",
+      "Plant-based diet"
+    ]
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/657F8FAB-D6FA-4438-856F-DD9F2A5D26FB/2024"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "brage@uia",
+      "type": "HandleIdentifier",
+      "value": "https://hdl.handle.net/11250/3167184"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2284961"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85198982689"
+    }
+  ],
+  "filesStatus": "hasPublicFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad25858e-bb5cd1de-caf6-43e6-baa4-085e714e5ecc",
+  "topLevelOrganizations": [
+    {
+      "countryCode": "SE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600006.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Göteborgs universitet",
+        "en": "University of Gothenburg"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for ernæring og folkehelse",
+                "en": "Department of Nutrition and Public Health"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helse- og idrettsvitenskap",
+            "en": "Faculty of Health and Sport Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anine Christine Medin",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/507618",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Agder",
+        "en": "University of Agder"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7056",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "AU",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/80500023.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Deakin University"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Imperial College London"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/5700.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Kreftforeningen",
+        "en": "Norwegian Cancer Society"
+      }
+    }
+  ],
+  "identifier": "0198ad25858e-bb5cd1de-caf6-43e6-baa4-085e714e5ecc",
+  "handle": "https://hdl.handle.net/11250/3167184",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-12-01T09:50:01.436058903Z",
+  "createdDate": "2025-08-15T09:52:54.158427376Z",
+  "childPublications": [],
+  "modifiedDate": "2025-09-17T12:09:03.800889262Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "Kan godkjennes i nytt system. AM",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T09:52:54.158427376Z",
+  "scientificIndex": {
+    "year": "2024",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

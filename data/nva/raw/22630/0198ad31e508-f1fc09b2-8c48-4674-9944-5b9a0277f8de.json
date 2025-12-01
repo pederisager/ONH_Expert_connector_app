@@ -1,0 +1,601 @@
+{
+  "identifier": "0198ad31e508-f1fc09b2-8c48-4674-9944-5b9a0277f8de",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7522.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fhi@7502.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:51:21.239595081Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7522.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "12",
+        "pages": {
+          "type": "Range"
+        },
+        "articleNumber": "1120",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "D0FB75E4-8313-43F0-9B9D-44E02DCFA8EF",
+        "year": "2012",
+        "name": "BMC Public Health",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/D0FB75E4-8313-43F0-9B9D-44E02DCFA8EF/2012",
+        "type": "Journal",
+        "onlineIssn": "1471-2458",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=D0FB75E4-8313-43F0-9B9D-44E02DCFA8EF"
+      },
+      "doi": "https://doi.org/10.1186/1471-2458-12-1120"
+    },
+    "contributorsCount": 5,
+    "mainTitle": "Trajectories of maternal symptoms of depression and anxiety over 13 years: the influence of stress, social support, and maternal temperament",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anni Skipstein",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/4945",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Wendy Nilsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5228",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anni Skipstein",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/4945",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Kristin Schjelderup Mathiesen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/62307",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Folkehelseinstituttet",
+              "en": "Norwegian Institute of Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Harald Janson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22351",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7522.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Harald Janson",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22351",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "NUBU – Nasjonalt utviklingssenter for barn og unge",
+              "en": "The Norwegian Center for Child Behavioral Development (NUBU)"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Kjeldsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for barns helse og utvikling",
+              "en": "Child Health and Development"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Wendy Nilsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/5228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Folkehelse og forebygging",
+              "en": "Public Health and Prevention"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kristin Schjelderup Mathiesen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/62307",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Wendy Nilsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5228",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anni Skipstein",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/4945",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Kristin Schjelderup Mathiesen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/62307",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Folkehelseinstituttet",
+              "en": "Norwegian Institute of Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anni Skipstein",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/4945",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Wendy Nilsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5228",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anni Skipstein",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/4945",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Kristin Schjelderup Mathiesen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/62307",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Folkehelseinstituttet",
+              "en": "Norwegian Institute of Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Harald Janson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22351",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7522.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Harald Janson",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22351",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "NUBU – Nasjonalt utviklingssenter for barn og unge",
+              "en": "The Norwegian Center for Child Behavioral Development (NUBU)"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Kjeldsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for barns helse og utvikling",
+              "en": "Child Health and Development"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Wendy Nilsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/5228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Folkehelse og forebygging",
+              "en": "Public Health and Prevention"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kristin Schjelderup Mathiesen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/62307",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Wendy Nilsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5228",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anni Skipstein",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/4945",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Kristin Schjelderup Mathiesen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/62307",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Folkehelseinstituttet",
+              "en": "Norwegian Institute of Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2012",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:06:25.032307569Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/D0FB75E4-8313-43F0-9B9D-44E02DCFA8EF/2012"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:06:25.032307569Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fhi",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-84871588691"
+    },
+    {
+      "sourceName": "cristin@fhi",
+      "type": "CristinIdentifier",
+      "value": "996963"
+    },
+    {
+      "sourceName": "ISI",
+      "type": "AdditionalIdentifier",
+      "value": "000313832200001"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad31e508-f1fc09b2-8c48-4674-9944-5b9a0277f8de",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:06:25.032307569Z",
+  "scientificIndex": {
+    "year": "2012",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7522.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Harald Janson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22351",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "NUBU – Nasjonalt utviklingssenter for barn og unge",
+        "en": "The Norwegian Center for Child Behavioral Development (NUBU)"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Avdeling for barns helse og utvikling",
+                "en": "Child Health and Development"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Folkehelse og forebygging",
+            "en": "Public Health and Prevention"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Wendy Nilsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/5228",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Anne Kjeldsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Anni Skipstein",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/4945",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Kristin Schjelderup Mathiesen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/62307",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Folkehelseinstituttet",
+        "en": "Norwegian Institute of Public Health"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

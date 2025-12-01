@@ -1,0 +1,743 @@
+{
+  "identifier": "0198ad52328b-8137d79a-2ba4-45f2-8199-b99da9d9c0d1",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.20.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.9.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.9.40.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "ous@2012.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  },
+  "handle": "https://hdl.handle.net/10852/71905",
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:04:45.200918748Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "91",
+        "pages": {
+          "end": "131",
+          "type": "Range",
+          "begin": "123"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "7166FBCB-AE56-4BBA-8BEE-591AA7C32166",
+        "year": "2018",
+        "name": "Psychoneuroendocrinology",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/7166FBCB-AE56-4BBA-8BEE-591AA7C32166/2018",
+        "type": "Journal",
+        "onlineIssn": "1873-3360",
+        "printIssn": "0306-4530",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=7166FBCB-AE56-4BBA-8BEE-591AA7C32166"
+      },
+      "doi": "https://doi.org/10.1016/j.psyneuen.2018.02.035"
+    },
+    "contributorsCount": 8,
+    "mainTitle": "Morphine reduced perceived anger from neutral and implicit emotional expressions",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Guro Engvig Løseth",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/388003",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marie Helene Eikemo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/306061",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.20.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for fysikk og bildeanalyse",
+              "en": "Department of Physics and Computational Radiology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Peder Mortvedt Isager",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/618557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jostein Holmgren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/618770",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bruno Laeng",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6704",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Vigdis Vindenes",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11766",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.9.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.9.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for rettsmedisinske fag",
+              "en": "Department of Forensic Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Trine Hjornevik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11948",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.20.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for fysikk og bildeanalyse",
+              "en": "Department of Physics and Computational Radiology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siri Leknes",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6750",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Guro Engvig Løseth",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/388003",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marie Helene Eikemo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/306061",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.20.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for fysikk og bildeanalyse",
+              "en": "Department of Physics and Computational Radiology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Peder Mortvedt Isager",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/618557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jostein Holmgren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/618770",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bruno Laeng",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6704",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Vigdis Vindenes",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11766",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.9.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.9.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for rettsmedisinske fag",
+              "en": "Department of Forensic Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Trine Hjornevik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11948",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.20.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for fysikk og bildeanalyse",
+              "en": "Department of Physics and Computational Radiology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siri Leknes",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6750",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2018",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:41:42.027373011Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/7166FBCB-AE56-4BBA-8BEE-591AA7C32166/2018"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:41:42.027373011Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@ous",
+      "type": "CristinIdentifier",
+      "value": "1598291"
+    },
+    {
+      "sourceName": "cristin@ous",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85046024462"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad52328b-8137d79a-2ba4-45f2-8199-b99da9d9c0d1",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:41:42.027373011Z",
+  "scientificIndex": {
+    "year": "2018",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykologisk institutt",
+                "en": "Department of Psychology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Guro Engvig Løseth",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/388003",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Jostein Holmgren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/618770",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bruno Laeng",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6704",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Peder Mortvedt Isager",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/618557",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Siri Leknes",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6750",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.9.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.9.40.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Avdeling for rettsmedisinske fag",
+                "en": "Department of Forensic Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.9.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Klinikk for laboratoriemedisin",
+            "en": "Division of Diagnostics and Intervention"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.20.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Avdeling for fysikk og bildeanalyse",
+                "en": "Department of Physics and Computational Radiology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.28.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Klinikk for radiologi og nukleærmedisin",
+            "en": "Division of Radiology and Nuclear Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Vigdis Vindenes",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11766",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Marie Helene Eikemo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/306061",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Trine Hjornevik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11948",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

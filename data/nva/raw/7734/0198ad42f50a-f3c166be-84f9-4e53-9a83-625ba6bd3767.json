@@ -1,0 +1,325 @@
+{
+  "identifier": "0198ad42f50a-f3c166be-84f9-4e53-9a83-625ba6bd3767",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.21"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T19:08:43.667439607Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "51",
+          "type": "Range",
+          "begin": "48"
+        },
+        "issue": "1",
+        "type": "PopularScienceArticle"
+      },
+      "publicationContext": {
+        "identifier": "E09E2951-737D-4E19-8AFD-67B8A65AE77B",
+        "year": "2008",
+        "name": "ProPatria. Militærfaglig tidsskrift",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/E09E2951-737D-4E19-8AFD-67B8A65AE77B/2008",
+        "type": "Journal",
+        "scientificValue": "Unassigned",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/nvakanal?pid=E09E2951-737D-4E19-8AFD-67B8A65AE77B"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Royal Danois: Et dansk-norsk regiment i fransk tjeneste 1690-98",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ola Teige",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18263",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.21"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Historie",
+              "en": "Historie"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.21",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forum for samtidshistorie",
+              "en": "Forum for Contemporary History"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Eirik Brazier",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ola Teige",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18263",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.21"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Historie",
+              "en": "Historie"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.21",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forum for samtidshistorie",
+              "en": "Forum for Contemporary History"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Eirik Brazier",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2008",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:25:03.242822558Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/E09E2951-737D-4E19-8AFD-67B8A65AE77B/2008"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:25:03.242822558Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "457910"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad42f50a-f3c166be-84f9-4e53-9a83-625ba6bd3767",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:25:03.242822558Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20"
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.21",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Forum for samtidshistorie",
+                        "en": "Forum for Contemporary History"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.20",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Historie",
+                    "en": "Historie"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.31.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for arkeologi, konservering og historie",
+                "en": "Department of Archaeology, Conservation and History"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.14.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det humanistiske fakultet",
+            "en": "Faculty of Humanities"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ola Teige",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18263",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,848 @@
+{
+  "identifier": "0198ad3bbee9-c2a51d2a-25fb-4b32-bc5c-ed958eae1252",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10600023.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.70",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.20",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68401210.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "modum@7602.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0"
+  },
+  "handle": "https://hdl.handle.net/10852/82128",
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:31:49.087254077Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "21:6",
+        "pages": {
+          "end": "11",
+          "type": "Range",
+          "begin": "1"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "CEB75710-B16D-4E32-8DA8-041470CCAD61",
+        "year": "2021",
+        "name": "BMC Psychiatry",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/CEB75710-B16D-4E32-8DA8-041470CCAD61/2021",
+        "type": "Journal",
+        "onlineIssn": "1471-244X",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=CEB75710-B16D-4E32-8DA8-041470CCAD61"
+      },
+      "doi": "https://doi.org/10.1186/s12888-020-03013-0"
+    },
+    "contributorsCount": 6,
+    "mainTitle": "Psychometric properties of the Norwegian version of the Patient Health Questionnaire-9 (PHQ-9) in a large female sample of adults with and without eating disorders",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Line Norøm Wisting",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sverre Urnes Johnson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sverre Urnes Johnson",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Modum Bad",
+              "en": "Modum Mental Health Centre"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Cynthia M. Bulik",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401210.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of North Carolina at Chapel Hill"
+            }
+          },
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600023.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Karolinska Institutet",
+              "en": "Karolinska Institutet"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Andreas Andreassen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23656",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykoseforskning, seksjon (NORMENT/KG Jebsen OUS)",
+              "en": "Psychosis Research Unit (NORMENT/KG Jebsens OUS)"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.70",
+            "type": "Organization",
+            "labels": {
+              "nb": "Senter for presisjonspsykiatri",
+              "en": "Centre for Precision Psychiatry"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Rø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/424930",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14",
+            "type": "Organization",
+            "labels": {
+              "nb": "Enhet voksenpsykiatri",
+              "en": "Adult Psychiatry Unit"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lasse Bang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/386817",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Line Norøm Wisting",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sverre Urnes Johnson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sverre Urnes Johnson",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Modum Bad",
+              "en": "Modum Mental Health Centre"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Cynthia M. Bulik",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401210.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of North Carolina at Chapel Hill"
+            }
+          },
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600023.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Karolinska Institutet",
+              "en": "Karolinska Institutet"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Andreas Andreassen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23656",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykoseforskning, seksjon (NORMENT/KG Jebsen OUS)",
+              "en": "Psychosis Research Unit (NORMENT/KG Jebsens OUS)"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.70",
+            "type": "Organization",
+            "labels": {
+              "nb": "Senter for presisjonspsykiatri",
+              "en": "Centre for Precision Psychiatry"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Rø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/424930",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14",
+            "type": "Organization",
+            "labels": {
+              "nb": "Enhet voksenpsykiatri",
+              "en": "Adult Psychiatry Unit"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lasse Bang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/386817",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "1",
+      "year": "2021",
+      "type": "PublicationDate",
+      "day": "5"
+    }
+  },
+  "createdDate": "2025-08-15T10:17:10.633012559Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/CEB75710-B16D-4E32-8DA8-041470CCAD61/2021"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:17:10.633012559Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@modum",
+      "type": "CristinIdentifier",
+      "value": "1888178"
+    },
+    {
+      "sourceName": "cristin@modum",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85098711461"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad3bbee9-c2a51d2a-25fb-4b32-bc5c-ed958eae1252",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:17:10.633012559Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykologisk institutt",
+                "en": "Department of Psychology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.70",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Senter for presisjonspsykiatri",
+                        "en": "Centre for Precision Psychiatry"
+                      }
+                    },
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Enhet voksenpsykiatri",
+                        "en": "Adult Psychiatry Unit"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Klinikk psykisk helse og avhengighet",
+                    "en": "Division of Mental Health and Addiction"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for klinisk medisin",
+                "en": "Institute of Clinical Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Sverre Urnes Johnson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ole Andreas Andreassen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23656",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Rø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/424930",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "countryCode": "SE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600023.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Karolinska Institutet",
+        "en": "Karolinska Institutet"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Sverre Urnes Johnson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Modum Bad",
+        "en": "Modum Mental Health Centre"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.20",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Psykoseforskning, seksjon (NORMENT/KG Jebsen OUS)",
+                    "en": "Psychosis Research Unit (NORMENT/KG Jebsens OUS)"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Forsknings- og innovasjonsavd, Psykisk helse og avhengighet",
+                "en": "Dept of Research and Innovation, Mental Health and Addiction"
+              }
+            },
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+                    "en": "Regional Department for Eating Disorders"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykisk helse, nasjonale og regionale funksjoner, avd. for",
+                "en": "Centre for National and Regional Mental Health Services"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Klinikk psykisk helse og avhengighet",
+            "en": "Division of Mental Health and Addiction "
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Line Norøm Wisting",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ole Andreas Andreassen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23656",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Rø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/424930",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Lasse Bang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/386817",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    },
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401210.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of North Carolina at Chapel Hill"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

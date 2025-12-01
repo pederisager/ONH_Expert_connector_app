@@ -1,0 +1,954 @@
+{
+  "identifier": "0198ad21f39d-c64e98ba-9135-4f4e-bf81-f01e7d56c14f",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.40.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/443296",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-12-01T09:52:20.849237063Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "49",
+          "type": "MonographPages"
+        },
+        "type": "ReportResearch"
+      },
+      "publicationContext": {
+        "publisher": {
+          "valid": "true",
+          "identifier": "67E66048-9FE7-4AA6-995B-234CB6B6CBAE",
+          "year": "2015",
+          "name": "Politihøgskolen",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/67E66048-9FE7-4AA6-995B-234CB6B6CBAE/2015",
+          "type": "Publisher",
+          "scientificValue": "Unassigned",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/nvakanal?pid=67E66048-9FE7-4AA6-995B-234CB6B6CBAE"
+        },
+        "type": "Report"
+      }
+    },
+    "contributorsCount": 6,
+    "mainTitle": "Forbedring av lederutdanningene og lederutvikling ved Politihøgskolen: Rapport med innspill til strategi for lederutdanningene 2016-2020",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jorunn Lindholt",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tor Tanke Holm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siw Thokle",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eirik Rosø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jan Ole Vanebo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.40.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fakultet for samfunnsvitenskap",
+              "en": "Faculty of Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jorunn Lindholt",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tor Tanke Holm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siw Thokle",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eirik Rosø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jan Ole Vanebo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.40.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fakultet for samfunnsvitenskap",
+              "en": "Faculty of Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tor Tanke Holm",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jorunn Lindholt",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jan Ole Vanebo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siw Thokle",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Eirik Rosø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2015",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:49:00.189270245Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/67E66048-9FE7-4AA6-995B-234CB6B6CBAE/2015"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:49:00.189270245Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "1329926"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad21f39d-c64e98ba-9135-4f4e-bf81-f01e7d56c14f",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:49:00.189270245Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.40.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for samfunnsvitenskap",
+            "en": "Faculty of Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Jan Ole Vanebo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Nord universitet",
+        "en": "Nord University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tor Tanke Holm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/782085",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Jorunn Lindholt",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10340",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Jan Ole Vanebo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327750",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Siw Thokle",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/781309",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Eirik Rosø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/380239",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

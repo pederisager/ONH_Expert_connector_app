@@ -1,0 +1,415 @@
+{
+  "identifier": "0198ad0b68a3-ef07156f-1b32-450a-9e94-f4cbfa1cf89e",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/44400235.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:03:19.978510498Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "108",
+          "type": "Range",
+          "begin": "75"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9789811053085"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "AD8FEF33-C155-4915-A7BF-A1BE33DDAC4D",
+                "year": "2021",
+                "name": "Springer",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/AD8FEF33-C155-4915-A7BF-A1BE33DDAC4D/2021",
+                "type": "Publisher",
+                "scientificValue": "LevelOne",
+                "isbnPrefix": "978-94-007,978-3-64236,978-3-319,978-1-85233,978-1-4471,978-1-4419,978-0-7923,978-0-387",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=AD8FEF33-C155-4915-A7BF-A1BE33DDAC4D"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Special topics and particular occupations, professions and sectors",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Premilla D'Cruz",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Ernesto Noronha",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Loraleigh Keashly",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Stacy Tye-Williams",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad0b6edf-9b470139-2e19-430e-a202-5ee2cf866084",
+        "type": "Anthology"
+      },
+      "doi": "https://doi.org/10.1007/978-981-10-5308-5_1"
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Whistleblowing and bullying at work: The Role of leaders",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Cecilie Thorsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1364520",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Cecilie Thorsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1364520",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Modum Bad",
+              "en": "Modum Mental Health Centre"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Premilla D'Cruz",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/44400235.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Indian Institute of Management Ahmedabad",
+              "en": "Indian Institute of Management Ahmedabad"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Eva Gemzøe Mikkelsen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Cecilie Thorsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1364520",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Cecilie Thorsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1364520",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Modum Bad",
+              "en": "Modum Mental Health Centre"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Premilla D'Cruz",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/44400235.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Indian Institute of Management Ahmedabad",
+              "en": "Indian Institute of Management Ahmedabad"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Eva Gemzøe Mikkelsen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Syddansk Universitet",
+              "en": "University of Southern Denmark"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2021",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1028"
+  },
+  "createdDate": "2025-08-15T09:24:22.819114898Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:04:33.272878400Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "1902998"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0b68a3-ef07156f-1b32-450a-9e94-f4cbfa1cf89e",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:24:22.819114898Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100086.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Syddansk Universitet",
+        "en": "University of Southern Denmark"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Cecilie Thorsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1364520",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Modum Bad",
+        "en": "Modum Mental Health Centre"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "countryCode": "IN",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/44400235.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Indian Institute of Management Ahmedabad",
+        "en": "Indian Institute of Management Ahmedabad"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

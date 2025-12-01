@@ -1,0 +1,673 @@
+{
+  "identifier": "0198ad006e8c-fa96d84d-56b1-427d-8ea0-3a1427e68755",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/9126.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "ous@2012.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  },
+  "handle": "https://hdl.handle.net/10852/81727",
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:32:09.513884875Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "7",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "2",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "EC6FCD12-BBF3-438A-B088-610C98EE9040",
+        "year": "2020",
+        "name": "Health Psychology Open (HPO)",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/EC6FCD12-BBF3-438A-B088-610C98EE9040/2020",
+        "type": "Journal",
+        "onlineIssn": "2055-1029",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=EC6FCD12-BBF3-438A-B088-610C98EE9040"
+      },
+      "doi": "https://doi.org/10.1177/2055102920975969"
+    },
+    "contributorsCount": 5,
+    "mainTitle": "The impact of psychological aspects, age, and BMI on eating disorder psychopathology among adult males and females with type 1 diabetes",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Line Norøm Wisting",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/9126.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Andre institusjoner"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Cecilie Siegwarth",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1264344",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Torild Skrivarhaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14559",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/9126.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Andre institusjoner"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinikk psykisk helse og avhengighet",
+              "en": "Division of Mental Health and Addiction"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Knut Dahl-Jørgensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22654",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/9126.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Andre institusjoner"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinikk psykisk helse og avhengighet",
+              "en": "Division of Mental Health and Addiction"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Rø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/424930",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14",
+            "type": "Organization",
+            "labels": {
+              "nb": "Enhet voksenpsykiatri",
+              "en": "Adult Psychiatry Unit"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Line Norøm Wisting",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/9126.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Andre institusjoner"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Cecilie Siegwarth",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1264344",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Torild Skrivarhaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14559",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/9126.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Andre institusjoner"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinikk psykisk helse og avhengighet",
+              "en": "Division of Mental Health and Addiction"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Knut Dahl-Jørgensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22654",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/9126.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Andre institusjoner"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinikk psykisk helse og avhengighet",
+              "en": "Division of Mental Health and Addiction"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Rø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/424930",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14",
+            "type": "Organization",
+            "labels": {
+              "nb": "Enhet voksenpsykiatri",
+              "en": "Adult Psychiatry Unit"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2020",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:12:23.436621925Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/EC6FCD12-BBF3-438A-B088-610C98EE9040/2020"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:12:23.436621925Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@ous",
+      "type": "CristinIdentifier",
+      "value": "1856524"
+    },
+    {
+      "sourceName": "cristin@ous",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85096595478"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad006e8c-fa96d84d-56b1-427d-8ea0-3a1427e68755",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:12:23.436621925Z",
+  "scientificIndex": {
+    "year": "2020",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/9126.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Andre institusjoner"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.14",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Enhet voksenpsykiatri",
+                        "en": "Adult Psychiatry Unit"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Klinikk psykisk helse og avhengighet",
+                    "en": "Division of Mental Health and Addiction"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for klinisk medisin",
+                "en": "Institute of Clinical Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Knut Dahl-Jørgensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22654",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Torild Skrivarhaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14559",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Rø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/424930",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+                    "en": "Regional Department for Eating Disorders"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykisk helse, nasjonale og regionale funksjoner, avd. for",
+                "en": "Centre for National and Regional Mental Health Services"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Klinikk psykisk helse og avhengighet",
+            "en": "Division of Mental Health and Addiction "
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Line Norøm Wisting",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Rø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/424930",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Cecilie Siegwarth",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1264344",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

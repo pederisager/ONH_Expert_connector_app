@@ -1,0 +1,654 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.10.10",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.10.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "fundings": [
+    {
+      "identifier": "-",
+      "source": {
+        "identifier": "EXTRA",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/EXTRA",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Stiftelsen Dam",
+          "en": "Dam Foundation"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "56",
+        "pages": {
+          "end": "2073",
+          "type": "Range",
+          "begin": "2062"
+        },
+        "issue": "11",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "DC5D2156-F5B9-4B93-A5F4-37E242C4A5D6",
+        "year": "2023",
+        "name": "International Journal of Eating Disorders",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/DC5D2156-F5B9-4B93-A5F4-37E242C4A5D6/2023",
+        "type": "Journal",
+        "onlineIssn": "1098-108X",
+        "printIssn": "0276-3478",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=DC5D2156-F5B9-4B93-A5F4-37E242C4A5D6"
+      },
+      "doi": "https://doi.org/10.1002/eat.24032"
+    },
+    "contributorsCount": 5,
+    "mainTitle": "Estimated prevalence of DSM-5 eating disorders in Norwegian adolescents: A community based two-phase study",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anna Maria Camilla Lindvall Dahlgren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anna Maria Camilla Lindvall Dahlgren",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Reneflot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for psykisk helse",
+              "en": "Department of Mental Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Cathrine Brunborg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/393393",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.10.10",
+            "type": "Organization",
+            "labels": {
+              "nb": "Biostatistikk, epidemiologi og helseøkonomi (OSS)",
+              "en": "Oslo Centre for Biostatistics and Epidemiology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Louise Wennersberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1334054",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Line Norøm Wisting",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anna Maria Camilla Lindvall Dahlgren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anna Maria Camilla Lindvall Dahlgren",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Reneflot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for psykisk helse",
+              "en": "Department of Mental Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Cathrine Brunborg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/393393",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.10.10",
+            "type": "Organization",
+            "labels": {
+              "nb": "Biostatistikk, epidemiologi og helseøkonomi (OSS)",
+              "en": "Oslo Centre for Biostatistics and Epidemiology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Louise Wennersberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1334054",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Line Norøm Wisting",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/DC5D2156-F5B9-4B93-A5F4-37E242C4A5D6/2023"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85166632679"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2164771"
+    }
+  ],
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acf7de60-c28943be-a65c-4b15-bde9-59585c0a60d6",
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anna Maria Camilla Lindvall Dahlgren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.10.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.10.10",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Biostatistikk, epidemiologi og helseøkonomi (OSS)",
+                    "en": "Oslo Centre for Biostatistics and Epidemiology"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.10.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Forskningsstøtte",
+                "en": "Research Support Services"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Oslo Sykehusservice",
+            "en": "Oslo Hospital Services"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+                    "en": "Regional Department for Eating Disorders"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykisk helse, nasjonale og regionale funksjoner, avd. for",
+                "en": "Centre for National and Regional Mental Health Services"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Klinikk psykisk helse og avhengighet",
+            "en": "Division of Mental Health and Addiction "
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anna Maria Camilla Lindvall Dahlgren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Anne Louise Wennersberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1334054",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Cathrine Brunborg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/393393",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Line Norøm Wisting",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/3",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Avdeling for psykisk helse",
+                "en": "Department of Mental Health"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Folkehelse og forebygging",
+            "en": "Public Health and Prevention"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anne Reneflot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12573",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Folkehelseinstituttet",
+        "en": "Norwegian Institute of Public Health"
+      }
+    }
+  ],
+  "identifier": "0198acf7de60-c28943be-a65c-4b15-bde9-59585c0a60d6",
+  "handle": "https://hdl.handle.net/10852/106541",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:26:57.116861107Z",
+  "createdDate": "2025-08-15T09:03:02.240829576Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:03:02.240829576Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "Fjernet tilhørighet UIA, da dette ikke er nevnt i artikkelen. AM // Fjernet UIO-tilh. for Brunborg etter avklaring med UIO. Lagt til vol, nr. og sidetall, 17/1-24 AMN (FHI)",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T09:03:02.240829576Z",
+  "scientificIndex": {
+    "year": "2023",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

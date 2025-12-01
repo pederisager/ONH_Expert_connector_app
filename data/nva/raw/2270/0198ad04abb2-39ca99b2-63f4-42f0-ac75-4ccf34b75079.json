@@ -1,0 +1,405 @@
+{
+  "identifier": "0198ad04abb2-39ca99b2-63f4-42f0-ac75-4ccf34b75079",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.13.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.13.2.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.nationen.no/kostrad-som-fortjener-var-tillit/o/5-148-503894?fbclid=IwZXh0bgNhZW0CMTEAAR3pZsGTL7Vl_NuijRb3tfeb94HhjslVAa3rS7CL6anU2njdfTy5K0fgq60_aem_ZmFrZWR1bW15MTZieXRlcw",
+      "type": "AssociatedLink",
+      "relation": [
+        "sameAs",
+        "dataset"
+      ]
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:12:03.534047923Z",
+  "fundings": [
+    {
+      "identifier": "5091",
+      "source": {
+        "identifier": "SHARE",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/SHARE",
+        "type": "FundingSource",
+        "labels": {
+          "nn": "SHARE - Centre for Resilience in Healthcare",
+          "nb": "SHARE - Centre for Resilience in Healthcare",
+          "en": "SHARE - Centre for Resilience in Healthcare"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "MediaFeatureArticle"
+      },
+      "publicationContext": {
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/03F7955D-3F56-4B99-9919-0F5E5FDF5933/2024",
+        "type": "MediaContributionPeriodical"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Kostråd som fortjener vår tillit",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Zinöcker",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Zinöcker",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Simon N Dankel",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46423",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siv Hilde Berg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/625593",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.13.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for kvalitet og helseteknologi",
+              "en": "Department of Quality and Health Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marit Zinöcker",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Marit Zinöcker",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Simon N Dankel",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46423",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siv Hilde Berg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/625593",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.13.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for kvalitet og helseteknologi",
+              "en": "Department of Quality and Health Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "2",
+      "year": "2024",
+      "type": "PublicationDate",
+      "day": "22"
+    }
+  },
+  "createdDate": "2025-08-15T09:17:01.234756306Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:17:01.234756306Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2276173"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad04abb2-39ca99b2-63f4-42f0-ac75-4ccf34b75079",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:17:01.234756306Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Klinisk institutt 2",
+                "en": "Department of Clinical Science"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Simon N Dankel",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46423",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Marit Zinöcker",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2270",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.13.2.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Avdeling for kvalitet og helseteknologi",
+                "en": "Department of Quality and Health Technology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det helsevitenskapelige fakultet",
+            "en": "Faculty of Health Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/217.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Siv Hilde Berg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/625593",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Stavanger",
+        "en": "University of Stavanger"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

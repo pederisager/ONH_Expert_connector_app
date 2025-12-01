@@ -1,0 +1,596 @@
+{
+  "identifier": "0198ad01e48f-a41aa52f-b8ee-4db3-9b5e-49d53470793d",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1918.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:13:04.921450883Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1918.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferencePoster"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "Helse Midt-Norge RHF",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "Regional digital forskningskonferanse i Helse Midt-Norge RHF ",
+        "place": {
+          "name": "Digitalt",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2022-02-09T00:00:00Z",
+          "to": "2022-02-09T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Transdiagnostisk kognitiv trening for pasienter med spiseforstyrrelser: En randomisert kontrollert studie",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "abstract": "Spiseforstyrrelser (SF) er komplekse psykiske lidelser med relativt dårlig prognose. Kognitive utfordringer, særlig eksekutive vansker og svak sentral koherens er hyppig forekommende hos denne pasientgruppen. Disse utfordringene kan sannsynligvis føre til økt sårbarhet for utviklingen av SF, komplisere behandlingsforløpet og virke som opprettholdende faktorer. Disse utfordringene er imidlertid sjelden belyst i ordinær terapi. \r\n\r\nVi ønsker å undersøke effekten av metakognitiv trening (Cognitive Remediation Therapy; CRT) for pasienter med spiseforstyrrelser og samtidige kognitive vansker. I tillegg vil vi undersøke kognitiv funksjon og assosiasjoner mellom kognitiv funksjon, symptomer og mål på aktivitet og søvn både ved baseline og ved oppfølging.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siri Weider",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/31390",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1918.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tora Thorsrud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/608294",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siri Weider",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/31390",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Helse Nord-Trøndelag HF",
+              "en": "Nord Trondelag Hospital Trust"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for psykologi",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tora Thorsrud",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/608294",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1918.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tora Thorsrud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/608294",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siri Weider",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/31390",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Helse Nord-Trøndelag HF",
+              "en": "Nord Trondelag Hospital Trust"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for psykologi",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Linda Thorsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1279509",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anna Maria Camilla Lindvall Dahlgren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anna Maria Camilla Lindvall Dahlgren",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siri Weider",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/31390",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1918.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tora Thorsrud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/608294",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siri Weider",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/31390",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Helse Nord-Trøndelag HF",
+              "en": "Nord Trondelag Hospital Trust"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for psykologi",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tora Thorsrud",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/608294",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1918.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tora Thorsrud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/608294",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Siri Weider",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/31390",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Helse Nord-Trøndelag HF",
+              "en": "Nord Trondelag Hospital Trust"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for psykologi",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Linda Thorsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1279509",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anna Maria Camilla Lindvall Dahlgren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+              "en": "Regional Department for Eating Disorders"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anna Maria Camilla Lindvall Dahlgren",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2022",
+      "type": "PublicationDate"
+    },
+    "tags": [
+      "Kognitiv nevropsykologi",
+      "Behandling",
+      "Treatment",
+      "Cognitive neuropsychology",
+      "Eating Disorders",
+      "Spiseforstyrrelser"
+    ]
+  },
+  "createdDate": "2025-08-15T09:13:59.183714642Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:13:59.183714642Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "1997572"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad01e48f-a41aa52f-b8ee-4db3-9b5e-49d53470793d",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:13:59.183714642Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1918.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tora Thorsrud",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/608294",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Siri Weider",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/31390",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Helse Nord-Trøndelag HF",
+        "en": "Nord Trondelag Hospital Trust"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.40.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for psykologi",
+                "en": "Department of Psychology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.67.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for samfunns- og utdanningsvitenskap",
+            "en": "Faculty of Social and Educational Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tora Thorsrud",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/608294",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Siri Weider",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/31390",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs teknisk-naturvitskaplege universitet",
+        "nb": "Norges teknisk-naturvitenskapelige universitet",
+        "en": "Norwegian University of Science and Technology"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.11",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Spiseforstyrrelser, regional seksjon (RASP)",
+                    "en": "Regional Department for Eating Disorders"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.30.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykisk helse, nasjonale og regionale funksjoner, avd. for",
+                "en": "Centre for National and Regional Mental Health Services"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Klinikk psykisk helse og avhengighet",
+            "en": "Division of Mental Health and Addiction "
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anna Maria Camilla Lindvall Dahlgren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anna Maria Camilla Lindvall Dahlgren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/61849",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

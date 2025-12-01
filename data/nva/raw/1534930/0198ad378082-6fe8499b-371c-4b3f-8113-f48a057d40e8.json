@@ -1,0 +1,179 @@
+{
+  "identifier": "0198ad378082-6fe8499b-371c-4b3f-8113-f48a057d40e8",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.19.3.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.19.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uia@201.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:58:33.300885127Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "MediaFeatureArticle"
+      },
+      "publicationContext": {
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/4589715A-BF08-4FCD-9EC2-C401D2F06455/2025",
+        "type": "MediaContributionPeriodical"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "En kjipere supermakt",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Pål Kriachko Røren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1534930",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.19.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.19.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for statsvitenskap og ledelsesfag",
+              "en": "Department of Political Science and Management"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Pål Kriachko Røren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1534930",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.19.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.19.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for statsvitenskap og ledelsesfag",
+              "en": "Department of Political Science and Management"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2025",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:12:32.514857212Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:12:32.514857212Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uia",
+      "type": "CristinIdentifier",
+      "value": "2385134"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad378082-6fe8499b-371c-4b3f-8113-f48a057d40e8",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:12:32.514857212Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.19.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.19.3.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for statsvitenskap og ledelsesfag",
+                "en": "Department of Political Science and Management"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.19.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for samfunnsvitenskap",
+            "en": "Faculty of Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Pål Kriachko Røren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1534930",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Agder",
+        "en": "University of Agder"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

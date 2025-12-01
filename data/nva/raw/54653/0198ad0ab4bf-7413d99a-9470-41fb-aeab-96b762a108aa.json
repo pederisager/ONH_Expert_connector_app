@@ -1,0 +1,219 @@
+{
+  "identifier": "0198ad0ab4bf-7413d99a-9470-41fb-aeab-96b762a108aa",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uito@186.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:58:31.578685641Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "Lecture"
+      },
+      "publicationContext": {
+        "name": "Kveldsseminar på instituttet med inviterte gjester",
+        "place": {
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2012-02-15T00:00:00Z",
+          "to": "2012-02-15T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Social media marketing",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen ved UiT",
+              "en": "Tromsø University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen ved UiT",
+              "en": "Tromsø University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2012",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:23:36.767597559Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:23:36.767597559Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uito",
+      "type": "CristinIdentifier",
+      "value": "990199"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0ab4bf-7413d99a-9470-41fb-aeab-96b762a108aa",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:23:36.767597559Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0"
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Handelshøgskolen ved UiT",
+                        "en": "Tromsø University Business School"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Fakultetsledelse BFE-fak"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Fakultet for biovitenskap, fiskeri og økonomi",
+                "en": "Faculty of Biosciences, Fisheries and Economics"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Universitetet i Tromsø - Norges arktiske universitet"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Tromsø - Norges arktiske universitet",
+        "en": "UiT The Arctic University of Norway"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

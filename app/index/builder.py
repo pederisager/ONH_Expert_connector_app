@@ -100,8 +100,8 @@ class StaffIndexBuilder:
         )
         chunks.extend(summary_chunks)
 
-        if record.cristin_results:
-            chunks.extend(self._chunks_from_cristin_results(record))
+        if record.nva_publications:
+            chunks.extend(self._chunks_from_nva_publications(record))
 
         default_tags = list(record.tags)
         for chunk in chunks:
@@ -122,9 +122,9 @@ class StaffIndexBuilder:
                 chunk.metadata["tags"] = list(default_tags)
         return chunks
 
-    def _chunks_from_cristin_results(self, record: StaffRecord) -> list[Chunk]:
-        cristin_chunks: list[Chunk] = []
-        for result in record.cristin_results:
+    def _chunks_from_nva_publications(self, record: StaffRecord) -> list[Chunk]:
+        nva_chunks: list[Chunk] = []
+        for result in record.nva_publications:
             text = result.as_text()
             if not text:
                 continue
@@ -134,15 +134,15 @@ class StaffIndexBuilder:
                 "department": record.department,
                 "title": record.title,
                 "profile_url": record.profile_url,
-                "source_title": result.title or "Cristin-resultat",
-                "source_kind": "cristin",
-                "cristin_result_id": result.cristin_result_id,
-                "cristin_year": result.year,
-                "cristin_category": result.category_name,
+                "source_title": result.title or "NVA-publikasjon",
+                "source_kind": "nva",
+                "nva_publication_id": result.publication_id,
+                "nva_year": result.year,
+                "nva_category": result.category,
                 "venue": result.venue,
                 "tags": combined_tags,
             }
-            cristin_chunks.extend(
+            nva_chunks.extend(
                 self.chunker.chunk_text(
                     staff_slug=record.slug,
                     text=text,
@@ -150,7 +150,7 @@ class StaffIndexBuilder:
                     metadata=metadata,
                 )
             )
-        return cristin_chunks
+        return nva_chunks
 
     def _write_chunks_snapshot(self, slug: str, chunks: Iterable[Chunk]) -> None:
         payload = [self._chunk_to_dict(chunk) for chunk in chunks]

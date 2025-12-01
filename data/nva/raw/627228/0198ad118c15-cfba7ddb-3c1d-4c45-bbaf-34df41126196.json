@@ -1,0 +1,165 @@
+{
+  "identifier": "0198ad118c15-cfba7ddb-3c1d-4c45-bbaf-34df41126196",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.7.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bi@158.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:53:13.329647617Z",
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "NORSI",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "NORSI Conference 2014",
+        "place": {
+          "countryCode": "NO",
+          "name": "BI, Oslo",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2014-09-02T00:00:00Z",
+          "to": "2014-09-02T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Obsolescence and the ICT revolution: the impact of technological progress on the age of U.S. capital",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for innovasjon og økonomisk organisering",
+              "en": "Department of Innovation and Economic Organization"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for innovasjon og økonomisk organisering",
+              "en": "Department of Innovation and Economic Organization"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2014",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:31:05.109038180Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:31:05.109038180Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bi",
+      "type": "CristinIdentifier",
+      "value": "1282178"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad118c15-cfba7ddb-3c1d-4c45-bbaf-34df41126196",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:31:05.109038180Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.7.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for innovasjon og økonomisk organisering",
+            "en": "Department of Innovation and Economic Organization"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Handelshøyskolen BI",
+        "en": "BI Norwegian Business School"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

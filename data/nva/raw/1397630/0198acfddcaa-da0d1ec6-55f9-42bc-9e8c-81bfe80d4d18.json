@@ -1,0 +1,393 @@
+{
+  "identifier": "0198acfddcaa-da0d1ec6-55f9-42bc-9e8c-81bfe80d4d18",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/70500000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68400716.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13700000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:02:21.818081942Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "16",
+          "type": "Range",
+          "begin": "1"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9781800735408"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "90FFA1A7-487D-4CAD-813E-0A1EB5DD3CEF",
+                "year": "2022",
+                "name": "Berghahn Books",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/90FFA1A7-487D-4CAD-813E-0A1EB5DD3CEF/2022",
+                "type": "Publisher",
+                "scientificValue": "LevelTwo",
+                "isbnPrefix": "978-1-84545,978-0-436",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=90FFA1A7-487D-4CAD-813E-0A1EB5DD3CEF"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Historical reenactment : New ways of experiencing history",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Mario Carretero",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Everardo Perez-Manjarrez",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad27b7d8-ec5fb9ba-267a-4227-95d0-c2d2f9dd5b6d",
+        "type": "Anthology"
+      },
+      "doi": "https://doi.org/10.3167/9781800735408"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Approaching historical reenactments",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Mario Carretero",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "AR",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/70500000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Argentina",
+              "en": "Argentina"
+            }
+          },
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spania",
+              "en": "Spain"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aalborg Universitet",
+              "en": "Aalborg University"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brady Wagoner",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Everardo Perez-Manjarrez",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400716.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Harvard University"
+            }
+          },
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spania",
+              "en": "Spain"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Mario Carretero",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "AR",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/70500000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Argentina",
+              "en": "Argentina"
+            }
+          },
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spania",
+              "en": "Spain"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aalborg Universitet",
+              "en": "Aalborg University"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brady Wagoner",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Everardo Perez-Manjarrez",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400716.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Harvard University"
+            }
+          },
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spania",
+              "en": "Spain"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2022",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1168"
+  },
+  "createdDate": "2025-08-15T09:09:35.018099207Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:02:29.444662725Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2131157"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acfddcaa-da0d1ec6-55f9-42bc-9e8c-81bfe80d4d18",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:09:35.018099207Z",
+  "scientificIndex": {
+    "year": "2022",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "AR",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/70500000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Argentina",
+        "en": "Argentina"
+      }
+    },
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400716.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Harvard University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Aalborg Universitet",
+        "en": "Aalborg University"
+      }
+    },
+    {
+      "countryCode": "ES",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Spania",
+        "en": "Spain"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

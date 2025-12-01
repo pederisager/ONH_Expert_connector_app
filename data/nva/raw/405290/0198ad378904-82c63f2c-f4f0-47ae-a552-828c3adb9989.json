@@ -1,0 +1,336 @@
+{
+  "identifier": "0198ad378904-82c63f2c-f4f0-47ae-a552-828c3adb9989",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7476.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10600022.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:05:15.477281742Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7476.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "34",
+        "pages": {
+          "end": "975",
+          "type": "Range",
+          "begin": "964"
+        },
+        "issue": "10",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "00CDBA0B-DD32-4810-AFB1-4B7702EF73B5",
+        "year": "2014",
+        "name": "Behaviour and Information Technology",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/00CDBA0B-DD32-4810-AFB1-4B7702EF73B5/2014",
+        "type": "Journal",
+        "onlineIssn": "1362-3001",
+        "printIssn": "0144-929X",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=00CDBA0B-DD32-4810-AFB1-4B7702EF73B5"
+      },
+      "doi": "https://doi.org/10.1080/0144929X.2014.978379"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Affective forecasting of value creation: professional nurse's ability to predict and remember the experienced value of a telmedicine diagnostics ICT service",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "New innovations that can transform societies and improve life for people are increasingly being asked for. Unfortunately, some avenues of research indicate that users of these new innovations may be inaccurate when they predict or remember the value of such new offerings. For example, the rapid development of new ICT services in areas such as health care may imply opportunities for better life conditions and well-being, but may also involve complicated predictions for users about the value they will create. New innovations may face adoption difficulties if users make inaccurate predictions or remember falsely the value that such innovations might have. In this study, 48 nurses predicted, experienced, and remembered the value of a new ICT service they used to diagnose an external skin lesion on a patient. Results showed significant differences between predicted and experienced value as well as between a service with high technical quality and the same service with lower technical quality; the value was underestimated at the time of prediction, as compared to actual experience, and the value of a high-quality ICT service was substantially more underestimated than the value of a low-quality ICT service. The results provide a novel and comprehensive understanding of how employees predict and experience the value of ICT service innovations.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Per Kristensson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/467182",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600022.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Karlstads universitet",
+              "en": "Karlstad University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Anna Brunstrom",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600022.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Karlstads universitet",
+              "en": "Karlstad University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7476.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Statens arbeidsmiljøinstitutt",
+              "en": "National Institute of Occupational Health"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Per Kristensson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/467182",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600022.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Karlstads universitet",
+              "en": "Karlstad University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Anna Brunstrom",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600022.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Karlstads universitet",
+              "en": "Karlstad University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7476.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Statens arbeidsmiljøinstitutt",
+              "en": "National Institute of Occupational Health"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2015",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:12:34.692801631Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/00CDBA0B-DD32-4810-AFB1-4B7702EF73B5/2014"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:12:34.692801631Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "1188565"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-84939000465"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad378904-82c63f2c-f4f0-47ae-a552-828c3adb9989",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:12:34.692801631Z",
+  "scientificIndex": {
+    "year": "2014",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7476.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Statens arbeidsmiljøinstitutt",
+        "en": "National Institute of Occupational Health"
+      }
+    },
+    {
+      "countryCode": "SE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600022.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Karlstads universitet",
+        "en": "Karlstad University"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

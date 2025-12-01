@@ -1,0 +1,351 @@
+{
+  "identifier": "0198ad28ac3c-8597ae29-c3b3-4936-a5d2-eda27e49033a",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10600040.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:34:22.777553461Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "34",
+        "pages": {
+          "end": "374",
+          "type": "Range",
+          "begin": "351"
+        },
+        "issue": "2",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "3579EBB0-5CD0-4C78-8058-DB702179F7D9",
+        "year": "2024",
+        "name": "Journal of evolutionary economics",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/3579EBB0-5CD0-4C78-8058-DB702179F7D9/2024",
+        "type": "Journal",
+        "onlineIssn": "1432-1386",
+        "printIssn": "0936-9937",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=3579EBB0-5CD0-4C78-8058-DB702179F7D9"
+      },
+      "doi": "https://doi.org/10.1007/s00191-024-00866-6"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "The system dynamics approach for a global evolutionary analysis of sustainable development",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christophe Feder",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universita delle Valle d'Aosta"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Beniamino Callegari",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "School of Economics, Innovation, and Technology",
+              "en": "School of Economics, Innovation, and Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "David Collste",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600040.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Stockholms universitet",
+              "en": "Stockholm University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christophe Feder",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universita delle Valle d'Aosta"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Beniamino Callegari",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "School of Economics, Innovation, and Technology",
+              "en": "School of Economics, Innovation, and Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "David Collste",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600040.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Stockholms universitet",
+              "en": "Stockholm University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:56:20.668381937Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/3579EBB0-5CD0-4C78-8058-DB702179F7D9/2024"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:56:20.668381937Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2287751"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85199472144"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad28ac3c-8597ae29-c3b3-4936-a5d2-eda27e49033a",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:56:20.668381937Z",
+  "scientificIndex": {
+    "year": "2024",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "School of Economics, Innovation, and Technology",
+            "en": "School of Economics, Innovation, and Technology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høyskolen Kristiania",
+        "en": "Kristiania University of Applied Sciences"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "SE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600040.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Stockholms universitet",
+        "en": "Stockholm University"
+      }
+    },
+    {
+      "countryCode": "IT",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universita delle Valle d'Aosta"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

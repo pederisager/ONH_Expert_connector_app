@@ -1,0 +1,145 @@
+{
+  "identifier": "0198ad1f46a4-50c5e77e-4557-4a4f-a6e0-ba2ec607a1f7",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "prio@7435.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:00:25.334303250Z",
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "26",
+        "pages": {
+          "end": "63",
+          "type": "Range",
+          "begin": "60"
+        },
+        "issue": "1",
+        "type": "JournalLetter"
+      },
+      "publicationContext": {
+        "identifier": "8F3C52BF-B887-4EC9-A54A-C1E9CFC387FF",
+        "year": "2009",
+        "name": "Nytt Norsk Tidsskrift (NNT)",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/8F3C52BF-B887-4EC9-A54A-C1E9CFC387FF/2009",
+        "type": "Journal",
+        "onlineIssn": "1504-3053",
+        "printIssn": "0800-336X",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=8F3C52BF-B887-4EC9-A54A-C1E9CFC387FF"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Noen filosofiske refleksjoner",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2009",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:46:04.836328487Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/8F3C52BF-B887-4EC9-A54A-C1E9CFC387FF/2009"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:46:04.836328487Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@prio",
+      "type": "CristinIdentifier",
+      "value": "939878"
+    },
+    {
+      "sourceName": "NORART",
+      "type": "AdditionalIdentifier",
+      "value": "900446378"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad1f46a4-50c5e77e-4557-4a4f-a6e0-ba2ec607a1f7",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:46:04.836328487Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nn": "PRIO - Institutt for fredsforsking",
+        "nb": "PRIO - Institutt for fredsforskning",
+        "en": "PRIO - Peace Research Institute Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

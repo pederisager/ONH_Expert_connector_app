@@ -1,0 +1,431 @@
+{
+  "identifier": "0198acfcd715-61ddb705-3f9d-4f52-a726-a93764527b06",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.18.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hbe@1936.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:05:58.512396348Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "31",
+        "pages": {
+          "end": "745",
+          "type": "Range",
+          "begin": "735"
+        },
+        "issue": "11",
+        "type": "AcademicLiteratureReview"
+      },
+      "publicationContext": {
+        "identifier": "A17D501D-FE35-4390-B4E9-58BEAED39D45",
+        "year": "2020",
+        "name": "The Turkish Journal of Gastroenterology",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/A17D501D-FE35-4390-B4E9-58BEAED39D45/2020",
+        "type": "Journal",
+        "printIssn": "1300-4948",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=A17D501D-FE35-4390-B4E9-58BEAED39D45"
+      },
+      "doi": "https://doi.org/10.5152/TJG.2020.19551"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Comparison of gut microbiota profile in celiac disease, non-celiac gluten sensitivity and irritable bowel syndrome: A systematic review",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Lund Transeth",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1269955",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 1",
+              "en": "Department of Clinical Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hanna Fjeldheim Dale",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/899644",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.18.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Medisinsk klinikk",
+              "en": "Dept. of Internal Medicine"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 1",
+              "en": "Department of Clinical Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gülen Arslan Lied",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47978",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.18.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Medisinsk klinikk",
+              "en": "Dept. of Internal Medicine"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 1",
+              "en": "Department of Clinical Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Lund Transeth",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1269955",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 1",
+              "en": "Department of Clinical Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hanna Fjeldheim Dale",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/899644",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.18.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Medisinsk klinikk",
+              "en": "Dept. of Internal Medicine"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 1",
+              "en": "Department of Clinical Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gülen Arslan Lied",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47978",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.18.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Medisinsk klinikk",
+              "en": "Dept. of Internal Medicine"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 1",
+              "en": "Department of Clinical Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2020",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:08:28.053548441Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/A17D501D-FE35-4390-B4E9-58BEAED39D45/2020"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:08:28.053548441Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hbe",
+      "type": "CristinIdentifier",
+      "value": "1872534"
+    },
+    {
+      "sourceName": "cristin@hbe",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85098774844"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acfcd715-61ddb705-3f9d-4f52-a726-a93764527b06",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:08:28.053548441Z",
+  "scientificIndex": {
+    "year": "2020",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.24.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Klinisk institutt 1",
+                "en": "Department of Clinical Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Elin Lund Transeth",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1269955",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Hanna Fjeldheim Dale",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/899644",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Gülen Arslan Lied",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47978",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.18.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Medisinsk klinikk",
+            "en": "Dept. of Internal Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Hanna Fjeldheim Dale",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/899644",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Gülen Arslan Lied",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47978",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Helse Bergen HF - Haukeland universitetssykehus",
+        "en": "Bergen Hospital Trust - Haukeland University Hospital"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

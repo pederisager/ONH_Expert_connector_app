@@ -1,0 +1,401 @@
+{
+  "identifier": "0198acf6cdae-b7d1d41f-73e1-47b5-af30-0d852b8f18cb",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12100030.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12100006.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.50.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-12-01T09:25:21.653768403Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "238",
+          "type": "MonographPages"
+        },
+        "type": "AcademicMonograph"
+      },
+      "publicationContext": {
+        "isbnList": [
+          "9781009031066"
+        ],
+        "publisher": {
+          "valid": "true",
+          "identifier": "8E1B4D14-6859-4CE2-A81A-CDBFD6578BCD",
+          "year": "2024",
+          "name": "Cambridge University Press",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/8E1B4D14-6859-4CE2-A81A-CDBFD6578BCD/2024",
+          "type": "Publisher",
+          "scientificValue": "LevelTwo",
+          "isbnPrefix": "978-1-316,978-1-107,978-0-521,978-0-511",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=8E1B4D14-6859-4CE2-A81A-CDBFD6578BCD"
+        },
+        "type": "Book",
+        "revision": "Unrevised"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Pragmatism and methodology: Doing research that matters with mixed methods",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Alex Gillespie",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Vlad-Petre Glaveanu",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/891418",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100006.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Dublin City University"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.50.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "SLATE",
+              "en": "SLATE: Centre for the Science of Learning & Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Constance de Saint Laurent",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100030.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "Ollscoil na hÉireann, Má Nuad",
+              "nb": "National University of Ireland, Maynooth",
+              "en": "National University of Ireland, Maynooth"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Alex Gillespie",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Vlad-Petre Glaveanu",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/891418",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100006.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Dublin City University"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.50.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "SLATE",
+              "en": "SLATE: Centre for the Science of Learning & Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Constance de Saint Laurent",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100030.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "Ollscoil na hÉireann, Má Nuad",
+              "nb": "National University of Ireland, Maynooth",
+              "en": "National University of Ireland, Maynooth"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1032"
+  },
+  "createdDate": "2025-08-15T09:01:52.430359642Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/8E1B4D14-6859-4CE2-A81A-CDBFD6578BCD/2024"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:01:52.430359642Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2362018"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acf6cdae-b7d1d41f-73e1-47b5-af30-0d852b8f18cb",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:01:52.430359642Z",
+  "scientificIndex": {
+    "year": "2024",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.50.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "SLATE",
+                "en": "SLATE: Centre for the Science of Learning & Technology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det psykologiske fakultet",
+            "en": "Faculty of Psychology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Vlad-Petre Glaveanu",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/891418",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "countryCode": "IE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100006.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Dublin City University"
+      }
+    },
+    {
+      "countryCode": "IE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100030.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nn": "Ollscoil na hÉireann, Má Nuad",
+        "nb": "National University of Ireland, Maynooth",
+        "en": "National University of Ireland, Maynooth"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "London School of Economics and Political Science",
+        "en": "London School of Economics and Political Science"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,740 @@
+{
+  "identifier": "0198ad0c32a8-fcae7877-5df9-4cb8-bf81-f4f71f520ba9",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/13700060.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hbe@1936.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:23:52.242495643Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "19:94",
+        "pages": {
+          "end": "10",
+          "type": "Range",
+          "begin": "1"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "29619F3C-5D18-408F-A551-02B6927DAD5C",
+        "year": "2020",
+        "name": "Lipids in Health and Disease",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/29619F3C-5D18-408F-A551-02B6927DAD5C/2020",
+        "type": "Journal",
+        "onlineIssn": "1476-511X",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=29619F3C-5D18-408F-A551-02B6927DAD5C"
+      },
+      "doi": "https://doi.org/10.1186/s12944-020-01271-1"
+    },
+    "contributorsCount": 7,
+    "mainTitle": "Hepatic steatosis induced in C57BL/6 mice by a non-ß oxidizable fatty acid analogue is associated with reduced plasma kynurenine metabolites and a modified hepatic NAD+/NADH ratio",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Daniel Cacabelos",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1285231",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700060.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidad de Santiago de Compostela",
+              "en": "University of Santiago de Compostela"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Rosa Señarís",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700060.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidad de Santiago de Compostela",
+              "en": "University of Santiago de Compostela"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jan Erik Nordrehaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50188",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ottar Nygård",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50489",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jon Skorve",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47697",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Daniel Cacabelos",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1285231",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700060.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidad de Santiago de Compostela",
+              "en": "University of Santiago de Compostela"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Rosa Señarís",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700060.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidad de Santiago de Compostela",
+              "en": "University of Santiago de Compostela"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jan Erik Nordrehaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50188",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ottar Nygård",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50489",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jon Skorve",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47697",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "5",
+      "year": "2020",
+      "type": "PublicationDate",
+      "day": "14"
+    }
+  },
+  "createdDate": "2025-08-15T09:25:14.536395372Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/29619F3C-5D18-408F-A551-02B6927DAD5C/2020"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:25:14.536395372Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hbe",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85084862510"
+    },
+    {
+      "sourceName": "cristin@hbe",
+      "type": "CristinIdentifier",
+      "value": "1891717"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0c32a8-fcae7877-5df9-4cb8-bf81-f4f71f520ba9",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:25:14.536395372Z",
+  "scientificIndex": {
+    "year": "2020",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Klinisk institutt 2",
+                "en": "Department of Clinical Science"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Jan Erik Nordrehaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50188",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ottar Nygård",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50489",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Daniel Cacabelos",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1285231",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Jon Skorve",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47697",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "countryCode": "ES",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700060.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universidad de Santiago de Compostela",
+        "en": "University of Santiago de Compostela"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Hjerteavdelingen",
+            "en": "Dept. of Heart Disease"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ottar Nygård",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50489",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Jan Erik Nordrehaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50188",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Helse Bergen HF - Haukeland universitetssykehus",
+        "en": "Bergen Hospital Trust - Haukeland University Hospital"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

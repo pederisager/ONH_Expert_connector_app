@@ -1,0 +1,317 @@
+{
+  "identifier": "0198acf76d9c-3a1acb1e-6993-4c0e-be2b-0cf2afbbcaf8",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/12300000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "ck@1615.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://ceur-ws.org/Vol-3735/paper_11.pdf",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:11:56.343382560Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "9D7DE586-05E6-45F9-9A9E-5E302A83BC40",
+        "year": "2024",
+        "name": "CEUR Workshop Proceedings",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/9D7DE586-05E6-45F9-9A9E-5E302A83BC40/2024",
+        "type": "Journal",
+        "onlineIssn": "1613-0073",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=9D7DE586-05E6-45F9-9A9E-5E302A83BC40"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Integrating System Dynamics and Agent-Based Models for Enhanced Analysis in Sustainable Development",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Beniamino Callegari",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "School of Economics, Innovation, and Technology",
+              "en": "School of Economics, Innovation, and Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christophe Feder",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universita delle Valle d'Aosta"
+            }
+          },
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Italia",
+              "en": "Italy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Beniamino Callegari",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "School of Economics, Innovation, and Technology",
+              "en": "School of Economics, Innovation, and Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christophe Feder",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universita delle Valle d'Aosta"
+            }
+          },
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Italia",
+              "en": "Italy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:02:33.372723078Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/9D7DE586-05E6-45F9-9A9E-5E302A83BC40/2024"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:02:33.372723078Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@ck",
+      "type": "CristinIdentifier",
+      "value": "2354075"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acf76d9c-3a1acb1e-6993-4c0e-be2b-0cf2afbbcaf8",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:02:33.372723078Z",
+  "scientificIndex": {
+    "year": "2024",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "IT",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Italia",
+        "en": "Italy"
+      }
+    },
+    {
+      "countryCode": "IT",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universita delle Valle d'Aosta"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "School of Economics, Innovation, and Technology",
+            "en": "School of Economics, Innovation, and Technology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høyskolen Kristiania",
+        "en": "Kristiania University of Applied Sciences"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

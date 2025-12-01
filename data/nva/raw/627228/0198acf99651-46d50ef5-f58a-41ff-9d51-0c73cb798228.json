@@ -1,0 +1,326 @@
+{
+  "identifier": "0198acf99651-46d50ef5-f58a-41ff-9d51-0c73cb798228",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12300000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bi@158.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:53:55.568663125Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "32",
+          "type": "Range",
+          "begin": "1"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "552CAB5D-539D-46D4-81EE-B110233E9166",
+        "year": "2021",
+        "name": "The International Entrepreneurship and Management Journal",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/552CAB5D-539D-46D4-81EE-B110233E9166/2021",
+        "type": "Journal",
+        "onlineIssn": "1555-1938",
+        "printIssn": "1554-7191",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=552CAB5D-539D-46D4-81EE-B110233E9166"
+      },
+      "doi": "https://doi.org/10.1007/s11365-021-00790-2"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Entrepreneurship and the systemic consequences of epidemics: A literature review and emerging model",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "The Covid-19 epidemic is a global challenge requiring adequate public and private responses to overcome the emergency, shape new development trajectories, and prepare for future outbreaks. As socioeconomic turning points, epidemics imply an entrepreneurial response in which not only managers and entrepreneurs, but also policymakers, health professionals, and civil society as a whole are active participants. Using the PRISMA methodology, we provide a comprehensive review of the complex interactions between entrepreneurship and epidemics over time. Applying a combined Kirznerian-Schumpeterian theoretical framework, we find that, in the short term, epidemics trigger a wave of Kirznerian entrepreneurship aimed at reducing the uncertainty generated directly and indirectly by the medical emergency. In the long term, as medical uncertainty abates, Schumpeterian entrepreneurship can contribute to transforming the post-crisis environment, either supporting or undermining the public reaction to the crisis and determining the path of institutionalization, in the process of defining a new normal. Thus, epidemics could lead to unpredictable socioeconomic and technological improvements, but also to highly undesirable outcomes. The construction of a satisfactory new normal requires the integration of entrepreneurial capabilities within the public sector and an explicit policy of cooperation with the private sector. Therefore, as the short-term phase of the Covid-19 pandemic draws to a close, policymakers must shift their focus away from restrictions and obligations towards a collaborative framework supportive of private entrepreneurial efforts.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Beniamino Callegari",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for rettsvitenskap og styring",
+              "en": "Department of Law and Governance"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christophe Feder",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universita delle Valle d'Aosta"
+            }
+          },
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Italia",
+              "en": "Italy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Beniamino Callegari",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for rettsvitenskap og styring",
+              "en": "Department of Law and Governance"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christophe Feder",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universita delle Valle d'Aosta"
+            }
+          },
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Italia",
+              "en": "Italy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2021",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:04:54.865113654Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/552CAB5D-539D-46D4-81EE-B110233E9166/2021"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:04:54.865113654Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bi",
+      "type": "CristinIdentifier",
+      "value": "1959596"
+    },
+    {
+      "sourceName": "cristin@bi",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85119008056"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acf99651-46d50ef5-f58a-41ff-9d51-0c73cb798228",
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "NVI ok. JV 071221. Sjekker inst. tilhørighet. 21.12 AH",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T09:04:54.865113654Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "IT",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Italia",
+        "en": "Italy"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "IT",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universita delle Valle d'Aosta"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for rettsvitenskap og styring",
+            "en": "Department of Law and Governance"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Handelshøyskolen BI",
+        "en": "BI Norwegian Business School"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

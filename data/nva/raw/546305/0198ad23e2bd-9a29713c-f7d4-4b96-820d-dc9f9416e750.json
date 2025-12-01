@@ -1,0 +1,1035 @@
+{
+  "identifier": "0198ad23e2bd-9a29713c-f7d4-4b96-820d-dc9f9416e750",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68400190.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68405932.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900152.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10600023.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/11700457.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "havforsk@7431.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:44:20.164220265Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "289",
+        "pages": {
+          "end": "16045",
+          "type": "Range",
+          "begin": "16032"
+        },
+        "issue": "23",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "4C10138F-69DA-46F8-8952-6F4B05185B85",
+        "year": "2014",
+        "name": "Journal of Biological Chemistry",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/4C10138F-69DA-46F8-8952-6F4B05185B85/2014",
+        "type": "Journal",
+        "onlineIssn": "1083-351X",
+        "printIssn": "0021-9258",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=4C10138F-69DA-46F8-8952-6F4B05185B85"
+      },
+      "doi": "https://doi.org/10.1074/jbc.M113.525220"
+    },
+    "contributorsCount": 17,
+    "mainTitle": "Indomethacin treatment prevents high fat diet-induced obesity and insulin resistance but not glucose intolerance in C57BL/6J mice",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Even Fjære",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/444095",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ulrike Liisberg Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Even Fjære",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/444095",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Kristin Røen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Alison H. Keenan",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400190.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of California, Davis"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tao Ma",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Kamil Borkowski",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "David M. Kristensen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "FR",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11700457.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Université de Rennes I",
+              "en": "University of Rennes I"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Guy W Novotny",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Thomas Mandrup-Poulsen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600023.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Karolinska Institutet",
+              "en": "Karolinska Institutet"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Brian D. Hudson",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900152.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Glasgow"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "11",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Graeme Milligan",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900152.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Glasgow"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "12",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Yannan Xi",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400190.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of California, Davis"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "13",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "John W. Newman",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68405932.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "United States Department of Agriculture"
+            }
+          },
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400190.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of California, Davis"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "14",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Fawaz G. Haj",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400190.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of California, Davis"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "15",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Liaset",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "16",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Karsten Kristiansen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "17",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lise Madsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Even Fjære",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/444095",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ulrike Liisberg Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Even Fjære",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/444095",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Kristin Røen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Alison H. Keenan",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400190.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of California, Davis"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tao Ma",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Kamil Borkowski",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "David M. Kristensen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "FR",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11700457.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Université de Rennes I",
+              "en": "University of Rennes I"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Guy W Novotny",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Thomas Mandrup-Poulsen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600023.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Karolinska Institutet",
+              "en": "Karolinska Institutet"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Brian D. Hudson",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900152.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Glasgow"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2014",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:51:06.941341392Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/4C10138F-69DA-46F8-8952-6F4B05185B85/2014"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:51:06.941341392Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@havforsk",
+      "type": "CristinIdentifier",
+      "value": "1177288"
+    },
+    {
+      "sourceName": "cristin@havforsk",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-84902211945"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad23e2bd-9a29713c-f7d4-4b96-820d-dc9f9416e750",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:51:06.941341392Z",
+  "scientificIndex": {
+    "year": "2014",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400190.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of California, Davis"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900152.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of Glasgow"
+      }
+    },
+    {
+      "countryCode": "SE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600023.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Karolinska Institutet",
+        "en": "Karolinska Institutet"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Sjømat og ernæring",
+            "en": "Seafood and nutrition"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Even Fjære",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/444095",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Lise Madsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ulrike Liisberg Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Liaset",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Havforskningsinstituttet",
+        "en": "Institute of Marine Research"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Københavns Universitet",
+        "en": "University of Copenhagen"
+      }
+    },
+    {
+      "countryCode": "FR",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/11700457.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Université de Rennes I",
+        "en": "University of Rennes I"
+      }
+    },
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68405932.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "United States Department of Agriculture"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

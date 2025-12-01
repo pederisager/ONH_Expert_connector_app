@@ -1,0 +1,823 @@
+{
+  "identifier": "0198ad3c3925-e3dd69d7-5396-4b86-8477-2b923a036268",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.52.14.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "nkvts@6077.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://bmchealthservres.biomedcentral.com/articles/10.1186/s12913-023-09085-4",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:12:34.364708001Z",
+  "fundings": [
+    {
+      "identifier": "262757",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/262757",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "23",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "1",
+        "articleNumber": "82",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "8A8BF1DA-151C-494E-A99D-C0E66EA7B474",
+        "year": "2023",
+        "name": "BMC Health Services Research",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/8A8BF1DA-151C-494E-A99D-C0E66EA7B474/2023",
+        "type": "Journal",
+        "onlineIssn": "1472-6963",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=8A8BF1DA-151C-494E-A99D-C0E66EA7B474"
+      },
+      "doi": "https://doi.org/10.1186/s12913-023-09085-4"
+    },
+    "contributorsCount": 5,
+    "mainTitle": "Factors associated with general practitioners' routines and comfortability with assessing female genital cutting: a cross-sectional survey",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mai Mahgoub Ziyada",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "R. Elise B Johansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Inger-Lise Lien",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mai Mahgoub Ziyada",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mona Berthelsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bothild Bendiksen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Nasjonalt kunnskapssenter om vold og traumatisk stress",
+              "en": "Norwegian Center for Studies on Violence and Traumatic Stress"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for samfunnsmedisin og global helse",
+              "en": "Department of Community Medicine and Global Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "R. Elise B Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "R. Elise B Johansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Inger-Lise Lien",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mai Mahgoub Ziyada",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mona Berthelsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bothild Bendiksen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Nasjonalt kunnskapssenter om vold og traumatisk stress",
+              "en": "Norwegian Center for Studies on Violence and Traumatic Stress"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mona Berthelsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "R. Elise B Johansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Inger-Lise Lien",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mai Mahgoub Ziyada",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mona Berthelsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bothild Bendiksen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Nasjonalt kunnskapssenter om vold og traumatisk stress",
+              "en": "Norwegian Center for Studies on Violence and Traumatic Stress"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Inger-Lise Lien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "R. Elise B Johansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Inger-Lise Lien",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mai Mahgoub Ziyada",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mona Berthelsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bothild Bendiksen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Nasjonalt kunnskapssenter om vold og traumatisk stress",
+              "en": "Norwegian Center for Studies on Violence and Traumatic Stress"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bothild Bendiksen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "R. Elise B Johansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Inger-Lise Lien",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mai Mahgoub Ziyada",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mona Berthelsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bothild Bendiksen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Nasjonalt kunnskapssenter om vold og traumatisk stress",
+              "en": "Norwegian Center for Studies on Violence and Traumatic Stress"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mai Mahgoub Ziyada",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "R. Elise B Johansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Inger-Lise Lien",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mai Mahgoub Ziyada",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mona Berthelsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bothild Bendiksen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Nasjonalt kunnskapssenter om vold og traumatisk stress",
+              "en": "Norwegian Center for Studies on Violence and Traumatic Stress"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for samfunnsmedisin og global helse",
+              "en": "Department of Community Medicine and Global Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "R. Elise B Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "R. Elise B Johansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Inger-Lise Lien",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mai Mahgoub Ziyada",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mona Berthelsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bothild Bendiksen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Nasjonalt kunnskapssenter om vold og traumatisk stress",
+              "en": "Norwegian Center for Studies on Violence and Traumatic Stress"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mona Berthelsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "R. Elise B Johansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Inger-Lise Lien",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mai Mahgoub Ziyada",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mona Berthelsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bothild Bendiksen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Nasjonalt kunnskapssenter om vold og traumatisk stress",
+              "en": "Norwegian Center for Studies on Violence and Traumatic Stress"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Inger-Lise Lien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "R. Elise B Johansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Inger-Lise Lien",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mai Mahgoub Ziyada",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mona Berthelsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bothild Bendiksen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Nasjonalt kunnskapssenter om vold og traumatisk stress",
+              "en": "Norwegian Center for Studies on Violence and Traumatic Stress"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bothild Bendiksen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "R. Elise B Johansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Inger-Lise Lien",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mai Mahgoub Ziyada",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mona Berthelsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bothild Bendiksen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Nasjonalt kunnskapssenter om vold og traumatisk stress",
+              "en": "Norwegian Center for Studies on Violence and Traumatic Stress"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "1",
+      "year": "2023",
+      "type": "PublicationDate",
+      "day": "25"
+    }
+  },
+  "createdDate": "2025-08-15T10:17:41.925410545Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/8A8BF1DA-151C-494E-A99D-C0E66EA7B474/2023"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:17:41.925410545Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@nkvts",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85146742772"
+    },
+    {
+      "sourceName": "cristin@nkvts",
+      "type": "CristinIdentifier",
+      "value": "2115435"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad3c3925-e3dd69d7-5396-4b86-8477-2b923a036268",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:17:41.925410545Z",
+  "scientificIndex": {
+    "year": "2023",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/6077.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "R. Elise B Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22728",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Inger-Lise Lien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/471002",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Mai Mahgoub Ziyada",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Mona Berthelsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bothild Bendiksen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15580",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Nasjonalt kunnskapssenter om vold og traumatisk stress",
+        "en": "Norwegian Center for Studies on Violence and Traumatic Stress"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.14.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Avdeling for samfunnsmedisin og global helse",
+                    "en": "Department of Community Medicine and Global Health"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for helse og samfunn",
+                "en": "Institute of Health and Society"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Mai Mahgoub Ziyada",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/755844",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

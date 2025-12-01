@@ -1,0 +1,897 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/14101900.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.32.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.52.14.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/689019",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "havforsk@7431.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "identifier": "d76609b1-f0c0-449e-9dd0-c37e926478e3",
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIA",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-09-17T12:07:57.848236352Z"
+      },
+      "size": "5890",
+      "name": "dublin_core.xml",
+      "mimeType": "application/xml",
+      "type": "HiddenFile"
+    },
+    {
+      "identifier": "9f799b49-ae96-4801-838b-8b09b9751527",
+      "license": {
+        "name": "CC-BY",
+        "type": "License",
+        "value": "https://creativecommons.org/licenses/by/4.0",
+        "labels": {
+          "nb": "Creative Commons - Navngivelse",
+          "en": "Creative Commons - Attribution"
+        }
+      },
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIA",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-09-17T12:07:57.848217611Z"
+      },
+      "size": "833146",
+      "publisherVersion": "PublishedVersion",
+      "name": "Article.pdf",
+      "mimeType": "application/pdf",
+      "publishedDate": "2025-09-17T12:07:58.101762407Z",
+      "type": "OpenFile",
+      "legalNote": "© 2023 The Author(s)"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "689019",
+      "source": {
+        "identifier": "UIA",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/UIA",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Universitetet i Agder",
+          "en": "University of Agder"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "62",
+        "pages": {
+          "end": "3338",
+          "type": "Range",
+          "begin": "3329"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "657F8FAB-D6FA-4438-856F-DD9F2A5D26FB",
+        "year": "2023",
+        "name": "European Journal of Nutrition",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/657F8FAB-D6FA-4438-856F-DD9F2A5D26FB/2023",
+        "type": "Journal",
+        "onlineIssn": "1436-6215",
+        "printIssn": "1436-6207",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=657F8FAB-D6FA-4438-856F-DD9F2A5D26FB"
+      },
+      "doi": "https://doi.org/10.1007/s00394-023-03218-5"
+    },
+    "contributorsCount": 8,
+    "mainTitle": "Thyroid function and urinary concentrations of iodine, selenium, and arsenic in vegans, lacto-ovo vegetarians and pescatarians",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Purpose\r\nPopulations following a plant-based diet may be at particular risk of thyroid dysfunction due to low iodine and selenium intakes. The main purpose was to assess thyroid function and urinary concentration of iodine, selenium, and arsenic, in subjects following a vegan, lacto-ovo vegetarian, or pescatarian diet.\r\n\r\nMethods\r\nIn Norway, a country without mandatory dietary iodine fortification, 205 adults, following vegan (n = 115), lacto-ovo vegetarian (n = 55) and pescatarian diet (n = 35) were included. Thyroglobulin (Tg), thyroid-stimulating hormone (TSH), free triiodothyronine (fT3), free thyroxine (fT4), and serum anti-TPO (S-anti-TPO) were measured in a venous blood sample and concentrations of iodine (UIC), creatinine (UCC), selenium, and arsenic were measured from single spot urine samples.\r\n\r\nResults\r\nSubclinical hypothyroidism (TSH > 4.0 mU/L) was observed in 3% of subjects. The overall median (p25, p75) Tg was 17 (9, 30) µg/L and vegans had higher Tg compared to pescatarians. Vegans not consuming iodine-containing supplements (n = 43) had higher Tg, than supplement users (n = 72), 27 (11, 44) vs. 16 (8, 25) µg/L and higher fT4, 16 (15, 17) vs. 15 (14, 17) pmol/L, respectively. The overall median UIC was 57 (28, 130) µg/L, all dietary groups had median UIC below WHO thresholds. Median urinary selenium and arsenic concentration was 13 (6, 22) and 3 (2, 8) µg/L, respectively.\r\n\r\nConclusion\r\nThe prevalence of subclinical hypothyroidism was low and fT4 and fT3 were within the normal range for all dietary groups. Vegans had significantly increased Tg compared to pescatarians.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Inger Aakre",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/509926",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.32.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Marin toksikologi",
+              "en": "Marine toxicology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mina Marthinsen Langfjord",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/890756",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Espen Kolstad Heen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/480766",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for samfunnsmedisin og global helse",
+              "en": "Department of Community Medicine and Global Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Veronika Sele",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/51671",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.32.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Marin toksikologi",
+              "en": "Marine toxicology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Maria Andersson",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14101900.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kinderspital Zürich",
+              "en": "University Children's Hospital Zurich"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Inger Aakre",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/509926",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.32.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Marin toksikologi",
+              "en": "Marine toxicology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mina Marthinsen Langfjord",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/890756",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Espen Kolstad Heen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/480766",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for samfunnsmedisin og global helse",
+              "en": "Department of Community Medicine and Global Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Veronika Sele",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/51671",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.32.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Marin toksikologi",
+              "en": "Marine toxicology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Maria Andersson",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14101900.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kinderspital Zürich",
+              "en": "University Children's Hospital Zurich"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "8",
+      "year": "2023",
+      "type": "PublicationDate",
+      "day": "17"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/657F8FAB-D6FA-4438-856F-DD9F2A5D26FB/2023"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "brage@uia",
+      "type": "HandleIdentifier",
+      "value": "https://hdl.handle.net/11250/3093080"
+    },
+    {
+      "sourceName": "cristin@havforsk",
+      "type": "CristinIdentifier",
+      "value": "2174987"
+    },
+    {
+      "sourceName": "cristin@havforsk",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85168272772"
+    }
+  ],
+  "filesStatus": "hasPublicFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad4e6eb2-d8008bfa-938b-4d8e-9103-9e6239616df5",
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.32.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Marin toksikologi",
+            "en": "Marine toxicology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Veronika Sele",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/51671",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Inger Aakre",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/509926",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Havforskningsinstituttet",
+        "en": "Institute of Marine Research"
+      }
+    },
+    {
+      "countryCode": "CH",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14101900.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Kinderspital Zürich",
+        "en": "University Children's Hospital Zurich"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for ernæring og folkehelse",
+                "en": "Department of Nutrition and Public Health"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helse- og idrettsvitenskap",
+            "en": "Faculty of Health and Sport Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Agder",
+        "en": "University of Agder"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.14.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Avdeling for samfunnsmedisin og global helse",
+                    "en": "Department of Community Medicine and Global Health"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for helse og samfunn",
+                "en": "Institute of Health and Society"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Espen Kolstad Heen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/480766",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for sykepleie og helsefremmende arbeid",
+                "en": "Department of Nursing and Health Promotion"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helsevitenskap",
+            "en": "Faculty of Health Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Miljøvitenskap og naturforvaltning"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Mina Marthinsen Langfjord",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/890756",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs miljø- og biovitskaplege universitet",
+        "nb": "Norges miljø- og biovitenskapelige universitet"
+      }
+    }
+  ],
+  "identifier": "0198ad4e6eb2-d8008bfa-938b-4d8e-9103-9e6239616df5",
+  "handle": "https://hdl.handle.net/11250/3092734",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:25:31.726475614Z",
+  "createdDate": "2025-08-15T10:37:35.282693976Z",
+  "childPublications": [],
+  "modifiedDate": "2025-09-17T12:07:58.344842062Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:37:35.282693976Z",
+  "scientificIndex": {
+    "year": "2023",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

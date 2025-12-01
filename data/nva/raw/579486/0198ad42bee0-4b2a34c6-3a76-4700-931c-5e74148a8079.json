@@ -1,0 +1,552 @@
+{
+  "identifier": "0198ad42bee0-4b2a34c6-3a76-4700-931c-5e74148a8079",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fni@7430.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:03:49.069735534Z",
+  "fundings": [
+    {
+      "identifier": "302176",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/302176",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "485",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "Lecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "FNI",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "FNI offentlig seminar",
+        "place": {
+          "name": "Oslo",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2020-01-23T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Storpolitikk i nord: Norge mellom kalde fronter?",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Arild Moe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/720",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Svein Vigeland Rottem",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/59262",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Gørild Heggelund",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400659",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Svein Vigeland Rottem",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/59262",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Arild Moe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/720",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Svein Vigeland Rottem",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/59262",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Gørild Heggelund",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400659",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Arild Moe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/720",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Arild Moe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/720",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Svein Vigeland Rottem",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/59262",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Gørild Heggelund",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400659",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gørild Heggelund",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/400659",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Arild Moe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/720",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Svein Vigeland Rottem",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/59262",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Gørild Heggelund",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400659",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Arild Moe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/720",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Svein Vigeland Rottem",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/59262",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Gørild Heggelund",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400659",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Svein Vigeland Rottem",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/59262",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Arild Moe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/720",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Svein Vigeland Rottem",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/59262",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Gørild Heggelund",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400659",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Arild Moe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/720",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Arild Moe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/720",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Svein Vigeland Rottem",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/59262",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Gørild Heggelund",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400659",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gørild Heggelund",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/400659",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Arild Moe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/720",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Svein Vigeland Rottem",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/59262",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Gørild Heggelund",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/400659",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2020",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:24:49.376572083Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:24:49.376572083Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fni",
+      "type": "CristinIdentifier",
+      "value": "1830259"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad42bee0-4b2a34c6-3a76-4700-931c-5e74148a8079",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:24:49.376572083Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Arild Moe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/720",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Svein Vigeland Rottem",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/59262",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Gørild Heggelund",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/400659",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Fridtjof Nansens institutt",
+        "en": "Fridtjof Nansen Institute"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

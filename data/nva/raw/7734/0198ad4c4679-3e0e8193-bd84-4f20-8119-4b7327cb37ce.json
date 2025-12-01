@@ -1,0 +1,186 @@
+{
+  "identifier": "0198ad4c4679-3e0e8193-bd84-4f20-8119-4b7327cb37ce",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/223.15.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/223.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/223.15.40.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hvo@223.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/223.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:04:19.029894594Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/223.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaInterview"
+      },
+      "publicationContext": {
+        "format": "Text",
+        "medium": {
+          "type": "Journal"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "Aftenposten"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Våpenprodusenten Nammo får kritikk: – Denne annonsen kunne NS laget på 30-tallet",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Historisk institutt",
+              "en": "Department of History"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.40.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Historisk institutt",
+              "en": "Department of History"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "2",
+      "year": "2017",
+      "type": "PublicationDate",
+      "day": "27"
+    }
+  },
+  "createdDate": "2025-08-15T10:35:13.913478677Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:35:13.913478677Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hvo",
+      "type": "CristinIdentifier",
+      "value": "1495298"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad4c4679-3e0e8193-bd84-4f20-8119-4b7327cb37ce",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:35:13.913478677Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.40.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Historisk institutt",
+                "en": "Department of History"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.15.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Avdeling for samfunnsfag og historie",
+            "en": "Faculty of Social Sciences and History"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/223.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nikolai Brandal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/7734",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Høgskulen i Volda",
+        "nb": "Høgskulen i Volda",
+        "en": "Volda University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

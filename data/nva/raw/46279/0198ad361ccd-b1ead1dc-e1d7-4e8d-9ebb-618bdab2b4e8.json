@@ -1,0 +1,653 @@
+{
+  "identifier": "0198ad361ccd-b1ead1dc-e1d7-4e8d-9ebb-618bdab2b4e8",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.13.10.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.13.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:17:31.961694250Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "16",
+        "pages": {
+          "end": "250",
+          "type": "Range",
+          "begin": "227"
+        },
+        "type": "AcademicLiteratureReview"
+      },
+      "publicationContext": {
+        "identifier": "B9F8E556-D51B-4076-B8CA-E07E520B808B",
+        "year": "2023",
+        "name": "Vocations and Learning",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/B9F8E556-D51B-4076-B8CA-E07E520B808B/2023",
+        "type": "Journal",
+        "onlineIssn": "1874-7868",
+        "printIssn": "1874-785X",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=B9F8E556-D51B-4076-B8CA-E07E520B808B"
+      },
+      "doi": "https://doi.org/10.1007/s12186-023-09316-z"
+    },
+    "contributorsCount": 5,
+    "mainTitle": "The Role of verbal peer feedback in the police: A Scoping Review",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Olav Dahl",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/812515",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Camilla Pellegrini Meling",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1319219",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/812515",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marie-Louise Damen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Camilla Pellegrini Meling",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1319219",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/812515",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Camilla Pellegrini Meling",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1319219",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/812515",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Camilla Pellegrini Meling",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1319219",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Camilla Pellegrini Meling",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1319219",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/812515",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Magnus Rom Jensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/436415",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.13.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "NTNU Universitetsbiblioteket",
+              "en": "NTNU University Library"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Olav Dahl",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/812515",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Camilla Pellegrini Meling",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1319219",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/812515",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Marie-Louise Damen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Camilla Pellegrini Meling",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1319219",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/812515",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Camilla Pellegrini Meling",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1319219",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/812515",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Camilla Pellegrini Meling",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1319219",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Camilla Pellegrini Meling",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1319219",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Marie-Louise Damen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Olav Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/812515",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Magnus Rom Jensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/436415",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.13.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "NTNU Universitetsbiblioteket",
+              "en": "NTNU University Library"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:11:01.453102482Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/B9F8E556-D51B-4076-B8CA-E07E520B808B/2023"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:11:01.453102482Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85149932212"
+    },
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "2134081"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad361ccd-b1ead1dc-e1d7-4e8d-9ebb-618bdab2b4e8",
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "Doi virker ikke, mb 160323; endret kategori til vit.oversiktsar. [09.01.24 AL/NTNU 9",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T10:11:01.453102482Z",
+  "scientificIndex": {
+    "year": "2023",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.13.10.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "NTNU Universitetsbiblioteket",
+                "en": "NTNU University Library"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Prorektor for forskning",
+            "en": "Pro-Rector for Research"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Magnus Rom Jensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/436415",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs teknisk-naturvitskaplege universitet",
+        "nb": "Norges teknisk-naturvitenskapelige universitet",
+        "en": "Norwegian University of Science and Technology"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Camilla Pellegrini Meling",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1319219",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Marie-Louise Damen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/937847",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Olav Dahl",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/812515",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

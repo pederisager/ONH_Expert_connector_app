@@ -1,0 +1,754 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/80500064.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/2492068",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fhi@7502.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+  },
+  "type": "Publication",
+  "fundings": [
+    {
+      "source": {
+        "identifier": "UIO",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/UIO",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Universitetet i Oslo",
+          "en": "University of Oslo"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "source": {
+        "identifier": "FHI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FHI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Folkehelseinstituttet",
+          "en": "Norwegian Institute of Public Health"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Folkehelseinstituttet",
+        "en": "Norwegian Institute of Public Health"
+      }
+    },
+    {
+      "identifier": "164766",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/164766",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "288083",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Norges forskningsråd",
+        "en": "Research Council of Norway (RCN)"
+      }
+    },
+    {
+      "identifier": "262177",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/262177",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "288083",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/288083",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "33",
+        "pages": {
+          "end": "283",
+          "type": "Range",
+          "begin": "264"
+        },
+        "issue": "1",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "21E89CBF-B001-4ECA-8185-949898751588",
+        "year": "2020",
+        "name": "Development and Psychopathology",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/21E89CBF-B001-4ECA-8185-949898751588/2020",
+        "type": "Journal",
+        "onlineIssn": "1469-2198",
+        "printIssn": "0954-5794",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=21E89CBF-B001-4ECA-8185-949898751588"
+      },
+      "doi": "https://doi.org/10.1017/S0954579419001755"
+    },
+    "contributorsCount": 5,
+    "mainTitle": "Understanding trajectories of externalizing problems: Stability and emergence of risk factors from infancy to middle adolescence",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Kjeldsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for barns helse og utvikling",
+              "en": "Child Health and Development"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ragnhild Bang Nes",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15374",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for psykisk helse",
+              "en": "Department of Mental Health"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ann Sanson",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "AU",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/80500064.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Melbourne"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eivind Ystrøm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11525",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Folkehelse og forebygging",
+              "en": "Public Health and Prevention"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Evalill Bølstad Karevold",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14605",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anne Kjeldsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for barns helse og utvikling",
+              "en": "Child Health and Development"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Anne Kjeldsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ragnhild Bang Nes",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15374",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for psykisk helse",
+              "en": "Department of Mental Health"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ann Sanson",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "AU",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/80500064.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Melbourne"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eivind Ystrøm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11525",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Folkehelse og forebygging",
+              "en": "Public Health and Prevention"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Evalill Bølstad Karevold",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14605",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2020",
+      "type": "PublicationDate"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/21E89CBF-B001-4ECA-8185-949898751588/2020"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fhi",
+      "type": "CristinIdentifier",
+      "value": "1835312"
+    },
+    {
+      "sourceName": "cristin@fhi",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85085212437"
+    }
+  ],
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad2b6a12-a36e1eb2-1a4b-4faf-8d75-144c57131bd5",
+  "topLevelOrganizations": [
+    {
+      "countryCode": "AU",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/80500064.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of Melbourne"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykologisk institutt",
+                "en": "Department of Psychology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ragnhild Bang Nes",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15374",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Evalill Bølstad Karevold",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14605",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Eivind Ystrøm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11525",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anne Kjeldsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.11.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Avdeling for psykisk helse",
+                "en": "Department of Mental Health"
+              }
+            },
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.10.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Avdeling for barns helse og utvikling",
+                "en": "Child Health and Development"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Folkehelse og forebygging",
+            "en": "Public Health and Prevention"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ragnhild Bang Nes",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15374",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Anne Kjeldsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22630",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Eivind Ystrøm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11525",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Folkehelseinstituttet",
+        "en": "Norwegian Institute of Public Health"
+      }
+    }
+  ],
+  "identifier": "0198ad2b6a12-a36e1eb2-1a4b-4faf-8d75-144c57131bd5",
+  "handle": "https://hdl.handle.net/11250/2726834",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:56:33.377499643Z",
+  "createdDate": "2025-08-15T09:59:20.338234275Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:59:20.338234275Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:59:20.338234275Z",
+  "scientificIndex": {
+    "year": "2020",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

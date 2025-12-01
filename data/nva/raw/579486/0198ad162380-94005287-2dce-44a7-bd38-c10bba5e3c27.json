@@ -1,0 +1,350 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fni@7430.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://wo.cristin.no/as/WebObjects/cristin.woa/wo/26.0.29.25.8#anker",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    },
+    {
+      "identifier": "e341ca7a-2c8c-441c-8bf4-0d9b36ef319f",
+      "license": {
+        "name": "CC-NC-ND",
+        "type": "License",
+        "value": "https://creativecommons.org/licenses/by-nc-nd/4.0",
+        "labels": {
+          "nb": "Creative Commons - Navngivelse-IkkeKommersiell-IngenBearbeidelser",
+          "en": "Creative Commons - Attribution-NonCommercial-NoDerivs"
+        }
+      },
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "NORD",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-19T05:55:54.729954702Z"
+      },
+      "size": "2124740",
+      "publisherVersion": "PublishedVersion",
+      "name": "Oesthagen.pdf",
+      "mimeType": "application/pdf",
+      "publishedDate": "2025-08-19T05:55:54.986873790Z",
+      "type": "OpenFile",
+      "legalNote": "© 2021 The Author(s)"
+    },
+    {
+      "identifier": "da3722b8-fcb9-4cd9-a1bd-49c5e997e825",
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "NORD",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-19T05:55:54.729967198Z"
+      },
+      "size": "7599",
+      "name": "dublin_core.xml",
+      "mimeType": "application/xml",
+      "type": "HiddenFile"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "302176",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/302176",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "485",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "486",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "302343",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/302343",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "11",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "1",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "2D55F56A-2E60-4EF5-824C-9D914335ABF5",
+        "year": "2021",
+        "name": "The Polar Journal",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/2D55F56A-2E60-4EF5-824C-9D914335ABF5/2021",
+        "type": "Journal",
+        "onlineIssn": "2154-8978",
+        "printIssn": "2154-896X",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=2D55F56A-2E60-4EF5-824C-9D914335ABF5"
+      },
+      "doi": "https://doi.org/10.1080/2154896X.2021.1911043"
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Norway’s arctic policy: still high North, low tension?",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "For Norway, the Arctic is an integral part of the country in terms of both economic development and security considerations. Since 2005, consecutive governments in Oslo have made use of this fact, in combination with international attention given to the north, to foster a High North policy framed around regional economic development, climate issues and international cooperation (especially vis-à-vis Russia). However, over the last few years, challenges have emerged. Focusing on the foreign and security policy aspects of Norway’s Arctic approach, this article defines Norway’s Northern engagement and how this engagement has evolved since 2005. Then, the challenges currently facing Norway in the domain of foreign and security policy are discussed in terms of the new Arctic policy document released in late-2020. These challenges are broadly surmised as relating to Russia’s military posture and the use of the Arctic as an arena for a China–US tug of war.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen",
+              "en": "Nord University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen",
+              "en": "Nord University Business School"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2021",
+      "type": "PublicationDate"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/2D55F56A-2E60-4EF5-824C-9D914335ABF5/2021"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fni",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85105090073"
+    },
+    {
+      "sourceName": "brage@nord",
+      "type": "HandleIdentifier",
+      "value": "https://hdl.handle.net/11250/2771233"
+    },
+    {
+      "sourceName": "cristin@fni",
+      "type": "CristinIdentifier",
+      "value": "1906336"
+    }
+  ],
+  "filesStatus": "hasPublicFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad162380-94005287-2dce-44a7-bd38-c10bba5e3c27",
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Handelshøgskolen",
+            "en": "Nord University Business School"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/204.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Nord universitet",
+        "en": "Nord University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Fridtjof Nansens institutt",
+        "en": "Fridtjof Nansen Institute"
+      }
+    }
+  ],
+  "identifier": "0198ad162380-94005287-2dce-44a7-bd38-c10bba5e3c27",
+  "handle": "https://hdl.handle.net/11250/2765451",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:14:50.594864970Z",
+  "createdDate": "2025-08-15T09:36:06.016813136Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-19T05:55:55.207043923Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:36:06.016813136Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

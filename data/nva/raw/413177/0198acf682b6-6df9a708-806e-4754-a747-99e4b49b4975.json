@@ -1,0 +1,487 @@
+{
+  "identifier": "0198acf682b6-6df9a708-806e-4754-a747-99e4b49b4975",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/44420044.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13100072.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hive@222.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:04:36.056997508Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "516",
+          "type": "Range",
+          "begin": "498"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9788131611821"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "23457965-BC01-4929-8821-8BE00A03231E",
+                "year": "2020",
+                "name": "Rawat Publications",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/23457965-BC01-4929-8821-8BE00A03231E/2020",
+                "type": "Publisher",
+                "scientificValue": "LevelOne",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=23457965-BC01-4929-8821-8BE00A03231E"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Military Psychology Response to Post-Pandemic Reconstruction Volume 2",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Samir Rawat",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/603087"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Andrzej Piotrowski",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad4d0373-75412c3f-ac9c-4f44-b1fe-c1b33b5e64b2",
+        "type": "Anthology"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Significant Value of Decompression on Lifting of Lockdown During Pandemic – Follow 9 R’s",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Andrzej Piotrowski",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13100072.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Politechnika Gdanska",
+              "en": "Gdansk University of Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Boe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ole Boe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for industriell økonomi, strategi og statsvitenskap",
+              "en": "Department of Business, Strategy and Political Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Samir Rawat",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/44420044.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Symbiosis International University",
+              "en": "Symbiosis International University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Johan Bergh",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Andrzej Piotrowski",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13100072.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Politechnika Gdanska",
+              "en": "Gdansk University of Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Boe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ole Boe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for industriell økonomi, strategi og statsvitenskap",
+              "en": "Department of Business, Strategy and Political Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Samir Rawat",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/44420044.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Symbiosis International University",
+              "en": "Symbiosis International University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Johan Bergh",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2020",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1085"
+  },
+  "createdDate": "2025-08-15T09:01:33.238951110Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:01:05.941500944Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hive",
+      "type": "CristinIdentifier",
+      "value": "1829722"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acf682b6-6df9a708-806e-4754-a747-99e4b49b4975",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:01:33.238951110Z",
+  "scientificIndex": {
+    "year": "2020",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.2.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for industriell økonomi, strategi og statsvitenskap",
+                "en": "Department of Business, Strategy and Political Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "USN Handelshøyskolen",
+            "en": "USN School of Business"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ole Boe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Universitetet i Søraust-Noreg",
+        "nb": "Universitetet i Sørøst-Norge",
+        "en": "University of South-Eastern Norway"
+      }
+    },
+    {
+      "countryCode": "IN",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/44420044.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Symbiosis International University",
+        "en": "Symbiosis International University"
+      }
+    },
+    {
+      "countryCode": "PL",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13100072.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Politechnika Gdanska",
+        "en": "Gdansk University of Technology"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Forsvarets høgskole",
+        "en": "Norwegian Defence University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ole Boe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/603087",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,297 @@
+{
+  "identifier": "0198ad462f43-8fb91766-cea6-4e32-bf53-71945ac9db4e",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/14120005.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bi@158.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:09:33.007137752Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "System dynamics society",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "International system dynamics conference 2017",
+        "place": {
+          "countryCode": "US",
+          "name": "Cambridge, MA",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2017-07-16T00:00:00Z",
+          "to": "2017-07-20T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "The core of the 2052 model - A general model of a modern capitalist economy, covering real and financial dynamics",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jørgen Randers",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/325133",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for rettsvitenskap og styring",
+              "en": "Department of Law and Governance"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ulrich Golüke",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14120005.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Business School Lausanne"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for rettsvitenskap og styring",
+              "en": "Department of Law and Governance"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jørgen Randers",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/325133",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for rettsvitenskap og styring",
+              "en": "Department of Law and Governance"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ulrich Golüke",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14120005.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Business School Lausanne"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for rettsvitenskap og styring",
+              "en": "Department of Law and Governance"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2017",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:28:34.755302650Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:28:34.755302650Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bi",
+      "type": "CristinIdentifier",
+      "value": "1537606"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad462f43-8fb91766-cea6-4e32-bf53-71945ac9db4e",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:28:34.755302650Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.12.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for rettsvitenskap og styring",
+            "en": "Department of Law and Governance"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Jørgen Randers",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/325133",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Handelshøyskolen BI",
+        "en": "BI Norwegian Business School"
+      }
+    },
+    {
+      "countryCode": "CH",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14120005.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Business School Lausanne"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

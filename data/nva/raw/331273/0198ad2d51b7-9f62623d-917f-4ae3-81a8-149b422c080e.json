@@ -1,0 +1,392 @@
+{
+  "identifier": "0198ad2d51b7-9f62623d-917f-4ae3-81a8-149b422c080e",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/68400325.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/14300064.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.11.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bi@158.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:05:04.432271711Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "197",
+        "pages": {
+          "end": "1316",
+          "type": "Range",
+          "begin": "1307"
+        },
+        "issue": "Part 1",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "368EADA2-A2C0-4CC6-BA21-94C3CF2E80B9",
+        "year": "2018",
+        "name": "Journal of Cleaner Production",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/368EADA2-A2C0-4CC6-BA21-94C3CF2E80B9/2018",
+        "type": "Journal",
+        "onlineIssn": "1879-1786",
+        "printIssn": "0959-6526",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=368EADA2-A2C0-4CC6-BA21-94C3CF2E80B9"
+      },
+      "doi": "https://doi.org/10.1016/j.jclepro.2018.06.236"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Achieving Triple Bottom Line Performance in Manufacturer-Customer Supply Chains: Evidence from an Emerging Economy",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "The influence of sustainability on innovation is well-established, yet the efficacy of innovation as a determinant of sustainable performance in supply chains has received less scrutiny. This study examines green innovation practices as determinants of the triple bottom line performance. Moreover, the study implicates top management commitment to sustainability as a driver of green managerial and process innovation. The research employs AMOS to assess survey-based data collected from 181 Turkish manufacturers. The results offer evidence that top management commitment fosters green innovation practices, and these innovations enhance economic performance, environmental performance, and customer cooperation. Top management should therefore commit to achieving sustainable operations and follow up this commitment with green innovations that drive triple bottom line performance.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+              "en": "Department of Business, History and Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Pervin Ersoy",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "TR",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14300064.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Yasar Üniversitesi",
+              "en": "Yasar University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Robert Dahlstrøm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/340071",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400325.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Miami",
+              "en": "University of Miami"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for markedsføring",
+              "en": "Department of Marketing"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+              "en": "Department of Business, History and Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Pervin Ersoy",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "TR",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14300064.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Yasar Üniversitesi",
+              "en": "Yasar University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Robert Dahlstrøm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/340071",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400325.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Miami",
+              "en": "University of Miami"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for markedsføring",
+              "en": "Department of Marketing"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2018",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:01:25.175189346Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/368EADA2-A2C0-4CC6-BA21-94C3CF2E80B9/2018"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:01:25.175189346Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bi",
+      "type": "CristinIdentifier",
+      "value": "1593850"
+    },
+    {
+      "sourceName": "cristin@bi",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85053130300"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad2d51b7-9f62623d-917f-4ae3-81a8-149b422c080e",
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "Ok tilhørighet, doi og online. 5.10.18 NF",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T10:01:25.175189346Z",
+  "scientificIndex": {
+    "year": "2018",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.11.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for markedsføring",
+            "en": "Department of Marketing"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Robert Dahlstrøm",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/340071",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Handelshøyskolen BI",
+        "en": "BI Norwegian Business School"
+      }
+    },
+    {
+      "countryCode": "TR",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14300064.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Yasar Üniversitesi",
+        "en": "Yasar University"
+      }
+    },
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400325.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of Miami",
+        "en": "University of Miami"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.4.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for økonomi, historie og samfunnsvitenskap",
+                "en": "Department of Business, History and Social Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.57.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "USN Handelshøyskolen",
+            "en": "USN School of Business"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/222.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Umar Burki",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/331273",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Universitetet i Søraust-Noreg",
+        "nb": "Universitetet i Sørøst-Norge",
+        "en": "University of South-Eastern Norway"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

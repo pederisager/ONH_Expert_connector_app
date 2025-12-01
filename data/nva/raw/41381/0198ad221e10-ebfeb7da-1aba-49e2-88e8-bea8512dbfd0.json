@@ -1,0 +1,787 @@
+{
+  "identifier": "0198ad221e10-ebfeb7da-1aba-49e2-88e8-bea8512dbfd0",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1965.8.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1972.40.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.52.11.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1965.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1972.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1972.40.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "ahus@1972.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1972.0.0.0"
+  },
+  "handle": "https://hdl.handle.net/10852/109699",
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:43:56.875291337Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1965.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1972.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "11",
+        "pages": {
+          "type": "Range"
+        },
+        "articleNumber": "1254905",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "778C1537-B3D6-462E-A475-632E387E7E45",
+        "year": "2023",
+        "name": "Frontiers in Public Health",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/778C1537-B3D6-462E-A475-632E387E7E45/2023",
+        "type": "Journal",
+        "onlineIssn": "2296-2565",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=778C1537-B3D6-462E-A475-632E387E7E45"
+      },
+      "doi": "https://doi.org/10.3389/fpubh.2023.1254905"
+    },
+    "contributorsCount": 7,
+    "mainTitle": "Lower participation among immigrants in colorectal cancer screening in Norway",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sameer Bhargava",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/798010",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1972.40.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1972.40.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftavdelingen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Edoardo Botteri",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/652474",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mona Berthelsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nadia Iqbal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1855",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kristin Ranheim Randel",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/684661",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Holme",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2295",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1965.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1965.8.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forskningsenheten"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for helseledelse og helseøkonomi",
+              "en": "Department of Health Management and Health Economics"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Paula Berstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23054",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sameer Bhargava",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/798010",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1972.40.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1972.40.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftavdelingen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Edoardo Botteri",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/652474",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mona Berthelsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nadia Iqbal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1855",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kristin Ranheim Randel",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/684661",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Holme",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2295",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1965.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1965.8.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forskningsenheten"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for helseledelse og helseøkonomi",
+              "en": "Department of Health Management and Health Economics"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Paula Berstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23054",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:49:11.056040128Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/778C1537-B3D6-462E-A475-632E387E7E45/2023"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:49:11.056040128Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@ahus",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85173792283"
+    },
+    {
+      "sourceName": "cristin@ahus",
+      "type": "CristinIdentifier",
+      "value": "2190830"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad221e10-ebfeb7da-1aba-49e2-88e8-bea8512dbfd0",
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "Lagt til sidetall (KH 190224).",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T09:49:11.056040128Z",
+  "scientificIndex": {
+    "year": "2023",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1965.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1965.8.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Forskningsenheten"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1965.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Holme",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2295",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Sørlandet sykehus HF",
+        "en": "Sørlandet Hospital Trust"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1972.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/1972.40.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1972.40.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Kreftavdelingen"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1972.40.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Medisinsk divisjon"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1972.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Sameer Bhargava",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/798010",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Akershus universitetssykehus HF",
+        "en": "Akershus University Hospital Trust"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Kreftregisteret",
+            "en": "The Cancer Registry of Norway"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kristin Ranheim Randel",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/684661",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Nadia Iqbal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1855",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Paula Berstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23054",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Mona Berthelsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/41381",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Edoardo Botteri",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/652474",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Sameer Bhargava",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/798010",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Folkehelseinstituttet",
+        "en": "Norwegian Institute of Public Health"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.11.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Avdeling for helseledelse og helseøkonomi",
+                    "en": "Department of Health Management and Health Economics"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.52.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for helse og samfunn",
+                "en": "Institute of Health and Society"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Holme",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/2295",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

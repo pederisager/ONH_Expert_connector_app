@@ -1,0 +1,212 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/689019",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uia@201.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.nettavisen.no/okonomi/norsk-forsker-vegetarianere-spiser-for-lite-frukt-og-gront/s/5-95-526180",
+      "type": "AssociatedLink",
+      "relation": "dataset"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "689019",
+      "source": {
+        "identifier": "UIA",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/UIA",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Universitetet i Agder",
+          "en": "University of Agder"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaInterview"
+      },
+      "publicationContext": {
+        "medium": {
+          "type": "Internet"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "Nettavisen"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Norsk forsker: Vegetarianere spiser for lite frukt og grønt",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "InterviewSubject"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "6",
+      "year": "2022",
+      "type": "PublicationDate",
+      "day": "11"
+    }
+  },
+  "publicationContextUris": [],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uia",
+      "type": "CristinIdentifier",
+      "value": "2033300"
+    }
+  ],
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad414f81-9d276916-f1e5-4137-8bd5-20a3ebc9b025",
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for ernæring og folkehelse",
+                "en": "Department of Nutrition and Public Health"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helse- og idrettsvitenskap",
+            "en": "Faculty of Health and Sport Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Agder",
+        "en": "University of Agder"
+      }
+    }
+  ],
+  "identifier": "0198ad414f81-9d276916-f1e5-4137-8bd5-20a3ebc9b025",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:25:04.378087727Z",
+  "createdDate": "2025-08-15T10:23:15.329185652Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:23:15.329185652Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:23:15.329185652Z",
+  "scientificIndex": {},
+  "status": "PUBLISHED"
+}

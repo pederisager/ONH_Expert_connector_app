@@ -1,0 +1,555 @@
+{
+  "identifier": "0198ad195757-cfe2a19b-2ddf-4c9c-bb50-54ee6fc40936",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.1",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:37:06.712185528Z",
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferenceLecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "Norsk Cardiologisk Selskap",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "Norsk Cardiologisk Selskaps vintermøte",
+        "place": {
+          "countryCode": "NO",
+          "name": "Lillehamar",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2010-01-29T00:00:00Z",
+          "to": "2010-01-31T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 7,
+    "mainTitle": "Inhibiting phosphorylation of SMAD2 preserves cardiac function during pressure overload by attenuating left ventricular SERCA2 loss",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "JOHANNES BJØRNSTAD",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15431",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Biljana Skrbic",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6965",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henriette Marstein",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/4597",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.1",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fakultetsdivisjon Ullevål universitetssykehus, Administrasjon",
+              "en": "Faculty Division Ullevål University Hospital, Administration"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ivar Sjaastad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "William Edward Louch",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/13504",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Geir Arve Christensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15225",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Theis Tønnessen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15714",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fakultetsdivisjon Ullevål universitetssykehus",
+              "en": "Faculty Division Ullevål University Hospital"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "JOHANNES BJØRNSTAD",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15431",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Biljana Skrbic",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6965",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henriette Marstein",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/4597",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.1",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fakultetsdivisjon Ullevål universitetssykehus, Administrasjon",
+              "en": "Faculty Division Ullevål University Hospital, Administration"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ivar Sjaastad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17430",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "William Edward Louch",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/13504",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Geir Arve Christensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15225",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Theis Tønnessen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/15714",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fakultetsdivisjon Ullevål universitetssykehus",
+              "en": "Faculty Division Ullevål University Hospital"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2010",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:39:35.895013890Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:39:35.895013890Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "251027"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad195757-cfe2a19b-2ddf-4c9c-bb50-54ee6fc40936",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:39:35.895013890Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.35",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for eksperimentell medisinsk forskning",
+            "en": "Institute for Experimental Medical Research"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.1",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultetsdivisjon Ullevål universitetssykehus, Administrasjon",
+            "en": "Faculty Division Ullevål University Hospital, Administration"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.13.18.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultetsdivisjon Ullevål universitetssykehus",
+            "en": "Faculty Division Ullevål University Hospital"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,243 @@
+{
+  "identifier": "0198acfda4c5-0e7fc366-59c0-4a0a-bc43-eddf3d2b1d2d",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:06:07.858842045Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "20",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "1",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "97E6092D-1A28-4686-82EF-3CC49AAC0197",
+        "year": "2025",
+        "name": "PLOS ONE",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/97E6092D-1A28-4686-82EF-3CC49AAC0197/2025",
+        "type": "Journal",
+        "onlineIssn": "1932-6203",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=97E6092D-1A28-4686-82EF-3CC49AAC0197"
+      },
+      "doi": "https://doi.org/10.1371/journal.pone.0316618"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Conversational repairs on Reddit: Widely initiated but often uncompleted",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Alex Goddard",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Alex Gillespie",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Alex Goddard",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Alex Gillespie",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2025",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:09:20.709069210Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/97E6092D-1A28-4686-82EF-3CC49AAC0197/2025"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:09:20.709069210Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2360596"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85214127479"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acfda4c5-0e7fc366-59c0-4a0a-bc43-eddf3d2b1d2d",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:09:20.709069210Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "London School of Economics and Political Science",
+        "en": "London School of Economics and Political Science"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

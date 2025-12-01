@@ -1,0 +1,661 @@
+{
+  "identifier": "0198ad18406a-f99a223b-3b4d-4bca-a177-c4f5f229eee1",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uib@184.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:42:13.611638580Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "124",
+        "pages": {
+          "end": "105",
+          "type": "Range",
+          "begin": "99"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "F6D8FDFB-0A02-4E36-96FE-5F24612B218C",
+        "year": "2019",
+        "name": "Research in Veterinary Science",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/F6D8FDFB-0A02-4E36-96FE-5F24612B218C/2019",
+        "type": "Journal",
+        "onlineIssn": "1532-2661",
+        "printIssn": "0034-5288",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=F6D8FDFB-0A02-4E36-96FE-5F24612B218C"
+      },
+      "doi": "https://doi.org/10.1016/j.rvsc.2019.02.012"
+    },
+    "contributorsCount": 10,
+    "mainTitle": "Effect of fish oil supplementation and restricted feeding on body fat distribution and blood lipid profile in a rabbit model of castration-induced obesity",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Natalia Grigorova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Zh Ivanova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ekaterina Vachkova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Georgi Penchev",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Stefan Ribarski",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Teodora Mircheva Georgieva",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Penka Yonkova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ivan Penchev Georgiev",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Natalia Grigorova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Zh Ivanova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ekaterina Vachkova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Georgi Penchev",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Stefan Ribarski",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Teodora Mircheva Georgieva",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Penka Yonkova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ivan Penchev Georgiev",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BG",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Trakijski universitet",
+              "en": "Trakia University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2019",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:38:24.490189153Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/F6D8FDFB-0A02-4E36-96FE-5F24612B218C/2019"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:38:24.490189153Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uib",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85062654314"
+    },
+    {
+      "sourceName": "cristin@uib",
+      "type": "CristinIdentifier",
+      "value": "1712323"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad18406a-f99a223b-3b4d-4bca-a177-c4f5f229eee1",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:38:24.490189153Z",
+  "scientificIndex": {
+    "year": "2019",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "BG",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/11307402.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Trakijski universitet",
+        "en": "Trakia University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Klinisk institutt 2",
+                "en": "Department of Clinical Science"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

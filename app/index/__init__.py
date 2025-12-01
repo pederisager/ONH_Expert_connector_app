@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from .chunking import Chunker, SimpleTokenizer, normalize_text
-from .models import Chunk, IndexPaths, SourceLink, StaffRecord
+from .models import Chunk, IndexPaths, NvaPublicationSnippet, SourceLink, StaffRecord
 from .records_loader import load_curated_records
 from .embedder_factory import create_embedding_backend
 from .vector_store import LocalVectorStore, SearchResult
@@ -13,6 +13,7 @@ __all__ = [
     "Chunker",
     "IndexPaths",
     "LocalVectorStore",
+    "NvaPublicationSnippet",
     "SearchResult",
     "SimpleTokenizer",
     "SourceLink",

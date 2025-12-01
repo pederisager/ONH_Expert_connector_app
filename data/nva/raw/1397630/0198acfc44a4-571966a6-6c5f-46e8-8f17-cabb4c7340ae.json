@@ -1,0 +1,354 @@
+{
+  "identifier": "0198acfc44a4-571966a6-6c5f-46e8-8f17-cabb4c7340ae",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13700000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12700076.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:33:42.117033054Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9783030935344"
+              ],
+              "series": {
+                "identifier": "A149FB03-96AB-47EE-9240-FAB65A5565F9",
+                "year": "2022",
+                "name": "Theory and History in the Human and Social Sciences",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/A149FB03-96AB-47EE-9240-FAB65A5565F9/2022",
+                "type": "Series",
+                "onlineIssn": "2523-8671",
+                "printIssn": "2523-8663",
+                "scientificValue": "LevelOne",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=A149FB03-96AB-47EE-9240-FAB65A5565F9"
+              },
+              "publisher": {
+                "valid": "true",
+                "identifier": "AD8FEF33-C155-4915-A7BF-A1BE33DDAC4D",
+                "year": "2022",
+                "name": "Springer",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/AD8FEF33-C155-4915-A7BF-A1BE33DDAC4D/2022",
+                "type": "Publisher",
+                "scientificValue": "LevelOne",
+                "isbnPrefix": "978-94-007,978-3-64236,978-3-319,978-1-85233,978-1-4471,978-1-4419,978-0-7923,978-0-387",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=AD8FEF33-C155-4915-A7BF-A1BE33DDAC4D"
+              },
+              "type": "Book",
+              "seriesNumber": "1",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Courageous Methods in Cultural Psychology",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Meike Watzlawik",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Ska Salden",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad0e297b-c431e073-dd60-4340-95be-b98c0a46071a",
+        "type": "Anthology"
+      },
+      "doi": "https://doi.org/10.1007/978-3-030-93535-1_7"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Studying the Stream of Experience at Memorial Sites: The Subjective Camera Methodology",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aalborg Universitet",
+              "en": "Aalborg University"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brady Wagoner",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ignacio Bresco de Luna",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spania",
+              "en": "Spain"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Lisa Herbig",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12700076.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universiteit van Amsterdam",
+              "en": "University of Amsterdam"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aalborg Universitet",
+              "en": "Aalborg University"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brady Wagoner",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ignacio Bresco de Luna",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Spania",
+              "en": "Spain"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Lisa Herbig",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12700076.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universiteit van Amsterdam",
+              "en": "University of Amsterdam"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2022",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1034"
+  },
+  "createdDate": "2025-08-15T09:07:50.564396220Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:02:12.223296919Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2131161"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acfc44a4-571966a6-6c5f-46e8-8f17-cabb4c7340ae",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:07:50.564396220Z",
+  "scientificIndex": {
+    "year": "2022",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NL",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12700076.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universiteit van Amsterdam",
+        "en": "University of Amsterdam"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100002.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Aalborg Universitet",
+        "en": "Aalborg University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brady Wagoner",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1397630",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "ES",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Spania",
+        "en": "Spain"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

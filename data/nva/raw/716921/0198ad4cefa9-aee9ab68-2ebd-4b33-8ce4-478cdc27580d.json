@@ -1,0 +1,509 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/14100048.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bi@158.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.sciencedirect.com/science/article/pii/S0160791X20312938",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    },
+    {
+      "identifier": "00011468-6f26-4ea8-9e4f-e2b5540f47b3",
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "BI",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-19T08:45:13.998305166Z"
+      },
+      "size": "7033",
+      "name": "dublin_core.xml",
+      "mimeType": "application/xml",
+      "type": "HiddenFile"
+    },
+    {
+      "identifier": "3b81c7b6-d23e-481c-a39c-12f08945107e",
+      "license": {
+        "name": "CC-BY",
+        "type": "License",
+        "value": "https://creativecommons.org/licenses/by/4.0",
+        "labels": {
+          "nb": "Creative Commons - Navngivelse",
+          "en": "Creative Commons - Attribution"
+        }
+      },
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "BI",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-19T08:45:13.998293193Z"
+      },
+      "size": "4535138",
+      "publisherVersion": "PublishedVersion",
+      "name": "1-s2.0-S0160791X20312938-main.pdf",
+      "mimeType": "application/pdf",
+      "publishedDate": "2025-08-19T08:45:14.276856403Z",
+      "type": "OpenFile"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "275347",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/275347",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "64",
+        "pages": {
+          "end": "11",
+          "type": "Range",
+          "begin": "1"
+        },
+        "articleNumber": "101490",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "839FFA70-9B01-4C65-A0A1-EB873C80445B",
+        "year": "2021",
+        "name": "Technology in society",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/839FFA70-9B01-4C65-A0A1-EB873C80445B/2021",
+        "type": "Journal",
+        "onlineIssn": "1879-3274",
+        "printIssn": "0160-791X",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=839FFA70-9B01-4C65-A0A1-EB873C80445B"
+      },
+      "doi": "https://doi.org/10.1016/j.techsoc.2020.101490"
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Muzzling social media: The adverse effects of moderating stakeholder conversations online",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Many organizations struggle to meaningfully engage with their stakeholders on political, societal and environmental topics via social media. Often such discourses unravel into splintered and negative conversations, raising the question whether organizations can and should exercise some level of control and ‘steering’ in these conversations and, if so, how stakeholders would react to such ‘top down’ moderation. Existing studies lack empirical insights into the impacts of different levels of moderation in social media conversations on stakeholder attitudes. Two experimental studies were developed to test the effect of different levels of organizational moderation on stakeholder attitudes towards organizations. We show that increased levels of moderation negatively affect attitudes towards an organization, satisfaction with an organization's performance, and trust in the organization. Increased moderation also significantly undermines beliefs in the commitment of the organization to its stakeholders and control mutuality. This paper extends recent qualitative attempts to build new theory around stakeholder dialogues on social media by testing the effects of varying levels of moderation in such dialogues.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Alexander Buhmann",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/779160",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kateryna Maltseva",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Kateryna Maltseva",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christian Fieseler",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/583524",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Matthes Fleck",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100048.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hochschule Luzern",
+              "en": "Lucerne University of Applied Sciences and Arts"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Alexander Buhmann",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/779160",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kateryna Maltseva",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Kateryna Maltseva",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christian Fieseler",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/583524",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for kommunikasjon og kultur",
+              "en": "Department of Communication and Culture"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Matthes Fleck",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CH",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100048.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hochschule Luzern",
+              "en": "Lucerne University of Applied Sciences and Arts"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "1",
+      "year": "2021",
+      "type": "PublicationDate",
+      "day": "19"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/839FFA70-9B01-4C65-A0A1-EB873C80445B/2021"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bi",
+      "type": "CristinIdentifier",
+      "value": "1903407"
+    },
+    {
+      "sourceName": "cristin@bi",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85099502993"
+    },
+    {
+      "sourceName": "brage@bi",
+      "type": "HandleIdentifier",
+      "value": "https://hdl.handle.net/11250/3041616"
+    }
+  ],
+  "filesStatus": "hasPublicFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad4cefa9-aee9ab68-2ebd-4b33-8ce4-478cdc27580d",
+  "topLevelOrganizations": [
+    {
+      "countryCode": "CH",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14100048.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Hochschule Luzern",
+        "en": "Lucerne University of Applied Sciences and Arts"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.9.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for kommunikasjon og kultur",
+            "en": "Department of Communication and Culture"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/158.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Christian Fieseler",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/583524",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Kateryna Maltseva",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Alexander Buhmann",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/779160",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Handelshøyskolen BI",
+        "en": "BI Norwegian Business School"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kateryna Maltseva",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/716921",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "identifier": "0198ad4cefa9-aee9ab68-2ebd-4b33-8ce4-478cdc27580d",
+  "handle": "https://hdl.handle.net/11250/3041616",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:40:53.379242584Z",
+  "createdDate": "2025-08-15T10:35:57.225540088Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-19T08:45:14.503308513Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "NVI ok. JV 130721",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T10:35:57.225540088Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

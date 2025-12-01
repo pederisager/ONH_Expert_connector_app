@@ -1,0 +1,480 @@
+{
+  "identifier": "0198ad1ae939-5297d386-0d00-433d-b81e-7827e52254b2",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.75",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:17:25.608869056Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "34",
+        "pages": {
+          "end": "898",
+          "type": "Range",
+          "begin": "881"
+        },
+        "issue": "6",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "D85981B2-10AE-4B96-85CB-B6F49808FA84",
+        "year": "2019",
+        "name": "Intelligence and national security",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/D85981B2-10AE-4B96-85CB-B6F49808FA84/2019",
+        "type": "Journal",
+        "onlineIssn": "1743-9019",
+        "printIssn": "0268-4527",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=D85981B2-10AE-4B96-85CB-B6F49808FA84"
+      },
+      "doi": "https://doi.org/10.1080/02684527.2019.1628453"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Seduced by secrecy - perplexed by complexity: Effects of secret vs open-source on intelligence credibility and analytic confidence",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Pia Therese Jansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/948327",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.75",
+            "type": "Organization",
+            "labels": {
+              "nb": "DIS Digital infrastruktur og sikkerhet",
+              "en": "Digital infrastructure and security"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Pia Therese Jansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/948327",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Pia Therese Jansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/948327",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Pia Therese Jansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/948327",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Pia Therese Jansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/948327",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.75",
+            "type": "Organization",
+            "labels": {
+              "nb": "DIS Digital infrastruktur og sikkerhet",
+              "en": "Digital infrastructure and security"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Pia Therese Jansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/948327",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Pia Therese Jansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/948327",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Pia Therese Jansen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/948327",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2019",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:41:18.777153341Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/D85981B2-10AE-4B96-85CB-B6F49808FA84/2019"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:41:18.777153341Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85067652378"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "1753722"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad1ae939-5297d386-0d00-433d-b81e-7827e52254b2",
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "1102/adj -ifi lagt til lenke fulltekst+tilh.",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T09:41:18.777153341Z",
+  "scientificIndex": {
+    "year": "2019",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.75",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "DIS Digital infrastruktur og sikkerhet",
+                    "en": "Digital infrastructure and security"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for informatikk",
+                "en": "Department for Informatics"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det matematisk-naturvitenskapelige fakultet",
+            "en": "Faculty of Mathematics and Natural Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Pia Therese Jansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/948327",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Pia Therese Jansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/948327",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Forsvarets høgskole",
+        "en": "Norwegian Defence University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

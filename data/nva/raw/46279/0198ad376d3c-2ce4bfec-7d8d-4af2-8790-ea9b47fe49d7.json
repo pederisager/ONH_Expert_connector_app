@@ -1,0 +1,569 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/465586",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.politiforum.no/artikler/profesjonelt-politiarbeid-ved-bruk-av-stopp-og-sjekk-hva-er-det-og-hva-krever-det/437752",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "fundings": [
+    {
+      "source": {
+        "identifier": "PHS",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/PHS",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Politihøgskolen",
+          "en": "Norwegian Police University College"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "source": {
+        "identifier": "UIB",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/UIB",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Universitetet i Bergen",
+          "en": "University of Bergen"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "37",
+          "type": "Range",
+          "begin": "36"
+        },
+        "issue": "4",
+        "type": "ProfessionalArticle"
+      },
+      "publicationContext": {
+        "identifier": "7E2731DE-34BA-4B9E-A6E6-0EC4623503D8",
+        "year": "2018",
+        "name": "Politiforum",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/7E2731DE-34BA-4B9E-A6E6-0EC4623503D8/2018",
+        "type": "Journal",
+        "printIssn": "1500-6921",
+        "scientificValue": "Unassigned",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/nvakanal?pid=7E2731DE-34BA-4B9E-A6E6-0EC4623503D8"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Profesjonelt politiarbeid ved bruk av \"Stopp og sjekk\": Hva er det og hva krever det?",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mariann Stærkebye Leirvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sarah Abraham",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/530396",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mariann Stærkebye Leirvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sarah Abraham",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/530396",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mariann Stærkebye Leirvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sarah Abraham",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/530396",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sarah Abraham",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/530396",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mariann Stærkebye Leirvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jaishankar Ganapathy",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sarah Abraham",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/530396",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mariann Stærkebye Leirvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mariann Stærkebye Leirvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sarah Abraham",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/530396",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mariann Stærkebye Leirvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sarah Abraham",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/530396",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mariann Stærkebye Leirvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sarah Abraham",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/530396",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sarah Abraham",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/530396",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mariann Stærkebye Leirvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jaishankar Ganapathy",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sarah Abraham",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/530396",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Jaishankar Ganapathy",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mariann Stærkebye Leirvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2018",
+      "type": "PublicationDate"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/7E2731DE-34BA-4B9E-A6E6-0EC4623503D8/2018"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "1583929"
+    }
+  ],
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad376d3c-2ce4bfec-7d8d-4af2-8790-ea9b47fe49d7",
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Sarah Abraham",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/530396",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Jaishankar Ganapathy",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/327997",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Mariann Stærkebye Leirvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/10263",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    }
+  ],
+  "identifier": "0198ad376d3c-2ce4bfec-7d8d-4af2-8790-ea9b47fe49d7",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:59:31.243868243Z",
+  "createdDate": "2025-08-15T10:12:27.580040488Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:12:27.580040488Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:12:27.580040488Z",
+  "scientificIndex": {},
+  "status": "PUBLISHED"
+}

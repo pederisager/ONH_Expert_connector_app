@@ -12,9 +12,9 @@ Codex must automatically update this document whenever its changes introduce, re
 ## Project Structure & Module Organization
 Keep feature code under `app/` with `main.py` as the FastAPI entry point and routers in `routes.py`. RAG components should be split between the offline index builder (`app/index/` packages) and the online retriever/orchestrator (`app/rag/` helpers) that power `/match`. Legacy utilities (`match_engine.py`, `llm_explainer.py`, `fetch_utils.py`, `file_parser.py`) remain until fully refactored or wrapped by the new flow. Front-end assets live in `app/static/` (plain HTML/CSS/JS). Configuration, curated data, and generated indexes sit in `data/` (`staff.yaml`, `models.yaml`, `app.config.yaml`, `index/`); treat YAML files as the source of truth. Use `models/` for large model checkpoints and `outputs/exports/` for generated PDFs/JSON. Mirror modules with test files under `tests/`.
 
-"Cristin" and "NVA" and "Nasjonalt vitnearkiv" are synonymous terms that refer to the same part of the database in prompts and file structure.
+Legacy references labeled "Cristin" point to the same NVA research data; new ingestion lives under `app/index/nva`, and older Cristin-specific files are kept only for historical reference. `staff.csv` is the user-facing source of staff entries; regenerate downstream files via `scripts/update_staff.sh`.
 
-Staff `tags` in `data/staff.yaml` now surface as "Nøkkelord" on the results/cards UI and contribute to the RAG score, so keep them descriptive, deduplicated, and localized where possible.
+Staff `tags` in `data/staff.yaml` now surface as "Nokkelord" on the results/cards UI and contribute to the RAG score, so keep them descriptive, deduplicated, and localized where possible.
 
 Staff documents fetched from ONH/NVA sources are cached as whole `StaffDocument` objects (see `routes._fetch_staff_documents`) and warmed during FastAPI startup so repeat "Finn relevante ansatte" queries stay responsive. Preserve this cache and update the invalidation rules if you change how sources are assembled. `StaffDocument.combined_text` is capped at roughly 6k characters to keep TF-IDF costs predictable; adjust tests and docs if you tweak that limit.
 
@@ -23,8 +23,8 @@ Citation snippets returned from `/match` now use a theme-aware sentence window a
 ## Build, Test, and Development Commands
 Create a virtual environment before installing dependencies: `python -m venv .venv && source .venv/bin/activate`. Install Python packages with `pip install -r requirements.txt`. Build or refresh the retrieval index after editing `data/staff.yaml` or source content (`python -m app.index.build`). Run the API locally with `uvicorn app.main:app --reload` so the static UI served from `app/static` stays current. Run the full suite with `pytest` (add `--cov=app` before merging). Static assets are plain files in `app/static`—no bundler is needed. The default embedding backend is `sentence-transformers` on CUDA; ensure the virtualenv has CUDA-enabled PyTorch + `sentence-transformers`, or update `data/models.yaml` to another backend (e.g., Ollama) and rebuild the index if you deviate. Leaving `embedding_model.device` empty or set to `auto` now lets the embedder factory auto-detect CUDA (then MPS, then CPU) for both the offline index builder and online retriever—only pin it to `cpu` if you explicitly need to disable accelerators.
 
-- Keep `data/cristin/results.jsonl` refreshed (`python -m app.index.cristin.sync ...`) before running `python -m app.index.build`. The builder now merges up to five Cristin/NVA research results per staff member into the RAG chunks so "Vis kilder" surfaces NVA references whenever available.
-- Profile `/match` hot spots with `python scripts/profile_match.py ...` (see `docs/performance_profiling.md`). The script reuses the production helpers and records per-stage timings (Cristin/NVA merge, TF-IDF, embeddings, LLM explainer) so we can justify performance tweaks before merging.
+- Keep `staff.csv` as the entry point. Run `bash scripts/update_staff.sh [key_file] [base_url]` to refresh `data/staff.yaml`, `data/staff_records.jsonl`, sync NVA publications to `data/nva/results.jsonl`, and rebuild the index. Defaults: `nva_api_keys_test.json`, `https://api.test.nva.aws.unit.no`. API key files are git-ignored; never commit secrets.
+- Profile `/match` hot spots with `python scripts/profile_match.py ...` (see `docs/performance_profiling.md`). The script reuses the production helpers and records per-stage timings (NVA merge, TF-IDF, embeddings, LLM explainer) so we can justify performance tweaks before merging.
 
 You have access to the mpc tool context7. Use it for documentation lookup whenever that would be beneficial to solving a task. 
 
@@ -40,4 +40,4 @@ Adopt Conventional Commits (`feat:`, `fix:`, `docs:`) and limit subject lines to
 ## Security & Configuration Tips
 Never add external domains to `data/app.config.yaml` without approval; keep `allowlist_domains` tight. Store staff metadata solely in `data/staff.yaml` and cite their public sources. Scrub uploads in `fetch_utils.py` for unsupported MIME types and enforce the `max_upload_mb` guardrails. Rotate cache contents by respecting `retention_days`, and document experimental model changes inside `models/README.txt`.
 
-If future agents detect that the Cristin API endpoints have stopped responding, assume the service may have been deprecated and immediately notify the requester. Suggest rebuilding the integration against the current NVA REST API as a fallback.
+If future agents detect that the NVA search endpoints have stopped responding, assume the service may have been deprecated and immediately notify the requester. Suggest rebuilding the integration against the latest NVA REST API as a fallback.

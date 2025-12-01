@@ -1,0 +1,422 @@
+{
+  "identifier": "0198ad26cbdb-7aab8fd0-cc7d-45d6-99e9-3ab6a71594e2",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hib@203.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:45:50.601902239Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "ConferencePoster"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "Mat og helse i skolen, Nasjonalt senter for mat, helse og fysisk aktivitet, Nord Universitet",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "Mat- og helsekonferansen 2022",
+        "place": {
+          "name": "Levanger, Norge",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2022-11-03T00:00:00Z",
+          "to": "2022-11-03T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Hvordan påvirker elevmedvirkning læringsutbytte i mat- og helsefaget?",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for idrett, kosthald og naturfag",
+              "en": "Department of Sport, Food and Natural Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Iselin Thowsen Vildmyren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/726238",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for idrett, kosthald og naturfag",
+              "en": "Department of Sport, Food and Natural Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Anna Nesje Andersen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Bodil Bjørndal",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Iselin Thowsen Vildmyren",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/726238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ingrid Laukeland Djupegot",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/832641",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Høgskulen på Vestlandet",
+              "en": "Western Norway University of Applied Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ingrid Laukeland Djupegot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/832641",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for idrett, kosthald og naturfag",
+              "en": "Department of Sport, Food and Natural Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for idrett, kosthald og naturfag",
+              "en": "Department of Sport, Food and Natural Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Iselin Thowsen Vildmyren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/726238",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for idrett, kosthald og naturfag",
+              "en": "Department of Sport, Food and Natural Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Anna Nesje Andersen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Bodil Bjørndal",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Iselin Thowsen Vildmyren",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/726238",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ingrid Laukeland Djupegot",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/832641",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Høgskulen på Vestlandet",
+              "en": "Western Norway University of Applied Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ingrid Laukeland Djupegot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/832641",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for idrett, kosthald og naturfag",
+              "en": "Department of Sport, Food and Natural Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2022",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:54:17.691506485Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:54:17.691506485Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hib",
+      "type": "CristinIdentifier",
+      "value": "2104345"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad26cbdb-7aab8fd0-cc7d-45d6-99e9-3ab6a71594e2",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:54:17.691506485Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for idrett, kosthald og naturfag",
+                "en": "Department of Sport, Food and Natural Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for lærarutdanning, kultur og idrett",
+            "en": "Faculty of Education, Arts and Sports"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Iselin Thowsen Vildmyren",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/726238",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ingrid Laukeland Djupegot",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/832641",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høgskulen på Vestlandet",
+        "en": "Western Norway University of Applied Sciences"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

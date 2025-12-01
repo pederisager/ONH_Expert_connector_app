@@ -1,0 +1,244 @@
+{
+  "identifier": "0198ad23d156-d31b750b-2d13-46e4-aff6-fc5a5794e1fc",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T18:44:56.456776386Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "299",
+          "type": "MonographPages"
+        },
+        "type": "BookAnthology"
+      },
+      "publicationContext": {
+        "isbnList": [
+          "9789004218437"
+        ],
+        "series": {
+          "identifier": "5849EDBB-51C9-4173-83EF-9DD852368D5F",
+          "year": "2012",
+          "name": "African Social Studies Series",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/5849EDBB-51C9-4173-83EF-9DD852368D5F/2012",
+          "type": "Series",
+          "printIssn": "1568-1203",
+          "scientificValue": "LevelOne",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=5849EDBB-51C9-4173-83EF-9DD852368D5F"
+        },
+        "publisher": {
+          "valid": "true",
+          "identifier": "F4F5F93B-7196-4877-B77A-8B63E5817102",
+          "year": "2012",
+          "name": "Brill Academic Publishers",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/F4F5F93B-7196-4877-B77A-8B63E5817102/2012",
+          "type": "Publisher",
+          "scientificValue": "LevelTwo",
+          "isbnPrefix": "978-90-0430,978-0-391",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=F4F5F93B-7196-4877-B77A-8B63E5817102"
+        },
+        "type": "Book",
+        "seriesNumber": "27",
+        "revision": "Unrevised"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Contested power in Ethiopia : traditional authorities and multi-party elections",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tobias Hagmann",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Norsk senter for menneskerettigheter",
+              "en": "Norwegian Centre for Human Rights"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Editor"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tobias Hagmann",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2012",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:51:02.486122102Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/F4F5F93B-7196-4877-B77A-8B63E5817102/2012",
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/5849EDBB-51C9-4173-83EF-9DD852368D5F/2012"
+  ],
+  "childPublications": [
+    "0198ad020873-7d91ce07-07ca-4f8d-bedd-f1d13ff51f2d",
+    "0198ad03f548-428c67d6-55fd-4917-b8d9-9474b80515a7",
+    "0198ad23cfdf-9f03fb62-86e8-4022-be56-a36b17792adc"
+  ],
+  "modifiedDate": "2025-08-15T09:51:02.486122102Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "BIBSYS",
+      "type": "AdditionalIdentifier",
+      "value": "115048278"
+    },
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "939892"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad23d156-d31b750b-2d13-46e4-aff6-fc5a5794e1fc",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:51:02.486122102Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Norsk senter for menneskerettigheter",
+                "en": "Norwegian Centre for Human Rights"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.12.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det juridiske fakultet",
+            "en": "Faculty of Law"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Tronvoll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22152",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,856 @@
+{
+  "identifier": "0198ad23cd93-766b3204-2b1b-427a-be84-b25957184fcc",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.7.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.2.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "si@1991.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.mdpi.com/2218-273X/10/2/295",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:20:18.152669040Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "10",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "2",
+        "articleNumber": "295",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "9F5BDA06-DBFA-468A-B904-BFC97ACEB8A2",
+        "year": "2020",
+        "name": "Biomolecules",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/9F5BDA06-DBFA-468A-B904-BFC97ACEB8A2/2020",
+        "type": "Journal",
+        "onlineIssn": "2218-273X",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=9F5BDA06-DBFA-468A-B904-BFC97ACEB8A2"
+      },
+      "doi": "https://doi.org/10.3390/biom10020295"
+    },
+    "contributorsCount": 9,
+    "mainTitle": "The Reliability of Iodine Concentration in Diaper-Retrieved Infant Urine Using Urine Collection Pads, and in Their Mothers' Breastmilk",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Mild to moderate iodine deficiency is common among women of childbearing age. Data on iodine status in infants are sparse, partly due to the challenges in collecting urine. Urinary iodine concentration (UIC) is considered a good marker for recent dietary iodine intake and status in populations. The aim of this study was to investigate the reliability of iodine concentration measured in two spot-samples from the same day of diaper-retrieved infant urine and in their mothers’ breastmilk. We collected urine and breastmilk from a sample of 27 infants and 25 mothers participating in a cross-sectional study at two public healthcare clinics in Norway. The reliability of iodine concentration was assessed by calculating the intraclass correlation coefficients (ICC) and the coefficient of variation (CV). The ICC for infants’ urine was 0.64 (95% confidence interval (CI) 0.36–0.82), while the ICC for breastmilk was 0.83 (95% CI 0.65–0.92) Similarly, the intraindividual CV for UIC was 0.25 and 0.14 for breastmilk iodine concentration (BIC). Compared to standard methods of collecting urine for measuring iodine concentration, the diaper-pad collection method does not substantially affect the reliability of the measurements.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjersti Sletten Bakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/449834",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avd Gyn/føde Lillehammer"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ingvild Oma",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/508051",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Div Medisinsk service"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Div Gjøvik/Lillehammer"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beate Stokke Solvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1087325",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avd Gyn/føde Lillehammer"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lise Mette Mosand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219313",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Div Medisinsk service"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mina Marthinsen Langfjord",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/890756",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tor A Strand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forskning og innovasjon"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjersti Sletten Bakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/449834",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avd Gyn/føde Lillehammer"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ingvild Oma",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/508051",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Div Medisinsk service"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Div Gjøvik/Lillehammer"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beate Stokke Solvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1087325",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avd Gyn/føde Lillehammer"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lise Mette Mosand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219313",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Div Medisinsk service"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mina Marthinsen Langfjord",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/890756",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tor A Strand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forskning og innovasjon"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "2",
+      "year": "2020",
+      "type": "PublicationDate",
+      "day": "13"
+    }
+  },
+  "createdDate": "2025-08-15T09:51:01.523996023Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/9F5BDA06-DBFA-468A-B904-BFC97ACEB8A2/2020"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:51:01.523996023Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@si",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85079597438"
+    },
+    {
+      "sourceName": "cristin@si",
+      "type": "CristinIdentifier",
+      "value": "1813904"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad23cd93-766b3204-2b1b-427a-be84-b25957184fcc",
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "SGJ og LMM mangler PP-3.7.20LM/ Ordnet PP - 31.07LM",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T09:51:01.523996023Z",
+  "scientificIndex": {
+    "year": "2020",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for sykepleie og helsefremmende arbeid",
+                "en": "Department of Nursing and Health Promotion"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helsevitenskap",
+            "en": "Faculty of Health Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Miljøvitenskap og naturforvaltning"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Mina Marthinsen Langfjord",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/890756",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs miljø- og biovitskaplege universitet",
+        "nb": "Norges miljø- og biovitenskapelige universitet"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.7.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Div Medisinsk service"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.2.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Forskning og innovasjon"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Medisin og helsefag"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Avd Gyn/føde Lillehammer"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Div Gjøvik/Lillehammer"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kjersti Sletten Bakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/449834",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Tor A Strand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52557",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Beate Stokke Solvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1087325",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Lise Mette Mosand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219313",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ingvild Oma",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/508051",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Sykehuset Innlandet HF",
+        "en": "Innlandet Hospital Trust"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

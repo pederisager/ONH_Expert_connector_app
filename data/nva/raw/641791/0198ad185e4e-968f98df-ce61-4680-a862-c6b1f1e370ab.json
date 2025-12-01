@@ -1,0 +1,209 @@
+{
+  "identifier": "0198ad185e4e-968f98df-ce61-4680-a862-c6b1f1e370ab",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:28:14.435936377Z",
+  "fundings": [
+    {
+      "identifier": "259017",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/259017",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "134",
+          "type": "Range",
+          "begin": "114"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9780231182973"
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "DD24C4F2-0EDF-438B-AF20-917A13EE1B92",
+                "year": "2019",
+                "name": "Columbia University Press",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/DD24C4F2-0EDF-438B-AF20-917A13EE1B92/2019",
+                "type": "Publisher",
+                "scientificValue": "LevelTwo",
+                "isbnPrefix": "978-0-231",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=DD24C4F2-0EDF-438B-AF20-917A13EE1B92"
+              },
+              "type": "Book",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "The Holocaust and the Nakba: A New Grammar of Trauma and History",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Bashir Bashir",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad188c1a-1fdbfb2b-bb58-46c4-91af-147957ea1f43",
+        "type": "Anthology"
+      },
+      "doi": "https://doi.org/10.7312/bash18296-007"
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Holocaust/Nakba and the Counterpublic of Memory",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nadim Khoury",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nadim Khoury",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nadim Khoury",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nadim Khoury",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2019",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1023"
+  },
+  "createdDate": "2025-08-15T09:38:32.142102591Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:06:30.813797234Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "1681735"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad185e4e-968f98df-ce61-4680-a862-c6b1f1e370ab",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:38:32.142102591Z",
+  "scientificIndex": {
+    "year": "2019",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nadim Khoury",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

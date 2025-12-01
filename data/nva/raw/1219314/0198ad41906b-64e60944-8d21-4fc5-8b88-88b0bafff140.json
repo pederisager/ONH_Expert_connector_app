@@ -1,0 +1,988 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.2.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.26.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hio@215.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "identifier": "f73bf0bf-ce86-4c50-9e77-0d7658e7008f",
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIB",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-18T18:39:31.968099659Z"
+      },
+      "size": "7397",
+      "name": "dublin_core.xml",
+      "mimeType": "application/xml",
+      "type": "HiddenFile"
+    },
+    {
+      "id": "https://www.mdpi.com/2072-6643/13/6/1826",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    },
+    {
+      "identifier": "0bb539be-678f-4c86-b4dc-b4000d7b89e1",
+      "license": {
+        "name": "CC-BY",
+        "type": "License",
+        "value": "https://creativecommons.org/licenses/by/4.0",
+        "labels": {
+          "nb": "Creative Commons - Navngivelse",
+          "en": "Creative Commons - Attribution"
+        }
+      },
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIB",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-18T18:39:31.968083487Z"
+      },
+      "size": "1094665",
+      "publisherVersion": "PublishedVersion",
+      "name": "nutrients-13-01826.pdf",
+      "mimeType": "application/pdf",
+      "publishedDate": "2025-08-18T18:39:32.268209747Z",
+      "type": "OpenFile",
+      "legalNote": "Copyright 2021 by the authors"
+    },
+    {
+      "identifier": "440f4b0d-0e0f-49d2-87a7-4d8690f9572f",
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIA",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-09-17T12:07:48.508497683Z"
+      },
+      "size": "5580",
+      "name": "dublin_core.xml",
+      "mimeType": "application/xml",
+      "type": "HiddenFile"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "689019",
+      "source": {
+        "identifier": "SI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/SI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Sykehuset Innlandet HF",
+          "en": "Innlandet Hospital Trust"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "13",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "6",
+        "articleNumber": "1826",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "70FF4754-33B8-4EDB-80D8-B6E004847255",
+        "year": "2021",
+        "name": "Nutrients",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/70FF4754-33B8-4EDB-80D8-B6E004847255/2021",
+        "type": "Journal",
+        "onlineIssn": "2072-6643",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=70FF4754-33B8-4EDB-80D8-B6E004847255"
+      },
+      "doi": "https://doi.org/10.3390/nu13061826"
+    },
+    "contributorsCount": 7,
+    "mainTitle": "Adequate urinary iodine concentration among infants in the inland area of Norway",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Abstract\r\nConsidering the importance of iodine to support optimal growth and neurological development of the brain and central nervous system, this study aimed to assess and evaluate iodine status in Norwegian infants. We collected data on dietary intake of iodine, iodine knowledge in mothers, and assessed iodine concentration in mother's breast milk and in infant's urine in a cross-sectional study at two public healthcare clinics in the inland area of Norway. In the 130 mother-infant pairs, the estimated infant 24-h median iodine intake was 50 (IQR 31, 78) µg/day. The median infant urinary iodine concentration (UIC) was 146 (IQR 93, 250) µg/L and within the recommended median defined by the World Health Organization for this age group. Weaned infants had a higher UIC [210 (IQR 130, 330) µg/L] than exclusively breastfed infants [130 (IQR 78, 210) µg/L] and partially breastfed infants [135 (IQR 89, 250) µg/L], which suggest that the dietary data obtained in this study did not capture the accurate iodine intake of the included infants. The iodine status of infants in the inland area of Norway seemed adequate. Weaned infants had higher UIC compared to breastfed infants, suggesting early access and consumption of other sources of iodine in addition to breast milk.\r\n\r\nKeywords: Norway; UIC; infants; inland area; iodine; iodine intake; knowledge; urinary iodine concentration.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjersti Sletten Bakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/449834",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avd Gyn/føde Lillehammer"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.26.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for global helse og samfunnsmedisin",
+              "en": "Department of Global Public Health and Primary Care"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tonje Eiane Aarsland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1316063",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avd Gyn/føde Lillehammer"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.26.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for global helse og samfunnsmedisin",
+              "en": "Department of Global Public Health and Primary Care"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beate Stokke Solvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1087325",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avd Gyn/føde Lillehammer"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tor Arne Strand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forskning og innovasjon"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.26.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for global helse og samfunnsmedisin",
+              "en": "Department of Global Public Health and Primary Care"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjersti Sletten Bakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/449834",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avd Gyn/føde Lillehammer"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.26.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for global helse og samfunnsmedisin",
+              "en": "Department of Global Public Health and Primary Care"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tonje Eiane Aarsland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1316063",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avd Gyn/føde Lillehammer"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.26.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for global helse og samfunnsmedisin",
+              "en": "Department of Global Public Health and Primary Care"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beate Stokke Solvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1087325",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avd Gyn/føde Lillehammer"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tor Arne Strand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52557",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.2.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Forskning og innovasjon"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.26.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for global helse og samfunnsmedisin",
+              "en": "Department of Global Public Health and Primary Care"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "5",
+      "year": "2021",
+      "type": "PublicationDate",
+      "day": "27"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/70FF4754-33B8-4EDB-80D8-B6E004847255/2021"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "brage@bora",
+      "type": "HandleIdentifier",
+      "value": "https://hdl.handle.net/11250/2770727"
+    },
+    {
+      "sourceName": "cristin@hio",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85106609905"
+    },
+    {
+      "sourceName": "cristin@hio",
+      "type": "CristinIdentifier",
+      "value": "1918992"
+    },
+    {
+      "sourceName": "brage@uia",
+      "type": "HandleIdentifier",
+      "value": "https://hdl.handle.net/11250/2777415"
+    }
+  ],
+  "filesStatus": "hasPublicFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad41906b-64e60944-8d21-4fc5-8b88-88b0bafff140",
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for sykepleie og helsefremmende arbeid",
+                "en": "Department of Nursing and Health Promotion"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helsevitenskap",
+            "en": "Faculty of Health Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for ernæring og folkehelse",
+                "en": "Department of Nutrition and Public Health"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helse- og idrettsvitenskap",
+            "en": "Faculty of Health and Sport Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Agder",
+        "en": "University of Agder"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Miljøvitenskap og naturforvaltning"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs miljø- og biovitskaplege universitet",
+        "nb": "Norges miljø- og biovitenskapelige universitet"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.26.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for global helse og samfunnsmedisin",
+                "en": "Department of Global Public Health and Primary Care"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kjersti Sletten Bakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/449834",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Tor Arne Strand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52557",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Tonje Eiane Aarsland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1316063",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.2.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Forskning og innovasjon"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.1.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Medisin og helsefag"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.11.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Avd Gyn/føde Lillehammer"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Div Gjøvik/Lillehammer"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1991.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kjersti Sletten Bakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/449834",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Tor Arne Strand",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/52557",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Beate Stokke Solvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1087325",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Tonje Eiane Aarsland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1316063",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Sykehuset Innlandet HF",
+        "en": "Innlandet Hospital Trust"
+      }
+    }
+  ],
+  "identifier": "0198ad41906b-64e60944-8d21-4fc5-8b88-88b0bafff140",
+  "handle": "https://hdl.handle.net/11250/2770091",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:22:09.968595036Z",
+  "createdDate": "2025-08-15T10:23:31.947576166Z",
+  "childPublications": [],
+  "modifiedDate": "2025-09-17T12:07:48.951420742Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "Lagt inn abstrakt og PP til TEAa-18.08.21LM/",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T10:23:31.947576166Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

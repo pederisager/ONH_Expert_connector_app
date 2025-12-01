@@ -1,0 +1,430 @@
+{
+  "identifier": "0198ad039b8e-bc0e7b48-5b99-45b0-b29e-35fe5d7026fc",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/14400138.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:37:14.331733707Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "26",
+        "pages": {
+          "end": "288",
+          "type": "Range",
+          "begin": "279"
+        },
+        "issue": "3",
+        "type": "AcademicLiteratureReview"
+      },
+      "publicationContext": {
+        "identifier": "1F613BD3-5490-4638-B0B9-9688C10D5947",
+        "year": "2018",
+        "name": "European Journal of Preventive Cardiology (EJPC)",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/1F613BD3-5490-4638-B0B9-9688C10D5947/2018",
+        "type": "Journal",
+        "onlineIssn": "2047-4881",
+        "printIssn": "2047-4873",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=1F613BD3-5490-4638-B0B9-9688C10D5947"
+      },
+      "doi": "https://doi.org/10.1177/2047487318806658"
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Tobacco smoking and the risk of heart failure: A systematic review and meta-analysis of prospective studies",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Endokrinologi, sykelig overvekt og foreb. Med., avd. for",
+              "en": "Department of Endocrinology, Morbid Obesity and Preventive Medicine"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Dagfinn Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Sabrina Schlesinger",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400138.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Heinrich-Heine-Universität Düsseldorf",
+              "en": "Heinrich-Heine-University Düsseldorf"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Teresa Norat",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Elio Riboli",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Endokrinologi, sykelig overvekt og foreb. Med., avd. for",
+              "en": "Department of Endocrinology, Morbid Obesity and Preventive Medicine"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Dagfinn Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Sabrina Schlesinger",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400138.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Heinrich-Heine-Universität Düsseldorf",
+              "en": "Heinrich-Heine-University Düsseldorf"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Teresa Norat",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Elio Riboli",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2018",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:15:51.566248284Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/1F613BD3-5490-4638-B0B9-9688C10D5947/2018"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:15:51.566248284Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85060161572"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "1680044"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad039b8e-bc0e7b48-5b99-45b0-b29e-35fe5d7026fc",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:15:51.566248284Z",
+  "scientificIndex": {
+    "year": "2018",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "DE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400138.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Heinrich-Heine-Universität Düsseldorf",
+        "en": "Heinrich-Heine-University Düsseldorf"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Imperial College London"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Endokrinologi, sykelig overvekt og foreb. Med., avd. for",
+                "en": "Department of Endocrinology, Morbid Obesity and Preventive Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Medisinsk klinikk",
+            "en": "Division of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

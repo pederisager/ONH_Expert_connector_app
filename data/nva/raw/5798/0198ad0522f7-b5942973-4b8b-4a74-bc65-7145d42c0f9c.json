@@ -1,0 +1,420 @@
+{
+  "identifier": "0198ad0522f7-b5942973-4b8b-4a74-bc65-7145d42c0f9c",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.10",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "ous@2012.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:59:07.049283195Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "JournalLeader"
+      },
+      "publicationContext": {
+        "identifier": "013361B7-5C0F-4F3D-A00F-F68FA6767581",
+        "year": "2024",
+        "name": "Journal of Magnetic Resonance Imaging",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/013361B7-5C0F-4F3D-A00F-F68FA6767581/2024",
+        "type": "Journal",
+        "onlineIssn": "1522-2586",
+        "printIssn": "1053-1807",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=013361B7-5C0F-4F3D-A00F-F68FA6767581"
+      },
+      "doi": "https://doi.org/10.1002/jmri.29472"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Editorial for “Impact of Type 2 Diabetes Mellitus on Left Atrioventricular Coupling and Left Atrial Deformation in Patients With Essential Hypertension: An MRI Feature Tracking Study”",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ida Marie Hauge-Iversen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Oslo",
+              "en": "University of Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Emil Knut Stenersen Espe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.10",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ida Marie Hauge-Iversen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Oslo",
+              "en": "University of Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Emil Knut Stenersen Espe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ida Marie Hauge-Iversen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Emil Knut Stenersen Espe",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo universitetssykehus HF",
+              "en": "Oslo University Hospital"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.10",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for eksperimentell medisinsk forskning",
+              "en": "Institute for Experimental Medical Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2024",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:17:31.767770513Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/013361B7-5C0F-4F3D-A00F-F68FA6767581/2024"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:17:31.767770513Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@ous",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85196116477"
+    },
+    {
+      "sourceName": "cristin@ous",
+      "type": "CristinIdentifier",
+      "value": "2280153"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0522f7-b5942973-4b8b-4a74-bc65-7145d42c0f9c",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:17:31.767770513Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0"
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.10",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Institutt for eksperimentell medisinsk forskning",
+                        "en": "Institute for Experimental Medical Research"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.15.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Hjerte-, lunge- og karklinikken",
+                    "en": "Clinic for Cardiovascular and Pulmonary Diseases"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for klinisk medisin",
+                "en": "Institute of Clinical Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.0.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Universitetet i Oslo",
+            "en": "University of Oslo"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Emil Knut Stenersen Espe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ida Marie Hauge-Iversen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/898122",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Emil Knut Stenersen Espe",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/5798",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

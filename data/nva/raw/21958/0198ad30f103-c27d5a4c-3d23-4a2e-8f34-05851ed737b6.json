@@ -1,0 +1,224 @@
+{
+  "identifier": "0198ad30f103-c27d5a4c-3d23-4a2e-8f34-05851ed737b6",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/68420047.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "prio@7435.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:27:34.229564299Z",
+  "fundings": [
+    {
+      "identifier": "303136",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/303136",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "8",
+        "pages": {
+          "end": "680",
+          "type": "Range",
+          "begin": "667"
+        },
+        "issue": "2",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "210859AA-A039-4A70-A411-69EF9FAF88A0",
+        "year": "2023",
+        "name": "Conatus - Journal of Philosophy",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/210859AA-A039-4A70-A411-69EF9FAF88A0/2023",
+        "type": "Journal",
+        "onlineIssn": "2459-3842",
+        "printIssn": "2653-9373",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=210859AA-A039-4A70-A411-69EF9FAF88A0"
+      },
+      "doi": "https://doi.org/10.12681/cjp.35684"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Robotic Virtue, Military Ethics Education, and the Need for Proper Storytellers",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Martin L. Cook",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68420047.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "U.S. Naval War College",
+              "en": "U.S. Naval War College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Martin L. Cook",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68420047.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "U.S. Naval War College",
+              "en": "U.S. Naval War College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:05:22.563105159Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/210859AA-A039-4A70-A411-69EF9FAF88A0/2023"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:05:22.563105159Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@prio",
+      "type": "CristinIdentifier",
+      "value": "2230099"
+    },
+    {
+      "sourceName": "cristin@prio",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85181482453"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad30f103-c27d5a4c-3d23-4a2e-8f34-05851ed737b6",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:05:22.563105159Z",
+  "scientificIndex": {
+    "year": "2023",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nn": "PRIO - Institutt for fredsforsking",
+        "nb": "PRIO - Institutt for fredsforskning",
+        "en": "PRIO - Peace Research Institute Oslo"
+      }
+    },
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68420047.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "U.S. Naval War College",
+        "en": "U.S. Naval War College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

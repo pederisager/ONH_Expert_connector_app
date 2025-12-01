@@ -1,0 +1,375 @@
+{
+  "identifier": "0198ad4a0046-573b3203-d568-4321-a11c-f7b5f30fdfe2",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.71"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/2503514",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fhs@1627.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:58:40.896864823Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "473",
+        "pages": {
+          "end": "163",
+          "type": "Range",
+          "begin": "154"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "19B98E2A-D83E-45FA-B2B0-30A75EC40BC8",
+        "year": "2016",
+        "name": "IFIP Advances in Information and Communication Technology",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/19B98E2A-D83E-45FA-B2B0-30A75EC40BC8/2016",
+        "type": "Journal",
+        "onlineIssn": "1868-422X",
+        "printIssn": "1868-4238",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=19B98E2A-D83E-45FA-B2B0-30A75EC40BC8"
+      },
+      "doi": "https://doi.org/10.1007/978-3-319-41354-9_12"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Towards Behavioural Computer Science",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christian Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1122",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.71",
+            "type": "Organization",
+            "labels": {
+              "nb": "Digitale infrastrukturer og sikkerhet",
+              "en": "Digital Infrastructures and Security"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Audun Jøsang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6800",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.71",
+            "type": "Organization",
+            "labels": {
+              "nb": "Digitale infrastrukturer og sikkerhet",
+              "en": "Digital Infrastructures and Security"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christian Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1122",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.71",
+            "type": "Organization",
+            "labels": {
+              "nb": "Digitale infrastrukturer og sikkerhet",
+              "en": "Digital Infrastructures and Security"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Audun Jøsang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6800",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.71",
+            "type": "Organization",
+            "labels": {
+              "nb": "Digitale infrastrukturer og sikkerhet",
+              "en": "Digital Infrastructures and Security"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2016",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:32:44.870659317Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/19B98E2A-D83E-45FA-B2B0-30A75EC40BC8/2016"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:32:44.870659317Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fhs",
+      "type": "CristinIdentifier",
+      "value": "1373215"
+    },
+    {
+      "sourceName": "cristin@fhs",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-84979243574"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad4a0046-573b3203-d568-4321-a11c-f7b5f30fdfe2",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:32:44.870659317Z",
+  "scientificIndex": {
+    "year": "2016",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.71",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Digitale infrastrukturer og sikkerhet",
+                    "en": "Digital Infrastructures and Security"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for informatikk",
+                "en": "Department for Informatics"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det matematisk-naturvitenskapelige fakultet",
+            "en": "Faculty of Mathematics and Natural Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Audun Jøsang",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6800",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Christian Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1122",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Forsvarets høgskole",
+        "en": "Norwegian Defence University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

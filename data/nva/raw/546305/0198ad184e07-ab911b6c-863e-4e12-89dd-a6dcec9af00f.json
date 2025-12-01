@@ -1,0 +1,853 @@
+{
+  "identifier": "0198ad184e07-ab911b6c-863e-4e12-89dd-a6dcec9af00f",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/13200145.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "havforsk@7431.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:07:04.686617723Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "41",
+        "pages": {
+          "end": "380",
+          "type": "Range",
+          "begin": "372"
+        },
+        "issue": "3",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "64CBA014-0FD2-42F8-9D44-9458E48E152B",
+        "year": "2017",
+        "name": "International Journal of Obesity",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/64CBA014-0FD2-42F8-9D44-9458E48E152B/2017",
+        "type": "Journal",
+        "onlineIssn": "1476-5497",
+        "printIssn": "0307-0565",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=64CBA014-0FD2-42F8-9D44-9458E48E152B"
+      },
+      "doi": "https://doi.org/10.1038/ijo.2016.228"
+    },
+    "contributorsCount": 17,
+    "mainTitle": "Induction of lipogenesis in white fat during cold exposure in mice: Link to lean phenotype",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "P Flachs",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "K Adamcova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "P Zouhar",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "C Marques",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13200145.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidade de Coimbra",
+              "en": "University of Coimbra"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Petra Janovská",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "I Viegas",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13200145.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidade de Coimbra",
+              "en": "University of Coimbra"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "JG Jones",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13200145.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidade de Coimbra",
+              "en": "University of Coimbra"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Kristina Bardová",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "M Svobodova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "J Hansikova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "11",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ondrej Kuda",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "12",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Martin Rossmeisl",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "13",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ulrike Liisberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "14",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Alison G. Borkowska",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "15",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "K Kristiansen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "16",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lise Madsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "17",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "J Kopecky",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "P Flachs",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "K Adamcova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "P Zouhar",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "C Marques",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13200145.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidade de Coimbra",
+              "en": "University of Coimbra"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Petra Janovská",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "I Viegas",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13200145.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidade de Coimbra",
+              "en": "University of Coimbra"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "JG Jones",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13200145.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidade de Coimbra",
+              "en": "University of Coimbra"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Kristina Bardová",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "M Svobodova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "J Hansikova",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CZ",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Akademie ved Ceské Republiky",
+              "en": "Czech Academy of Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2017",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:38:27.975733134Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/64CBA014-0FD2-42F8-9D44-9458E48E152B/2017"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:38:27.975733134Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@havforsk",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85009827360"
+    },
+    {
+      "sourceName": "cristin@havforsk",
+      "type": "CristinIdentifier",
+      "value": "1562083"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad184e07-ab911b6c-863e-4e12-89dd-a6dcec9af00f",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:38:27.975733134Z",
+  "scientificIndex": {
+    "year": "2017",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Sjømat og ernæring",
+            "en": "Seafood and nutrition"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Lise Madsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ulrike Liisberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Havforskningsinstituttet",
+        "en": "Institute of Marine Research"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Københavns Universitet",
+        "en": "University of Copenhagen"
+      }
+    },
+    {
+      "countryCode": "PT",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13200145.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universidade de Coimbra",
+        "en": "University of Coimbra"
+      }
+    },
+    {
+      "countryCode": "CZ",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/15800028.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Akademie ved Ceské Republiky",
+        "en": "Czech Academy of Sciences"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

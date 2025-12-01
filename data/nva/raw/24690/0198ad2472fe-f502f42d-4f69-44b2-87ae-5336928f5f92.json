@@ -1,0 +1,231 @@
+{
+  "identifier": "0198ad2472fe-f502f42d-4f69-44b2-87ae-5336928f5f92",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hio@215.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "http://www.hioa.no/eng/About-HiOA/Centre-for-Welfare-and-Labour-Research/NIBR/Publications/Lecciones-del-proceso-de-restitucion-de-tierra-para-el-Acuerdo-de-Pas-en-Colombia",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:04:51.931838668Z",
+  "fundings": [
+    {
+      "identifier": "NIBR-3512 (NOREF)",
+      "source": {
+        "identifier": "OTHER",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/OTHER",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Andre",
+          "en": "Other"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "17",
+          "type": "MonographPages"
+        },
+        "type": "ReportResearch"
+      },
+      "publicationContext": {
+        "isbnList": [
+          "9788283091083"
+        ],
+        "series": {
+          "identifier": "07387114-9FF2-4279-B67D-D148A3FEAA52",
+          "year": "2016",
+          "name": "NIBR-notat",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/07387114-9FF2-4279-B67D-D148A3FEAA52/2016",
+          "type": "Series",
+          "onlineIssn": "0809-6929",
+          "printIssn": "0801-1702",
+          "scientificValue": "LevelZero",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=07387114-9FF2-4279-B67D-D148A3FEAA52"
+        },
+        "publisher": {
+          "valid": "true",
+          "identifier": "ADACD8BA-D603-4023-BFCD-AF967FDD3DE4",
+          "year": "2016",
+          "name": "By- og regionforskningsinstituttet NIBR",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/ADACD8BA-D603-4023-BFCD-AF967FDD3DE4/2016",
+          "type": "Publisher",
+          "scientificValue": "Unassigned",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/nvakanal?pid=ADACD8BA-D603-4023-BFCD-AF967FDD3DE4"
+        },
+        "type": "Report",
+        "seriesNumber": "2016;101"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Lecciones del proceso de restitución de tierra para el Acuerdo de Pas en Colombia",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/spa",
+    "abstract": "El Acuerdo de Paz en Colombia puede cambiar la zona rural fundamentalmente. Donde gobernada informalidad e inseguridad, la presencia del estado y paz puede llevar crecimiento económico en la agricultura. Si el señalado \"reforma rural integral\" será exitoso depende del diseño y la fuerza institucional. Este análisis leva la experiencia del proceso de restitución de tierras a los desplazados en la Ley de victimas para indicar cuáles serán los resultados de las propuestas en la práctica.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "By- og regionforskningsinstituttet NIBR",
+              "en": "Norwegian Institute for Urban and Regional Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2016",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:51:43.870553158Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/ADACD8BA-D603-4023-BFCD-AF967FDD3DE4/2016",
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/07387114-9FF2-4279-B67D-D148A3FEAA52/2016"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:51:43.870553158Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hio",
+      "type": "CristinIdentifier",
+      "value": "1398148"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad2472fe-f502f42d-4f69-44b2-87ae-5336928f5f92",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:51:43.870553158Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.3.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "By- og regionforskningsinstituttet NIBR",
+                "en": "Norwegian Institute for Urban and Regional Research"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.16.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Senter for velferds- og arbeidslivsforskning",
+            "en": "Centre for Welfare and Labour Research"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Henrik Wiig",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24690",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

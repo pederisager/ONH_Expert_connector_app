@@ -1,0 +1,309 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.11.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/2739374",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "ck@1615.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://www.mdpi.com/2071-1050/13/4/1820/htm",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "2019-2024",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Norges forskningsråd",
+        "en": "Research Council of Norway (RCN)"
+      }
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "13",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "4",
+        "articleNumber": "1820",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "6A7D0172-6922-44E6-B12C-C03EE14AEDF7",
+        "year": "2021",
+        "name": "Sustainability",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/6A7D0172-6922-44E6-B12C-C03EE14AEDF7/2021",
+        "type": "Journal",
+        "onlineIssn": "2071-1050",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=6A7D0172-6922-44E6-B12C-C03EE14AEDF7"
+      },
+      "doi": "https://doi.org/10.3390/su13041820"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "RRI and corporate stakeholder engagement: The Aquadvantage salmon case",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Declining public trust in science and innovation triggered the emergence and development of the responsible research and innovation (RRI) concept among policymakers and academics.\r\nEngaging stakeholders in the early phases of innovation processes has been identified as a major\r\ndriver of inclusive, responsible, and sustainable development. Firms however have often adopted\r\npractices entirely opposite to those being advocated within the RRI framework, namely, reducing\r\nexternal interaction with stakeholders, focusing on exclusive communication with the scientific\r\ncommunity and legal authorities while avoiding the social spotlight. We illustrate these practices,\r\ntheir causes and consequences using the case of the Aquadvantage salmon, the first genetically\r\nmodified (GM) animal approved to petition for the United States (US) Food and Drug Administration (FDA) approval for human consumption. We find that such practices heighten the risk of\r\nsocial backlash, being undesirable from the perspective of both the organizations involved and\r\nsociety at large. Stakeholder engagement remains necessary in order to gain the minimum social\r\nacceptance required for contentious innovative products to enter the market. However, stakeholder\r\nengagement must be selective, focused on pragmatic organizations whose aims and interests are\r\nsufficiently broad to potentially align with corporate interests. Strategic stakeholder engagement\r\noffers a meeting point between the transformative aspirations of RRI framework proponents and\r\nlegitimate business interests.\r\n",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "School of Economics, Innovation, and Technology",
+              "en": "School of Economics, Innovation, and Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Olga Mikhailova",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627238",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "School of Economics, Innovation, and Technology",
+              "en": "School of Economics, Innovation, and Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Olga Mikhailova",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627238",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2021",
+      "type": "PublicationDate"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/6A7D0172-6922-44E6-B12C-C03EE14AEDF7/2021"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@ck",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85100900253"
+    },
+    {
+      "sourceName": "cristin@ck",
+      "type": "CristinIdentifier",
+      "value": "1913782"
+    }
+  ],
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad525ded-2e3284f4-5902-4300-96e6-c9b4c933b3db",
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "School of Economics, Innovation, and Technology",
+            "en": "School of Economics, Innovation, and Technology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høyskolen Kristiania",
+        "en": "Kristiania University of Applied Sciences"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.11.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Handelshøgskolen"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Olga Mikhailova",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627238",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs miljø- og biovitskaplege universitet",
+        "nb": "Norges miljø- og biovitenskapelige universitet"
+      }
+    }
+  ],
+  "identifier": "0198ad525ded-2e3284f4-5902-4300-96e6-c9b4c933b3db",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:11:28.674250753Z",
+  "createdDate": "2025-08-15T10:41:53.133283254Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:41:53.133283254Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:41:53.133283254Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

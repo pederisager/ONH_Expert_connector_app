@@ -1,0 +1,412 @@
+{
+  "identifier": "0198ad4d56bd-9e352600-0946-4922-a776-488645b5a385",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.5.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68405938.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fhs@1627.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:02:58.438849321Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "6",
+          "type": "Range",
+          "begin": "4"
+        },
+        "type": "Introduction"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9782832528969"
+              ],
+              "series": {
+                "identifier": "AEBA5332-042B-4A6E-9CC9-CD4DB3AE6713",
+                "year": "2023",
+                "name": "Frontiers Research Topics",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/AEBA5332-042B-4A6E-9CC9-CD4DB3AE6713/2023",
+                "type": "Series",
+                "onlineIssn": "1664-8714",
+                "scientificValue": "LevelZero",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=AEBA5332-042B-4A6E-9CC9-CD4DB3AE6713"
+              },
+              "publisher": {
+                "valid": "true",
+                "identifier": "DFE2333C-85BD-4885-8350-B668E8CD6B2D",
+                "year": "2023",
+                "name": "Frontiers Media S.A.",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/DFE2333C-85BD-4885-8350-B668E8CD6B2D/2023",
+                "type": "Publisher",
+                "scientificValue": "LevelZero",
+                "isbnPrefix": "978-2-88945,978-2-88919",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=DFE2333C-85BD-4885-8350-B668E8CD6B2D"
+              },
+              "type": "Book",
+              "seriesNumber": "1",
+              "revision": "Unrevised"
+            }
+          },
+          "mainTitle": "Ethical challenges in AI-enhanced \r\nmilitary operations",
+          "contributors": [
+            {
+              "identity": {
+                "name": "George Lucas",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/21958"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/12877"
+              },
+              "type": "Contributor"
+            },
+            {
+              "identity": {
+                "name": "Edward Barrett",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad085e34-40be35fa-5e58-49a1-a7d5-ad9d185adcc1",
+        "type": "Anthology"
+      }
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Editorial: Ethical challenges in AI-enhanced military operations",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kirsi Marjaana Helkala",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12877",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.5.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Cyberingeniørskolen",
+              "en": "Norwegian Defence Cyber Academy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "George Lucas",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68405938.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "United States Naval Academy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Edward Barrett",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68405938.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "United States Naval Academy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kirsi Marjaana Helkala",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12877",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.5.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Cyberingeniørskolen",
+              "en": "Norwegian Defence Cyber Academy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "George Lucas",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68405938.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "United States Naval Academy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Edward Barrett",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68405938.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "United States Naval Academy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Henrik Syse",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21958",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nn": "PRIO - Institutt for fredsforsking",
+              "nb": "PRIO - Institutt for fredsforskning",
+              "en": "PRIO - Peace Research Institute Oslo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:36:23.613645748Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:12:55.008064356Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fhs",
+      "type": "CristinIdentifier",
+      "value": "2312305"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad4d56bd-9e352600-0946-4922-a776-488645b5a385",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:36:23.613645748Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.5.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Cyberingeniørskolen",
+            "en": "Norwegian Defence Cyber Academy"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kirsi Marjaana Helkala",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12877",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Forsvarets høgskole",
+        "en": "Norwegian Defence University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7435.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nn": "PRIO - Institutt for fredsforsking",
+        "nb": "PRIO - Institutt for fredsforskning",
+        "en": "PRIO - Peace Research Institute Oslo"
+      }
+    },
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68405938.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "United States Naval Academy"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

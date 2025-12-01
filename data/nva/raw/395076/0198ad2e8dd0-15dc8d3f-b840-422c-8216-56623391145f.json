@@ -1,0 +1,267 @@
+{
+  "identifier": "0198ad2e8dd0-15dc8d3f-b840-422c-8216-56623391145f",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7437.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "isf@7437.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7437.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://open.spotify.com/episode/7nvQOxsxfJrw7r7l3DLNHJ?si=51099e80ed0a43c0",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:36:14.930515243Z",
+  "fundings": [
+    {
+      "identifier": "316340",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/316340",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7437.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "MediaParticipationInRadioOrTv"
+      },
+      "publicationContext": {
+        "medium": {
+          "type": "Internet"
+        },
+        "type": "MediaContribution",
+        "disseminationChannel": "Podcast, Oslo Nye Høyskole"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Karriereklar (podcast): Barrierer kvinner og funksjonshemmede møter i arbeidslivet",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Søraas Skorge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/768386",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7437.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Øyvind Søraas Skorge",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/768386",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Institutt for samfunnsforsking",
+              "nb": "Institutt for samfunnsforskning",
+              "en": "Institute for Social Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjersti Skarstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/395076",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Kjersti Skarstad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/395076",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Søraas Skorge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/768386",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7437.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Øyvind Søraas Skorge",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/768386",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Institutt for samfunnsforsking",
+              "nb": "Institutt for samfunnsforskning",
+              "en": "Institute for Social Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "ProgrammeParticipant"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjersti Skarstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/395076",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Kjersti Skarstad",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/395076",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "10",
+      "year": "2023",
+      "type": "PublicationDate",
+      "day": "16"
+    }
+  },
+  "createdDate": "2025-08-15T10:02:46.096700550Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:02:46.096700550Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@isf",
+      "type": "CristinIdentifier",
+      "value": "2203333"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad2e8dd0-15dc8d3f-b840-422c-8216-56623391145f",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:02:46.096700550Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kjersti Skarstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/395076",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7437.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Søraas Skorge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/768386",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Institutt for samfunnsforsking",
+        "nb": "Institutt for samfunnsforskning",
+        "en": "Institute for Social Research"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

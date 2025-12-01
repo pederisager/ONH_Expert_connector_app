@@ -1,0 +1,284 @@
+{
+  "identifier": "0198ad228955-9bf8bda9-ee91-4647-98ce-6ed6e4abf3f7",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/10620025.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fni@7430.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:36:05.887858272Z",
+  "fundings": [
+    {
+      "identifier": "485",
+      "source": {
+        "identifier": "FNI",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FNI",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Fridtjof Nansens institutt",
+          "en": "Fridtjof Nansen Institute"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "302176",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/302176",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "191",
+          "type": "Range",
+          "begin": "171"
+        },
+        "type": "AcademicChapter"
+      },
+      "publicationContext": {
+        "entityDescription": {
+          "reference": {
+            "type": "Reference",
+            "publicationContext": {
+              "isbnList": [
+                "9783030450045"
+              ],
+              "additionalIdentifiers": [
+                {
+                  "sourceName": "ISBN",
+                  "type": "AdditionalIdentifier",
+                  "value": "303045004X"
+                }
+              ],
+              "publisher": {
+                "valid": "true",
+                "identifier": "AD8FEF33-C155-4915-A7BF-A1BE33DDAC4D",
+                "year": "2020",
+                "name": "Springer",
+                "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/AD8FEF33-C155-4915-A7BF-A1BE33DDAC4D/2020",
+                "type": "Publisher",
+                "scientificValue": "LevelOne",
+                "isbnPrefix": "978-94-007,978-3-64236,978-3-319,978-1-85233,978-1-4471,978-1-4419,978-0-7923,978-0-387",
+                "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=AD8FEF33-C155-4915-A7BF-A1BE33DDAC4D"
+              },
+              "type": "Book",
+              "revision": "Revised"
+            }
+          },
+          "mainTitle": "Handbook on Geopolitics and Security in the Arctic: The High North Between Cooperation and Confrontation",
+          "contributors": [
+            {
+              "identity": {
+                "name": "Joachim Weber",
+                "type": "Identity"
+              },
+              "type": "Contributor"
+            }
+          ],
+          "type": "EntityDescription"
+        },
+        "id": "https://api.test.nva.aws.unit.no/publication/0198ad26b60c-bdc3fbb3-ddd8-4979-b4b1-4f8038ad3dc5",
+        "type": "Anthology"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "A Divided Arctic: Maritime Boundary Agreements and Disputes in the Arctic Ocean",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "The Arctic region has been characterised by some as an area of geopolitical competition and boundary disputes. However, as a matter of international law, these portrayals are misleading. In fact, when it concerns dividing the Arctic through the delimitation of maritime boundaries, the Arctic states have been remarkably successful. In this chapter, we examine the various maritime boundaries in the Arctic, as well as the practice of the Arctic states concerning baselines, maritime claims and extended continental shelves in the central Arctic Ocean. We find that in contrast to other maritime domains, most of the maritime boundaries in the Arctic have been settled. Moreover, the Arctic coastal states have declared their intentions to abide by the Law of the Sea, not least because it grants them broad maritime claims in the Arctic Ocean, and have stated that potential disputes will be solved through negotiations. Thus, when examining maritime disputes, the Arctic does not entail escalating conflicts; it is instead an example of a maritime space where states have settled disputes before real conflict could emerge and use the framework of agreed boundaries as a basis for transboundary cooperation.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Clive H. Schofield",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10620025.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "World Maritime University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Clive H. Schofield",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10620025.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "World Maritime University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Andreas Østhagen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fridtjof Nansens institutt",
+              "en": "Fridtjof Nansen Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2020",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1028"
+  },
+  "createdDate": "2025-08-15T09:49:38.517824991Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T11:07:49.245832339Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fni",
+      "type": "CristinIdentifier",
+      "value": "1819594"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad228955-9bf8bda9-ee91-4647-98ce-6ed6e4abf3f7",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:49:38.517824991Z",
+  "scientificIndex": {
+    "year": "2020",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7430.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Andreas Østhagen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/579486",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Fridtjof Nansens institutt",
+        "en": "Fridtjof Nansen Institute"
+      }
+    },
+    {
+      "countryCode": "SE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10620025.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "World Maritime University"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

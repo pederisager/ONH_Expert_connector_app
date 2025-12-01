@@ -1,0 +1,540 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/13100106.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1901.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/9198.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hfi@1901.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1901.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "http://pml.medpress.com.pl/ePUBLI/free/PML280-123.pdf",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "190031",
+      "source": {
+        "identifier": "FHT",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/FHT",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Finnmarkssykehuset",
+          "en": "Finnmark Hospital Trust"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1901.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "46",
+        "pages": {
+          "end": "127",
+          "type": "Range",
+          "begin": "123"
+        },
+        "issue": "280",
+        "articleNumber": "31760393",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "5025DD22-44E3-41AB-8F0E-0A004F144AF2",
+        "year": "2019",
+        "name": "Polski Merkuriusz Lekarski",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/5025DD22-44E3-41AB-8F0E-0A004F144AF2/2019",
+        "type": "Journal",
+        "printIssn": "1426-9686",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=5025DD22-44E3-41AB-8F0E-0A004F144AF2"
+      }
+    },
+    "contributorsCount": 5,
+    "mainTitle": "Prevalence of bacterial and fungal infections the oral cavity in patients with acute myocardial infarction treated with primary coronary intervention.",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "The possible connection between oral health and overall health has been a subject of debate among medical practitioners and theoreticians for millenia.\r\n\r\nAIM:\r\nThe aim of the study was to determine the frequency of bacterial or fungal mouth infections in myocardial infarction patients treated with primary coronary intervention.\r\n\r\nMATERIALS AND METHODS:\r\nA total of 128 patients took part in the study (68 patients in the study group and 60 in the control group). The medical histories of the patients were taken, and the following tests were performed: a physical examination and an oral hygiene assessment. The oral hygiene assessment included a mycological evaluation of the oral cavity and bacteriological and mycological analyses of samples taken from gingival pockets.\r\n\r\nRESULTS:\r\nFungal colonisation of the oral cavity was more prevalent in the study group than in the control group - 33 (50.0 %) vs 15 (25.0 %) p < 0.05. No statistically significant differences between the study and control groups were noted in terms of the number of positive bacteriological cultures. When it comes to predictors of myocardial infarction, fungal infections in the oral cavity were deemed to be a significant prognostic factor (OR 3.0). No similar correlation was identified in the case of bacterial infections.\r\n\r\nCONCLUSIONS:\r\nThe study results suggest that poor oral health may be one of the predisposing factors for ischaemic heart disease, including in its acute form, i.e. myocardial infarction.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Katarzyna Stryjewska",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/9198.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Diverse norske bedrifter og organisasjoner"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Jolanta Pytko-Polonczyk",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13100106.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Uniwersytet Jagiellonski w Krakowie",
+              "en": "Jagiellonian University in Cracow"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mads Skoglung Sagbraaten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1183391",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1901.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Suvi Vilja Maaria Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183398",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mads Skoglung Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183391",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Piotr Stryjewski",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1171359",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Finnmarkssjukehuset",
+              "nb": "Finnmarkssykehuset",
+              "en": "Finnmark Hospital Trust"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Suvi Vilja Maaria Sagbraaten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1183398",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1901.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Suvi Vilja Maaria Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183398",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mads Skoglung Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183391",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Piotr Stryjewski",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1171359",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Finnmarkssjukehuset",
+              "nb": "Finnmarkssykehuset",
+              "en": "Finnmark Hospital Trust"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Piotr Stryjewski",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1171359",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1901.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Suvi Vilja Maaria Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183398",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mads Skoglung Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183391",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Piotr Stryjewski",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1171359",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Finnmarkssjukehuset",
+              "nb": "Finnmarkssykehuset",
+              "en": "Finnmark Hospital Trust"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Katarzyna Stryjewska",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/9198.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Diverse norske bedrifter og organisasjoner"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Jolanta Pytko-Polonczyk",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "PL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13100106.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Uniwersytet Jagiellonski w Krakowie",
+              "en": "Jagiellonian University in Cracow"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mads Skoglung Sagbraaten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1183391",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1901.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Suvi Vilja Maaria Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183398",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mads Skoglung Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183391",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Piotr Stryjewski",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1171359",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Finnmarkssjukehuset",
+              "nb": "Finnmarkssykehuset",
+              "en": "Finnmark Hospital Trust"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Suvi Vilja Maaria Sagbraaten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1183398",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1901.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Suvi Vilja Maaria Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183398",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mads Skoglung Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183391",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Piotr Stryjewski",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1171359",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Finnmarkssjukehuset",
+              "nb": "Finnmarkssykehuset",
+              "en": "Finnmark Hospital Trust"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Piotr Stryjewski",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1171359",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1901.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Suvi Vilja Maaria Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183398",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Mads Skoglung Sagbraaten",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1183391",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Piotr Stryjewski",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1171359",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nn": "Finnmarkssjukehuset",
+              "nb": "Finnmarkssykehuset",
+              "en": "Finnmark Hospital Trust"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2019",
+      "type": "PublicationDate"
+    },
+    "tags": [
+      "Dental health",
+      "Tannhelse"
+    ]
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/5025DD22-44E3-41AB-8F0E-0A004F144AF2/2019"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hfi",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85075517406"
+    },
+    {
+      "sourceName": "cristin@hfi",
+      "type": "CristinIdentifier",
+      "value": "1785447"
+    }
+  ],
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad002919-d4a4fd4d-a7cb-4e86-8e50-4abbec79fe91",
+  "topLevelOrganizations": [
+    {
+      "countryCode": "PL",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13100106.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Uniwersytet Jagiellonski w Krakowie",
+        "en": "Jagiellonian University in Cracow"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/9198.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Diverse norske bedrifter og organisasjoner"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1901.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Suvi Vilja Maaria Sagbraaten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1183398",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Mads Skoglung Sagbraaten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1183391",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Piotr Stryjewski",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1171359",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Finnmarkssjukehuset",
+        "nb": "Finnmarkssykehuset",
+        "en": "Finnmark Hospital Trust"
+      }
+    }
+  ],
+  "identifier": "0198ad002919-d4a4fd4d-a7cb-4e86-8e50-4abbec79fe91",
+  "subjects": [
+    "https://nva.unit.no/hrcs/category/hrcs_hc_11met",
+    "https://nva.unit.no/hrcs/activity/hrcs_rag_8"
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:53:33.660886643Z",
+  "createdDate": "2025-08-15T09:12:05.657283292Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:12:05.657283292Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:12:05.657283292Z",
+  "scientificIndex": {
+    "year": "2019",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

@@ -1,0 +1,360 @@
+{
+  "identifier": "0198ad1ba069-cfcd7890-24d7-4053-9c91-3512752251c5",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.62"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "http://urn.nb.no/URN:NBN:no-45763",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:31:51.013190908Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "95",
+          "type": "MonographPages"
+        },
+        "type": "DegreeMaster"
+      },
+      "publicationContext": {
+        "publisher": {
+          "valid": "true",
+          "identifier": "A04A15C5-1B21-46BB-BC1D-AA4EF9B6DEB9",
+          "year": "2014",
+          "name": "Universitetet i Oslo",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/A04A15C5-1B21-46BB-BC1D-AA4EF9B6DEB9/2014",
+          "type": "Publisher",
+          "scientificValue": "Unassigned",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/forlag?pid=A04A15C5-1B21-46BB-BC1D-AA4EF9B6DEB9"
+        },
+        "type": "Degree"
+      }
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Benzenmobilitet i MOF UiO-67 karakterisert med proton lavfelt NMR-målinger -Eksperimenter og simuleringer",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nor",
+    "abstract": "Dette arbeidet utgjør en preliminær undersøkelse av muligheten for å stu- dere sorbentmobilitet i krystallitter av det metall-organiske rammeverket UiO-67, ved å måle selvdiffusjon med et lavfelt NMR-instrument (0,5 T). UiO-67 materialet har blitt syntetisert, preparert og karakterisert for selvdif- fusjonsmålinger. Tolkningen av selvdiffusjonsmålingene har blitt kombinert med simuleringer av både sorpsjon og dynamikk. Studiet viser at det er mulig å bestemme tidsavhengigheten til utvekslingen av benzen mellom porene i krystallittene, og gassfasen mellom krystallittene. Det blir også vist at det er mulig å bestemme selvdiffusjonen til benzen inne i krystallittene som funk- sjon av temperatur. Diffusjonskoeffisientene som bestemmes er lavere enn for bulk benzen, og viser en tidsavhengighet som skyldes begrensningene porene legger på mobiliteten til benzenmolekylene inne i krystallittene. Tidsavhen- gigheten til diffusjonskoeffisienten blir brukt til å bestemme den gjennom- snittlige krystallittradien. Krystallittradien bestemt fra tidsavhengigheten i diffusjonskoeffisienten er i god overenstemmelse med den gjennomsnittlige krystallittradien som bestemmes med mikroskopi.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bård Andre Bendiksen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/470724",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.62"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kjemisk institutt",
+              "en": "Department of Chemistry"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Supervisor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eddy Walther Hansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22854",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.62",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap",
+              "en": "Environmental Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Supervisor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Harald Walderhaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21966",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.62",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap",
+              "en": "Environmental Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bård Andre Bendiksen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/470724",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.62"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kjemisk institutt",
+              "en": "Department of Chemistry"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Supervisor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Eddy Walther Hansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22854",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.62",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap",
+              "en": "Environmental Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Supervisor"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Harald Walderhaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21966",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.62",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap",
+              "en": "Environmental Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2014",
+      "type": "PublicationDate"
+    },
+    "npiSubjectHeading": "1157"
+  },
+  "createdDate": "2025-08-15T09:42:05.673493844Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/A04A15C5-1B21-46BB-BC1D-AA4EF9B6DEB9/2014"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:42:05.673493844Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "1570891"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad1ba069-cfcd7890-24d7-4053-9c91-3512752251c5",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:42:05.673493844Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.62",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Miljøvitenskap",
+                    "en": "Environmental Sciences"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.12.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Kjemisk institutt",
+                "en": "Department of Chemistry"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det matematisk-naturvitenskapelige fakultet",
+            "en": "Faculty of Mathematics and Natural Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Eddy Walther Hansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22854",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bård Andre Bendiksen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/470724",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Harald Walderhaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21966",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

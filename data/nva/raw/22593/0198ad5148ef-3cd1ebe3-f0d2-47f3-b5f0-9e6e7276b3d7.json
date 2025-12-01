@@ -1,0 +1,249 @@
+{
+  "identifier": "0198ad5148ef-3cd1ebe3-f0d2-47f3-b5f0-9e6e7276b3d7",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7425.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fhs@1627.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:29:08.344811876Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7425.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "MediaFeatureArticle"
+      },
+      "publicationContext": {
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/721DA21A-8F44-4C2A-A9C6-832B7FBDE3F0/2012",
+        "type": "MediaContributionPeriodical"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Når stabiliteten rakner",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Stig Stenslie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22593",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for forsvarsstudier",
+              "en": "Norwegian Institute for Defence Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "kjetil Selvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21504",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7425.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "kjetil Selvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/21504",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fafo Institutt for arbeidslivs- og velferdsforskning",
+              "en": "The Fafo Institute for Labour and Social Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Stig Stenslie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22593",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for forsvarsstudier",
+              "en": "Norwegian Institute for Defence Studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "kjetil Selvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21504",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7425.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "kjetil Selvik",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/21504",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Fafo Institutt for arbeidslivs- og velferdsforskning",
+              "en": "The Fafo Institute for Labour and Social Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "3",
+      "year": "2012",
+      "type": "PublicationDate",
+      "day": "30"
+    }
+  },
+  "createdDate": "2025-08-15T10:40:42.223203249Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:40:42.223203249Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fhs",
+      "type": "CristinIdentifier",
+      "value": "930199"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad5148ef-3cd1ebe3-f0d2-47f3-b5f0-9e6e7276b3d7",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:40:42.223203249Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.7.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Institutt for forsvarsstudier",
+            "en": "Norwegian Institute for Defence Studies"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Stig Stenslie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22593",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Forsvarets høgskole",
+        "en": "Norwegian Defence University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7425.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "kjetil Selvik",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/21504",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Fafo Institutt for arbeidslivs- og velferdsforskning",
+        "en": "The Fafo Institute for Labour and Social Research"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

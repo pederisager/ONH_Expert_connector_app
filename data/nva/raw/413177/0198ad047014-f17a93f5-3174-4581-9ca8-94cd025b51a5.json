@@ -1,0 +1,278 @@
+{
+  "identifier": "0198ad047014-f17a93f5-3174-4581-9ca8-94cd025b51a5",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/209.6.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/209.6.4.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "fhs@1627.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:35:29.731832916Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "NullPages"
+        },
+        "type": "Lecture"
+      },
+      "publicationContext": {
+        "agent": {
+          "name": "International Military Testing Association",
+          "type": "UnconfirmedOrganization"
+        },
+        "name": "IMTA",
+        "place": {
+          "countryCode": "KR",
+          "name": "Seoul",
+          "type": "UnconfirmedPlace"
+        },
+        "time": {
+          "from": "2013-10-28T00:00:00Z",
+          "to": "2013-10-31T00:00:00Z",
+          "type": "Period"
+        },
+        "type": "Event"
+      }
+    },
+    "contributorsCount": 2,
+    "mainTitle": "Chief of Defence’s (CHOD) Policy on Leadership in the Norwegian Armed Forces",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Johan Bergh",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Geir Ove Venemyr",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/848697",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.4.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for organisasjon, ledelse, styring",
+              "en": "Department of Organisation, Leadership and Management"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Johan Bergh",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Geir Ove Venemyr",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/848697",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.4.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for organisasjon, ledelse, styring",
+              "en": "Department of Organisation, Leadership and Management"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2013",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:16:45.972886001Z",
+  "publicationContextUris": [],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:16:45.972886001Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@fhs",
+      "type": "CristinIdentifier",
+      "value": "1497676"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad047014-f17a93f5-3174-4581-9ca8-94cd025b51a5",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:16:45.972886001Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Johan Bergh",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/413177",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Forsvarets høgskole",
+        "en": "Norwegian Defence University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.4.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for organisasjon, ledelse, styring",
+                "en": "Department of Organisation, Leadership and Management"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Handelshøgskolen Innlandet - Fakultet for økonomi og samfunnsvitenskap",
+            "en": "Inland School of Business and Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Geir Ove Venemyr",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/848697",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Innlandet",
+        "en": "University of Inland Norway"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

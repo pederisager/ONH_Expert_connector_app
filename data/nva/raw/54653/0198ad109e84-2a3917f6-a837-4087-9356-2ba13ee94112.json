@@ -1,0 +1,509 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.20.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.20.30.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.20",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "nofima@7543.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0"
+  },
+  "type": "Publication",
+  "fundings": [
+    {
+      "identifier": "10920",
+      "source": {
+        "identifier": "NOFIMA",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NOFIMA",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Nofima AS",
+          "en": "Nofima AS"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "233751",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/233751",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "28",
+        "pages": {
+          "end": "431",
+          "type": "Range",
+          "begin": "421"
+        },
+        "issue": "3",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "4A2B52C3-08BF-48F8-B402-712BE28D08FA",
+        "year": "2019",
+        "name": "Journal of Product & Brand Management",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/4A2B52C3-08BF-48F8-B402-712BE28D08FA/2019",
+        "type": "Journal",
+        "printIssn": "1061-0421",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=4A2B52C3-08BF-48F8-B402-712BE28D08FA"
+      },
+      "doi": "https://doi.org/10.1108/JPBM-02-2018-1764"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Guilt-free pleasures: how premium and luxury influence regret",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sarah Joy Lyons",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/656576",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.20.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.20.30.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for musikk",
+              "en": "Department of Music"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen ved UiT i Tromsø"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Themistoklis Altintzoglou",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/55600",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sarah Joy Lyons",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/656576",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.20.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.20.30.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for musikk",
+              "en": "Department of Music"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Handelshøgskolen ved UiT i Tromsø"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Themistoklis Altintzoglou",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/55600",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Markedsforskning",
+              "en": "Marketing Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2019",
+      "type": "PublicationDate"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/4A2B52C3-08BF-48F8-B402-712BE28D08FA/2019"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@nofima",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85062441823"
+    },
+    {
+      "sourceName": "cristin@nofima",
+      "type": "CristinIdentifier",
+      "value": "1681787"
+    }
+  ],
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad109e84-2a3917f6-a837-4087-9356-2ba13ee94112",
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.20.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.20.30.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for musikk",
+                "en": "Department of Music"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.20.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "School of Arts, Design, and Media",
+            "en": "School of Arts, Design, and Media"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Sarah Joy Lyons",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/656576",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høyskolen Kristiania",
+        "en": "Kristiania University of Applied Sciences"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0"
+                        }
+                      ],
+                      "hasPart": [
+                        {
+                          "partOf": [
+                            {
+                              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0"
+                            }
+                          ],
+                          "countryCode": "NO",
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.20",
+                          "type": "Organization",
+                          "labels": {
+                            "nb": "Handelshøgskolen ved UiT i Tromsø"
+                          }
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.13.0",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Handelshøgskolen ved UiT",
+                        "en": "Tromsø University Business School"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.1.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Fakultetsledelse BFE-fak"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.34.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Fakultet for biovitenskap, fiskeri og økonomi",
+                "en": "Faculty of Biosciences, Fisheries and Economics"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Universitetet i Tromsø - Norges arktiske universitet"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anders Hauge Wien",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/54653",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Tromsø - Norges arktiske universitet",
+        "en": "UiT The Arctic University of Norway"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.1.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Markedsforskning",
+                "en": "Marketing Research"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.2.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Divisjon Sjømat",
+            "en": "Division Seafood"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Themistoklis Altintzoglou",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/55600",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "NOFIMA",
+        "en": "Nofima, Norwegian Institute of Food, Fisheries and Aquaculture Research"
+      }
+    }
+  ],
+  "identifier": "0198ad109e84-2a3917f6-a837-4087-9356-2ba13ee94112",
+  "handle": "https://hdl.handle.net/11250/2588702",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:04:20.684428669Z",
+  "createdDate": "2025-08-15T09:30:04.292674276Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:30:04.292674276Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "Riktig tilhørighet SJ Lyons er egentlig Nofima, da det er Nofima som har finansiert arbeidet (LLK/Nofima/21/5-2019)",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T09:30:04.292674276Z",
+  "scientificIndex": {
+    "year": "2019",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

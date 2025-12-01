@@ -1,0 +1,620 @@
+{
+  "identifier": "0198ad1a2f73-57aeaaf1-3c39-4b6c-93b5-f69637a72063",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100003.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68401848.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68400196.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.24.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.13.12",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.24.60.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13700062.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10101900.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "ous@2012.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:02:42.285632021Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "103",
+        "pages": {
+          "end": "751",
+          "type": "Range",
+          "begin": "744"
+        },
+        "issue": "7",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "EBCF23E4-5FFE-4C29-88B6-C7B8A5CFA0FA",
+        "year": "2014",
+        "name": "Acta Paediatrica",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/EBCF23E4-5FFE-4C29-88B6-C7B8A5CFA0FA/2014",
+        "type": "Journal",
+        "onlineIssn": "1651-2227",
+        "printIssn": "0803-5253",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=EBCF23E4-5FFE-4C29-88B6-C7B8A5CFA0FA"
+      },
+      "doi": "https://doi.org/10.1111/apa.12656"
+    },
+    "contributorsCount": 6,
+    "mainTitle": "Systematic review and meta-analysis of optimal initial fraction of oxygen levels in the delivery room at ≤32 weeks",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ola Didrik Saugstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24144",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.24.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.24.60.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Pediatrisk forskningsinstitutt",
+              "en": "Pediatric Research Institute (PFI)"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.13.12",
+            "type": "Organization",
+            "labels": {
+              "nb": "Pediatrisk forskningsinstitutt",
+              "en": "Paediatric Research Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Marta Aguar",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700062.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitat de València",
+              "en": "University of Valencia"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Vishal Kapadia",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401848.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Texas"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Neil Finer",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400196.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of California, San Diego"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10101900.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aarhus Universitetshospital",
+              "en": "Aarhus University Hospital"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100003.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aarhus Universitet",
+              "en": "Aarhus University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Maximo Vento",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700062.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitat de València",
+              "en": "University of Valencia"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ola Didrik Saugstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24144",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.24.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.24.60.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Pediatrisk forskningsinstitutt",
+              "en": "Pediatric Research Institute (PFI)"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.13.12",
+            "type": "Organization",
+            "labels": {
+              "nb": "Pediatrisk forskningsinstitutt",
+              "en": "Paediatric Research Institute"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Marta Aguar",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700062.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitat de València",
+              "en": "University of Valencia"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Vishal Kapadia",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401848.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Texas"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Neil Finer",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400196.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of California, San Diego"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10101900.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aarhus Universitetshospital",
+              "en": "Aarhus University Hospital"
+            }
+          },
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100003.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Aarhus Universitet",
+              "en": "Aarhus University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Maximo Vento",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "ES",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700062.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitat de València",
+              "en": "University of Valencia"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2014",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:40:31.219429962Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/EBCF23E4-5FFE-4C29-88B6-C7B8A5CFA0FA/2014"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:40:31.219429962Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@ous",
+      "type": "CristinIdentifier",
+      "value": "1167641"
+    },
+    {
+      "sourceName": "cristin@ous",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-84902137559"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad1a2f73-57aeaaf1-3c39-4b6c-93b5-f69637a72063",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:40:31.219429962Z",
+  "scientificIndex": {
+    "year": "2014",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68401848.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of Texas"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100003.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Aarhus Universitet",
+        "en": "Aarhus University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.13.12",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Pediatrisk forskningsinstitutt",
+                    "en": "Paediatric Research Institute"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for klinisk medisin",
+                "en": "Institute of Clinical Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "countryCode": "ES",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13700062.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universitat de València",
+        "en": "University of Valencia"
+      }
+    },
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400196.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of California, San Diego"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Imperial College London"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.24.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.24.60.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Pediatrisk forskningsinstitutt",
+                "en": "Pediatric Research Institute (PFI)"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.24.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Barne- og ungdomsklinikken",
+            "en": "Division of Paediatric and Adolescent Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ola Didrik Saugstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/24144",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10101900.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Aarhus Universitetshospital",
+        "en": "Aarhus University Hospital"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

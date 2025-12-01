@@ -1,0 +1,547 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/689019",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uia@201.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "identifier": "83019c8e-1700-482c-9468-768bcfa95aab",
+      "license": {
+        "name": "CC-BY",
+        "type": "License",
+        "value": "https://creativecommons.org/licenses/by/4.0",
+        "labels": {
+          "nb": "Creative Commons - Navngivelse",
+          "en": "Creative Commons - Attribution"
+        }
+      },
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIA",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-09-17T12:08:03.749867416Z"
+      },
+      "size": "483230",
+      "publisherVersion": "PublishedVersion",
+      "name": "Article.pdf",
+      "mimeType": "application/pdf",
+      "publishedDate": "2025-09-17T12:08:04.087627136Z",
+      "type": "OpenFile",
+      "legalNote": "© 2021 The Author(s)"
+    },
+    {
+      "identifier": "e9602b02-339d-429a-b015-d41d4af00769",
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIA",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-09-17T12:08:03.749885951Z"
+      },
+      "size": "5337",
+      "name": "dublin_core.xml",
+      "mimeType": "application/xml",
+      "type": "HiddenFile"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "689019",
+      "source": {
+        "identifier": "UIA",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/UIA",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Universitetet i Agder",
+          "en": "University of Agder"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "65",
+        "pages": {
+          "type": "Range"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "55E8AF20-1710-4071-9017-454C7166B4A5",
+        "year": "2021",
+        "name": "Food & Nutrition Research (FNR)",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/55E8AF20-1710-4071-9017-454C7166B4A5/2021",
+        "type": "Journal",
+        "onlineIssn": "1654-661X",
+        "printIssn": "1654-6628",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=55E8AF20-1710-4071-9017-454C7166B4A5"
+      },
+      "doi": "https://doi.org/10.29219/fnr.v65.7758"
+    },
+    "contributorsCount": 4,
+    "mainTitle": "Life-course perspectives of milk consumption among young Norwegian women and their knowledge of milk as a source of iodine: a qualitative study",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Inger Aakre",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/509926",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Laura Terragni",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/325998",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Inger Aakre",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/509926",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Laura Terragni",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/325998",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2021",
+      "type": "PublicationDate"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/55E8AF20-1710-4071-9017-454C7166B4A5/2021"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "brage@uia",
+      "type": "HandleIdentifier",
+      "value": "https://hdl.handle.net/11250/2986447"
+    },
+    {
+      "sourceName": "cristin@uia",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85133526418"
+    },
+    {
+      "sourceName": "cristin@uia",
+      "type": "CristinIdentifier",
+      "value": "1968696"
+    }
+  ],
+  "filesStatus": "hasPublicFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad104a8f-405fbc37-3124-4b72-9d2e-13f970b6bd69",
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for ernæring og folkehelse",
+                "en": "Department of Nutrition and Public Health"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helse- og idrettsvitenskap",
+            "en": "Faculty of Health and Sport Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Agder",
+        "en": "University of Agder"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for sykepleie og helsefremmende arbeid",
+                "en": "Department of Nursing and Health Promotion"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helsevitenskap",
+            "en": "Faculty of Health Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Laura Terragni",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/325998",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Sjømat og ernæring",
+            "en": "Seafood and nutrition"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Inger Aakre",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/509926",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Havforskningsinstituttet",
+        "en": "Institute of Marine Research"
+      }
+    }
+  ],
+  "identifier": "0198ad104a8f-405fbc37-3124-4b72-9d2e-13f970b6bd69",
+  "handle": "https://hdl.handle.net/11250/2838226",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:57:22.441651861Z",
+  "createdDate": "2025-08-15T09:29:42.799853065Z",
+  "childPublications": [],
+  "modifiedDate": "2025-09-17T12:08:04.322827710Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:29:42.799853065Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

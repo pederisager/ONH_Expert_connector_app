@@ -1,0 +1,581 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.3.3.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.3.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/689019",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uia@201.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "identifier": "44e1668a-6a45-4960-a739-cdf17f2d27a9",
+      "license": {
+        "name": "CC-BY",
+        "type": "License",
+        "value": "https://creativecommons.org/licenses/by/4.0",
+        "labels": {
+          "nb": "Creative Commons - Navngivelse",
+          "en": "Creative Commons - Attribution"
+        }
+      },
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIA",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-09-17T12:12:03.254998682Z"
+      },
+      "size": "106188",
+      "publisherVersion": "PublishedVersion",
+      "name": "Article.pdf",
+      "mimeType": "application/pdf",
+      "publishedDate": "2025-09-17T12:12:03.527827777Z",
+      "type": "OpenFile",
+      "legalNote": "© 2023 The Author(s)"
+    },
+    {
+      "identifier": "8e2144d7-6748-416a-94fd-fcc27785fb31",
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIA",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-09-17T12:12:03.255017316Z"
+      },
+      "size": "6543",
+      "name": "dublin_core.xml",
+      "mimeType": "application/xml",
+      "type": "HiddenFile"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "314318",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/314318",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "689019",
+      "source": {
+        "identifier": "UIA",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/UIA",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Universitetet i Agder",
+          "en": "University of Agder"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    },
+    {
+      "identifier": "202103",
+      "source": {
+        "identifier": "NOFIMA",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NOFIMA",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Nofima AS",
+          "en": "Nofima AS"
+        }
+      },
+      "type": "UnconfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "21",
+        "pages": {
+          "end": "30",
+          "type": "Range",
+          "begin": "26"
+        },
+        "issue": "3",
+        "type": "ProfessionalArticle"
+      },
+      "publicationContext": {
+        "identifier": "132F160C-B3B9-4AF9-A67D-E9AFAA02063E",
+        "year": "2023",
+        "name": "Norsk tidsskrift for ernæring (NTFE)",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/132F160C-B3B9-4AF9-A67D-E9AFAA02063E/2023",
+        "type": "Journal",
+        "onlineIssn": "2703-9609",
+        "printIssn": "1503-5034",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=132F160C-B3B9-4AF9-A67D-E9AFAA02063E"
+      },
+      "doi": "https://doi.org/10.18261/ntfe.21.3.7"
+    },
+    "contributorsCount": 3,
+    "mainTitle": "Ultraprosessert mat burde være et kostråd: NEI",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/nob",
+    "abstract": "Nøkkelpunkter •\tDet er utfordrende å klassifisere mat som er ultraprosessert korrekt med NOVA-klassifiseringen. •\tNOVA-klassifiseringen er unyansert – ikke all ultraprosessert mat (UPF) er usunn. •\tDet er metodologiske utfordringer ved studier som ser på inntak av UPF og helseutfall. •\tVi vet per i dag ikke nok om de ulike årsakssammenhengene som observeres mellom UPF og uhelse. •\tVeien videre krever mer forskning og et mindre heterogent klassifiseringssystem enn NOVA.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ida Synnøve Bårvåg Grini",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/428598",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.3.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sensorikk, forbruker og innovasjon",
+              "en": "Consumer and Sensory Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anine Christine Medin",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/507618",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Dagfinn Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ida Synnøve Bårvåg Grini",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/428598",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.3.3.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sensorikk, forbruker og innovasjon",
+              "en": "Consumer and Sensory Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anine Christine Medin",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/507618",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for ernæring og folkehelse",
+              "en": "Department of Nutrition and Public Health"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kreftregisteret",
+              "en": "The Cancer Registry of Norway"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Dagfinn Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/132F160C-B3B9-4AF9-A67D-E9AFAA02063E/2023"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "brage@uia",
+      "type": "HandleIdentifier",
+      "value": "https://hdl.handle.net/11250/3122304"
+    },
+    {
+      "sourceName": "cristin@uia",
+      "type": "CristinIdentifier",
+      "value": "2180526"
+    }
+  ],
+  "filesStatus": "hasPublicFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad35c8be-e352bbf8-6f34-4ab0-b4b8-cc2196a8b864",
+  "topLevelOrganizations": [
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Imperial College London"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.3.3.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Sensorikk, forbruker og innovasjon",
+                "en": "Consumer and Sensory Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Divisjon Mat",
+            "en": "Division Food Science"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7543.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ida Synnøve Bårvåg Grini",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/428598",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "NOFIMA",
+        "en": "Nofima, Norwegian Institute of Food, Fisheries and Aquaculture Research"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.7.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for ernæring og folkehelse",
+                "en": "Department of Nutrition and Public Health"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.18.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helse- og idrettsvitenskap",
+            "en": "Faculty of Health and Sport Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/201.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Anine Christine Medin",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/507618",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Agder",
+        "en": "University of Agder"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.11.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Kreftregisteret",
+            "en": "The Cancer Registry of Norway"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7502.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Folkehelseinstituttet",
+        "en": "Norwegian Institute of Public Health"
+      }
+    }
+  ],
+  "identifier": "0198ad35c8be-e352bbf8-6f34-4ab0-b4b8-cc2196a8b864",
+  "handle": "https://hdl.handle.net/11250/3122388",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:05:51.997292659Z",
+  "createdDate": "2025-08-15T10:10:39.934686173Z",
+  "childPublications": [],
+  "modifiedDate": "2025-09-17T12:12:03.766976921Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:10:39.934686173Z",
+  "scientificIndex": {},
+  "status": "PUBLISHED"
+}

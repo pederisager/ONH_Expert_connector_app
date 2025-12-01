@@ -1,0 +1,579 @@
+{
+  "identifier": "0198ad19be4c-e5998a72-1b25-4c76-8505-f9ea2f108d92",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68400190.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hio@215.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+  },
+  "handle": "https://hdl.handle.net/11250/2690071",
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T18:03:59.742907081Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "12",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "11",
+        "articleNumber": "3555",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "70FF4754-33B8-4EDB-80D8-B6E004847255",
+        "year": "2020",
+        "name": "Nutrients",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/70FF4754-33B8-4EDB-80D8-B6E004847255/2020",
+        "type": "Journal",
+        "onlineIssn": "2072-6643",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=70FF4754-33B8-4EDB-80D8-B6E004847255"
+      },
+      "doi": "https://doi.org/10.3390/nu12113555"
+    },
+    "contributorsCount": 6,
+    "mainTitle": "Vegans, Vegetarians and Pescatarians Are at Risk of Iodine Deficiency in Norway",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Sonja Hess",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400190.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of California, Davis"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Inger Aakre",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/509926",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kristina Blandhoel Pettersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1280876",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Sonja Hess",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400190.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of California, Davis"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Inger Aakre",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/509926",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Miljøvitenskap og naturforvaltning"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kristina Blandhoel Pettersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1280876",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for sykepleie og helsefremmende arbeid",
+              "en": "Department of Nursing and Health Promotion"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "month": "11",
+      "year": "2020",
+      "type": "PublicationDate",
+      "day": "20"
+    }
+  },
+  "createdDate": "2025-08-15T09:40:02.252484589Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/70FF4754-33B8-4EDB-80D8-B6E004847255/2020"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:40:02.252484589Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hio",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85096440201"
+    },
+    {
+      "sourceName": "cristin@hio",
+      "type": "CristinIdentifier",
+      "value": "1853522"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad19be4c-e5998a72-1b25-4c76-8505-f9ea2f108d92",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:40:02.252484589Z",
+  "scientificIndex": {
+    "year": "2020",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400190.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of California, Davis"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.14.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Miljøvitenskap og naturforvaltning"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/192.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Elin Lovise Folven Gjengedal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/317438",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs miljø- og biovitskaplege universitet",
+        "nb": "Norges miljø- og biovitenskapelige universitet"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.11.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for sykepleie og helsefremmende arbeid",
+                "en": "Department of Nursing and Health Promotion"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.3.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for helsevitenskap",
+            "en": "Faculty of Health Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/215.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Kristina Blandhoel Pettersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1280876",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Henjum",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/44883",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Synne Groufh-Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1219314",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "OsloMet - storbyuniversitetet",
+        "en": "OsloMet - Oslo Metropolitan University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Sjømat og ernæring",
+            "en": "Seafood and nutrition"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Inger Aakre",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/509926",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Havforskningsinstituttet",
+        "en": "Institute of Marine Research"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

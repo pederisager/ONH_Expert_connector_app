@@ -1,0 +1,325 @@
+{
+  "identifier": "0198ad4ce05c-45a1bf67-c96e-4dad-9fe5-a775e5765005",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12300114.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "id": "https://academic.oup.com/icc/advance-article/doi/10.1093/icc/dtab064/6372826",
+      "type": "AssociatedLink",
+      "relation": "sameAs"
+    },
+    {
+      "id": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/icc/PAP/10.1093_icc_dtab064/2/dtab064_supp.zip?Expires=1649415366&Signature=N9irY7ZuznukZG95UATIV7mIhr~KYt8IMUZtE-jIbZ60HoiwCFuNcds4",
+      "type": "AssociatedLink",
+      "relation": "dataset"
+    }
+  ],
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:52:47.488199113Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "31",
+        "pages": {
+          "end": "735",
+          "type": "Range",
+          "begin": "715"
+        },
+        "issue": "3",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "9BBCA7D0-715F-46A7-B3DE-5AA6B69D4B2E",
+        "year": "2021",
+        "name": "Industrial and Corporate Change",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/9BBCA7D0-715F-46A7-B3DE-5AA6B69D4B2E/2021",
+        "type": "Journal",
+        "onlineIssn": "1464-3650",
+        "printIssn": "0960-6491",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=9BBCA7D0-715F-46A7-B3DE-5AA6B69D4B2E"
+      },
+      "doi": "https://doi.org/10.1093/icc/dtab064"
+    },
+    "contributorsCount": 2,
+    "mainTitle": "The long-term economic effects of pandemics: toward an evolutionary approach",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Beniamino Callegari",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Beniamino Callegari",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Høyskolen Kristiania",
+              "en": "Kristiania University of Applied Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christophe Feder",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300114.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Collegio Carlo Alberto"
+            }
+          },
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universita delle Valle d'Aosta"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Beniamino Callegari",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Beniamino Callegari",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Høyskolen Kristiania",
+              "en": "Kristiania University of Applied Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Christophe Feder",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300114.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Collegio Carlo Alberto"
+            }
+          },
+          {
+            "countryCode": "IT",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universita delle Valle d'Aosta"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2021",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:35:53.308267470Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/9BBCA7D0-715F-46A7-B3DE-5AA6B69D4B2E/2021"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:35:53.308267470Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "1995157"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85132864354"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad4ce05c-45a1bf67-c96e-4dad-9fe5-a775e5765005",
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "Korr affiliation 9.2.AH/BI. Lagt til Oslo nye høyskole (Bjørknes) for Callegari, samt sidetall, doi og fulltekstlenke. NJ/HK 4.3.2022",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T10:35:53.308267470Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1615.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Beniamino Callegari",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/627228",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høyskolen Kristiania",
+        "en": "Kristiania University of Applied Sciences"
+      }
+    },
+    {
+      "countryCode": "IT",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300106.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universita delle Valle d'Aosta"
+      }
+    },
+    {
+      "countryCode": "IT",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12300114.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Collegio Carlo Alberto"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

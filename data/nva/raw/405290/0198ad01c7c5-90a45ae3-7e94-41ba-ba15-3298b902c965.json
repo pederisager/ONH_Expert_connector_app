@@ -1,0 +1,861 @@
+{
+  "identifier": "0198ad01c7c5-90a45ae3-7e94-41ba-ba15-3298b902c965",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.30.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.63.30.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/14400000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10600006.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/10600022.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.63.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12707015.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.25"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:36:58.060720594Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "30",
+        "pages": {
+          "end": "469",
+          "type": "Range",
+          "begin": "452"
+        },
+        "issue": "3",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "9FACB321-8F02-4BDE-9B2F-515A78D0BB91",
+        "year": "2022",
+        "name": "Information and Computer Security",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/9FACB321-8F02-4BDE-9B2F-515A78D0BB91/2022",
+        "type": "Journal",
+        "onlineIssn": "2056-4961",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=9FACB321-8F02-4BDE-9B2F-515A78D0BB91"
+      },
+      "doi": "https://doi.org/10.1108/ICS-06-2021-0080"
+    },
+    "contributorsCount": 9,
+    "mainTitle": "A multidisciplinary definition of privacy labels",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johanna Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/8159",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.25",
+            "type": "Organization",
+            "labels": {
+              "nb": "PROG Programmering",
+              "en": "Programming"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Simone Fischer-Hübner",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600022.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Karlstads universitet",
+              "en": "Karlstad University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christian Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1122",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.63.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.63.30.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for informasjonssikkerhet og kommunikasjonsteknologi",
+              "en": "Department of Information Security and Communication Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gerardo Schneider",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17669",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600006.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Göteborgs universitet",
+              "en": "University of Gothenburg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Arnold Roosendaal",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12707015.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "ZF Screens BV",
+              "en": "ZF Screens company"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Harald Zwingelberg",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Tyskland",
+              "en": "Germany"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Jakob Sivesind",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/593830",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.25"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for informatikk",
+              "en": "Department for Informatics"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Josef Noll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12896",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.30.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for teknologisystemer",
+              "en": "Department of Technology Systems"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johanna Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/8159",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.25",
+            "type": "Organization",
+            "labels": {
+              "nb": "PROG Programmering",
+              "en": "Programming"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Forsvarets høgskole",
+              "en": "Norwegian Defence University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Tore Pedersen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Simone Fischer-Hübner",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600022.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Karlstads universitet",
+              "en": "Karlstad University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christian Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1122",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.63.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.63.30.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for informasjonssikkerhet og kommunikasjonsteknologi",
+              "en": "Department of Information Security and Communication Technology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gerardo Schneider",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/17669",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "SE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600006.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Göteborgs universitet",
+              "en": "University of Gothenburg"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Arnold Roosendaal",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12707015.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "ZF Screens BV",
+              "en": "ZF Screens company"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Harald Zwingelberg",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Tyskland",
+              "en": "Germany"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anders Jakob Sivesind",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/593830",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.25"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for informatikk",
+              "en": "Department for Informatics"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Josef Noll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12896",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.30.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for teknologisystemer",
+              "en": "Department of Technology Systems"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2022",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:13:51.813922794Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/9FACB321-8F02-4BDE-9B2F-515A78D0BB91/2022"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:13:51.813922794Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2050002"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85129317908"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad01c7c5-90a45ae3-7e94-41ba-ba15-3298b902c965",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:13:51.813922794Z",
+  "scientificIndex": {
+    "year": "2022",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NL",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12707015.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "ZF Screens BV",
+        "en": "ZF Screens company"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.63.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.63.30.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for informasjonssikkerhet og kommunikasjonsteknologi",
+                "en": "Department of Information Security and Communication Technology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.63.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for informasjonsteknologi og elektroteknikk",
+            "en": "Faculty of Information Technology and Electrical Engineering"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/194.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Christian Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1122",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nn": "Noregs teknisk-naturvitskaplege universitet",
+        "nb": "Norges teknisk-naturvitenskapelige universitet",
+        "en": "Norwegian University of Science and Technology"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1627.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Tore Pedersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405290",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Forsvarets høgskole",
+        "en": "Norwegian Defence University College"
+      }
+    },
+    {
+      "countryCode": "SE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600022.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Karlstads universitet",
+        "en": "Karlstad University"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.25",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "PROG Programmering",
+                    "en": "Programming"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for informatikk",
+                "en": "Department for Informatics"
+              }
+            },
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.30.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for teknologisystemer",
+                "en": "Department of Technology Systems"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det matematisk-naturvitenskapelige fakultet",
+            "en": "Faculty of Mathematics and Natural Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Johanna Johansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/8159",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Anders Jakob Sivesind",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/593830",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Josef Noll",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/12896",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "countryCode": "SE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10600006.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Göteborgs universitet",
+        "en": "University of Gothenburg"
+      }
+    },
+    {
+      "countryCode": "DE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/14400000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Tyskland",
+        "en": "Germany"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

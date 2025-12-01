@@ -1,0 +1,1650 @@
+{
+  "identifier": "0198ad3086b4-1801c28b-2803-4e0a-b28f-a814c6816c62",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/6088.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "havforsk@7431.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:28:01.746906941Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "8",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "1",
+        "articleNumber": "e53094",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "97E6092D-1A28-4686-82EF-3CC49AAC0197",
+        "year": "2013",
+        "name": "PLOS ONE",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/97E6092D-1A28-4686-82EF-3CC49AAC0197/2013",
+        "type": "Journal",
+        "onlineIssn": "1932-6203",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=97E6092D-1A28-4686-82EF-3CC49AAC0197"
+      },
+      "doi": "https://doi.org/10.1371/journal.pone.0053094"
+    },
+    "contributorsCount": 12,
+    "mainTitle": "Intake of farmed atlantic salmon fed soybean oil increases insulin resistance and hepatic lipid accumulation in mice",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lisa Kolden Midtbø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mohammad Madani Ibrahim",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Mohammad Madani Ibrahim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Nina Sylvia Liland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lene Secher Myrmel",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Trond Brattelid",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anita Røyneberg Alvheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bente Elisabeth Torstensen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisa Kolden Midtbø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lene Secher Myrmel",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ulrike Liisberg Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Mohammad Madani Ibrahim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Nina Sylvia Liland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lene Secher Myrmel",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Trond Brattelid",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anita Røyneberg Alvheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bente Elisabeth Torstensen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisa Kolden Midtbø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anita Røyneberg Alvheim",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Mohammad Madani Ibrahim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Nina Sylvia Liland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lene Secher Myrmel",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Trond Brattelid",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anita Røyneberg Alvheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bente Elisabeth Torstensen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisa Kolden Midtbø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nina Sylvia Liland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fôr og ernæring",
+              "en": "Feed and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bente Elisabeth Torstensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Mohammad Madani Ibrahim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Nina Sylvia Liland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lene Secher Myrmel",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Trond Brattelid",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anita Røyneberg Alvheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bente Elisabeth Torstensen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisa Kolden Midtbø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Grete Rosenlund",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Skretting AS"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Liaset",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Trond Brattelid",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Mohammad Madani Ibrahim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Nina Sylvia Liland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lene Secher Myrmel",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Trond Brattelid",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anita Røyneberg Alvheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bente Elisabeth Torstensen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisa Kolden Midtbø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "11",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Karsten Kristiansen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "12",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lise Madsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lisa Kolden Midtbø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Mohammad Madani Ibrahim",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Mohammad Madani Ibrahim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Nina Sylvia Liland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lene Secher Myrmel",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Trond Brattelid",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anita Røyneberg Alvheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bente Elisabeth Torstensen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisa Kolden Midtbø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lene Secher Myrmel",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ulrike Liisberg Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "DK",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Københavns Universitet",
+              "en": "University of Copenhagen"
+            }
+          },
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Mohammad Madani Ibrahim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Nina Sylvia Liland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lene Secher Myrmel",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Trond Brattelid",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anita Røyneberg Alvheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bente Elisabeth Torstensen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisa Kolden Midtbø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Anita Røyneberg Alvheim",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Mohammad Madani Ibrahim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Nina Sylvia Liland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lene Secher Myrmel",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Trond Brattelid",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anita Røyneberg Alvheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bente Elisabeth Torstensen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisa Kolden Midtbø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nina Sylvia Liland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fôr og ernæring",
+              "en": "Feed and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bente Elisabeth Torstensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Mohammad Madani Ibrahim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Nina Sylvia Liland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lene Secher Myrmel",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Trond Brattelid",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anita Røyneberg Alvheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bente Elisabeth Torstensen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisa Kolden Midtbø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Grete Rosenlund",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Skretting AS"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Liaset",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Sjømat og ernæring",
+              "en": "Seafood and nutrition"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Trond Brattelid",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Mohammad Madani Ibrahim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Nina Sylvia Liland",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bjørn Liaset",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lise Madsen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lene Secher Myrmel",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Trond Brattelid",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Anita Røyneberg Alvheim",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Bente Elisabeth Torstensen",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Ulrike Liisberg Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Lisa Kolden Midtbø",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Havforskningsinstituttet",
+              "en": "Institute of Marine Research"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2013",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:04:55.348500539Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/97E6092D-1A28-4686-82EF-3CC49AAC0197/2013"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:04:55.348500539Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@havforsk",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-84871753987"
+    },
+    {
+      "sourceName": "ISI",
+      "type": "AdditionalIdentifier",
+      "value": "000313320900059"
+    },
+    {
+      "sourceName": "cristin@havforsk",
+      "type": "CristinIdentifier",
+      "value": "1028540"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad3086b4-1801c28b-2803-4e0a-b28f-a814c6816c62",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T10:04:55.348500539Z",
+  "scientificIndex": {
+    "year": "2013",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for biomedisin",
+                "en": "Department of Biomedicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Mohammad Madani Ibrahim",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "countryCode": "DK",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/10100065.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Københavns Universitet",
+        "en": "University of Copenhagen"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/6088.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Skretting AS"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.35.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Sjømat og ernæring",
+            "en": "Seafood and nutrition"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.31.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fôr og ernæring",
+            "en": "Feed and nutrition"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7431.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Mohammad Madani Ibrahim",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/51364",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Nina Sylvia Liland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546306",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bjørn Liaset",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47357",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Lise Madsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49296",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Lene Secher Myrmel",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/532562",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Trond Brattelid",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23463",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Anita Røyneberg Alvheim",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/387421",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bente Elisabeth Torstensen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/387419",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ulrike Liisberg Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/546305",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Lisa Kolden Midtbø",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/532563",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Havforskningsinstituttet",
+        "en": "Institute of Marine Research"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

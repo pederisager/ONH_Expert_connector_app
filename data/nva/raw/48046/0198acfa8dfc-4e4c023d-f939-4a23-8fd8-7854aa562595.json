@@ -1,0 +1,1430 @@
+{
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.20.4.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.6.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/6088.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.20.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.30",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hib@203.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+  },
+  "type": "Publication",
+  "associatedArtifacts": [
+    {
+      "identifier": "b6d572c8-6908-4534-8fae-5da58a96ae37",
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIB",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-18T16:29:57.678448392Z"
+      },
+      "size": "10195",
+      "name": "dublin_core.xml",
+      "mimeType": "application/xml",
+      "type": "HiddenFile"
+    },
+    {
+      "identifier": "013a02f8-df75-4f5f-982a-21064adbb7c8",
+      "license": {
+        "name": "CC-BY",
+        "type": "License",
+        "value": "https://creativecommons.org/licenses/by/4.0",
+        "labels": {
+          "nb": "Creative Commons - Navngivelse",
+          "en": "Creative Commons - Attribution"
+        }
+      },
+      "rightsRetentionStrategy": {
+        "configuredType": "Unknown",
+        "type": "NullRightsRetentionStrategy"
+      },
+      "uploadDetails": {
+        "archive": "UIB",
+        "type": "ImportUploadDetails",
+        "uploadedDate": "2025-08-18T16:29:57.678433402Z"
+      },
+      "size": "3474726",
+      "publisherVersion": "PublishedVersion",
+      "name": "pettersen.pdf",
+      "mimeType": "application/pdf",
+      "publishedDate": "2025-08-18T16:29:57.928029299Z",
+      "type": "OpenFile",
+      "legalNote": "Copyright 2019 The Authors"
+    }
+  ],
+  "fundings": [
+    {
+      "identifier": "272680",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/272680",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "49",
+        "pages": {
+          "end": "110",
+          "type": "Range",
+          "begin": "97"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "4B52E65E-9582-454B-8D48-38F18D5CC9BB",
+        "year": "2019",
+        "name": "Mitochondrion (Amsterdam. Print)",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/4B52E65E-9582-454B-8D48-38F18D5CC9BB/2019",
+        "type": "Journal",
+        "onlineIssn": "1872-8278",
+        "printIssn": "1567-7249",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=4B52E65E-9582-454B-8D48-38F18D5CC9BB"
+      },
+      "doi": "https://doi.org/10.1016/j.mito.2019.07.009"
+    },
+    "contributorsCount": 18,
+    "mainTitle": "Upregulated PDK4 expression is a sensitive marker of increased fatty acid\r\noxidation",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Fatty acid oxidation is a central fueling pathway for mitochondrial ATP production. Regulation occurs through multiple nutrient- and energy-sensitive molecular mechanisms. We explored if upregulated mRNA expression of the mitochondrial enzyme pyruvate dehydrogenase kinase 4 (PDK4) may be used as a surrogate marker of increased mitochondrial fatty acid oxidation, by indicating an overall shift from glucose to fatty acids as the preferred oxidation fuel. The association between fatty acid oxidation and PDK4 expression was studied in different contexts of metabolic adaption. In rats treated with the modified fatty acid tetradecylthioacetic acid (TTA), Pdk4 was upregulated simultaneously with fatty acid oxidation genes in liver and heart, whereas muscle and white adipose tissue remained unaffected. In MDA-MB-231 cells, fatty acid oxidation increased nearly threefold upon peroxisome proliferator-activated receptor α (PPARα, PPARA) overexpression, and four-fold upon TTA-treatment. PDK4 expression was highly increased under these conditions. Further, overexpression of PDK4 caused increased fatty acid oxidation in these cells. Pharmacological activators of PPARα and AMPK had minor effects, while the mTOR inhibitor rapamycin potentiated the effect of TTA. There were minor changes in mitochondrial respiration, glycolytic function, and mitochondrial biogenesis under conditions of increased fatty acid oxidation. TTA was found to act as a mild uncoupler, which is likely to contribute to the metabolic effects. Repeated experiments with HeLa cells supported these findings. In summary, PDK4 upregulation implies an overarching metabolic shift towards increased utilization of fatty acids as energy fuel, and thus constitutes a sensitive marker of enhanced fatty acid oxidation.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ina Katrine Nitschke Pettersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/481497",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Deusdedit Tusubira",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/921116",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hanan Ashrafi",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1152717",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sissel Elisabeth Dyrstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/551064",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lena Hansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/798628",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.6.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for kreftbehandling og medisinsk fysikk",
+              "en": "Dept. of Oncology and Medical Physics"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Xiaozheng Liu",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/882532",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Linn I. Hodneland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46866",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nils Gunnar Løvsletten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/698430",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.30",
+            "type": "Organization",
+            "labels": {
+              "nb": "Seksjon for farmakologi og farmasøytisk",
+              "en": "Pharmacology and Pharmaceutical Biosciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49498",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Skretting AS"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hege Wergedahl",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50784",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for idrett, kosthald og naturfag",
+              "en": "Department of Sport, Food and Natural Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "11",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "12",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øystein Fluge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47702",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.6.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for kreftbehandling og medisinsk fysikk",
+              "en": "Dept. of Oncology and Medical Physics"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "13",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ove Bruland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47026",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.20.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.20.4.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Senter for Medisinsk genetikk og molekylærmedisin",
+              "en": "Dept. of Medical Genetics"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "14",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Arild Rustan",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23706",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.30",
+            "type": "Organization",
+            "labels": {
+              "nb": "Seksjon for farmakologi og farmasøytisk",
+              "en": "Pharmacology and Pharmaceutical Biosciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "15",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nils Halberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/676918",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "16",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gro Vatne Røsland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/45604",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.6.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for kreftbehandling og medisinsk fysikk",
+              "en": "Dept. of Oncology and Medical Physics"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "17",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Hjerteavdelingen",
+              "en": "Dept. of Heart Disease"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk institutt 2",
+              "en": "Department of Clinical Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "18",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Karl Johan Tronstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/45418",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ina Katrine Nitschke Pettersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/481497",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Deusdedit Tusubira",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/921116",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hanan Ashrafi",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1152717",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sissel Elisabeth Dyrstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/551064",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lena Hansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/798628",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.6.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for kreftbehandling og medisinsk fysikk",
+              "en": "Dept. of Oncology and Medical Physics"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Xiaozheng Liu",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/882532",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Linn I. Hodneland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46866",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nils Gunnar Løvsletten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/698430",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.30",
+            "type": "Organization",
+            "labels": {
+              "nb": "Seksjon for farmakologi og farmasøytisk",
+              "en": "Pharmacology and Pharmaceutical Biosciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Kjetil Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49498",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/6088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Skretting AS"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Hege Wergedahl",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50784",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for idrett, kosthald og naturfag",
+              "en": "Department of Sport, Food and Natural Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2019",
+      "type": "PublicationDate"
+    },
+    "tags": [
+      "Fatty acid oxidation",
+      "Biomarker",
+      "Pyruvate dehydrogenase kinase",
+      "Cell metabolism",
+      "Peroxisome proliferator-activated receptor (PPAR)",
+      "Mitochondria",
+      "Metabolic regulation",
+      "Metabolic flexibility"
+    ]
+  },
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/4B52E65E-9582-454B-8D48-38F18D5CC9BB/2019"
+  ],
+  "additionalIdentifiers": [
+    {
+      "sourceName": "brage@bora",
+      "type": "HandleIdentifier",
+      "value": "https://hdl.handle.net/1956/21104"
+    },
+    {
+      "sourceName": "cristin@hib",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85070088110"
+    },
+    {
+      "sourceName": "cristin@hib",
+      "type": "CristinIdentifier",
+      "value": "1713984"
+    }
+  ],
+  "filesStatus": "hasPublicFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acfa8dfc-4e4c023d-f939-4a23-8fd8-7854aa562595",
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.30",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Seksjon for farmakologi og farmasøytisk",
+                    "en": "Pharmacology and Pharmaceutical Biosciences"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Farmasøytisk institutt",
+                "en": "Department of Pharmacy"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det matematisk-naturvitenskapelige fakultet",
+            "en": "Faculty of Mathematics and Natural Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Arild Rustan",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/23706",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Nils Gunnar Løvsletten",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/698430",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.6.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Avdeling for kreftbehandling og medisinsk fysikk",
+            "en": "Dept. of Oncology and Medical Physics"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.9.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Hjerteavdelingen",
+            "en": "Dept. of Heart Disease"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.20.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.20.4.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Senter for Medisinsk genetikk og molekylærmedisin",
+                "en": "Dept. of Medical Genetics"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.20.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Laboratorieklinikken",
+            "en": "Laboratory Medicine and Pathology"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Lena Hansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/798628",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Gro Vatne Røsland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/45604",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Øystein Fluge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47702",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ove Bruland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/47026",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Helse Bergen HF - Haukeland universitetssykehus",
+        "en": "Bergen Hospital Trust - Haukeland University Hospital"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.1.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for idrett, kosthald og naturfag",
+                "en": "Department of Sport, Food and Natural Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for lærarutdanning, kultur og idrett",
+            "en": "Faculty of Education, Arts and Sports"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/203.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Hege Wergedahl",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/50784",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Høgskulen på Vestlandet",
+        "en": "Western Norway University of Applied Sciences"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/6088.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Skretting AS"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.25.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Klinisk institutt 2",
+                "en": "Department of Clinical Science"
+              }
+            },
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for biomedisin",
+                "en": "Department of Biomedicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Gro Vatne Røsland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/45604",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Rolf Kristian Berge",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/49495",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Karl Johan Tronstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/45418",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Xiaozheng Liu",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/882532",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Hanan Ashrafi",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1152717",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ina Katrine Nitschke Pettersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/481497",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Deusdedit Tusubira",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/921116",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Linn I. Hodneland",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46866",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Sissel Elisabeth Dyrstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/551064",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Nils Halberg",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/676918",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Lena Hansen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/798628",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    }
+  ],
+  "identifier": "0198acfa8dfc-4e4c023d-f939-4a23-8fd8-7854aa562595",
+  "handle": "https://hdl.handle.net/11250/2618279",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:04:04.111992663Z",
+  "createdDate": "2025-08-15T09:05:58.268157282Z",
+  "childPublications": [],
+  "modifiedDate": "2025-08-18T16:29:58.144328055Z",
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:05:58.268157282Z",
+  "scientificIndex": {
+    "year": "2019",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "status": "PUBLISHED"
+}

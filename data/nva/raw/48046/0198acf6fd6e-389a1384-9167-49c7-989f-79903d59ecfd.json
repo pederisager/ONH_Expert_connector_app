@@ -1,0 +1,663 @@
+{
+  "identifier": "0198acf6fd6e-389a1384-9167-49c7-989f-79903d59ecfd",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.12.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.12.32.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/68400181.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uib@184.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:31:02.594507419Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "120",
+        "pages": {
+          "end": "969",
+          "type": "Range",
+          "begin": "961"
+        },
+        "issue": "5",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "E1D7621F-321C-4189-BE28-FC7AF032719A",
+        "year": "2007",
+        "name": "International Journal of Cancer",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/E1D7621F-321C-4189-BE28-FC7AF032719A/2007",
+        "type": "Journal",
+        "onlineIssn": "1097-0215",
+        "printIssn": "0020-7136",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=E1D7621F-321C-4189-BE28-FC7AF032719A"
+      },
+      "doi": "https://doi.org/10.1002/ijc.22373"
+    },
+    "contributorsCount": 8,
+    "mainTitle": "RACK1 regulates Ki-Ras-mediated signaling and morphological transformation of NIH 3T3 cells",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.32.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Molekylærbiologisk institutt"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Line Merethe Myklebust",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48093",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.32.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Molekylærbiologisk institutt"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ken Roger Rosendal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1711",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.32.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Molekylærbiologisk institutt"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Frøydis Deinboll Myromslien",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Innlandet",
+              "en": "University of Inland Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "James Lorens",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/53163",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Gary P Nolan",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400181.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Stanford University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ove Bruland",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Helse Bergen HF - Haukeland universitetssykehus",
+              "en": "Bergen Hospital Trust - Haukeland University Hospital"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Lillehaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48780",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.32.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Molekylærbiologisk institutt"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.32.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Molekylærbiologisk institutt"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Line Merethe Myklebust",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48093",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.32.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Molekylærbiologisk institutt"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ken Roger Rosendal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1711",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.32.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Molekylærbiologisk institutt"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Frøydis Deinboll Myromslien",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universitetet i Innlandet",
+              "en": "University of Inland Norway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "James Lorens",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/53163",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for biomedisin",
+              "en": "Department of Biomedicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Gary P Nolan",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "US",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400181.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Stanford University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Ove Bruland",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Helse Bergen HF - Haukeland universitetssykehus",
+              "en": "Bergen Hospital Trust - Haukeland University Hospital"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johan Lillehaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48780",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.32.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Molekylærbiologisk institutt"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2007",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:02:04.654229996Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/E1D7621F-321C-4189-BE28-FC7AF032719A/2007"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:02:04.654229996Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uib",
+      "type": "CristinIdentifier",
+      "value": "372199"
+    },
+    {
+      "sourceName": "cristin@uib",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-33846844887"
+    },
+    {
+      "sourceName": "ISI",
+      "type": "AdditionalIdentifier",
+      "value": "000243892700002"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acf6fd6e-389a1384-9167-49c7-989f-79903d59ecfd",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:02:04.654229996Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "US",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/68400181.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Stanford University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1936.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Helse Bergen HF - Haukeland universitetssykehus",
+        "en": "Bergen Hospital Trust - Haukeland University Hospital"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.32.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Molekylærbiologisk institutt"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.12.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Fakultet for naturvitenskap og teknologi",
+            "en": "Faculty of Science and Technology"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.14.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for biomedisin",
+                "en": "Department of Biomedicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.13.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/184.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ken Roger Rosendal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1711",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Johan Lillehaug",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48780",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Line Merethe Myklebust",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48093",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "James Lorens",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/53163",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Bodil Bjørndal",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/48046",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Bergen",
+        "en": "University of Bergen"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universitetet i Innlandet",
+        "en": "University of Inland Norway"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

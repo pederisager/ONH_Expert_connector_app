@@ -1,0 +1,773 @@
+{
+  "identifier": "0198acf840c0-3624d329-a47d-40f6-9f15-9d7d772199d1",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/72500151.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/48400167.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/48400574.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/48400593.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/48400000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/48400606.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/48400146.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/71501094.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:43:49.057145303Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "13",
+        "pages": {
+          "end": "565",
+          "type": "Range",
+          "begin": "555"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "C1DAC35D-A5E4-4F58-BC42-DB943E14CD75",
+        "year": "2021",
+        "name": "Clinical Epidemiology",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/C1DAC35D-A5E4-4F58-BC42-DB943E14CD75/2021",
+        "type": "Journal",
+        "onlineIssn": "1179-1349",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=C1DAC35D-A5E4-4F58-BC42-DB943E14CD75"
+      },
+      "doi": "https://doi.org/10.2147/CLEP.S308220"
+    },
+    "contributorsCount": 10,
+    "mainTitle": "Psychological Distress and All-Cause, Cardiovascular Disease, Cancer Mortality Among Adults with and without Diabetes",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Wentao Huang",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400167.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Guangdong College of Pharmacy and Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Endokrinologi, sykelig overvekt og foreb. Med., avd. for",
+              "en": "Department of Endocrinology, Morbid Obesity and Preventive Medicine"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Dagfinn Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Gerson Ferrari",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/72500151.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidad de Santiago de Chile",
+              "en": "University of Santiago de Chile"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Lei Zhang",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400146.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fudan University Shanghai"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Yutao Lan",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400167.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Guangdong College of Pharmacy and Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Jing Nie",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400606.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Xi'an Jiaotong University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Xiong Chen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400574.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Wenzhou Medical University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Dali Xu",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kina",
+              "en": "China"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Yafeng Wang",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400593.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Wuhan University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Leandro F.M. Rezende",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BR",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/71501094.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidade Federal de São Paulo",
+              "en": "Federal University of São Paulo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Wentao Huang",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400167.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Guangdong College of Pharmacy and Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Imperial College London"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Endokrinologi, sykelig overvekt og foreb. Med., avd. for",
+              "en": "Department of Endocrinology, Morbid Obesity and Preventive Medicine"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Dagfinn Aune",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Gerson Ferrari",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CL",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/72500151.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidad de Santiago de Chile",
+              "en": "University of Santiago de Chile"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Lei Zhang",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400146.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Fudan University Shanghai"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Yutao Lan",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400167.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Guangdong College of Pharmacy and Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Jing Nie",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400606.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Xi'an Jiaotong University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Xiong Chen",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400574.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Wenzhou Medical University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Dali Xu",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kina",
+              "en": "China"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Yafeng Wang",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "CN",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400593.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Wuhan University"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "10",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Leandro F.M. Rezende",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "BR",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/71501094.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Universidade Federal de São Paulo",
+              "en": "Federal University of São Paulo"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2021",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:03:27.424855307Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/C1DAC35D-A5E4-4F58-BC42-DB943E14CD75/2021"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:03:27.424855307Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85111070871"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "1924284"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198acf840c0-3624d329-a47d-40f6-9f15-9d7d772199d1",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:03:27.424855307Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900031.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Imperial College London"
+      }
+    },
+    {
+      "countryCode": "CN",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400574.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Wenzhou Medical University"
+      }
+    },
+    {
+      "countryCode": "CN",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400593.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Wuhan University"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "CN",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Kina",
+        "en": "China"
+      }
+    },
+    {
+      "countryCode": "CN",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400146.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Fudan University Shanghai"
+      }
+    },
+    {
+      "countryCode": "CN",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400606.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Xi'an Jiaotong University"
+      }
+    },
+    {
+      "countryCode": "CN",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/48400167.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Guangdong College of Pharmacy and Medicine"
+      }
+    },
+    {
+      "countryCode": "CL",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/72500151.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universidad de Santiago de Chile",
+        "en": "University of Santiago de Chile"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.70.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Endokrinologi, sykelig overvekt og foreb. Med., avd. for",
+                "en": "Department of Endocrinology, Morbid Obesity and Preventive Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.2.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Medisinsk klinikk",
+            "en": "Division of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Dagfinn Aune",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/389651",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    },
+    {
+      "countryCode": "BR",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/71501094.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Universidade Federal de São Paulo",
+        "en": "Federal University of São Paulo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

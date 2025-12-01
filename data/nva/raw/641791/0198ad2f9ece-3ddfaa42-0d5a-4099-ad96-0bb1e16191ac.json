@@ -1,0 +1,287 @@
+{
+  "identifier": "0198ad2f9ece-3ddfaa42-0d5a-4099-ad96-0bb1e16191ac",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.33.13.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.33.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:38:08.691209333Z",
+  "fundings": [
+    {
+      "identifier": "259017",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/259017",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "end": "4",
+          "type": "Range",
+          "begin": "1"
+        },
+        "type": "JournalReview"
+      },
+      "publicationContext": {
+        "identifier": "652365F8-6589-4026-8AE6-9F207FA852C3",
+        "year": "2017",
+        "name": "Contemporary Political Theory",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/652365F8-6589-4026-8AE6-9F207FA852C3/2017",
+        "type": "Journal",
+        "onlineIssn": "1476-9336",
+        "printIssn": "1470-8914",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=652365F8-6589-4026-8AE6-9F207FA852C3"
+      },
+      "doi": "https://doi.org/10.1057/s41296-017-0094-2"
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Solidarity across divides: Promoting the moral point of view: George Vasilev (ed) Edinburgh University Press, Edinburgh, 2015, 241pp., ISBN: 978 0 7486 9730 4",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nadim Khoury",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nadim Khoury",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.33.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.33.13.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for filosofi og førstesemesterstudier",
+              "en": "Department of Philosophy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nadim Khoury",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Nadim Khoury",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.33.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.33.13.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for filosofi og førstesemesterstudier",
+              "en": "Department of Philosophy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2017",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T10:03:55.982706955Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/652365F8-6589-4026-8AE6-9F207FA852C3/2017"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T10:03:55.982706955Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "1489861"
+    },
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85016190539"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad2f9ece-3ddfaa42-0d5a-4099-ad96-0bb1e16191ac",
+  "pendingOpenFileCount": "0",
+  "publicationNotes": [
+    {
+      "note": "\"Review\"./tøf",
+      "type": "PublicationNote"
+    }
+  ],
+  "publishedDate": "2025-08-15T10:03:55.982706955Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.33.0.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.33.13.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Institutt for filosofi og førstesemesterstudier",
+                    "en": "Department of Philosophy"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.33.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Fakultet for humaniora, samfunnsvitenskap og lærerutdanning",
+                "en": "Faculty of Humanities, Social Sciences and Education"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.10.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Universitetet i Tromsø - Norges arktiske universitet"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/186.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nadim Khoury",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Tromsø - Norges arktiske universitet",
+        "en": "UiT The Arctic University of Norway"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nadim Khoury",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

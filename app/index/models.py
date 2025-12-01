@@ -8,14 +8,14 @@ from typing import Any, Mapping
 
 
 @dataclass(slots=True)
-class CristinResultSnippet:
-    """Lightweight representation of a Cristin/NVA research result."""
+class NvaPublicationSnippet:
+    """Lightweight representation of an NVA publication."""
 
-    cristin_result_id: str
+    publication_id: str
     title: str | None = None
-    summary: str | None = None
+    abstract: str | None = None
     venue: str | None = None
-    category_name: str | None = None
+    category: str | None = None
     year: str | None = None
     tags: list[str] = field(default_factory=list)
     source_url: str | None = None
@@ -29,14 +29,14 @@ class CristinResultSnippet:
             details.append(self.year)
         if self.venue:
             details.append(self.venue)
-        if self.category_name and self.category_name not in details:
-            details.append(self.category_name)
+        if self.category and self.category not in details:
+            details.append(self.category)
         if details:
             parts.append(f"({', '.join(details)})")
-        if self.summary:
-            parts.append(self.summary.strip())
+        if self.abstract:
+            parts.append(self.abstract.strip())
         if self.tags:
-            parts.append(f"Nøkkelord: {', '.join(self.tags)}.")
+            parts.append(f"Nokkelord: {', '.join(self.tags)}.")
         return " ".join(part for part in parts if part).strip()
 
 
@@ -60,7 +60,7 @@ class StaffRecord:
     summary: str
     sources: list[SourceLink] = field(default_factory=list)
     tags: list[str] = field(default_factory=list)
-    cristin_results: list[CristinResultSnippet] = field(default_factory=list)
+    nva_publications: list[NvaPublicationSnippet] = field(default_factory=list)
 
     def primary_source(self) -> SourceLink | None:
         return self.sources[0] if self.sources else None

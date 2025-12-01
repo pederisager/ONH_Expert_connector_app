@@ -1,0 +1,780 @@
+{
+  "identifier": "0198ad1f2d3d-94c0ab6f-6f93-4f91-a67e-b31c77a7b0ef",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "handle": "https://hdl.handle.net/10852/90738",
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T18:10:17.085550827Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "83",
+        "pages": {
+          "end": "1663",
+          "type": "Range",
+          "begin": "1651"
+        },
+        "issue": "4",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "74DCE078-C59F-48E4-B500-29D65B33C91A",
+        "year": "2021",
+        "name": "Journal of Alzheimer's Disease",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/74DCE078-C59F-48E4-B500-29D65B33C91A/2021",
+        "type": "Journal",
+        "onlineIssn": "1875-8908",
+        "printIssn": "1387-2877",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=74DCE078-C59F-48E4-B500-29D65B33C91A"
+      },
+      "doi": "https://doi.org/10.3233/JAD-210571"
+    },
+    "contributorsCount": 9,
+    "mainTitle": "Cerebral Amyloid Angiopathy in a Mouse Model of Alzheimer’s Disease Associates with Upregulated Angiopoietin and Downregulated Hypoxia-Inducible Factor",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gry-Helen Enger Syverstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/437432",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christoffer Melbye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1360999",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Maja  Puchades",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/316269",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siu Yi Doreen Leung",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1379",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14681",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Farmasøytisk institutt",
+              "en": "Department of Pharmacy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rao Shreyas",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/566463",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Petter Ottersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22988",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Trygve B. Leergaard",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22241",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Reidun Torp",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/13974",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Gry-Helen Enger Syverstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/437432",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Christoffer Melbye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1360999",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Maja  Puchades",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/316269",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Siu Yi Doreen Leung",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1379",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14681",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Farmasøytisk institutt",
+              "en": "Department of Pharmacy"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Rao Shreyas",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/566463",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Petter Ottersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22988",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Trygve B. Leergaard",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22241",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Reidun Torp",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/13974",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Avdeling for molekylærmedisin",
+              "en": "Department of Molecular Medicine"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2021",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:45:58.333331930Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/74DCE078-C59F-48E4-B500-29D65B33C91A/2021"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:45:58.333331930Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "1947049"
+    },
+    {
+      "sourceName": "cristin@uio",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-85117293516"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad1f2d3d-94c0ab6f-6f93-4f91-a67e-b31c77a7b0ef",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:45:58.333331930Z",
+  "scientificIndex": {
+    "year": "2021",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.23.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Farmasøytisk institutt",
+                "en": "Department of Pharmacy"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.15.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det matematisk-naturvitenskapelige fakultet",
+            "en": "Faculty of Mathematics and Natural Sciences"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.12.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Avdeling for molekylærmedisin",
+                    "en": "Department of Molecular Medicine"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.51.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for medisinske basalfag",
+                "en": "Institute of Basic Medical Sciences"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Siu Yi Doreen Leung",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1379",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Christoffer Melbye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1360999",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Trygve B. Leergaard",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22241",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Reidun Torp",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/13974",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Gry-Helen Enger Syverstad",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/437432",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Maja  Puchades",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/316269",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Øyvind Jacobsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/14681",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Rao Shreyas",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/566463",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ole Petter Ottersen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/22988",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

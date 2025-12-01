@@ -1,0 +1,1205 @@
+{
+  "identifier": "0198ad0f0de0-368ac007-b522-4221-899d-3a6c67183d13",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.8",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.20",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.70",
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900221.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.11",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.88.0.1",
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "uio@185.90.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T14:56:46.368398624Z",
+  "fundings": [
+    {
+      "identifier": "314843",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/314843",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "288083",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/288083",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "23",
+        "pages": {
+          "type": "Range"
+        },
+        "issue": "1",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "88442549-4720-465D-A074-2EB537C5864A",
+        "year": "2025",
+        "name": "BMC Medicine",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/88442549-4720-465D-A074-2EB537C5864A/2025",
+        "type": "Journal",
+        "onlineIssn": "1741-7015",
+        "scientificValue": "LevelTwo",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=88442549-4720-465D-A074-2EB537C5864A"
+      },
+      "doi": "https://doi.org/10.1186/s12916-025-03953-y"
+    },
+    "contributorsCount": 9,
+    "mainTitle": "Modifiable risk factors of vaccine hesitancy: insights from a mixed methods multiple population study combining machine learning and thematic analysis during the COVID-19 pandemic",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Background\r\nVaccine hesitancy, the delay in acceptance or reluctance to vaccinate, ranks among the top threats to global health. Identifying modifiable factors contributing to vaccine hesitancy is crucial for developing targeted interventions to increase vaccination uptake.\r\n\r\nMethods\r\nThis mixed-methods multiple population study utilized gradient boosting machines and thematic analysis to identify modifiable predictors of vaccine hesitancy during the COVID-19 pandemic. Predictors of vaccine hesitancy were investigated in 2926 Norwegian adults (Mage = 37.91, 79.69% female), before the predictive utility of these variables was investigated in an independent sample of 734 adults in the UK (Mage = 40.34, 57.08% female). Two independent teams of authors conducted the machine learning and thematic analyses, blind to each other’s analytic procedures and results.\r\n\r\nResults\r\nThe machine learning model performed well in discerning vaccine hesitant (n = 248, 8.48% and n = 109, 14.85%, Norway and UK, respectively) from vaccine uptaking individuals (n = 2678, 91.52% and n = 625, 85.15%), achieving an AUC of 0.94 (AUPRC: 0.72; balanced accuracy: 86%; sensitivity = 0.81; specificity = 0.98) in the Norwegian sample, and an AUC of 0.98 (AUPRC: 0.89; balanced accuracy: 89%; sensitivity = 0.83; specificity = 0.97) in the out-of-sample replication in the UK. The mixed methods investigation identified five categories of modifiable risk tied to vaccine hesitancy, including illusion of invulnerability, doubts about vaccine efficacy, mistrust in official entities, minimization of the societal impact of COVID-19, and health-related fears tied to vaccination. The portrayal of rare incidents across alternative media platforms as fear amplifiers, and the mainstream media’s stigmatizing presentation of unvaccinated individuals, were provided as additional motives underlying vaccine reluctance and polarization. The thematic analysis further revealed information overload, fear of needles, previous negative vaccination experiences, fear of not getting healthcare follow-up after vaccination if needed, and vaccine aversion due to underlying (psychiatric) illness (e.g., eating disorders) as motives underlying vaccine hesitance.\r\n\r\nConclusions\r\nThe identified influential predictors were consistent across two European samples, highlighting their generalizability across European populations. These predictors offer insights about modifiable factors that could be adapted by public health campaigns in mitigating misconceptions and fears related to vaccination toward increasing vaccine uptake. Moreover, the results highlight the media’s responsibility, as mediators of the public perception of vaccines, to minimize polarization and provide accurate portrayals of rare vaccine-related incidents, reducing the risk aggravating fear and reactance to vaccination.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Omid Vakili Ebrahimi",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1162259",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "PROMENTA",
+              "en": "PROMENTA"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ella Marie Sandbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ella Marie Sandbakken",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+            "type": "Organization",
+            "labels": {
+              "nb": "Metode, arbeids-, kultur- og sosialpsyk",
+              "en": "Metode, arbeids-, kultur- og sosialpsyk"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Marie Moss",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/143",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+            "type": "Organization",
+            "labels": {
+              "nb": "Metode, arbeids-, kultur- og sosialpsyk",
+              "en": "Metode, arbeids-, kultur- og sosialpsyk"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sverre Urnes Johnson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sverre Urnes Johnson",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Asle Hoffart",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/20634",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Modum Bad",
+              "en": "Modum Mental Health Centre"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.88.0.1",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk psykologi",
+              "en": "Klinisk psykologi"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Asle Hoffart",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/20634",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sverre Urnes Johnson",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Asle Hoffart",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/20634",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Modum Bad",
+              "en": "Modum Mental Health Centre"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.8"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.11"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.88.0.1"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Sarah Bauermeister",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900221.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Oxford"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Andre Solbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11762",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.88.0.1",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk psykologi",
+              "en": "Klinisk psykologi"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lars Tjelta Westlye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18517",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykoseforskning, seksjon (NORMENT/KG Jebsen OUS)",
+              "en": "Psychosis Research Unit (NORMENT/KG Jebsens OUS)"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Det samfunnsvitenskapelige fakultet",
+              "en": "Faculty of Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Esten Høyland Leonardsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/500357",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.8",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kognitiv- og nevropsykologi",
+              "en": "Kognitiv- og nevropsykologi"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.70",
+            "type": "Organization",
+            "labels": {
+              "nb": "Senter for presisjonspsykiatri",
+              "en": "Centre for Precision Psychiatry"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Omid Vakili Ebrahimi",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1162259",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.11",
+            "type": "Organization",
+            "labels": {
+              "nb": "PROMENTA",
+              "en": "PROMENTA"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ella Marie Sandbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Ella Marie Sandbakken",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+            "type": "Organization",
+            "labels": {
+              "nb": "Metode, arbeids-, kultur- og sosialpsyk",
+              "en": "Metode, arbeids-, kultur- og sosialpsyk"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Marie Moss",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/143",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+            "type": "Organization",
+            "labels": {
+              "nb": "Metode, arbeids-, kultur- og sosialpsyk",
+              "en": "Metode, arbeids-, kultur- og sosialpsyk"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Sverre Urnes Johnson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sverre Urnes Johnson",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Asle Hoffart",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/20634",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Modum Bad",
+              "en": "Modum Mental Health Centre"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.88.0.1",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk psykologi",
+              "en": "Klinisk psykologi"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Asle Hoffart",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/20634",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Sverre Urnes Johnson",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Asle Hoffart",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/20634",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Modum Bad",
+              "en": "Modum Mental Health Centre"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.8"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.11"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.88.0.1"
+              },
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Sarah Bauermeister",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900221.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Oxford"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Ole Andre Solbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11762",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.88.0.1",
+            "type": "Organization",
+            "labels": {
+              "nb": "Klinisk psykologi",
+              "en": "Klinisk psykologi"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Lars Tjelta Westlye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18517",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.20",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykoseforskning, seksjon (NORMENT/KG Jebsen OUS)",
+              "en": "Psychosis Research Unit (NORMENT/KG Jebsens OUS)"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+              }
+            ],
+            "hasPart": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Det samfunnsvitenskapelige fakultet",
+              "en": "Faculty of Social Sciences"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Esten Høyland Leonardsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/500357",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.8",
+            "type": "Organization",
+            "labels": {
+              "nb": "Kognitiv- og nevropsykologi",
+              "en": "Kognitiv- og nevropsykologi"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.70",
+            "type": "Organization",
+            "labels": {
+              "nb": "Senter for presisjonspsykiatri",
+              "en": "Centre for Precision Psychiatry"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2025",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:28:21.728450090Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/88442549-4720-465D-A074-2EB537C5864A/2025"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:28:21.728450090Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@uio",
+      "type": "CristinIdentifier",
+      "value": "2367449"
+    },
+    {
+      "sourceName": "cristin@uio",
+      "type": "ScopusIdentifier",
+      "value": "2-s2.0-105000040979"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0f0de0-368ac007-b522-4221-899d-3a6c67183d13",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:28:21.728450090Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/7602.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Sverre Urnes Johnson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Asle Hoffart",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/20634",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Modum Bad",
+        "en": "Modum Mental Health Centre"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.8",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Kognitiv- og nevropsykologi",
+                    "en": "Kognitiv- og nevropsykologi"
+                  }
+                },
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.11",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "PROMENTA",
+                    "en": "PROMENTA"
+                  }
+                },
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.88.0.1",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Klinisk psykologi",
+                    "en": "Klinisk psykologi"
+                  }
+                },
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.6",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Metode, arbeids-, kultur- og sosialpsyk",
+                    "en": "Metode, arbeids-, kultur- og sosialpsyk"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykologisk institutt",
+                "en": "Department of Psychology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        },
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0"
+                    }
+                  ],
+                  "hasPart": [
+                    {
+                      "partOf": [
+                        {
+                          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0"
+                        }
+                      ],
+                      "countryCode": "NO",
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.70",
+                      "type": "Organization",
+                      "labels": {
+                        "nb": "Senter for presisjonspsykiatri",
+                        "en": "Centre for Precision Psychiatry"
+                      }
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.10.0",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Klinikk psykisk helse og avhengighet",
+                    "en": "Division of Mental Health and Addiction"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.53.0.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for klinisk medisin",
+                "en": "Institute of Clinical Medicine"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.50.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det medisinske fakultet",
+            "en": "Faculty of Medicine"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ella Marie Sandbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Lars Tjelta Westlye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18517",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Omid Vakili Ebrahimi",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1162259",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Ole Andre Solbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/11762",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Sverre Urnes Johnson",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/474369",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Asle Hoffart",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/20634",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Esten Høyland Leonardsen",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/500357",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Sigrun Marie Moss",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/143",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900221.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of Oxford"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Ella Marie Sandbakken",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1281580",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0"
+                }
+              ],
+              "hasPart": [
+                {
+                  "partOf": [
+                    {
+                      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.0"
+                    }
+                  ],
+                  "countryCode": "NO",
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.20",
+                  "type": "Organization",
+                  "labels": {
+                    "nb": "Psykoseforskning, seksjon (NORMENT/KG Jebsen OUS)",
+                    "en": "Psychosis Research Unit (NORMENT/KG Jebsens OUS)"
+                  }
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.10.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Forsknings- og innovasjonsavd, Psykisk helse og avhengighet",
+                "en": "Dept of Research and Innovation, Mental Health and Addiction"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.1.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Klinikk psykisk helse og avhengighet",
+            "en": "Division of Mental Health and Addiction "
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/2012.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Lars Tjelta Westlye",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/18517",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo universitetssykehus HF",
+        "en": "Oslo University Hospital"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

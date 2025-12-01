@@ -1,0 +1,246 @@
+{
+  "identifier": "0198ad18f33c-1d9cdb50-f7e4-4c10-8fb3-4709ff7f79db",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/209.6.8.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/209.6.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/2552750",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "hihm@209.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T17:43:24.312183682Z",
+  "fundings": [
+    {
+      "identifier": "303344",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/303344",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "303344",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Norges forskningsråd",
+        "en": "Research Council of Norway (RCN)"
+      }
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "illustrated": "false",
+          "pages": "12",
+          "type": "MonographPages"
+        },
+        "type": "ReportResearch"
+      },
+      "publicationContext": {
+        "isbnList": [
+          "9788234303692"
+        ],
+        "series": {
+          "identifier": "09F5D3C8-FDD0-4F0A-8B96-0B3671EA0778",
+          "year": "2022",
+          "name": "FAIR Case Brief",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/09F5D3C8-FDD0-4F0A-8B96-0B3671EA0778/2022",
+          "type": "Series",
+          "scientificValue": "Unassigned",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/nvakanal?pid=09F5D3C8-FDD0-4F0A-8B96-0B3671EA0778"
+        },
+        "publisher": {
+          "valid": "true",
+          "identifier": "BF27014A-53F7-459D-911B-1DF3CC5B9D2A",
+          "year": "2022",
+          "name": "Peace Research Institute Oslo (PRIO)",
+          "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/BF27014A-53F7-459D-911B-1DF3CC5B9D2A/2022",
+          "type": "Publisher",
+          "scientificValue": "Unassigned",
+          "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/nvakanal?pid=BF27014A-53F7-459D-911B-1DF3CC5B9D2A"
+        },
+        "type": "Report",
+        "seriesNumber": "7"
+      }
+    },
+    "contributorsCount": 1,
+    "mainTitle": "Memory and Forgetting at the Negotiating Table: The Case of the Israeli–Palestinian Peace Process (1993–2001)",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "This case brief examines how the Israeli–Palestinian peace process dealt with radical disagreements over collective memory. It identifies three positions taken towards this specific issue: prescriptive forgetting that avoids the past altogether, strategic forgetting that postpones dealing with it, and transitional justice that recommends addressing it head-on. The first two approaches fit within the framework of the Oslo accords that was characterized by its pragmatic and gradualist approach to negotiations. Transitional justice, on the other hand, was absent from the peace process and was typically endorsed by its critics who insisted on the need to deal with the past. This case brief looks at how these different approaches played out during the peace process, focusing mostly on the period stretching from 1993 to 2001. It concludes by discussing some implications for the ethics of peace negotiations.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nadim Khoury",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.8.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for rettsvitenskap, filosofi og internasjonale studier",
+              "en": "Department of Law, Philosophy and International studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Nadim Khoury",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.8.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Institutt for rettsvitenskap, filosofi og internasjonale studier",
+              "en": "Department of Law, Philosophy and International studies"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2022",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:39:10.268951651Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/publisher/BF27014A-53F7-459D-911B-1DF3CC5B9D2A/2022",
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/09F5D3C8-FDD0-4F0A-8B96-0B3671EA0778/2022"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:39:10.268951651Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@hihm",
+      "type": "CristinIdentifier",
+      "value": "2075004"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad18f33c-1d9cdb50-f7e4-4c10-8fb3-4709ff7f79db",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:39:10.268951651Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.8.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Institutt for rettsvitenskap, filosofi og internasjonale studier",
+                "en": "Department of Law, Philosophy and International studies"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.6.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Handelshøgskolen Innlandet - Fakultet for økonomi og samfunnsvitenskap",
+            "en": "Inland School of Business and Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/209.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Nadim Khoury",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/641791",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Innlandet",
+        "en": "University of Inland Norway"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

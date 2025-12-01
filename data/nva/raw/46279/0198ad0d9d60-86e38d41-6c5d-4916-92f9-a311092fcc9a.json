@@ -1,0 +1,698 @@
+{
+  "identifier": "0198ad0d9d60-86e38d41-6c5d-4916-92f9-a311092fcc9a",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  ],
+  "projects": [
+    {
+      "id": "https://api.test.nva.aws.unit.no/cristin/project/2044429",
+      "type": "ResearchProject"
+    }
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "phs@233.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T16:55:20.855040961Z",
+  "fundings": [
+    {
+      "identifier": "301762",
+      "id": "https://api.test.nva.aws.unit.no/verified-funding/nfr/301762",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "ConfirmedFunding"
+    },
+    {
+      "identifier": "301762",
+      "source": {
+        "identifier": "NFR",
+        "id": "https://api.test.nva.aws.unit.no/cristin/funding-sources/NFR",
+        "type": "FundingSource",
+        "labels": {
+          "nb": "Norges forskningsråd",
+          "en": "Research Council of Norway (RCN)"
+        }
+      },
+      "type": "UnconfirmedFunding",
+      "labels": {
+        "nb": "Norges forskningsråd",
+        "en": "Research Council of Norway (RCN)"
+      }
+    }
+  ],
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "volume": "13",
+        "pages": {
+          "end": "17",
+          "type": "Range",
+          "begin": "5"
+        },
+        "issue": "1",
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "C23E0B41-E702-4F10-92BB-0EA5E7721643",
+        "year": "2025",
+        "name": "Nordic Journal of Science and Technology Studies",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/C23E0B41-E702-4F10-92BB-0EA5E7721643/2025",
+        "type": "Journal",
+        "printIssn": "1894-4647",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=C23E0B41-E702-4F10-92BB-0EA5E7721643"
+      },
+      "doi": "https://doi.org/10.5324/njsts.v13i1.5877"
+    },
+    "contributorsCount": 4,
+    "mainTitle": "A Matter of Facts: Mapping Materialisations of Digitally Mediated Knowledge in the Police",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "abstract": "Digitalisation and the use of technology are at the core of knowledge production in policing. This paper presents various ways in which perspectives from the diverse field of science and technology studies (STS) can provide new insights into studies of policing. In detail, we suggest ways in which STS, with its broad and open perspectives, can be employed to investigate how different practices involving human–technology interaction within policing act as authorisation processes that turn uncertain information into facts. Through theoretical and empirical examples, we exemplify how STS perspectives can be used to address knowledge construction in three areas of police: operative practices, online presence, and criminal investigations. These examples demonstrate that perspectives from STS are relevant to many areas of policing as digitalisation and the production of digital information affect and change policing, not only at the micro-level but also as a whole. By doing this, we hope to present the field  of STS with an organisation that is less commonly associated with it and police researchers with new perspectives on the interplay between technology and knowledge in policing.",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Guro Flinterud",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6739",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Jenny Maria Lundgaard",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405555",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Guro Flinterud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/6739",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Johanne Yttri Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/37101",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jenny Maria Lundgaard",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405555",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Jenny Maria Lundgaard",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405555",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Guro Flinterud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/6739",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Johanne Yttri Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/37101",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Jenny Maria Lundgaard",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405555",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Guro Flinterud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/6739",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Johanne Yttri Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/37101",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johanne Yttri Dahl",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/37101",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Jenny Maria Lundgaard",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405555",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Guro Flinterud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/6739",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Johanne Yttri Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/37101",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Guro Flinterud",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6739",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Jenny Maria Lundgaard",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405555",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Guro Flinterud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/6739",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Johanne Yttri Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/37101",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Jenny Maria Lundgaard",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405555",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Jenny Maria Lundgaard",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405555",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Guro Flinterud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/6739",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Johanne Yttri Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/37101",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Jenny Maria Lundgaard",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405555",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Guro Flinterud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/6739",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Johanne Yttri Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/37101",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          },
+          {
+            "partOf": [
+              {
+                "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+              }
+            ],
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Psykologisk institutt",
+              "en": "Department of Psychology"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Johanne Yttri Dahl",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/37101",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Jenny Maria Lundgaard",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/405555",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Guro Flinterud",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/6739",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Johanne Yttri Dahl",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/37101",
+                "type": "Identity"
+              },
+              {
+                "verificationStatus": "Verified",
+                "name": "Brita Bjørkelo",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Politihøgskolen",
+              "en": "Norwegian Police University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2025",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:26:47.392081392Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/C23E0B41-E702-4F10-92BB-0EA5E7721643/2025"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:26:47.392081392Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@phs",
+      "type": "CristinIdentifier",
+      "value": "2363017"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad0d9d60-86e38d41-6c5d-4916-92f9-a311092fcc9a",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:26:47.392081392Z",
+  "scientificIndex": {},
+  "topLevelOrganizations": [
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/233.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Jenny Maria Lundgaard",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/405555",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Guro Flinterud",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/6739",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Johanne Yttri Dahl",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/37101",
+          "type": "Identity"
+        },
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Politihøgskolen",
+        "en": "Norwegian Police University College"
+      }
+    },
+    {
+      "hasPart": [
+        {
+          "partOf": [
+            {
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0"
+            }
+          ],
+          "hasPart": [
+            {
+              "partOf": [
+                {
+                  "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0"
+                }
+              ],
+              "countryCode": "NO",
+              "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.5.0",
+              "type": "Organization",
+              "labels": {
+                "nb": "Psykologisk institutt",
+                "en": "Department of Psychology"
+              }
+            }
+          ],
+          "countryCode": "NO",
+          "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.17.0.0",
+          "type": "Organization",
+          "labels": {
+            "nb": "Det samfunnsvitenskapelige fakultet",
+            "en": "Faculty of Social Sciences"
+          }
+        }
+      ],
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/185.90.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Brita Bjørkelo",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/46279",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Universitetet i Oslo",
+        "en": "University of Oslo"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}

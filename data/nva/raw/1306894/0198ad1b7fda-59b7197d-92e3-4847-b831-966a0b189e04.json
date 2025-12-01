@@ -1,0 +1,629 @@
+{
+  "identifier": "0198ad1b7fda-59b7197d-92e3-4847-b831-966a0b189e04",
+  "contributorOrganizations": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12100040.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12100000.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12100041.0.0.0",
+    "https://api.test.nva.aws.unit.no/cristin/organization/12120019.0.0.0"
+  ],
+  "modelVersion": "0.23.3",
+  "resourceOwner": {
+    "owner": "bjorknes@1620.0.0.0",
+    "ownerAffiliation": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  },
+  "type": "Publication",
+  "@context": "https://api.test.nva.aws.unit.no/publication/context",
+  "indexDocumentCreatedAt": "2025-11-19T15:47:00.104412430Z",
+  "curatingInstitutions": [
+    "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0"
+  ],
+  "entityDescription": {
+    "reference": {
+      "type": "Reference",
+      "publicationInstance": {
+        "pages": {
+          "type": "Range"
+        },
+        "type": "AcademicArticle"
+      },
+      "publicationContext": {
+        "identifier": "E330792F-1359-4913-BCB4-73057761A849",
+        "year": "2023",
+        "name": "International Journal of Healthcare Management",
+        "id": "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/E330792F-1359-4913-BCB4-73057761A849/2023",
+        "type": "Journal",
+        "onlineIssn": "2047-9719",
+        "printIssn": "2047-9700",
+        "scientificValue": "LevelOne",
+        "sameAs": "https://kanalregister.hkdir.no/publiseringskanaler/info/tidsskrift?pid=E330792F-1359-4913-BCB4-73057761A849"
+      },
+      "doi": "https://doi.org/10.1080/20479700.2023.2188717"
+    },
+    "contributorsCount": 9,
+    "mainTitle": "Using a stakeholder co-design approach to develop interventions for quality improvement based on patient complaints",
+    "alternativeAbstracts": {},
+    "language": "http://lexvo.org/id/iso639-3/eng",
+    "contributors": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Emily O'Dowd",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12120019.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Galway",
+              "en": "University of Galway"
+            }
+          },
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100040.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Royal College of Surgeons in Ireland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Sinéad Lydon",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12120019.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Galway",
+              "en": "University of Galway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Chris Rudland",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Irland",
+              "en": "Ireland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Alex Gillespie",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Elaine Ahern",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Irland",
+              "en": "Ireland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Marie E. Ward",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100041.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "The University of Dublin, Trinity College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Maria Kane",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Irland",
+              "en": "Ireland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tom Reader",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Paul O'Connor",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12120019.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Galway",
+              "en": "University of Galway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "contributorsPreview": [
+      {
+        "sequence": "1",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Emily O'Dowd",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12120019.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Galway",
+              "en": "University of Galway"
+            }
+          },
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100040.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Royal College of Surgeons in Ireland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "2",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Sinéad Lydon",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12120019.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Galway",
+              "en": "University of Galway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "3",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Chris Rudland",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Irland",
+              "en": "Ireland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "4",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          },
+          {
+            "countryCode": "NO",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+            "type": "Organization",
+            "contributorCristinIds": [
+              {
+                "verificationStatus": "Verified",
+                "name": "Alex Gillespie",
+                "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+                "type": "Identity"
+              }
+            ],
+            "labels": {
+              "nb": "Oslo Nye Høyskole",
+              "en": "Oslo New University College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "5",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Elaine Ahern",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Irland",
+              "en": "Ireland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "6",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Marie E. Ward",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100041.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "The University of Dublin, Trinity College"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "7",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Maria Kane",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100000.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "Irland",
+              "en": "Ireland"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "8",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Tom Reader",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "GB",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "London School of Economics and Political Science",
+              "en": "London School of Economics and Political Science"
+            }
+          }
+        ],
+        "type": "Contributor"
+      },
+      {
+        "sequence": "9",
+        "role": {
+          "type": "Creator"
+        },
+        "identity": {
+          "verificationStatus": "NotVerified",
+          "name": "Paul O'Connor",
+          "type": "Identity"
+        },
+        "correspondingAuthor": "false",
+        "affiliations": [
+          {
+            "countryCode": "IE",
+            "id": "https://api.test.nva.aws.unit.no/cristin/organization/12120019.0.0.0",
+            "type": "Organization",
+            "labels": {
+              "nb": "University of Galway",
+              "en": "University of Galway"
+            }
+          }
+        ],
+        "type": "Contributor"
+      }
+    ],
+    "type": "EntityDescription",
+    "publicationDate": {
+      "year": "2023",
+      "type": "PublicationDate"
+    }
+  },
+  "createdDate": "2025-08-15T09:41:57.338274098Z",
+  "publicationContextUris": [
+    "https://api.test.nva.aws.unit.no/publication-channels-v2/serial-publication/E330792F-1359-4913-BCB4-73057761A849/2023"
+  ],
+  "childPublications": [],
+  "modifiedDate": "2025-08-15T09:41:57.338274098Z",
+  "additionalIdentifiers": [
+    {
+      "sourceName": "cristin@bjorknes",
+      "type": "CristinIdentifier",
+      "value": "2252636"
+    }
+  ],
+  "publisher": {
+    "id": "https://api.test.nva.aws.unit.no/customer/0baf8fcb-b18d-4c09-88bb-956b4f659103",
+    "type": "Organization"
+  },
+  "filesStatus": "noFiles",
+  "id": "https://api.test.nva.aws.unit.no/publication/0198ad1b7fda-59b7197d-92e3-4847-b831-966a0b189e04",
+  "pendingOpenFileCount": "0",
+  "publishedDate": "2025-08-15T09:41:57.338274098Z",
+  "scientificIndex": {
+    "year": "2023",
+    "type": "ScientificIndex",
+    "status": "Reported"
+  },
+  "topLevelOrganizations": [
+    {
+      "countryCode": "IE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100000.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Irland",
+        "en": "Ireland"
+      }
+    },
+    {
+      "countryCode": "IE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100041.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "The University of Dublin, Trinity College"
+      }
+    },
+    {
+      "countryCode": "GB",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/13900088.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "London School of Economics and Political Science",
+        "en": "London School of Economics and Political Science"
+      }
+    },
+    {
+      "countryCode": "NO",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/1620.0.0.0",
+      "type": "Organization",
+      "contributorCristinIds": [
+        {
+          "verificationStatus": "Verified",
+          "name": "Alex Gillespie",
+          "id": "https://api.test.nva.aws.unit.no/cristin/person/1306894",
+          "type": "Identity"
+        }
+      ],
+      "labels": {
+        "nb": "Oslo Nye Høyskole",
+        "en": "Oslo New University College"
+      }
+    },
+    {
+      "countryCode": "IE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12120019.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "University of Galway",
+        "en": "University of Galway"
+      }
+    },
+    {
+      "countryCode": "IE",
+      "id": "https://api.test.nva.aws.unit.no/cristin/organization/12100040.0.0.0",
+      "type": "Organization",
+      "labels": {
+        "nb": "Royal College of Surgeons in Ireland"
+      }
+    }
+  ],
+  "status": "PUBLISHED"
+}
