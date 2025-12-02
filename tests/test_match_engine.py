@@ -67,3 +67,35 @@ def test_staff_document_combined_text_trims() -> None:
     long_text = "A" * (MAX_COMBINED_TEXT_CHARS + 100)
     doc = StaffDocument(profile=profile, pages=[PageContent(url="https://example.com", title="Stub", text=long_text)])
     assert len(doc.combined_text) == MAX_COMBINED_TEXT_CHARS
+
+
+def test_extract_themes_ignores_filler_phrase() -> None:
+    text = "Looking for help with AI ethics and policy in healthcare."
+    themes = extract_themes(text, top_k=5)
+    assert all("looking" not in theme for theme in themes)
+    assert any("ai ethics" in theme or theme == "ethics" for theme in themes)
+
+
+def test_extract_themes_handles_norwegian_morphology() -> None:
+    text = "Digital sikkerhet og datasikkerheten til pasientdata i helseteknologi."
+    themes = extract_themes(text, top_k=4)
+    assert any(theme.startswith("digital sikkerhet") or theme == "sikkerhet" for theme in themes)
+
+
+def test_extract_themes_mixed_language_input() -> None:
+    text = "Machine learning for helseteknologi and clinical decision support."
+    themes = extract_themes(text, top_k=4)
+    assert any("machine learning" in theme for theme in themes)
+    assert any("helseteknologi" in theme for theme in themes)
+
+
+def test_extract_themes_limits_clause_length() -> None:
+    text = (
+        "POSSISJON: Ett triglyserid gir dermed ett monoglyserid og en fettsyre. "
+        "Frie fettsyrer både lipase og pankreasenzymer avspalter; fettsyrene transporteres videre."
+    )
+    themes = extract_themes(text, top_k=6)
+    # themes should be concise, not entire clauses
+    assert all(len(theme.split()) <= 6 for theme in themes)
+    assert any("lipase" in theme for theme in themes)
+    assert any("fettsyre" in theme or "fettsyrer" in theme for theme in themes)

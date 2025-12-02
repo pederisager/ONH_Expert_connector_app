@@ -1,11 +1,13 @@
-"""Hybrid matching engine combining keyword and embedding similarity."""
+﻿"""Hybrid matching engine combining keyword and embedding similarity."""
 
 from __future__ import annotations
 
 import logging
 import re
+import unicodedata
 from collections import Counter
 from dataclasses import dataclass, field
+from functools import lru_cache
 from threading import Lock
 from typing import Any, Iterable, Sequence
 from urllib.parse import urlparse
@@ -15,41 +17,52 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Basic Norwegian + English stopwords to keep theme extraction focused.
+try:  # Optional, lightweight stemming for better Norwegian/English grouping.
+    from nltk.stem.snowball import SnowballStemmer
+except Exception:  # pragma: no cover - dependency is optional
+    SnowballStemmer = None  # type: ignore
+
+# Norwegian + English stopwords and common request fillers to keep themes focused.
 STOPWORDS = {
     "og",
     "i",
-    "på",
+    "\u00e5",
+    "pa",
     "for",
     "med",
     "til",
     "som",
+    "\u00e5",
+    "sa",
     "en",
     "et",
+    "ei",
     "de",
     "der",
+    "dermed",
+    "derfor",
     "eller",
     "av",
     "om",
-    "the",
-    "a",
-    "an",
-    "is",
-    "are",
-    "this",
-    "that",
-    "of",
-    "in",
-    "from",
-    "at",
-    "by",
-    "også",
     "men",
+    "mens",
     "enn",
     "ikke",
+    "ingen",
+    "alle",
     "har",
     "kan",
     "skal",
+    "skulle",
+    "kunne",
+    "m\u00e5",
+    "ma",
+    "m\u00e5tte",
+    "vil",
+    "ville",
+    "b\u00f8r",
+    "bor",
+    "burde",
     "vi",
     "oss",
     "deg",
@@ -57,49 +70,147 @@ STOPWORDS = {
     "du",
     "jeg",
     "meg",
-    "dette",
+    "han",
+    "hun",
+    "det",
+    "den",
     "disse",
-    "vår",
-    "vårt",
-    "våre",
+    "dette",
+    "v\u00e5r",
+    "v\u00e5rt",
+    "v\u00e5re",
     "deres",
+    "b\u00e5de",
+    "baade",
+    "blant",
+    "blant annet",
+    "via",
+    "vha",
+    "gir",
+    "skjer",
+    "utenom",
     "blir",
-    "trenger",
+    "etter",
+    "over",
+    "under",
+    "hos",
+    "fra",
+    "mellom",
+    "uten",
+    "innen",
+    "innenfor",
     "behov",
-    "ønsker",
-    "må",
-    "måtte",
-    "vil",
-    "ville",
-    "bør",
-    "burde",
-    "kun",
+    "trenger",
+    "\u00f8nsker",
+    "onsker",
+    "ser",
     "bare",
     "hele",
     "gjerne",
+    "noen",
+    "noe",
     "please",
     "need",
     "needs",
     "needed",
-    "help",
-    "support",
-    "would",
-    "could",
-    "should",
-    "must",
+    "needing",
     "want",
     "wants",
+    "wanting",
     "looking",
-    "seek",
+    "searching",
     "seeking",
+    "seek",
     "about",
     "into",
     "onto",
-    "over",
-    "under",
+    "with",
+    "without",
+    "between",
+    "during",
+    "before",
+    "after",
+    "do",
+    "does",
+    "did",
+    "have",
+    "has",
+    "had",
+    "should",
+    "could",
+    "would",
+    "must",
+    "might",
+    "may",
+    "s\u00f8k",
+    "s\u00f8ker",
+    "soker",
+    "hjelp",
+    "assistanse",
+    "assistance",
+    "the",
+    "a",
+    "an",
+    "is",
+    "are",
+    "was",
+    "were",
+    "be",
+    "been",
+    "being",
+    "this",
+    "that",
+    "these",
+    "those",
+    "of",
+    "in",
+    "from",
+    "at",
+    "by",
 }
 
-TOKEN_PATTERN = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ]+", re.UNICODE)
+FILLER_PREFIXES = {
+    "looking",
+    "searching",
+    "seeking",
+    "need",
+    "needs",
+    "needing",
+    "trenger",
+    "\u00f8nsker",
+    "onsker",
+    "m\u00e5",
+    "ma",
+    "skal",
+    "kan",
+    "want",
+    "wants",
+    "please",
+}
+
+FILLER_SINGLE = {
+    "help",
+    "hjelp",
+    "support",
+    "st\u00f8tte",
+    "stotte",
+    "assistanse",
+    "assistance",
+}
+
+FILLER_PATTERNS = [
+    re.compile(r"^(looking|searching|seeking)\s+for\b"),
+    re.compile(
+        r"^(need|needs|needing|trenger|\u00f8nsker|onsker|m\u00e5|ma|skal)\s+(hjelp|help|support|st\u00f8tte|stotte|assistanse|assistance)\b"
+    ),
+    re.compile(r"^(kan|could|can)\s+noen\b"),
+    re.compile(r"^please\b"),
+]
+
+TOKEN_PATTERN = re.compile(r"[A-Za-z\u00c0-\u00d6\u00d8-\u00f6\u00f8-\u00ff][A-Za-z\u00c0-\u00d6\u00d8-\u00f6\u00f8-\u00ff'-]*", re.UNICODE)
+BREAK_TOKENS = {"og", "men", "både", "baade", "samt", "pluss"}
+MAX_PHRASE_TOKENS = 6
+PHRASE_LENGTH_PENALTY_START = 4
 
 logger = logging.getLogger(__name__)
 
@@ -148,8 +259,72 @@ class MatchResult:
     score_breakdown: dict[str, float]
 
 
+def _normalize_token(token: str) -> str:
+    normalized = unicodedata.normalize("NFKC", token).lower().strip("'-_ ")
+    return normalized
+
+
+@lru_cache(maxsize=4)
+def _get_stemmer(lang: str):
+    if SnowballStemmer is None:
+        return None
+    try:
+        return SnowballStemmer(lang)
+    except Exception:  # pragma: no cover - optional dependency may be absent
+        return None
+
+
+def _rule_based_stem(token: str) -> str:
+    suffixes = (
+        "ende",
+        "ende",
+        "ande",
+        "ene",
+        "ing",
+        "ene",
+        "ene",
+        "ene",
+        "het",
+        "skap",
+        "else",
+        "ende",
+        "ere",
+        "ere",
+        "ene",
+        "er",
+        "et",
+        "en",
+        "e",
+        "s",
+    )
+    for suffix in suffixes:
+        if token.endswith(suffix) and len(token) - len(suffix) >= 3:
+            return token[: -len(suffix)]
+    return token
+
+
+def _stem_token(token: str) -> str:
+    if not token:
+        return token
+    lang = "norwegian" if any(ch in "æøå" for ch in token) or token.endswith(
+        ("ing", "ende", "ene", "het", "skap")
+    ) else "english"
+    stemmer = _get_stemmer(lang)
+    if stemmer is not None:
+        try:
+            return stemmer.stem(token)
+        except Exception:  # pragma: no cover - defensive
+            pass
+    return _rule_based_stem(token)
+
+
 def tokenize(text: str) -> list[str]:
-    return [token.lower() for token in TOKEN_PATTERN.findall(text)]
+    tokens: list[str] = []
+    for raw in TOKEN_PATTERN.findall(text):
+        normalized = _normalize_token(raw)
+        if normalized:
+            tokens.append(normalized)
+    return tokens
 
 
 def _is_meaningful_token(token: str) -> bool:
@@ -162,34 +337,55 @@ def _is_meaningful_token(token: str) -> bool:
     return True
 
 
+def _is_filler_phrase(words: Sequence[str]) -> bool:
+    if not words:
+        return True
+    if len(words) == 1 and words[0] in FILLER_SINGLE:
+        return True
+    if words[0] in FILLER_PREFIXES:
+        return True
+    phrase = " ".join(words)
+    return any(pattern.match(phrase) for pattern in FILLER_PATTERNS)
+
+
 def _split_into_phrases(tokens: Sequence[str]) -> list[tuple[list[str], int]]:
     phrases: list[tuple[list[str], int]] = []
     current: list[str] = []
     start_idx = 0
     for index, token in enumerate(tokens):
-        normalized = token.lower()
-        if not _is_meaningful_token(normalized):
-            if current:
+        if token in BREAK_TOKENS and current:
+            if not _is_filler_phrase(current):
                 phrases.append((current.copy(), start_idx))
-                current.clear()
+            current.clear()
+            continue
+        if not _is_meaningful_token(token):
+            if current and not _is_filler_phrase(current):
+                phrases.append((current.copy(), start_idx))
+            current.clear()
             continue
         if not current:
             start_idx = index
-        current.append(normalized)
-    if current:
+        current.append(token)
+        if len(current) >= MAX_PHRASE_TOKENS:
+            if not _is_filler_phrase(current):
+                phrases.append((current.copy(), start_idx))
+            current.clear()
+    if current and not _is_filler_phrase(current):
         phrases.append((current.copy(), start_idx))
     return phrases
 
 
-def _score_phrase(words: Sequence[str], counts: Counter[str]) -> float:
+def _score_phrase(words: Sequence[str], counts: Counter[str], stem_map: dict[str, str]) -> float:
     if not words:
         return 0.0
-    frequency = float(sum(counts.get(word, 0) for word in words))
+    stems = [stem_map.get(word, word) for word in words]
+    frequency = float(sum(counts.get(stem, 0) for stem in stems))
     if frequency == 0:
         return 0.0
     length_bonus = 1.0 + 0.3 * max(0, len(words) - 1)
-    diversity_bonus = 1.0 + 0.1 * max(0, len(set(words)) - 1)
-    return frequency * (length_bonus + diversity_bonus / 2)
+    diversity_bonus = 1.0 + 0.1 * max(0, len(set(stems)) - 1)
+    length_penalty = 0.15 * max(0, len(words) - PHRASE_LENGTH_PENALTY_START)
+    return frequency * (length_bonus + diversity_bonus / 2) - length_penalty
 
 
 def extract_themes(text: str, top_k: int = 8) -> list[str]:
@@ -198,14 +394,23 @@ def extract_themes(text: str, top_k: int = 8) -> list[str]:
     if not meaningful_tokens:
         return []
 
-    counts = Counter(meaningful_tokens)
+    stem_map = {token: _stem_token(token) for token in meaningful_tokens}
+    stemmed_tokens = [stem_map[token] for token in meaningful_tokens]
+    counts = Counter(stemmed_tokens)
+
+    stem_to_surface: dict[str, str] = {}
+    for token in meaningful_tokens:
+        stem = stem_map[token]
+        if stem not in stem_to_surface:
+            stem_to_surface[stem] = token
+
     scored_phrases: list[tuple[float, int, str]] = []
     seen: set[str] = set()
     for words, start_idx in _split_into_phrases(tokens):
         normalized_phrase = " ".join(words).strip()
         if not normalized_phrase or normalized_phrase in seen:
             continue
-        score = _score_phrase(words, counts)
+        score = _score_phrase(words, counts, stem_map)
         if score <= 0:
             continue
         scored_phrases.append((score, start_idx, normalized_phrase))
@@ -215,9 +420,10 @@ def extract_themes(text: str, top_k: int = 8) -> list[str]:
     themes: list[str] = [phrase for _, _, phrase in scored_phrases[:top_k]]
 
     if len(themes) < top_k:
-        for word, _ in counts.most_common(top_k * 2):
-            if word not in themes:
-                themes.append(word)
+        for stem, _ in counts.most_common(top_k * 2):
+            candidate = stem_to_surface.get(stem, stem)
+            if candidate not in themes:
+                themes.append(candidate)
             if len(themes) >= top_k:
                 break
 
@@ -541,7 +747,7 @@ class MatchEngine:
         if not citations:
             top_theme = themes[0] if themes else "temaet"
             return (
-                f"{profile.name} matcher {top_theme} basert på registrerte kilder, "
+                f"{profile.name} matcher {top_theme} basert pÃ¥ registrerte kilder, "
                 "men ingen konkrete sitater ble hentet."
             )
 
@@ -557,3 +763,7 @@ class MatchEngine:
             )
         explanation_parts.append("Se kildeutdragene for konkrete formuleringer.")
         return " ".join(explanation_parts)
+
+
+
+
