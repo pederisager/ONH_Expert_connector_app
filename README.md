@@ -22,6 +22,8 @@ pip install -r requirements.txt  # only run once
 uvicorn app.main:app --reload
 ```
 
+The requirements pin CUDA 11.8 torch (2.3.1+cu118) so Pascal GPUs like GTX 1060 remain supported while still running on newer cards.
+
 The API serves the static UI from `app/static` at the root path.
 
 ## NVA API keys and data refresh
@@ -64,7 +66,7 @@ The API serves the static UI from `app/static` at the root path.
    ```bash
    source .venv/bin/activate
    ```
-4. **Ensure the embedding backend is ready.** The default configuration uses `sentence-transformers` with CUDA; make sure your virtualenv has `torch`/`sentence-transformers` installed (see “GPU embeddings” below) and that `nvidia-smi` shows your GPU. If you switch back to Ollama, start `ollama serve` separately.
+4. **Ensure the embedding backend is ready.** The default configuration uses `sentence-transformers` with CUDA; `requirements.txt` already installs a Pascal-safe CUDA 11.8 torch build. Verify `nvidia-smi` sees your GPU. If you switch back to Ollama, start `ollama serve` separately.
 5. **Confirm required models are available (first boot or after updates to `data/models.yaml`).** For SentenceTransformers, download the specified Hugging Face model ahead of time (`python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')"`). For Ollama-based setups, run `ollama pull` for the configured models.
 6. **Install or update Python dependencies (first boot or requirements change only).**
   ```bash
@@ -86,19 +88,26 @@ Model choices live in `data/models.yaml`. Download the referenced LLM and embedd
 
 ## GPU embeddings
 
-The retriever defaults to `sentence-transformers/all-MiniLM-L6-v2` running on CUDA (`data/models.yaml`). To actually leverage your GPU:
+The retriever defaults to `sentence-transformers/all-MiniLM-L6-v2` running on CUDA (`data/models.yaml`). To leverage your GPU:
 
-1. Install CUDA-enabled PyTorch plus `sentence-transformers` inside the virtualenv:
+1. Install dependencies (pinned to Pascal-safe CUDA 11.8 torch):
    ```bash
-   pip install --upgrade "torch==2.4.1" --index-url https://download.pytorch.org/whl/cu121
-   pip install sentence-transformers
+   pip install -r requirements.txt  # uses --extra-index-url https://download.pytorch.org/whl/cu118
    ```
-2. Verify access with `python -c "import torch; print(torch.cuda.is_available())"` and `nvidia-smi`.
+2. Verify access:
+   ```bash
+   python - <<'PY'
+   import torch
+   print("torch", torch.__version__, "cuda", torch.version.cuda, "available", torch.cuda.is_available())
+   if torch.cuda.is_available():
+       print("device", torch.cuda.get_device_name(0), "capability", torch.cuda.get_device_capability(0))
+   PY
+   ```
 3. Rebuild the index so embeddings are regenerated on the GPU:
    ```bash
    python -m app.index.build --verbose
    ```
-4. Start the API (`uvicorn app.main:app --reload`). If CUDA is missing, `app/index/embedder_factory.py` logs a warning and retries on CPU, so you still get a working retriever.
+4. Start the API (`uvicorn app.main:app --reload`). If CUDA is missing or the GPU kernel set is incompatible, `app/index/embeddings.py` now retries on CPU automatically so the retriever keeps working.
 
 If you prefer Ollama for embeddings, set `embedding_model.backend` back to `ollama`, configure `endpoint`, and rebuild the index after the Ollama service is running (optionally with GPU acceleration).
 

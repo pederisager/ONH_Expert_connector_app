@@ -3,10 +3,13 @@
 from __future__ import annotations
 
 import importlib
+import logging
 from dataclasses import dataclass, field
 from typing import Any, Protocol, Sequence
 
 import numpy as np
+
+LOGGER = logging.getLogger("rag.embeddings")
 
 
 class EmbeddingBackend(Protocol):
@@ -30,7 +33,7 @@ def normalize_embeddings(embeddings: np.ndarray) -> np.ndarray:
 
 @dataclass(slots=True)
 class SentenceTransformerBackend:
-    """Thin wrapper over `sentence-transformers` for consistent typing."""
+    """Thin wrapper over `sentence-transformers` with graceful CPU fallback."""
 
     model_name: str
     batch_size: int = 32
@@ -38,23 +41,54 @@ class SentenceTransformerBackend:
     _model: Any = field(init=False, repr=False)
 
     def __post_init__(self) -> None:
+        self._load_model(self.device)
+
+    def _load_model(self, device: str | None) -> None:
         sentence_transformer_cls = self._resolve_class()
         if sentence_transformer_cls is None:  # pragma: no cover - runtime guard
             raise ImportError(
                 "sentence-transformers is required for SentenceTransformerBackend."
             )
-        self._model = sentence_transformer_cls(self.model_name, device=self.device)
+        self.device = device
+        self._model = sentence_transformer_cls(self.model_name, device=device)
 
     def embed(self, texts: Sequence[str]) -> np.ndarray:
         if not texts:
-            return np.empty((0, self._model.get_sentence_embedding_dimension()), dtype=np.float32)
-        embeddings = self._model.encode(
-            list(texts),
-            batch_size=self.batch_size,
-            convert_to_numpy=True,
-            normalize_embeddings=False,
-            show_progress_bar=False,
-        )
+            return np.empty(
+                (0, self._model.get_sentence_embedding_dimension()), dtype=np.float32
+            )
+        try:
+            embeddings = self._model.encode(
+                list(texts),
+                batch_size=self.batch_size,
+                convert_to_numpy=True,
+                normalize_embeddings=False,
+                show_progress_bar=False,
+            )
+        except RuntimeError as exc:  # pragma: no cover - runtime-only guard
+            message = str(exc).lower()
+            if self.device and self.device.lower() != "cpu" and (
+                "no kernel image" in message
+                or "device-side assert triggered" in message
+                or "is not compatible with gpu" in message
+                or "sm_" in message
+            ):
+                LOGGER.warning(
+                    "sentence-transformers on device '%s' failed (%s). Falling back to CPU.",
+                    self.device,
+                    exc,
+                )
+                self._load_model("cpu")
+                embeddings = self._model.encode(
+                    list(texts),
+                    batch_size=self.batch_size,
+                    convert_to_numpy=True,
+                    normalize_embeddings=False,
+                    show_progress_bar=False,
+                )
+            else:
+                raise
+
         return embeddings.astype("float32")
 
     def embed_one(self, text: str) -> np.ndarray:
