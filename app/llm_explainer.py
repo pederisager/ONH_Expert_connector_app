@@ -1,4 +1,4 @@
-"""LLM-backed explanation generator."""
+"""LLM-backed explanation generator with optional translation."""
 
 from __future__ import annotations
 
@@ -29,9 +29,33 @@ class LLMExplainer:
         self.endpoint = model_config.get("endpoint", "http://localhost:11434")
         self.timeout = float(model_config.get("timeout", 60.0))
 
-    async def generate(self, staff_name: str, snippets: Sequence[str], themes: Sequence[str]) -> str:
-        prompt = self._build_prompt(staff_name, snippets, themes)
-        fallback = self._fallback_explanation(staff_name, snippets, themes)
+    async def generate(
+        self,
+        staff_name: str,
+        snippets: Sequence[str],
+        themes: Sequence[str],
+        *,
+        prompt_lang: str = "no",
+        output_lang: str | None = None,
+        translator=None,
+    ) -> str:
+        normalized_prompt_lang = (prompt_lang or "no").lower()
+        output_lang = (output_lang or normalized_prompt_lang).lower()
+
+        prompt = self._build_prompt(
+            staff_name,
+            snippets,
+            themes,
+            language=normalized_prompt_lang,
+        )
+        fallback = self._fallback_explanation(
+            staff_name,
+            snippets,
+            themes,
+            language=output_lang,
+            translator=translator,
+            source_lang=normalized_prompt_lang,
+        )
         if not prompt:
             return fallback
 
@@ -53,20 +77,48 @@ class LLMExplainer:
             text = (data.get("response") or "").strip()
             if not text or self._looks_like_refusal(text):
                 return fallback
+            if output_lang != normalized_prompt_lang and translator:
+                try:
+                    text = translator.translate(
+                        text,
+                        source_lang=normalized_prompt_lang,
+                        target_lang=output_lang,
+                    )
+                except Exception:
+                    return fallback
             return text
 
         # Unsupported backend fallbacks to deterministic explanation.
         return fallback
 
-    def _build_prompt(self, staff_name: str, snippets: Sequence[str], themes: Sequence[str]) -> str:
+    def _build_prompt(
+        self,
+        staff_name: str,
+        snippets: Sequence[str],
+        themes: Sequence[str],
+        *,
+        language: str = "no",
+    ) -> str:
         if not self.model_name:
             return ""
         themes_text = ", ".join(themes) if themes else "temaet"
         evidence_lines = "\n".join(f"- {snippet}" for snippet in snippets[:3])
+        lang = (language or "no").lower()
+        if lang.startswith("en"):
+            return (
+                "You are an assistant writing short justifications for why a staff member matches a teaching topic.\n"
+                "Write 2-4 sentences in English. Use only the evidence below and avoid adding new facts.\n"
+                f"Staff: {staff_name}\n"
+                f"Topics: {themes_text}\n"
+                "Evidence:\n"
+                f"{evidence_lines}\n"
+                "Answer:"
+            )
+
         return (
             "Du er en assistent som skriver korte begrunnelser for hvorfor en ansatt matcher et undervisningstema.\n"
-            "Skriv 2–4 setninger på norsk, og hvil deg kun på bevisene nedenfor. "
-            "Inkluder ikke nye fakta, men referer eksplisitt til dokumentasjonen.\n"
+            "Skriv 2-4 setninger pA� norsk, og bruk bare bevisene nedenfor. "
+            "Ikke legg til nye fakta, men referer eksplisitt til dokumentasjonen.\n"
             f"Ansatt: {staff_name}\n"
             f"Temaer: {themes_text}\n"
             "Bevis:\n"
@@ -74,14 +126,41 @@ class LLMExplainer:
             "Svar:"
         )
 
-    def _fallback_explanation(self, staff_name: str, snippets: Sequence[str], themes: Sequence[str]) -> str:
-        top_theme = ", ".join(theme for theme in themes[:2] if theme) or "temaet"
+    def _fallback_explanation(
+        self,
+        staff_name: str,
+        snippets: Sequence[str],
+        themes: Sequence[str],
+        *,
+        language: str = "no",
+        translator=None,
+        source_lang: str | None = None,
+    ) -> str:
+        lang = (language or "no").lower()
+        top_theme = ", ".join(theme for theme in themes[:2] if theme) or (
+            "the topic" if lang.startswith("en") else "temaet"
+        )
         cleaned_snippets = [self._clean_snippet(snippet) for snippet in snippets[:2]]
         cleaned_snippets = [snippet for snippet in cleaned_snippets if snippet]
         if cleaned_snippets:
             evidence = " ".join(cleaned_snippets)
-            return f"{staff_name} omtaler {top_theme} i dokumentasjonen. {evidence}"
-        return f"{staff_name} matcher {top_theme}, men vi fant ikke konkrete sitater."
+            text = (
+                f"{staff_name} omtaler {top_theme} i dokumentasjonen. {evidence}"
+                if not lang.startswith("en")
+                else f"{staff_name} covers {top_theme} in the documentation. {evidence}"
+            )
+        else:
+            text = (
+                f"{staff_name} matcher {top_theme}, men vi fant ikke konkrete sitater."
+                if not lang.startswith("en")
+                else f"{staff_name} matches {top_theme}, but we did not find concrete quotes."
+            )
+        if translator and source_lang and lang != source_lang:
+            try:
+                return translator.translate(text, source_lang=source_lang, target_lang=lang)
+            except Exception:
+                return text
+        return text
 
     @staticmethod
     def _clean_snippet(snippet: str) -> str:

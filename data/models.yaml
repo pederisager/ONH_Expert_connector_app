@@ -5,6 +5,6 @@ llm_model:
   purpose: "generate explanations"
 
 embedding_model:
-  name: "sentence-transformers/all-MiniLM-L6-v2"
+  name: "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
   backend: "sentence_transformers"
   device: "auto"

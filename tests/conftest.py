@@ -69,11 +69,11 @@ async def _prepare_app(
         return {
             "url": url,
             "title": "Stub-kilde",
-            "text": "Forskning på psykologi og helse ved Oslo Nye Høyskole.",
+            "text": "Forskning pA� psykologi og helse ved Oslo Nye HA,yskole.",
         }
 
-    async def fake_generate(self, staff_name, snippets, themes):  # type: ignore[override]
-        return f"{staff_name} matcher {', '.join(themes)} basert på testdata."
+    async def fake_generate(self, staff_name, snippets, themes, **kwargs):  # type: ignore[override]
+        return f"{staff_name} matcher {', '.join(themes)} basert pA� testdata."
 
     monkeypatch.setattr(app.state.fetch_utils.__class__, "fetch_page", fake_fetch_page, raising=False)
     monkeypatch.setattr(app.state.llm_explainer.__class__, "generate", fake_generate, raising=False)
@@ -109,8 +109,8 @@ async def offline_client(tmp_path, monkeypatch):
     ]
     async_client, app = await _prepare_app(tmp_path, monkeypatch, staff_profiles=profiles)
 
-    async def fake_generate(self, staff_name, snippets, themes):  # type: ignore[override]
-        return f"{staff_name} matcher {', '.join(themes)} basert på offline testdata."
+    async def fake_generate(self, staff_name, snippets, themes, **kwargs):  # type: ignore[override]
+        return f"{staff_name} matcher {', '.join(themes)} basert pA� offline testdata."
 
     monkeypatch.setattr(app.state.llm_explainer.__class__, "generate", fake_generate, raising=False)
 

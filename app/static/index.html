@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="no">
   <head>
     <meta charset="utf-8" />
@@ -8,16 +8,24 @@
     <link rel="stylesheet" href="/static/styles.css" />
   </head>
   <body>
-    <noscript>Vennligst aktiver JavaScript for å bruke ONH Expert Connector.</noscript>
+    <noscript data-l10n="noscript">Vennligst aktiver JavaScript for å bruke ONH Expert Connector.</noscript>
     <div class="app-shell">
       <header class="top-bar">
         <div class="top-bar__title">
-          <h1>ONH Expert Connector</h1>
-          <p>Finn interne eksperter med dokumenterte treff.</p>
+          <h1 data-l10n="title">ONH Expert Connector</h1>
+          <p data-l10n="subtitle">Finn interne eksperter med dokumenterte treff.</p>
         </div>
         <div class="top-bar__actions">
+          <div class="language-toggle" aria-label="Bytt språk">
+            <button id="langNoBtn" class="lang-btn" data-lang="no" title="Norsk" aria-label="Norsk">
+              <img src="/static/flag-no.svg" alt="Norsk flagg" />
+            </button>
+            <button id="langEnBtn" class="lang-btn" data-lang="en" title="English" aria-label="English">
+              <img src="/static/flag-gb.svg" alt="UK flag" />
+            </button>
+          </div>
           <button id="shortlistButton" class="btn-secondary" aria-haspopup="dialog">
-            Kortliste (0)
+            <span data-l10n="shortlistButton">Kortliste</span> (0)
           </button>
         </div>
       </header>
@@ -25,11 +33,11 @@
       <main id="viewContainer" class="main-content">
         <section id="homeView" class="view active" aria-label="Start">
           <div class="section-header">
-            <h2>Beskriv kurset eller materialet</h2>
-            <p>Legg inn tekst og eventuelle filer. Avdelingsfilter er valgfritt.</p>
+            <h2 data-l10n="describeHeading">Beskriv kurset eller materialet</h2>
+            <p data-l10n="describeSub">Legg inn tekst og eventuelle filer. Avdelingsfilter er valgfritt.</p>
           </div>
           <form id="topicForm" class="card" autocomplete="off">
-            <label class="form-label" for="topicInput">Tema (tekst)</label>
+            <label class="form-label" for="topicInput" data-l10n="topicLabel">Tema (tekst)</label>
             <textarea
               id="topicInput"
               name="text"
@@ -43,7 +51,7 @@
               <span id="charCounter">0 / 3200</span>
             </div>
 
-            <label class="form-label" for="fileUpload">Legg til filer (valgfritt)</label>
+            <label class="form-label" for="fileUpload" data-l10n="fileLabel">Legg til filer (valgfritt)</label>
             <input
               id="fileUpload"
               type="file"
@@ -52,22 +60,22 @@
               aria-describedby="fileHelp"
               accept=".pdf,.docx,.pptx,.txt,.md"
             />
-            <p id="fileHelp" class="help-text">
+            <p id="fileHelp" class="help-text" data-l10n="fileHelp">
               Du kan sende kun tekst. Maks 10 MB per fil. Støttede formater: PDF, DOCX, PPTX, TXT, MD.
             </p>
 
-            <label class="form-label" for="departmentFilter">Avdeling (valgfritt)</label>
+            <label class="form-label" for="departmentFilter" data-l10n="deptLabel">Avdeling (valgfritt)</label>
             <select id="departmentFilter" name="department">
               <option value="">Alle</option>
             </select>
 
             <div class="form-actions">
-              <button id="analyzeBtn" class="btn-primary" type="submit" disabled>
+              <button id="analyzeBtn" class="btn-primary" type="submit" disabled data-l10n="analyzeBtn">
                 Analyser tema
               </button>
             </div>
           </form>
-          <p class="disclaimer">
+          <p class="disclaimer" data-l10n="disclaimer">
             Appen leser kun sider som er whitelisted i <code>data/staff.yaml</code> og henter kildeutdrag akkurat når du søker.
           </p>
         </section>
@@ -75,14 +83,14 @@
         <section id="themesView" class="view" aria-label="Gjennomgå temaer">
           <div class="section-header">
             <div>
-              <h2>Gjennomgå foreslåtte temaer</h2>
-              <p>Rediger listen før du søker etter ansatte.</p>
+              <h2 data-l10n="themesHeading">Gjennomgå foreslåtte temaer</h2>
+              <p data-l10n="themesSub">Rediger listen før du søker etter ansatte.</p>
             </div>
-            <button id="backToInputBtn" class="btn-text">Tilbake</button>
+            <button id="backToInputBtn" class="btn-text" data-l10n="backBtn">Tilbake</button>
           </div>
 
           <div class="card">
-            <h3>Foreslåtte temaer</h3>
+            <h3 data-l10n="suggestedThemes">Foreslåtte temaer</h3>
             <div id="themesChips" class="chip-list" role="list"></div>
             <div class="chip-actions">
               <input
@@ -91,39 +99,41 @@
                 placeholder="Legg til tema…"
                 aria-label="Legg til tema"
               />
-              <button id="addChipBtn" class="btn-secondary" type="button">Legg til</button>
+              <button id="addChipBtn" class="btn-secondary" type="button" data-l10n="addThemeBtn">Legg til</button>
             </div>
           </div>
 
           <div class="card">
-            <h3>Normalisert tekst</h3>
-            <p id="normalizedPreview" class="preview-text">Ingen data ennå.</p>
+            <h3 data-l10n="normalizedText">Normalisert tekst</h3>
+            <p id="normalizedPreview" class="preview-text" data-l10n="previewPlaceholder">Ingen data ennå.</p>
           </div>
 
           <div class="form-actions">
-            <button id="runMatchBtn" class="btn-primary" type="button">Finn relevante ansatte</button>
+            <button id="runMatchBtn" class="btn-primary" type="button" data-l10n="findMatches">
+              Finn relevante ansatte
+            </button>
           </div>
         </section>
 
         <section id="resultsView" class="view" aria-label="Resultater">
           <div class="results-grid">
             <aside class="results-sidebar">
-              <h3>Filtre</h3>
-              <label class="form-label" for="resultsDepartmentFilter">Avdeling</label>
+              <h3 data-l10n="filters">Filtre</h3>
+              <label class="form-label" for="resultsDepartmentFilter" data-l10n="deptLabel">Avdeling</label>
               <select id="resultsDepartmentFilter">
                 <option value="">Alle</option>
               </select>
 
-              <label class="form-label" for="resultsSort">Sorter</label>
+              <label class="form-label" for="resultsSort" data-l10n="sortLabel">Sorter</label>
               <select id="resultsSort">
-                <option value="score">Relevans (standard)</option>
-                <option value="recent">Nylige publikasjoner</option>
-                <option value="alpha">Alfabetisk</option>
+                <option value="score" data-l10n="sortScore">Relevans (standard)</option>
+                <option value="recent" data-l10n="sortRecent">Nylige publikasjoner</option>
+                <option value="alpha" data-l10n="sortAlpha">Alfabetisk</option>
               </select>
 
-              <p id="resultsCount" class="results-count">Ingen treff ennå.</p>
+              <p id="resultsCount" class="results-count" data-l10n="resultsCountNone">Ingen treff ennå.</p>
 
-              <button id="backToThemesBtn" class="btn-text">Tilbake til temaer</button>
+              <button id="backToThemesBtn" class="btn-text" data-l10n="backToThemes">Tilbake til temaer</button>
             </aside>
 
             <div class="results-list" id="resultsList" aria-live="polite"></div>
@@ -134,20 +144,20 @@
 
     <aside id="shortlistDrawer" class="shortlist-drawer" aria-hidden="true">
       <div class="shortlist-header">
-        <h2>Kortliste</h2>
+        <h2 data-l10n="shortlistTitle">Kortliste</h2>
         <button id="closeShortlistBtn" class="icon-button" aria-label="Lukk kortliste">×</button>
       </div>
       <div id="shortlistItems" class="shortlist-items"></div>
       <div class="shortlist-actions">
-        <button id="exportPDFBtn" class="btn-secondary">Eksporter som PDF</button>
-        <button id="exportJSONBtn" class="btn-primary">Eksporter som JSON</button>
+        <button id="exportPDFBtn" class="btn-secondary" data-l10n="exportPdf">Eksporter som PDF</button>
+        <button id="exportJSONBtn" class="btn-primary" data-l10n="exportJson">Eksporter som JSON</button>
       </div>
     </aside>
 
     <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true">
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-header">
-          <h2 id="modalTitle">Kilder</h2>
+          <h2 id="modalTitle" data-l10n="modalTitle">Kilder</h2>
           <button id="modalCloseBtn" class="icon-button" aria-label="Lukk modal">×</button>
         </div>
         <div id="modalBody" class="modal-body"></div>

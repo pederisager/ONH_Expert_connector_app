@@ -19,6 +19,7 @@ from .exporter import ShortlistExporter
 from .fetch_utils import FetchNotAllowedError, FetchUtils
 from .file_parser import FileParser, UnsupportedFileTypeError
 from .index.models import Chunk
+from .language_utils import LanguageContext, NoOpTranslator, Translator, build_language_context
 from .llm_explainer import LLMExplainer
 from .match_engine import (
     MatchEngine,
@@ -176,6 +177,12 @@ def _build_normalized_preview(text: str, limit: int = PREVIEW_CHAR_LIMIT) -> str
     if truncated or len(preview) < len(normalized):
         return preview.rstrip(",; ") + "..."
     return preview
+
+
+def _resolve_user_language(request: Request, app_config: AppConfig) -> str:
+    header_lang = request.headers.get("x-ui-language") or request.headers.get("x-language")
+    query_lang = request.query_params.get("lang")
+    return (header_lang or query_lang or app_config.ui.language or "no").lower()
 
 
 def _extract_citation_snippet(text: str, themes: Sequence[str], limit: int = CITATION_SNIPPET_LIMIT) -> str:
@@ -478,13 +485,42 @@ async def _maybe_generate_explanations(
     results: list[MatchItem],
     llm_explainer: LLMExplainer,
     themes: Sequence[str],
+    *,
+    translator: Translator,
+    language_ctx: LanguageContext,
 ) -> None:
     tasks = []
+    prompt_lang = language_ctx.llm_lang or language_ctx.user_lang
+    output_lang = language_ctx.user_lang or prompt_lang
+    prompt_themes: list[str] = list(themes)
+    if language_ctx.translate_for_llm_input:
+        prompt_themes = translator.translate_batch(
+            themes,
+            source_lang=language_ctx.query_lang,
+            target_lang=prompt_lang,
+        )
     for result in results:
         snippets = [citation.snippet for citation in result.citations]
         if not snippets:
             continue
-        tasks.append(llm_explainer.generate(result.name, snippets, themes))
+        prompt_snippets = snippets
+        if language_ctx.translate_for_llm_input:
+            prompt_snippets = translator.translate_batch(
+                snippets,
+                source_lang=language_ctx.embed_lang,
+                target_lang=prompt_lang,
+            )
+
+        tasks.append(
+            llm_explainer.generate(
+                result.name,
+                prompt_snippets,
+                prompt_themes,
+                prompt_lang=prompt_lang,
+                output_lang=output_lang,
+                translator=translator,
+            )
+        )
 
     if not tasks:
         return
@@ -512,14 +548,23 @@ def _match_via_retriever(
     retriever: EmbeddingRetriever,
     payload: MatchRequest,
     max_candidates: int,
+    translator: Translator,
+    language_ctx: LanguageContext,
+    query_text: str,
 ) -> list[MatchItem]:
-    query_text = _rag_query_from_themes(payload.themes)
     if not query_text:
         return []
+    prepared_query = query_text
+    if language_ctx.translate_for_embedding:
+        prepared_query = translator.translate(
+            query_text,
+            source_lang=language_ctx.query_lang,
+            target_lang=language_ctx.embed_lang,
+        )
     try:
         results = retriever.retrieve(
             RetrievalQuery(
-                text=query_text,
+                text=prepared_query,
                 department=payload.department,
                 top_k=max_candidates,
             )
@@ -530,13 +575,17 @@ def _match_via_retriever(
 
     items: list[MatchItem] = []
     for result in results:
-        item = _retrieval_result_to_match_item(result, payload.themes)
+        item = _retrieval_result_to_match_item(
+            result,
+            payload.themes,
+            language_ctx=language_ctx,
+        )
         if item:
             items.append(item)
     return items
 
 
-def _retrieval_result_to_match_item(result, themes: Sequence[str]) -> MatchItem | None:
+def _retrieval_result_to_match_item(result, themes: Sequence[str], *, language_ctx: LanguageContext) -> MatchItem | None:
     if not result.chunks:
         return None
 
@@ -557,11 +606,16 @@ def _retrieval_result_to_match_item(result, themes: Sequence[str]) -> MatchItem 
     tag_score = _tag_overlap_score(keywords, themes)
     adjusted_score = min(1.0, semantic_score + 0.1 * keyword_score + 0.15 * tag_score)
 
-    why_default = (
-        f"{display_name} matcher {', '.join(themes) or 'temaet'} basert på semantisk treff."
-    )
-    if keywords:
-        why_default += f" Nøkkelord: {', '.join(keywords[:4])}."
+    if language_ctx.user_lang.startswith("en"):
+        why_default = f"{display_name} matches {', '.join(themes) or 'the topic'} based on semantic similarity."
+        if keywords:
+            why_default += f" Keywords: {', '.join(keywords[:4])}."
+    else:
+        why_default = (
+            f"{display_name} matcher {', '.join(themes) or 'temaet'} basert på semantisk treff."
+        )
+        if keywords:
+            why_default += f" Nøkkelord: {', '.join(keywords[:4])}."
     return MatchItem(
         id=_hash_id(display_name, profile_url or result.staff_slug),
         name=display_name,
@@ -667,6 +721,23 @@ def _request_state(request: Request):
     return request.app.state
 
 
+def _localize_explanation(
+    *,
+    text: str | None,
+    name: str,
+    themes: Sequence[str],
+    language_ctx: LanguageContext,
+) -> str:
+    """Ensure default explanations respect UI language even without translation."""
+    safe_text = (text or "").strip()
+    if safe_text:
+        return safe_text
+    joined = ", ".join(themes) or ("the topic" if language_ctx.user_lang.startswith("en") else "temaet")
+    if language_ctx.user_lang.startswith("en"):
+        return f"{name} matches {joined} based on documented sources."
+    return f"{name} matcher {joined} basert på dokumenterte kilder."
+
+
 # --------------------------------------------------------------------------- #
 # Routes
 # --------------------------------------------------------------------------- #
@@ -709,6 +780,7 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
 
     state = _request_state(request)
     app_config: AppConfig = state.app_config
+    language_config = getattr(state, "language_config", app_config.language)
     match_engine: MatchEngine = state.match_engine
     retriever: EmbeddingRetriever | None = getattr(state, "embedding_retriever", None)
     vector_index_ready: bool = getattr(state, "vector_index_ready", False)
@@ -716,12 +788,24 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
     cache_manager: CacheManager = state.cache_manager
     staff_profiles: list[StaffProfile] = state.staff_profiles
     llm_explainer: LLMExplainer = state.llm_explainer
+    translator: Translator = getattr(state, "translator", None) or NoOpTranslator()
+
+    query_text = _rag_query_from_themes(payload.themes)
+    user_lang = _resolve_user_language(request, app_config)
+    language_ctx = build_language_context(
+        query_text=query_text,
+        user_lang=user_lang,
+        language_config=language_config,
+    )
 
     if retriever and vector_index_ready:
         rag_results = _match_via_retriever(
             retriever=retriever,
             payload=payload,
             max_candidates=app_config.results.max_candidates,
+            translator=translator,
+            language_ctx=language_ctx,
+            query_text=query_text,
         )
         if not retriever.is_active:
             state.vector_index_ready = False
@@ -730,7 +814,13 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
                 retriever.disabled_reason,
             )
         if rag_results:
-            await _maybe_generate_explanations(rag_results, llm_explainer, payload.themes)
+            await _maybe_generate_explanations(
+                rag_results,
+                llm_explainer,
+                payload.themes,
+                translator=translator,
+                language_ctx=language_ctx,
+            )
             return MatchResponse(results=rag_results, total=len(rag_results))
 
     if payload.department:
@@ -782,14 +872,25 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
             department=match.staff.department,
             profile_url=match.staff.profile_url,
             score=match.score,
-            why=match.explanation,
+            why=_localize_explanation(
+                text=match.explanation,
+                name=match.staff.name,
+                themes=payload.themes,
+                language_ctx=language_ctx,
+            ),
             citations=[Citation(**citation) for citation in match.citations],
             scoreBreakdown=score_breakdown,
             keywords=list(match.staff.tags),
         )
         results.append(item)
 
-    await _maybe_generate_explanations(results, llm_explainer, payload.themes)
+    await _maybe_generate_explanations(
+        results,
+        llm_explainer,
+        payload.themes,
+        translator=translator,
+        language_ctx=language_ctx,
+    )
 
     return MatchResponse(results=results, total=len(results))
 

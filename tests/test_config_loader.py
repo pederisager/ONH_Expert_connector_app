@@ -10,6 +10,8 @@ def test_load_app_config_has_expected_defaults() -> None:
     assert config.results.max_candidates == 10
     assert config.rag.chunk_size == 400
     assert config.rag.index_root.endswith("data/index")
+    assert config.language.embedding_language_mode == "multilingual"
+    assert config.language.translation.enabled is False
     assert config.security.max_upload_mb == 10
 
 
@@ -17,6 +19,7 @@ def test_load_models_config_round_trip() -> None:
     models = load_models_config()
     assert models.llm_model.name.startswith("llama3.1")
     assert models.embedding_model.backend == "sentence_transformers"
+    assert "multilingual" in models.embedding_model.name
     assert models.embedding_model.device in {"auto", "cuda"}
 
 

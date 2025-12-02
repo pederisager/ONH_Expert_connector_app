@@ -1,4 +1,4 @@
-const state = {
+﻿const state = {
   config: {
     departments: [],
     ui: {},
@@ -14,6 +14,102 @@ const state = {
   shortlistOpen: false,
   isAnalyzing: false,
   isMatching: false,
+  uiLanguage: "no",
+};
+
+const copy = {
+  no: {
+    noscript: "Vennligst aktiver JavaScript for å bruke ONH Expert Connector.",
+    title: "ONH Expert Connector",
+    subtitle: "Finn interne eksperter med dokumenterte treff.",
+    describeHeading: "Beskriv kurset eller materialet",
+    describeSub: "Legg inn tekst og eventuelle filer. Avdelingsfilter er valgfritt.",
+    topicLabel: "Tema (tekst)",
+    fileLabel: "Legg til filer (valgfritt)",
+    fileHelp: "Du kan sende kun tekst. Maks 10 MB per fil. Støttede formater: PDF, DOCX, PPTX, TXT, MD.",
+    deptLabel: "Avdeling (valgfritt)",
+    analyzeBtn: "Analyser tema",
+    disclaimer: "Appen leser kun sider som er whitelisted i data/staff.yaml og henter kildeutdrag akkurat når du søker.",
+    themesHeading: "Gjennomgå foreslåtte temaer",
+    themesSub: "Rediger listen før du søker etter ansatte.",
+    backBtn: "Tilbake",
+    suggestedThemes: "Foreslåtte temaer",
+    addThemeBtn: "Legg til",
+    normalizedText: "Normalisert tekst",
+    previewPlaceholder: "Ingen data ennå.",
+    findMatches: "Finn relevante ansatte",
+    filters: "Filtre",
+    sortLabel: "Sorter",
+    sortScore: "Relevans (standard)",
+    sortRecent: "Nylige publikasjoner",
+    sortAlpha: "Alfabetisk",
+    resultsCountNone: "Ingen treff ennå.",
+    backToThemes: "Tilbake til temaer",
+    shortlistTitle: "Kortliste",
+    shortlistButton: "Kortliste",
+    exportPdf: "Eksporter som PDF",
+    exportJson: "Eksporter som JSON",
+    modalTitle: "Kilder",
+    toastAnalyzeFail: "Analyse mislyktes.",
+    toastAnalyzeSuccess: "Temaer analysert. Gjennomgå før matching.",
+    toastMissingTopic: "Legg inn en kort beskrivelse eller last opp filer før du analyserer.",
+    toastMissingTheme: "Legg til minst ett tema før du søker.",
+    toastSearching: "Søker etter relevante ansatte…",
+    toastMatchesFound: (n) => `Fant ${n} kandidater.`,
+    toastMatchFail: "Kunne ikke hente treff.",
+    toastShortlistAdd: "Lagt til i kortlisten.",
+    toastShortlistRemove: "Fjernet fra kortlisten.",
+    toastShortlistEmpty: "Kortlisten er tom.",
+    toastShortlistSaveFail: "Kunne ikke lagre kortlisten.",
+    toastExportFail: "Eksport mislyktes.",
+    toastExportDone: (path) => (path ? `Eksport lagret: ${path}` : "Eksport fullført."),
+  },
+  en: {
+    noscript: "Please enable JavaScript to use ONH Expert Connector.",
+    title: "ONH Expert Connector",
+    subtitle: "Find internal experts with grounded matches.",
+    describeHeading: "Describe the course or material",
+    describeSub: "Enter text and optional files. Department filter is optional.",
+    topicLabel: "Topic (text)",
+    fileLabel: "Add files (optional)",
+    fileHelp: "You can send text only. Max 10 MB per file. Supported: PDF, DOCX, PPTX, TXT, MD.",
+    deptLabel: "Department (optional)",
+    analyzeBtn: "Analyze topic",
+    disclaimer: "The app only reads whitelisted pages in data/staff.yaml and fetches excerpts at query time.",
+    themesHeading: "Review suggested themes",
+    themesSub: "Edit the list before searching for staff.",
+    backBtn: "Back",
+    suggestedThemes: "Suggested themes",
+    addThemeBtn: "Add",
+    normalizedText: "Normalized text",
+    previewPlaceholder: "No data yet.",
+    findMatches: "Find relevant staff",
+    filters: "Filters",
+    sortLabel: "Sort",
+    sortScore: "Relevance (default)",
+    sortRecent: "Recent publications",
+    sortAlpha: "Alphabetical",
+    resultsCountNone: "No results yet.",
+    backToThemes: "Back to themes",
+    shortlistTitle: "Shortlist",
+    shortlistButton: "Shortlist",
+    exportPdf: "Export as PDF",
+    exportJson: "Export as JSON",
+    modalTitle: "Sources",
+    toastAnalyzeFail: "Analysis failed.",
+    toastAnalyzeSuccess: "Themes analyzed. Review before matching.",
+    toastMissingTopic: "Enter a short description or upload files before analyzing.",
+    toastMissingTheme: "Add at least one theme before searching.",
+    toastSearching: "Searching for relevant staff…",
+    toastMatchesFound: (n) => `Found ${n} candidates.`,
+    toastMatchFail: "Could not fetch matches.",
+    toastShortlistAdd: "Added to shortlist.",
+    toastShortlistRemove: "Removed from shortlist.",
+    toastShortlistEmpty: "Shortlist is empty.",
+    toastShortlistSaveFail: "Could not save shortlist.",
+    toastExportFail: "Export failed.",
+    toastExportDone: (path) => (path ? `Export saved: ${path}` : "Export completed."),
+  },
 };
 
 const elements = {
@@ -22,6 +118,8 @@ const elements = {
     themes: document.getElementById("themesView"),
     results: document.getElementById("resultsView"),
   },
+  langNoBtn: document.getElementById("langNoBtn"),
+  langEnBtn: document.getElementById("langEnBtn"),
   topicForm: document.getElementById("topicForm"),
   topicInput: document.getElementById("topicInput"),
   charCounter: document.getElementById("charCounter"),
@@ -62,6 +160,8 @@ window.addEventListener("DOMContentLoaded", () => {
 async function initialize() {
   try {
     await loadConfig();
+    state.uiLanguage = (state.config.ui?.language || "no").toLowerCase();
+    applyLanguage(state.uiLanguage);
     await loadShortlist();
     renderDepartmentOptions();
     updateShortlistBadge();
@@ -71,6 +171,9 @@ async function initialize() {
 }
 
 function setupListeners() {
+  elements.langNoBtn.addEventListener("click", () => applyLanguage("no"));
+  elements.langEnBtn.addEventListener("click", () => applyLanguage("en"));
+
   elements.topicInput.addEventListener("input", handleTopicInput);
   elements.fileUpload.addEventListener("change", handleFileChange);
   elements.departmentFilter.addEventListener("change", (event) => {
@@ -116,8 +219,33 @@ function setupListeners() {
   elements.shortlistItems.addEventListener("click", handleShortlistClick);
 }
 
+function applyLanguage(lang) {
+  state.uiLanguage = lang === "en" ? "en" : "no";
+  document.documentElement.lang = state.uiLanguage;
+  elements.langNoBtn.classList.toggle("active", state.uiLanguage === "no");
+  elements.langEnBtn.classList.toggle("active", state.uiLanguage === "en");
+
+  const dict = copy[state.uiLanguage];
+  document.querySelectorAll("[data-l10n]").forEach((node) => {
+    const key = node.dataset.l10n;
+    const value = dict[key];
+    if (typeof value === "string") {
+      node.textContent = value;
+    }
+  });
+
+  elements.topicInput.placeholder =
+    state.uiLanguage === "en"
+      ? "Write a few paragraphs about the topic, learning objectives, syllabus, etc."
+      : "Skriv noen avsnitt om tema, læringsmål, pensum, osv.";
+  elements.addChipInput.placeholder = state.uiLanguage === "en" ? "Add theme…" : "Legg til tema…";
+  updateFileHelpText();
+  renderResults();
+  renderShortlist();
+}
+
 async function loadConfig() {
-  const response = await fetch("/config");
+  const response = await fetch("/config", { headers: { "X-UI-Language": state.uiLanguage } });
   if (!response.ok) {
     throw new Error("Klarte ikke å hente konfigurasjon.");
   }
@@ -131,9 +259,13 @@ function updateFileHelpText() {
     return;
   }
   const formats = state.config.security.allowFileTypes || [];
-  help.textContent = `Maks ${state.config.security.maxUploadMb} MB per fil. Støttede formater: ${formats
-    .map((item) => item.toUpperCase())
-    .join(", ")}.`;
+  const text = state.uiLanguage === "en"
+    ? `You can also submit text only. Max ${state.config.security.maxUploadMb} MB per file. Supported formats: ${formats.map((item) => item.toUpperCase()).join(", ")}.`
+    : `Du kan sende kun tekst. Maks ${state.config.security.maxUploadMb} MB per fil. Støttede formater: ${formats
+        .map((item) => item.toUpperCase())
+        .join(", ")}.`;
+  help.textContent = text;
+  document.title = copy[state.uiLanguage].title;
   elements.fileUpload.setAttribute(
     "accept",
     formats.map((item) => `.${item}`).join(",")
@@ -157,7 +289,7 @@ function renderDepartmentOptions() {
 
 async function loadShortlist() {
   try {
-    const response = await fetch("/shortlist");
+    const response = await fetch("/shortlist", { headers: { "X-UI-Language": state.uiLanguage } });
     if (!response.ok) {
       throw new Error("Feil ved lasting av kortliste.");
     }
@@ -206,14 +338,14 @@ async function handleAnalyze(event) {
   const files = elements.fileUpload.files || [];
   const hasFiles = files.length > 0;
   if (!trimmedText && !hasFiles) {
-    showToast("Legg inn en kort beskrivelse eller last opp filer før du analyserer.", "warning");
+    showToast(copy[state.uiLanguage].toastMissingTopic, "warning");
     return;
   }
 
   state.topicText = topicText;
   state.isAnalyzing = true;
   updateAnalyzeButtonState();
-  elements.analyzeBtn.textContent = "Analyserer…";
+  elements.analyzeBtn.textContent = state.uiLanguage === "en" ? "Analyzing…" : "Analyserer…";
 
   try {
     const formData = new FormData();
@@ -228,9 +360,10 @@ async function handleAnalyze(event) {
     const response = await fetch("/analyze-topic", {
       method: "POST",
       body: formData,
+      headers: { "X-UI-Language": state.uiLanguage },
     });
     if (!response.ok) {
-      let errorMessage = "Analyse mislyktes.";
+      let errorMessage = copy[state.uiLanguage].toastAnalyzeFail;
       try {
         const data = await response.json();
         const detail = data?.detail;
@@ -249,15 +382,15 @@ async function handleAnalyze(event) {
     state.normalizedPreview = data.normalizedPreview || "";
 
     renderThemes();
-    elements.normalizedPreview.textContent = state.normalizedPreview || "Ingen data ennå.";
+    elements.normalizedPreview.textContent = state.normalizedPreview || copy[state.uiLanguage].previewPlaceholder;
     setView("themes");
-    showToast("Temaer analysert. Gjennomgå før matching.");
+    showToast(copy[state.uiLanguage].toastAnalyzeSuccess);
   } catch (error) {
     console.error("Analyse mislyktes:", error);
-    showToast(error.message || "Noe gikk galt under analysen.", "error");
+    showToast(error.message || copy[state.uiLanguage].toastAnalyzeFail, "error");
   } finally {
     state.isAnalyzing = false;
-    elements.analyzeBtn.textContent = "Analyser tema";
+    elements.analyzeBtn.textContent = copy[state.uiLanguage].analyzeBtn;
     updateAnalyzeButtonState();
   }
 }
@@ -291,7 +424,7 @@ function renderThemes() {
   if (!state.themes.length) {
     const empty = document.createElement("p");
     empty.className = "empty-state";
-    empty.textContent = "Ingen temaer foreslått ennå. Legg til manuelt.";
+    empty.textContent = state.uiLanguage === "en" ? "No themes yet. Add one." : "Ingen temaer foreslått ennå. Legg til manuelt.";
     elements.themesChips.appendChild(empty);
     return;
   }
@@ -318,7 +451,7 @@ function addChipFromInput() {
   const value = elements.addChipInput.value.trim();
   if (!value) return;
   if (state.themes.includes(value.toLowerCase())) {
-    showToast("Temaet ligger allerede i listen.", "warning");
+    showToast(state.uiLanguage === "en" ? "Theme already added." : "Temaet ligger allerede i listen.", "warning");
     return;
   }
   state.themes.push(value.toLowerCase());
@@ -328,27 +461,30 @@ function addChipFromInput() {
 
 async function fetchMatches() {
   if (!state.themes.length) {
-    showToast("Legg til minst ett tema før du søker.", "warning");
+    showToast(copy[state.uiLanguage].toastMissingTheme, "warning");
     return;
   }
   if (state.isMatching) return;
 
   state.isMatching = true;
-  elements.runMatchBtn.textContent = "Søker…";
+  elements.runMatchBtn.textContent = state.uiLanguage === "en" ? "Searching…" : "Søker…";
   setView("results");
-  elements.resultsList.innerHTML = '<div class="empty-state">Søker etter relevante ansatte…</div>';
+  elements.resultsList.innerHTML = `<div class="empty-state">${copy[state.uiLanguage].toastSearching}</div>`;
 
   try {
     const response = await fetch("/match", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "X-UI-Language": state.uiLanguage,
+      },
       body: JSON.stringify({
         themes: state.themes,
         department: state.selectedDepartment || null,
       }),
     });
     if (!response.ok) {
-      let errorMessage = "Kunne ikke hente treff.";
+      let errorMessage = copy[state.uiLanguage].toastMatchFail;
       try {
         const data = await response.json();
         const detail = data?.detail;
@@ -366,19 +502,19 @@ async function fetchMatches() {
     state.resultLookup = new Map(state.results.map((result) => [result.id, result]));
     sortResults();
     renderResults();
-    showToast(`Fant ${state.results.length} kandidater.`);
+    showToast(copy[state.uiLanguage].toastMatchesFound(state.results.length));
   } catch (error) {
-    showToast(error.message || "Noe gikk galt under søket.", "error");
+    showToast(error.message || copy[state.uiLanguage].toastMatchFail, "error");
   } finally {
     state.isMatching = false;
-    elements.runMatchBtn.textContent = "Finn relevante ansatte";
+    elements.runMatchBtn.textContent = copy[state.uiLanguage].findMatches;
   }
 }
 
 function sortResults() {
   const sort = elements.resultsSort.value;
   if (sort === "alpha") {
-    state.results.sort((a, b) => a.name.localeCompare(b.name, "nb"));
+    state.results.sort((a, b) => a.name.localeCompare(b.name, state.uiLanguage === "en" ? "en" : "nb"));
   } else {
     state.results.sort((a, b) => b.score - a.score);
   }
@@ -387,13 +523,13 @@ function sortResults() {
 function renderResults() {
   elements.resultsList.innerHTML = "";
   if (!state.results.length) {
-    elements.resultsList.innerHTML =
-      '<div class="empty-state">Ingen treff. Juster temaene eller fjern avdelingsfilteret.</div>';
-    elements.resultsCount.textContent = "Ingen treff.";
+    elements.resultsList.innerHTML = `<div class="empty-state">${copy[state.uiLanguage].resultsCountNone}</div>`;
+    elements.resultsCount.textContent = copy[state.uiLanguage].resultsCountNone;
     return;
   }
 
-  elements.resultsCount.textContent = `Viser ${state.results.length} treff`;
+  elements.resultsCount.textContent =
+    state.uiLanguage === "en" ? `Showing ${state.results.length} results` : `Viser ${state.results.length} treff`;
 
   state.results.forEach((result) => {
     const inShortlist = state.shortlist.some((item) => item.id === result.id);
@@ -412,15 +548,14 @@ function renderResults() {
       ${keywordHtml}
       <div class="result-actions">
         <button class="btn-secondary" data-action="toggle-shortlist" data-id="${result.id}">
-          ${inShortlist ? "Fjern fra kortliste" : "Legg til kortliste"}
+          ${inShortlist ? (state.uiLanguage === "en" ? "Remove from shortlist" : "Fjern fra kortliste") : state.uiLanguage === "en" ? "Add to shortlist" : "Legg til kortliste"}
         </button>
-        <button class="btn-text" data-action="view-sources" data-id="${result.id}">Vis kilder</button>
-        <a class="btn-text" href="${result.profile_url}" target="_blank" rel="noopener">Åpne profil</a>
+        <button class="btn-text" data-action="view-sources" data-id="${result.id}">${state.uiLanguage === "en" ? "View sources" : "Vis kilder"}</button>
+        <a class="btn-text" href="${result.profile_url}" target="_blank" rel="noopener">${state.uiLanguage === "en" ? "Open profile" : "Åpne profil"}</a>
       </div>
     `;
     elements.resultsList.appendChild(card);
   });
-
 }
 
 function handleResultsClick(event) {
@@ -439,11 +574,11 @@ function toggleShortlistItem(resultId) {
   const existingIndex = state.shortlist.findIndex((item) => item.id === resultId);
   if (existingIndex >= 0) {
     state.shortlist.splice(existingIndex, 1);
-    showToast("Fjernet fra kortlisten.");
+    showToast(copy[state.uiLanguage].toastShortlistRemove);
   } else {
     const result = state.resultLookup.get(resultId);
     if (!result) {
-      showToast("Fant ikke kandidaten i resultatlisten.", "error");
+      showToast(state.uiLanguage === "en" ? "Candidate not found in results." : "Fant ikke kandidaten i resultatlisten.", "error");
       return;
     }
     state.shortlist.push({
@@ -456,7 +591,7 @@ function toggleShortlistItem(resultId) {
       keywords: result.keywords || [],
       notes: "",
     });
-    showToast("Lagt til i kortlisten.");
+    showToast(copy[state.uiLanguage].toastShortlistAdd);
   }
   renderResults();
   renderShortlist();
@@ -467,8 +602,7 @@ function toggleShortlistItem(resultId) {
 function renderShortlist() {
   elements.shortlistItems.innerHTML = "";
   if (!state.shortlist.length) {
-    elements.shortlistItems.innerHTML =
-      '<div class="empty-state">Kortlisten er tom. Legg til kandidater fra resultatsiden.</div>';
+    elements.shortlistItems.innerHTML = `<div class="empty-state">${copy[state.uiLanguage].toastShortlistEmpty}</div>`;
     return;
   }
 
@@ -491,12 +625,11 @@ function renderShortlist() {
           )
           .join("<br />")}
       </div>
-      <textarea data-id="${item.id}" placeholder="Egennotater">${item.notes || ""}</textarea>
-      <button class="btn-text" data-remove="${item.id}">Fjern</button>
+      <textarea data-id="${item.id}" placeholder="${state.uiLanguage === "en" ? "Notes" : "Egennotater"}">${item.notes || ""}</textarea>
+      <button class="btn-text" data-remove="${item.id}">${state.uiLanguage === "en" ? "Remove" : "Fjern"}</button>
     `;
     elements.shortlistItems.appendChild(card);
   });
-
 }
 
 function renderKeywordSection(keywords) {
@@ -507,9 +640,10 @@ function renderKeywordSection(keywords) {
     .slice(0, 8)
     .map((keyword) => `<span class="keyword-chip">${keyword}</span>`)
     .join("");
+  const label = state.uiLanguage === "en" ? "Keywords:" : "Nøkkelord:";
   return `
     <div class="keyword-list">
-      <span class="keyword-label">Nøkkelord:</span>
+      <span class="keyword-label">${label}</span>
       <div class="keyword-chips">${chips}</div>
     </div>
   `;
@@ -538,7 +672,7 @@ function handleShortlistClick(event) {
 }
 
 function updateShortlistBadge() {
-  elements.shortlistButton.textContent = `Kortliste (${state.shortlist.length})`;
+  elements.shortlistButton.innerHTML = `${copy[state.uiLanguage].shortlistButton} (${state.shortlist.length})`;
 }
 
 function toggleShortlist(open) {
@@ -550,17 +684,17 @@ function toggleShortlist(open) {
 function openSourcesModal(resultId) {
   const result = state.resultLookup.get(resultId);
   if (!result || !result.citations || !result.citations.length) {
-    showToast("Ingen kilder tilgjengelig for denne kandidaten.", "warning");
+    showToast(state.uiLanguage === "en" ? "No sources available." : "Ingen kilder tilgjengelig for denne kandidaten.", "warning");
     return;
   }
-  elements.modalTitle.textContent = `Kilder brukt for: ${result.name}`;
+  elements.modalTitle.textContent = `${state.uiLanguage === "en" ? "Sources for" : "Kilder brukt for"}: ${result.name}`;
   elements.modalBody.innerHTML = result.citations
     .map(
       (citation) => `
       <div class="modal-citation">
         <h4>${citation.id} ${citation.title}</h4>
         <p>${citation.snippet}</p>
-        <a href="${citation.url}" target="_blank" rel="noopener">Åpne lenke</a>
+        <a href="${citation.url}" target="_blank" rel="noopener">${state.uiLanguage === "en" ? "Open link" : "Åpne lenke"}</a>
       </div>
     `
     )
@@ -585,17 +719,17 @@ async function saveShortlist() {
   try {
     await fetch("/shortlist", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "X-UI-Language": state.uiLanguage },
       body: JSON.stringify({ items: state.shortlist }),
     });
   } catch (error) {
-    showToast("Kunne ikke lagre kortlisten.", "error");
+    showToast(copy[state.uiLanguage].toastShortlistSaveFail, "error");
   }
 }
 
 async function exportShortlist(format) {
   if (!state.shortlist.length) {
-    showToast("Kortlisten er tom.", "warning");
+    showToast(copy[state.uiLanguage].toastShortlistEmpty, "warning");
     return;
   }
 
@@ -603,8 +737,8 @@ async function exportShortlist(format) {
     const blob = new Blob([JSON.stringify({ items: state.shortlist }, null, 2)], {
       type: "application/json",
     });
-    downloadBlob(blob, `kortliste-${Date.now()}.json`);
-    showToast("Kortliste eksportert til JSON.");
+    downloadBlob(blob, `shortlist-${Date.now()}.json`);
+    showToast(copy[state.uiLanguage].toastExportDone(null));
     return;
   }
 
@@ -616,7 +750,7 @@ async function exportShortlist(format) {
     await saveShortlist();
     const response = await fetch("/shortlist/export", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "X-UI-Language": state.uiLanguage },
       body: JSON.stringify({
         format,
         metadata: {
@@ -627,7 +761,7 @@ async function exportShortlist(format) {
       }),
     });
     if (!response.ok) {
-      let errorMessage = "Eksport mislyktes.";
+      let errorMessage = copy[state.uiLanguage].toastExportFail;
       try {
         const data = await response.json();
         const detail = data?.detail;
@@ -641,13 +775,9 @@ async function exportShortlist(format) {
       throw new Error(errorMessage);
     }
     const data = await response.json();
-    if (data?.path) {
-      showToast(`Eksport lagret: ${data.path}`);
-    } else {
-      showToast("Eksport fullført.");
-    }
+    showToast(copy[state.uiLanguage].toastExportDone(data?.path));
   } catch (error) {
-    showToast(error.message || "Eksport mislyktes.", "error");
+    showToast(error.message || copy[state.uiLanguage].toastExportFail, "error");
   }
 }
 

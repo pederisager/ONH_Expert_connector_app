@@ -47,9 +47,27 @@ class RagConfig(BaseModel):
     chunk_overlap: int = Field(alias="chunk-overlap", default=60)
     max_chunks_per_profile: int = Field(alias="max-chunks-per-profile", default=40)
     embedding_model: str = Field(
-        alias="embedding-model", default="sentence-transformers/all-MiniLM-L6-v2"
+        alias="embedding-model", default="sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
     )
     embedding_batch_size: int = Field(alias="embedding-batch-size", default=32)
+
+
+class TranslationConfig(BaseModel):
+    enabled: bool = False
+    provider: str = "none"
+    model_name: str | None = Field(alias="model-name", default=None)
+    device: str | None = None
+    timeout_seconds: float = Field(alias="timeout-seconds", default=20.0)
+    cache_size: int = Field(alias="cache-size", default=256)
+    max_chars: int = Field(alias="max-chars", default=4000)
+
+
+class LanguageConfig(BaseModel):
+    default_ui: str = Field(alias="default-ui", default="no")
+    detection_enabled: bool = Field(alias="detection-enabled", default=True)
+    embedding_language_mode: str = Field(alias="embedding-language-mode", default="multilingual")
+    llm_language_mode: str = Field(alias="llm-language-mode", default="match-user")
+    translation: TranslationConfig = Field(default_factory=TranslationConfig)
 
 
 class UIConfig(BaseModel):
@@ -69,6 +87,7 @@ class AppConfig(BaseModel):
     results: ResultsConfig
     rag: RagConfig
     ui: UIConfig
+    language: LanguageConfig = Field(default_factory=LanguageConfig)
     security: SecurityConfig
 
 

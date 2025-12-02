@@ -23,8 +23,22 @@ rag:
   chunk-size: 400
   chunk-overlap: 60
   max-chunks-per-profile: 40
-  embedding-model: "sentence-transformers/all-MiniLM-L6-v2"
+  embedding-model: "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
   embedding-batch-size: 32
+
+language:
+  default-ui: "no"
+  detection-enabled: true
+  embedding-language-mode: "multilingual"
+  llm-language-mode: "match-user"
+  translation:
+    enabled: false
+    provider: "none"
+    model-name: null
+    device: "cpu"
+    timeout-seconds: 20
+    cache-size: 256
+    max-chars: 4000
 
 ui:
   allow-department-filter: true

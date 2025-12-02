@@ -1,4 +1,4 @@
-# Repository Guidelines
+ï»¿# Repository Guidelines
 
 ## Agent Maintenance
 Codex must automatically update this document whenever its changes introduce, remove, or materially alter guidance that future agents need to follow. Make that edit in the same task so the new expectations are captured immediately. Skip touching `AGENTS.md` for routine prompts that leave the policies and workflows unchanged.
@@ -20,9 +20,14 @@ Staff documents fetched from ONH/NVA sources are cached as whole `StaffDocument`
 
 Citation snippets returned from `/match` now use a theme-aware sentence window and allow up to ~3000 characters (see `routes.CITATION_SNIPPET_LIMIT`) so the LLM receives full chunk context. Avoid shrinking this limit without revalidating match quality.
 
+Language handling
+- `data/app.config.yaml` now contains a `language` block controlling detection, embedding/LLM language modes (`multilingual` vs `en-only`), and the translation backend. Translation is off by default and uses a local/no-op translator unless explicitly enabled.
+- `create_app` attaches `translator` and `language_config` to `app.state`; `routes.match` builds a per-request `LanguageContext` from the `lang` query param or `X-UI-Language`/`X-Language` headers (fallback: `ui.language`).
+- When `llm_language_mode` is `en-only`, snippets/themes are translated to EN before LLM prompts and translated back to the user language if translation is enabled. RAG queries are translated only if `embedding_language_mode` is `en-only`.
+
 ## Build, Test, and Development Commands
 Default to the python3 command for all scripts/CLI examples on this project (some environments reject python).
-Create a virtual environment before installing dependencies: `python3 -m venv .venv && source .venv/bin/activate`. Install Python packages with `pip install -r requirements.txt` (pins torch 2.3.1+cu118 via `--extra-index-url https://download.pytorch.org/whl/cu118` so Pascal GPUs stay supported; do not bump torch without checking sm_61 coverage). Build or refresh the retrieval index after editing `data/staff.yaml` or source content (`python3 -m app.index.build`). Run the API locally with `uvicorn app.main:app --reload` so the static UI served from `app/static` stays current. Run the full suite with `pytest` (add `--cov=app` before merging). Static assets are plain files in `app/static`—no bundler is needed. The default embedding backend is `sentence-transformers` on CUDA; ensure the virtualenv has the pinned CUDA-enabled PyTorch + `sentence-transformers`, or update `data/models.yaml` to another backend (e.g., Ollama) and rebuild the index if you deviate. Leaving `embedding_model.device` empty or set to `auto` now lets the embedder factory auto-detect CUDA (then MPS, then CPU) for both the offline index builder and online retriever—only pin it to `cpu` if you explicitly need to disable accelerators.
+Create a virtual environment before installing dependencies: `python3 -m venv .venv && source .venv/bin/activate`. Install Python packages with `pip install -r requirements.txt` (pins torch 2.3.1+cu118 via `--extra-index-url https://download.pytorch.org/whl/cu118` so Pascal GPUs stay supported; do not bump torch without checking sm_61 coverage). Build or refresh the retrieval index after editing `data/staff.yaml` or source content (`python3 -m app.index.build`). Run the API locally with `uvicorn app.main:app --reload` so the static UI served from `app/static` stays current. Run the full suite with `pytest` (add `--cov=app` before merging). Static assets are plain files in `app/static`-no bundler is needed. The default embedding backend is multilingual SentenceTransformers (`paraphrase-multilingual-mpnet-base-v2`) on CUDA; ensure the virtualenv has the pinned CUDA-enabled PyTorch + `sentence-transformers`, or update `data/models.yaml` to another backend (e.g., Ollama) and rebuild the index if you deviate. Leaving `embedding_model.device` empty or set to `auto` now lets the embedder factory auto-detect CUDA (then MPS, then CPU) for both the offline index builder and online retriever-only pin it to `cpu` if you explicitly need to disable accelerators.
 
 - Keep `staff.csv` as the entry point. Run `bash scripts/update_staff.sh [key_file] [base_url]` to refresh `data/staff.yaml`, `data/staff_records.jsonl`, sync NVA publications to `data/nva/results.jsonl`, and rebuild the index. Defaults: `nva_api_keys_test.json`, `https://api.test.nva.aws.unit.no`. API key files are git-ignored; never commit secrets.
 - Profile `/match` hot spots with `python3 scripts/profile_match.py ...` (see `docs/performance_profiling.md`). The script reuses the production helpers and records per-stage timings (NVA merge, TF-IDF, embeddings, LLM explainer) so we can justify performance tweaks before merging.
@@ -42,7 +47,3 @@ Adopt Conventional Commits (`feat:`, `fix:`, `docs:`) and limit subject lines to
 Never add external domains to `data/app.config.yaml` without approval; keep `allowlist_domains` tight. Store staff metadata solely in `data/staff.yaml` and cite their public sources. Scrub uploads in `fetch_utils.py` for unsupported MIME types and enforce the `max_upload_mb` guardrails. Rotate cache contents by respecting `retention_days`, and document experimental model changes inside `models/README.txt`.
 
 If future agents detect that the NVA search endpoints have stopped responding, assume the service may have been deprecated and immediately notify the requester. Suggest rebuilding the integration against the latest NVA REST API as a fallback.
-
-
-
-
