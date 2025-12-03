@@ -16,6 +16,7 @@ import httpx
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from .nva_lookup import extract_pub_id, preferred_nva_url
 
 try:  # Optional, lightweight stemming for better Norwegian/English grouping.
     from nltk.stem.snowball import SnowballStemmer
@@ -440,6 +441,39 @@ def _hostname(url: str) -> str:
     return parsed.netloc or url
 
 
+def _normalize_source_url(url: str) -> str:
+    """Prefer stable/public URLs for citations."""
+    if not url:
+        return url
+
+    lowered = url.lower().strip()
+    # Preserve DOI links.
+    if "doi.org" in lowered:
+        return url
+
+    # Map NVA API endpoints to DOI/working API URLs.
+    nva_prefixes = (
+        "https://api.nva.unit.no/publication/",
+        "https://api.test.nva.aws.unit.no/publication/",
+    )
+    for prefix in nva_prefixes:
+        if lowered.startswith(prefix):
+            pub_id = lowered.rstrip("/").split("/")[-1]
+            if pub_id:
+                preferred = preferred_nva_url(pub_id, url)
+                if preferred:
+                    return preferred
+            return url
+
+    pub_id = extract_pub_id(url)
+    if pub_id:
+        preferred = preferred_nva_url(pub_id, url)
+        if preferred:
+            return preferred
+
+    return url
+
+
 class MatchEngine:
     """Hybrid scoring across TF-IDF semantics, keyword overlap, and tags."""
 
@@ -730,7 +764,7 @@ class MatchEngine:
                     {
                         "id": f"[{citation_id}]",
                         "title": page.title or _hostname(page.url),
-                        "url": page.url,
+                        "url": _normalize_source_url(page.url),
                         "snippet": sentence[:300].rstrip(),
                     }
                 )

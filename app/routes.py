@@ -28,6 +28,7 @@ from .match_engine import (
     tokenize,
 )
 from .rag import EmbeddingRetriever, RetrievalQuery
+from .nva_lookup import preferred_nva_url, extract_pub_id
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -574,22 +575,28 @@ def _retrieval_result_to_match_item(result, themes: Sequence[str], *, language_c
 
 def _resolve_citation_url(chunk: Chunk) -> str:
     metadata = chunk.metadata or {}
-    publication_id = metadata.get("nva_publication_id")
-    if isinstance(publication_id, str) and publication_id.strip():
-        return f"https://nva.sikt.no/registration/{publication_id.strip()}"
+    # 1) Prefer original/DOI URLs when present.
+    doi = str(metadata.get("doi") or "").strip()
+    if doi:
+        if doi.lower().startswith("http"):
+            return doi
+        return f"https://doi.org/{doi}"
 
-    url = chunk.source_url or str(metadata.get("profile_url") or "")
-    nva_prefixes = (
-        "https://api.nva.unit.no/publication/",
-        "https://api.test.nva.aws.unit.no/publication/",
+    source_url = str(chunk.source_url or metadata.get("source_url") or metadata.get("profile_url") or "").strip()
+    if source_url and "doi.org" in source_url.lower():
+        return source_url
+
+    publication_id = (
+        metadata.get("nva_publication_id")
+        or extract_pub_id(source_url)
+        or metadata.get("id")
+        or ""
     )
-    for prefix in nva_prefixes:
-        if url.startswith(prefix):
-            pub_id = url.rstrip("/").split("/")[-1]
-            if pub_id:
-                return f"https://nva.sikt.no/registration/{pub_id}"
-
-    return url
+    publication_id = str(publication_id).strip()
+    preferred = preferred_nva_url(publication_id, source_url) if publication_id else None
+    if preferred:
+        return preferred
+    return source_url
 
 
 def _chunks_to_citations(chunks: Sequence[Chunk], themes: Sequence[str]) -> list[Citation]:
