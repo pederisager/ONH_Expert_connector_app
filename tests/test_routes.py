@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from pathlib import Path
 import types
 
 import pytest
@@ -44,46 +43,6 @@ async def test_match_endpoint_returns_ranked_result(client) -> None:
     assert data["results"], "Forventer minst ett treff"
     top = data["results"][0]
     assert top["citations"]
-
-
-@pytest.mark.asyncio
-async def test_shortlist_persistence_and_export(client, tmp_path) -> None:
-    shortlist_payload = {
-        "items": [
-            {
-                "id": "abc123",
-                "name": "Test Forsker",
-                "department": "Psykologi",
-                "why": "Matcher psykologi.",
-                "citations": [
-                    {
-                        "id": "[1]",
-                        "title": "Stub",
-                        "url": "https://example.com",
-                        "snippet": "Forskning på psykologi.",
-                    }
-                ],
-                "notes": "Prioritert kandidat",
-            }
-        ]
-    }
-
-    save_response = await client.post("/shortlist", json=shortlist_payload)
-    assert save_response.status_code == 200
-
-    fetch_response = await client.get("/shortlist")
-    assert fetch_response.status_code == 200
-    assert fetch_response.json()["items"][0]["name"] == "Test Forsker"
-
-    export_response = await client.post(
-        "/shortlist/export",
-        json={"format": "pdf", "metadata": {"topic": "Psykologi"}},
-    )
-    assert export_response.status_code == 200
-    path_str = export_response.json()["path"]
-    exporter_dir = client.app.state.shortlist_exporter.base_dir  # type: ignore[attr-defined]
-    export_path = (Path(exporter_dir.parent.parent) / path_str).resolve()
-    assert export_path.exists()
 
 
 @pytest.mark.asyncio

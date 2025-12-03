@@ -13,14 +13,12 @@ from fastapi.staticfiles import StaticFiles
 from . import routes
 from .cache_manager import CacheManager
 from .config_loader import load_app_config, load_models_config, load_staff_profiles
-from .exporter import ShortlistExporter
 from .fetch_utils import FetchUtils
 from .file_parser import FileParser
 from .index import IndexPaths, LocalVectorStore, create_embedding_backend
 from .llm_explainer import LLMExplainer
 from .language_utils import create_translator
 from .match_engine import MatchEngine
-from .shortlist_store import ShortlistStore
 from .rag import EmbeddingRetriever
 
 LOGGER = logging.getLogger(__name__)
@@ -65,10 +63,6 @@ def create_app() -> FastAPI:
     llm_explainer = LLMExplainer(model_config=models_config.llm_model.model_dump())
     translator = create_translator(app_config.language.translation)
 
-    exports_dir = PROJECT_ROOT / "outputs" / "exports"
-    shortlist_store = ShortlistStore(exports_dir / "shortlist.json")
-    shortlist_exporter = ShortlistExporter(exports_dir)
-
     match_engine = MatchEngine(
         embedding_model_name=models_config.embedding_model.name,
         embedding_backend=models_config.embedding_model.backend,
@@ -98,8 +92,6 @@ def create_app() -> FastAPI:
     app.state.llm_explainer = llm_explainer
     app.state.translator = translator
     app.state.language_config = app_config.language
-    app.state.shortlist_store = shortlist_store
-    app.state.shortlist_exporter = shortlist_exporter
     app.state.vector_store = vector_store
     app.state.embedding_retriever = embedding_retriever
     app.state.vector_index_ready = vector_index_ready

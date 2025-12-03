@@ -7,7 +7,6 @@ from fastapi import FastAPI
 from httpx import ASGITransport, AsyncClient
 
 from app.cache_manager import CacheManager
-from app.exporter import ShortlistExporter
 from app.index import embedder_factory
 from app.index.builder import DummyEmbeddingBackend
 
@@ -30,7 +29,6 @@ embedder_factory.SentenceTransformerBackend = TestSentenceTransformerBackend  # 
 
 from app.main import create_app
 from app.match_engine import MatchEngine, StaffProfile
-from app.shortlist_store import ShortlistStore
 
 
 async def _prepare_app(
@@ -48,11 +46,6 @@ async def _prepare_app(
     cache_dir = tmp_path / "cache"
     cache_dir.mkdir(parents=True, exist_ok=True)
     app.state.cache_manager = CacheManager(directory=cache_dir, retention_days=1, enabled=True)
-
-    exports_dir = tmp_path / "exports"
-    exports_dir.mkdir(parents=True, exist_ok=True)
-    app.state.shortlist_store = ShortlistStore(exports_dir / "shortlist.json")
-    app.state.shortlist_exporter = ShortlistExporter(exports_dir)
 
     default_profiles = staff_profiles or [
         StaffProfile(

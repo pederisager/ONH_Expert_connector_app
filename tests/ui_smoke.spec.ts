@@ -13,7 +13,7 @@ test.describe('ONH Expert Connector UI smoke flow', () => {
     ensureArtifactsDir();
   });
 
-  test('user can analyze a topic, fetch matches, and manage shortlist', async ({ page }, testInfo) => {
+  test('user can analyze a topic and fetch matches', async ({ page }, testInfo) => {
     test.slow();
     const consoleMessages: string[] = [];
     page.on('console', (msg) => {
@@ -51,24 +51,6 @@ test.describe('ONH Expert Connector UI smoke flow', () => {
 
       const screenshotPath = path.join(artifactsDir, 'results.png');
       await page.screenshot({ path: screenshotPath, fullPage: true });
-    });
-
-    await test.step('manage shortlist and export JSON', async () => {
-      const firstCard = page.locator('.result-card').first();
-      await firstCard.locator('button[data-action="toggle-shortlist"]').click();
-      await expect(page.locator('#shortlistButton')).toHaveText(/Kortliste \(1\)/);
-
-      await page.click('#shortlistButton');
-      await expect(page.locator('#shortlistDrawer')).toHaveClass(/open/);
-      await expect(page.locator('.shortlist-card').first()).toBeVisible();
-
-      const downloadPromise = page.waitForEvent('download');
-      await page.click('#exportJSONBtn');
-      const download = await downloadPromise;
-      const downloadPath = path.join(artifactsDir, 'shortlist.json');
-      await download.saveAs(downloadPath);
-
-      await page.click('#closeShortlistBtn');
     });
 
     const logPath = path.join(

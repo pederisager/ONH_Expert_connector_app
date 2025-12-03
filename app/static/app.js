@@ -10,8 +10,6 @@
   selectedDepartment: "",
   results: [],
   resultLookup: new Map(),
-  shortlist: [],
-  shortlistOpen: false,
   isAnalyzing: false,
   isMatching: false,
   uiLanguage: "no",
@@ -45,10 +43,6 @@ const copy = {
     sortAlpha: "Alfabetisk",
     resultsCountNone: "Ingen treff ennå.",
     backToThemes: "Tilbake til temaer",
-    shortlistTitle: "Kortliste",
-    shortlistButton: "Kortliste",
-    exportPdf: "Eksporter som PDF",
-    exportJson: "Eksporter som JSON",
     modalTitle: "Kilder",
     toastAnalyzeFail: "Analyse mislyktes.",
     toastAnalyzeSuccess: "Temaer analysert. Gjennomgå før matching.",
@@ -57,12 +51,6 @@ const copy = {
     toastSearching: "Søker etter relevante ansatte…",
     toastMatchesFound: (n) => `Fant ${n} kandidater.`,
     toastMatchFail: "Kunne ikke hente treff.",
-    toastShortlistAdd: "Lagt til i kortlisten.",
-    toastShortlistRemove: "Fjernet fra kortlisten.",
-    toastShortlistEmpty: "Kortlisten er tom.",
-    toastShortlistSaveFail: "Kunne ikke lagre kortlisten.",
-    toastExportFail: "Eksport mislyktes.",
-    toastExportDone: (path) => (path ? `Eksport lagret: ${path}` : "Eksport fullført."),
   },
   en: {
     noscript: "Please enable JavaScript to use ONH Expert Connector.",
@@ -91,10 +79,6 @@ const copy = {
     sortAlpha: "Alphabetical",
     resultsCountNone: "No results yet.",
     backToThemes: "Back to themes",
-    shortlistTitle: "Shortlist",
-    shortlistButton: "Shortlist",
-    exportPdf: "Export as PDF",
-    exportJson: "Export as JSON",
     modalTitle: "Sources",
     toastAnalyzeFail: "Analysis failed.",
     toastAnalyzeSuccess: "Themes analyzed. Review before matching.",
@@ -103,12 +87,6 @@ const copy = {
     toastSearching: "Searching for relevant staff…",
     toastMatchesFound: (n) => `Found ${n} candidates.`,
     toastMatchFail: "Could not fetch matches.",
-    toastShortlistAdd: "Added to shortlist.",
-    toastShortlistRemove: "Removed from shortlist.",
-    toastShortlistEmpty: "Shortlist is empty.",
-    toastShortlistSaveFail: "Could not save shortlist.",
-    toastExportFail: "Export failed.",
-    toastExportDone: (path) => (path ? `Export saved: ${path}` : "Export completed."),
   },
 };
 
@@ -137,20 +115,12 @@ const elements = {
   resultsCount: document.getElementById("resultsCount"),
   backToThemesBtn: document.getElementById("backToThemesBtn"),
   resultsList: document.getElementById("resultsList"),
-  shortlistButton: document.getElementById("shortlistButton"),
-  shortlistDrawer: document.getElementById("shortlistDrawer"),
-  closeShortlistBtn: document.getElementById("closeShortlistBtn"),
-  shortlistItems: document.getElementById("shortlistItems"),
-  exportPDFBtn: document.getElementById("exportPDFBtn"),
-  exportJSONBtn: document.getElementById("exportJSONBtn"),
   modalBackdrop: document.getElementById("modalBackdrop"),
   modalBody: document.getElementById("modalBody"),
   modalTitle: document.getElementById("modalTitle"),
   modalCloseBtn: document.getElementById("modalCloseBtn"),
   toastContainer: document.getElementById("toastContainer"),
 };
-
-let shortlistSaveTimeout = null;
 
 window.addEventListener("DOMContentLoaded", () => {
   setupListeners();
@@ -162,9 +132,7 @@ async function initialize() {
     await loadConfig();
     state.uiLanguage = (state.config.ui?.language || "no").toLowerCase();
     applyLanguage(state.uiLanguage);
-    await loadShortlist();
     renderDepartmentOptions();
-    updateShortlistBadge();
   } catch (error) {
     showToast(error.message || "Klarte ikke å laste konfigurasjon.", "error");
   }
@@ -201,11 +169,6 @@ function setupListeners() {
   elements.backToThemesBtn.addEventListener("click", () => setView("themes"));
   elements.backToInputBtn.addEventListener("click", () => setView("home"));
 
-  elements.shortlistButton.addEventListener("click", () => toggleShortlist(true));
-  elements.closeShortlistBtn.addEventListener("click", () => toggleShortlist(false));
-  elements.exportJSONBtn.addEventListener("click", () => exportShortlist("json"));
-  elements.exportPDFBtn.addEventListener("click", () => exportShortlist("pdf"));
-
   elements.modalCloseBtn.addEventListener("click", closeModal);
   elements.modalBackdrop.addEventListener("click", (event) => {
     if (event.target === elements.modalBackdrop) {
@@ -215,8 +178,6 @@ function setupListeners() {
 
   elements.themesChips.addEventListener("click", handleThemesChipClick);
   elements.resultsList.addEventListener("click", handleResultsClick);
-  elements.shortlistItems.addEventListener("input", handleShortlistInput);
-  elements.shortlistItems.addEventListener("click", handleShortlistClick);
 }
 
 function applyLanguage(lang) {
@@ -241,7 +202,6 @@ function applyLanguage(lang) {
   elements.addChipInput.placeholder = state.uiLanguage === "en" ? "Add theme…" : "Legg til tema…";
   updateFileHelpText();
   renderResults();
-  renderShortlist();
 }
 
 async function loadConfig() {
@@ -285,20 +245,6 @@ function renderDepartmentOptions() {
       select.appendChild(option);
     });
   });
-}
-
-async function loadShortlist() {
-  try {
-    const response = await fetch("/shortlist", { headers: { "X-UI-Language": state.uiLanguage } });
-    if (!response.ok) {
-      throw new Error("Feil ved lasting av kortliste.");
-    }
-    const data = await response.json();
-    state.shortlist = data.items || [];
-    renderShortlist();
-  } catch (error) {
-    showToast(error.message, "warning");
-  }
 }
 
 function handleTopicInput(event) {
@@ -532,7 +478,6 @@ function renderResults() {
     state.uiLanguage === "en" ? `Showing ${state.results.length} results` : `Viser ${state.results.length} treff`;
 
   state.results.forEach((result) => {
-    const inShortlist = state.shortlist.some((item) => item.id === result.id);
     const keywordHtml = renderKeywordSection(result.keywords);
     const card = document.createElement("article");
     card.className = "result-card";
@@ -547,9 +492,6 @@ function renderResults() {
       <p class="result-why">${result.why}</p>
       ${keywordHtml}
       <div class="result-actions">
-        <button class="btn-secondary" data-action="toggle-shortlist" data-id="${result.id}">
-          ${inShortlist ? (state.uiLanguage === "en" ? "Remove from shortlist" : "Fjern fra kortliste") : state.uiLanguage === "en" ? "Add to shortlist" : "Legg til kortliste"}
-        </button>
         <button class="btn-text" data-action="view-sources" data-id="${result.id}">${state.uiLanguage === "en" ? "View sources" : "Vis kilder"}</button>
         <a class="btn-text" href="${result.profile_url}" target="_blank" rel="noopener">${state.uiLanguage === "en" ? "Open profile" : "Åpne profil"}</a>
       </div>
@@ -563,73 +505,9 @@ function handleResultsClick(event) {
   const id = target.dataset.id;
   if (!id) return;
   const action = target.dataset.action;
-  if (action === "toggle-shortlist") {
-    toggleShortlistItem(id);
-  } else if (action === "view-sources") {
+  if (action === "view-sources") {
     openSourcesModal(id);
   }
-}
-
-function toggleShortlistItem(resultId) {
-  const existingIndex = state.shortlist.findIndex((item) => item.id === resultId);
-  if (existingIndex >= 0) {
-    state.shortlist.splice(existingIndex, 1);
-    showToast(copy[state.uiLanguage].toastShortlistRemove);
-  } else {
-    const result = state.resultLookup.get(resultId);
-    if (!result) {
-      showToast(state.uiLanguage === "en" ? "Candidate not found in results." : "Fant ikke kandidaten i resultatlisten.", "error");
-      return;
-    }
-    state.shortlist.push({
-      id: result.id,
-      name: result.name,
-      department: result.department,
-      why: result.why,
-      citations: result.citations || [],
-      score: result.score,
-      keywords: result.keywords || [],
-      notes: "",
-    });
-    showToast(copy[state.uiLanguage].toastShortlistAdd);
-  }
-  renderResults();
-  renderShortlist();
-  scheduleShortlistSave();
-  updateShortlistBadge();
-}
-
-function renderShortlist() {
-  elements.shortlistItems.innerHTML = "";
-  if (!state.shortlist.length) {
-    elements.shortlistItems.innerHTML = `<div class="empty-state">${copy[state.uiLanguage].toastShortlistEmpty}</div>`;
-    return;
-  }
-
-  state.shortlist.forEach((item) => {
-    const card = document.createElement("div");
-    card.className = "shortlist-card";
-    const keywordHtml = renderKeywordSection(item.keywords);
-    card.innerHTML = `
-      <div>
-        <strong>${item.name}</strong>
-        <div class="department-pill">${item.department}</div>
-      </div>
-      <p>${item.why}</p>
-      ${keywordHtml}
-      <div>
-        ${(item.citations || [])
-          .map(
-            (citation) =>
-              `<a href="${citation.url}" target="_blank" rel="noopener">${citation.id} ${citation.title}</a>`
-          )
-          .join("<br />")}
-      </div>
-      <textarea data-id="${item.id}" placeholder="${state.uiLanguage === "en" ? "Notes" : "Egennotater"}">${item.notes || ""}</textarea>
-      <button class="btn-text" data-remove="${item.id}">${state.uiLanguage === "en" ? "Remove" : "Fjern"}</button>
-    `;
-    elements.shortlistItems.appendChild(card);
-  });
 }
 
 function renderKeywordSection(keywords) {
@@ -647,38 +525,6 @@ function renderKeywordSection(keywords) {
       <div class="keyword-chips">${chips}</div>
     </div>
   `;
-}
-
-function handleShortlistInput(event) {
-  if (event.target.matches("textarea[data-id]")) {
-    const id = event.target.dataset.id;
-    const entry = state.shortlist.find((item) => item.id === id);
-    if (entry) {
-      entry.notes = event.target.value;
-      scheduleShortlistSave();
-    }
-  }
-}
-
-function handleShortlistClick(event) {
-  if (event.target.matches("button[data-remove]")) {
-    const id = event.target.dataset.remove;
-    state.shortlist = state.shortlist.filter((item) => item.id !== id);
-    renderShortlist();
-    renderResults();
-    scheduleShortlistSave();
-    updateShortlistBadge();
-  }
-}
-
-function updateShortlistBadge() {
-  elements.shortlistButton.innerHTML = `${copy[state.uiLanguage].shortlistButton} (${state.shortlist.length})`;
-}
-
-function toggleShortlist(open) {
-  state.shortlistOpen = open ?? !state.shortlistOpen;
-  elements.shortlistDrawer.classList.toggle("open", state.shortlistOpen);
-  elements.shortlistDrawer.setAttribute("aria-hidden", (!state.shortlistOpen).toString());
 }
 
 function openSourcesModal(resultId) {
@@ -706,88 +552,6 @@ function openSourcesModal(resultId) {
 function closeModal() {
   elements.modalBackdrop.classList.remove("active");
   elements.modalBackdrop.setAttribute("aria-hidden", "true");
-}
-
-function scheduleShortlistSave() {
-  if (shortlistSaveTimeout) {
-    clearTimeout(shortlistSaveTimeout);
-  }
-  shortlistSaveTimeout = setTimeout(saveShortlist, 600);
-}
-
-async function saveShortlist() {
-  try {
-    await fetch("/shortlist", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-UI-Language": state.uiLanguage },
-      body: JSON.stringify({ items: state.shortlist }),
-    });
-  } catch (error) {
-    showToast(copy[state.uiLanguage].toastShortlistSaveFail, "error");
-  }
-}
-
-async function exportShortlist(format) {
-  if (!state.shortlist.length) {
-    showToast(copy[state.uiLanguage].toastShortlistEmpty, "warning");
-    return;
-  }
-
-  if (format === "json") {
-    const blob = new Blob([JSON.stringify({ items: state.shortlist }, null, 2)], {
-      type: "application/json",
-    });
-    downloadBlob(blob, `shortlist-${Date.now()}.json`);
-    showToast(copy[state.uiLanguage].toastExportDone(null));
-    return;
-  }
-
-  try {
-    if (shortlistSaveTimeout) {
-      clearTimeout(shortlistSaveTimeout);
-      shortlistSaveTimeout = null;
-    }
-    await saveShortlist();
-    const response = await fetch("/shortlist/export", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-UI-Language": state.uiLanguage },
-      body: JSON.stringify({
-        format,
-        metadata: {
-          topic: state.topicText,
-          department: state.selectedDepartment,
-          themes: state.themes,
-        },
-      }),
-    });
-    if (!response.ok) {
-      let errorMessage = copy[state.uiLanguage].toastExportFail;
-      try {
-        const data = await response.json();
-        const detail = data?.detail;
-        const formatted = extractErrorMessage(detail);
-        if (formatted) {
-          errorMessage = formatted;
-        }
-      } catch (parseError) {
-        console.error("Kunne ikke tolke feilrespons fra /shortlist/export:", parseError);
-      }
-      throw new Error(errorMessage);
-    }
-    const data = await response.json();
-    showToast(copy[state.uiLanguage].toastExportDone(data?.path));
-  } catch (error) {
-    showToast(error.message || copy[state.uiLanguage].toastExportFail, "error");
-  }
-}
-
-function downloadBlob(blob, filename) {
-  const url = window.URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = filename;
-  link.click();
-  window.URL.revokeObjectURL(url);
 }
 
 function showToast(message, type = "info") {

@@ -16,7 +16,7 @@
 ## Stack overview (read this first)
 | Layer | What it is | Primary owners/files | Key decisions we control |
 | --- | --- | --- | --- |
-| **Application** | FastAPI service + static frontend that teachers interact with. | `app/main.py`, `app/routes.py`, `app/static/` | UI flow, endpoints, shortlist/export behavior, user messaging. |
+| **Application** | FastAPI service + static frontend that teachers interact with. | `app/main.py`, `app/routes.py`, `app/static/` | UI flow, endpoints, user messaging. |
 | **Orchestration** | How requests move through parsing → retrieval → explanation. | `app/routes.py`, `app/match_engine.py`, `app/index/` helpers | Execution order, fallbacks, caching, determinism rules. |
 | **Data** | Configuration, snapshots, and vector indexes the system reads. | `data/staff.yaml`, `data/index/`, `data/offline_snapshots/`, `app/index/build.py` | Which staff/content are included, how often we refresh, chunk sizes. |
 | **Model** | Embedding + LLM components used in retrieval and explanation. | `data/models.yaml`, `app/index/embedder_factory.py`, `app/rag/llm_explainer.py` | Model families, hardware targets, temperature/top-k settings, deterministic fallbacks. |
@@ -104,7 +104,7 @@
 1. **Input handling:** `/analyze-topic` parses teacher text + optional files, extracts candidate themes, and returns editable chips to the UI.
 2. **Search:** `/match` takes confirmed themes, runs deterministic retrieval via `app/match_engine.py`, and aggregates scores per staff member.
 3. **Explanation:** Retrieves top passages, then calls the LLM explainer with guardrails (marching-ants style highlighting, citation metadata).
-4. **Shortlist/export:** UI can add staff to a shortlist saved client-side; exports (PDF/JSON) generated via backend utilities.
+4. **Results:** UI lists ranked staff with citations; users read source snippets and open profiles.
 
 **Determinism rules**
 - Seeded random states ensure consistent ranking on identical inputs.
@@ -130,8 +130,8 @@
 **Mission:** Deliver a simple, reliable interface for teachers to discover relevant colleagues, grounded in the backend orchestration.
 
 **Current components**
-- **Backend:** FastAPI app (`app/main.py`) with routers in `app/routes.py`. Serves static assets and exposes `/analyze-topic`, `/match`, shortlist endpoints.
-- **Frontend:** Plain HTML/CSS/JS under `app/static/`. Handles input forms, marching-ants edge animations, slider clamp behavior, shortlist interactions, and export buttons.
+- **Backend:** FastAPI app (`app/main.py`) with routers in `app/routes.py`. Serves static assets and exposes `/analyze-topic`, `/match`.
+- **Frontend:** Plain HTML/CSS/JS under `app/static/`. Handles input forms, marching-ants edge animations, slider clamp behavior, result interactions, and source modals.
 - **Exports:** PDF/JSON generated through utilities in `app/` (see `outputs/` for generated files).
 - **Testing:** Pytest suite in `tests/` validates retrieval logic, caching, and endpoint responses.
 

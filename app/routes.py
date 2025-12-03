@@ -6,7 +6,7 @@ import asyncio
 import hashlib
 import logging
 import re
-from typing import Any, Literal, Sequence
+from typing import Any, Sequence
 
 import httpx
 from fastapi import APIRouter, HTTPException, Request, UploadFile, status
@@ -15,7 +15,6 @@ from pydantic import BaseModel, Field
 
 from .cache_manager import CacheManager
 from .config_loader import AppConfig
-from .exporter import ShortlistExporter
 from .fetch_utils import FetchNotAllowedError, FetchUtils
 from .file_parser import FileParser, UnsupportedFileTypeError
 from .index.models import Chunk
@@ -30,7 +29,6 @@ from .match_engine import (
     tokenize,
 )
 from .rag import EmbeddingRetriever, RetrievalQuery
-from .shortlist_store import ShortlistStore
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -90,32 +88,10 @@ class MatchResponse(BaseModel):
     total: int
 
 
-class ShortlistItem(BaseModel):
-    id: str
-    name: str
-    department: str
-    why: str | None = None
-    citations: list[Citation] | None = None
-    notes: str | None = None
-    score: float | None = None
-    keywords: list[str] | None = None
-
-    model_config = {"extra": "allow"}
-
-
-class ShortlistPayload(BaseModel):
-    items: list[ShortlistItem]
-
-
 class ConfigResponse(BaseModel):
     departments: list[str]
     ui: dict[str, Any]
     security: dict[str, Any]
-
-
-class ExportRequest(BaseModel):
-    format: Literal["pdf", "json"]
-    metadata: dict[str, Any] | None = None
 
 
 # --------------------------------------------------------------------------- #
@@ -895,22 +871,6 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
     return MatchResponse(results=results, total=len(results))
 
 
-@router.get("/shortlist", response_model=ShortlistPayload)
-async def get_shortlist(request: Request) -> ShortlistPayload:
-    state = _request_state(request)
-    shortlist_store: ShortlistStore = state.shortlist_store
-    items = shortlist_store.load()
-    return ShortlistPayload(items=[ShortlistItem.model_validate(item) for item in items])
-
-
-@router.post("/shortlist", response_model=ShortlistPayload)
-async def save_shortlist(request: Request, payload: ShortlistPayload) -> ShortlistPayload:
-    state = _request_state(request)
-    shortlist_store: ShortlistStore = state.shortlist_store
-    shortlist_store.save([item.model_dump(mode="json") for item in payload.items])
-    return payload
-
-
 @router.get("/config", response_model=ConfigResponse)
 async def get_config(request: Request) -> ConfigResponse:
     state = _request_state(request)
@@ -930,22 +890,3 @@ async def get_config(request: Request) -> ConfigResponse:
             "allowFileTypes": app_config.security.allow_file_types,
         },
     )
-
-
-@router.post("/shortlist/export")
-async def export_shortlist(request: Request, payload: ExportRequest) -> dict[str, str]:
-    state = _request_state(request)
-    shortlist_store: ShortlistStore = state.shortlist_store
-    exporter: ShortlistExporter = state.shortlist_exporter
-
-    items = shortlist_store.load()
-    if not items:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Kortlisten er tom.")
-
-    path = exporter.export(payload.format, items, payload.metadata)
-    try:
-        project_root = exporter.base_dir.parent.parent
-        relative = path.relative_to(project_root)
-    except ValueError:
-        relative = path.relative_to(exporter.base_dir.parent)
-    return {"path": str(relative)}

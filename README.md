@@ -1,6 +1,6 @@
 # ONH Expert Connector
 
-Local-first tool that helps ONH teachers surface relevant colleagues for a course, lecture, or material. The app ingests a topic description and optional files, retrieves supporting passages from a locally indexed knowledge base of staff content (RAG), and returns a shortlist of staff with grounded explanations and exportable summaries.
+Local-first tool that helps ONH teachers surface relevant colleagues for a course, lecture, or material. The app ingests a topic description and optional files, retrieves supporting passages from a locally indexed knowledge base of staff content (RAG), and returns ranked staff with grounded explanations.
 
 ## Project structure
 
@@ -8,7 +8,7 @@ Local-first tool that helps ONH teachers surface relevant colleagues for a cours
 - `app/static/`: Plain HTML/CSS/JS single-page frontend.
 - `data/`: Hand-maintained YAML configuration files and the on-disk retrieval index.
 - `models/`: Notes and placeholders for local model checkpoints.
-- `outputs/exports/`: Generated shortlist PDFs/JSON exports.
+- `outputs/exports/`: Generated artifacts from tests/playwright or other exports (shortlist exports removed).
 - `tests/`: Pytest suite mirroring the `app/` modules.
 
 See `ONH_Expert_Connector_Concept.txt` and `backend_analysis_process.md` for full functional specs, RAG backend flow, and UI guidance.
@@ -116,7 +116,7 @@ If you prefer Ollama for embeddings, set `embedding_model.backend` back to `olla
 - The retriever reads passages from the local index in `data/index/` (run the index build step first).
 - Use `data/test_inputs/klinisk_psykologi_tema.txt` as a stable prompt: paste its text into the Tema field and optionally upload the same file (TXT is supported).
 - Click “Analyser tema”, review the suggested themes, then “Finn relevante ansatte”. You should see at least one psychology profile (e.g. Alex Gillespie) with citations sourced from the indexed passages.
-- Clear the shortlist or rerun with other prompts as needed; cached fetch snapshots live under `data/offline_snapshots` and vector data under `data/index/`.
+- Rerun with other prompts as needed; cached fetch snapshots live under `data/offline_snapshots` and vector data under `data/index/`.
 
 ## Testing and linting
 
