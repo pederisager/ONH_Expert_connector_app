@@ -33,7 +33,7 @@
 - Runs as a Python virtual environment (`python -m venv .venv`), started with `uvicorn app.main:app --reload` for development.
 - Assumes access to CUDA for faster embeddings but must fall back to CPU if unavailable (auto-detected in the embedder factory).
 - Network exposure stays on `localhost` by default; no public internet calls occur at runtime (all data is pre-fetched).
-- Security guardrails: strict URL allowlist (`data/app.config.yaml`), file upload limits (size/type), and antivirus scan hooks in `fetch_utils.py`.
+- Security guardrails: strict URL allowlist (`data/app.config.yaml`) and antivirus scan hooks in `fetch_utils.py`.
 
 **Decisions you can request here**
 - Allow the app to bind to a different interface (e.g., LAN demo) — specify expected audience and security requirements.
@@ -89,8 +89,7 @@
 
 **Constraints & risks**
 - All sources must be on the approved domain allowlist; expanding the list needs explicit approval.
-- Uploaded teacher files are processed temporarily and should not be stored beyond session scope unless specified.
-- Large uploads slow down parsing; confirm acceptable size limits before raising them.
+- Teacher file uploads are currently disabled; only text input is accepted.
 
 **Open questions**
 - _Example_: “Do we need to prioritize Norwegian-language sources over English ones when both exist?”
@@ -101,7 +100,7 @@
 **Mission:** Define how user input flows through preprocessing, retrieval, ranking, and explanation so results stay deterministic, reproducible, and quick.
 
 **Current flow (runtime)**
-1. **Input handling:** `/analyze-topic` parses teacher text + optional files, extracts candidate themes, and returns editable chips to the UI.
+1. **Input handling:** `/analyze-topic` parses teacher text, extracts candidate themes, and returns editable chips to the UI.
 2. **Search:** `/match` takes confirmed themes, runs deterministic retrieval via `app/match_engine.py`, and aggregates scores per staff member.
 3. **Explanation:** Retrieves top passages, then calls the LLM explainer with guardrails (marching-ants style highlighting, citation metadata).
 4. **Results:** UI lists ranked staff with citations; users read source snippets and open profiles.

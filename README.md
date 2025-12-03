@@ -1,6 +1,6 @@
 # ONH Expert Connector
 
-Local-first tool that helps ONH teachers surface relevant colleagues for a course, lecture, or material. The app ingests a topic description and optional files, retrieves supporting passages from a locally indexed knowledge base of staff content (RAG), and returns ranked staff with grounded explanations.
+Local-first tool that helps ONH teachers surface relevant colleagues for a course, lecture, or material. The app ingests a topic description, retrieves supporting passages from a locally indexed knowledge base of staff content (RAG), and returns ranked staff with grounded explanations.
 
 ## Project structure
 
@@ -114,7 +114,7 @@ If you prefer Ollama for embeddings, set `embedding_model.backend` back to `olla
 ## Offline test scenario
 
 - The retriever reads passages from the local index in `data/index/` (run the index build step first).
-- Use `data/test_inputs/klinisk_psykologi_tema.txt` as a stable prompt: paste its text into the Tema field and optionally upload the same file (TXT is supported).
+- Use `data/test_inputs/klinisk_psykologi_tema.txt` as a stable prompt: paste its text into the Tema field.
 - Click “Analyser tema”, review the suggested themes, then “Finn relevante ansatte”. You should see at least one psychology profile (e.g. Alex Gillespie) with citations sourced from the indexed passages.
 - Rerun with other prompts as needed; cached fetch snapshots live under `data/offline_snapshots` and vector data under `data/index/`.
 

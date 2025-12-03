@@ -9,14 +9,13 @@ import re
 from typing import Any, Sequence
 
 import httpx
-from fastapi import APIRouter, HTTPException, Request, UploadFile, status
+from fastapi import APIRouter, HTTPException, Request, status
 from fastapi.responses import Response
 from pydantic import BaseModel, Field
 
 from .cache_manager import CacheManager
 from .config_loader import AppConfig
 from .fetch_utils import FetchNotAllowedError, FetchUtils
-from .file_parser import FileParser, UnsupportedFileTypeError
 from .index.models import Chunk
 from .language_utils import LanguageContext, NoOpTranslator, Translator, build_language_context
 from .llm_explainer import LLMExplainer
@@ -217,42 +216,6 @@ def _extract_citation_snippet(text: str, themes: Sequence[str], limit: int = CIT
             best_snippet = best_snippet[:last_space]
 
     return best_snippet.strip()
-
-
-async def _read_files(
-    *,
-    files: Sequence[UploadFile] | None,
-    file_parser: FileParser,
-    app_config: AppConfig,
-) -> list[str]:
-    if not files:
-        return []
-
-    allowed_suffixes = {f".{suffix.lower().lstrip('.')}" for suffix in app_config.security.allow_file_types}
-    max_bytes = app_config.security.max_upload_mb * 1024 * 1024
-    parsed_texts: list[str] = []
-
-    for upload in files:
-        if upload.filename is None:
-            continue
-        suffix = "." + upload.filename.split(".")[-1].lower()
-        if allowed_suffixes and suffix not in allowed_suffixes:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail=f"Filtypen {suffix} er ikke tillatt.",
-            )
-        content = await upload.read()
-        if len(content) > max_bytes:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail=f"Filen {upload.filename} overstiger maks størrelse på {app_config.security.max_upload_mb} MB.",
-            )
-        try:
-            parsed_texts.append(file_parser.parse_bytes(upload.filename, content))
-        except UnsupportedFileTypeError as exc:
-            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc)) from exc
-
-    return parsed_texts
 
 
 def _staff_doc_cache_key(profile: StaffProfile, max_pages: int) -> str:
@@ -722,26 +685,17 @@ def _localize_explanation(
 @router.post("/analyze-topic", response_model=AnalyzeTopicResponse)
 async def analyze_topic(request: Request) -> AnalyzeTopicResponse:
     state = _request_state(request)
-    file_parser: FileParser = state.file_parser
     app_config: AppConfig = state.app_config
 
     content_type = (request.headers.get("content-type") or "").lower()
-    files: list[UploadFile] | None = None
-    parsed_texts: list[str]
-
     if "application/json" in content_type:
         payload = await request.json()
         text_value = str(payload.get("text") or "")
-        parsed_texts = []
     else:
         form = await request.form()
         text_value = str(form.get("text") or "")
-        upload_items = [item for item in form.getlist("files") if isinstance(item, UploadFile)]
 
-        files = upload_items or None
-        parsed_texts = await _read_files(files=files, file_parser=file_parser, app_config=app_config)
-
-    combined_text = _validate_text_input(text_value, parsed_texts)
+    combined_text = _validate_text_input(text_value, [])
 
     themes = extract_themes(combined_text, top_k=8)
     preview = _build_normalized_preview(combined_text)

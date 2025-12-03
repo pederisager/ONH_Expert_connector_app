@@ -21,10 +21,8 @@ const copy = {
     title: "ONH Expert Connector",
     subtitle: "Finn interne eksperter med dokumenterte treff.",
     describeHeading: "Beskriv kurset eller materialet",
-    describeSub: "Legg inn tekst og eventuelle filer. Avdelingsfilter er valgfritt.",
+    describeSub: "Legg inn tekst. Avdelingsfilter er valgfritt.",
     topicLabel: "Tema (tekst)",
-    fileLabel: "Legg til filer (valgfritt)",
-    fileHelp: "Du kan sende kun tekst. Maks 10 MB per fil. Støttede formater: PDF, DOCX, PPTX, TXT, MD.",
     deptLabel: "Avdeling (valgfritt)",
     analyzeBtn: "Analyser tema",
     disclaimer: "Appen leser kun sider som er whitelisted i data/staff.yaml og henter kildeutdrag akkurat når du søker.",
@@ -46,7 +44,7 @@ const copy = {
     modalTitle: "Kilder",
     toastAnalyzeFail: "Analyse mislyktes.",
     toastAnalyzeSuccess: "Temaer analysert. Gjennomgå før matching.",
-    toastMissingTopic: "Legg inn en kort beskrivelse eller last opp filer før du analyserer.",
+    toastMissingTopic: "Legg inn en kort beskrivelse før du analyserer.",
     toastMissingTheme: "Legg til minst ett tema før du søker.",
     toastSearching: "Søker etter relevante ansatte…",
     toastMatchesFound: (n) => `Fant ${n} kandidater.`,
@@ -57,10 +55,8 @@ const copy = {
     title: "ONH Expert Connector",
     subtitle: "Find internal experts with grounded matches.",
     describeHeading: "Describe the course or material",
-    describeSub: "Enter text and optional files. Department filter is optional.",
+    describeSub: "Enter text. Department filter is optional.",
     topicLabel: "Topic (text)",
-    fileLabel: "Add files (optional)",
-    fileHelp: "You can send text only. Max 10 MB per file. Supported: PDF, DOCX, PPTX, TXT, MD.",
     deptLabel: "Department (optional)",
     analyzeBtn: "Analyze topic",
     disclaimer: "The app only reads whitelisted pages in data/staff.yaml and fetches excerpts at query time.",
@@ -82,7 +78,7 @@ const copy = {
     modalTitle: "Sources",
     toastAnalyzeFail: "Analysis failed.",
     toastAnalyzeSuccess: "Themes analyzed. Review before matching.",
-    toastMissingTopic: "Enter a short description or upload files before analyzing.",
+    toastMissingTopic: "Enter a short description before analyzing.",
     toastMissingTheme: "Add at least one theme before searching.",
     toastSearching: "Searching for relevant staff…",
     toastMatchesFound: (n) => `Found ${n} candidates.`,
@@ -101,7 +97,6 @@ const elements = {
   topicForm: document.getElementById("topicForm"),
   topicInput: document.getElementById("topicInput"),
   charCounter: document.getElementById("charCounter"),
-  fileUpload: document.getElementById("fileUpload"),
   departmentFilter: document.getElementById("departmentFilter"),
   analyzeBtn: document.getElementById("analyzeBtn"),
   themesChips: document.getElementById("themesChips"),
@@ -133,6 +128,7 @@ async function initialize() {
     state.uiLanguage = (state.config.ui?.language || "no").toLowerCase();
     applyLanguage(state.uiLanguage);
     renderDepartmentOptions();
+    updateAnalyzeButtonState();
   } catch (error) {
     showToast(error.message || "Klarte ikke å laste konfigurasjon.", "error");
   }
@@ -143,7 +139,6 @@ function setupListeners() {
   elements.langEnBtn.addEventListener("click", () => applyLanguage("en"));
 
   elements.topicInput.addEventListener("input", handleTopicInput);
-  elements.fileUpload.addEventListener("change", handleFileChange);
   elements.departmentFilter.addEventListener("change", (event) => {
     state.selectedDepartment = event.target.value;
   });
@@ -200,7 +195,6 @@ function applyLanguage(lang) {
       ? "Write a few paragraphs about the topic, learning objectives, syllabus, etc."
       : "Skriv noen avsnitt om tema, læringsmål, pensum, osv.";
   elements.addChipInput.placeholder = state.uiLanguage === "en" ? "Add theme…" : "Legg til tema…";
-  updateFileHelpText();
   renderResults();
 }
 
@@ -210,26 +204,7 @@ async function loadConfig() {
     throw new Error("Klarte ikke å hente konfigurasjon.");
   }
   state.config = await response.json();
-  updateFileHelpText();
-}
-
-function updateFileHelpText() {
-  const help = document.getElementById("fileHelp");
-  if (!help || !state.config.security) {
-    return;
-  }
-  const formats = state.config.security.allowFileTypes || [];
-  const text = state.uiLanguage === "en"
-    ? `You can also submit text only. Max ${state.config.security.maxUploadMb} MB per file. Supported formats: ${formats.map((item) => item.toUpperCase()).join(", ")}.`
-    : `Du kan sende kun tekst. Maks ${state.config.security.maxUploadMb} MB per fil. Støttede formater: ${formats
-        .map((item) => item.toUpperCase())
-        .join(", ")}.`;
-  help.textContent = text;
   document.title = copy[state.uiLanguage].title;
-  elements.fileUpload.setAttribute(
-    "accept",
-    formats.map((item) => `.${item}`).join(",")
-  );
 }
 
 function renderDepartmentOptions() {
@@ -254,16 +229,11 @@ function handleTopicInput(event) {
   updateAnalyzeButtonState();
 }
 
-function handleFileChange() {
-  updateAnalyzeButtonState();
-}
-
 function updateAnalyzeButtonState() {
   const textValue = elements.topicInput.value || "";
   state.topicText = textValue;
   const hasText = textValue.trim().length > 0;
-  const hasFiles = elements.fileUpload.files && elements.fileUpload.files.length > 0;
-  elements.analyzeBtn.disabled = !(hasText || hasFiles) || state.isAnalyzing;
+  elements.analyzeBtn.disabled = !hasText || state.isAnalyzing;
 }
 
 function setView(target) {
@@ -281,9 +251,7 @@ async function handleAnalyze(event) {
 
   const topicText = elements.topicInput.value || "";
   const trimmedText = topicText.trim();
-  const files = elements.fileUpload.files || [];
-  const hasFiles = files.length > 0;
-  if (!trimmedText && !hasFiles) {
+  if (!trimmedText) {
     showToast(copy[state.uiLanguage].toastMissingTopic, "warning");
     return;
   }
@@ -294,19 +262,16 @@ async function handleAnalyze(event) {
   elements.analyzeBtn.textContent = state.uiLanguage === "en" ? "Analyzing…" : "Analyserer…";
 
   try {
-    const formData = new FormData();
-    formData.append("text", state.topicText);
-    if (state.selectedDepartment) {
-      formData.append("department", state.selectedDepartment);
-    }
-    for (const file of files) {
-      formData.append("files", file, file.name);
-    }
-
     const response = await fetch("/analyze-topic", {
       method: "POST",
-      body: formData,
-      headers: { "X-UI-Language": state.uiLanguage },
+      headers: {
+        "Content-Type": "application/json",
+        "X-UI-Language": state.uiLanguage,
+      },
+      body: JSON.stringify({
+        text: state.topicText,
+        department: state.selectedDepartment || null,
+      }),
     });
     if (!response.ok) {
       let errorMessage = copy[state.uiLanguage].toastAnalyzeFail;

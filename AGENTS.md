@@ -14,6 +14,10 @@ Keep feature code under `app/` with `main.py` as the FastAPI entry point and rou
 
 The former "Kortliste"/shortlist feature (UI drawer, `/shortlist` API, and export helpers) has been removed. Do not reintroduce shortlist buttons, drawers, or export endpoints; new selection/export work should be designed separately if needed.
 
+File uploads are temporarily disabled. The `/analyze-topic` endpoint now accepts text only (JSON or simple form field). Keep the UI to text-only input; do not re-add file inputs or upload parsing without an explicit product request.
+
+Playwright smoke tests: a portable Node.js toolchain lives under `node-portable/node-v20.18.1-win-x64`. Run smoke tests with that binary and the bundled Playwright CLI, e.g. `node-portable/node-v20.18.1-win-x64/node.exe node_modules/playwright/cli.js test tests/ui_smoke.spec.ts --project=chromium --reporter=line --timeout=120000`. Ensure the FastAPI server is running (e.g., `timeout 1200 uvicorn app.main:app --reload`) before running the smoke; otherwise the test will fail on `page.goto('/')`.
+
 Legacy references labeled "Cristin" point to the same NVA research data; new ingestion lives under `app/index/nva`, and older Cristin-specific files are kept only for historical reference. `staff.csv` is the user-facing source of staff entries; regenerate downstream files via `scripts/update_staff.sh`.
 
 Staff `tags` in `data/staff.yaml` now surface as "Nokkelord" on the results/cards UI and contribute to the RAG score, so keep them descriptive, deduplicated, and localized where possible.

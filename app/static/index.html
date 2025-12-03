@@ -31,7 +31,7 @@
         <section id="homeView" class="view active" aria-label="Start">
           <div class="section-header">
             <h2 data-l10n="describeHeading">Beskriv kurset eller materialet</h2>
-            <p data-l10n="describeSub">Legg inn tekst og eventuelle filer. Avdelingsfilter er valgfritt.</p>
+            <p data-l10n="describeSub">Legg inn tekst. Avdelingsfilter er valgfritt.</p>
           </div>
           <form id="topicForm" class="card" autocomplete="off">
             <label class="form-label" for="topicInput" data-l10n="topicLabel">Tema (tekst)</label>
@@ -48,26 +48,13 @@
               <span id="charCounter">0 / 3200</span>
             </div>
 
-            <label class="form-label" for="fileUpload" data-l10n="fileLabel">Legg til filer (valgfritt)</label>
-            <input
-              id="fileUpload"
-              type="file"
-              name="files"
-              multiple
-              aria-describedby="fileHelp"
-              accept=".pdf,.docx,.pptx,.txt,.md"
-            />
-            <p id="fileHelp" class="help-text" data-l10n="fileHelp">
-              Du kan sende kun tekst. Maks 10 MB per fil. Støttede formater: PDF, DOCX, PPTX, TXT, MD.
-            </p>
-
             <label class="form-label" for="departmentFilter" data-l10n="deptLabel">Avdeling (valgfritt)</label>
             <select id="departmentFilter" name="department">
               <option value="">Alle</option>
             </select>
 
             <div class="form-actions">
-              <button id="analyzeBtn" class="btn-primary" type="submit" disabled data-l10n="analyzeBtn">
+              <button id="analyzeBtn" class="btn-primary" type="submit" data-l10n="analyzeBtn">
                 Analyser tema
               </button>
             </div>
