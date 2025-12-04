@@ -1,136 +1,72 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="no">
   <head>
     <meta charset="utf-8" />
     <title>ONH Expert Connector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/static/favicon.png" />
     <link rel="stylesheet" href="/static/styles.css" />
   </head>
   <body>
     <noscript data-l10n="noscript">Vennligst aktiver JavaScript for å bruke ONH Expert Connector.</noscript>
-    <div class="app-shell">
-      <header class="top-bar">
-        <div class="top-bar__title">
-          <h1 data-l10n="title">ONH Expert Connector</h1>
-          <p data-l10n="subtitle">Finn interne eksperter med dokumenterte treff.</p>
+
+    <div class="page">
+      <header id="hero" class="hero">
+        <div class="brand">
+          <img src="/static/onh-logo.png" alt="Oslo Nye Høyskole" class="brand__logo" />
+          <div class="brand__text">
+            <p class="brand__kicker" data-l10n="kicker">Finn interne eksperter</p>
+            <h1 class="brand__title" data-l10n="title">ONH Expert Connector</h1>
+          </div>
         </div>
-        <div class="top-bar__actions">
-          <div class="language-toggle" aria-label="Bytt språk">
+
+        <div class="hero__controls">
+        <div class="language-toggle" aria-label="Bytt språk">
             <button id="langNoBtn" class="lang-btn" data-lang="no" title="Norsk" aria-label="Norsk">
-              <img src="/static/flag-no.svg" alt="Norsk flagg" />
+              <img src="/static/flag-no.svg" alt="" class="lang-flag" /> NO
             </button>
             <button id="langEnBtn" class="lang-btn" data-lang="en" title="English" aria-label="English">
-              <img src="/static/flag-gb.svg" alt="UK flag" />
+              <img src="/static/flag-gb.svg" alt="" class="lang-flag" /> EN
             </button>
           </div>
         </div>
+
+        <form id="searchForm" class="search-shell" autocomplete="off">
+          <div class="search-box">
+            <input
+              id="queryInput"
+              type="text"
+              name="query"
+              maxlength="3200"
+              aria-label="Søk etter eksperter"
+              placeholder="Skriv hva du ser etter – tema, behov eller spørsmål"
+              required
+            />
+            <button id="searchBtn" class="btn-primary" type="submit" data-l10n="searchBtn">Søk</button>
+          </div>
+          <p id="statusLine" class="status-line" role="status" aria-live="polite" data-l10n="idleHelper">
+            Beskriv behovet ditt og trykk Søk.
+          </p>
+          <div id="errorBanner" class="error-banner" role="alert" hidden></div>
+        </form>
       </header>
 
-      <main id="viewContainer" class="main-content">
-        <section id="homeView" class="view active" aria-label="Start">
-          <div class="section-header">
-            <h2 data-l10n="describeHeading">Beskriv kurset eller materialet</h2>
-            <p data-l10n="describeSub">Legg inn tekst. Avdelingsfilter er valgfritt.</p>
-          </div>
-          <form id="topicForm" class="card" autocomplete="off">
-            <label class="form-label" for="topicInput" data-l10n="topicLabel">Tema (tekst)</label>
-            <textarea
-              id="topicInput"
-              name="text"
-              placeholder="Skriv noen avsnitt om tema, læringsmål, pensum, osv."
-              aria-label="Tema beskrivelse"
-              rows="8"
-              maxlength="3200"
-              required
-            ></textarea>
-            <div class="input-meta">
-              <span id="charCounter">0 / 3200</span>
-            </div>
-
-            <label class="form-label" for="departmentFilter" data-l10n="deptLabel">Avdeling (valgfritt)</label>
-            <select id="departmentFilter" name="department">
-              <option value="">Alle</option>
-            </select>
-
-            <div class="form-actions">
-              <button id="analyzeBtn" class="btn-primary" type="submit" data-l10n="analyzeBtn">
-                Analyser tema
-              </button>
-            </div>
-          </form>
-          <p class="disclaimer" data-l10n="disclaimer">
-            Appen leser kun sider som er whitelisted i <code>data/staff.yaml</code> og henter kildeutdrag akkurat når du søker.
-          </p>
-        </section>
-
-        <section id="themesView" class="view" aria-label="Gjennomgå temaer">
-          <div class="section-header">
-            <div>
-              <h2 data-l10n="themesHeading">Gjennomgå foreslåtte temaer</h2>
-              <p data-l10n="themesSub">Rediger listen før du søker etter ansatte.</p>
-            </div>
-            <button id="backToInputBtn" class="btn-text" data-l10n="backBtn">Tilbake</button>
-          </div>
-
-          <div class="card">
-            <h3 data-l10n="suggestedThemes">Foreslåtte temaer</h3>
-            <div id="themesChips" class="chip-list" role="list"></div>
-            <div class="chip-actions">
-              <input
-                id="addChipInput"
-                type="text"
-                placeholder="Legg til tema…"
-                aria-label="Legg til tema"
-              />
-              <button id="addChipBtn" class="btn-secondary" type="button" data-l10n="addThemeBtn">Legg til</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 data-l10n="normalizedText">Normalisert tekst</h3>
-            <p id="normalizedPreview" class="preview-text" data-l10n="previewPlaceholder">Ingen data ennå.</p>
-          </div>
-
-          <div class="form-actions">
-            <button id="runMatchBtn" class="btn-primary" type="button" data-l10n="findMatches">
-              Finn relevante ansatte
-            </button>
-          </div>
-        </section>
-
-        <section id="resultsView" class="view" aria-label="Resultater">
-          <div class="results-grid">
-            <aside class="results-sidebar">
-              <h3 data-l10n="filters">Filtre</h3>
-              <label class="form-label" for="resultsDepartmentFilter" data-l10n="deptLabel">Avdeling</label>
-              <select id="resultsDepartmentFilter">
-                <option value="">Alle</option>
-              </select>
-
-              <label class="form-label" for="resultsSort" data-l10n="sortLabel">Sorter</label>
-              <select id="resultsSort">
-                <option value="score" data-l10n="sortScore">Relevans (standard)</option>
-                <option value="recent" data-l10n="sortRecent">Nylige publikasjoner</option>
-                <option value="alpha" data-l10n="sortAlpha">Alfabetisk</option>
-              </select>
-
-              <p id="resultsCount" class="results-count" data-l10n="resultsCountNone">Ingen treff ennå.</p>
-
-              <button id="backToThemesBtn" class="btn-text" data-l10n="backToThemes">Tilbake til temaer</button>
-            </aside>
-
-            <div class="results-list" id="resultsList" aria-live="polite"></div>
-          </div>
-        </section>
+      <main class="results-section" aria-label="Resultater">
+        <div id="emptyState" class="empty-state helper" data-l10n="helperText">
+          Start et søk for å se ansatte med relevante treff.
+        </div>
+        <div id="resultsList" class="results-grid" aria-live="polite"></div>
+        <button id="loadMoreBtn" class="btn-secondary load-more" type="button" hidden data-l10n="loadMore">
+          Last inn flere
+        </button>
       </main>
     </div>
 
-    <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true">
+    <div id="modalBackdrop" class="modal-backdrop" role="presentation" hidden>
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-header">
-          <h2 id="modalTitle" data-l10n="modalTitle">Kilder</h2>
-          <button id="modalCloseBtn" class="icon-button" aria-label="Lukk modal">×</button>
+          <h2 id="modalTitle"></h2>
+          <button id="modalCloseBtn" class="icon-button" aria-label="Lukk dialog">×</button>
         </div>
         <div id="modalBody" class="modal-body"></div>
       </div>

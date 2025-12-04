@@ -1,120 +1,78 @@
-﻿const state = {
-  config: {
-    departments: [],
-    ui: {},
-    security: {},
-  },
-  topicText: "",
-  normalizedPreview: "",
-  themes: [],
-  selectedDepartment: "",
-  results: [],
-  resultLookup: new Map(),
-  isAnalyzing: false,
-  isMatching: false,
+const PAGE_SIZE = 5;
+
+const state = {
   uiLanguage: "no",
+  query: "",
+  results: [],
+  visibleCount: 0,
+  loading: false,
+  config: {},
 };
 
 const copy = {
   no: {
     noscript: "Vennligst aktiver JavaScript for å bruke ONH Expert Connector.",
+    kicker: "Finn interne eksperter",
     title: "ONH Expert Connector",
-    subtitle: "Finn interne eksperter med dokumenterte treff.",
-    describeHeading: "Beskriv kurset eller materialet",
-    describeSub: "Legg inn tekst. Avdelingsfilter er valgfritt.",
-    topicLabel: "Tema (tekst)",
-    deptLabel: "Avdeling (valgfritt)",
-    analyzeBtn: "Analyser tema",
-    disclaimer: "Appen leser kun sider som er whitelisted i data/staff.yaml og henter kildeutdrag akkurat når du søker.",
-    themesHeading: "Gjennomgå foreslåtte temaer",
-    themesSub: "Rediger listen før du søker etter ansatte.",
-    backBtn: "Tilbake",
-    suggestedThemes: "Foreslåtte temaer",
-    addThemeBtn: "Legg til",
-    normalizedText: "Normalisert tekst",
-    previewPlaceholder: "Ingen data ennå.",
-    findMatches: "Finn relevante ansatte",
-    filters: "Filtre",
-    sortLabel: "Sorter",
-    sortScore: "Relevans (standard)",
-    sortRecent: "Nylige publikasjoner",
-    sortAlpha: "Alfabetisk",
-    resultsCountNone: "Ingen treff ennå.",
-    backToThemes: "Tilbake til temaer",
-    modalTitle: "Kilder",
-    toastAnalyzeFail: "Analyse mislyktes.",
-    toastAnalyzeSuccess: "Temaer analysert. Gjennomgå før matching.",
-    toastMissingTopic: "Legg inn en kort beskrivelse før du analyserer.",
-    toastMissingTheme: "Legg til minst ett tema før du søker.",
-    toastSearching: "Søker etter relevante ansatte…",
-    toastMatchesFound: (n) => `Fant ${n} kandidater.`,
-    toastMatchFail: "Kunne ikke hente treff.",
+    searchBtn: "Søk",
+    idleHelper: "Beskriv behovet ditt og trykk Søk.",
+    helperText: "Start et søk for å se ansatte med relevante treff.",
+    loadMore: "Last inn flere",
+    statusSearching: "Søker …",
+    statusResults: (q, n) => `Viser ${n} treff for «${q}»`,
+    errorMissingQuery: "Skriv inn et søk før du fortsetter.",
+    errorMatchFail: "Kunne ikke hente treff.",
+    emptyResults: "Ingen treff. Prøv mer spesifikt språk eller færre ord.",
+    snippetLabel: "Begrunnelse",
+    tagsLabel: "Nøkkelord",
+    viewDetails: "Vis detaljer",
+    hideDetails: "Skjul detaljer",
+    openProfile: "Åpne profil",
+    openLink: "Åpne lenke",
+    sources: "Kilder",
+    toastCopied: "Kopiert til utklippstavlen.",
   },
   en: {
     noscript: "Please enable JavaScript to use ONH Expert Connector.",
+    kicker: "Find internal experts",
     title: "ONH Expert Connector",
-    subtitle: "Find internal experts with grounded matches.",
-    describeHeading: "Describe the course or material",
-    describeSub: "Enter text. Department filter is optional.",
-    topicLabel: "Topic (text)",
-    deptLabel: "Department (optional)",
-    analyzeBtn: "Analyze topic",
-    disclaimer: "The app only reads whitelisted pages in data/staff.yaml and fetches excerpts at query time.",
-    themesHeading: "Review suggested themes",
-    themesSub: "Edit the list before searching for staff.",
-    backBtn: "Back",
-    suggestedThemes: "Suggested themes",
-    addThemeBtn: "Add",
-    normalizedText: "Normalized text",
-    previewPlaceholder: "No data yet.",
-    findMatches: "Find relevant staff",
-    filters: "Filters",
-    sortLabel: "Sort",
-    sortScore: "Relevance (default)",
-    sortRecent: "Recent publications",
-    sortAlpha: "Alphabetical",
-    resultsCountNone: "No results yet.",
-    backToThemes: "Back to themes",
-    modalTitle: "Sources",
-    toastAnalyzeFail: "Analysis failed.",
-    toastAnalyzeSuccess: "Themes analyzed. Review before matching.",
-    toastMissingTopic: "Enter a short description before analyzing.",
-    toastMissingTheme: "Add at least one theme before searching.",
-    toastSearching: "Searching for relevant staff…",
-    toastMatchesFound: (n) => `Found ${n} candidates.`,
-    toastMatchFail: "Could not fetch matches.",
+    searchBtn: "Search",
+    idleHelper: "Describe what you need and press Search.",
+    helperText: "Start a search to see staff with relevant matches.",
+    loadMore: "Load more",
+    statusSearching: "Searching…",
+    statusResults: (q, n) => `Showing ${n} results for “${q}”`,
+    errorMissingQuery: "Enter a search before continuing.",
+    errorMatchFail: "Could not fetch matches.",
+    emptyResults: "No matches found. Try more specific language or fewer words.",
+    snippetLabel: "Why this match",
+    tagsLabel: "Keywords",
+    viewDetails: "View details",
+    hideDetails: "Hide details",
+    openProfile: "Open profile",
+    openLink: "Open link",
+    sources: "Sources",
+    toastCopied: "Copied to clipboard.",
   },
 };
 
 const elements = {
-  views: {
-    home: document.getElementById("homeView"),
-    themes: document.getElementById("themesView"),
-    results: document.getElementById("resultsView"),
-  },
+  hero: document.getElementById("hero"),
+  searchForm: document.getElementById("searchForm"),
+  queryInput: document.getElementById("queryInput"),
+  searchBtn: document.getElementById("searchBtn"),
+  statusLine: document.getElementById("statusLine"),
+  errorBanner: document.getElementById("errorBanner"),
+  resultsList: document.getElementById("resultsList"),
+  emptyState: document.getElementById("emptyState"),
+  loadMoreBtn: document.getElementById("loadMoreBtn"),
   langNoBtn: document.getElementById("langNoBtn"),
   langEnBtn: document.getElementById("langEnBtn"),
-  topicForm: document.getElementById("topicForm"),
-  topicInput: document.getElementById("topicInput"),
-  charCounter: document.getElementById("charCounter"),
-  departmentFilter: document.getElementById("departmentFilter"),
-  analyzeBtn: document.getElementById("analyzeBtn"),
-  themesChips: document.getElementById("themesChips"),
-  addChipInput: document.getElementById("addChipInput"),
-  addChipBtn: document.getElementById("addChipBtn"),
-  normalizedPreview: document.getElementById("normalizedPreview"),
-  runMatchBtn: document.getElementById("runMatchBtn"),
-  backToInputBtn: document.getElementById("backToInputBtn"),
-  resultsDepartmentFilter: document.getElementById("resultsDepartmentFilter"),
-  resultsSort: document.getElementById("resultsSort"),
-  resultsCount: document.getElementById("resultsCount"),
-  backToThemesBtn: document.getElementById("backToThemesBtn"),
-  resultsList: document.getElementById("resultsList"),
+  toastContainer: document.getElementById("toastContainer"),
   modalBackdrop: document.getElementById("modalBackdrop"),
   modalBody: document.getElementById("modalBody"),
   modalTitle: document.getElementById("modalTitle"),
   modalCloseBtn: document.getElementById("modalCloseBtn"),
-  toastContainer: document.getElementById("toastContainer"),
 };
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -123,56 +81,48 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 async function initialize() {
-  try {
-    await loadConfig();
-    state.uiLanguage = (state.config.ui?.language || "no").toLowerCase();
-    applyLanguage(state.uiLanguage);
-    renderDepartmentOptions();
-    updateAnalyzeButtonState();
-  } catch (error) {
-    showToast(error.message || "Klarte ikke å laste konfigurasjon.", "error");
-  }
+  await loadConfig();
+  state.uiLanguage = (state.config?.ui?.language || "no").toLowerCase();
+  applyLanguage(state.uiLanguage);
+  setStatus(copy[state.uiLanguage].idleHelper);
 }
 
 function setupListeners() {
+  elements.searchForm.addEventListener("submit", handleSearch);
+  elements.queryInput.addEventListener("input", () => {
+    elements.errorBanner.hidden = true;
+  });
+  elements.loadMoreBtn.addEventListener("click", () => {
+    state.visibleCount = Math.min(state.results.length, state.visibleCount + PAGE_SIZE);
+    renderResults();
+    updateLoadMore();
+  });
+
   elements.langNoBtn.addEventListener("click", () => applyLanguage("no"));
   elements.langEnBtn.addEventListener("click", () => applyLanguage("en"));
-
-  elements.topicInput.addEventListener("input", handleTopicInput);
-  elements.departmentFilter.addEventListener("change", (event) => {
-    state.selectedDepartment = event.target.value;
-  });
-
-  elements.topicForm.addEventListener("submit", handleAnalyze);
-  elements.addChipBtn.addEventListener("click", addChipFromInput);
-  elements.addChipInput.addEventListener("keyup", (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      addChipFromInput();
-    }
-  });
-
-  elements.runMatchBtn.addEventListener("click", fetchMatches);
-  elements.resultsDepartmentFilter.addEventListener("change", (event) => {
-    state.selectedDepartment = event.target.value;
-    fetchMatches();
-  });
-  elements.resultsSort.addEventListener("change", () => {
-    sortResults();
-    renderResults();
-  });
-  elements.backToThemesBtn.addEventListener("click", () => setView("themes"));
-  elements.backToInputBtn.addEventListener("click", () => setView("home"));
-
+  elements.resultsList.addEventListener("click", handleResultsClick);
   elements.modalCloseBtn.addEventListener("click", closeModal);
   elements.modalBackdrop.addEventListener("click", (event) => {
     if (event.target === elements.modalBackdrop) {
       closeModal();
     }
   });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !elements.modalBackdrop.hidden) {
+      closeModal();
+    }
+  });
+}
 
-  elements.themesChips.addEventListener("click", handleThemesChipClick);
-  elements.resultsList.addEventListener("click", handleResultsClick);
+async function loadConfig() {
+  try {
+    const response = await fetch("/config");
+    if (!response.ok) return;
+    state.config = await response.json();
+    document.title = copy[state.uiLanguage]?.title ?? "ONH Expert Connector";
+  } catch (error) {
+    console.warn("Kunne ikke laste konfigurasjon:", error);
+  }
 }
 
 function applyLanguage(lang) {
@@ -190,199 +140,34 @@ function applyLanguage(lang) {
     }
   });
 
-  elements.topicInput.placeholder =
+  document.title = dict.title;
+  elements.queryInput.placeholder =
     state.uiLanguage === "en"
-      ? "Write a few paragraphs about the topic, learning objectives, syllabus, etc."
-      : "Skriv noen avsnitt om tema, læringsmål, pensum, osv.";
-  elements.addChipInput.placeholder = state.uiLanguage === "en" ? "Add theme…" : "Legg til tema…";
-  renderResults();
+      ? "Type what you need — course, topic, question, or goal"
+      : "Skriv hva du trenger — kurs, tema, spørsmål eller mål";
+  elements.searchBtn.textContent = dict.searchBtn;
+  setStatus(dict.idleHelper);
 }
 
-async function loadConfig() {
-  const response = await fetch("/config", { headers: { "X-UI-Language": state.uiLanguage } });
-  if (!response.ok) {
-    throw new Error("Klarte ikke å hente konfigurasjon.");
-  }
-  state.config = await response.json();
-  document.title = copy[state.uiLanguage].title;
-}
-
-function renderDepartmentOptions() {
-  const { departments } = state.config;
-  const selects = [elements.departmentFilter, elements.resultsDepartmentFilter];
-  selects.forEach((select) => {
-    if (!select) return;
-    select.innerHTML = '<option value="">Alle</option>';
-    departments.forEach((dept) => {
-      const option = document.createElement("option");
-      option.value = dept;
-      option.textContent = dept;
-      select.appendChild(option);
-    });
-  });
-}
-
-function handleTopicInput(event) {
-  state.topicText = event.target.value;
-  const length = state.topicText.length;
-  elements.charCounter.textContent = `${length} / 3200`;
-  updateAnalyzeButtonState();
-}
-
-function updateAnalyzeButtonState() {
-  const textValue = elements.topicInput.value || "";
-  state.topicText = textValue;
-  const hasText = textValue.trim().length > 0;
-  elements.analyzeBtn.disabled = !hasText || state.isAnalyzing;
-}
-
-function setView(target) {
-  Object.entries(elements.views).forEach(([key, section]) => {
-    section.classList.toggle("active", key === target);
-  });
-  if (target === "results") {
-    elements.resultsDepartmentFilter.value = state.selectedDepartment || "";
-  }
-}
-
-async function handleAnalyze(event) {
+async function handleSearch(event) {
   event.preventDefault();
-  if (state.isAnalyzing) return;
-
-  const topicText = elements.topicInput.value || "";
-  const trimmedText = topicText.trim();
-  if (!trimmedText) {
-    showToast(copy[state.uiLanguage].toastMissingTopic, "warning");
+  const query = (elements.queryInput.value || "").trim();
+  if (!query) {
+    showError(copy[state.uiLanguage].errorMissingQuery);
     return;
   }
 
-  state.topicText = topicText;
-  state.isAnalyzing = true;
-  updateAnalyzeButtonState();
-  elements.analyzeBtn.textContent = state.uiLanguage === "en" ? "Analyzing…" : "Analyserer…";
+  state.query = query;
+  state.visibleCount = 0;
+  state.results = [];
+  setStatus(copy[state.uiLanguage].statusSearching, { loading: true });
+  elements.hero.classList.add("hero--collapsed");
+  elements.errorBanner.hidden = true;
+  elements.emptyState.hidden = true;
+  elements.resultsList.innerHTML = "";
 
   try {
-    const response = await fetch("/analyze-topic", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-UI-Language": state.uiLanguage,
-      },
-      body: JSON.stringify({
-        text: state.topicText,
-        department: state.selectedDepartment || null,
-      }),
-    });
-    if (!response.ok) {
-      let errorMessage = copy[state.uiLanguage].toastAnalyzeFail;
-      try {
-        const data = await response.json();
-        const detail = data?.detail;
-        const formatted = extractErrorMessage(detail);
-        if (formatted) {
-          errorMessage = formatted;
-        }
-      } catch (parseError) {
-        console.error("Kunne ikke tolke feilrespons fra /analyze-topic:", parseError);
-      }
-      throw new Error(errorMessage);
-    }
-
-    const data = await response.json();
-    state.themes = data.themes || [];
-    state.normalizedPreview = data.normalizedPreview || "";
-
-    renderThemes();
-    elements.normalizedPreview.textContent = state.normalizedPreview || copy[state.uiLanguage].previewPlaceholder;
-    setView("themes");
-    showToast(copy[state.uiLanguage].toastAnalyzeSuccess);
-  } catch (error) {
-    console.error("Analyse mislyktes:", error);
-    showToast(error.message || copy[state.uiLanguage].toastAnalyzeFail, "error");
-  } finally {
-    state.isAnalyzing = false;
-    elements.analyzeBtn.textContent = copy[state.uiLanguage].analyzeBtn;
-    updateAnalyzeButtonState();
-  }
-}
-
-function extractErrorMessage(detail) {
-  if (!detail) return null;
-  if (typeof detail === "string") {
-    return detail;
-  }
-  if (Array.isArray(detail)) {
-    return detail
-      .map((item) => {
-        if (typeof item === "string") return item;
-        if (item?.msg) return item.msg;
-        if (item?.detail) return extractErrorMessage(item.detail);
-        return JSON.stringify(item);
-      })
-      .join(" ");
-  }
-  if (typeof detail === "object") {
-    if (detail.message) return detail.message;
-    if (detail.error) return detail.error;
-    if (detail.detail) return extractErrorMessage(detail.detail);
-    return JSON.stringify(detail);
-  }
-  return String(detail);
-}
-
-function renderThemes() {
-  elements.themesChips.innerHTML = "";
-  if (!state.themes.length) {
-    const empty = document.createElement("p");
-    empty.className = "empty-state";
-    empty.textContent = state.uiLanguage === "en" ? "No themes yet. Add one." : "Ingen temaer foreslått ennå. Legg til manuelt.";
-    elements.themesChips.appendChild(empty);
-    return;
-  }
-
-  state.themes.forEach((theme, index) => {
-    const chip = document.createElement("span");
-    chip.className = "chip";
-    chip.setAttribute("role", "listitem");
-    chip.innerHTML = `${theme}<button type="button" aria-label="Fjern tema" data-index="${index}">×</button>`;
-    elements.themesChips.appendChild(chip);
-  });
-}
-
-function handleThemesChipClick(event) {
-  const target = event.target;
-  if (target.matches("button[data-index]")) {
-    const idx = Number.parseInt(target.dataset.index, 10);
-    state.themes.splice(idx, 1);
-    renderThemes();
-  }
-}
-
-function addChipFromInput() {
-  const value = elements.addChipInput.value.trim();
-  if (!value) return;
-  if (state.themes.includes(value.toLowerCase())) {
-    showToast(state.uiLanguage === "en" ? "Theme already added." : "Temaet ligger allerede i listen.", "warning");
-    return;
-  }
-  state.themes.push(value.toLowerCase());
-  elements.addChipInput.value = "";
-  renderThemes();
-}
-
-async function fetchMatches() {
-  if (!state.themes.length) {
-    showToast(copy[state.uiLanguage].toastMissingTheme, "warning");
-    return;
-  }
-  if (state.isMatching) return;
-
-  state.isMatching = true;
-  elements.runMatchBtn.textContent = state.uiLanguage === "en" ? "Searching…" : "Søker…";
-  setView("results");
-  elements.resultsList.innerHTML = `<div class="empty-state">${copy[state.uiLanguage].toastSearching}</div>`;
-
-  try {
+    state.loading = true;
     const response = await fetch("/match", {
       method: "POST",
       headers: {
@@ -390,133 +175,156 @@ async function fetchMatches() {
         "X-UI-Language": state.uiLanguage,
       },
       body: JSON.stringify({
-        themes: state.themes,
-        department: state.selectedDepartment || null,
+        themes: [query],
+        department: null,
       }),
     });
+
     if (!response.ok) {
-      let errorMessage = copy[state.uiLanguage].toastMatchFail;
-      try {
-        const data = await response.json();
-        const detail = data?.detail;
-        const formatted = extractErrorMessage(detail);
-        if (formatted) {
-          errorMessage = formatted;
-        }
-      } catch (parseError) {
-        console.error("Kunne ikke tolke feilrespons fra /match:", parseError);
-      }
-      throw new Error(errorMessage);
+      const errText = await safeExtractError(response);
+      throw new Error(errText || copy[state.uiLanguage].errorMatchFail);
     }
+
     const data = await response.json();
     state.results = data.results || [];
-    state.resultLookup = new Map(state.results.map((result) => [result.id, result]));
-    sortResults();
+    state.visibleCount = Math.min(PAGE_SIZE, state.results.length);
     renderResults();
-    showToast(copy[state.uiLanguage].toastMatchesFound(state.results.length));
-  } catch (error) {
-    showToast(error.message || copy[state.uiLanguage].toastMatchFail, "error");
-  } finally {
-    state.isMatching = false;
-    elements.runMatchBtn.textContent = copy[state.uiLanguage].findMatches;
-  }
-}
+    updateLoadMore();
 
-function sortResults() {
-  const sort = elements.resultsSort.value;
-  if (sort === "alpha") {
-    state.results.sort((a, b) => a.name.localeCompare(b.name, state.uiLanguage === "en" ? "en" : "nb"));
-  } else {
-    state.results.sort((a, b) => b.score - a.score);
+    if (!state.results.length) {
+      elements.emptyState.hidden = false;
+      elements.emptyState.textContent = copy[state.uiLanguage].emptyResults;
+    }
+
+    setStatus(copy[state.uiLanguage].statusResults(query, state.results.length));
+  } catch (error) {
+    console.error("Match error:", error);
+    showError(error.message || copy[state.uiLanguage].errorMatchFail);
+    setStatus(copy[state.uiLanguage].idleHelper);
+    elements.emptyState.hidden = false;
+    elements.emptyState.textContent = copy[state.uiLanguage].helperText;
+  } finally {
+    state.loading = false;
+    elements.statusLine.classList.remove("is-searching");
   }
 }
 
 function renderResults() {
+  elements.emptyState.hidden = true;
   elements.resultsList.innerHTML = "";
-  if (!state.results.length) {
-    elements.resultsList.innerHTML = `<div class="empty-state">${copy[state.uiLanguage].resultsCountNone}</div>`;
-    elements.resultsCount.textContent = copy[state.uiLanguage].resultsCountNone;
-    return;
-  }
+  if (!state.results.length) return;
 
-  elements.resultsCount.textContent =
-    state.uiLanguage === "en" ? `Showing ${state.results.length} results` : `Viser ${state.results.length} treff`;
-
-  state.results.forEach((result) => {
-    const keywordHtml = renderKeywordSection(result.keywords);
+  const visible = state.results.slice(0, state.visibleCount || PAGE_SIZE);
+  visible.forEach((result) => {
     const card = document.createElement("article");
     card.className = "result-card";
+
+    const snippet = pickSnippet(result);
+    const highlighted = highlightSnippet(snippet, state.query);
+
     card.innerHTML = `
-      <div class="result-header">
+      <div class="result-top">
         <div>
-          <h3>${result.name}</h3>
-          <span class="department-pill">${result.department}</span>
+          <h3 class="result-name">${escapeHtml(result.name)}</h3>
+          <div class="result-meta">${escapeHtml(result.department || "—")}</div>
         </div>
-        <div class="score-indicator">Score: ${result.score.toFixed(1)}</div>
       </div>
-      <p class="result-why">${result.why}</p>
-      ${keywordHtml}
-      <div class="result-actions">
-        <button class="btn-text" data-action="view-sources" data-id="${result.id}">${state.uiLanguage === "en" ? "View sources" : "Vis kilder"}</button>
-        <a class="btn-text" href="${result.profile_url}" target="_blank" rel="noopener">${state.uiLanguage === "en" ? "Open profile" : "Åpne profil"}</a>
+      <div class="result-snippet">
+        <strong>${copy[state.uiLanguage].snippetLabel}:</strong>
+        <p>${highlighted}</p>
+      </div>
+      ${renderTags(result.keywords)}
+      <div class="card-actions">
+        <button class="btn-primary btn-sm" data-action="open-details" data-id="${result.id}">
+          ${copy[state.uiLanguage].viewDetails}
+        </button>
+        <a class="btn-outline btn-sm" href="${result.profile_url}" target="_blank" rel="noopener">
+          ${copy[state.uiLanguage].openProfile}
+        </a>
       </div>
     `;
+
     elements.resultsList.appendChild(card);
   });
 }
 
 function handleResultsClick(event) {
-  const target = event.target;
-  const id = target.dataset.id;
-  if (!id) return;
-  const action = target.dataset.action;
-  if (action === "view-sources") {
-    openSourcesModal(id);
+  const btn = event.target.closest("[data-action='open-details']");
+  if (!btn) return;
+  const id = btn.dataset.id;
+  const result = state.results.find((r) => r.id === id);
+  if (result) {
+    openModal(result);
   }
 }
 
-function renderKeywordSection(keywords) {
-  if (!Array.isArray(keywords) || keywords.length === 0) {
-    return "";
-  }
+function renderTags(keywords) {
+  if (!Array.isArray(keywords) || keywords.length === 0) return "";
   const chips = keywords
     .slice(0, 8)
-    .map((keyword) => `<span class="keyword-chip">${keyword}</span>`)
+    .map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`)
     .join("");
-  const label = state.uiLanguage === "en" ? "Keywords:" : "Nøkkelord:";
   return `
-    <div class="keyword-list">
-      <span class="keyword-label">${label}</span>
-      <div class="keyword-chips">${chips}</div>
+    <div class="tags" aria-label="${copy[state.uiLanguage].tagsLabel}">
+      ${chips}
     </div>
   `;
 }
 
-function openSourcesModal(resultId) {
-  const result = state.resultLookup.get(resultId);
-  if (!result || !result.citations || !result.citations.length) {
-    showToast(state.uiLanguage === "en" ? "No sources available." : "Ingen kilder tilgjengelig for denne kandidaten.", "warning");
-    return;
+function renderCitations(result) {
+  if (!result?.citations?.length) {
+    return `<p class="empty-state">${copy[state.uiLanguage].sources}: –</p>`;
   }
-  elements.modalTitle.textContent = `${state.uiLanguage === "en" ? "Sources for" : "Kilder brukt for"}: ${result.name}`;
-  elements.modalBody.innerHTML = result.citations
-    .map(
-      (citation) => `
-      <div class="modal-citation">
-        <h4>${citation.id} ${citation.title}</h4>
-        <p>${citation.snippet}</p>
-        <a href="${citation.url}" target="_blank" rel="noopener">${state.uiLanguage === "en" ? "Open link" : "Åpne lenke"}</a>
-      </div>
-    `
-    )
+  const items = result.citations
+    .slice(0, 4)
+    .map((c) => {
+      const safeSnippet = escapeHtml(c.snippet || "");
+      return `
+        <div class="modal-citation">
+          <div><strong>${escapeHtml(c.title || c.id || "")}</strong></div>
+          <p>${safeSnippet}</p>
+          <a href="${c.url}" target="_blank" rel="noopener">${copy[state.uiLanguage].openLink}</a>
+        </div>
+      `;
+    })
     .join("");
-  elements.modalBackdrop.classList.add("active");
-  elements.modalBackdrop.setAttribute("aria-hidden", "false");
+  return items;
 }
 
-function closeModal() {
-  elements.modalBackdrop.classList.remove("active");
-  elements.modalBackdrop.setAttribute("aria-hidden", "true");
+function updateLoadMore() {
+  const hasMore = state.results.length > state.visibleCount;
+  elements.loadMoreBtn.hidden = !hasMore;
+}
+
+function pickSnippet(result) {
+  if (result?.citations?.length) {
+    return result.citations[0].snippet || result.why || "";
+  }
+  return result?.why || "";
+}
+
+function highlightSnippet(text, query) {
+  if (!text) return "";
+  const safe = escapeHtml(text);
+  const tokens = (query || "")
+    .split(/\s+/)
+    .filter((w) => w.length > 3)
+    .slice(0, 6)
+    .map(escapeRegExp);
+  if (!tokens.length) return safe;
+  const pattern = new RegExp(`(${tokens.join("|")})`, "gi");
+  return safe.replace(pattern, '<mark class="highlight">$1</mark>');
+}
+
+function setStatus(message, { loading = false } = {}) {
+  elements.statusLine.textContent = message;
+  elements.statusLine.classList.toggle("is-searching", loading);
+}
+
+function showError(message) {
+  elements.errorBanner.textContent = message;
+  elements.errorBanner.hidden = false;
+  showToast(message, "error");
 }
 
 function showToast(message, type = "info") {
@@ -528,4 +336,56 @@ function showToast(message, type = "info") {
     toast.classList.add("fade");
     setTimeout(() => toast.remove(), 300);
   }, 3200);
+}
+
+async function safeExtractError(response) {
+  try {
+    const data = await response.json();
+    return data?.detail || data?.message || null;
+  } catch (error) {
+    return null;
+  }
+}
+
+function escapeHtml(str) {
+  return (str || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function openModal(result) {
+  elements.modalTitle.textContent = result.name;
+  const tags = renderTags(result.keywords);
+  const meta = `
+    <div class="result-meta">${escapeHtml(result.department || "—")}</div>
+  `;
+  const snippet = `
+    <div class="result-snippet">
+      <strong>${copy[state.uiLanguage].snippetLabel}:</strong>
+      <p>${highlightSnippet(pickSnippet(result), state.query)}</p>
+    </div>
+  `;
+  elements.modalBody.innerHTML = `
+    ${meta}
+    ${tags}
+    ${snippet}
+    <div>
+      <strong>${copy[state.uiLanguage].sources}</strong>
+      <div class="modal-citation-list">${renderCitations(result)}</div>
+    </div>
+  `;
+  elements.modalBackdrop.hidden = false;
+  elements.modalBackdrop.setAttribute("aria-hidden", "false");
+  elements.modalCloseBtn.focus();
+}
+
+function closeModal() {
+  elements.modalBackdrop.hidden = true;
+  elements.modalBackdrop.setAttribute("aria-hidden", "true");
 }

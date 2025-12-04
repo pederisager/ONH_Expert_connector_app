@@ -13,7 +13,7 @@ test.describe('ONH Expert Connector UI smoke flow', () => {
     ensureArtifactsDir();
   });
 
-  test('user can analyze a topic and fetch matches', async ({ page }, testInfo) => {
+  test('user can search and see matches', async ({ page }, testInfo) => {
     test.slow();
     const consoleMessages: string[] = [];
     page.on('console', (msg) => {
@@ -23,40 +23,36 @@ test.describe('ONH Expert Connector UI smoke flow', () => {
       consoleMessages.push(`[pageerror] ${error.message}`);
     });
 
-    await test.step('load home view and submit analysis', async () => {
+    await test.step('load home view and submit search', async () => {
       await page.goto('/');
       await expect(page.locator('h1')).toContainText('ONH Expert Connector');
-      const topicInput = page.locator('#topicInput');
-      const analyzeBtn = page.locator('#analyzeBtn');
-      await expect(analyzeBtn).toBeDisabled();
+      const queryInput = page.locator('#queryInput');
+      const searchBtn = page.locator('#searchBtn');
 
-      await topicInput.fill(
+      await queryInput.fill(
         'Vi trenger et nytt modulbasert kurs som dekker AI-etikk, dataminimering og ansvarlig bruk av maskinlæring i helsesektoren.'
       );
-      await expect(analyzeBtn).toBeEnabled();
-      await analyzeBtn.click();
-
-      const themesView = page.locator('#themesView');
-      await expect(themesView).toHaveClass(/active/, { timeout: 60_000 });
-      await expect(page.locator('#themesChips .chip').first()).toBeVisible({ timeout: 60_000 });
+      await expect(searchBtn).toBeEnabled();
+      await searchBtn.click();
     });
 
-    await test.step('run matching and capture UI artifacts', async () => {
-      await page.click('#runMatchBtn');
+    await test.step('view results and capture artifacts', async () => {
       const firstResult = page.locator('.result-card').first();
       await expect(firstResult).toBeVisible({ timeout: 180_000 });
 
-      const resultsCountText = (await page.locator('#resultsCount').textContent())?.trim();
-      consoleMessages.push(`[ui] resultsCount=${resultsCountText}`);
+      const statusLine = (await page.locator('#statusLine').textContent())?.trim();
+      consoleMessages.push(`[ui] statusLine=${statusLine}`);
+
+      // open details modal for first result to ensure it renders
+      await firstResult.locator('[data-action=\"open-details\"]').click();
+      await expect(page.locator('#modalBody')).toBeVisible({ timeout: 10_000 });
+      await page.click('#modalCloseBtn');
 
       const screenshotPath = path.join(artifactsDir, 'results.png');
       await page.screenshot({ path: screenshotPath, fullPage: true });
     });
 
-    const logPath = path.join(
-      artifactsDir,
-      `playwright-console-${testInfo.retry + 1}.log`
-    );
+    const logPath = path.join(artifactsDir, `playwright-console-${testInfo.retry + 1}.log`);
     writeFileSync(logPath, consoleMessages.join('\n'), 'utf-8');
     await testInfo.attach('console-log', {
       body: consoleMessages.join('\n'),
