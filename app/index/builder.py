@@ -13,6 +13,7 @@ import numpy as np
 from .chunking import Chunker
 from .embeddings import EmbeddingBackend
 from .models import Chunk, IndexPaths, StaffRecord
+from .staff_info_loader import StaffInfo, extract_method_tags, load_staff_info, synthetic_page_text
 from .vector_store import LocalVectorStore
 
 
@@ -33,11 +34,13 @@ class StaffIndexBuilder:
         chunker: Chunker,
         embedder: EmbeddingBackend,
         vector_store: LocalVectorStore | None = None,
+        staff_info: dict[str, StaffInfo] | None = None,
     ) -> None:
         self.paths = paths
         self.chunker = chunker
         self.embedder = embedder
         self.vector_store = vector_store or LocalVectorStore(paths.vectors_dir)
+        self.staff_info = staff_info or {}
 
     def build(self, records: Sequence[StaffRecord]) -> BuildSummary:
         self._ensure_directories()
@@ -83,14 +86,39 @@ class StaffIndexBuilder:
         chunks: list[Chunk] = []
         primary_source = record.primary_source()
         summary_source_url = primary_source.url if primary_source else record.profile_url
+        info = self.staff_info.get(record.name.lower())
+
+        extra_tags: list[str] = []
+        if info:
+            extra_tags.extend(info.expertise_domains)
+            extra_tags.extend(info.research_focus)
+            extra_tags.extend(extract_method_tags(info))
+
+        merged_tags = list(dict.fromkeys([*record.tags, *extra_tags]))
         base_metadata = {
             "department": record.department,
             "title": record.title,
             "profile_url": record.profile_url,
             "source_title": record.name,
             "source_kind": "profile",
-            "tags": list(record.tags),
+            "tags": merged_tags,
         }
+
+        # Synthetic staff_info page (high-signal curated data).
+        if info:
+            synthetic_text = synthetic_page_text(info, include_methods=True)
+            synthetic_metadata = {
+                **base_metadata,
+                "source_kind": "staffinfo",
+                "source_title": record.name,
+            }
+            synthetic_chunks = self.chunker.chunk_text(
+                staff_slug=record.slug,
+                text=synthetic_text,
+                source_url=f"staffinfo://{record.slug}",
+                metadata=synthetic_metadata,
+            )
+            chunks.extend(synthetic_chunks)
 
         summary_chunks = self.chunker.chunk_text(
             staff_slug=record.slug,

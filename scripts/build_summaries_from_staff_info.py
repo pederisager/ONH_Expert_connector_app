@@ -110,6 +110,7 @@ async def main(use_llm: bool, selected_names: set[str] | None) -> None:
     if not STAFF_INFO_PATH.exists():
         raise FileNotFoundError(f"Missing staff_info.json at {STAFF_INFO_PATH}")
     staff_data = json.loads(STAFF_INFO_PATH.read_text(encoding="utf-8")).get("staff", [])
+    total = len([s for s in staff_data if s.get("name") and (not selected_names or s.get("name") in selected_names)])
 
     # Load model config only if LLM is enabled.
     model_name = endpoint = None
@@ -131,6 +132,7 @@ async def main(use_llm: bool, selected_names: set[str] | None) -> None:
     summaries: Dict[str, str] = {}
 
     async with httpx.AsyncClient(timeout=timeout) as client:
+        processed = 0
         for entry in staff_data:
             name = entry.get("name", "").strip()
             if not name:
@@ -165,6 +167,8 @@ async def main(use_llm: bool, selected_names: set[str] | None) -> None:
             profile_url = entry.get("profile_url")
             if profile_url:
                 summaries[str(profile_url).strip()] = summary
+            processed += 1
+            print(f"{name} ferdig ({processed}/{total})")
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     payload = {

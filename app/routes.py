@@ -34,6 +34,26 @@ logger = logging.getLogger(__name__)
 PAGE_TEXT_CHAR_LIMIT = 8000
 CITATION_SNIPPET_LIMIT = 3000
 PREVIEW_CHAR_LIMIT = 1200
+METHOD_KEYWORDS = {
+    "kvalitativ",
+    "kvalitative",
+    "kvantitativ",
+    "kvantitative",
+    "ipa",
+    "randomisert",
+    "randomiserte",
+    "survey",
+    "meta-analyse",
+    "meta analyse",
+    "longitudinell",
+    "eksperimentell",
+    "klinisk metode",
+    "case-studie",
+    "casestudie",
+    "mixed methods",
+    "mixed-methods",
+    "tverrsnitt",
+}
 
 
 # --------------------------------------------------------------------------- #
@@ -495,7 +515,11 @@ def _retrieval_result_to_match_item(result, themes: Sequence[str], *, language_c
     semantic_score = max(0.0, min(1.0, float(result.score)))
     keyword_score = _keyword_overlap_score(result.chunks, themes)
     tag_score = _tag_overlap_score(keywords, themes)
-    adjusted_score = min(1.0, semantic_score + 0.1 * keyword_score + 0.15 * tag_score)
+    method_score = _method_overlap_score(keywords, themes)
+    adjusted_score = min(
+        1.0,
+        semantic_score + 0.1 * keyword_score + 0.15 * tag_score + 0.15 * method_score,
+    )
 
     if language_ctx.user_lang.startswith("en"):
         why_default = f"{display_name} matches {', '.join(themes) or 'the topic'} based on semantic similarity."
@@ -551,8 +575,16 @@ def _resolve_citation_url(chunk: Chunk) -> str:
 
 
 def _chunks_to_citations(chunks: Sequence[Chunk], themes: Sequence[str]) -> list[Citation]:
+    def _priority(url: str) -> int:
+        if url.startswith("staffinfo://"):
+            return 0
+        if "oslonyehoyskole.no" in url:
+            return 1
+        return 2
+
+    sorted_chunks = sorted(chunks, key=lambda c: _priority(c.source_url))
     citations: list[Citation] = []
-    for idx, chunk in enumerate(chunks, start=1):
+    for idx, chunk in enumerate(sorted_chunks, start=1):
         snippet = _extract_citation_snippet(chunk.text, themes)
         if not snippet:
             continue
@@ -612,6 +644,17 @@ def _tag_overlap_score(keywords: Sequence[str], themes: Sequence[str]) -> float:
         return 0.0
     overlap = len(keyword_tokens & theme_tokens)
     return overlap / max(1, len(keyword_tokens))
+
+
+def _method_overlap_score(keywords: Sequence[str], themes: Sequence[str]) -> float:
+    if not keywords or not themes:
+        return 0.0
+    method_tokens = {k.strip().lower() for k in keywords if k.strip().lower() in METHOD_KEYWORDS}
+    theme_tokens = {t.strip().lower() for t in themes if t.strip()}
+    if not method_tokens or not theme_tokens:
+        return 0.0
+    overlap = len(method_tokens & theme_tokens)
+    return overlap / max(1, len(theme_tokens))
 
 
 def _request_state(request: Request):

@@ -24,8 +24,10 @@ from .builder import StaffIndexBuilder
 from .chunking import Chunker
 from .embedder_factory import create_embedding_backend
 from .models import IndexPaths, SourceLink, StaffRecord
+from .staff_info_loader import load_staff_info
 from .vector_store import LocalVectorStore
 
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 BASE_URL = "https://oslonyehoyskole.no"
 STAFF_LIST_ENDPOINT = f"{BASE_URL}/ansatte/ansatte_data"
@@ -989,11 +991,13 @@ def build_index_from_records(
     embedder = create_embedding_backend(models_config, app_config=app_config)
     paths = IndexPaths(root=index_root)
     vector_store = LocalVectorStore(paths.vectors_dir)
+    staff_info = load_staff_info(PROJECT_ROOT / "staff_info.json")
     builder = StaffIndexBuilder(
         paths=paths,
         chunker=chunker,
         embedder=embedder,
         vector_store=vector_store,
+        staff_info=staff_info,
     )
     summary = builder.build(records)
     LOGGER.info(
