@@ -436,6 +436,18 @@ def _sentence_split(text: str) -> list[str]:
     return [s.strip() for s in sentences if len(s.strip()) > 20]
 
 
+def _sentence_theme_score(sentence: str, themes: set[str]) -> float:
+    if not themes:
+        return 0.0
+    lowered = sentence.lower()
+    hits = sum(1 for theme in themes if theme in lowered)
+    if hits:
+        return hits / max(1, len(themes))
+    sentence_tokens = set(tokenize(sentence))
+    theme_token_hits = len(sentence_tokens & themes)
+    return theme_token_hits / max(1, len(themes))
+
+
 def _hostname(url: str) -> str:
     parsed = urlparse(url)
     return parsed.netloc or url
@@ -752,27 +764,52 @@ class MatchEngine:
         return self._last_similarity_backend
 
     def _build_citations(self, doc: StaffDocument, themes: set[str]) -> list[dict[str, str]]:
-        citations: list[dict[str, str]] = []
-        citation_id = 1
+        """Pick up to 3 high-signal sentences to ground the LLM summary.
+
+        Prefers sentences that overlap with the query themes; falls back to the
+        earliest sentences when no lexical overlap exists so the LLM still gets
+        evidence for conceptual matches.
+        """
+
+        theme_tokens = {theme.strip().lower() for theme in themes if theme.strip()}
+        candidates: list[tuple[float, int, dict[str, str]]] = []
+        order = 0
+
         for page in doc.pages:
             sentences = _sentence_split(page.text)
             for sentence in sentences:
-                lowered = sentence.lower()
-                if themes and not any(theme in lowered for theme in themes):
+                text = sentence.strip()
+                if not text:
                     continue
-                citations.append(
-                    {
-                        "id": f"[{citation_id}]",
-                        "title": page.title or _hostname(page.url),
-                        "url": _normalize_source_url(page.url),
-                        "snippet": sentence[:300].rstrip(),
-                    }
+                order += 1
+                score = _sentence_theme_score(text, theme_tokens)
+                snippet = text[:300].rstrip()
+                candidates.append(
+                    (
+                        score,
+                        order,
+                        {
+                            "title": page.title or _hostname(page.url),
+                            "url": _normalize_source_url(page.url),
+                            "snippet": snippet,
+                        },
+                    )
                 )
-                citation_id += 1
-                if citation_id > 3:
-                    break
-            if citation_id > 3:
-                break
+
+        if not candidates:
+            return []
+
+        candidates.sort(key=lambda item: (-item[0], item[1]))
+        top = candidates[:3]
+
+        citations: list[dict[str, str]] = []
+        for idx, (_, _, payload) in enumerate(top, start=1):
+            citations.append(
+                {
+                    "id": f"[{idx}]",
+                    **payload,
+                }
+            )
         return citations
 
     def _build_explanation(

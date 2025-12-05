@@ -19,6 +19,7 @@ from .index import IndexPaths, LocalVectorStore, create_embedding_backend
 from .llm_explainer import LLMExplainer
 from .language_utils import create_translator
 from .match_engine import MatchEngine
+from .precomputed_summaries import load_precomputed_summaries
 from .rag import EmbeddingRetriever
 
 LOGGER = logging.getLogger(__name__)
@@ -46,6 +47,7 @@ def create_app() -> FastAPI:
     app_config = load_app_config()
     models_config = load_models_config()
     staff_profiles = load_staff_profiles()
+    precomputed_summaries = load_precomputed_summaries(PROJECT_ROOT / "data" / "precomputed_summaries.json")
 
     cache_dir = (PROJECT_ROOT / app_config.cache.directory).resolve()
     cache_manager = CacheManager(
@@ -96,6 +98,7 @@ def create_app() -> FastAPI:
     app.state.embedding_retriever = embedding_retriever
     app.state.vector_index_ready = vector_index_ready
     app.state.staff_document_cache = {}
+    app.state.precomputed_summaries = precomputed_summaries
 
     app.include_router(routes.router)
 

@@ -26,6 +26,11 @@ The requirements pin CUDA 11.8 torch (2.3.1+cu118) so Pascal GPUs like GTX 1060 
 
 The API serves the static UI from `app/static` at the root path.
 
+### Staff summaries
+- Source of truth: `staff_info.json` (maintained manually).
+- Generate precomputed summaries: `python3 scripts/build_summaries_from_staff_info.py` (add `--no-llm` to skip Ollama).
+- The API loads `data/precomputed_summaries.json` at startup; restart after regenerating.
+
 ## NVA API keys and data refresh
 
 - Place your NVA API credentials in `nva_api_keys_test.json` or `nva_api_keys_prod.json` (these files are git-ignored). Structure:

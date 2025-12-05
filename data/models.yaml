@@ -2,6 +2,7 @@ llm_model:
   name: "llama3.1:8b-instruct-q4_0"
   backend: "ollama"
   endpoint: "http://localhost:11434"
+  timeout: 120
   purpose: "generate explanations"
 
 embedding_model:

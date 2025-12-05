@@ -23,7 +23,7 @@ const copy = {
     errorMissingQuery: "Skriv inn et søk før du fortsetter.",
     errorMatchFail: "Kunne ikke hente treff.",
     emptyResults: "Ingen treff. Prøv mer spesifikt språk eller færre ord.",
-    snippetLabel: "Begrunnelse",
+    snippetLabel: "Beskrivelse",
     tagsLabel: "Nøkkelord",
     viewDetails: "Vis detaljer",
     hideDetails: "Skjul detaljer",
@@ -45,7 +45,7 @@ const copy = {
     errorMissingQuery: "Enter a search before continuing.",
     errorMatchFail: "Could not fetch matches.",
     emptyResults: "No matches found. Try more specific language or fewer words.",
-    snippetLabel: "Why this match",
+    snippetLabel: "Description",
     tagsLabel: "Keywords",
     viewDetails: "View details",
     hideDetails: "Hide details",
@@ -297,10 +297,12 @@ function updateLoadMore() {
 }
 
 function pickSnippet(result) {
+  const why = (result?.why || "").trim();
+  if (why) return why;
   if (result?.citations?.length) {
-    return result.citations[0].snippet || result.why || "";
+    return truncateText(result.citations[0].snippet || "");
   }
-  return result?.why || "";
+  return "";
 }
 
 function highlightSnippet(text, query) {
@@ -336,6 +338,16 @@ function showToast(message, type = "info") {
     toast.classList.add("fade");
     setTimeout(() => toast.remove(), 300);
   }, 3200);
+}
+
+function truncateText(text, maxLength = 240) {
+  const normalized = (text || "").trim();
+  if (!normalized) return "";
+  if (normalized.length <= maxLength) return normalized;
+  const cut = normalized.slice(0, maxLength);
+  const lastSpace = cut.lastIndexOf(" ");
+  const trimmed = lastSpace > maxLength * 0.6 ? cut.slice(0, lastSpace) : cut;
+  return `${trimmed.trim().replace(/[,:;]$/, "")}...`;
 }
 
 async function safeExtractError(response) {

@@ -30,6 +30,7 @@ Language handling
 - `data/app.config.yaml` now contains a `language` block controlling detection, embedding/LLM language modes (`multilingual` vs `en-only`), and the translation backend. Translation is off by default and uses a local/no-op translator unless explicitly enabled.
 - `create_app` attaches `translator` and `language_config` to `app.state`; `routes.match` builds a per-request `LanguageContext` from the `lang` query param or `X-UI-Language`/`X-Language` headers (fallback: `ui.language`).
 - When `llm_language_mode` is `en-only`, snippets/themes are translated to EN before LLM prompts and translated back to the user language if translation is enabled. RAG queries are translated only if `embedding_language_mode` is `en-only`.
+- Staff card summaries are pre-generated offline from `staff_info.json` via `scripts/build_summaries_from_staff_info.py` and loaded from `data/precomputed_summaries.json` at startup. Do not invoke the LLM during search for summaries; regenerate the precomputed file after editing `staff_info.json`.
 
 ## Build, Test, and Development Commands
 Default to the python3 command for all scripts/CLI examples on this project (some environments reject python).

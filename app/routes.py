@@ -18,7 +18,6 @@ from .config_loader import AppConfig
 from .fetch_utils import FetchNotAllowedError, FetchUtils
 from .index.models import Chunk
 from .language_utils import LanguageContext, NoOpTranslator, Translator, build_language_context
-from .llm_explainer import LLMExplainer
 from .match_engine import (
     MatchEngine,
     PageContent,
@@ -421,62 +420,14 @@ def _hash_id(name: str, profile_url: str) -> str:
     return digest[:12]
 
 
-async def _maybe_generate_explanations(
-    results: list[MatchItem],
-    llm_explainer: LLMExplainer,
-    themes: Sequence[str],
+def _lookup_precomputed_summary(
     *,
-    translator: Translator,
-    language_ctx: LanguageContext,
-) -> None:
-    tasks = []
-    prompt_lang = language_ctx.llm_lang or language_ctx.user_lang
-    output_lang = language_ctx.user_lang or prompt_lang
-    prompt_themes: list[str] = list(themes)
-    if language_ctx.translate_for_llm_input:
-        prompt_themes = translator.translate_batch(
-            themes,
-            source_lang=language_ctx.query_lang,
-            target_lang=prompt_lang,
-        )
-    for result in results:
-        snippets = [citation.snippet for citation in result.citations]
-        if not snippets:
-            continue
-        prompt_snippets = snippets
-        if language_ctx.translate_for_llm_input:
-            prompt_snippets = translator.translate_batch(
-                snippets,
-                source_lang=language_ctx.embed_lang,
-                target_lang=prompt_lang,
-            )
-
-        tasks.append(
-            llm_explainer.generate(
-                result.name,
-                prompt_snippets,
-                prompt_themes,
-                prompt_lang=prompt_lang,
-                output_lang=output_lang,
-                translator=translator,
-            )
-        )
-
-    if not tasks:
-        return
-
-    explanations = await asyncio.gather(*tasks, return_exceptions=True)
-    idx = 0
-    for result in results:
-        if not result.citations:
-            continue
-        explanation = explanations[idx]
-        idx += 1
-        if isinstance(explanation, Exception):
-            continue
-        cleaned = explanation.strip()
-        if cleaned:
-            result.why = cleaned
+    precomputed: dict[str, str],
+    profile_url: str,
+    name: str,
+) -> str:
+    summary = precomputed.get(profile_url) or precomputed.get(name)
+    return (summary or "").strip()
 
 
 def _rag_query_from_themes(themes: Sequence[str]) -> str:
@@ -724,8 +675,8 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
     fetch_utils: FetchUtils = state.fetch_utils
     cache_manager: CacheManager = state.cache_manager
     staff_profiles: list[StaffProfile] = state.staff_profiles
-    llm_explainer: LLMExplainer = state.llm_explainer
     translator: Translator = getattr(state, "translator", None) or NoOpTranslator()
+    precomputed_summaries: dict[str, str] = getattr(state, "precomputed_summaries", {})
 
     query_text = _rag_query_from_themes(payload.themes)
     user_lang = _resolve_user_language(request, app_config)
@@ -734,6 +685,7 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
         user_lang=user_lang,
         language_config=language_config,
     )
+    precomputed_summaries: dict[str, str] = getattr(state, "precomputed_summaries", {})
 
     if retriever and vector_index_ready:
         rag_results = _match_via_retriever(
@@ -751,13 +703,14 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
                 retriever.disabled_reason,
             )
         if rag_results:
-            await _maybe_generate_explanations(
-                rag_results,
-                llm_explainer,
-                payload.themes,
-                translator=translator,
-                language_ctx=language_ctx,
-            )
+            for item in rag_results:
+                precomputed = _lookup_precomputed_summary(
+                    precomputed=precomputed_summaries,
+                    profile_url=item.profile_url,
+                    name=item.name,
+                )
+                if precomputed:
+                    item.why = precomputed
             return MatchResponse(results=rag_results, total=len(rag_results))
 
     if payload.department:
@@ -803,13 +756,19 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
         score_breakdown = dict(match.score_breakdown)
         if "keyword" in score_breakdown and "keywords" not in score_breakdown:
             score_breakdown["keywords"] = score_breakdown.pop("keyword")
+        precomputed = _lookup_precomputed_summary(
+            precomputed=precomputed_summaries,
+            profile_url=match.staff.profile_url,
+            name=match.staff.name,
+        )
         item = MatchItem(
             id=_hash_id(match.staff.name, match.staff.profile_url),
             name=match.staff.name,
             department=match.staff.department,
             profile_url=match.staff.profile_url,
             score=match.score,
-            why=_localize_explanation(
+            why=precomputed
+            or _localize_explanation(
                 text=match.explanation,
                 name=match.staff.name,
                 themes=payload.themes,
@@ -820,14 +779,6 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
             keywords=list(match.staff.tags),
         )
         results.append(item)
-
-    await _maybe_generate_explanations(
-        results,
-        llm_explainer,
-        payload.themes,
-        translator=translator,
-        language_ctx=language_ctx,
-    )
 
     return MatchResponse(results=results, total=len(results))
 
