@@ -16,8 +16,8 @@ See `ONH_Expert_Connector_Concept.txt` and `backend_analysis_process.md` for ful
 ## Getting started
 
 ```bash
-python3 -m venv .venv  # run only to (re)create .venv
-source .venv/bin/activate
+python3 -m venv ~/onh_venv  # run only to (re)create .venv
+source ~/onh_venv/bin/activate
 pip install -r requirements.txt  # only run once
 uvicorn app.main:app --reload
 ```
