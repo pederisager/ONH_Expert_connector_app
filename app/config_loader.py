@@ -56,6 +56,7 @@ class TranslationConfig(BaseModel):
     enabled: bool = False
     provider: str = "none"
     model_name: str | None = Field(alias="model-name", default=None)
+    endpoint: str | None = None
     device: str | None = None
     timeout_seconds: float = Field(alias="timeout-seconds", default=20.0)
     cache_size: int = Field(alias="cache-size", default=256)

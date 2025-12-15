@@ -31,6 +31,11 @@ The API serves the static UI from `app/static` at the root path.
 - Generate precomputed summaries: `python3 scripts/build_summaries_from_staff_info.py` (add `--no-llm` to skip Ollama).
 - The API loads `data/precomputed_summaries.json` at startup; restart after regenerating.
 
+### UI language & translation
+- The UI sends `X-UI-Language: no|en` to `/match` and the API returns staff-card summaries in that language.
+- Staff-card summaries are precomputed in both languages (NO/EN) in `data/precomputed_summaries.json`; switching language reuses those prebuilt texts instead of translating at request time.
+- Rebuild bilingual summaries with `python3 scripts/build_summaries_from_staff_info.py` (use `--langs en` to (re)generate only English, and `--force` to overwrite existing entries).
+
 ## NVA API keys and data refresh
 
 - Place your NVA API credentials in `nva_api_keys_test.json` or `nva_api_keys_prod.json` (these files are git-ignored). Structure:

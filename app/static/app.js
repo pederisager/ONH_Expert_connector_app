@@ -7,6 +7,7 @@ const state = {
   visibleCount: 0,
   loading: false,
   config: {},
+  activeModalId: null,
 };
 
 const copy = {
@@ -83,8 +84,7 @@ window.addEventListener("DOMContentLoaded", () => {
 async function initialize() {
   await loadConfig();
   state.uiLanguage = (state.config?.ui?.language || "no").toLowerCase();
-  applyLanguage(state.uiLanguage);
-  setStatus(copy[state.uiLanguage].idleHelper);
+  await applyLanguage(state.uiLanguage);
 }
 
 function setupListeners() {
@@ -125,7 +125,7 @@ async function loadConfig() {
   }
 }
 
-function applyLanguage(lang) {
+async function applyLanguage(lang) {
   state.uiLanguage = lang === "en" ? "en" : "no";
   document.documentElement.lang = state.uiLanguage;
   elements.langNoBtn.classList.toggle("active", state.uiLanguage === "no");
@@ -146,7 +146,15 @@ function applyLanguage(lang) {
       ? "Type what you need — course, topic, question, or goal"
       : "Skriv hva du trenger — kurs, tema, spørsmål eller mål";
   elements.searchBtn.textContent = dict.searchBtn;
-  setStatus(dict.idleHelper);
+  updateStatusForLanguage();
+  renderResults();
+  if (needsLanguageRefresh()) {
+    await refreshResultsForLanguage();
+  }
+  if (state.activeModalId) {
+    const result = state.results.find((r) => r.id === state.activeModalId);
+    if (result) openModal(result);
+  }
 }
 
 async function handleSearch(event) {
@@ -156,57 +164,100 @@ async function handleSearch(event) {
     showError(copy[state.uiLanguage].errorMissingQuery);
     return;
   }
+  await runSearch(query, { resetVisibleCount: true });
+}
 
+async function runSearch(query, { resetVisibleCount = true, preserveVisibleCount } = {}) {
   state.query = query;
-  state.visibleCount = 0;
-  state.results = [];
-  setStatus(copy[state.uiLanguage].statusSearching, { loading: true });
+  const dict = copy[state.uiLanguage];
+  const initialVisible = resetVisibleCount
+    ? PAGE_SIZE
+    : preserveVisibleCount ?? state.visibleCount || PAGE_SIZE;
+
+  if (resetVisibleCount) {
+    state.visibleCount = 0;
+    state.results = [];
+    elements.resultsList.innerHTML = "";
+  }
+
+  setStatus(dict.statusSearching, { loading: true });
   elements.hero.classList.add("hero--collapsed");
   elements.errorBanner.hidden = true;
   elements.emptyState.hidden = true;
-  elements.resultsList.innerHTML = "";
 
   try {
     state.loading = true;
-    const response = await fetch("/match", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-UI-Language": state.uiLanguage,
-      },
-      body: JSON.stringify({
-        themes: [query],
-        department: null,
-      }),
-    });
-
-    if (!response.ok) {
-      const errText = await safeExtractError(response);
-      throw new Error(errText || copy[state.uiLanguage].errorMatchFail);
-    }
-
-    const data = await response.json();
+    const data = await fetchMatches(query);
     state.results = data.results || [];
-    state.visibleCount = Math.min(PAGE_SIZE, state.results.length);
+    const available = state.results.length;
+    state.visibleCount = available ? Math.min(initialVisible, available) : 0;
     renderResults();
     updateLoadMore();
 
     if (!state.results.length) {
       elements.emptyState.hidden = false;
-      elements.emptyState.textContent = copy[state.uiLanguage].emptyResults;
+      elements.emptyState.textContent = dict.emptyResults;
     }
 
-    setStatus(copy[state.uiLanguage].statusResults(query, state.results.length));
+    setStatus(dict.statusResults(query, state.results.length));
   } catch (error) {
     console.error("Match error:", error);
-    showError(error.message || copy[state.uiLanguage].errorMatchFail);
-    setStatus(copy[state.uiLanguage].idleHelper);
+    showError(error.message || dict.errorMatchFail);
+    setStatus(dict.idleHelper);
     elements.emptyState.hidden = false;
-    elements.emptyState.textContent = copy[state.uiLanguage].helperText;
+    elements.emptyState.textContent = dict.helperText;
   } finally {
     state.loading = false;
     elements.statusLine.classList.remove("is-searching");
   }
+}
+
+async function fetchMatches(query) {
+  const response = await fetch("/match", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-UI-Language": state.uiLanguage,
+    },
+    body: JSON.stringify({
+      themes: [query],
+      department: null,
+    }),
+  });
+
+  if (!response.ok) {
+    const errText = await safeExtractError(response);
+    throw new Error(errText || copy[state.uiLanguage].errorMatchFail);
+  }
+  return response.json();
+}
+
+async function refreshResultsForLanguage() {
+  if (!state.query || state.loading) return;
+  const preserveVisibleCount = state.visibleCount || PAGE_SIZE;
+  await runSearch(state.query, { resetVisibleCount: false, preserveVisibleCount });
+}
+
+function updateStatusForLanguage() {
+  const dict = copy[state.uiLanguage];
+  if (state.loading) {
+    setStatus(dict.statusSearching, { loading: true });
+    return;
+  }
+  if (state.results.length) {
+    setStatus(dict.statusResults(state.query, state.results.length));
+    return;
+  }
+  setStatus(dict.idleHelper);
+}
+
+function needsLanguageRefresh() {
+  if (!state.results.length) return false;
+  return state.results.some((result) => {
+    const whyByLang = result?.whyByLang;
+    if (!whyByLang || typeof whyByLang !== "object") return true;
+    return !(whyByLang[state.uiLanguage] || "").trim();
+  });
 }
 
 function renderResults() {
@@ -297,6 +348,14 @@ function updateLoadMore() {
 }
 
 function pickSnippet(result) {
+  const whyByLang = result?.whyByLang;
+  if (whyByLang && typeof whyByLang === "object") {
+    const preferred = (whyByLang[state.uiLanguage] || "").trim();
+    if (preferred) return preferred;
+    const fallbackLang = state.uiLanguage === "en" ? "no" : "en";
+    const fallback = (whyByLang[fallbackLang] || "").trim();
+    if (fallback) return fallback;
+  }
   const why = (result?.why || "").trim();
   if (why) return why;
   if (result?.citations?.length) {
@@ -372,6 +431,7 @@ function escapeRegExp(str) {
 }
 
 function openModal(result) {
+  state.activeModalId = result.id;
   elements.modalTitle.textContent = result.name;
   const tags = renderTags(result.keywords);
   const meta = `
@@ -398,6 +458,7 @@ function openModal(result) {
 }
 
 function closeModal() {
+  state.activeModalId = null;
   elements.modalBackdrop.hidden = true;
   elements.modalBackdrop.setAttribute("aria-hidden", "true");
 }

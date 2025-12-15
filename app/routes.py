@@ -85,6 +85,7 @@ class MatchItem(BaseModel):
     profile_url: str
     score: float
     why: str
+    why_by_lang: dict[str, str] | None = Field(default=None, alias="whyByLang")
     citations: list[Citation]
     score_breakdown: dict[str, float] = Field(alias="scoreBreakdown")
     keywords: list[str] = Field(default_factory=list)
@@ -450,6 +451,63 @@ def _lookup_precomputed_summary(
     return (summary or "").strip()
 
 
+def _normalize_summary_lang(user_lang: str) -> str:
+    normalized = (user_lang or "no").lower()
+    return "en" if normalized.startswith("en") else "no"
+
+
+def _lookup_precomputed_summary_by_lang(
+    *,
+    precomputed_by_lang: dict[str, dict[str, str]],
+    user_lang: str,
+    profile_url: str,
+    name: str,
+    default_lang: str = "no",
+) -> str:
+    """Pick summary in `user_lang`, falling back to `default_lang` then empty."""
+    lang = _normalize_summary_lang(user_lang)
+    summary = _lookup_precomputed_summary(
+        precomputed=precomputed_by_lang.get(lang, {}),
+        profile_url=profile_url,
+        name=name,
+    )
+    if summary:
+        return summary
+    if default_lang and default_lang != lang:
+        return _lookup_precomputed_summary(
+            precomputed=precomputed_by_lang.get(default_lang, {}),
+            profile_url=profile_url,
+            name=name,
+        )
+    return ""
+
+
+def _choose_why_text(
+    *,
+    precomputed: str,
+    fallback_explanation: str | None,
+    staff_name: str,
+    themes: Sequence[str],
+    language_ctx: LanguageContext,
+) -> str:
+    """Return the staff card summary (why) in the requested language without runtime translation."""
+    if precomputed:
+        return precomputed
+    if language_ctx.user_lang.startswith("en"):
+        return _localize_explanation(
+            text=None,
+            name=staff_name,
+            themes=themes,
+            language_ctx=language_ctx,
+        )
+    return _localize_explanation(
+        text=fallback_explanation,
+        name=staff_name,
+        themes=themes,
+        language_ctx=language_ctx,
+    )
+
+
 def _rag_query_from_themes(themes: Sequence[str]) -> str:
     return " ".join(theme.strip() for theme in themes if theme.strip()).strip()
 
@@ -719,7 +777,10 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
     cache_manager: CacheManager = state.cache_manager
     staff_profiles: list[StaffProfile] = state.staff_profiles
     translator: Translator = getattr(state, "translator", None) or NoOpTranslator()
-    precomputed_summaries: dict[str, str] = getattr(state, "precomputed_summaries", {})
+    precomputed_by_lang: dict[str, dict[str, str]] = getattr(state, "precomputed_summaries_by_lang", None) or {
+        "no": getattr(state, "precomputed_summaries", {}),
+        "en": {},
+    }
 
     query_text = _rag_query_from_themes(payload.themes)
     user_lang = _resolve_user_language(request, app_config)
@@ -728,7 +789,7 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
         user_lang=user_lang,
         language_config=language_config,
     )
-    precomputed_summaries: dict[str, str] = getattr(state, "precomputed_summaries", {})
+    default_summary_lang = (language_config.default_ui or app_config.ui.language or "no").lower()
 
     if retriever and vector_index_ready:
         rag_results = _match_via_retriever(
@@ -746,11 +807,26 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
                 retriever.disabled_reason,
             )
         if rag_results:
+            requested_summary_lang = _normalize_summary_lang(language_ctx.user_lang)
             for item in rag_results:
-                precomputed = _lookup_precomputed_summary(
-                    precomputed=precomputed_summaries,
+                summary_no = _lookup_precomputed_summary(
+                    precomputed=precomputed_by_lang.get("no", {}),
                     profile_url=item.profile_url,
                     name=item.name,
+                )
+                summary_en = _lookup_precomputed_summary(
+                    precomputed=precomputed_by_lang.get("en", {}),
+                    profile_url=item.profile_url,
+                    name=item.name,
+                )
+                if summary_no or summary_en:
+                    item.why_by_lang = {k: v for k, v in {"no": summary_no, "en": summary_en}.items() if v}
+                precomputed = _lookup_precomputed_summary_by_lang(
+                    precomputed_by_lang=precomputed_by_lang,
+                    user_lang=requested_summary_lang,
+                    profile_url=item.profile_url,
+                    name=item.name,
+                    default_lang=default_summary_lang,
                 )
                 if precomputed:
                     item.why = precomputed
@@ -799,10 +875,22 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
         score_breakdown = dict(match.score_breakdown)
         if "keyword" in score_breakdown and "keywords" not in score_breakdown:
             score_breakdown["keywords"] = score_breakdown.pop("keyword")
-        precomputed = _lookup_precomputed_summary(
-            precomputed=precomputed_summaries,
+        summary_no = _lookup_precomputed_summary(
+            precomputed=precomputed_by_lang.get("no", {}),
             profile_url=match.staff.profile_url,
             name=match.staff.name,
+        )
+        summary_en = _lookup_precomputed_summary(
+            precomputed=precomputed_by_lang.get("en", {}),
+            profile_url=match.staff.profile_url,
+            name=match.staff.name,
+        )
+        precomputed = _lookup_precomputed_summary_by_lang(
+            precomputed_by_lang=precomputed_by_lang,
+            user_lang=language_ctx.user_lang,
+            profile_url=match.staff.profile_url,
+            name=match.staff.name,
+            default_lang=default_summary_lang,
         )
         item = MatchItem(
             id=_hash_id(match.staff.name, match.staff.profile_url),
@@ -810,13 +898,14 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
             department=match.staff.department,
             profile_url=match.staff.profile_url,
             score=match.score,
-            why=precomputed
-            or _localize_explanation(
-                text=match.explanation,
-                name=match.staff.name,
+            why=_choose_why_text(
+                precomputed=precomputed,
+                fallback_explanation=match.explanation,
+                staff_name=match.staff.name,
                 themes=payload.themes,
                 language_ctx=language_ctx,
             ),
+            why_by_lang={k: v for k, v in {"no": summary_no, "en": summary_en}.items() if v} or None,
             citations=[Citation(**citation) for citation in match.citations],
             scoreBreakdown=score_breakdown,
             keywords=list(match.staff.tags),

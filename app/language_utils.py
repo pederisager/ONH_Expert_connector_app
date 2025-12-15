@@ -181,6 +181,126 @@ def _resolve_device(preferred: str | None) -> str:
     return requested or "cpu"
 
 
+class OllamaTranslator:
+    """Local translation via an Ollama model running on a configured endpoint."""
+
+    def __init__(
+        self,
+        *,
+        model_name: str,
+        endpoint: str = "http://localhost:11434",
+        timeout_seconds: float = 20.0,
+        cache_size: int = 256,
+        max_chars: int = 4000,
+    ) -> None:
+        self.model_name = model_name
+        self.endpoint = (endpoint or "http://localhost:11434").rstrip("/")
+        self.timeout_seconds = float(timeout_seconds or 20.0)
+        self.cache_size = max(0, int(cache_size or 0))
+        self.max_chars = max(1, int(max_chars or 4000))
+
+        self._cache: dict[tuple[str, str, str], str] = {}
+        self._cache_order: list[tuple[str, str, str]] = []
+
+        import threading
+
+        self._lock = threading.Lock()
+
+    @property
+    def is_noop(self) -> bool:  # pragma: no cover - trivial
+        return False
+
+    def _cache_get(self, key: tuple[str, str, str]) -> str | None:
+        if self.cache_size <= 0:
+            return None
+        with self._lock:
+            value = self._cache.get(key)
+            if value is None:
+                return None
+            try:
+                self._cache_order.remove(key)
+            except ValueError:
+                pass
+            self._cache_order.append(key)
+            return value
+
+    def _cache_set(self, key: tuple[str, str, str], value: str) -> None:
+        if self.cache_size <= 0:
+            return
+        with self._lock:
+            if key in self._cache:
+                self._cache[key] = value
+                try:
+                    self._cache_order.remove(key)
+                except ValueError:
+                    pass
+                self._cache_order.append(key)
+                return
+            self._cache[key] = value
+            self._cache_order.append(key)
+            while len(self._cache_order) > self.cache_size:
+                oldest = self._cache_order.pop(0)
+                self._cache.pop(oldest, None)
+
+    @staticmethod
+    def _language_label(code: str | None) -> str:
+        normalized = (code or "").lower()
+        if normalized in {"no", "nb", "nn", "nor"}:
+            return "Norwegian"
+        if normalized.startswith("en"):
+            return "English"
+        if not normalized:
+            return "the source language"
+        return normalized
+
+    def translate(self, text: str, *, source_lang: str | None, target_lang: str) -> str:
+        cleaned = (text or "").strip()
+        if not cleaned:
+            return ""
+        source = (source_lang or "").lower()
+        target = (target_lang or "").lower()
+        if target and source and target.startswith(source):
+            return cleaned
+
+        clipped = cleaned[: self.max_chars]
+        cache_key = (source or "", target or "", clipped)
+        cached = self._cache_get(cache_key)
+        if cached is not None:
+            return cached
+
+        from_label = self._language_label(source_lang)
+        to_label = self._language_label(target_lang)
+        prompt = (
+            f"Translate the following text from {from_label} to {to_label}. "
+            "Preserve names and proper nouns. Respond with only the translated text.\n\n"
+            f"Text:\n{clipped}\n\nTranslation:"
+        )
+
+        import httpx
+
+        with httpx.Client(timeout=self.timeout_seconds) as client:
+            resp = client.post(
+                f"{self.endpoint}/api/generate",
+                json={
+                    "model": self.model_name,
+                    "prompt": prompt,
+                    "stream": False,
+                },
+            )
+            resp.raise_for_status()
+            data = resp.json()
+
+        translated = (data.get("response") or "").strip()
+        result = translated or clipped
+        self._cache_set(cache_key, result)
+        return result
+
+    def translate_batch(
+        self, texts: Sequence[str], *, source_lang: str | None, target_lang: str
+    ) -> list[str]:
+        return [self.translate(text, source_lang=source_lang, target_lang=target_lang) for text in texts]
+
+
 def create_translator(config) -> Translator:
     """Instantiate translator based on TranslationConfig-like object."""
 
@@ -190,6 +310,10 @@ def create_translator(config) -> Translator:
     provider = (getattr(config, "provider", "") or "none").lower()
     model_name = getattr(config, "model_name", None) or getattr(config, "model", None)
     device = _resolve_device(getattr(config, "device", "cpu"))
+    endpoint = getattr(config, "endpoint", None) or "http://localhost:11434"
+    timeout_seconds = float(getattr(config, "timeout_seconds", 20.0) or 20.0)
+    cache_size = int(getattr(config, "cache_size", 256) or 256)
+    max_chars = int(getattr(config, "max_chars", 4000) or 4000)
 
     if provider in {"transformers", "local"}:
         if not model_name:
@@ -199,6 +323,22 @@ def create_translator(config) -> Translator:
             return TransformersTranslator(model_name=model_name, device=device)
         except Exception as exc:  # pragma: no cover - optional dependency / missing weights
             LOGGER.warning("Klarte ikke A� laste oversettelsesmodell '%s': %s. Oversetter ikke.", model_name, exc)
+            return NoOpTranslator()
+
+    if provider in {"ollama"}:
+        if not model_name:
+            LOGGER.warning("Translation provider '%s' enabled uten model_name; bruker no-op.", provider)
+            return NoOpTranslator()
+        try:
+            return OllamaTranslator(
+                model_name=model_name,
+                endpoint=endpoint,
+                timeout_seconds=timeout_seconds,
+                cache_size=cache_size,
+                max_chars=max_chars,
+            )
+        except Exception as exc:  # pragma: no cover - defensive
+            LOGGER.warning("Klarte ikke a starte OllamaTranslator: %s. Oversetter ikke.", exc)
             return NoOpTranslator()
 
     LOGGER.warning("Ukjent oversettelses-provider '%s'. Oversetter ikke.", provider or "none")

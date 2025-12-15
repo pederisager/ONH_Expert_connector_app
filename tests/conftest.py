@@ -7,7 +7,6 @@ from fastapi import FastAPI
 from httpx import ASGITransport, AsyncClient
 
 from app.cache_manager import CacheManager
-from app.exporter import ShortlistExporter
 from app.index import embedder_factory
 from app.index.builder import DummyEmbeddingBackend
 
@@ -30,7 +29,6 @@ embedder_factory.SentenceTransformerBackend = TestSentenceTransformerBackend  # 
 
 from app.main import create_app
 from app.match_engine import MatchEngine, StaffProfile
-from app.shortlist_store import ShortlistStore
 
 
 async def _prepare_app(
@@ -49,11 +47,6 @@ async def _prepare_app(
     cache_dir.mkdir(parents=True, exist_ok=True)
     app.state.cache_manager = CacheManager(directory=cache_dir, retention_days=1, enabled=True)
 
-    exports_dir = tmp_path / "exports"
-    exports_dir.mkdir(parents=True, exist_ok=True)
-    app.state.shortlist_store = ShortlistStore(exports_dir / "shortlist.json")
-    app.state.shortlist_exporter = ShortlistExporter(exports_dir)
-
     default_profiles = staff_profiles or [
         StaffProfile(
             name="Test Forsker",
@@ -64,6 +57,24 @@ async def _prepare_app(
         )
     ]
     app.state.staff_profiles = default_profiles
+    app.state.precomputed_summaries_by_lang = {
+        "no": {
+            profile.name: f"{profile.name} (forhåndsgenerert sammendrag på norsk)."
+            for profile in default_profiles
+        }
+        | {
+            profile.profile_url: f"{profile.name} (forhåndsgenerert sammendrag på norsk)."
+            for profile in default_profiles
+        },
+        "en": {
+            profile.name: f"{profile.name} (precomputed summary in English)."
+            for profile in default_profiles
+        }
+        | {
+            profile.profile_url: f"{profile.name} (precomputed summary in English)."
+            for profile in default_profiles
+        },
+    }
 
     async def fake_fetch_page(self, client_http, url):  # type: ignore[override]
         return {

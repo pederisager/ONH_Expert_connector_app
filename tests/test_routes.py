@@ -46,6 +46,31 @@ async def test_match_endpoint_returns_ranked_result(client) -> None:
 
 
 @pytest.mark.asyncio
+async def test_match_endpoint_uses_precomputed_summary_language(client) -> None:
+    response_no = await client.post(
+        "/match",
+        json={"themes": ["psykologi"], "department": "Psykologi"},
+        headers={"X-UI-Language": "no"},
+    )
+    assert response_no.status_code == 200
+    payload_no = response_no.json()["results"][0]
+    why_no = payload_no["why"]
+    assert "forhåndsgenerert" in why_no.lower()
+    assert payload_no.get("whyByLang", {}).get("no")
+
+    response_en = await client.post(
+        "/match",
+        json={"themes": ["psykologi"], "department": "Psykologi"},
+        headers={"X-UI-Language": "en"},
+    )
+    assert response_en.status_code == 200
+    payload_en = response_en.json()["results"][0]
+    why_en = payload_en["why"]
+    assert "precomputed summary" in why_en.lower()
+    assert payload_en.get("whyByLang", {}).get("en")
+
+
+@pytest.mark.asyncio
 async def test_match_endpoint_offline_snapshot(offline_client) -> None:
     response = await offline_client.post(
         "/match",
