@@ -6,12 +6,12 @@ target-version = ["py312"]
 line-length = 88
 target-version = "py312"
 src = ["app", "tests"]
-extend-select = ["B", "I"]
 exclude = [
     "models",
 ]
 
+[tool.ruff.lint]
+extend-select = ["B", "I"]
+
 [tool.pytest.ini_options]
-filterwarnings = [
-    "ignore:ast.NameConstant is deprecated and will be removed in Python 3.14:DeprecationWarning:reportlab.lib.rl_safe_eval",
-]
+filterwarnings = []

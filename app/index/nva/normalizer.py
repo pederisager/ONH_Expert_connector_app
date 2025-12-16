@@ -24,7 +24,9 @@ def _select_text(value: Any) -> str | None:
     return None
 
 
-def _extract_year(entity_description: dict[str, Any], payload: dict[str, Any]) -> str | None:
+def _extract_year(
+    entity_description: dict[str, Any], payload: dict[str, Any]
+) -> str | None:
     publication_date = entity_description.get("publicationDate")
     if isinstance(publication_date, dict):
         year = publication_date.get("year")
@@ -38,7 +40,9 @@ def _extract_year(entity_description: dict[str, Any], payload: dict[str, Any]) -
 
 
 def _extract_venue(reference: dict[str, Any]) -> str | None:
-    publication_context = reference.get("publicationContext") if isinstance(reference, dict) else None
+    publication_context = (
+        reference.get("publicationContext") if isinstance(reference, dict) else None
+    )
     if isinstance(publication_context, dict):
         publisher = publication_context.get("publisher")
         if isinstance(publisher, dict):
@@ -137,7 +141,9 @@ def normalize_publication(
     if not isinstance(hit_payload, dict):
         raise TypeError("hit_payload must be a dict")
 
-    publication_id = _select_text(hit_payload.get("identifier")) or _select_text(hit_payload.get("id"))
+    publication_id = _select_text(hit_payload.get("identifier")) or _select_text(
+        hit_payload.get("id")
+    )
     if not publication_id:
         raise ValueError("Missing publication identifier in hit payload")
     if "/" in publication_id:
@@ -162,7 +168,10 @@ def normalize_publication(
     language = _extract_language(entity_description)
     doi = _select_text(reference.get("doi"))
     handle = _select_text(hit_payload.get("handle"))
-    source_url = _select_text(hit_payload.get("id")) or f"https://api.nva.unit.no/publication/{publication_id}"
+    source_url = (
+        _select_text(hit_payload.get("id"))
+        or f"https://api.nva.unit.no/publication/{publication_id}"
+    )
 
     extra_context = _collect_extra_context(reference)
 

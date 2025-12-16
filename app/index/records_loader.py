@@ -12,7 +12,6 @@ from app.config_loader import StaffEntry, load_staff_entries
 
 from .models import NvaPublicationSnippet, SourceLink, StaffRecord
 
-
 LOGGER = logging.getLogger(__name__)
 DEFAULT_NVA_RESULTS_PATH = Path("data/nva/results.jsonl")
 MAX_NVA_RESULTS = 5
@@ -117,7 +116,9 @@ def _load_nva_results(
 ) -> dict[str, list[NvaPublicationSnippet]]:
     target = path or DEFAULT_NVA_RESULTS_PATH
     if not target.exists():
-        LOGGER.info("Fant ikke NVA-data på %s. Hopper over forskningsresultater i RAG.", target)
+        LOGGER.info(
+            "Fant ikke NVA-data på %s. Hopper over forskningsresultater i RAG.", target
+        )
         return {}
 
     grouped: dict[str, list[NvaPublicationSnippet]] = {}
@@ -129,8 +130,7 @@ def _load_nva_results(
             payload = json.loads(text)
             employee_id = _coerce_str(payload.get("employee_id"))
             result_id = _coerce_str(
-                payload.get("nva_publication_id")
-                or payload.get("publication_id")
+                payload.get("nva_publication_id") or payload.get("publication_id")
             )
             if not employee_id or not result_id:
                 continue

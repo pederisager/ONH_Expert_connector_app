@@ -14,10 +14,9 @@ from . import routes
 from .cache_manager import CacheManager
 from .config_loader import load_app_config, load_models_config, load_staff_profiles
 from .fetch_utils import FetchUtils
-from .file_parser import FileParser
 from .index import IndexPaths, LocalVectorStore, create_embedding_backend
-from .llm_explainer import LLMExplainer
 from .language_utils import create_translator
+from .llm_explainer import LLMExplainer
 from .match_engine import MatchEngine
 from .precomputed_summaries import load_precomputed_summaries_by_language
 from .rag import EmbeddingRetriever
@@ -38,7 +37,11 @@ def create_app() -> FastAPI:
 
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:8000"],
+        allow_origins=[
+            "http://localhost:3000",
+            "http://127.0.0.1:3000",
+            "http://localhost:8000",
+        ],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
@@ -91,7 +94,6 @@ def create_app() -> FastAPI:
     app.state.staff_profiles = staff_profiles
     app.state.cache_manager = cache_manager
     app.state.fetch_utils = fetch_utils
-    app.state.file_parser = FileParser()
     app.state.match_engine = match_engine
     app.state.llm_explainer = llm_explainer
     app.state.translator = translator

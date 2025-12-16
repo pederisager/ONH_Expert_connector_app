@@ -31,7 +31,9 @@ def test_build_language_context_flags_translation_for_en_only() -> None:
         llm_mode="en-only",
         translation_enabled=True,
     )
-    ctx = build_language_context(query_text="psykologi og helse", user_lang="no", language_config=cfg)
+    ctx = build_language_context(
+        query_text="psykologi og helse", user_lang="no", language_config=cfg
+    )
     assert ctx.embed_lang == "en"
     assert ctx.llm_lang == "en"
     assert ctx.translate_for_embedding is True

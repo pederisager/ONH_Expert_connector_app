@@ -35,7 +35,10 @@ class FetchUtils:
 
     def _is_allowed(self, url: str) -> bool:
         hostname = urlparse(url).hostname or ""
-        return any(hostname == domain or hostname.endswith("." + domain) for domain in self.allowlist_domains)
+        return any(
+            hostname == domain or hostname.endswith("." + domain)
+            for domain in self.allowlist_domains
+        )
 
     def _offline_snapshot_path(self, url: str) -> Path | None:
         if not self.offline_snapshots_dir:

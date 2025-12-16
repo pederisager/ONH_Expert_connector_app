@@ -10,7 +10,6 @@ from pydantic import BaseModel, Field
 
 from .match_engine import StaffProfile
 
-
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
@@ -25,8 +24,12 @@ class StaffEntry(BaseModel):
 class FetchConfig(BaseModel):
     max_pages_per_staff: int = Field(alias="max-pages-per-staff", default=2)
     max_kb_per_page: int = Field(alias="max-kb-per-page", default=100)
-    allowlist_domains: list[str] = Field(alias="allowlist-domains", default_factory=list)
-    offline_snapshots_dir: str | None = Field(alias="offline-snapshots-dir", default=None)
+    allowlist_domains: list[str] = Field(
+        alias="allowlist-domains", default_factory=list
+    )
+    offline_snapshots_dir: str | None = Field(
+        alias="offline-snapshots-dir", default=None
+    )
 
 
 class CacheConfig(BaseModel):
@@ -47,7 +50,8 @@ class RagConfig(BaseModel):
     chunk_overlap: int = Field(alias="chunk-overlap", default=60)
     max_chunks_per_profile: int = Field(alias="max-chunks-per-profile", default=40)
     embedding_model: str = Field(
-        alias="embedding-model", default="sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+        alias="embedding-model",
+        default="sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
     )
     embedding_batch_size: int = Field(alias="embedding-batch-size", default=32)
 
@@ -66,7 +70,9 @@ class TranslationConfig(BaseModel):
 class LanguageConfig(BaseModel):
     default_ui: str = Field(alias="default-ui", default="no")
     detection_enabled: bool = Field(alias="detection-enabled", default=True)
-    embedding_language_mode: str = Field(alias="embedding-language-mode", default="multilingual")
+    embedding_language_mode: str = Field(
+        alias="embedding-language-mode", default="multilingual"
+    )
     llm_language_mode: str = Field(alias="llm-language-mode", default="match-user")
     translation: TranslationConfig = Field(default_factory=TranslationConfig)
 

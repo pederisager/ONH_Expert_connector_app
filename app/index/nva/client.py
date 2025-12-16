@@ -44,7 +44,11 @@ class NvaApiKey:
         token_url = payload.get("tokenUrl") or payload.get("token_url")
         if not client_id or not client_secret or not token_url:
             raise ValueError(f"NVA key file {path} is missing required fields.")
-        return cls(client_id=str(client_id), client_secret=str(client_secret), token_url=str(token_url))
+        return cls(
+            client_id=str(client_id),
+            client_secret=str(client_secret),
+            token_url=str(token_url),
+        )
 
 
 @dataclass(slots=True)
@@ -107,7 +111,9 @@ class NvaClient:
         next_url: str | None = self._build_url(endpoint)
 
         while next_url:
-            payload = self._request_json(next_url, params if next_url.endswith(endpoint) else None)
+            payload = self._request_json(
+                next_url, params if next_url.endswith(endpoint) else None
+            )
             hits = payload.get("hits") if isinstance(payload, dict) else None
             if isinstance(hits, list):
                 results.extend(hit for hit in hits if isinstance(hit, dict))
@@ -189,7 +195,12 @@ class NvaClient:
             "client_id": self.api_key.client_id,
             "client_secret": self.api_key.client_secret,
         }
-        response = self.session.post(self.api_key.token_url, headers=headers, data=data, auth=(self.api_key.client_id, self.api_key.client_secret))
+        response = self.session.post(
+            self.api_key.token_url,
+            headers=headers,
+            data=data,
+            auth=(self.api_key.client_id, self.api_key.client_secret),
+        )
         response.raise_for_status()
         payload = response.json()
         token = payload.get("access_token")

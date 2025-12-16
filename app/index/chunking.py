@@ -8,7 +8,6 @@ from typing import Protocol, Sequence
 
 from .models import Chunk
 
-
 WHITESPACE_RE = re.compile(r"\s+")
 
 
@@ -19,11 +18,9 @@ def normalize_text(value: str) -> str:
 
 
 class Tokenizer(Protocol):
-    def tokenize(self, text: str) -> list[str]:
-        ...
+    def tokenize(self, text: str) -> list[str]: ...
 
-    def detokenize(self, tokens: Sequence[str]) -> str:
-        ...
+    def detokenize(self, tokens: Sequence[str]) -> str: ...
 
 
 @dataclass(slots=True)

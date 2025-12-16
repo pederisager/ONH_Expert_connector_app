@@ -172,7 +172,7 @@ async function runSearch(query, { resetVisibleCount = true, preserveVisibleCount
   const dict = copy[state.uiLanguage];
   const initialVisible = resetVisibleCount
     ? PAGE_SIZE
-    : preserveVisibleCount ?? state.visibleCount || PAGE_SIZE;
+    : preserveVisibleCount ?? (state.visibleCount || PAGE_SIZE);
 
   if (resetVisibleCount) {
     state.visibleCount = 0;

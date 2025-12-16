@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import pytest
-
 from app.llm_explainer import LLMExplainer
 
 
@@ -39,10 +38,7 @@ def test_build_prompt_english_includes_new_structure_instructions() -> None:
         ["digital health"],
         language="en",
     )
-    assert (
-        "Write 1-2 concise sentences (maximum 50 words total) in English."
-        in prompt
-    )
+    assert "Write 1-2 concise sentences (maximum 50 words total) in English." in prompt
     assert "Staff: Test Researcher" in prompt
     assert "Topics: digital health" in prompt
 
@@ -55,9 +51,6 @@ def test_build_prompt_norwegian_includes_new_structure_instructions() -> None:
         ["digital sikkerhet"],
         language="no",
     )
-    assert (
-        "Skriv 1-2 korte setninger (maks 50 ord totalt) på norsk." in prompt
-    )
+    assert "Skriv 1-2 korte setninger (maks 50 ord totalt) på norsk." in prompt
     assert "Ansatt: Test Forsker" in prompt
     assert "Temaer: digital sikkerhet" in prompt
-

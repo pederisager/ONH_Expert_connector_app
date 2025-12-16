@@ -16,6 +16,7 @@ import httpx
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+
 from .nva_lookup import extract_pub_id, preferred_nva_url
 
 try:  # Optional, lightweight stemming for better Norwegian/English grouping.
@@ -33,7 +34,6 @@ STOPWORDS = {
     "med",
     "til",
     "som",
-    "\u00e5",
     "sa",
     "en",
     "et",
@@ -208,7 +208,10 @@ FILLER_PATTERNS = [
     re.compile(r"^please\b"),
 ]
 
-TOKEN_PATTERN = re.compile(r"[A-Za-z\u00c0-\u00d6\u00d8-\u00f6\u00f8-\u00ff][A-Za-z\u00c0-\u00d6\u00d8-\u00f6\u00f8-\u00ff'-]*", re.UNICODE)
+TOKEN_PATTERN = re.compile(
+    r"[A-Za-z\u00c0-\u00d6\u00d8-\u00f6\u00f8-\u00ff][A-Za-z\u00c0-\u00d6\u00d8-\u00f6\u00f8-\u00ff'-]*",
+    re.UNICODE,
+)
 BREAK_TOKENS = {"og", "men", "både", "baade", "samt", "pluss"}
 MAX_PHRASE_TOKENS = 6
 PHRASE_LENGTH_PENALTY_START = 4
@@ -307,9 +310,12 @@ def _rule_based_stem(token: str) -> str:
 def _stem_token(token: str) -> str:
     if not token:
         return token
-    lang = "norwegian" if any(ch in "æøå" for ch in token) or token.endswith(
-        ("ing", "ende", "ene", "het", "skap")
-    ) else "english"
+    lang = (
+        "norwegian"
+        if any(ch in "æøå" for ch in token)
+        or token.endswith(("ing", "ende", "ene", "het", "skap"))
+        else "english"
+    )
     stemmer = _get_stemmer(lang)
     if stemmer is not None:
         try:
@@ -376,7 +382,9 @@ def _split_into_phrases(tokens: Sequence[str]) -> list[tuple[list[str], int]]:
     return phrases
 
 
-def _score_phrase(words: Sequence[str], counts: Counter[str], stem_map: dict[str, str]) -> float:
+def _score_phrase(
+    words: Sequence[str], counts: Counter[str], stem_map: dict[str, str]
+) -> float:
     if not words:
         return 0.0
     stems = [stem_map.get(word, word) for word in words]
@@ -498,7 +506,11 @@ class MatchEngine:
         embedding_endpoint: str | None = None,
     ) -> None:
         normalized_backend = (embedding_backend or "").replace("_", "-").lower()
-        if normalized_backend in {"sentence-transformers", "sentence transformers", "st"}:
+        if normalized_backend in {
+            "sentence-transformers",
+            "sentence transformers",
+            "st",
+        }:
             normalized_backend = "sentence-transformers"
         elif not normalized_backend:
             normalized_backend = None
@@ -513,7 +525,9 @@ class MatchEngine:
         self.embedding_model_name = embedding_model_name
         self.embedding_backend = normalized_backend
         self.embedding_device_requested = requested_device or "auto"
-        self.embedding_endpoint = embedding_endpoint.rstrip("/") if embedding_endpoint else None
+        self.embedding_endpoint = (
+            embedding_endpoint.rstrip("/") if embedding_endpoint else None
+        )
 
         self._embedder: Any | None = None
         self._embedder_attempted = False
@@ -538,7 +552,11 @@ class MatchEngine:
         if requested in {"cuda", "gpu"}:
             return "cuda" if torch.cuda.is_available() else "cpu"
         if requested == "mps":
-            return "mps" if has_mps_backend and torch.backends.mps.is_available() else "cpu"
+            return (
+                "mps"
+                if has_mps_backend and torch.backends.mps.is_available()
+                else "cpu"
+            )
         if requested in {"auto", "", "cpu"}:
             if torch.cuda.is_available():
                 return "cuda"
@@ -561,15 +579,21 @@ class MatchEngine:
             self._embedder_attempted = True
 
             try:
-                from sentence_transformers import SentenceTransformer  # type: ignore[import-not-found]
+                from sentence_transformers import (
+                    SentenceTransformer,  # type: ignore[import-not-found]
+                )
             except Exception as exc:  # pragma: no cover - import guard
-                self._log_embedding_warning("sentence-transformers unavailable (%s)", exc)
+                self._log_embedding_warning(
+                    "sentence-transformers unavailable (%s)", exc
+                )
                 self._embedder = None
                 return None
 
             resolved = self._resolve_device(self.embedding_device_requested)
             try:
-                self._embedder = SentenceTransformer(self.embedding_model_name, device=resolved)
+                self._embedder = SentenceTransformer(
+                    self.embedding_model_name, device=resolved
+                )
                 self._embedding_device_resolved = resolved
             except Exception as exc:  # pragma: no cover - runtime guard
                 self._log_embedding_warning(
@@ -591,7 +615,9 @@ class MatchEngine:
         try:
             from sentence_transformers import util  # type: ignore[import-not-found]
         except Exception as exc:  # pragma: no cover - import guard
-            self._log_embedding_warning("sentence-transformers util unavailable (%s)", exc)
+            self._log_embedding_warning(
+                "sentence-transformers util unavailable (%s)", exc
+            )
             return None
 
         try:
@@ -611,7 +637,9 @@ class MatchEngine:
             self._last_similarity_backend = "sentence-transformers"
             return similarities
         except Exception as exc:  # pragma: no cover - runtime guard
-            self._log_embedding_warning("sentence-transformers inference failed (%s)", exc)
+            self._log_embedding_warning(
+                "sentence-transformers inference failed (%s)", exc
+            )
             return None
 
     def _embedding_similarity_via_ollama(
@@ -657,14 +685,20 @@ class MatchEngine:
         self._last_similarity_backend = "ollama"
         return similarities
 
-    def _embedding_similarity(self, docs: list[StaffDocument], theme_text: str) -> np.ndarray | None:
+    def _embedding_similarity(
+        self, docs: list[StaffDocument], theme_text: str
+    ) -> np.ndarray | None:
         if self.embedding_backend == "sentence-transformers":
-            return self._embedding_similarity_via_sentence_transformers(docs, theme_text)
+            return self._embedding_similarity_via_sentence_transformers(
+                docs, theme_text
+            )
         if self.embedding_backend == "ollama":
             return self._embedding_similarity_via_ollama(docs, theme_text)
         return None
 
-    def _tfidf_similarity(self, theme_text: str, docs: list[StaffDocument]) -> np.ndarray:
+    def _tfidf_similarity(
+        self, theme_text: str, docs: list[StaffDocument]
+    ) -> np.ndarray:
         corpus = [theme_text] + [doc.combined_text for doc in docs]
         vectorizer = TfidfVectorizer(max_features=4096, ngram_range=(1, 2))
         try:
@@ -714,7 +748,11 @@ class MatchEngine:
             tag_overlap = len(tags_lower & theme_tokens)
             tag_score = tag_overlap / max(1, len(tags_lower)) if tags_lower else 0.0
 
-            department_bonus = 0.1 if department_filter and doc.profile.department == department_filter else 0.0
+            department_bonus = (
+                0.1
+                if department_filter and doc.profile.department == department_filter
+                else 0.0
+            )
 
             semantic_score = float(semantic_scores[index])
 
@@ -763,7 +801,9 @@ class MatchEngine:
         """Return the most recent semantic similarity backend used."""
         return self._last_similarity_backend
 
-    def _build_citations(self, doc: StaffDocument, themes: set[str]) -> list[dict[str, str]]:
+    def _build_citations(
+        self, doc: StaffDocument, themes: set[str]
+    ) -> list[dict[str, str]]:
         """Pick up to 3 high-signal sentences to ground the LLM summary.
 
         Prefers sentences that overlap with the query themes; falls back to the
@@ -813,7 +853,10 @@ class MatchEngine:
         return citations
 
     def _build_explanation(
-        self, profile: StaffProfile, citations: Sequence[dict[str, str]], themes: Sequence[str]
+        self,
+        profile: StaffProfile,
+        citations: Sequence[dict[str, str]],
+        themes: Sequence[str],
     ) -> str:
         if not citations:
             top_theme = themes[0] if themes else "temaet"
@@ -834,7 +877,3 @@ class MatchEngine:
             )
         explanation_parts.append("Se kildeutdragene for konkrete formuleringer.")
         return " ".join(explanation_parts)
-
-
-
-

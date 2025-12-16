@@ -1,5 +1,9 @@
 # Virtual environments
 .venv/
+.venv-win/
+
+# Local pip cache (used by agents/CI)
+.pip-cache/
 
 # API keys and secrets
 nva_api_keys_prod.json

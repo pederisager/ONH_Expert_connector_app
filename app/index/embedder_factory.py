@@ -80,7 +80,9 @@ def create_embedding_backend(
 
     if backend == "ollama":
         if not embedding_model.endpoint:
-            LOGGER.warning("Ollama-backend krever endpoint i models.yaml. Bruker dummy-embedding.")
+            LOGGER.warning(
+                "Ollama-backend krever endpoint i models.yaml. Bruker dummy-embedding."
+            )
             return DummyEmbeddingBackend()
         return OllamaEmbeddingBackend(
             model=embedding_model.name,
@@ -88,7 +90,9 @@ def create_embedding_backend(
             fallback=DummyEmbeddingBackend(),
         )
 
-    LOGGER.warning("Ukjent embedding-backend '%s'. Bruker dummy-embedding.", backend or "none")
+    LOGGER.warning(
+        "Ukjent embedding-backend '%s'. Bruker dummy-embedding.", backend or "none"
+    )
     return DummyEmbeddingBackend()
 
 

@@ -11,7 +11,9 @@ from diskcache import Cache
 class CacheManager:
     """Disk-backed cache with configurable TTL (retention days)."""
 
-    def __init__(self, directory: Path, retention_days: int = 14, enabled: bool = True) -> None:
+    def __init__(
+        self, directory: Path, retention_days: int = 14, enabled: bool = True
+    ) -> None:
         self.directory = directory
         self.retention_days = retention_days
         self.enabled = enabled

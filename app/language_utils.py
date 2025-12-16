@@ -5,7 +5,7 @@ from __future__ import annotations
 import logging
 from dataclasses import dataclass
 from functools import lru_cache
-from typing import Iterable, Protocol, Sequence
+from typing import Protocol, Sequence
 
 try:  # pragma: no cover - optional dependency
     import langid
@@ -18,13 +18,13 @@ LOGGER = logging.getLogger("language")
 class Translator(Protocol):
     """Minimal translation interface."""
 
-    def translate(self, text: str, *, source_lang: str | None, target_lang: str) -> str:
-        ...
+    def translate(
+        self, text: str, *, source_lang: str | None, target_lang: str
+    ) -> str: ...
 
     def translate_batch(
         self, texts: Sequence[str], *, source_lang: str | None, target_lang: str
-    ) -> list[str]:
-        ...
+    ) -> list[str]: ...
 
     @property
     def is_noop(self) -> bool:  # pragma: no cover - simple property
@@ -78,11 +78,18 @@ def build_language_context(
     detection_enabled = bool(getattr(language_config, "detection_enabled", True))
 
     detected_query_lang = (
-        detect_language(query_text, default=requested_user_lang) if detection_enabled else requested_user_lang
+        detect_language(query_text, default=requested_user_lang)
+        if detection_enabled
+        else requested_user_lang
     )
 
-    embedding_mode = (getattr(language_config, "embedding_language_mode", "multilingual") or "multilingual").lower()
-    llm_mode = (getattr(language_config, "llm_language_mode", "match-user") or "match-user").lower()
+    embedding_mode = (
+        getattr(language_config, "embedding_language_mode", "multilingual")
+        or "multilingual"
+    ).lower()
+    llm_mode = (
+        getattr(language_config, "llm_language_mode", "match-user") or "match-user"
+    ).lower()
 
     embed_lang = "en" if embedding_mode == "en-only" else detected_query_lang
     llm_lang = "en" if llm_mode == "en-only" else requested_user_lang
@@ -90,9 +97,17 @@ def build_language_context(
     translation_cfg = getattr(language_config, "translation", None)
     translation_enabled = bool(getattr(translation_cfg, "enabled", False))
 
-    translate_for_embedding = translation_enabled and embedding_mode == "en-only" and detected_query_lang != "en"
-    translate_for_llm_input = translation_enabled and llm_mode == "en-only" and detected_query_lang != "en"
-    translate_llm_output = translation_enabled and llm_mode == "en-only" and requested_user_lang != "en"
+    translate_for_embedding = (
+        translation_enabled
+        and embedding_mode == "en-only"
+        and detected_query_lang != "en"
+    )
+    translate_for_llm_input = (
+        translation_enabled and llm_mode == "en-only" and detected_query_lang != "en"
+    )
+    translate_llm_output = (
+        translation_enabled and llm_mode == "en-only" and requested_user_lang != "en"
+    )
 
     return LanguageContext(
         user_lang=requested_user_lang,
@@ -133,9 +148,14 @@ class TransformersTranslator:
         max_length: int = 512,
     ) -> None:
         try:
-            from transformers import AutoModelForSeq2SeqLM, AutoTokenizer  # type: ignore[import-not-found]
+            from transformers import (  # type: ignore[import-not-found]
+                AutoModelForSeq2SeqLM,
+                AutoTokenizer,
+            )
         except Exception as exc:  # pragma: no cover - optional dependency
-            raise ImportError("transformers is required for TransformersTranslator") from exc
+            raise ImportError(
+                "transformers is required for TransformersTranslator"
+            ) from exc
 
         self.model_name = model_name
         self.device = device
@@ -147,7 +167,7 @@ class TransformersTranslator:
     def is_noop(self) -> bool:  # pragma: no cover - trivial
         return False
 
-    @lru_cache(maxsize=256)
+    @lru_cache(maxsize=256)  # noqa: B019
     def translate(self, text: str, *, source_lang: str | None, target_lang: str) -> str:
         if not text:
             return ""
@@ -167,7 +187,10 @@ class TransformersTranslator:
     def translate_batch(
         self, texts: Sequence[str], *, source_lang: str | None, target_lang: str
     ) -> list[str]:
-        return [self.translate(text, source_lang=source_lang, target_lang=target_lang) for text in texts]
+        return [
+            self.translate(text, source_lang=source_lang, target_lang=target_lang)
+            for text in texts
+        ]
 
 
 def _resolve_device(preferred: str | None) -> str:
@@ -298,7 +321,10 @@ class OllamaTranslator:
     def translate_batch(
         self, texts: Sequence[str], *, source_lang: str | None, target_lang: str
     ) -> list[str]:
-        return [self.translate(text, source_lang=source_lang, target_lang=target_lang) for text in texts]
+        return [
+            self.translate(text, source_lang=source_lang, target_lang=target_lang)
+            for text in texts
+        ]
 
 
 def create_translator(config) -> Translator:
@@ -317,17 +343,29 @@ def create_translator(config) -> Translator:
 
     if provider in {"transformers", "local"}:
         if not model_name:
-            LOGGER.warning("Translation provider '%s' enabled uten model_name; bruker no-op.", provider)
+            LOGGER.warning(
+                "Translation provider '%s' enabled uten model_name; bruker no-op.",
+                provider,
+            )
             return NoOpTranslator()
         try:
             return TransformersTranslator(model_name=model_name, device=device)
-        except Exception as exc:  # pragma: no cover - optional dependency / missing weights
-            LOGGER.warning("Klarte ikke A� laste oversettelsesmodell '%s': %s. Oversetter ikke.", model_name, exc)
+        except (
+            Exception
+        ) as exc:  # pragma: no cover - optional dependency / missing weights
+            LOGGER.warning(
+                "Klarte ikke A� laste oversettelsesmodell '%s': %s. Oversetter ikke.",
+                model_name,
+                exc,
+            )
             return NoOpTranslator()
 
     if provider in {"ollama"}:
         if not model_name:
-            LOGGER.warning("Translation provider '%s' enabled uten model_name; bruker no-op.", provider)
+            LOGGER.warning(
+                "Translation provider '%s' enabled uten model_name; bruker no-op.",
+                provider,
+            )
             return NoOpTranslator()
         try:
             return OllamaTranslator(
@@ -338,8 +376,12 @@ def create_translator(config) -> Translator:
                 max_chars=max_chars,
             )
         except Exception as exc:  # pragma: no cover - defensive
-            LOGGER.warning("Klarte ikke a starte OllamaTranslator: %s. Oversetter ikke.", exc)
+            LOGGER.warning(
+                "Klarte ikke a starte OllamaTranslator: %s. Oversetter ikke.", exc
+            )
             return NoOpTranslator()
 
-    LOGGER.warning("Ukjent oversettelses-provider '%s'. Oversetter ikke.", provider or "none")
+    LOGGER.warning(
+        "Ukjent oversettelses-provider '%s'. Oversetter ikke.", provider or "none"
+    )
     return NoOpTranslator()

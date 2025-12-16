@@ -5,7 +5,6 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from pathlib import Path
 from typing import Iterable, Sequence
 
 import numpy as np
@@ -13,7 +12,11 @@ import numpy as np
 from .chunking import Chunker
 from .embeddings import EmbeddingBackend
 from .models import Chunk, IndexPaths, StaffRecord
-from .staff_info_loader import StaffInfo, extract_method_tags, load_staff_info, synthetic_page_text
+from .staff_info_loader import (
+    StaffInfo,
+    extract_method_tags,
+    synthetic_page_text,
+)
 from .vector_store import LocalVectorStore
 
 
@@ -85,7 +88,9 @@ class StaffIndexBuilder:
     def _chunks_for_record(self, record: StaffRecord) -> list[Chunk]:
         chunks: list[Chunk] = []
         primary_source = record.primary_source()
-        summary_source_url = primary_source.url if primary_source else record.profile_url
+        summary_source_url = (
+            primary_source.url if primary_source else record.profile_url
+        )
         info = self.staff_info.get(record.name.lower())
 
         extra_tags: list[str] = []
@@ -157,7 +162,11 @@ class StaffIndexBuilder:
             if not text:
                 continue
             source_url = result.source_url or record.profile_url
-            combined_tags = list(dict.fromkeys([*record.tags, *(result.tags or [])])) if (record.tags or result.tags) else []
+            combined_tags = (
+                list(dict.fromkeys([*record.tags, *(result.tags or [])]))
+                if (record.tags or result.tags)
+                else []
+            )
             metadata = {
                 "department": record.department,
                 "title": record.title,
@@ -183,16 +192,22 @@ class StaffIndexBuilder:
     def _write_chunks_snapshot(self, slug: str, chunks: Iterable[Chunk]) -> None:
         payload = [self._chunk_to_dict(chunk) for chunk in chunks]
         target = self.paths.chunks_dir / f"{slug}.json"
-        target.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        target.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
 
-    def _write_manifest(self, stats: list[dict[str, object]], total_chunks: int) -> None:
+    def _write_manifest(
+        self, stats: list[dict[str, object]], total_chunks: int
+    ) -> None:
         manifest = {
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "staff": stats,
             "total_chunks": total_chunks,
         }
         target = self.paths.manifests_dir / "manifest.json"
-        target.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+        target.write_text(
+            json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
 
     @staticmethod
     def _chunk_to_dict(chunk: Chunk) -> dict[str, object]:

@@ -12,7 +12,6 @@ from app.index.embeddings import EmbeddingBackend
 from app.index.models import Chunk
 from app.index.vector_store import LocalVectorStore, SearchResult
 
-
 LOGGER = logging.getLogger("rag.embedding-retriever")
 
 
@@ -76,7 +75,9 @@ class EmbeddingRetriever:
             )
             return []
         grouped = self._group_results(raw_results, query)
-        sorted_results = sorted(grouped.values(), key=lambda item: item.score, reverse=True)
+        sorted_results = sorted(
+            grouped.values(), key=lambda item: item.score, reverse=True
+        )
         return sorted_results[: query.top_k]
 
     @property
@@ -93,17 +94,26 @@ class EmbeddingRetriever:
         grouped: dict[str, RetrievalResult] = {}
         for result in results:
             chunk = result.chunk
-            if query.department and chunk.metadata.get("department") != query.department:
+            chunk_metadata = chunk.metadata
+            if (
+                query.department
+                and chunk_metadata.get("department") != query.department
+            ):
                 continue
 
             entry = grouped.get(chunk.staff_slug)
             if entry is None:
+                department = (
+                    chunk_metadata.get("department") if chunk_metadata else None
+                )
                 entry = RetrievalResult(
                     staff_slug=chunk.staff_slug,
                     score=result.score,
                     chunks=[chunk],
-                    staff_name=str(chunk.metadata.get("name")) if chunk.metadata else None,
-                    metadata={"department": chunk.metadata.get("department") if chunk.metadata else None},
+                    staff_name=(
+                        str(chunk_metadata.get("name")) if chunk_metadata else None
+                    ),
+                    metadata={"department": department},
                 )
                 grouped[chunk.staff_slug] = entry
             else:

@@ -4,7 +4,6 @@ import json
 from pathlib import Path
 
 import httpx
-
 from app.index.nva.models import NvaPublicationRecord
 from app.index.nva.normalizer import normalize_publication
 from app.index.nva.sync import (
@@ -28,13 +27,19 @@ def test_normalize_publication_extracts_core_fields() -> None:
             "tags": ["Innovation", "Education"],
             "contributors": [
                 {
-                    "identity": {"id": "https://api.nva.unit.no/cristin/person/1", "name": "Ada Lovelace"},
+                    "identity": {
+                        "id": "https://api.nva.unit.no/cristin/person/1",
+                        "name": "Ada Lovelace",
+                    },
                     "role": {"type": "Creator"},
                 }
             ],
             "reference": {
                 "doi": "10.1234/abc",
-                "publicationContext": {"type": "Journal", "publisher": {"name": "Expert Journal"}},
+                "publicationContext": {
+                    "type": "Journal",
+                    "publisher": {"name": "Expert Journal"},
+                },
                 "publicationInstance": {"type": "AcademicArticle"},
             },
         },
@@ -58,7 +63,9 @@ def test_normalize_publication_extracts_core_fields() -> None:
 
 
 def test_sync_nva_publications_writes_expected_artifacts(tmp_path: Path) -> None:
-    staff_members = [StaffMember(employee_id="999", name="Employee One", department="Dept")]
+    staff_members = [
+        StaffMember(employee_id="999", name="Employee One", department="Dept")
+    ]
 
     hits_payload = [
         {
@@ -70,7 +77,10 @@ def test_sync_nva_publications_writes_expected_artifacts(tmp_path: Path) -> None
                 "publicationDate": {"year": "2023"},
                 "tags": ["Analytics"],
                 "reference": {
-                    "publicationContext": {"type": "Journal", "publisher": {"name": "Applied Sciences"}},
+                    "publicationContext": {
+                        "type": "Journal",
+                        "publisher": {"name": "Applied Sciences"},
+                    },
                     "publicationInstance": {"type": "AcademicArticle"},
                 },
                 "contributors": [{"identity": {"name": "Lin Zhu"}}],
@@ -93,7 +103,9 @@ def test_sync_nva_publications_writes_expected_artifacts(tmp_path: Path) -> None
 
     def handler(request: httpx.Request) -> httpx.Response:
         if request.url == httpx.URL(token_url):
-            return httpx.Response(200, json={"access_token": "token-123", "expires_in": 3600})
+            return httpx.Response(
+                200, json={"access_token": "token-123", "expires_in": 3600}
+            )
         if request.url.path.endswith("/search/resources"):
             return httpx.Response(200, json={"hits": hits_payload, "nextResults": None})
         return httpx.Response(404, json={"detail": "not found"})
@@ -109,7 +121,9 @@ def test_sync_nva_publications_writes_expected_artifacts(tmp_path: Path) -> None
         output_path=output_path,
         raw_dir=raw_dir,
         api_key=NvaApiKey(client_id="id", client_secret="secret", token_url=token_url),
-        client_config=NvaClientConfig(base_url="https://api.nva.unit.no", results_per_page=100),
+        client_config=NvaClientConfig(
+            base_url="https://api.nva.unit.no", results_per_page=100
+        ),
         cache=None,
         session=session,
     )

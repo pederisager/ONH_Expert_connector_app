@@ -71,7 +71,9 @@ class LLMExplainer:
         for attempt_label, attempt_snippets in attempts:
             prompt = _build_safe_prompt(attempt_snippets)
             if not prompt:
-                logger.debug("LLM prompt skipped (no model configured) for %s", staff_name)
+                logger.debug(
+                    "LLM prompt skipped (no model configured) for %s", staff_name
+                )
                 return fallback
 
             if self.backend == "ollama" and self.model_name:
@@ -87,7 +89,7 @@ class LLMExplainer:
                         )
                         response.raise_for_status()
                         data = response.json()
-                except httpx.TimeoutException as exc:
+                except httpx.TimeoutException:
                     logger.warning(
                         "LLM generate timed out (%ss) for %s via %s on %s evidence",
                         self.timeout,
@@ -121,7 +123,11 @@ class LLMExplainer:
                 text = (data.get("response") or "").strip()
                 if not text or self._looks_like_refusal(text):
                     if not text:
-                        logger.debug("LLM returned empty text for %s via %s", staff_name, self.model_name)
+                        logger.debug(
+                            "LLM returned empty text for %s via %s",
+                            staff_name,
+                            self.model_name,
+                        )
                     else:
                         logger.debug(
                             "LLM refusal detected for %s via %s: %s",
@@ -149,7 +155,9 @@ class LLMExplainer:
                 return text
 
             logger.debug(
-                "LLM backend %s unsupported for %s, using fallback", self.backend, staff_name
+                "LLM backend %s unsupported for %s, using fallback",
+                self.backend,
+                staff_name,
             )
             return fallback
 

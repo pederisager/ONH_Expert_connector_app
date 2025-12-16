@@ -5,7 +5,6 @@ import textwrap
 from pathlib import Path
 
 import pytest
-
 from app.index.records_loader import load_curated_records
 
 
@@ -33,7 +32,10 @@ def _write_records_jsonl(path: Path) -> None:
         "department": "Psykologi",
         "profile_url": "https://example.org/ansatte/Test-Forsker",
         "summary": "Kort sammendrag om psykologi og helse.",
-        "sources": ["https://example.org/ansatte/Test-Forsker", "https://nva.sikt.no/profil/123"],
+        "sources": [
+            "https://example.org/ansatte/Test-Forsker",
+            "https://nva.sikt.no/profil/123",
+        ],
         "tags": ["psykologi"],
     }
     path.write_text(json.dumps(record, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -76,7 +78,9 @@ def test_load_curated_records_merges_metadata(tmp_path: Path) -> None:
     assert record.profile_url.endswith("Test-Forsker")
     assert record.title == "Førsteamanuensis"
     assert record.summary.startswith("Kort sammendrag")
-    assert [link.url for link in record.sources][0] == "https://example.org/ansatte/Test-Forsker"
+    assert [link.url for link in record.sources][
+        0
+    ] == "https://example.org/ansatte/Test-Forsker"
     assert "https://nva.sikt.no/profil/123" in [link.url for link in record.sources]
     assert record.nva_publications
     publication = record.nva_publications[0]

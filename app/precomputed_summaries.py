@@ -7,7 +7,9 @@ from pathlib import Path
 from typing import Dict
 
 
-def load_precomputed_summaries_by_language(path: str | Path) -> dict[str, dict[str, str]]:
+def load_precomputed_summaries_by_language(
+    path: str | Path,
+) -> dict[str, dict[str, str]]:
     """Load precomputed summaries keyed by language then profile_url/name.
 
     Supported JSON formats:

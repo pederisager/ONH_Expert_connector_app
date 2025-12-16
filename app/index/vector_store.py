@@ -5,13 +5,12 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable, Sequence
+from typing import Sequence
 
 import numpy as np
 
 from .embeddings import normalize_embeddings
 from .models import Chunk
-
 
 VECTORS_FILENAME = "vectors.npy"
 METADATA_FILENAME = "metadata.json"
@@ -61,7 +60,9 @@ class LocalVectorStore:
             self._dimension = embeddings.shape[1]
         else:
             if embeddings.shape[1] != self._dimension:
-                raise ValueError("Embedding dimensionality does not match existing index.")
+                raise ValueError(
+                    "Embedding dimensionality does not match existing index."
+                )
             self._vectors = np.vstack([self._vectors, embeddings])
             self._chunks.extend(chunks)
 
@@ -76,7 +77,12 @@ class LocalVectorStore:
         self.index_dir.mkdir(parents=True, exist_ok=True)
         np.save(self.index_dir / VECTORS_FILENAME, self._vectors)
         with (self.index_dir / METADATA_FILENAME).open("w", encoding="utf-8") as handle:
-            json.dump([self._chunk_to_dict(chunk) for chunk in self._chunks], handle, ensure_ascii=False, indent=2)
+            json.dump(
+                [self._chunk_to_dict(chunk) for chunk in self._chunks],
+                handle,
+                ensure_ascii=False,
+                indent=2,
+            )
 
     def search(
         self,
@@ -133,4 +139,3 @@ class LocalVectorStore:
             source_url=str(payload["source_url"]),
             metadata=dict(payload.get("metadata") or {}),
         )
-

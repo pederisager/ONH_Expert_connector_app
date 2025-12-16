@@ -1,6 +1,11 @@
 from __future__ import annotations
 
-from app.config_loader import load_app_config, load_models_config, load_staff_entries, load_staff_profiles
+from app.config_loader import (
+    load_app_config,
+    load_models_config,
+    load_staff_entries,
+    load_staff_profiles,
+)
 
 
 def test_load_app_config_has_expected_defaults() -> None:

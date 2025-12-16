@@ -40,11 +40,7 @@ def _load_index() -> dict[str, dict[str, str]]:
             pub_id = str(pub_id_raw).strip()
         if not pub_id:
             continue
-        doi = (
-            obj.get("entityDescription", {})
-            .get("reference", {})
-            .get("doi")
-        )
+        doi = obj.get("entityDescription", {}).get("reference", {}).get("doi")
         index[pub_id] = {"doi": str(doi or "").strip()}
     return index
 

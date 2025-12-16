@@ -3,7 +3,6 @@ from __future__ import annotations
 from pathlib import Path
 
 import numpy as np
-
 from app.index.builder import DummyEmbeddingBackend, StaffIndexBuilder
 from app.index.chunking import Chunker
 from app.index.models import IndexPaths, SourceLink, StaffRecord
@@ -27,7 +26,9 @@ def test_index_builder_creates_chunks_and_vectors(tmp_path: Path) -> None:
     chunker = Chunker(chunk_size=5, chunk_overlap=1)
     embedder = DummyEmbeddingBackend(dimension=4)
     vector_store = LocalVectorStore(paths.vectors_dir)
-    builder = StaffIndexBuilder(paths=paths, chunker=chunker, embedder=embedder, vector_store=vector_store)
+    builder = StaffIndexBuilder(
+        paths=paths, chunker=chunker, embedder=embedder, vector_store=vector_store
+    )
 
     records = [
         _make_record("alpha", "Dette er en testtekst som skal chunkes i flere deler."),

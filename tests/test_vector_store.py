@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import numpy as np
 import pytest
-
 from app.index.models import Chunk
 from app.index.vector_store import LocalVectorStore
 

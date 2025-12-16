@@ -1,14 +1,12 @@
 from __future__ import annotations
 
 import httpx
-import pytest
 import pytest_asyncio
-from fastapi import FastAPI
-from httpx import ASGITransport, AsyncClient
-
 from app.cache_manager import CacheManager
 from app.index import embedder_factory
 from app.index.builder import DummyEmbeddingBackend
+from fastapi import FastAPI
+from httpx import ASGITransport, AsyncClient
 
 
 class TestSentenceTransformerBackend:
@@ -27,8 +25,8 @@ class TestSentenceTransformerBackend:
 
 embedder_factory.SentenceTransformerBackend = TestSentenceTransformerBackend  # type: ignore[attr-defined]
 
-from app.main import create_app
-from app.match_engine import MatchEngine, StaffProfile
+from app.main import create_app  # noqa: E402
+from app.match_engine import MatchEngine, StaffProfile  # noqa: E402
 
 
 async def _prepare_app(
@@ -45,7 +43,9 @@ async def _prepare_app(
 
     cache_dir = tmp_path / "cache"
     cache_dir.mkdir(parents=True, exist_ok=True)
-    app.state.cache_manager = CacheManager(directory=cache_dir, retention_days=1, enabled=True)
+    app.state.cache_manager = CacheManager(
+        directory=cache_dir, retention_days=1, enabled=True
+    )
 
     default_profiles = staff_profiles or [
         StaffProfile(
@@ -86,11 +86,17 @@ async def _prepare_app(
     async def fake_generate(self, staff_name, snippets, themes, **kwargs):  # type: ignore[override]
         return f"{staff_name} matcher {', '.join(themes)} basert pA� testdata."
 
-    monkeypatch.setattr(app.state.fetch_utils.__class__, "fetch_page", fake_fetch_page, raising=False)
-    monkeypatch.setattr(app.state.llm_explainer.__class__, "generate", fake_generate, raising=False)
+    monkeypatch.setattr(
+        app.state.fetch_utils.__class__, "fetch_page", fake_fetch_page, raising=False
+    )
+    monkeypatch.setattr(
+        app.state.llm_explainer.__class__, "generate", fake_generate, raising=False
+    )
 
     transport = ASGITransport(app=app)
-    async_client = AsyncClient(transport=transport, base_url="http://testserver", timeout=10.0)
+    async_client = AsyncClient(
+        transport=transport, base_url="http://testserver", timeout=10.0
+    )
     async_client.app = app  # type: ignore[attr-defined]
     return async_client, app
 
@@ -118,12 +124,16 @@ async def offline_client(tmp_path, monkeypatch):
             tags=["psykologi"],
         )
     ]
-    async_client, app = await _prepare_app(tmp_path, monkeypatch, staff_profiles=profiles)
+    async_client, app = await _prepare_app(
+        tmp_path, monkeypatch, staff_profiles=profiles
+    )
 
     async def fake_generate(self, staff_name, snippets, themes, **kwargs):  # type: ignore[override]
         return f"{staff_name} matcher {', '.join(themes)} basert pA� offline testdata."
 
-    monkeypatch.setattr(app.state.llm_explainer.__class__, "generate", fake_generate, raising=False)
+    monkeypatch.setattr(
+        app.state.llm_explainer.__class__, "generate", fake_generate, raising=False
+    )
 
     async def offline_get(self, url, timeout=30.0, follow_redirects=True):  # type: ignore[override]
         raise httpx.RequestError("offline", request=httpx.Request("GET", url))

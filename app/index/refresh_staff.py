@@ -18,6 +18,7 @@ from urllib.parse import quote_plus, urljoin, urlparse
 import httpx
 import yaml
 from bs4 import BeautifulSoup
+from bs4.element import Tag
 
 from ..config_loader import AppConfig, ModelsConfig, load_app_config, load_models_config
 from .builder import StaffIndexBuilder
@@ -204,7 +205,11 @@ class SnapshotFetcher:
     ) -> str:
         if snapshot_path.exists():
             LOGGER.debug("Loading snapshot: %s", snapshot_path)
-            data = snapshot_path.read_bytes() if binary else snapshot_path.read_text(encoding="utf-8")
+            data = (
+                snapshot_path.read_bytes()
+                if binary
+                else snapshot_path.read_text(encoding="utf-8")
+            )
             return data.decode("utf-8") if binary else data
 
         if self.offline:
@@ -285,7 +290,11 @@ def load_staff_allowlist(csv_path: Path) -> list[CsvStaffEntry]:
             try:
                 slug = slug_from_profile_url(profile_url)
             except ValueError as exc:
-                LOGGER.warning("Skipping CSV row with invalid profile URL (%s): %s", profile_url, exc)
+                LOGGER.warning(
+                    "Skipping CSV row with invalid profile URL (%s): %s",
+                    profile_url,
+                    exc,
+                )
                 continue
             entry = CsvStaffEntry(
                 name=name,
@@ -465,7 +474,9 @@ def load_expert_topics(
                 key = normalize_person_name(name)
                 matches = name_index.get(key)
                 if not matches:
-                    LOGGER.debug("Expert topic '%s' references unknown staff '%s'.", topic, name)
+                    LOGGER.debug(
+                        "Expert topic '%s' references unknown staff '%s'.", topic, name
+                    )
                     continue
                 if len(matches) > 1:
                     LOGGER.warning(
@@ -478,7 +489,9 @@ def load_expert_topics(
                 topics.setdefault(slug, set()).add(topic)
 
     enriched = {slug: sorted(values) for slug, values in topics.items() if values}
-    LOGGER.info("Enriched expert tags for %d staff from Finn-en-ekspert.", len(enriched))
+    LOGGER.info(
+        "Enriched expert tags for %d staff from Finn-en-ekspert.", len(enriched)
+    )
     return enriched
 
 
@@ -495,7 +508,9 @@ class StaffCollector:
         role_keywords: Sequence[str] | None = None,
     ) -> None:
         self.fetcher = fetcher
-        self._role_keywords = tuple(keyword.casefold() for keyword in (role_keywords or ()))
+        self._role_keywords = tuple(
+            keyword.casefold() for keyword in (role_keywords or ())
+        )
         self._csv_entries_order = list(csv_entries_order)
         self._csv_entries = dict(csv_entries)
         self._allowed_slugs = {entry.slug for entry in self._csv_entries_order}
@@ -513,7 +528,11 @@ class StaffCollector:
                 listing = self._listing_from_csv_entry(entry)
             profile = self._collect_profile(listing)
             if profile is None:
-                LOGGER.warning("Failed to collect profile for %s (%s)", entry.name, entry.profile_url)
+                LOGGER.warning(
+                    "Failed to collect profile for %s (%s)",
+                    entry.name,
+                    entry.profile_url,
+                )
                 continue
             self._apply_csv_overrides(profile, entry)
             profiles.append(profile)
@@ -530,10 +549,14 @@ class StaffCollector:
                 title = str(entry.get("field_ansatte_stilling", "")).strip()
                 if not should_include_role(title, self._role_keywords):
                     continue
-                name = str(entry.get("field_ansatte_navn") or entry.get("title") or "").strip()
+                name = str(
+                    entry.get("field_ansatte_navn") or entry.get("title") or ""
+                ).strip()
                 if not name:
                     continue
-                department = normalize_department(str(entry.get("field_avdeling") or "").strip())
+                department = normalize_department(
+                    str(entry.get("field_avdeling") or "").strip()
+                )
                 profile_path = str(entry.get("view_node") or "").strip()
                 if not profile_path:
                     continue
@@ -544,7 +567,9 @@ class StaffCollector:
                 image_url = str(entry.get("field_top_bilde") or "").strip() or None
                 tags = parse_tags(entry.get("field_tags"))
             except Exception as exc:  # pragma: no cover - defensive guard
-                LOGGER.warning("Skipping entry due to parsing error: %s (%s)", entry, exc)
+                LOGGER.warning(
+                    "Skipping entry due to parsing error: %s (%s)", entry, exc
+                )
                 continue
             listing = StaffListing(
                 name=name,
@@ -939,7 +964,9 @@ def profiles_to_records(profiles: Sequence[StaffProfile]) -> list[StaffRecord]:
     records: list[StaffRecord] = []
     for profile in profiles:
         listing = profile.listing
-        sources = [SourceLink(url=url) for url in dedupe_preserve_order(profile.sources)]
+        sources = [
+            SourceLink(url=url) for url in dedupe_preserve_order(profile.sources)
+        ]
         record = StaffRecord(
             slug=listing.slug,
             name=listing.name,
@@ -1024,7 +1051,9 @@ def main(argv: list[str] | None = None) -> int:
 
     role_keywords: tuple[str, ...]
     if args.role_keywords:
-        role_keywords = tuple(keyword.casefold() for keyword in args.role_keywords if keyword)
+        role_keywords = tuple(
+            keyword.casefold() for keyword in args.role_keywords if keyword
+        )
     elif args.academic_only:
         role_keywords = tuple(keyword.casefold() for keyword in DEFAULT_ROLE_KEYWORDS)
     else:

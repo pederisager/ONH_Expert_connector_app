@@ -110,11 +110,15 @@ def read_staff_csv(path: Path) -> tuple[list[StaffMember], int]:
             name = (row.get("Name") or "").strip()
             department = (row.get("Department") or "").strip() or None
             if not nva_profile:
-                LOGGER.warning("Skipping %s: missing NVA profile link", name or "<unknown>")
+                LOGGER.warning(
+                    "Skipping %s: missing NVA profile link", name or "<unknown>"
+                )
                 skipped += 1
                 continue
             employee_id = extract_person_id(nva_profile)
-            staff.append(StaffMember(employee_id=employee_id, name=name, department=department))
+            staff.append(
+                StaffMember(employee_id=employee_id, name=name, department=department)
+            )
     return staff, skipped
 
 
@@ -152,7 +156,9 @@ def _dedup_key(record: NvaPublicationRecord) -> str:
     return record.publication_id
 
 
-def _choose_richer(existing: NvaPublicationRecord, candidate: NvaPublicationRecord) -> NvaPublicationRecord:
+def _choose_richer(
+    existing: NvaPublicationRecord, candidate: NvaPublicationRecord
+) -> NvaPublicationRecord:
     existing_score = _information_score(existing)
     candidate_score = _information_score(candidate)
     if candidate_score > existing_score:
@@ -189,7 +195,9 @@ def sync_nva_publications(
     ensure_directory(raw_dir)
     stats = NvaSyncStats()
 
-    with NvaClient(api_key=api_key, config=client_config, cache=cache, session=session) as client:
+    with NvaClient(
+        api_key=api_key, config=client_config, cache=cache, session=session
+    ) as client:
         with output_path.open("w", encoding="utf-8") as sink:
             for member in staff_members:
                 stats.staff_processed += 1
@@ -241,7 +249,10 @@ def main(argv: list[str] | None = None) -> NvaSyncStats:
     parser = build_parser()
     args = parser.parse_args(argv)
 
-    logging.basicConfig(level=getattr(logging, args.log_level), format="%(levelname)s %(name)s: %(message)s")
+    logging.basicConfig(
+        level=getattr(logging, args.log_level),
+        format="%(levelname)s %(name)s: %(message)s",
+    )
 
     staff_members, skipped = read_staff_csv(args.staff_csv)
     if not staff_members:

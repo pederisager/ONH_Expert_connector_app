@@ -6,7 +6,7 @@ import asyncio
 import hashlib
 import logging
 import re
-from typing import Any, Sequence
+from typing import Any
 
 import httpx
 from fastapi import APIRouter, HTTPException, Request, status
@@ -17,7 +17,12 @@ from .cache_manager import CacheManager
 from .config_loader import AppConfig
 from .fetch_utils import FetchNotAllowedError, FetchUtils
 from .index.models import Chunk
-from .language_utils import LanguageContext, NoOpTranslator, Translator, build_language_context
+from .language_utils import (
+    LanguageContext,
+    NoOpTranslator,
+    Translator,
+    build_language_context,
+)
 from .match_engine import (
     MatchEngine,
     PageContent,
@@ -26,8 +31,8 @@ from .match_engine import (
     extract_themes,
     tokenize,
 )
+from .nva_lookup import extract_pub_id, preferred_nva_url
 from .rag import EmbeddingRetriever, RetrievalQuery
-from .nva_lookup import preferred_nva_url, extract_pub_id
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -119,14 +124,14 @@ class ConfigResponse(BaseModel):
 # --------------------------------------------------------------------------- #
 
 
-def _validate_text_input(text: str, file_texts: Sequence[str]) -> str:
-    combined = " ".join(part for part in [text.strip(), *file_texts] if part)
-    if not combined:
+def _validate_text_input(text: str) -> str:
+    normalized = text.strip()
+    if not normalized:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Mangler tematisk innhold. Skriv tekst eller last opp filer.",
+            detail="Mangler tematisk innhold. Skriv tekst for tema.",
         )
-    return combined
+    return normalized
 
 
 def _build_normalized_preview(text: str, limit: int = PREVIEW_CHAR_LIMIT) -> str:
@@ -176,12 +181,16 @@ def _build_normalized_preview(text: str, limit: int = PREVIEW_CHAR_LIMIT) -> str
 
 
 def _resolve_user_language(request: Request, app_config: AppConfig) -> str:
-    header_lang = request.headers.get("x-ui-language") or request.headers.get("x-language")
+    header_lang = request.headers.get("x-ui-language") or request.headers.get(
+        "x-language"
+    )
     query_lang = request.query_params.get("lang")
     return (header_lang or query_lang or app_config.ui.language or "no").lower()
 
 
-def _extract_citation_snippet(text: str, themes: Sequence[str], limit: int = CITATION_SNIPPET_LIMIT) -> str:
+def _extract_citation_snippet(
+    text: str, themes: Sequence[str], limit: int = CITATION_SNIPPET_LIMIT
+) -> str:
     """Pick the most relevant portion of a chunk for downstream LLM use."""
 
     normalized = re.sub(r"\s+", " ", (text or "")).strip()
@@ -194,10 +203,7 @@ def _extract_citation_snippet(text: str, themes: Sequence[str], limit: int = CIT
     sentences = [sentence.strip() for sentence in sentences if sentence.strip()]
 
     theme_tokens = {
-        token
-        for theme in themes
-        for token in tokenize(theme)
-        if len(token) > 2
+        token for theme in themes for token in tokenize(theme) if len(token) > 2
     }
 
     best_snippet = normalized[:limit].rstrip()
@@ -223,9 +229,8 @@ def _extract_citation_snippet(text: str, themes: Sequence[str], limit: int = CIT
             if not window:
                 continue
 
-            if (
-                total_score > best_score
-                or (total_score == best_score and total_len > len(best_snippet))
+            if total_score > best_score or (
+                total_score == best_score and total_len > len(best_snippet)
             ):
                 best_score = total_score
                 best_snippet = " ".join(window)
@@ -240,7 +245,9 @@ def _extract_citation_snippet(text: str, themes: Sequence[str], limit: int = CIT
 
 
 def _staff_doc_cache_key(profile: StaffProfile, max_pages: int) -> str:
-    digest = hashlib.sha1(f"{profile.profile_url}|{max_pages}".encode("utf-8")).hexdigest()
+    digest = hashlib.sha1(
+        f"{profile.profile_url}|{max_pages}".encode("utf-8")
+    ).hexdigest()
     return f"staffdoc::{digest}"
 
 
@@ -323,7 +330,9 @@ def _store_staff_document(
     }
     cache_key = _staff_doc_cache_key(profile, max_pages)
     cache_manager.set(cache_key, payload)
-    _remember_staff_document(cache_key=cache_key, sources=sources, pages=pages, memory_cache=memory_cache)
+    _remember_staff_document(
+        cache_key=cache_key, sources=sources, pages=pages, memory_cache=memory_cache
+    )
 
 
 async def _fetch_staff_documents(
@@ -363,7 +372,7 @@ async def _fetch_staff_documents(
                 for profile in pending_profiles
             ]
             fetched = await asyncio.gather(*tasks)
-        for profile, document in zip(pending_profiles, fetched):
+        for profile, document in zip(pending_profiles, fetched, strict=False):
             if document.pages:
                 doc_map[profile.profile_url] = document
 
@@ -421,7 +430,7 @@ async def _fetch_single_staff(
         cleaned = {
             "url": page_data["url"],
             "title": page_data.get("title") or "",
-            "text": page_data.get("text", "")[: PAGE_TEXT_CHAR_LIMIT],
+            "text": page_data.get("text", "")[:PAGE_TEXT_CHAR_LIMIT],
         }
         cache_manager.set(cache_key, cleaned)
         pages.append(PageContent(**cleaned))
@@ -454,6 +463,31 @@ def _lookup_precomputed_summary(
 def _normalize_summary_lang(user_lang: str) -> str:
     normalized = (user_lang or "no").lower()
     return "en" if normalized.startswith("en") else "no"
+
+
+def _build_precomputed_summaries_by_lang(
+    *,
+    precomputed_by_lang: dict[str, dict[str, str]],
+    profile_url: str,
+    name: str,
+) -> dict[str, str] | None:
+    """Return available precomputed summaries keyed by language, or None if empty."""
+    summary_no = _lookup_precomputed_summary(
+        precomputed=precomputed_by_lang.get("no", {}),
+        profile_url=profile_url,
+        name=name,
+    )
+    summary_en = _lookup_precomputed_summary(
+        precomputed=precomputed_by_lang.get("en", {}),
+        profile_url=profile_url,
+        name=name,
+    )
+    summaries = {
+        key: value
+        for key, value in {"no": summary_no, "en": summary_en}.items()
+        if value
+    }
+    return summaries or None
 
 
 def _lookup_precomputed_summary_by_lang(
@@ -554,7 +588,9 @@ def _match_via_retriever(
     return items
 
 
-def _retrieval_result_to_match_item(result, themes: Sequence[str], *, language_ctx: LanguageContext) -> MatchItem | None:
+def _retrieval_result_to_match_item(
+    result, themes: Sequence[str], *, language_ctx: LanguageContext
+) -> MatchItem | None:
     if not result.chunks:
         return None
 
@@ -567,7 +603,9 @@ def _retrieval_result_to_match_item(result, themes: Sequence[str], *, language_c
     profile_url = str(
         primary_chunk.metadata.get("profile_url") or primary_chunk.source_url or ""
     )
-    display_name = result.staff_name or str(primary_chunk.metadata.get("name") or result.staff_slug)
+    display_name = result.staff_name or str(
+        primary_chunk.metadata.get("name") or result.staff_slug
+    )
     citations = _chunks_to_citations(result.chunks, themes)
     keywords = _collect_chunk_keywords(result.chunks)
     semantic_score = max(0.0, min(1.0, float(result.score)))
@@ -584,9 +622,7 @@ def _retrieval_result_to_match_item(result, themes: Sequence[str], *, language_c
         if keywords:
             why_default += f" Keywords: {', '.join(keywords[:4])}."
     else:
-        why_default = (
-            f"{display_name} matcher {', '.join(themes) or 'temaet'} basert på semantisk treff."
-        )
+        why_default = f"{display_name} matcher {', '.join(themes) or 'temaet'} basert på semantisk treff."
         if keywords:
             why_default += f" Nøkkelord: {', '.join(keywords[:4])}."
     return MatchItem(
@@ -606,6 +642,10 @@ def _retrieval_result_to_match_item(result, themes: Sequence[str], *, language_c
     )
 
 
+def _nva_registration_url(pub_id: str) -> str:
+    return f"https://nva.sikt.no/registration/{pub_id}"
+
+
 def _resolve_citation_url(chunk: Chunk) -> str:
     metadata = chunk.metadata or {}
     # 1) Prefer original/DOI URLs when present.
@@ -615,7 +655,12 @@ def _resolve_citation_url(chunk: Chunk) -> str:
             return doi
         return f"https://doi.org/{doi}"
 
-    source_url = str(chunk.source_url or metadata.get("source_url") or metadata.get("profile_url") or "").strip()
+    source_url = str(
+        chunk.source_url
+        or metadata.get("source_url")
+        or metadata.get("profile_url")
+        or ""
+    ).strip()
     if source_url and "doi.org" in source_url.lower():
         return source_url
 
@@ -626,13 +671,17 @@ def _resolve_citation_url(chunk: Chunk) -> str:
         or ""
     )
     publication_id = str(publication_id).strip()
-    preferred = preferred_nva_url(publication_id, source_url) if publication_id else None
-    if preferred:
-        return preferred
+    if publication_id:
+        preferred = preferred_nva_url(publication_id, source_url)
+        if preferred and "doi.org" in preferred.lower():
+            return preferred
+        return _nva_registration_url(publication_id)
     return source_url
 
 
-def _chunks_to_citations(chunks: Sequence[Chunk], themes: Sequence[str]) -> list[Citation]:
+def _chunks_to_citations(
+    chunks: Sequence[Chunk], themes: Sequence[str]
+) -> list[Citation]:
     def _priority(url: str) -> int:
         if url.startswith("staffinfo://"):
             return 0
@@ -646,7 +695,9 @@ def _chunks_to_citations(chunks: Sequence[Chunk], themes: Sequence[str]) -> list
         snippet = _extract_citation_snippet(chunk.text, themes)
         if not snippet:
             continue
-        title = str(chunk.metadata.get("source_title") or chunk.metadata.get("name") or "Kilde")
+        title = str(
+            chunk.metadata.get("source_title") or chunk.metadata.get("name") or "Kilde"
+        )
         url = _resolve_citation_url(chunk)
         citations.append(
             Citation(
@@ -707,7 +758,9 @@ def _tag_overlap_score(keywords: Sequence[str], themes: Sequence[str]) -> float:
 def _method_overlap_score(keywords: Sequence[str], themes: Sequence[str]) -> float:
     if not keywords or not themes:
         return 0.0
-    method_tokens = {k.strip().lower() for k in keywords if k.strip().lower() in METHOD_KEYWORDS}
+    method_tokens = {
+        k.strip().lower() for k in keywords if k.strip().lower() in METHOD_KEYWORDS
+    }
     theme_tokens = {t.strip().lower() for t in themes if t.strip()}
     if not method_tokens or not theme_tokens:
         return 0.0
@@ -715,7 +768,7 @@ def _method_overlap_score(keywords: Sequence[str], themes: Sequence[str]) -> flo
     return overlap / max(1, len(theme_tokens))
 
 
-def _request_state(request: Request):
+def _request_state(request: Request) -> Any:
     return request.app.state
 
 
@@ -730,7 +783,9 @@ def _localize_explanation(
     safe_text = (text or "").strip()
     if safe_text:
         return safe_text
-    joined = ", ".join(themes) or ("the topic" if language_ctx.user_lang.startswith("en") else "temaet")
+    joined = ", ".join(themes) or (
+        "the topic" if language_ctx.user_lang.startswith("en") else "temaet"
+    )
     if language_ctx.user_lang.startswith("en"):
         return f"{name} matches {joined} based on documented sources."
     return f"{name} matcher {joined} basert på dokumenterte kilder."
@@ -743,9 +798,6 @@ def _localize_explanation(
 
 @router.post("/analyze-topic", response_model=AnalyzeTopicResponse)
 async def analyze_topic(request: Request) -> AnalyzeTopicResponse:
-    state = _request_state(request)
-    app_config: AppConfig = state.app_config
-
     content_type = (request.headers.get("content-type") or "").lower()
     if "application/json" in content_type:
         payload = await request.json()
@@ -754,7 +806,7 @@ async def analyze_topic(request: Request) -> AnalyzeTopicResponse:
         form = await request.form()
         text_value = str(form.get("text") or "")
 
-    combined_text = _validate_text_input(text_value, [])
+    combined_text = _validate_text_input(text_value)
 
     themes = extract_themes(combined_text, top_k=8)
     preview = _build_normalized_preview(combined_text)
@@ -765,7 +817,10 @@ async def analyze_topic(request: Request) -> AnalyzeTopicResponse:
 @router.post("/match", response_model=MatchResponse)
 async def match(request: Request, payload: MatchRequest) -> MatchResponse:
     if not payload.themes:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Listen med temaer kan ikke være tom.")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Listen med temaer kan ikke være tom.",
+        )
 
     state = _request_state(request)
     app_config: AppConfig = state.app_config
@@ -777,7 +832,9 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
     cache_manager: CacheManager = state.cache_manager
     staff_profiles: list[StaffProfile] = state.staff_profiles
     translator: Translator = getattr(state, "translator", None) or NoOpTranslator()
-    precomputed_by_lang: dict[str, dict[str, str]] = getattr(state, "precomputed_summaries_by_lang", None) or {
+    precomputed_by_lang: dict[str, dict[str, str]] = getattr(
+        state, "precomputed_summaries_by_lang", None
+    ) or {
         "no": getattr(state, "precomputed_summaries", {}),
         "en": {},
     }
@@ -789,7 +846,9 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
         user_lang=user_lang,
         language_config=language_config,
     )
-    default_summary_lang = (language_config.default_ui or app_config.ui.language or "no").lower()
+    default_summary_lang = (
+        language_config.default_ui or app_config.ui.language or "no"
+    ).lower()
 
     if retriever and vector_index_ready:
         rag_results = _match_via_retriever(
@@ -809,18 +868,13 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
         if rag_results:
             requested_summary_lang = _normalize_summary_lang(language_ctx.user_lang)
             for item in rag_results:
-                summary_no = _lookup_precomputed_summary(
-                    precomputed=precomputed_by_lang.get("no", {}),
+                why_by_lang = _build_precomputed_summaries_by_lang(
+                    precomputed_by_lang=precomputed_by_lang,
                     profile_url=item.profile_url,
                     name=item.name,
                 )
-                summary_en = _lookup_precomputed_summary(
-                    precomputed=precomputed_by_lang.get("en", {}),
-                    profile_url=item.profile_url,
-                    name=item.name,
-                )
-                if summary_no or summary_en:
-                    item.why_by_lang = {k: v for k, v in {"no": summary_no, "en": summary_en}.items() if v}
+                if why_by_lang:
+                    item.why_by_lang = why_by_lang
                 precomputed = _lookup_precomputed_summary_by_lang(
                     precomputed_by_lang=precomputed_by_lang,
                     user_lang=requested_summary_lang,
@@ -833,7 +887,11 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
             return MatchResponse(results=rag_results, total=len(rag_results))
 
     if payload.department:
-        filtered_staff = [profile for profile in staff_profiles if profile.department == payload.department]
+        filtered_staff = [
+            profile
+            for profile in staff_profiles
+            if profile.department == payload.department
+        ]
     else:
         filtered_staff = staff_profiles
 
@@ -868,20 +926,17 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
         # Fall back to top matches when semantic similarity is low but other signals
         # (keywords, tags) still indicate relevance. Keeps the UI populated while
         # highlighting that tuning may be required.
-        filtered_ranked = [candidate for candidate in ranked if candidate.score > 0] or ranked[:1]
+        filtered_ranked = [
+            candidate for candidate in ranked if candidate.score > 0
+        ] or ranked[:1]
 
     results: list[MatchItem] = []
     for match in filtered_ranked:
         score_breakdown = dict(match.score_breakdown)
         if "keyword" in score_breakdown and "keywords" not in score_breakdown:
             score_breakdown["keywords"] = score_breakdown.pop("keyword")
-        summary_no = _lookup_precomputed_summary(
-            precomputed=precomputed_by_lang.get("no", {}),
-            profile_url=match.staff.profile_url,
-            name=match.staff.name,
-        )
-        summary_en = _lookup_precomputed_summary(
-            precomputed=precomputed_by_lang.get("en", {}),
+        why_by_lang = _build_precomputed_summaries_by_lang(
+            precomputed_by_lang=precomputed_by_lang,
             profile_url=match.staff.profile_url,
             name=match.staff.name,
         )
@@ -905,7 +960,7 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
                 themes=payload.themes,
                 language_ctx=language_ctx,
             ),
-            why_by_lang={k: v for k, v in {"no": summary_no, "en": summary_en}.items() if v} or None,
+            whyByLang=why_by_lang,
             citations=[Citation(**citation) for citation in match.citations],
             scoreBreakdown=score_breakdown,
             keywords=list(match.staff.tags),

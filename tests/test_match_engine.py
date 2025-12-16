@@ -65,7 +65,10 @@ def test_staff_document_combined_text_trims() -> None:
         tags=[],
     )
     long_text = "A" * (MAX_COMBINED_TEXT_CHARS + 100)
-    doc = StaffDocument(profile=profile, pages=[PageContent(url="https://example.com", title="Stub", text=long_text)])
+    doc = StaffDocument(
+        profile=profile,
+        pages=[PageContent(url="https://example.com", title="Stub", text=long_text)],
+    )
     assert len(doc.combined_text) == MAX_COMBINED_TEXT_CHARS
 
 
@@ -79,7 +82,10 @@ def test_extract_themes_ignores_filler_phrase() -> None:
 def test_extract_themes_handles_norwegian_morphology() -> None:
     text = "Digital sikkerhet og datasikkerheten til pasientdata i helseteknologi."
     themes = extract_themes(text, top_k=4)
-    assert any(theme.startswith("digital sikkerhet") or theme == "sikkerhet" for theme in themes)
+    assert any(
+        theme.startswith("digital sikkerhet") or theme == "sikkerhet"
+        for theme in themes
+    )
 
 
 def test_extract_themes_mixed_language_input() -> None:

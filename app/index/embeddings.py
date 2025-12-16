@@ -15,11 +15,9 @@ LOGGER = logging.getLogger("rag.embeddings")
 class EmbeddingBackend(Protocol):
     """Protocol for embedding providers."""
 
-    def embed(self, texts: Sequence[str]) -> np.ndarray:
-        ...
+    def embed(self, texts: Sequence[str]) -> np.ndarray: ...
 
-    def embed_one(self, text: str) -> np.ndarray:
-        ...
+    def embed_one(self, text: str) -> np.ndarray: ...
 
 
 def normalize_embeddings(embeddings: np.ndarray) -> np.ndarray:
@@ -67,11 +65,15 @@ class SentenceTransformerBackend:
             )
         except RuntimeError as exc:  # pragma: no cover - runtime-only guard
             message = str(exc).lower()
-            if self.device and self.device.lower() != "cpu" and (
-                "no kernel image" in message
-                or "device-side assert triggered" in message
-                or "is not compatible with gpu" in message
-                or "sm_" in message
+            if (
+                self.device
+                and self.device.lower() != "cpu"
+                and (
+                    "no kernel image" in message
+                    or "device-side assert triggered" in message
+                    or "is not compatible with gpu" in message
+                    or "sm_" in message
+                )
             ):
                 LOGGER.warning(
                     "sentence-transformers on device '%s' failed (%s). Falling back to CPU.",

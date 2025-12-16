@@ -83,14 +83,20 @@ def main(argv: list[str] | None = None) -> int:
     models_config = load_models_config(args.models_config)
     index_root = args.index_root or Path(app_config.rag.index_root)
 
-    logging.info("Loading curated staff records from %s and %s", args.staff_yaml, args.records_jsonl)
+    logging.info(
+        "Loading curated staff records from %s and %s",
+        args.staff_yaml,
+        args.records_jsonl,
+    )
     records = load_curated_records(
         staff_yaml_path=args.staff_yaml,
         records_jsonl_path=args.records_jsonl,
         nva_results_path=args.nva_results,
         max_nva_results=max(1, args.max_nva_results),
     )
-    logging.info("Loaded %d staff records. Building index in %s", len(records), index_root)
+    logging.info(
+        "Loaded %d staff records. Building index in %s", len(records), index_root
+    )
 
     build_index_from_records(
         records,

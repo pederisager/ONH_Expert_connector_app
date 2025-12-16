@@ -5,7 +5,6 @@ import json
 
 import httpx
 import pytest
-
 from app.fetch_utils import FetchUtils
 
 
@@ -52,7 +51,13 @@ async def test_fetch_page_returns_snapshot_for_disallowed_domain(tmp_path) -> No
     snapshots_dir.mkdir(parents=True, exist_ok=True)
     snapshot_path = snapshots_dir / f"{digest}.json"
     snapshot_path.write_text(
-        json.dumps({"url": url, "title": "Offline Example", "text": "Testrapport for maskinlæring."}),
+        json.dumps(
+            {
+                "url": url,
+                "title": "Offline Example",
+                "text": "Testrapport for maskinlæring.",
+            }
+        ),
         encoding="utf-8",
     )
 

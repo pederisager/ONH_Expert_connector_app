@@ -2,8 +2,6 @@ from __future__ import annotations
 
 from types import SimpleNamespace
 
-import pytest
-
 from app.index import embedder_factory
 from app.index.builder import DummyEmbeddingBackend
 
@@ -32,7 +30,9 @@ def test_sentence_transformer_cuda_falls_back_to_cpu(monkeypatch):
                 raise RuntimeError("CUDA init failed")
 
     monkeypatch.setattr(embedder_factory, "SentenceTransformerBackend", StubBackend)
-    monkeypatch.setattr(embedder_factory, "_probe_torch_capabilities", lambda: (True, False))
+    monkeypatch.setattr(
+        embedder_factory, "_probe_torch_capabilities", lambda: (True, False)
+    )
 
     backend = embedder_factory.create_embedding_backend(
         _models_config(backend="sentence_transformers", device="cuda"),
@@ -49,7 +49,9 @@ def test_sentence_transformer_missing_dependency_returns_dummy(monkeypatch):
         raise ImportError("missing sentence-transformers")
 
     monkeypatch.setattr(embedder_factory, "SentenceTransformerBackend", raising_backend)
-    monkeypatch.setattr(embedder_factory, "_probe_torch_capabilities", lambda: (False, False))
+    monkeypatch.setattr(
+        embedder_factory, "_probe_torch_capabilities", lambda: (False, False)
+    )
 
     backend = embedder_factory.create_embedding_backend(
         _models_config(backend="sentence_transformers", device="cpu"),
@@ -65,7 +67,9 @@ def test_sentence_transformer_auto_prefers_cuda_when_available(monkeypatch):
             self.device = device
 
     monkeypatch.setattr(embedder_factory, "SentenceTransformerBackend", StubBackend)
-    monkeypatch.setattr(embedder_factory, "_probe_torch_capabilities", lambda: (True, False))
+    monkeypatch.setattr(
+        embedder_factory, "_probe_torch_capabilities", lambda: (True, False)
+    )
 
     backend = embedder_factory.create_embedding_backend(
         _models_config(backend="sentence_transformers", device=None),
@@ -82,7 +86,9 @@ def test_sentence_transformer_auto_falls_back_to_cpu_without_accelerator(monkeyp
             self.device = device
 
     monkeypatch.setattr(embedder_factory, "SentenceTransformerBackend", StubBackend)
-    monkeypatch.setattr(embedder_factory, "_probe_torch_capabilities", lambda: (False, False))
+    monkeypatch.setattr(
+        embedder_factory, "_probe_torch_capabilities", lambda: (False, False)
+    )
 
     backend = embedder_factory.create_embedding_backend(
         _models_config(backend="sentence_transformers", device=None),

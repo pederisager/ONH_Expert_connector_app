@@ -3,15 +3,14 @@ from __future__ import annotations
 import types
 
 import pytest
-
 from app import routes
 from app.cache_manager import CacheManager
+from app.fetch_utils import FetchUtils
 from app.index.builder import DummyEmbeddingBackend
 from app.index.models import Chunk
 from app.index.vector_store import LocalVectorStore
 from app.match_engine import StaffProfile
 from app.rag.retriever import EmbeddingRetriever
-from app.fetch_utils import FetchUtils
 
 
 @pytest.mark.asyncio
@@ -30,6 +29,14 @@ async def test_analyze_topic_returns_themes(client) -> None:
     data = response.json()
     assert data["themes"]
     assert "normalizedPreview" in data
+
+
+@pytest.mark.asyncio
+async def test_analyze_topic_rejects_empty_text(client) -> None:
+    response = await client.post("/analyze-topic", json={"text": "   "})
+    assert response.status_code == 400
+    data = response.json()
+    assert data["detail"] == "Mangler tematisk innhold. Skriv tekst for tema."
 
 
 @pytest.mark.asyncio
@@ -92,7 +99,9 @@ async def test_match_endpoint_offline_snapshot(offline_client) -> None:
 
 
 @pytest.mark.asyncio
-async def test_match_endpoint_prefers_rag_when_index_ready(client, tmp_path_factory) -> None:
+async def test_match_endpoint_prefers_rag_when_index_ready(
+    client, tmp_path_factory
+) -> None:
     index_dir = tmp_path_factory.mktemp("rag_vectors")
     store = LocalVectorStore(index_dir)
     embedder = DummyEmbeddingBackend(dimension=3)
@@ -113,7 +122,9 @@ async def test_match_endpoint_prefers_rag_when_index_ready(client, tmp_path_fact
     )
     store.add(embedder.embed([chunk.text]), [chunk])
 
-    retriever = EmbeddingRetriever(vector_store=store, embedder=embedder, min_score=0.0, max_chunks_per_staff=2)
+    retriever = EmbeddingRetriever(
+        vector_store=store, embedder=embedder, min_score=0.0, max_chunks_per_staff=2
+    )
     client.app.state.embedding_retriever = retriever  # type: ignore[attr-defined]
     client.app.state.vector_index_ready = True  # type: ignore[attr-defined]
 
@@ -131,7 +142,9 @@ async def test_match_endpoint_prefers_rag_when_index_ready(client, tmp_path_fact
 
 @pytest.mark.asyncio
 async def test_staff_document_cache_reuse(tmp_path) -> None:
-    cache_manager = CacheManager(directory=tmp_path / "cache", retention_days=1, enabled=True)
+    cache_manager = CacheManager(
+        directory=tmp_path / "cache", retention_days=1, enabled=True
+    )
     fetch_utils = FetchUtils(allowlist_domains=["example.com"], max_kb_per_page=10)
 
     fetch_calls = {"count": 0}

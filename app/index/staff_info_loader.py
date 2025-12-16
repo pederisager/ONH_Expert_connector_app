@@ -5,7 +5,6 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Iterable
 
 METHOD_KEYWORDS = {
     "kvalitativ",
@@ -56,7 +55,9 @@ def load_staff_info(path: Path | str = "staff_info.json") -> dict[str, StaffInfo
             expertise_domains=_normalize_list(entry.get("expertise_domains")),
             teaching_courses=_normalize_list(entry.get("teaching_courses")),
             research_focus=_normalize_list(entry.get("research_focus")),
-            other_relevant_expertise=_normalize_list(entry.get("other_relevant_expertise")),
+            other_relevant_expertise=_normalize_list(
+                entry.get("other_relevant_expertise")
+            ),
         )
     return info
 
