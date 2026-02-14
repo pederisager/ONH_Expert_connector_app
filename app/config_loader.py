@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any
 
 import yaml
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 from .match_engine import StaffProfile
 
@@ -99,11 +99,16 @@ class AppConfig(BaseModel):
 
 
 class ModelConfig(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+
     name: str
     backend: str
     endpoint: str | None = None
     purpose: str | None = None
     device: str | None = None
+    timeout: float = 120.0
+    api_key: str | None = Field(alias="api-key", default=None)
+    api_key_env: str | None = Field(alias="api-key-env", default=None)
 
 
 class ModelsConfig(BaseModel):

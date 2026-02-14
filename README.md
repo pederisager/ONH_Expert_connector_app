@@ -28,7 +28,7 @@ The API serves the static UI from `app/static` at the root path.
 
 ### Staff summaries
 - Source of truth: `staff_info.json` (maintained manually).
-- Generate precomputed summaries: `python3 scripts/build_summaries_from_staff_info.py` (add `--no-llm` to skip Ollama).
+- Generate precomputed summaries: `python3 scripts/build_summaries_from_staff_info.py` (add `--no-llm` to skip the configured LLM provider).
 - The API loads `data/precomputed_summaries.json` at startup; restart after regenerating.
 
 ### UI language & translation
@@ -95,6 +95,33 @@ The API serves the static UI from `app/static` at the root path.
 ## Local models
 
 Model choices live in `data/models.yaml`. Download the referenced LLM and embedding checkpoints ahead of time (for example via Ollama) and update the config if you pick different variants.
+
+## Groq API LLM option
+
+You can run LLM calls against Groq instead of a local Ollama model by updating `llm_model` in `data/models.yaml`:
+
+```yaml
+llm_model:
+  backend: "groq"
+  name: "llama-3.3-70b-versatile"
+  endpoint: "https://api.groq.com/openai/v1"
+  timeout: 120
+  api-key-env: "GROQ_API_KEY"
+```
+
+Then set your key in the shell before starting the app:
+
+```bash
+export GROQ_API_KEY="your-key-here"
+```
+
+PowerShell:
+
+```powershell
+$env:GROQ_API_KEY="your-key-here"
+```
+
+`api-key-env` defaults to `GROQ_API_KEY` if omitted. Keep secrets out of git.
 
 ## GPU embeddings
 

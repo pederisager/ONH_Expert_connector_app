@@ -75,7 +75,7 @@ class FetchUtils:
         soup = BeautifulSoup(content, "html.parser")
         for tag in soup(["script", "style", "noscript"]):
             tag.extract()
-        title = soup.title.string if soup.title else ""
+        title = str(soup.title.string) if soup.title and soup.title.string else ""
         text_content = " ".join(soup.stripped_strings)
         return {"url": url, "title": title, "text": text_content}
 

@@ -414,6 +414,13 @@ async def _fetch_single_staff(
     max_pages: int,
     memory_cache: dict[str, dict[str, object]] | None,
 ) -> StaffDocument:
+    def _as_plain_text(value: Any) -> str:
+        if value is None:
+            return ""
+        if value.__class__ is str:
+            return value
+        return str(value)
+
     pages: list[PageContent] = []
     for url in profile.sources[:max_pages]:
         cache_key = f"fetch::{url}"
@@ -428,9 +435,9 @@ async def _fetch_single_staff(
         except httpx.HTTPError:
             continue
         cleaned = {
-            "url": page_data["url"],
-            "title": page_data.get("title") or "",
-            "text": page_data.get("text", "")[:PAGE_TEXT_CHAR_LIMIT],
+            "url": _as_plain_text(page_data.get("url", url)),
+            "title": _as_plain_text(page_data.get("title")),
+            "text": _as_plain_text(page_data.get("text"))[:PAGE_TEXT_CHAR_LIMIT],
         }
         cache_manager.set(cache_key, cleaned)
         pages.append(PageContent(**cleaned))

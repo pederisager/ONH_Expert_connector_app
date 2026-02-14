@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -104,12 +105,38 @@ def truncate_words(text: str, max_words: int) -> str:
     return truncated.rstrip(",;:.") + "..."
 
 
+def _extract_chat_completion_text(payload: dict[str, Any]) -> str:
+    choices = payload.get("choices")
+    if not isinstance(choices, list) or not choices:
+        return ""
+    first_choice = choices[0]
+    if not isinstance(first_choice, dict):
+        return ""
+    message = first_choice.get("message")
+    if not isinstance(message, dict):
+        return ""
+    content = message.get("content")
+    if isinstance(content, str):
+        return content.strip()
+    if isinstance(content, list):
+        parts: list[str] = []
+        for item in content:
+            if not isinstance(item, dict):
+                continue
+            if item.get("type") == "text":
+                parts.append(str(item.get("text") or ""))
+        return "".join(parts).strip()
+    return ""
+
+
 async def generate_summary_llm(
     *,
     client: httpx.AsyncClient,
+    backend: str,
     model_name: str,
     endpoint: str,
     timeout: float,
+    api_key: str | None,
     prompt_template: str,
     name: str,
     role: str,
@@ -126,7 +153,32 @@ async def generate_summary_llm(
         expertise=", ".join(expertise) or "ikke oppgitt",
         other=", ".join(other) or "ikke oppgitt",
     )
+    normalized_backend = (backend or "ollama").lower()
     try:
+        if normalized_backend == "groq":
+            if not api_key:
+                return ""
+            url = (
+                endpoint
+                if endpoint.endswith("/chat/completions")
+                else f"{endpoint}/chat/completions"
+            )
+            resp = await client.post(
+                url,
+                headers={
+                    "Authorization": f"Bearer {api_key}",
+                    "Content-Type": "application/json",
+                },
+                json={
+                    "model": model_name,
+                    "messages": [{"role": "user", "content": prompt}],
+                },
+                timeout=timeout,
+            )
+            resp.raise_for_status()
+            text = _extract_chat_completion_text(resp.json())
+            return truncate_words(text, 80)
+
         resp = await client.post(
             f"{endpoint}/api/generate",
             json={"model": model_name, "prompt": prompt, "stream": False},
@@ -164,6 +216,8 @@ async def main(use_llm: bool, selected_names: set[str] | None, langs: set[str], 
 
     # Load model config only if LLM is enabled.
     model_name = endpoint = None
+    backend = "ollama"
+    api_key: str | None = None
     timeout = 120.0
     if use_llm:
         models_path = PROJECT_ROOT / "data" / "models.yaml"
@@ -173,11 +227,29 @@ async def main(use_llm: bool, selected_names: set[str] | None, langs: set[str], 
 
         models_cfg = yaml.safe_load(models_path.read_text(encoding="utf-8")) or {}
         llm_cfg = models_cfg.get("llm_model", {})
+        backend = str(llm_cfg.get("backend") or "ollama").lower()
         model_name = llm_cfg.get("name")
-        endpoint = (llm_cfg.get("endpoint") or "http://localhost:11434").rstrip("/")
+        default_endpoint = (
+            "https://api.groq.com/openai/v1"
+            if backend == "groq"
+            else "http://localhost:11434"
+        )
+        endpoint = (llm_cfg.get("endpoint") or default_endpoint).rstrip("/")
         timeout = float(llm_cfg.get("timeout") or 120)
+        api_key = llm_cfg.get("api_key") or llm_cfg.get("api-key")
+        api_key_env = str(
+            llm_cfg.get("api_key_env") or llm_cfg.get("api-key-env") or "GROQ_API_KEY"
+        )
+        if backend == "groq" and not api_key:
+            api_key = os.getenv(api_key_env)
         if not model_name:
             raise ValueError("llm_model.name is missing in data/models.yaml")
+        if backend == "groq" and not api_key:
+            print(
+                f"[warn] Groq backend configured, but no API key found in "
+                f"`llm_model.api-key`/`llm_model.api_key` or env `{api_key_env}`. Falling back "
+                "to deterministic summaries."
+            )
 
     existing = _load_existing_by_language(OUTPUT_PATH)
     summaries_by_lang: dict[str, dict[str, str]] = {
@@ -206,9 +278,11 @@ async def main(use_llm: bool, selected_names: set[str] | None, langs: set[str], 
                 if use_llm and model_name and endpoint:
                     summary_no = await generate_summary_llm(
                         client=client,
+                        backend=backend,
                         model_name=model_name,
                         endpoint=endpoint,
                         timeout=timeout,
+                        api_key=api_key,
                         prompt_template=PROMPT_TEMPLATE_NO,
                         name=name,
                         role=role,
@@ -228,9 +302,11 @@ async def main(use_llm: bool, selected_names: set[str] | None, langs: set[str], 
                 if use_llm and model_name and endpoint:
                     summary_en = await generate_summary_llm(
                         client=client,
+                        backend=backend,
                         model_name=model_name,
                         endpoint=endpoint,
                         timeout=timeout,
+                        api_key=api_key,
                         prompt_template=PROMPT_TEMPLATE_EN,
                         name=name,
                         role=role,

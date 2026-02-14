@@ -3,6 +3,7 @@ from __future__ import annotations
 import types
 
 import pytest
+from bs4 import BeautifulSoup
 from app import routes
 from app.cache_manager import CacheManager
 from app.fetch_utils import FetchUtils
@@ -180,6 +181,45 @@ async def test_staff_document_cache_reuse(tmp_path) -> None:
     )
     assert fetch_calls["count"] == 1, "Expected cached StaffDocument to skip fetch"
     assert docs_second and docs_second[0].combined_text == docs_first[0].combined_text
+
+
+@pytest.mark.asyncio
+async def test_staff_fetch_cache_normalizes_bs4_strings(tmp_path) -> None:
+    cache_manager = CacheManager(
+        directory=tmp_path / "cache", retention_days=1, enabled=True
+    )
+    fetch_utils = FetchUtils(allowlist_domains=["example.com"], max_kb_per_page=10)
+
+    async def fake_fetch_page(self, client_http, url):  # type: ignore[override]
+        soup = BeautifulSoup("<html><title>Stub title</title></html>", "html.parser")
+        return {
+            "url": url,
+            "title": soup.title.string,
+            "text": "Lang tekst for caching.",
+        }
+
+    fetch_utils.fetch_page = types.MethodType(fake_fetch_page, fetch_utils)
+
+    profile = StaffProfile(
+        name="Cache Test",
+        department="Helsefag",
+        profile_url="https://example.com/profile",
+        sources=["https://example.com/source"],
+        tags=[],
+    )
+
+    docs = await routes._fetch_staff_documents(  # type: ignore[attr-defined]
+        staff_profiles=[profile],
+        fetch_utils=fetch_utils,
+        cache_manager=cache_manager,
+        max_pages=1,
+    )
+    assert docs
+
+    cached = cache_manager.get("fetch::https://example.com/source")
+    assert cached is not None
+    assert cached["title"] == "Stub title"
+    assert cached["title"].__class__ is str
 
 
 def test_build_normalized_preview_prefers_sentences() -> None:

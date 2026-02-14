@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import os
 from typing import Any, Dict, Sequence
 
 import httpx
@@ -27,10 +28,17 @@ class LLMExplainer:
 
     def __init__(self, model_config: Dict[str, Any]) -> None:
         self.model_config = model_config
-        self.backend = model_config.get("backend", "ollama")
+        self.backend = (model_config.get("backend") or "ollama").lower()
         self.model_name = model_config.get("name")
-        self.endpoint = model_config.get("endpoint", "http://localhost:11434")
+        default_endpoint = (
+            "https://api.groq.com/openai/v1"
+            if self.backend == "groq"
+            else "http://localhost:11434"
+        )
+        self.endpoint = (model_config.get("endpoint") or default_endpoint).rstrip("/")
         self.timeout = float(model_config.get("timeout", 120.0))
+        self.api_key_env = model_config.get("api_key_env") or "GROQ_API_KEY"
+        self.api_key = model_config.get("api_key") or os.getenv(self.api_key_env)
 
     async def generate(
         self,
@@ -76,51 +84,29 @@ class LLMExplainer:
                 )
                 return fallback
 
+            text = ""
             if self.backend == "ollama" and self.model_name:
-                try:
-                    async with httpx.AsyncClient(timeout=self.timeout) as client:
-                        response = await client.post(
-                            f"{self.endpoint}/api/generate",
-                            json={
-                                "model": self.model_name,
-                                "prompt": prompt,
-                                "stream": False,
-                            },
-                        )
-                        response.raise_for_status()
-                        data = response.json()
-                except httpx.TimeoutException:
-                    logger.warning(
-                        "LLM generate timed out (%ss) for %s via %s on %s evidence",
-                        self.timeout,
-                        staff_name,
-                        self.model_name,
-                        attempt_label,
-                    )
-                    continue
-                except httpx.HTTPStatusError as exc:
-                    content = exc.response.text if exc.response else ""
-                    logger.warning(
-                        "LLM HTTP %s for %s via %s on %s evidence: %s",
-                        exc.response.status_code if exc.response else "unknown",
-                        staff_name,
-                        self.model_name,
-                        attempt_label,
-                        content[:200],
-                    )
-                    continue
-                except Exception as exc:
-                    logger.warning(
-                        "LLM generate failed for %s via %s on %s evidence (%s): %s",
-                        staff_name,
-                        self.model_name,
-                        attempt_label,
-                        type(exc).__name__,
-                        exc,
-                    )
-                    continue
+                text = await self._generate_with_ollama(
+                    prompt=prompt,
+                    staff_name=staff_name,
+                    attempt_label=attempt_label,
+                )
+            elif self.backend == "groq" and self.model_name:
+                text = await self._generate_with_groq(
+                    prompt=prompt,
+                    staff_name=staff_name,
+                    attempt_label=attempt_label,
+                )
+            else:
+                logger.debug(
+                    "LLM backend %s unsupported for %s, using fallback",
+                    self.backend,
+                    staff_name,
+                )
+                return fallback
 
-                text = (data.get("response") or "").strip()
+            if text:
+                text = text.strip()
                 if not text or self._looks_like_refusal(text):
                     if not text:
                         logger.debug(
@@ -153,13 +139,6 @@ class LLMExplainer:
                         )
                         continue
                 return text
-
-            logger.debug(
-                "LLM backend %s unsupported for %s, using fallback",
-                self.backend,
-                staff_name,
-            )
-            return fallback
 
         return fallback
 
@@ -214,6 +193,144 @@ class LLMExplainer:
             f"{evidence_lines}\n"
             "Svar:"
         )
+
+    async def _generate_with_ollama(
+        self,
+        *,
+        prompt: str,
+        staff_name: str,
+        attempt_label: str,
+    ) -> str:
+        try:
+            async with httpx.AsyncClient(timeout=self.timeout) as client:
+                response = await client.post(
+                    f"{self.endpoint}/api/generate",
+                    json={
+                        "model": self.model_name,
+                        "prompt": prompt,
+                        "stream": False,
+                    },
+                )
+                response.raise_for_status()
+                data = response.json()
+        except httpx.TimeoutException:
+            logger.warning(
+                "LLM generate timed out (%ss) for %s via %s on %s evidence",
+                self.timeout,
+                staff_name,
+                self.model_name,
+                attempt_label,
+            )
+            return ""
+        except httpx.HTTPStatusError as exc:
+            content = exc.response.text if exc.response else ""
+            logger.warning(
+                "LLM HTTP %s for %s via %s on %s evidence: %s",
+                exc.response.status_code if exc.response else "unknown",
+                staff_name,
+                self.model_name,
+                attempt_label,
+                content[:200],
+            )
+            return ""
+        except Exception as exc:
+            logger.warning(
+                "LLM generate failed for %s via %s on %s evidence (%s): %s",
+                staff_name,
+                self.model_name,
+                attempt_label,
+                type(exc).__name__,
+                exc,
+            )
+            return ""
+        return (data.get("response") or "").strip()
+
+    async def _generate_with_groq(
+        self,
+        *,
+        prompt: str,
+        staff_name: str,
+        attempt_label: str,
+    ) -> str:
+        if not self.api_key:
+            logger.warning(
+                "LLM backend groq mangler API-nokkel (%s). Bruker fallback.",
+                self.api_key_env,
+            )
+            return ""
+        url = (
+            self.endpoint
+            if self.endpoint.endswith("/chat/completions")
+            else f"{self.endpoint}/chat/completions"
+        )
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+        }
+        payload = {
+            "model": self.model_name,
+            "messages": [{"role": "user", "content": prompt}],
+        }
+        try:
+            async with httpx.AsyncClient(timeout=self.timeout) as client:
+                response = await client.post(url, headers=headers, json=payload)
+                response.raise_for_status()
+                data = response.json()
+        except httpx.TimeoutException:
+            logger.warning(
+                "Groq timed out (%ss) for %s via %s on %s evidence",
+                self.timeout,
+                staff_name,
+                self.model_name,
+                attempt_label,
+            )
+            return ""
+        except httpx.HTTPStatusError as exc:
+            content = exc.response.text if exc.response else ""
+            logger.warning(
+                "Groq HTTP %s for %s via %s on %s evidence: %s",
+                exc.response.status_code if exc.response else "unknown",
+                staff_name,
+                self.model_name,
+                attempt_label,
+                content[:200],
+            )
+            return ""
+        except Exception as exc:
+            logger.warning(
+                "Groq generate failed for %s via %s on %s evidence (%s): %s",
+                staff_name,
+                self.model_name,
+                attempt_label,
+                type(exc).__name__,
+                exc,
+            )
+            return ""
+        return self._extract_chat_completion_text(data)
+
+    @staticmethod
+    def _extract_chat_completion_text(data: Dict[str, Any]) -> str:
+        choices = data.get("choices")
+        if not isinstance(choices, list) or not choices:
+            return ""
+        first_choice = choices[0]
+        if not isinstance(first_choice, dict):
+            return ""
+        message = first_choice.get("message", {})
+        if not isinstance(message, dict):
+            return ""
+        content = message.get("content")
+        if isinstance(content, str):
+            return content.strip()
+        if isinstance(content, list):
+            parts: list[str] = []
+            for item in content:
+                if not isinstance(item, dict):
+                    continue
+                if item.get("type") == "text":
+                    parts.append(str(item.get("text") or ""))
+            return "".join(parts).strip()
+        return ""
 
     def _fallback_explanation(
         self,
