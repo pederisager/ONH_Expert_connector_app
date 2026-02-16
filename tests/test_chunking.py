@@ -45,9 +45,51 @@ def test_chunker_handles_empty_text() -> None:
     )
 
 
+def test_chunker_uses_source_namespace_and_offsets() -> None:
+    chunker = Chunker(chunk_size=4, chunk_overlap=0)
+    text = "en to tre fire fem seks"
+    chunks = chunker.chunk_text(
+        staff_slug="slug",
+        text=text,
+        source_url="https://example.com",
+        source_namespace="nva",
+        start_index=7,
+    )
+
+    assert [chunk.chunk_id for chunk in chunks] == [
+        "slug-nva-0007",
+        "slug-nva-0008",
+    ]
+    assert [chunk.order for chunk in chunks] == [7, 8]
+
+
+def test_chunker_respects_per_call_max_chunks_override() -> None:
+    chunker = Chunker(chunk_size=3, chunk_overlap=1, max_chunks=5)
+    words = " ".join(str(i) for i in range(15))
+    chunks = chunker.chunk_text(
+        staff_slug="tester",
+        text=words,
+        source_url="https://example.com",
+        source_namespace="profile",
+        max_chunks=2,
+    )
+    assert len(chunks) == 2
+
+
 @pytest.mark.parametrize(
     "chunk_size, overlap", [(0, 0), (5, 5), (5, 6), (-1, 0), (5, -1)]
 )
 def test_chunker_validates_parameters(chunk_size: int, overlap: int) -> None:
     with pytest.raises(ValueError):
         Chunker(chunk_size=chunk_size, chunk_overlap=overlap)
+
+
+def test_chunker_validates_start_index() -> None:
+    chunker = Chunker()
+    with pytest.raises(ValueError):
+        chunker.chunk_text(
+            staff_slug="slug",
+            text="hello",
+            source_url="https://example.com",
+            start_index=-1,
+        )

@@ -81,11 +81,17 @@ def create_app() -> FastAPI:
     index_paths = IndexPaths(root=index_root)
     vector_store = LocalVectorStore(index_paths.vectors_dir)
     retriever_embedder = create_embedding_backend(models_config, app_config=app_config)
+    max_chunks_per_source = app_config.rag.max_chunks_per_source_per_staff
+    max_chunks_per_staff = max(1, sum(max_chunks_per_source.values()))
     embedding_retriever = EmbeddingRetriever(
         vector_store=vector_store,
         embedder=retriever_embedder,
         min_score=app_config.results.min_similarity_score,
-        max_chunks_per_staff=3,
+        max_chunks_per_staff=max_chunks_per_staff,
+        semantic_weight=app_config.rag.hybrid_semantic_weight,
+        lexical_weight=app_config.rag.hybrid_lexical_weight,
+        source_weights=app_config.rag.source_weights,
+        max_chunks_per_source=max_chunks_per_source,
     )
     vector_index_ready = len(vector_store) > 0
 

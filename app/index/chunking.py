@@ -9,6 +9,7 @@ from typing import Protocol, Sequence
 from .models import Chunk
 
 WHITESPACE_RE = re.compile(r"\s+")
+NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")
 
 
 def normalize_text(value: str) -> str:
@@ -67,8 +68,13 @@ class Chunker:
         staff_slug: str,
         text: str,
         source_url: str,
-        metadata: dict[str, str] | None = None,
+        metadata: dict[str, object] | None = None,
+        source_namespace: str = "profile",
+        start_index: int = 0,
+        max_chunks: int | None = None,
     ) -> list[Chunk]:
+        if start_index < 0:
+            raise ValueError("start_index must be >= 0.")
         tokens = self.tokenizer.tokenize(text)
         if not tokens:
             return []
@@ -76,25 +82,28 @@ class Chunker:
         step = self.chunk_size - self.chunk_overlap
         total = len(tokens)
         chunks: list[Chunk] = []
+        namespace = _normalize_source_namespace(source_namespace)
+        chunk_limit = self.max_chunks if max_chunks is None else max_chunks
 
         for index, start in enumerate(range(0, total, step)):
             end = min(start + self.chunk_size, total)
             window = tokens[start:end]
             if not window:
                 continue
-            chunk_id = f"{staff_slug}-{index:04d}"
+            global_index = start_index + index
+            chunk_id = f"{staff_slug}-{namespace}-{global_index:04d}"
             chunk_text = self.tokenizer.detokenize(window)
             chunk = Chunk(
                 staff_slug=staff_slug,
                 chunk_id=chunk_id,
                 text=chunk_text,
-                order=index,
+                order=global_index,
                 token_count=len(window),
                 source_url=source_url,
                 metadata=dict(metadata or {}),
             )
             chunks.append(chunk)
-            if self.max_chunks is not None and len(chunks) >= self.max_chunks:
+            if chunk_limit is not None and len(chunks) >= chunk_limit:
                 break
 
         return chunks
@@ -102,3 +111,8 @@ class Chunker:
     def estimate_tokens(self, text: str) -> int:
         """Return an estimated token count for planning chunk distribution."""
         return len(self.tokenizer.tokenize(text))
+
+
+def _normalize_source_namespace(value: str) -> str:
+    normalized = NON_ALNUM_RE.sub("-", (value or "").strip().lower()).strip("-")
+    return normalized or "source"

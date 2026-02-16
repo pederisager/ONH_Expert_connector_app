@@ -29,7 +29,9 @@ class KeywordEmbedder:
         return np.asarray(values, dtype=np.float32)
 
 
-def _make_chunk(slug: str, text: str, score_index: int) -> Chunk:
+def _make_chunk(
+    slug: str, text: str, score_index: int, *, source_kind: str = "profile"
+) -> Chunk:
     return Chunk(
         staff_slug=slug,
         chunk_id=f"{slug}-{score_index:04d}",
@@ -37,7 +39,11 @@ def _make_chunk(slug: str, text: str, score_index: int) -> Chunk:
         order=score_index,
         token_count=len(text.split()),
         source_url="https://example.com",
-        metadata={"department": "Psykologi", "name": f"{slug.title()}"},
+        metadata={
+            "department": "Psykologi",
+            "name": f"{slug.title()}",
+            "source_kind": source_kind,
+        },
     )
 
 
@@ -113,3 +119,83 @@ def test_embedding_retriever_disables_on_dimension_mismatch(tmp_path) -> None:
     assert results == []
     assert retriever.is_active is False
     assert "dimensionality" in (retriever.disabled_reason or "")
+
+
+def test_embedding_retriever_applies_source_weighting(tmp_path) -> None:
+    class FixedEmbedder:
+        def embed_one(self, text: str) -> np.ndarray:
+            return np.asarray([1.0, 0.0], dtype=np.float32)
+
+    store = LocalVectorStore(tmp_path / "vectors")
+    chunks = [
+        _make_chunk("alpha", "generic profile", 0, source_kind="staffinfo"),
+        _make_chunk("beta", "publication", 0, source_kind="nva"),
+    ]
+    embeddings = np.asarray([[1.0, 0.0], [0.7, 0.0]], dtype=np.float32)
+    store.add(embeddings, chunks)
+
+    retriever = EmbeddingRetriever(
+        vector_store=store,
+        embedder=FixedEmbedder(),  # type: ignore[arg-type]
+        min_score=0.0,
+        source_weights={"staffinfo": 0.2, "nva": 1.0},
+    )
+    results = retriever.retrieve(RetrievalQuery(text="anything", top_k=2))
+    assert [item.staff_slug for item in results] == ["beta", "alpha"]
+
+
+def test_embedding_retriever_limits_chunks_per_source(tmp_path) -> None:
+    class FixedEmbedder:
+        def embed_one(self, text: str) -> np.ndarray:
+            return np.asarray([1.0, 0.0], dtype=np.float32)
+
+    store = LocalVectorStore(tmp_path / "vectors")
+    chunks = [
+        _make_chunk("alpha", "nva a", 0, source_kind="nva"),
+        _make_chunk("alpha", "nva b", 1, source_kind="nva"),
+        _make_chunk("alpha", "profile", 2, source_kind="profile"),
+    ]
+    embeddings = np.asarray([[0.95, 0.0], [0.9, 0.0], [0.85, 0.0]], dtype=np.float32)
+    store.add(embeddings, chunks)
+
+    retriever = EmbeddingRetriever(
+        vector_store=store,
+        embedder=FixedEmbedder(),  # type: ignore[arg-type]
+        min_score=0.0,
+        max_chunks_per_staff=3,
+        max_chunks_per_source={"nva": 1, "profile": 1},
+    )
+    results = retriever.retrieve(RetrievalQuery(text="anything", top_k=1))
+    assert results
+    source_kinds = [chunk.metadata.get("source_kind") for chunk in results[0].chunks]
+    assert source_kinds.count("nva") == 1
+    assert source_kinds.count("profile") == 1
+
+
+def test_embedding_retriever_hybrid_lexical_reorders_candidates(tmp_path) -> None:
+    class FixedEmbedder:
+        def embed_one(self, text: str) -> np.ndarray:
+            return np.asarray([1.0, 0.0], dtype=np.float32)
+
+    store = LocalVectorStore(tmp_path / "vectors")
+    chunks = [
+        _make_chunk("alpha", "Generell forskning uten termmatch", 0, source_kind="profile"),
+        _make_chunk("beta", "Psykologi og traumebehandling", 0, source_kind="profile"),
+    ]
+    # Alpha has stronger semantic cosine; beta should win when lexical signal is blended in.
+    embeddings = np.asarray([[1.0, 0.0], [0.8, 0.6]], dtype=np.float32)
+    store.add(embeddings, chunks)
+
+    retriever = EmbeddingRetriever(
+        vector_store=store,
+        embedder=FixedEmbedder(),  # type: ignore[arg-type]
+        min_score=0.0,
+        semantic_weight=0.5,
+        lexical_weight=0.5,
+    )
+    results = retriever.retrieve(RetrievalQuery(text="psykologi traumebehandling", top_k=2))
+
+    assert [item.staff_slug for item in results] == ["beta", "alpha"]
+    assert results[0].metadata.get("lexical_score", 0) > results[1].metadata.get(
+        "lexical_score", 0
+    )

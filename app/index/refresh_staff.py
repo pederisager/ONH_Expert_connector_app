@@ -1025,6 +1025,7 @@ def build_index_from_records(
         embedder=embedder,
         vector_store=vector_store,
         staff_info=staff_info,
+        max_chunks_per_source=app_config.rag.max_chunks_per_source_per_staff,
     )
     summary = builder.build(records)
     LOGGER.info(

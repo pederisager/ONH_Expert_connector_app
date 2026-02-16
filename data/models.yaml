@@ -1,8 +1,13 @@
 llm_model:
   name: "llama3.1:8b-instruct-q4_0"
-  backend: "ollama"
-  endpoint: "http://localhost:11434"
-  timeout: 120
+  # backend: "ollama"
+  # endpoint: "http://localhost:11434"
+  # timeout: 120
+  # Optional Groq setup (switch backend + name + endpoint, then set env key):
+  backend: "groq"
+  name: "llama-3.3-70b-versatile"
+  endpoint: "https://api.groq.com/openai/v1"
+  api-key-env: "GROQ_API_KEY"
   purpose: "generate explanations"
 
 embedding_model:

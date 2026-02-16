@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Iterable, Sequence
@@ -38,12 +39,18 @@ class StaffIndexBuilder:
         embedder: EmbeddingBackend,
         vector_store: LocalVectorStore | None = None,
         staff_info: dict[str, StaffInfo] | None = None,
+        max_chunks_per_source: dict[str, int] | None = None,
     ) -> None:
         self.paths = paths
         self.chunker = chunker
         self.embedder = embedder
         self.vector_store = vector_store or LocalVectorStore(paths.vectors_dir)
         self.staff_info = staff_info or {}
+        self.max_chunks_per_source = {
+            key.lower(): value
+            for key, value in (max_chunks_per_source or {}).items()
+            if value >= 0
+        }
 
     def build(self, records: Sequence[StaffRecord]) -> BuildSummary:
         self._ensure_directories()
@@ -87,6 +94,8 @@ class StaffIndexBuilder:
 
     def _chunks_for_record(self, record: StaffRecord) -> list[Chunk]:
         chunks: list[Chunk] = []
+        source_offsets: dict[str, int] = defaultdict(int)
+        source_counts: dict[str, int] = defaultdict(int)
         primary_source = record.primary_source()
         summary_source_url = (
             primary_source.url if primary_source else record.profile_url
@@ -99,44 +108,59 @@ class StaffIndexBuilder:
             extra_tags.extend(info.research_focus)
             extra_tags.extend(extract_method_tags(info))
 
-        merged_tags = list(dict.fromkeys([*record.tags, *extra_tags]))
+        default_tags = list(record.tags)
         base_metadata = {
             "department": record.department,
             "title": record.title,
             "profile_url": record.profile_url,
             "source_title": record.name,
             "source_kind": "profile",
-            "tags": merged_tags,
+            "tags": list(default_tags),
         }
 
         # Synthetic staff_info page (high-signal curated data).
         if info:
             synthetic_text = synthetic_page_text(info, include_methods=True)
+            synthetic_tags = list(dict.fromkeys([*default_tags, *extra_tags]))
             synthetic_metadata = {
                 **base_metadata,
                 "source_kind": "staffinfo",
                 "source_title": record.name,
+                "tags": synthetic_tags,
             }
-            synthetic_chunks = self.chunker.chunk_text(
+            synthetic_chunks = self._chunk_with_source_budget(
+                source_kind="staffinfo",
+                source_namespace="staffinfo",
                 staff_slug=record.slug,
                 text=synthetic_text,
                 source_url=f"staffinfo://{record.slug}",
                 metadata=synthetic_metadata,
+                source_offsets=source_offsets,
+                source_counts=source_counts,
             )
             chunks.extend(synthetic_chunks)
 
-        summary_chunks = self.chunker.chunk_text(
+        summary_chunks = self._chunk_with_source_budget(
+            source_kind="profile",
+            source_namespace="profile",
             staff_slug=record.slug,
             text=record.summary,
             source_url=summary_source_url,
             metadata=base_metadata,
+            source_offsets=source_offsets,
+            source_counts=source_counts,
         )
         chunks.extend(summary_chunks)
 
         if record.nva_publications:
-            chunks.extend(self._chunks_from_nva_publications(record))
+            chunks.extend(
+                self._chunks_from_nva_publications(
+                    record,
+                    source_offsets=source_offsets,
+                    source_counts=source_counts,
+                )
+            )
 
-        default_tags = list(record.tags)
         for chunk in chunks:
             chunk.metadata.setdefault("name", record.name)
             existing_tags = chunk.metadata.get("tags")
@@ -155,7 +179,13 @@ class StaffIndexBuilder:
                 chunk.metadata["tags"] = list(default_tags)
         return chunks
 
-    def _chunks_from_nva_publications(self, record: StaffRecord) -> list[Chunk]:
+    def _chunks_from_nva_publications(
+        self,
+        record: StaffRecord,
+        *,
+        source_offsets: dict[str, int],
+        source_counts: dict[str, int],
+    ) -> list[Chunk]:
         nva_chunks: list[Chunk] = []
         for result in record.nva_publications:
             text = result.as_text()
@@ -180,14 +210,56 @@ class StaffIndexBuilder:
                 "tags": combined_tags,
             }
             nva_chunks.extend(
-                self.chunker.chunk_text(
+                self._chunk_with_source_budget(
+                    source_kind="nva",
+                    source_namespace="nva",
                     staff_slug=record.slug,
                     text=text,
                     source_url=source_url,
                     metadata=metadata,
+                    source_offsets=source_offsets,
+                    source_counts=source_counts,
                 )
             )
         return nva_chunks
+
+    def _chunk_with_source_budget(
+        self,
+        *,
+        source_kind: str,
+        source_namespace: str,
+        staff_slug: str,
+        text: str,
+        source_url: str,
+        metadata: dict[str, object],
+        source_offsets: dict[str, int],
+        source_counts: dict[str, int],
+    ) -> list[Chunk]:
+        normalized_kind = source_kind.lower()
+        configured_limit = self.max_chunks_per_source.get(normalized_kind)
+        remaining = None
+        if configured_limit is not None:
+            consumed = source_counts.get(normalized_kind, 0)
+            remaining = max(0, configured_limit - consumed)
+            if remaining == 0:
+                return []
+
+        new_chunks = self.chunker.chunk_text(
+            staff_slug=staff_slug,
+            text=text,
+            source_url=source_url,
+            metadata=metadata,
+            source_namespace=source_namespace,
+            start_index=source_offsets.get(normalized_kind, 0),
+            max_chunks=remaining,
+        )
+        source_offsets[normalized_kind] = source_offsets.get(normalized_kind, 0) + len(
+            new_chunks
+        )
+        source_counts[normalized_kind] = source_counts.get(normalized_kind, 0) + len(
+            new_chunks
+        )
+        return new_chunks
 
     def _write_chunks_snapshot(self, slug: str, chunks: Iterable[Chunk]) -> None:
         payload = [self._chunk_to_dict(chunk) for chunk in chunks]

@@ -15,6 +15,21 @@ def test_load_app_config_has_expected_defaults() -> None:
     assert config.results.max_candidates == 10
     assert config.rag.chunk_size == 400
     assert config.rag.index_root.endswith("data/index")
+    assert config.rag.hybrid_semantic_weight == 0.85
+    assert config.rag.hybrid_lexical_weight == 0.15
+    assert config.rag.source_weights["nva"] == 1.0
+    assert config.rag.max_chunks_per_source_per_staff["staffinfo"] == 1
+    assert config.results.citation_source_priority == ["nva", "profile", "staffinfo"]
+    assert config.results.min_query_overlap_per_citation == 1
+    assert config.results.scoring_weights.semantic == 1.0
+    assert config.results.scoring_weights.keywords == 0.1
+    assert config.results.scoring_weights.tags == 0.15
+    assert config.results.scoring_weights.methods == 0.15
+    assert "publication_grounded" in config.results.mode_scoring_profiles
+    assert "profile_grounded" in config.results.mode_scoring_profiles
+    publication_profile = config.results.mode_scoring_profiles["publication_grounded"]
+    assert publication_profile.source_kind_boosts["nva"] == 0.18
+    assert publication_profile.nva_citation_bonus == 0.08
     assert config.language.embedding_language_mode == "multilingual"
     assert config.language.translation.enabled is False
     assert config.security.max_upload_mb == 10
@@ -22,10 +37,14 @@ def test_load_app_config_has_expected_defaults() -> None:
 
 def test_load_models_config_round_trip() -> None:
     models = load_models_config()
-    assert models.llm_model.name.startswith("llama3.1")
+    assert models.llm_model.name
+    assert models.llm_model.backend in {"ollama", "groq"}
     assert models.llm_model.timeout == 120
     assert models.llm_model.api_key is None
-    assert models.llm_model.api_key_env is None
+    if models.llm_model.backend == "groq":
+        assert models.llm_model.api_key_env
+    else:
+        assert models.llm_model.api_key_env is None
     assert models.embedding_model.backend == "sentence_transformers"
     assert "multilingual" in models.embedding_model.name
     assert models.embedding_model.device in {"auto", "cuda"}
