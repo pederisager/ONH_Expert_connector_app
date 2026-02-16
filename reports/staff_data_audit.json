@@ -1,0 +1,2908 @@
+{
+  "generated_at": "2026-02-14T21:09:03.005212+00:00",
+  "summary": {
+    "staff_with_issues": 85,
+    "issue_counts": {
+      "high": 13,
+      "medium": 45,
+      "low": 50
+    },
+    "unresolved_high_count": 13
+  },
+  "staff": [
+    {
+      "name": "Alex Gillespie",
+      "slug": "Alex-Gillespie",
+      "department": "Psykologi",
+      "nva_publication_count": 24,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "high",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.104).",
+          "metrics": {
+            "divergence_score": 0.1044,
+            "lexical_similarity": 0.029,
+            "semantic_lite_similarity": 0.2446,
+            "sample_staffinfo_only_terms": [
+              "erfaring",
+              "førsteamanuensis",
+              "helsevesen",
+              "internasjonal",
+              "journalredaktør",
+              "kommunikasjon",
+              "kommunikasjonsproblemer",
+              "kriser",
+              "lse",
+              "læring"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "low",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.54).",
+          "metrics": {
+            "total_publications": 24,
+            "aligned_publications": 13,
+            "alignment_rate": 0.5417,
+            "medical_publication_share": 0.1667,
+            "sample_low_overlap_titles": [
+              "Sounds of silence: Data for analysing muted safety voice in speech",
+              "Validating the use of large language models for psychological text classification",
+              "Expansive and Restrictive Semiosis: Exploring the Process of Cultural Guidance",
+              "Cockpit voice recorder transcript data: Capturing safety voice and safety listening during historic aviation accidents",
+              "The sounds of safety silence: Interventions and temporal patterns unmute unique safety voice content in speech"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Alexander Utne",
+      "slug": "Alexander-Utne",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 9,
+      "issues": [
+        {
+          "check": "nva_domain_outlier",
+          "severity": "medium",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.44).",
+          "metrics": {
+            "total_publications": 9,
+            "aligned_publications": 4,
+            "alignment_rate": 0.4444,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Radiointervju: \"NRK Troms Morgensending\"",
+              "Avisintervju: \"Setter sammen drømmelag i nytt UIT-studie\".",
+              "Prosjektrapport/FoU-arbeid: \"Opprettelse av Idegeneratoren ved UIT\"",
+              "Rapport om studententreprenørskap/FoU-arbeid: \"Hvordan påvirker studententreprenørskap studenten?\"",
+              "Prosjektrapport/FoU-arbeid: \"Opprettelse av Entreprenørskapsfondet ved UIT\""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Anders Hauge Wien",
+      "slug": "Anders-Hauge-Wien",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 32,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.290).",
+          "metrics": {
+            "divergence_score": 0.2898,
+            "lexical_similarity": 0.1282,
+            "semantic_lite_similarity": 0.59,
+            "sample_staffinfo_only_terms": [
+              "forbrukeradferd",
+              "mat",
+              "måltidsmarkedsføring"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "low",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.59).",
+          "metrics": {
+            "total_publications": 32,
+            "aligned_publications": 19,
+            "alignment_rate": 0.5938,
+            "medical_publication_share": 0.0312,
+            "sample_low_overlap_titles": [
+              "Traditional sushi for modern consumers; a comparison between sushi consumption behaviour in Japan and Norway",
+              "Preference for local food as a matter of helping behaviour: Insights from Norway",
+              "The role of identity and gender in seafood cooking skills",
+              "Stitching the Gap: Feedback as a Mechanism for Reinforcing Sustainable Fashion Consumption",
+              "Machine heuristic in algorithm aversion: Perceived creativity and effort of output created by or with artificial intelligence"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Andreas Berg Krosby",
+      "slug": "Andreas-Berg-Krosby",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.309).",
+          "metrics": {
+            "divergence_score": 0.3087,
+            "lexical_similarity": 0.127,
+            "semantic_lite_similarity": 0.6461,
+            "sample_staffinfo_only_terms": [
+              "emotionsfokusert",
+              "familiebehandling",
+              "gruppebehandling",
+              "suicidforebygging",
+              "terapi"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Andreas Østhagen",
+      "slug": "Andreas-Osthagen",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 616,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.227).",
+          "metrics": {
+            "divergence_score": 0.2268,
+            "lexical_similarity": 0.0617,
+            "semantic_lite_similarity": 0.5333,
+            "sample_staffinfo_only_terms": [
+              "aktiv",
+              "arktis",
+              "emner",
+              "forskningsmiljøer",
+              "førsteamanuensis",
+              "geopolitikk",
+              "hav",
+              "havs",
+              "innen",
+              "internasjonale"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Anita Nesse",
+      "slug": "Anita-Nesse",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.222).",
+          "metrics": {
+            "divergence_score": 0.2222,
+            "lexical_similarity": 0.082,
+            "semantic_lite_similarity": 0.4827,
+            "sample_staffinfo_only_terms": [
+              "internasjonal",
+              "markedsledelse",
+              "salg",
+              "utvikling"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Anne Fylling Frøyen",
+      "slug": "Anne-Fylling-Froyen",
+      "department": "Psykologi",
+      "nva_publication_count": 3,
+      "issues": [
+        {
+          "check": "nva_domain_outlier",
+          "severity": "medium",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.33).",
+          "metrics": {
+            "total_publications": 3,
+            "aligned_publications": 1,
+            "alignment_rate": 0.3333,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Antecedents of need fulfillment among elite athletes and coaches: A qualitative approach",
+              "Leading and managing during COVID-19: empirical insights from the Norwegian women’s national handball team in a time of crisis",
+              "\"You can be my coach, but I am the one in charge\" An interpretative phenomenological analysis of the importance of the coach-athlete relationship in Norwegian super-elite athletes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Anne Kjeldsen",
+      "slug": "Anne-Kjeldsen",
+      "department": "Psykologi",
+      "nva_publication_count": 21,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.270).",
+          "metrics": {
+            "divergence_score": 0.2701,
+            "lexical_similarity": 0.1026,
+            "semantic_lite_similarity": 0.5813,
+            "sample_staffinfo_only_terms": [
+              "atferdsproblemer",
+              "barne",
+              "depressive",
+              "førsteamanuensis",
+              "longitudinell",
+              "masterveiledning",
+              "mental",
+              "mentale",
+              "spesialistutdanning",
+              "studie"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "medium",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.29).",
+          "metrics": {
+            "total_publications": 21,
+            "aligned_publications": 6,
+            "alignment_rate": 0.2857,
+            "medical_publication_share": 0.0476,
+            "sample_low_overlap_titles": [
+              "Coronavirus pandemic-#stayhome: How are you holding up? questions and tips for 11-18-year-olds to make it better",
+              "Alcohol Use in Adolescence",
+              "Predictors of Externalising Behaviour Problems in Childhood and Adolescence",
+              "Trajectories of maternal symptoms of anxiety and depression over 13 years: The influence of stress, social support, and maternal temperament",
+              "Longitudinal profiles of externalising behaviour problems from infancy to mid-adolescence: early predictors, timing of risk factors, and late adolescence outcomes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Anni Jonesdatter Voll",
+      "slug": "Anni-Jonesdatter-Voll",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.240).",
+          "metrics": {
+            "divergence_score": 0.24,
+            "lexical_similarity": 0.0667,
+            "semantic_lite_similarity": 0.5618,
+            "sample_staffinfo_only_terms": [
+              "institusjonsadministrasjon",
+              "institutterådgiver",
+              "nettundervisning",
+              "rekruttering",
+              "studentadministrasjon"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Anniken Grønstad",
+      "slug": "Anniken-Gronstad",
+      "department": "Psykologi",
+      "nva_publication_count": 24,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.203).",
+          "metrics": {
+            "divergence_score": 0.2027,
+            "lexical_similarity": 0.0356,
+            "semantic_lite_similarity": 0.513,
+            "sample_staffinfo_only_terms": [
+              "arbeidslivsforskning",
+              "bachelorprogram",
+              "forskningsformidling",
+              "organisasjonsendring",
+              "personalforvaltning",
+              "programdirektør",
+              "studieutvikling",
+              "tilstedeværelse",
+              "velferdssystem"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Beate Mangset",
+      "slug": "Beate-Mangset",
+      "department": "Helsefag",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.173).",
+          "metrics": {
+            "divergence_score": 0.1727,
+            "lexical_similarity": 0.0556,
+            "semantic_lite_similarity": 0.3902,
+            "sample_staffinfo_only_terms": [
+              "aktiv",
+              "beslutninger",
+              "brukermedvirkning",
+              "brukerperspektiv",
+              "debatt",
+              "deltaker",
+              "erfaring",
+              "erfaringer",
+              "etikk",
+              "forskningsprosjekter"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Beniamino Callegari",
+      "slug": "Beniamino-Callegari",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 29,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.123).",
+          "metrics": {
+            "divergence_score": 0.1232,
+            "lexical_similarity": 0.0,
+            "semantic_lite_similarity": 0.3519,
+            "sample_staffinfo_only_terms": [
+              "aspekter",
+              "bedriftsstyring",
+              "bærekraftige",
+              "digitale",
+              "entreprenørskap",
+              "evolusjonær",
+              "finansielle",
+              "førsteamanuensis",
+              "innovasjon",
+              "innovasjonsprosesser"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Benjamin Goksøyr",
+      "slug": "Benjamin-Goksoyr",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "nva_presence_mismatch",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff.csv has NVA profile but no local NVA results.",
+          "metrics": {
+            "nva_profile_url": "https://nva.sikt.no/research-profile/1504843"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bernt Hagtvet",
+      "slug": "Bernt-Hagtvet",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 59,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.221).",
+          "metrics": {
+            "divergence_score": 0.2206,
+            "lexical_similarity": 0.0621,
+            "semantic_lite_similarity": 0.515,
+            "sample_staffinfo_only_terms": [
+              "autoritære",
+              "bidragsyter",
+              "debatt",
+              "demokratiteori",
+              "erfaring",
+              "lang",
+              "norsk",
+              "offentlig",
+              "regimer",
+              "relasjoner"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "low",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.49).",
+          "metrics": {
+            "total_publications": 59,
+            "aligned_publications": 29,
+            "alignment_rate": 0.4915,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Den fascinerende fascismen-brutalitet,estetisert makt og skjønnhetslengsel i den tyske nasjonalsosialismen",
+              "Høyreradikalisme",
+              "\"Ett menneskes sak er vår alles sak\". Bjørnstjerne Bjørnson, de intelektuelle og jsutismordet på armékaptein Alfred Dreyfus (1894-1906)",
+              "Hannah Arendt — fornuft og dømmekraft (del 3 av 3) NRK lørdag 25.10.2008",
+              "The Politics of Freedom – A Study of the Political Thought of Isaiah Berlin and Karl Popper, and of the Challenge of Neoliberalism"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bjørnar Østby",
+      "slug": "Bjornar-Ostby",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 57,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.239).",
+          "metrics": {
+            "divergence_score": 0.2393,
+            "lexical_similarity": 0.0354,
+            "semantic_lite_similarity": 0.618,
+            "sample_staffinfo_only_terms": [
+              "bacheloroppgaver",
+              "borgerkrig",
+              "demokratisering",
+              "emner",
+              "forskningsmiljøer",
+              "fredsprosesser",
+              "fredsstudier",
+              "førsteamanuensis",
+              "internasjonale",
+              "konflikter"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "high",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.21).",
+          "metrics": {
+            "total_publications": 57,
+            "aligned_publications": 12,
+            "alignment_rate": 0.2105,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Spesial: Hva skjer med pengene? Med Christer Teigen og Fredrik Harboe.",
+              "Episode #23: TikTok, Taiwan, ypping på Vest-Balkan, og et potensielt Myanmar-gjennombrudd.",
+              "Hva skjer med verden? Episode #13: Teddybjørnbomber, Vestbredden, Antifa, og ebola.",
+              "Hva skjer med verden? Episode #12: Amerikansk kaos, libysk farse, stormtroopers, og Tupac-sitater.",
+              "Episode #19: En forgiftning, et kupp, fem massakre, og en etterlengtet våpenhvile."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Brady Wagoner",
+      "slug": "Brady-Wagoner",
+      "department": "Psykologi",
+      "nva_publication_count": 19,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.131).",
+          "metrics": {
+            "divergence_score": 0.131,
+            "lexical_similarity": 0.0349,
+            "semantic_lite_similarity": 0.3093,
+            "sample_staffinfo_only_terms": [
+              "andre",
+              "bokforfatter",
+              "bredt",
+              "dannelse",
+              "emner",
+              "erfaring",
+              "forhold",
+              "formidling",
+              "forskningsmetoder",
+              "forskningsopphold"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Brita Bjørkelo",
+      "slug": "Brita-Bjorkelo",
+      "department": "Psykologi",
+      "nva_publication_count": 251,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "high",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.116).",
+          "metrics": {
+            "divergence_score": 0.1159,
+            "lexical_similarity": 0.0134,
+            "semantic_lite_similarity": 0.3063,
+            "sample_staffinfo_only_terms": [
+              "arbeids",
+              "arbeidslivsaktører",
+              "arbeidslivspsykologi",
+              "arbeidsmiljø",
+              "emner",
+              "flere",
+              "forskningsprosjekter",
+              "innen",
+              "kunnskapsproduksjon",
+              "ledelse"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bård André Bendiksen",
+      "slug": "Bard-Andre-Bendiksen",
+      "department": "Helsefag",
+      "nva_publication_count": 15,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.302).",
+          "metrics": {
+            "divergence_score": 0.3021,
+            "lexical_similarity": 0.1895,
+            "semantic_lite_similarity": 0.5113,
+            "sample_staffinfo_only_terms": [
+              "analyse",
+              "arbeid",
+              "avansert",
+              "baserte",
+              "bildediagnostikk",
+              "emner",
+              "erfaring",
+              "etter",
+              "forskningsmetode",
+              "forskningsmiljøer"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Camilla Lindvall Dahlgren",
+      "slug": "Camilla-Lindvall-Dahlgren",
+      "department": "Psykologi",
+      "nva_publication_count": 76,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.244).",
+          "metrics": {
+            "divergence_score": 0.2437,
+            "lexical_similarity": 0.0393,
+            "semantic_lite_similarity": 0.6234,
+            "sample_staffinfo_only_terms": [
+              "andre",
+              "arfid",
+              "behandlings",
+              "doktorgradsprosjekter",
+              "emner",
+              "evaluering",
+              "fagoffentlighet",
+              "fedme",
+              "forebyggingstiltak",
+              "formidler"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cecilie Gjessing Nome",
+      "slug": "Cecilie-Gjessing-Nome",
+      "department": "Helsefag",
+      "nva_publication_count": 7,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.186).",
+          "metrics": {
+            "divergence_score": 0.1863,
+            "lexical_similarity": 0.0914,
+            "semantic_lite_similarity": 0.3626,
+            "sample_staffinfo_only_terms": [
+              "aktiv",
+              "anatomi",
+              "andre",
+              "astrocyttaktivitet",
+              "astrocytter",
+              "behandlingsutfall",
+              "bidrag",
+              "endepunkt",
+              "endringer",
+              "engasjement"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Christian Wolff",
+      "slug": "Christian-Wolff",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.272).",
+          "metrics": {
+            "divergence_score": 0.2716,
+            "lexical_similarity": 0.0984,
+            "semantic_lite_similarity": 0.5934,
+            "sample_staffinfo_only_terms": [
+              "analyse",
+              "høyskolelektor",
+              "økonomisk"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Christopher White",
+      "slug": "Christopher-White",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 6,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.123).",
+          "metrics": {
+            "divergence_score": 0.1232,
+            "lexical_similarity": 0.0138,
+            "semantic_lite_similarity": 0.3262,
+            "sample_staffinfo_only_terms": [
+              "analyse",
+              "demokratiske",
+              "emner",
+              "engelskspråklige",
+              "erfaring",
+              "europeisk",
+              "førsteamanuensis",
+              "institusjoner",
+              "internasjonal",
+              "internasjonale"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "high",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.67).",
+          "metrics": {
+            "total_publications": 6,
+            "aligned_publications": 4,
+            "alignment_rate": 0.6667,
+            "medical_publication_share": 0.6667,
+            "sample_low_overlap_titles": [
+              "Rare neuroendocrine tumours: Results of the surveillance of rare cancers in Europe project",
+              "Cost-effectiveness of additional catheter-directed thrombolysis for deep vein thrombosis",
+              "Human nature and globalization's discontents: What the antecedents of ideology tells us about the obstacles to greater global interconnectedness",
+              "Social psychology and neoliberalism: A critical commentary on McDonald, Gough, Wearing and Deville (2017)",
+              "Descriptive epidemiology of sarcomas in Europe: Report from the RARECARE project"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Csilla Maria Krisar",
+      "slug": "Csilla-Maria-Krisar",
+      "department": "Helsefag",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.139).",
+          "metrics": {
+            "divergence_score": 0.1395,
+            "lexical_similarity": 0.0377,
+            "semantic_lite_similarity": 0.3285,
+            "sample_staffinfo_only_terms": [
+              "bakgrunn",
+              "emner",
+              "erfaring",
+              "fagperson",
+              "forskning",
+              "helsefaglig",
+              "helsefaglige",
+              "innen",
+              "klinisk",
+              "offentlig"
+            ]
+          }
+        },
+        {
+          "check": "nva_presence_mismatch",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff.csv has NVA profile but no local NVA results.",
+          "metrics": {
+            "nva_profile_url": "https://nva.sikt.no/research-profile/20204"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Dagfinn Aune",
+      "slug": "Dagfinn-Aune",
+      "department": "Helsefag",
+      "nva_publication_count": 57,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.200).",
+          "metrics": {
+            "divergence_score": 0.2001,
+            "lexical_similarity": 0.0446,
+            "semantic_lite_similarity": 0.4888,
+            "sample_staffinfo_only_terms": [
+              "aktiv",
+              "andre",
+              "bachelor",
+              "epidemiologi",
+              "ernæring",
+              "ernæringsepidemiologi",
+              "fokus",
+              "folkehelse",
+              "forskningsmetode",
+              "førsteamanuensis"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Eirik Garnås",
+      "slug": "Eirik-Garnas",
+      "department": "Helsefag",
+      "nva_publication_count": 4,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.191).",
+          "metrics": {
+            "divergence_score": 0.191,
+            "lexical_similarity": 0.0476,
+            "semantic_lite_similarity": 0.4574,
+            "sample_staffinfo_only_terms": [
+              "anvendt",
+              "deltakelse",
+              "erfaring",
+              "ernæringsfysiolog",
+              "ernæringspsykologi",
+              "formidlingsarbeid",
+              "forskningsgruppe",
+              "grunnleggende",
+              "knyttet",
+              "kosthold"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Eirik Kjelstrup",
+      "slug": "Eirik-Kjelstrup",
+      "department": "Psykologi",
+      "nva_publication_count": 2,
+      "issues": [
+        {
+          "check": "nva_domain_outlier",
+          "severity": "low",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.00).",
+          "metrics": {
+            "total_publications": 2,
+            "aligned_publications": 0,
+            "alignment_rate": 0.0,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Skiing and thinking about it: Moment-to-moment and retrospective analysis of emotions in an extreme sport",
+              "The thrill of speedy descents: A pilot study on differences in facially expressed online emotions and retrospective measures of emotions during a downhill mountain-bike descent"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Elin Lund Transeth",
+      "slug": "Elin-Lund-Transeth",
+      "department": "Helsefag",
+      "nva_publication_count": 1,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.126).",
+          "metrics": {
+            "divergence_score": 0.1256,
+            "lexical_similarity": 0.0319,
+            "semantic_lite_similarity": 0.2997,
+            "sample_staffinfo_only_terms": [
+              "arbeid",
+              "brukt",
+              "emner",
+              "erfaring",
+              "fagperson",
+              "helsefag",
+              "helsefaglige",
+              "helsefremmende",
+              "helsetjenesten",
+              "inn"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Elin Sørli Kildahl",
+      "slug": "Elin-Sorli-Kildahl",
+      "department": "Helsefag",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.175).",
+          "metrics": {
+            "divergence_score": 0.1747,
+            "lexical_similarity": 0.05,
+            "semantic_lite_similarity": 0.4062,
+            "sample_staffinfo_only_terms": [
+              "arbeid",
+              "emner",
+              "fagperson",
+              "helhetlig",
+              "helsefag",
+              "helsefaglige",
+              "innen",
+              "livsfaser",
+              "offentlig",
+              "onh"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ella Marie Heyerdahl",
+      "slug": "Ella-Marie-Heyerdahl",
+      "department": "Helsefag",
+      "nva_publication_count": 2,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.162).",
+          "metrics": {
+            "divergence_score": 0.1621,
+            "lexical_similarity": 0.0467,
+            "semantic_lite_similarity": 0.3764,
+            "sample_staffinfo_only_terms": [
+              "aktiv",
+              "arbeid",
+              "arbeidsdeltakelse",
+              "arbeidsevne",
+              "arbeidsinkludering",
+              "bidrar",
+              "deltaker",
+              "emner",
+              "ernæringspsykologi",
+              "formidler"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "low",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.00).",
+          "metrics": {
+            "total_publications": 2,
+            "aligned_publications": 0,
+            "alignment_rate": 0.0,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Improving Documentation of Nutritional Care in A Nursing Home: An Evaluation of A Participatory Action Research Project",
+              "Nutrition Students’ Experiences of\r\nInterprofessional Learning in a Nursing Home"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ella Marie Sandbakken",
+      "slug": "Ella-Marie-Sandbakken",
+      "department": "Psykologi",
+      "nva_publication_count": 46,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.293).",
+          "metrics": {
+            "divergence_score": 0.2934,
+            "lexical_similarity": 0.1118,
+            "semantic_lite_similarity": 0.6307,
+            "sample_staffinfo_only_terms": [
+              "annet",
+              "blant",
+              "doktorgradsstipendiat",
+              "emneansvarlig",
+              "kjønn",
+              "medgr",
+              "medprogramleder",
+              "meningsskaping",
+              "nder",
+              "normer"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Emil Espe",
+      "slug": "Emil-Espe",
+      "department": "Helsefag",
+      "nva_publication_count": 58,
+      "issues": [
+        {
+          "check": "nva_domain_outlier",
+          "severity": "high",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.02).",
+          "metrics": {
+            "total_publications": 58,
+            "aligned_publications": 1,
+            "alignment_rate": 0.0172,
+            "medical_publication_share": 0.0345,
+            "sample_low_overlap_titles": [
+              "Novel insight into the detailed myocardial motion and deformation of the rodent heart using high-resolution phase contrast cardiovascular magnetic resonance",
+              "Elevated ventricular wall stress disrupts cardiomyocyte t-tubule structure and calcium homeostasis",
+              "Elevated ventricular wall stress disrupts diastolic Calcium homeostasis of the cardiomyocyte",
+              "Inhibition of the extracellular enzyme A disintegrin and metalloprotease with thrombospondin motif 4 prevents cardiac fibrosis and dysfunction",
+              "Regulation of cardiomyocyte t-tubule organization and density by ventricular wall stress"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Erik Carlquist",
+      "slug": "Erik-Carlquist",
+      "department": "Psykologi",
+      "nva_publication_count": 64,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.266).",
+          "metrics": {
+            "divergence_score": 0.2663,
+            "lexical_similarity": 0.045,
+            "semantic_lite_similarity": 0.6773,
+            "sample_staffinfo_only_terms": [
+              "bachelor",
+              "deltaker",
+              "demokrati",
+              "forskningsgrupper",
+              "forstår",
+              "førsteamanuensis",
+              "hvordan",
+              "håndterer",
+              "innen",
+              "intern"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Evelina Svensson",
+      "slug": "Evelina-Svensson",
+      "department": "Helsefag",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.229).",
+          "metrics": {
+            "divergence_score": 0.2288,
+            "lexical_similarity": 0.0779,
+            "semantic_lite_similarity": 0.5089,
+            "sample_staffinfo_only_terms": [
+              "ernæringspsykologi",
+              "forskningsgruppe",
+              "helsefremmende",
+              "kosthold",
+              "livsstil",
+              "medlem",
+              "mellom",
+              "onh",
+              "psykisk",
+              "samspillet"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Fredrik Harboe",
+      "slug": "Fredrik-Harboe",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.255).",
+          "metrics": {
+            "divergence_score": 0.2553,
+            "lexical_similarity": 0.0938,
+            "semantic_lite_similarity": 0.5553,
+            "sample_staffinfo_only_terms": [
+              "bedriftsøkonomi",
+              "finansiell",
+              "selskaper",
+              "startups",
+              "verdsettelse"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Gun Bente Johansen",
+      "slug": "Gun-Bente-Johansen",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.219).",
+          "metrics": {
+            "divergence_score": 0.2192,
+            "lexical_similarity": 0.0806,
+            "semantic_lite_similarity": 0.4765,
+            "sample_staffinfo_only_terms": [
+              "akademia",
+              "ansvarlig",
+              "bidrar",
+              "høyere",
+              "innen",
+              "klinisk",
+              "kvalitet",
+              "ledererfaring",
+              "læringsformer",
+              "onh"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Heidi Øvereng Bjøntegaard",
+      "slug": "Heidi-Overeng-Bjontegaard",
+      "department": "Psykologi",
+      "nva_publication_count": 4,
+      "issues": [
+        {
+          "check": "nva_domain_outlier",
+          "severity": "high",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.50).",
+          "metrics": {
+            "total_publications": 4,
+            "aligned_publications": 2,
+            "alignment_rate": 0.5,
+            "medical_publication_share": 0.5,
+            "sample_low_overlap_titles": [
+              "A scoping review of participatory action research to promote mental health and resilience in youth and adolescents",
+              "Experiences from a Mental Health-Promotion Initiative Among Adolescents in a Norwegian Municipality: A Youth Council Generated Leisure Project",
+              "Faktorer og forhold som kan styrke og fremme psykisk helse og ungdomsmedvirkning",
+              "Ungdom og deltakelse i psykisk helsefremmende arbeid"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Helene Faksvåg",
+      "slug": "Helene-Faksvag",
+      "department": "Psykologi",
+      "nva_publication_count": 1,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.239).",
+          "metrics": {
+            "divergence_score": 0.2393,
+            "lexical_similarity": 0.0631,
+            "semantic_lite_similarity": 0.5666,
+            "sample_staffinfo_only_terms": [
+              "arrangementer",
+              "bidrar",
+              "blant",
+              "ekstern",
+              "erfaring",
+              "fagressurs",
+              "forstår",
+              "gjennom",
+              "helse",
+              "interessant"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Helene Vabø Wilsgaard",
+      "slug": "Helene-Vabo-Wilsgaard",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.224).",
+          "metrics": {
+            "divergence_score": 0.2238,
+            "lexical_similarity": 0.0667,
+            "semantic_lite_similarity": 0.5156,
+            "sample_staffinfo_only_terms": [
+              "aktiv",
+              "aktivitet",
+              "coaching",
+              "delte",
+              "eget",
+              "emneansvarlig",
+              "emner",
+              "erfaring",
+              "etter",
+              "faktorer"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Helga Fjærvoll",
+      "slug": "Helga-Fjaervoll",
+      "department": "Psykologi",
+      "nva_publication_count": 4,
+      "issues": [
+        {
+          "check": "nva_domain_outlier",
+          "severity": "medium",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.25).",
+          "metrics": {
+            "total_publications": 4,
+            "aligned_publications": 1,
+            "alignment_rate": 0.25,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "\"It's not like we go and chat just because we see each other's name on the screen\": online students' experiences of social and academic community",
+              "Å fremme studentmotivasjon gjennom digital omvendt undervisning",
+              "Fleksibilitet som mulighet eller hinder? En studie av faglig og sosialt fellesskap i nettbaserte kurs",
+              "Faglig og sosial tilhørighet hos nettstudenter – foreløpige resultater fra en kvalitativ studie"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Henriette Marstein",
+      "slug": "Henriette-Marstein",
+      "department": "Helsefag",
+      "nva_publication_count": 33,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.272).",
+          "metrics": {
+            "divergence_score": 0.2715,
+            "lexical_similarity": 0.0825,
+            "semantic_lite_similarity": 0.6227,
+            "sample_staffinfo_only_terms": [
+              "aktivitet",
+              "andre",
+              "barn",
+              "barne",
+              "behandling",
+              "behandlingseffekt",
+              "bindevevssykdommer",
+              "bivirkninger",
+              "dermatomyositt",
+              "familier"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "high",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.06).",
+          "metrics": {
+            "total_publications": 33,
+            "aligned_publications": 2,
+            "alignment_rate": 0.0606,
+            "medical_publication_share": 0.1515,
+            "sample_low_overlap_titles": [
+              "Inhibiting phosphorylation of SMAD2 preserves cardiac function during pressure overload",
+              "Bone mineral density and explanatory factors in children and adults with juvenile dermatomyositis at long term follow-up; a cross sectional study",
+              "Inhibiting phosphorylation of SMAD2 preserves cardiac function during pressure overload by attenuating left ventricular SERCA2 loss",
+              "The role of lumican in Cardiac pressure overload",
+              "Visceral adipose tissue and adipokines/cytokines in juvenile idiopathic arthritis"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Henrik Syse",
+      "slug": "Henrik-Syse",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 99,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.221).",
+          "metrics": {
+            "divergence_score": 0.2214,
+            "lexical_similarity": 0.0484,
+            "semantic_lite_similarity": 0.5426,
+            "sample_staffinfo_only_terms": [
+              "brukt",
+              "demokrati",
+              "emner",
+              "forskningsprofessor",
+              "fred",
+              "internasjonal",
+              "internasjonale",
+              "kommentator",
+              "moderne",
+              "mye"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "medium",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.43).",
+          "metrics": {
+            "total_publications": 99,
+            "aligned_publications": 43,
+            "alignment_rate": 0.4343,
+            "medical_publication_share": 0.0101,
+            "sample_low_overlap_titles": [
+              "Vitenskapsakademienes rolle og samfunnsansvar: Er akademiene fortsatt relevante?",
+              "Etiske prinsipper for KI i cyberoperasjoner",
+              "Excluded Palestinians: Mediator Gatekeeping in the Israeli–Palestinian Conflict",
+              "Between Vulnerability and Control",
+              "Du og eg 7, lærarrettleiing"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Henrik Wiig",
+      "slug": "Henrik-Wiig",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 74,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.273).",
+          "metrics": {
+            "divergence_score": 0.2732,
+            "lexical_similarity": 0.087,
+            "semantic_lite_similarity": 0.6191,
+            "sample_staffinfo_only_terms": [
+              "biofuel",
+              "eiendomsrettigheter",
+              "energikilder",
+              "fornybare",
+              "førsteamanuensis",
+              "kjønnslikestilling",
+              "modelleringer",
+              "naturressursforvaltning",
+              "potensial",
+              "skogbevaring"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "low",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.55).",
+          "metrics": {
+            "total_publications": 74,
+            "aligned_publications": 41,
+            "alignment_rate": 0.5541,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Fredsprisutdeling",
+              "Skogtiltak er en rettferdig vei ut av oljen",
+              "Mid-term review of CATIE MAP Norway",
+              "Analyse av utdelingsseremoni for fredspris Santos (Analysis of Nobel Peace Prize ceremony for Santos)",
+              "Poverty in Venezuela – Revolutionary Decline or Politics-as-usual?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Henry Allen",
+      "slug": "Henry-Allen",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 1,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.192).",
+          "metrics": {
+            "divergence_score": 0.1917,
+            "lexical_similarity": 0.0427,
+            "semantic_lite_similarity": 0.4682,
+            "sample_staffinfo_only_terms": [
+              "alliansepolitikk",
+              "emner",
+              "engelskspråklig",
+              "erfaring",
+              "grunnleggende",
+              "internasjonal",
+              "internasjonale",
+              "normer",
+              "programmer",
+              "relasjoner"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Herman van Dijk",
+      "slug": "Herman-van-Dijk",
+      "department": "Helsefag",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.291).",
+          "metrics": {
+            "divergence_score": 0.2914,
+            "lexical_similarity": 0.0899,
+            "semantic_lite_similarity": 0.6657,
+            "sample_staffinfo_only_terms": [
+              "behandlingsmetodikk",
+              "bevegelseslære",
+              "coach",
+              "ferdighetsemner",
+              "funksjonstrening",
+              "fysioterapi",
+              "fysioterapifaget",
+              "fysioterapistudenter",
+              "inkludert",
+              "klinisk"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Hilde Eliassen Restad",
+      "slug": "Hilde-Eliassen-Restad",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 35,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.247).",
+          "metrics": {
+            "divergence_score": 0.247,
+            "lexical_similarity": 0.0651,
+            "semantic_lite_similarity": 0.5847,
+            "sample_staffinfo_only_terms": [
+              "brukt",
+              "ekspertkommentator",
+              "nasjonalisme",
+              "orden",
+              "plass",
+              "politisk",
+              "rolle",
+              "underviser",
+              "verdensorden"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Håvar Brattli",
+      "slug": "Havar-Brattli",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 11,
+      "issues": [
+        {
+          "check": "nva_domain_outlier",
+          "severity": "medium",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.36).",
+          "metrics": {
+            "total_publications": 11,
+            "aligned_publications": 4,
+            "alignment_rate": 0.3636,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Avisintervju: \"Setter sammen drømmelag i nytt UIT-studie\".",
+              "Magasinintervju: \"Tromsøs nye fordel\"",
+              "Radiointervju: \"NRK Troms Morgensending\"",
+              "Avisintervju: \"Vil hjelpe gründerspirer fra grunnskole til universitet og ut i arbeidslivet\".",
+              "Prosjektrapport/FoU-arbeid: \"Opprettelse av Idegeneratoren ved UIT\""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ingrid Aas Vissheim",
+      "slug": "Ingrid-Aas-Vissheim",
+      "department": "Helsefag",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.301).",
+          "metrics": {
+            "divergence_score": 0.3008,
+            "lexical_similarity": 0.0899,
+            "semantic_lite_similarity": 0.6925,
+            "sample_staffinfo_only_terms": [
+              "allmenn",
+              "andre",
+              "anvendt",
+              "arbeid",
+              "behandlingsforløp",
+              "bidrar",
+              "både",
+              "driver",
+              "fagperson",
+              "fagressurs"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ingvild Sagberg",
+      "slug": "Ingvild-Sagberg",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 18,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.125).",
+          "metrics": {
+            "divergence_score": 0.1251,
+            "lexical_similarity": 0.0174,
+            "semantic_lite_similarity": 0.325,
+            "sample_staffinfo_only_terms": [
+              "arbeid",
+              "arbeidsmiljø",
+              "førsteamanuensis",
+              "kvalitative",
+              "ledelsesteori",
+              "lederroller",
+              "metoder",
+              "organisasjonskultur",
+              "organisasjonspsykologi",
+              "organisasjonssosialisering"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "medium",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.33).",
+          "metrics": {
+            "total_publications": 18,
+            "aligned_publications": 6,
+            "alignment_rate": 0.3333,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Situasjonsbestemt ledelse",
+              "Transformasjonsledelse",
+              "Endringsledelse",
+              "Hjemsendte medarbeidere – en statusoppsummering",
+              "HR - human resources"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jilwan Soltanpanah",
+      "slug": "Jilwan-Soltanpanah",
+      "department": "Psykologi",
+      "nva_publication_count": 2,
+      "issues": [
+        {
+          "check": "nva_domain_outlier",
+          "severity": "low",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.00).",
+          "metrics": {
+            "total_publications": 2,
+            "aligned_publications": 0,
+            "alignment_rate": 0.0,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Young immigrants in Norway: The role of national and ethnic identity in immigrants’ integration",
+              "A cross-cultural examination of the relationship between egalitarian gender role attitudes and life satisfaction"
+            ]
+          }
+        },
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "high",
+          "status": "open",
+          "message": "Seeded review target: staff_info profile mismatch must be curated.",
+          "metrics": {
+            "seeded": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Johan Bergh",
+      "slug": "Johan-Bergh",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 61,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.224).",
+          "metrics": {
+            "divergence_score": 0.2238,
+            "lexical_similarity": 0.0512,
+            "semantic_lite_similarity": 0.5445,
+            "sample_staffinfo_only_terms": [
+              "førstelektor",
+              "organisasjonsutvikling",
+              "reflekterende"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Johanne Fredrikke Berg",
+      "slug": "Johanne-Fredrikke-Berg",
+      "department": "Helsefag",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.236).",
+          "metrics": {
+            "divergence_score": 0.2361,
+            "lexical_similarity": 0.0667,
+            "semantic_lite_similarity": 0.5507,
+            "sample_staffinfo_only_terms": [
+              "bachelor",
+              "bacheloroppgaver",
+              "behov",
+              "bevegelsesvitenskap",
+              "bidrag",
+              "emner",
+              "emneutvikling",
+              "erfaring",
+              "forskning",
+              "funksjonstrening"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jonas Bergan Dræge",
+      "slug": "Jonas-Bergan-Draege",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 26,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.198).",
+          "metrics": {
+            "divergence_score": 0.1984,
+            "lexical_similarity": 0.0167,
+            "semantic_lite_similarity": 0.5359,
+            "sample_staffinfo_only_terms": [
+              "bevegelser",
+              "deltakelse",
+              "demokrati",
+              "demokratiteori",
+              "demokratiutvikling",
+              "emner",
+              "endring",
+              "erfaring",
+              "forskningsmiljøer",
+              "koblingen"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jørgen Ruud",
+      "slug": "Jorgen-Ruud",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.169).",
+          "metrics": {
+            "divergence_score": 0.1693,
+            "lexical_similarity": 0.0702,
+            "semantic_lite_similarity": 0.3533,
+            "sample_staffinfo_only_terms": [
+              "ansatt",
+              "ansvar",
+              "emner",
+              "faglig",
+              "fullt",
+              "førsteamanuensis",
+              "institusjoner",
+              "institutt",
+              "knyttet",
+              "offentlig"
+            ]
+          }
+        },
+        {
+          "check": "nva_presence_mismatch",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff.csv has NVA profile but no local NVA results.",
+          "metrics": {
+            "nva_profile_url": "https://nva.sikt.no/research-profile/1661505"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Kateryna Reiby",
+      "slug": "Kateryna-Reiby",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 20,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.235).",
+          "metrics": {
+            "divergence_score": 0.2354,
+            "lexical_similarity": 0.0932,
+            "semantic_lite_similarity": 0.4993,
+            "sample_staffinfo_only_terms": [
+              "antropomorfisering",
+              "bedriftskommunikasjon",
+              "førsteamanuensis",
+              "interaksjon",
+              "mellom",
+              "selvsporing",
+              "transformasjon"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Kjersti Skarstad",
+      "slug": "Kjersti-Skarstad",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 25,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.233).",
+          "metrics": {
+            "divergence_score": 0.2329,
+            "lexical_similarity": 0.0692,
+            "semantic_lite_similarity": 0.537,
+            "sample_staffinfo_only_terms": [
+              "aktivt",
+              "bidrar",
+              "debatt",
+              "diskriminering",
+              "emner",
+              "forsket",
+              "global",
+              "grupper",
+              "inkludering",
+              "institusjoner"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Kjetil Tronvoll",
+      "slug": "Kjetil-Tronvoll",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 320,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.248).",
+          "metrics": {
+            "divergence_score": 0.248,
+            "lexical_similarity": 0.0648,
+            "semantic_lite_similarity": 0.5883,
+            "sample_staffinfo_only_terms": [
+              "afrikas",
+              "annet",
+              "autoritære",
+              "blant",
+              "demokratisk",
+              "ekspertvitne",
+              "emner",
+              "feltarbeidserfaring",
+              "fokus",
+              "forankring"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lene Kristin Grimstad",
+      "slug": "Lene-Kristin-Grimstad",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.206).",
+          "metrics": {
+            "divergence_score": 0.2058,
+            "lexical_similarity": 0.0455,
+            "semantic_lite_similarity": 0.5037,
+            "sample_staffinfo_only_terms": [
+              "analyse",
+              "ansatt",
+              "ansvar",
+              "faglig",
+              "innen",
+              "internasjonal",
+              "lektor",
+              "metode",
+              "politikk",
+              "politisk"
+            ]
+          }
+        },
+        {
+          "check": "nva_presence_mismatch",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff.csv has NVA profile but no local NVA results.",
+          "metrics": {
+            "nva_profile_url": "https://nva.sikt.no/research-profile/1318584"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Line Wisting",
+      "slug": "Line-Wisting",
+      "department": "Psykologi",
+      "nva_publication_count": 48,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "high",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.075).",
+          "metrics": {
+            "divergence_score": 0.0752,
+            "lexical_similarity": 0.0098,
+            "semantic_lite_similarity": 0.1967,
+            "sample_staffinfo_only_terms": [
+              "annet",
+              "barn",
+              "behandlings",
+              "bidrar",
+              "blant",
+              "evaluering",
+              "forebyggingstiltak",
+              "forsker",
+              "forskningsgruppe",
+              "forskningsnær"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "high",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.96).",
+          "metrics": {
+            "total_publications": 48,
+            "aligned_publications": 46,
+            "alignment_rate": 0.9583,
+            "medical_publication_share": 0.5,
+            "sample_low_overlap_titles": [
+              "Behandling av personer som både har spiseforstyrrelse og diabete",
+              "1 av 10 ungdommer på videregående skole har en spiseforstyrrelse",
+              "Characterizing non-suicidal self-injury behaviors in adolescents reporting high versus low levels of ED pathology",
+              "Feeding and eating disorders in the DSM-5era: a systematic review of prevalence rates in non-clinical male and female samples",
+              "Psychological barriers to optimal insulin therapy: More concerns in adolescent females than males"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lise Eriksen",
+      "slug": "Lise-Eriksen",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.164).",
+          "metrics": {
+            "divergence_score": 0.1644,
+            "lexical_similarity": 0.0423,
+            "semantic_lite_similarity": 0.3912,
+            "sample_staffinfo_only_terms": [
+              "anvendt",
+              "bachelor",
+              "behandlingstilnærminger",
+              "bidrag",
+              "case",
+              "emner",
+              "etikk",
+              "forebyggende",
+              "forebygging",
+              "helse"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Live Torgersrud Haug",
+      "slug": "Live-Torgersrud-Haug",
+      "department": "Helsefag",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.236).",
+          "metrics": {
+            "divergence_score": 0.2359,
+            "lexical_similarity": 0.0921,
+            "semantic_lite_similarity": 0.5029,
+            "sample_staffinfo_only_terms": [
+              "bachelor",
+              "behandling",
+              "brukermedvirkning",
+              "både",
+              "casebaserte",
+              "emner",
+              "endringsarbeid",
+              "enkeltpersoner",
+              "ernæring",
+              "ernæringsarbeid"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Magnus Helgheim Blystad",
+      "slug": "Magnus-Helgheim-Blystad",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.223).",
+          "metrics": {
+            "divergence_score": 0.2234,
+            "lexical_similarity": 0.0382,
+            "semantic_lite_similarity": 0.5675,
+            "sample_staffinfo_only_terms": [
+              "aktiv",
+              "emosjoner",
+              "emotions",
+              "forskningsmetode",
+              "forskningspraksis",
+              "forskningsprosjekter",
+              "inkludert",
+              "kognisjon",
+              "lab",
+              "medleder"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Marit Kolby",
+      "slug": "Marit-Kolby",
+      "department": "Helsefag",
+      "nva_publication_count": 27,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.237).",
+          "metrics": {
+            "divergence_score": 0.2367,
+            "lexical_similarity": 0.039,
+            "semantic_lite_similarity": 0.604,
+            "sample_staffinfo_only_terms": [
+              "aktivt",
+              "befolkningen",
+              "bærekraftig",
+              "deltar",
+              "emner",
+              "ernæringsformidler",
+              "ernæringsformidling",
+              "folkehelse",
+              "forfatter",
+              "helsefag"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "medium",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.26).",
+          "metrics": {
+            "total_publications": 27,
+            "aligned_publications": 7,
+            "alignment_rate": 0.2593,
+            "medical_publication_share": 0.037,
+            "sample_low_overlap_titles": [
+              "Folkehelseminister mot egen politikk?",
+              "Traditional teaching methods and the method open and distance learning in teacher training",
+              "A new gene (DYX3) for dyslexia is located on chromosome 2",
+              "Proper food is the proper prescription!",
+              "Eksperter: Dette kan du gjøre for å unngå kronisk inflammasjon"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Melissa Malka Busch-Christensen",
+      "slug": "Melissa-Malka-Busch-Christensen",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.248).",
+          "metrics": {
+            "divergence_score": 0.2485,
+            "lexical_similarity": 0.0548,
+            "semantic_lite_similarity": 0.6081,
+            "sample_staffinfo_only_terms": [
+              "entreprenørskap",
+              "høyskolelektor",
+              "internasjonal",
+              "luksus",
+              "nisjemerker"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mia Brathagen Lie",
+      "slug": "Mia-Brathagen-Lie",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.318).",
+          "metrics": {
+            "divergence_score": 0.3177,
+            "lexical_similarity": 0.1125,
+            "semantic_lite_similarity": 0.6989,
+            "sample_staffinfo_only_terms": [
+              "erfaring",
+              "høyere",
+              "innen",
+              "innføringsemner",
+              "lang",
+              "læringsstrategier",
+              "programutvikling",
+              "psykologistudier",
+              "studenters",
+              "studentoppfølging"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mona Berthelsen",
+      "slug": "Mona-Berthelsen",
+      "department": "Psykologi",
+      "nva_publication_count": 20,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.129).",
+          "metrics": {
+            "divergence_score": 0.1288,
+            "lexical_similarity": 0.0333,
+            "semantic_lite_similarity": 0.306,
+            "sample_staffinfo_only_terms": [
+              "arbeids",
+              "arbeidshelse",
+              "arbeidslivsforskning",
+              "arbeidsmiljøarbeid",
+              "arbeidsrelatert",
+              "bred",
+              "erfaring",
+              "evidensbasert",
+              "faktorer",
+              "førsteamanuensis"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "high",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.95).",
+          "metrics": {
+            "total_publications": 20,
+            "aligned_publications": 19,
+            "alignment_rate": 0.95,
+            "medical_publication_share": 0.55,
+            "sample_low_overlap_titles": [
+              "Mobbing og utstøting i arbeidslivet: Resultater fra en landsrepresentativ undersøkelse",
+              "Interpersonal problems and personality traits: The relation between IIP-64C and NEO-FFI",
+              "Characteristics of nonparticipants in a randomised colorectal cancer screening trial comparing sigmoidoscopy and faecal immunochemical testing",
+              "The impact of driving time on participation in colorectal cancer screening with sigmoidoscopy and faecal immunochemical blood test",
+              "Effects of shift work and psychological and social work factors on mental distress. Studies of onshore/offshore workers and nurses in Norway"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Nadim Khoury",
+      "slug": "Nadim-Khoury",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 26,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.231).",
+          "metrics": {
+            "divergence_score": 0.2307,
+            "lexical_similarity": 0.0606,
+            "semantic_lite_similarity": 0.5466,
+            "sample_staffinfo_only_terms": [
+              "ansvar",
+              "bidrar",
+              "diskusjoner",
+              "emner",
+              "forsoning",
+              "historiefortelling",
+              "identitet",
+              "internasjonal",
+              "internasjonale",
+              "israel"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "medium",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.42).",
+          "metrics": {
+            "total_publications": 26,
+            "aligned_publications": 11,
+            "alignment_rate": 0.4231,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Holocaust/Nakba and the counter public of memory",
+              "Holocaust/Nakba and the Counterpublic of Memory",
+              "«Giula Daniele, Women, Reconciliation and the Israeli-Palestinian Conflict, London : Routledge, 2014, 179 pp.»",
+              "Negotiation identity, negotiating plots",
+              "Holocaust/Nakba: conditions and terms of mnemonic deliberation"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Natalie Rolandsgard",
+      "slug": "Natalie-Rolandsgard",
+      "department": "Psykologi",
+      "nva_publication_count": 2,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.158).",
+          "metrics": {
+            "divergence_score": 0.1579,
+            "lexical_similarity": 0.0102,
+            "semantic_lite_similarity": 0.4322,
+            "sample_staffinfo_only_terms": [
+              "ansatt",
+              "anvendt",
+              "bidrar",
+              "deltar",
+              "fagbakgrunn",
+              "innen",
+              "institutt",
+              "offentlig",
+              "onh",
+              "praksis"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "low",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.50).",
+          "metrics": {
+            "total_publications": 2,
+            "aligned_publications": 1,
+            "alignment_rate": 0.5,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Etikk til hodebry",
+              "Unges forståelser av åpenhet om psykiske problemer: en kvalitativ studie"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Nik. Brandal",
+      "slug": "Nik-Brandal",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 148,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.219).",
+          "metrics": {
+            "divergence_score": 0.2192,
+            "lexical_similarity": 0.0417,
+            "semantic_lite_similarity": 0.5489,
+            "sample_staffinfo_only_terms": [
+              "antisemittisme",
+              "bred",
+              "demokrati",
+              "demokratiets",
+              "demokratisering",
+              "europeisk",
+              "fascisme",
+              "fascismehistorie",
+              "formidlingserfaring",
+              "historiker"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "low",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.55).",
+          "metrics": {
+            "total_publications": 147,
+            "aligned_publications": 81,
+            "alignment_rate": 0.551,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Episode #24: Sammenstøt i Kaukasus, kinesiske interneringsleirer, ambassadedrama i Irak, og et jubileum for FNs generalforsamling.",
+              "Cousins divided? Development in and of political institutions in Scotland and Norway since 1814",
+              "Great Lakes, Bad Neighbours: Folkemordet i Rwanda",
+              "Dannelse til frihet",
+              "Interessenes kraft"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Peder Mortvedt Isager",
+      "slug": "Peder-Mortvedt-Isager",
+      "department": "Psykologi",
+      "nva_publication_count": 10,
+      "issues": [
+        {
+          "check": "nva_domain_outlier",
+          "severity": "medium",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.30).",
+          "metrics": {
+            "total_publications": 10,
+            "aligned_publications": 3,
+            "alignment_rate": 0.3,
+            "medical_publication_share": 0.1,
+            "sample_low_overlap_titles": [
+              "Deciding what to replicate: A decision model for replication study selection under resource and knowledge constraints.",
+              "Evidence for magnitude representations of social hierarchies: Size and distance effects",
+              "What is empathy for laypeople?–A replication study of Hall, Schwartz, and Duong (2021)",
+              "Morphine reduced perceived anger from neutral and implicit emotional expressions",
+              "Empathy among laypeople - Replication of Hall, Schwartz, & Duong, 2021"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pernille Krog Torp",
+      "slug": "Pernille-Krog-Torp",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.295).",
+          "metrics": {
+            "divergence_score": 0.2953,
+            "lexical_similarity": 0.1099,
+            "semantic_lite_similarity": 0.6398,
+            "sample_staffinfo_only_terms": [
+              "arbeidslivsrelevante",
+              "bachelorprogrammene",
+              "bachelorprogrammer",
+              "bachelorutdanninger",
+              "bidrar",
+              "deltakelse",
+              "emner",
+              "erfaring",
+              "fagmiljø",
+              "fleksible"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pål Røren",
+      "slug": "Pal-Roren",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 26,
+      "issues": [
+        {
+          "check": "nva_domain_outlier",
+          "severity": "low",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.58).",
+          "metrics": {
+            "total_publications": 26,
+            "aligned_publications": 15,
+            "alignment_rate": 0.5769,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "Skyte seg selv i foten, hinke videre",
+              "Kina lurer oss alle",
+              "Myten om multipolaritet: USA er fortsatt verdens maktsentrum",
+              "Norge er en by i Sverige",
+              "Banal konklusjon om maktbalanse"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Scott Jones",
+      "slug": "Scott-Jones",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 1,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "high",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.067).",
+          "metrics": {
+            "divergence_score": 0.0666,
+            "lexical_similarity": 0.0,
+            "semantic_lite_similarity": 0.1902,
+            "sample_staffinfo_only_terms": [
+              "alliansepolitikk",
+              "amerikansk",
+              "avskrekking",
+              "emner",
+              "engelskspråklige",
+              "erfaring",
+              "fred",
+              "førsteamanuensis",
+              "internasjonale",
+              "krig"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Stein-Erik Wendel",
+      "slug": "Stein-Erik-Wendel",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.198).",
+          "metrics": {
+            "divergence_score": 0.1979,
+            "lexical_similarity": 0.045,
+            "semantic_lite_similarity": 0.4817,
+            "sample_staffinfo_only_terms": [
+              "merkevarebygging",
+              "organisasjonsutvikling",
+              "salgsopplæring",
+              "teamledelse"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Stig Stenslie",
+      "slug": "Stig-Stenslie",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 51,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.161).",
+          "metrics": {
+            "divergence_score": 0.1612,
+            "lexical_similarity": 0.0385,
+            "semantic_lite_similarity": 0.3891,
+            "sample_staffinfo_only_terms": [
+              "elitestrukturer",
+              "emner",
+              "forsvars",
+              "forsvarssektoren",
+              "førsteamanuensis",
+              "internasjonal",
+              "intervensjoner",
+              "militære",
+              "norsk",
+              "omfattende"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Suvi Sagbraaten",
+      "slug": "Suvi-Sagbraaten",
+      "department": "Helsefag",
+      "nva_publication_count": 2,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.264).",
+          "metrics": {
+            "divergence_score": 0.2645,
+            "lexical_similarity": 0.102,
+            "semantic_lite_similarity": 0.5661,
+            "sample_staffinfo_only_terms": [
+              "allmennmedisin",
+              "anvendt",
+              "behandlings",
+              "bidrag",
+              "emner",
+              "fag",
+              "ferdighetstrening",
+              "helsefagsstudenter",
+              "helsetjenesteerfaring",
+              "interesse"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Synne Groufh-Jacobsen",
+      "slug": "Synne-Groufh-Jacobsen",
+      "department": "Helsefag",
+      "nva_publication_count": 40,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.139).",
+          "metrics": {
+            "divergence_score": 0.1395,
+            "lexical_similarity": 0.0561,
+            "semantic_lite_similarity": 0.2942,
+            "sample_staffinfo_only_terms": [
+              "aktiv",
+              "allmennheten",
+              "bacheloroppgaver",
+              "befolkningsgrupper",
+              "bidrar",
+              "biomarkører",
+              "bruk",
+              "både",
+              "emner",
+              "erfaring"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tora Sagård",
+      "slug": "Tora-Sagard",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 4,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.189).",
+          "metrics": {
+            "divergence_score": 0.1887,
+            "lexical_similarity": 0.0312,
+            "semantic_lite_similarity": 0.4812,
+            "sample_staffinfo_only_terms": [
+              "bacheloroppgaver",
+              "demokrati",
+              "emner",
+              "engelskspråklige",
+              "europeisk",
+              "fokus",
+              "institusjoner",
+              "integrasjon",
+              "internasjonale",
+              "læringsformer"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tore Pedersen",
+      "slug": "Tore-Pedersen",
+      "department": "Psykologi",
+      "nva_publication_count": 21,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.228).",
+          "metrics": {
+            "divergence_score": 0.2282,
+            "lexical_similarity": 0.0951,
+            "semantic_lite_similarity": 0.4754,
+            "sample_staffinfo_only_terms": [
+              "bedømmelse",
+              "beslutningsprosesser",
+              "beslutningstaking",
+              "bistilling",
+              "etterretningsstudier",
+              "institusjonelle",
+              "intelligens",
+              "kognitive",
+              "kunstig",
+              "lang"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Torstein Dale-Åkerlund",
+      "slug": "Torstein-Dale-Akerlund",
+      "department": "Statsvitenskap og internasjonale relasjoner",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.194).",
+          "metrics": {
+            "divergence_score": 0.1943,
+            "lexical_similarity": 0.0413,
+            "semantic_lite_similarity": 0.4785,
+            "sample_staffinfo_only_terms": [
+              "bidrar",
+              "høyere",
+              "informasjon",
+              "internasjonalisering",
+              "internasjonalt",
+              "muligheter",
+              "onh",
+              "partnerinstitusjoner",
+              "rådgiver",
+              "samarbeid"
+            ]
+          }
+        },
+        {
+          "check": "nva_presence_mismatch",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff.csv has NVA profile but no local NVA results.",
+          "metrics": {
+            "nva_profile_url": "https://nva.sikt.no/research-profile/1661464"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Torunn Sivertsen",
+      "slug": "Torunn-Sivertsen",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.160).",
+          "metrics": {
+            "divergence_score": 0.1597,
+            "lexical_similarity": 0.0364,
+            "semantic_lite_similarity": 0.3889,
+            "sample_staffinfo_only_terms": [
+              "behandlingsforløp",
+              "brukermedvirkning",
+              "brukerperspektiv",
+              "emner",
+              "erfaring",
+              "helse",
+              "helsearbeid",
+              "helsetjenester",
+              "innen",
+              "klinikknære"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Trude Hagen Kølbel",
+      "slug": "Trude-Hagen-Kolbel",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.233).",
+          "metrics": {
+            "divergence_score": 0.2326,
+            "lexical_similarity": 0.0704,
+            "semantic_lite_similarity": 0.5337,
+            "sample_staffinfo_only_terms": [
+              "allianse",
+              "behandling",
+              "casearbeid",
+              "emner",
+              "erfaring",
+              "forebyggende",
+              "helse",
+              "helsearbeid",
+              "helsefeltet",
+              "helsefremmende"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ulrike Liisberg",
+      "slug": "Ulrike-Liisberg",
+      "department": "Helsefag",
+      "nva_publication_count": 11,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.134).",
+          "metrics": {
+            "divergence_score": 0.1345,
+            "lexical_similarity": 0.0187,
+            "semantic_lite_similarity": 0.3494,
+            "sample_staffinfo_only_terms": [
+              "bidrar",
+              "ernæringspsykologi",
+              "folkehelse",
+              "forskningsgruppe",
+              "helse",
+              "helsefremmende",
+              "høyskolelektor",
+              "kosthold",
+              "mat",
+              "medlem"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Umar Burki",
+      "slug": "Umar-Burki",
+      "department": "Økonomi og administrasjon",
+      "nva_publication_count": 68,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.150).",
+          "metrics": {
+            "divergence_score": 0.1499,
+            "lexical_similarity": 0.0321,
+            "semantic_lite_similarity": 0.3687,
+            "sample_staffinfo_only_terms": [
+              "bærekraftdilemmaer",
+              "bærekraftige",
+              "forretninger",
+              "forsyningskjeder",
+              "knyttet",
+              "logistikkfagbøker",
+              "operasjoner",
+              "operasjonsledelse",
+              "professor",
+              "redaktør"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Åste Herheim",
+      "slug": "Aste-Herheim",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.222).",
+          "metrics": {
+            "divergence_score": 0.2222,
+            "lexical_similarity": 0.0323,
+            "semantic_lite_similarity": 0.5751,
+            "sample_staffinfo_only_terms": [
+              "ansatt",
+              "anvendte",
+              "arbeider",
+              "bidrar",
+              "faglig",
+              "innen",
+              "institutt",
+              "offentlig",
+              "onh",
+              "oppgaver"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Øyvind Jacobsen",
+      "slug": "Oyvind-Jacobsen",
+      "department": "Helsefag",
+      "nva_publication_count": 15,
+      "issues": [
+        {
+          "check": "staff_info_vs_profile_divergence",
+          "severity": "low",
+          "status": "open",
+          "message": "staff_info content diverges from profile summary (score=0.257).",
+          "metrics": {
+            "divergence_score": 0.2571,
+            "lexical_similarity": 0.0728,
+            "semantic_lite_similarity": 0.5993,
+            "sample_staffinfo_only_terms": [
+              "aktivitetssammenhenger",
+              "bildediagnostikk",
+              "biomarkører",
+              "bred",
+              "effekt",
+              "erfaring",
+              "forbindelser",
+              "forskningsprosjekter",
+              "fysiologi",
+              "førsteamanuensis"
+            ]
+          }
+        },
+        {
+          "check": "nva_domain_outlier",
+          "severity": "high",
+          "status": "open",
+          "message": "NVA publications weakly align with profile/department terms (alignment_rate=0.20).",
+          "metrics": {
+            "total_publications": 15,
+            "aligned_publications": 3,
+            "alignment_rate": 0.2,
+            "medical_publication_share": 0.0,
+            "sample_low_overlap_titles": [
+              "N-(tert-Butoxycarbonyl)-L-valyl-L-valine methyl ester: a twisted parallel beta-sheet in the crystal structure of a protected dipeptide",
+              "Synthesis of cyclic peptide analogues of the 310 helical Pro138-Gly144 segment of human aquaporin-4 by olefin metathesis",
+              "Impact of the coronavirus disease 2019 (COVID-19) pandemic on the care of patients with acute and chronic aortic conditions",
+              "Hurra, vi skal på internasjonal konferanse! Til Bergen? 18th Internasjonal Conference on organic Synthesis, 1-6 Aug 2010, Bergen",
+              "N-(tert-Butoxycarbonyl)-alpha-aminoisobutyryl-alpha-aminoisobutyric acid methyl ester: two polymorphic forms in the space group P2(1)/n"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
