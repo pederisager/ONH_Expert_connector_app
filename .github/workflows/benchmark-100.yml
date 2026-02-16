@@ -1,0 +1,62 @@
+name: Benchmark 100 Queries
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/run_search_benchmark.py"
+      - "tests/benchmarks/search_relevance_100_v1.yaml"
+      - ".github/workflows/benchmark-100.yml"
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements.txt
+
+      - name: Run 100-Query Benchmark (Timed)
+        run: |
+          timeout 2400 bash -lc '
+            set -euo pipefail
+            python3 -m uvicorn app.main:app --host 127.0.0.1 --port 8000 >/tmp/uvicorn.log 2>&1 &
+            SERVER_PID=$!
+            cleanup() {
+              kill "$SERVER_PID" >/dev/null 2>&1 || true
+              wait "$SERVER_PID" >/dev/null 2>&1 || true
+            }
+            trap cleanup EXIT
+
+            for _ in $(seq 1 90); do
+              if curl -fsS http://127.0.0.1:8000/docs >/dev/null; then
+                break
+              fi
+              sleep 2
+            done
+
+            python3 scripts/run_search_benchmark.py \
+              --benchmark tests/benchmarks/search_relevance_100_v1.yaml \
+              --base-url http://127.0.0.1:8000 \
+              --output reports/benchmark_results_100_ci.json
+          '
+
+      - name: Upload Benchmark Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results-100
+          path: |
+            reports/benchmark_results_100_ci.json
+            /tmp/uvicorn.log

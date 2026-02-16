@@ -1,0 +1,1959 @@
+version: search_relevance_100_v1
+description: Expanded 100-query benchmark with domain, intent, and difficulty quotas.
+  Queries are Norwegian-first and grounded in ONH tags plus NVA topic language.
+source_snapshot:
+  staff_yaml: data/staff.yaml
+  summaries_json: data/precomputed_summaries.json
+  nva_results: data/nva/results.jsonl
+  candidate_pool: reports/benchmark_query_candidates_150.json
+coverage_matrix:
+  target:
+    domains:
+      Psykologi: 25
+      Helsefag: 25
+      Statsvitenskap og internasjonale relasjoner: 25
+      Økonomi og administrasjon: 25
+    intent_mix:
+      publication_grounded: 60
+      profile_grounded: 40
+    difficulty_mix:
+      easy: 35
+      medium: 35
+      hard: 20
+      negative: 10
+  actual:
+    domains:
+      Psykologi: 25
+      Helsefag: 25
+      Statsvitenskap og internasjonale relasjoner: 25
+      Økonomi og administrasjon: 25
+    intent_mix:
+      publication_grounded: 60
+      profile_grounded: 40
+    difficulty_mix:
+      easy: 35
+      medium: 35
+      hard: 20
+      negative: 10
+labeling_protocol:
+  must_include: Expected in top3 for pass.
+  should_include: Expected in top10 where evidence aligns.
+  hard_exclude: Should not appear in top10.
+  publication_grounded_rule: Requires nva/doi citation with token overlap.
+quality_control:
+  inter_review: All 100 labels reviewed; hard/negative queries got second-pass review.
+  second_pass_query_ids:
+  - B018
+  - B019
+  - B020
+  - B021
+  - B022
+  - B023
+  - B024
+  - B025
+  - B043
+  - B044
+  - B045
+  - B046
+  - B047
+  - B048
+  - B049
+  - B050
+  - B068
+  - B069
+  - B070
+  - B071
+  - B072
+  - B073
+  - B074
+  - B075
+  - B095
+  - B096
+  - B097
+  - B098
+  - B099
+  - B100
+  high_audit_staff_excluded_from_must_include:
+  - Alex Gillespie
+  - Bjørnar Østby
+  - Brita Bjørkelo
+  - Christopher White
+  - Emil Espe
+  - Heidi Øvereng Bjøntegaard
+  - Henriette Marstein
+  - Jilwan Soltanpanah
+  - Line Wisting
+  - Mona Berthelsen
+  - Scott Jones
+  - Øyvind Jacobsen
+metrics:
+- MustInclude@3
+- ShouldInclude@10
+- HardExcludeRate@10
+- PublicationEvidencePassRate
+regression_thresholds:
+  must_include_at_3_min: 0.70
+  should_include_at_10_min: 0.80
+  hard_exclude_rate_at_10_min_min: 0.97
+  publication_evidence_pass_rate_min: 0.70
+mode_regression_thresholds:
+  publication_grounded:
+    must_include_at_3_min: 0.75
+    should_include_at_10_min: 0.78
+    hard_exclude_rate_at_10_min_min: 0.97
+    publication_evidence_pass_rate_min: 0.75
+  profile_grounded:
+    must_include_at_3_min: 0.65
+    should_include_at_10_min: 0.82
+    hard_exclude_rate_at_10_min_min: 0.97
+global_rules:
+  default_top_k: 10
+  default_min_query_term_overlap_per_citation: 1
+  require_citation_for_must_include: true
+overexposure_controls:
+- staff: Tore Pedersen
+  rationale: Broad profile; should not dominate unrelated topics.
+  expected_relevant_query_ids:
+  - B003
+  - B004
+  max_queries_in_top_10: 10
+  max_queries_in_top_3: 4
+- staff: Dagfinn Aune
+  rationale: Core nutrition expert but should stay mostly in nutrition-health topics.
+  expected_relevant_query_ids:
+  - B026
+  - B027
+  - B034
+  - B037
+  max_queries_in_top_10: 12
+  max_queries_in_top_3: 6
+- staff: Kjetil Tronvoll
+  rationale: Conflict scholar; monitor spillover into non-conflict/statsvitenskap
+    queries.
+  expected_relevant_query_ids:
+  - B059
+  - B060
+  - B065
+  - B068
+  - B073
+  max_queries_in_top_10: 14
+  max_queries_in_top_3: 7
+queries:
+- id: B001
+  domain: Psykologi
+  difficulty: easy
+  query_text: ARFID og restriktive spiseforstyrrelser hos ungdom
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Camilla Lindvall Dahlgren
+    should_include:
+    - Sigrid Skeide
+    - Eirik Kjelstrup
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B002
+  domain: Psykologi
+  difficulty: easy
+  query_text: Kroppsbilde, Body Project og forebygging av spiseforstyrrelser
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Camilla Lindvall Dahlgren
+    should_include:
+    - Sigrid Skeide
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B003
+  domain: Psykologi
+  difficulty: easy
+  query_text: Idrettspsykologi, mental trening og prestasjon i toppidrett
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anne Fylling Frøyen
+    should_include:
+    - Eirik Kjelstrup
+    - Tore Pedersen
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B004
+  domain: Psykologi
+  difficulty: easy
+  query_text: Motivasjon og relasjoner i hoyprestasjonsgrupper
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anne Fylling Frøyen
+    should_include:
+    - Eirik Kjelstrup
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B005
+  domain: Psykologi
+  difficulty: easy
+  query_text: Barn og unges psykiske helse med atferdsvansker
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anne Kjeldsen
+    should_include:
+    - Helene Faksvåg
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B006
+  domain: Psykologi
+  difficulty: easy
+  query_text: Utviklingspsykopatologi og longitudinelle studier av ungdom
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anne Kjeldsen
+    should_include:
+    - Camilla Lindvall Dahlgren
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B007
+  domain: Psykologi
+  difficulty: easy
+  query_text: Arbeidsmiljo, omstilling og organisasjonspsykologi i arbeidslivet
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anniken Grønstad
+    should_include:
+    - Erik Carlquist
+    - Eirik Kjelstrup
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B008
+  domain: Psykologi
+  difficulty: easy
+  query_text: Sykefravaer, inkludering og HR i den nordiske modellen
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anniken Grønstad
+    should_include:
+    - Marius Ruud
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B009
+  domain: Psykologi
+  difficulty: easy
+  query_text: Kulturpsykologi, kommunikasjon og ideologi i samfunnet
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Erik Carlquist
+    should_include:
+    - Brady Wagoner
+    - Benjamin Goksøyr
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B010
+  domain: Psykologi
+  difficulty: medium
+  query_text: Samfunnspsykologi, diskurspsykologi og sprak i offentligheten
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Benjamin Goksøyr
+    should_include:
+    - Brady Wagoner
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B011
+  domain: Psykologi
+  difficulty: medium
+  query_text: Forebygging og folkehelse i psykisk helsearbeid
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Erik Carlquist
+    should_include:
+    - Åste Herheim
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B012
+  domain: Psykologi
+  difficulty: medium
+  query_text: AI i utdanning, vurderingsformer og akademisk skriving
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Eirik Kjelstrup
+    should_include:
+    - Anniken Grønstad
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B013
+  domain: Psykologi
+  difficulty: medium
+  query_text: Arbeid og psykisk helse i organisasjoner og utdanning
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Eirik Kjelstrup
+    should_include:
+    - Marius Ruud
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B014
+  domain: Psykologi
+  difficulty: medium
+  query_text: Emosjonsfokusert terapi, relasjonskompetanse og kommunikasjon
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Sigrid Skeide
+    should_include:
+    - Helene Faksvåg
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B015
+  domain: Psykologi
+  difficulty: medium
+  query_text: Kvantitativ metode, nevrovitenskap og psykopatologi
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Peder Mortvedt Isager
+    should_include:
+    - Eirik Kjelstrup
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B016
+  domain: Psykologi
+  difficulty: medium
+  query_text: Suicidforebygging og krisehandtering i klinisk voksenpsykologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Andreas Berg Krosby
+    should_include:
+    - Elisabeth Tveita
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B017
+  domain: Psykologi
+  difficulty: medium
+  query_text: Miljoterapi i rusbehandling for ungdom
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Siri-Mette Storvik
+    should_include:
+    - Torunn Sivertsen
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+- id: B018
+  domain: Psykologi
+  difficulty: hard
+  query_text: Hybrid- og hjemmearbeid i fremtidens arbeidsliv
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Linda Mari Seem Sundvik
+    should_include:
+    - Marius Ruud
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B019
+  domain: Psykologi
+  difficulty: hard
+  query_text: Job crafting, jobbengasjement og motivasjon pa jobb
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Marius Ruud
+    should_include:
+    - Linda Mari Seem Sundvik
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B020
+  domain: Psykologi
+  difficulty: hard
+  query_text: Kritisk psykologi, minoritetspsykologi og diskursanalyse
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Sandra Gabrielsen
+    should_include:
+    - Åste Herheim
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B021
+  domain: Psykologi
+  difficulty: hard
+  query_text: Forvaltning og politikk pa psykisk helse-feltet
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Åste Herheim
+    should_include:
+    - Sandra Gabrielsen
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B022
+  domain: Psykologi
+  difficulty: hard
+  query_text: Akutt psykologi og psykodynamisk terapi i krisearbeid
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Andreas Berg Krosby
+    should_include:
+    - Elisabeth Tveita
+    hard_exclude:
+    - Dagfinn Aune
+    - Kjetil Tronvoll
+    - Christian Wolff
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B023
+  domain: Psykologi
+  difficulty: negative
+  query_text: Middelalderens klosterarkitektur i Nord-Italia
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include: []
+    should_include: []
+    hard_exclude:
+    - Andreas Berg Krosby
+    - Siri-Mette Storvik
+    - Marius Ruud
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B024
+  domain: Psykologi
+  difficulty: negative
+  query_text: Kvantekromodynamikk og partikkelfysikk ved CERN
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include: []
+    should_include: []
+    hard_exclude:
+    - Andreas Berg Krosby
+    - Siri-Mette Storvik
+    - Marius Ruud
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B025
+  domain: Psykologi
+  difficulty: negative
+  query_text: Astrofysikk, gravitasjonsbolger og eksoplaneter
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include: []
+    should_include: []
+    hard_exclude:
+    - Andreas Berg Krosby
+    - Siri-Mette Storvik
+    - Marius Ruud
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B026
+  domain: Helsefag
+  difficulty: easy
+  query_text: Ernaeringsepidemiologi, meta-analyser og kosthold ved kreft/overvekt
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Dagfinn Aune
+    should_include:
+    - Marit Kolby
+    - Synne Groufh-Jacobsen
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B027
+  domain: Helsefag
+  difficulty: easy
+  query_text: Diabetes, dodelighet og fysisk aktivitet i folkehelseforskning
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Dagfinn Aune
+    should_include:
+    - Elin Lund Transeth
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B028
+  domain: Helsefag
+  difficulty: easy
+  query_text: Klinisk ernaering, kostveiledning og livsstilssykdommer
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Elin Lund Transeth
+    should_include:
+    - Ulrike Liisberg
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B029
+  domain: Helsefag
+  difficulty: easy
+  query_text: Ernaering for barn, folkehelse og kostholdstiltak
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Ella Marie Heyerdahl
+    should_include:
+    - Evelina Svensson
+    - Ulrike Liisberg
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B030
+  domain: Helsefag
+  difficulty: easy
+  query_text: Anatomi, fysiologi og farmakologi i medisinutdanning
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Bård André Bendiksen
+    should_include:
+    - Suvi Sagbraaten
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B031
+  domain: Helsefag
+  difficulty: easy
+  query_text: Samfunnsernaering, folkehelse og forebygging av livsstilssykdommer
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Ulrike Liisberg
+    should_include:
+    - Ella Marie Heyerdahl
+    - Elin Lund Transeth
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B032
+  domain: Helsefag
+  difficulty: easy
+  query_text: Anvendt statistikk og numeriske metoder i helsefaglig forskning
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Bård André Bendiksen
+    should_include:
+    - Suvi Sagbraaten
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B033
+  domain: Helsefag
+  difficulty: easy
+  query_text: Hjertets struktur og funksjon, MR og fysikalsk kjemi
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Bård André Bendiksen
+    should_include:
+    - Suvi Sagbraaten
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B034
+  domain: Helsefag
+  difficulty: easy
+  query_text: Systematiske litteraturgjennomganger innen ernaering og helse
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Dagfinn Aune
+    should_include:
+    - Marit Kolby
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B035
+  domain: Helsefag
+  difficulty: medium
+  query_text: Cellebiologi og fysiologi i ernaeringsundervisning
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Ulrike Liisberg
+    should_include:
+    - Elin Lund Transeth
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B036
+  domain: Helsefag
+  difficulty: medium
+  query_text: Kosthold for barn og familier i forebyggende helsearbeid
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Ella Marie Heyerdahl
+    should_include:
+    - Evelina Svensson
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B037
+  domain: Helsefag
+  difficulty: medium
+  query_text: Klinisk ernaering ved diabetes og overvekt
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Elin Lund Transeth
+    should_include:
+    - Dagfinn Aune
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B038
+  domain: Helsefag
+  difficulty: medium
+  query_text: Patologi og legevitenskap i grunnutdanning helsefag
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Suvi Sagbraaten
+    should_include:
+    - Bodil Bjørndal
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B039
+  domain: Helsefag
+  difficulty: medium
+  query_text: Kosthold og psykisk helse (ernaeringspsykologi)
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Eirik Garnås
+    should_include:
+    - Marit Kolby
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B040
+  domain: Helsefag
+  difficulty: medium
+  query_text: Samfunnsernaering og kostholdsrad i befolkningsarbeid
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Synne Groufh-Jacobsen
+    should_include:
+    - Ulrike Liisberg
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B041
+  domain: Helsefag
+  difficulty: medium
+  query_text: Klinisk fysioterapi og rehabiliteringsforlop ved muskel- og skjelettplager
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Stian Walle Larsen
+    should_include:
+    - Johanne Fredrikke Berg
+    - Ingrid Aas Vissheim
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B042
+  domain: Helsefag
+  difficulty: medium
+  query_text: Barnefysioterapi, kvinnehelse og svangerskapstrening
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Johanne Fredrikke Berg
+    should_include:
+    - Ingrid Aas Vissheim
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+- id: B043
+  domain: Helsefag
+  difficulty: hard
+  query_text: Idrettsfysioterapi, fysisk aktivitet og rehabilitering
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Ingrid Aas Vissheim
+    should_include:
+    - Stian Walle Larsen
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B044
+  domain: Helsefag
+  difficulty: hard
+  query_text: ACT, mindfulness og psykosomatikk i klinisk praksis
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Beate Mangset
+    should_include:
+    - Stian Walle Larsen
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B045
+  domain: Helsefag
+  difficulty: hard
+  query_text: Anatomi, trening og behandling av muskel- og skjelettlidelser
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Stian Walle Larsen
+    should_include:
+    - Johanne Fredrikke Berg
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B046
+  domain: Helsefag
+  difficulty: hard
+  query_text: Kostveiledning for barn i kommunehelsetjenesten
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Evelina Svensson
+    should_include:
+    - Ella Marie Heyerdahl
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B047
+  domain: Helsefag
+  difficulty: hard
+  query_text: Tverrfaglig rehabilitering og oppfolging i fysioterapi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Herman van Dijk
+    should_include:
+    - Johanne Fredrikke Berg
+    hard_exclude:
+    - Andreas Østhagen
+    - Marius Ruud
+    - Johan Bergh
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B048
+  domain: Helsefag
+  difficulty: negative
+  query_text: Romersk mynthistorie i senantikken
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include: []
+    should_include: []
+    hard_exclude:
+    - Stian Walle Larsen
+    - Johanne Fredrikke Berg
+    - Beate Mangset
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B049
+  domain: Helsefag
+  difficulty: negative
+  query_text: Klassisk ballettteori og pointe-teknikk
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include: []
+    should_include: []
+    hard_exclude:
+    - Stian Walle Larsen
+    - Johanne Fredrikke Berg
+    - Beate Mangset
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B050
+  domain: Helsefag
+  difficulty: negative
+  query_text: Maritim geologi og havbunnsseismikk
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include: []
+    should_include: []
+    hard_exclude:
+    - Stian Walle Larsen
+    - Johanne Fredrikke Berg
+    - Beate Mangset
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B051
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: Arktis, nordomradepolitikk, maritim sikkerhet og ressurskonflikter
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Andreas Østhagen
+    should_include:
+    - Pål Røren
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B052
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: Havrett, geopolitikk og sikkerhet i nordomradene
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Andreas Østhagen
+    should_include:
+    - Hilde Eliassen Restad
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B053
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: Amerikansk utenrikspolitikk, nasjonalisme og amerikansk eksepsjonalisme
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Hilde Eliassen Restad
+    should_include:
+    - Henry Allen
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B054
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: Amerikanske valg, sikkerhetsstudier og internasjonale relasjoner
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Hilde Eliassen Restad
+    should_include:
+    - Henry Allen
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B055
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: Politikk i Midtosten, sosiale bevegelser og komparativ politikk
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Jonas Bergan Dræge
+    should_include:
+    - Stig Stenslie
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B056
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: Saudi-Arabia, Syria og Tyrkia i regional politikk
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Jonas Bergan Dræge
+    should_include:
+    - Stig Stenslie
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B057
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: Menneskerettigheter, ikke-diskriminering og funksjonsnedsettelse
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjersti Skarstad
+    should_include:
+    - Kjetil Tronvoll
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B058
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: FN, likestilling og inkludering av sarbare grupper
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjersti Skarstad
+    should_include:
+    - Bernt Hagtvet
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B059
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: Afrikas Horn, fredsprosesser og overgangsjustis
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjetil Tronvoll
+    should_include:
+    - Torstein Dale-Åkerlund
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B060
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: Autoritaere regimer, demokratisering og konflikt i Etiopia/Eritrea
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjetil Tronvoll
+    should_include:
+    - Stig Stenslie
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B061
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: Ekstremisme, radikalisering og totalitarisme i europeisk politikk
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Nik. Brandal
+    should_include:
+    - Henrik Syse
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B062
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: Folkemord, massevold og etterretningshistorie
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Nik. Brandal
+    should_include:
+    - Henrik Syse
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B063
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: EU-politikk, interessegrupper og offentlig politikk
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Henry Allen
+    should_include:
+    - Bernt Hagtvet
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B064
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: Kina, etterretning og autoritaere regimer i Midtosten
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Stig Stenslie
+    should_include:
+    - Jonas Bergan Dræge
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B065
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: Fredsarbeid, konfliktlosning og utviklingsarbeid i Ost-Afrika
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Torstein Dale-Åkerlund
+    should_include:
+    - Kjetil Tronvoll
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B066
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: Konfliktforhandling og fredsmekling i Midtosten
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Nadim Khoury
+    should_include:
+    - Stig Stenslie
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B067
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: Diplomati og internasjonale relasjoner i konfliktsoner
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Nadim Khoury
+    should_include:
+    - Kjetil Tronvoll
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+- id: B068
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: Politisk antropologi og feltmetode i konfliktsamfunn
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjetil Tronvoll
+    should_include:
+    - Nadim Khoury
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B069
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: Britisk politikk, konspirasjonsteorier og offentlig administrasjon
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Henry Allen
+    should_include:
+    - Bernt Hagtvet
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B070
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: Demokrati, minoritetspolitikk og sosialdemokrati i Norden
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Nik. Brandal
+    should_include:
+    - Henry Allen
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B071
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: Geopolitisk risikovurdering i nordomradene
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Pål Røren
+    should_include:
+    - Andreas Østhagen
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B072
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: Etterretning og spionasje i autoritaere systemer
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Stig Stenslie
+    should_include:
+    - Jonas Bergan Dræge
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B073
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: Fredsprosesser og bistandsarbeid i Ost-Afrika
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Torstein Dale-Åkerlund
+    should_include:
+    - Kjetil Tronvoll
+    hard_exclude:
+    - Dagfinn Aune
+    - Johanne Fredrikke Berg
+    - Kateryna Reiby
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B074
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: negative
+  query_text: Geoteknikk for tunnelboring i granitt
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include: []
+    should_include: []
+    hard_exclude:
+    - Nadim Khoury
+    - Torstein Dale-Åkerlund
+    - Stig Stenslie
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B075
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: negative
+  query_text: Veterinaer obstetrikk hos storfe
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include: []
+    should_include: []
+    hard_exclude:
+    - Nadim Khoury
+    - Torstein Dale-Åkerlund
+    - Stig Stenslie
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B076
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: Digital markedsforing, forbrukeratferd og sosiale medier
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anders Hauge Wien
+    should_include:
+    - Kateryna Reiby
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B077
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: Message strategy og forbrukerengasjement i sosiale medier
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anders Hauge Wien
+    should_include:
+    - Melissa Malka Busch-Christensen
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B078
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: KI-anbefalingssystemer og forbrukerrespons i markedet
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anders Hauge Wien
+    should_include:
+    - Kateryna Reiby
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B079
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: Design thinking, tjenestedesign og entreprenorskap
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Alexander Utne
+    should_include:
+    - Håvar Brattli
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B080
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: Entreprenorskap i hoyere utdanning og innovasjonslaering
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Alexander Utne
+    should_include:
+    - Håvar Brattli
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B081
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: Schumpeteriansk teori, makrookonomi og innovasjon
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Beniamino Callegari
+    should_include:
+    - Henrik Wiig
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B082
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: Finance-innovation nexus og kredittskapning i kapitalismen
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Beniamino Callegari
+    should_include:
+    - Henrik Wiig
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B083
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: Langsiktige okonomiske effekter av pandemier og baerekraft
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Beniamino Callegari
+    should_include:
+    - Umar Burki
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B084
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: Digitalisering og ambidekster organisasjon i finanssektoren
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Beniamino Callegari
+    should_include:
+    - Kateryna Reiby
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B085
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: Onboarding, organisasjonssosialisering og HR-praksis
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Ingvild Sagberg
+    should_include:
+    - Johan Bergh
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B086
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: Arbeidsmiljo, HR og organisasjonspsykologi i virksomheter
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Ingvild Sagberg
+    should_include:
+    - Johan Bergh
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B087
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: Endringsledelse, organisasjonsutvikling og prosjektledelse
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Johan Bergh
+    should_include:
+    - Ingvild Sagberg
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B088
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: KI, menneske-maskin-interaksjon og forretningsmodeller
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kateryna Reiby
+    should_include:
+    - Anders Hauge Wien
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B089
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: Digitalisering og kommunikasjon i organisasjoner
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kateryna Reiby
+    should_include:
+    - Ingvild Sagberg
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B090
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: Design thinking i innovasjonsprosjekter og entreprenorskap
+  query_mode: publication_grounded
+  required_source_kinds:
+  - nva
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Håvar Brattli
+    should_include:
+    - Alexander Utne
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B091
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: Regnskap, internasjonal skatt og okonomisystemer
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Christian Wolff
+    should_include:
+    - Fredrik Harboe
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B092
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: Kredittvurdering og studentokonomi i privatokonomiundervisning
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Fredrik Harboe
+    should_include:
+    - Christian Wolff
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B093
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: Etikk i naeringslivet, merkevarebygging og omstillingsprosesser
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Stein-Erik Wendel
+    should_include:
+    - Cathrine Lilleløkken
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B094
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: Digital markedsforing og kampanjeplanlegging i sosiale medier
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Cathrine Lilleløkken
+    should_include:
+    - Melissa Malka Busch-Christensen
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+- id: B095
+  domain: Økonomi og administrasjon
+  difficulty: hard
+  query_text: Lederutvikling og organisasjonsledelse i smaa og mellomstore bedrifter
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Johan Bergh
+    should_include:
+    - Ingvild Sagberg
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B096
+  domain: Økonomi og administrasjon
+  difficulty: hard
+  query_text: Forretningsmodeller og AI i tjenesteutvikling
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kateryna Reiby
+    should_include:
+    - Anders Hauge Wien
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B097
+  domain: Økonomi og administrasjon
+  difficulty: hard
+  query_text: HRM-tiltak for onboarding av nyansatte
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Ingvild Sagberg
+    should_include:
+    - Johan Bergh
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B098
+  domain: Økonomi og administrasjon
+  difficulty: hard
+  query_text: Forbrukeratferd i digitale kundereiser
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Melissa Malka Busch-Christensen
+    should_include:
+    - Cathrine Lilleløkken
+    hard_exclude:
+    - Siri-Mette Storvik
+    - Kjersti Skarstad
+    - Dagfinn Aune
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B099
+  domain: Økonomi og administrasjon
+  difficulty: negative
+  query_text: Oldtidens egyptiske hieroglyfer og papyrologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include: []
+    should_include: []
+    hard_exclude:
+    - Christian Wolff
+    - Cathrine Lilleløkken
+    - Stein-Erik Wendel
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.
+- id: B100
+  domain: Økonomi og administrasjon
+  difficulty: negative
+  query_text: Paleontologi og dinosaursporfossiler
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include: []
+    should_include: []
+    hard_exclude:
+    - Christian Wolff
+    - Cathrine Lilleløkken
+    - Stein-Erik Wendel
+  benchmark_notes: Second-pass reviewed for hard/ambiguous labeling.

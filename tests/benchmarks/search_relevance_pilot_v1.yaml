@@ -1,0 +1,252 @@
+version: search_relevance_pilot_v1
+description: >-
+  Data-quality-first pilot benchmark with dual intent modes. Publication-grounded
+  queries require publication evidence, while profile-grounded queries accept profile
+  evidence and treat staffinfo as fallback.
+source_snapshot:
+  staff_yaml: data/staff.yaml
+  summaries_json: data/precomputed_summaries.json
+  nva_results: data/nva/results.jsonl
+metrics:
+  - MustInclude@3
+  - ShouldInclude@10
+  - HardExcludeRate@10
+  - PublicationEvidencePassRate
+regression_thresholds:
+  must_include_at_3_min: 0.55
+  should_include_at_10_min: 0.7
+  hard_exclude_rate_at_10_min_min: 0.9
+  publication_evidence_pass_rate_min: 0.65
+global_rules:
+  default_top_k: 10
+  default_min_query_term_overlap_per_citation: 1
+  require_citation_for_must_include: true
+overexposure_controls:
+  - staff: Tore Pedersen
+    rationale: "Broad profile; should not dominate unrelated topics."
+    expected_relevant_query_ids:
+      - Q005
+    max_queries_in_top_10: 2
+    max_queries_in_top_3: 0
+queries:
+  - id: Q001
+    query_text: "ARFID og andre restriktive spiseforstyrrelser hos unge"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Camilla Lindvall Dahlgren, Line Wisting]
+      should_include: [Lise Eriksen]
+      hard_exclude: [Anne Fylling Frøyen, Andreas Østhagen]
+
+  - id: Q002
+    query_text: "Suicidforebygging og krisehåndtering i klinisk voksenpsykologi"
+    query_mode: profile_grounded
+    required_source_kinds: ["profile"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Andreas Berg Krosby]
+      should_include: [Alex Gillespie, Elisabeth Tveita]
+      hard_exclude: [Anne Fylling Frøyen, Anders Hauge Wien]
+
+  - id: Q003
+    query_text: "Miljøterapi i rusbehandling for ungdom"
+    query_mode: profile_grounded
+    required_source_kinds: ["profile"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Siri-Mette Storvik]
+      should_include: [Elisabeth Tveita, Torunn Sivertsen]
+      hard_exclude: [Camilla Lindvall Dahlgren, Jonas Bergan Dræge]
+
+  - id: Q004
+    query_text: "Varsling, seksuell trakassering og arbeidsmiljø"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Brita Bjørkelo]
+      should_include: [Mona Berthelsen, Sandra Gabrielsen]
+      hard_exclude: [Anne Fylling Frøyen, Kjetil Tronvoll]
+
+  - id: Q005
+    query_text: "Utbrenthet, endringsvillighet og menneskelige feil i komplekse systemer"
+    query_mode: profile_grounded
+    required_source_kinds: ["profile"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Roxana Haghiry]
+      should_include: [Linda Mari Seem Sundvik, Marius Ruud, Tore Pedersen]
+      hard_exclude: [Dagfinn Aune, Andreas Østhagen]
+
+  - id: Q006
+    query_text: "Idrettspsykologi, mental trening og prestasjon i toppidrett"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Anne Fylling Frøyen, Helene Vabø Wilsgaard]
+      should_include: [Eirik Kjelstrup]
+      hard_exclude: [Camilla Lindvall Dahlgren, Brita Bjørkelo]
+
+  - id: Q007
+    query_text: "Klinisk fysioterapi og rehabiliteringsforløp ved muskel- og skjelettplager"
+    query_mode: profile_grounded
+    required_source_kinds: ["profile"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Stian Walle Larsen, Johanne Fredrikke Berg]
+      should_include: [Ingrid Aas Vissheim, Herman van Dijk]
+      hard_exclude: [Eirik Garnås, Hilde Eliassen Restad]
+
+  - id: Q008
+    query_text: "Barnefysioterapi, kvinnehelse og svangerskapstrening"
+    query_mode: profile_grounded
+    required_source_kinds: ["profile"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Johanne Fredrikke Berg, Ingrid Aas Vissheim]
+      should_include: [Stian Walle Larsen]
+      hard_exclude: [Anne Kjeldsen, Ulrike Liisberg]
+
+  - id: Q009
+    query_text: "Ernæringsepidemiologi, meta-analyser og kosthold ved kreft/overvekt"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Dagfinn Aune]
+      should_include: [Malin Fjeld Alflier, Synne Groufh-Jacobsen]
+      hard_exclude: [Helene Vabø Wilsgaard, Scott Jones]
+
+  - id: Q010
+    query_text: "Kosthold og psykisk helse (ernæringspsykologi)"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Eirik Garnås, Ulrike Liisberg]
+      should_include: [Marit Kolby, Evelina Svensson]
+      hard_exclude: [Brita Bjørkelo, Andreas Østhagen]
+
+  - id: Q011
+    query_text: "Diabetes og psykisk helse hos barn og unge"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Line Wisting]
+      should_include: [Camilla Lindvall Dahlgren, Heidi Øvereng Bjøntegaard]
+      hard_exclude: [Anders Hauge Wien, Henry Allen]
+
+  - id: Q012
+    query_text: "Digital markedsføring, forbrukeratferd og sosiale medier"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Anders Hauge Wien, Cathrine Lilleløkken]
+      should_include: [Melissa Malka Busch-Christensen, Stein-Erik Wendel]
+      hard_exclude: [Andreas Berg Krosby, Dagfinn Aune]
+
+  - id: Q013
+    query_text: "Design thinking, tjenestedesign og entreprenørskap"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Alexander Utne, Håvar Brattli]
+      should_include: [Kateryna Reiby]
+      hard_exclude: [Kjersti Skarstad, Camilla Lindvall Dahlgren]
+
+  - id: Q014
+    query_text: "Schumpeteriansk teori, makroøkonomi og innovasjon"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Beniamino Callegari]
+      should_include: [Henrik Wiig, Fredrik Harboe]
+      hard_exclude: [Anne Fylling Frøyen, Jonas Bergan Dræge]
+
+  - id: Q015
+    query_text: "Arktis, nordområdepolitikk, maritim sikkerhet og ressurskonflikter"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Andreas Østhagen]
+      should_include: [Scott Jones, Henry Allen]
+      hard_exclude: [Dagfinn Aune, Cathrine Lilleløkken]
+
+  - id: Q016
+    query_text: "Amerikansk utenrikspolitikk, nasjonalisme og amerikansk eksepsjonalisme"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Hilde Eliassen Restad]
+      should_include: [Christopher White, Scott Jones]
+      hard_exclude: [Camilla Lindvall Dahlgren, Ulrike Liisberg]
+    benchmark_notes: "Christopher White remains low confidence until curated NVA mapping is re-added."
+
+  - id: Q017
+    query_text: "Terrorisme, radikalisering og politisk vold"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Jonas Bergan Dræge, Bjørnar Østby]
+      should_include: [Stig Stenslie]
+      hard_exclude: [Anne Fylling Frøyen, Elin Lund Transeth]
+
+  - id: Q018
+    query_text: "Menneskerettigheter, ikke-diskriminering og inkludering av sårbare grupper"
+    query_mode: publication_grounded
+    required_source_kinds: ["nva"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Kjersti Skarstad]
+      should_include: [Bernt Hagtvet, Kjetil Tronvoll]
+      hard_exclude: [Anders Hauge Wien, Stian Walle Larsen]
+
+  - id: Q019
+    query_text: "Midtøsten, fredsprosesser og konfliktforhandling"
+    query_mode: profile_grounded
+    required_source_kinds: ["profile"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: [Nadim Khoury]
+      should_include: [Stig Stenslie, Bjørnar Østby]
+      hard_exclude: [Dagfinn Aune, Cathrine Lilleløkken, Jilwan Soltanpanah]
+    benchmark_notes: "Jilwan moved to hard_exclude after staff_info correction to psychology profile."
+
+  - id: Q020
+    query_text: "Klassisk gresk filologi og latinsk paleografi"
+    query_mode: profile_grounded
+    required_source_kinds: ["profile"]
+    citation_overlap_rules:
+      min_query_term_overlap_per_citation: 1
+    expected:
+      must_include: []
+      should_include: []
+      hard_exclude: [Alexander Utne, Brita Bjørkelo, Andreas Østhagen]
