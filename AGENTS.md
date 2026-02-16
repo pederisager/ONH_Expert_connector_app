@@ -26,6 +26,7 @@ Staff `tags` in `data/staff.yaml` now surface as "Nokkelord" on the results/card
 Staff documents fetched from ONH/NVA sources are cached as whole `StaffDocument` objects (see `routes._fetch_staff_documents`) and warmed during FastAPI startup so repeat "Finn relevante ansatte" queries stay responsive. Preserve this cache and update the invalidation rules if you change how sources are assembled. `StaffDocument.combined_text` is capped at roughly 6k characters to keep TF-IDF costs predictable; adjust tests and docs if you tweak that limit.
 
 Citation snippets returned from `/match` now use a theme-aware sentence window and allow up to ~3000 characters (see `routes.CITATION_SNIPPET_LIMIT`) so the LLM receives full chunk context. Avoid shrinking this limit without revalidating match quality.
+For `publication_grounded` queries, citation building now enriches low-overlap NVA snippets with ranked chunk `tags` as `Nokkelord` context (see `routes._augment_citation_snippet_for_publication` and `routes._chunks_to_citations`). Preserve this mode-specific behavior and its tests when adjusting citation logic.
 
 Language handling
 - `data/app.config.yaml` now contains a `language` block controlling detection, embedding/LLM language modes (`multilingual` vs `en-only`), and the translation backend. Translation is off by default and uses a local/no-op translator unless explicitly enabled.
@@ -39,6 +40,10 @@ Create a virtual environment before installing dependencies: `python3 -m venv .v
 `llm_model` in `data/models.yaml` supports both `ollama` and `groq` backends. For Groq, set `llm_model.backend: groq`, keep the endpoint on `https://api.groq.com/openai/v1` (or compatible), and provide credentials via `llm_model.api-key` or env var `GROQ_API_KEY` (preferred via `llm_model.api-key-env`).
 
 - Keep `staff.csv` as the entry point. Run `bash scripts/update_staff.sh [key_file] [base_url]` to refresh `data/staff.yaml`, `data/staff_records.jsonl`, sync NVA publications to `data/nva/results.jsonl`, and rebuild the index. Defaults: `nva_api_keys_test.json`, `https://api.test.nva.aws.unit.no`. API key files are git-ignored; never commit secrets.
+- Run `python3 scripts/audit_staff_data.py` after staff/source edits. The script writes `reports/staff_data_audit.json` and `reports/staff_data_audit.md`; treat unresolved `high` severity findings as release blockers until manually curated.
+- Run `python3 scripts/run_search_benchmark.py --benchmark tests/benchmarks/search_relevance_pilot_v1.yaml` to evaluate retrieval regressions. The benchmark now uses dual modes per query: `publication_grounded` (expects NVA-backed evidence) and `profile_grounded` (profile evidence allowed; staffinfo fallback only).
+- The strict 100-query improvement campaign is tracked in `docs/search_quality_improvement_backlog.md`. If you work on any step in that campaign, update the plan doc in the same task with status, command log (with timeout values), benchmark output path, and metric deltas so a fresh chat can continue without re-discovery.
+- If `app.index.refresh_staff` is run without a working NVA API key/snapshot set, NVA profile links in `data/staff.yaml` may not resolve. Prefer providing API credentials/snapshots before refresh, or explicitly confirm this downgrade with the requester.
 - Profile `/match` hot spots with `python3 scripts/profile_match.py ...` (see `docs/performance_profiling.md`). The script reuses the production helpers and records per-stage timings (NVA merge, TF-IDF, embeddings, LLM explainer) so we can justify performance tweaks before merging.
 
 You have access to the mpc tool context7. Use it for documentation lookup whenever that would be beneficial to solving a task. 

@@ -164,3 +164,25 @@ black app tests
 ```
 
 Aim for ≥85% coverage on `app/` and include `/match` integration tests before merging changes.
+
+## 100-query benchmark
+
+Run the expanded benchmark file:
+
+```bash
+python3 scripts/run_search_benchmark.py \
+  --benchmark tests/benchmarks/search_relevance_100_v1.yaml \
+  --base-url http://127.0.0.1:8000 \
+  --output reports/benchmark_results_100_baseline.json
+```
+
+What the report contains:
+- `metrics`: overall benchmark metrics.
+- `metrics_by_mode`: split for `publication_grounded` and `profile_grounded`.
+- `metrics_by_domain`: split by the four academic domains.
+- `query_failures`: per-query failure reasons (`must_include_missing_top3`, `publication_evidence_missing`, etc.).
+- `threshold_failures` and `mode_threshold_failures`: regression guardrail checks.
+- `overexposure_violations`: exposure control violations for monitored staff.
+
+Windows note:
+- Use `Set-ExecutionPolicy -Scope Process Bypass -Force` and `scripts/run_with_timeout.ps1` for bounded runtime on both `uvicorn` and benchmark commands.
