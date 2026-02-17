@@ -26,6 +26,19 @@ The requirements pin CUDA 11.8 torch (2.3.1+cu118) so Pascal GPUs like GTX 1060 
 
 The API serves the static UI from `app/static` at the root path.
 
+## Railway deployment (Docker)
+
+This repo includes `Dockerfile`, `.dockerignore`, `railway.json`, and `requirements.deploy.txt` for Railway.
+
+1. In Railway, create/link a project to this GitHub repo.
+2. Add `GROQ_API_KEY` under project/service variables.
+3. Deploy from the default branch. Railway uses the Dockerfile automatically.
+4. Verify:
+   - `GET /queue` returns `204`/healthy.
+   - Open `/` and run one query through the UI.
+
+The image build runs `python3 -m app.index.build --index-root data/index`, so the deployed container always has a local vector index even though `data/index` is git-ignored.
+
 ### Staff summaries
 - Source of truth: `staff_info.json` (maintained manually).
 - Generate precomputed summaries: `python3 scripts/build_summaries_from_staff_info.py` (add `--no-llm` to skip the configured LLM provider).
@@ -98,7 +111,7 @@ Model choices live in `data/models.yaml`. Download the referenced LLM and embedd
 
 Step 07 embedding sweep note (2026-02-17):
 - Compared `sentence-transformers/paraphrase-multilingual-mpnet-base-v2` vs `intfloat/multilingual-e5-base` on the strict 100-query benchmark.
-- Kept `paraphrase-multilingual-mpnet-base-v2` as default because it preserved stronger ranking and evidence metrics overall (see `reports/benchmark_results_100_step07_candidate_mpnet.json` and `reports/benchmark_results_100_step07_candidate_e5_base.json`).
+- `paraphrase-multilingual-mpnet-base-v2` preserved stronger ranking/evidence metrics overall (see `reports/benchmark_results_100_step07_candidate_mpnet.json` and `reports/benchmark_results_100_step07_candidate_e5_base.json`), but cloud defaults now use the lighter `paraphrase-multilingual-MiniLM-L12-v2` for lower memory and cost.
 
 ## Groq API LLM option
 
@@ -129,7 +142,7 @@ $env:GROQ_API_KEY="your-key-here"
 
 ## GPU embeddings
 
-The retriever defaults to `sentence-transformers/paraphrase-multilingual-mpnet-base-v2` running on CUDA (`data/models.yaml`). To leverage your GPU:
+The retriever defaults to `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` (`data/models.yaml`). To leverage your GPU:
 
 1. Install dependencies (pinned to Pascal-safe CUDA 11.8 torch):
    ```bash
