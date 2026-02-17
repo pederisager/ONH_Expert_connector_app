@@ -1,0 +1,21 @@
+﻿# Worker Step 08 Summary
+
+- Scope: Step 08 data enrichment focused on hard misses via metadata/tags.
+- Data changes:
+  - Enriched `data/staff.yaml` tags for hard-miss experts (including previously zero-tag expected names), plus ASCII-friendly variants for overlap-sensitive queries.
+  - Updated targeted `staff_info.json` expertise/research fields to strengthen synthetic staff-info chunk signals.
+  - Regenerated `data/precomputed_summaries.json` from updated `staff_info.json`.
+  - Ran staff data audit (`reports/staff_data_audit.json`, `reports/staff_data_audit.md`).
+  - Rebuilt retrieval index (`data/index`).
+- Validation:
+  - Tests passed: `tests/test_routes.py`, `tests/test_index_builder.py`, `tests/test_records_loader.py`, `tests/test_audit_staff_data.py` (28 passed).
+  - Strict benchmark output: `reports/benchmark_results_100_step08.json` on `http://127.0.0.1:8108`.
+- Key metric deltas vs Step 05:
+  - `MustInclude@3`: `0.7200 -> 0.7500` (`+0.0300`)
+  - `ShouldInclude@10`: `0.5000 -> 0.5102` (`+0.0102`)
+  - `PublicationEvidencePassRate`: `0.6500 -> 0.7333` (`+0.0833`)
+  - Query failures: `67 -> 62` (`-5`)
+  - `HardExcludeRate@10`: unchanged (`0.9733`)
+- Unresolved risks:
+  - Strict gate still fails (`ShouldInclude@10` global + mode thresholds).
+  - Overexposure still fails (2 violations); `Kjetil Tronvoll` worsened (`16 -> 17` top10 appearances).

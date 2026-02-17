@@ -96,6 +96,10 @@ The API serves the static UI from `app/static` at the root path.
 
 Model choices live in `data/models.yaml`. Download the referenced LLM and embedding checkpoints ahead of time (for example via Ollama) and update the config if you pick different variants.
 
+Step 07 embedding sweep note (2026-02-17):
+- Compared `sentence-transformers/paraphrase-multilingual-mpnet-base-v2` vs `intfloat/multilingual-e5-base` on the strict 100-query benchmark.
+- Kept `paraphrase-multilingual-mpnet-base-v2` as default because it preserved stronger ranking and evidence metrics overall (see `reports/benchmark_results_100_step07_candidate_mpnet.json` and `reports/benchmark_results_100_step07_candidate_e5_base.json`).
+
 ## Groq API LLM option
 
 You can run LLM calls against Groq instead of a local Ollama model by updating `llm_model` in `data/models.yaml`:
@@ -125,7 +129,7 @@ $env:GROQ_API_KEY="your-key-here"
 
 ## GPU embeddings
 
-The retriever defaults to `sentence-transformers/all-MiniLM-L6-v2` running on CUDA (`data/models.yaml`). To leverage your GPU:
+The retriever defaults to `sentence-transformers/paraphrase-multilingual-mpnet-base-v2` running on CUDA (`data/models.yaml`). To leverage your GPU:
 
 1. Install dependencies (pinned to Pascal-safe CUDA 11.8 torch):
    ```bash

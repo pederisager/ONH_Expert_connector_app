@@ -10,6 +10,7 @@ from .models import Chunk
 
 WHITESPACE_RE = re.compile(r"\s+")
 NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")
+NON_WORD_RE = re.compile(r"[\W_]+", re.UNICODE)
 
 
 def normalize_text(value: str) -> str:
@@ -51,15 +52,21 @@ class Chunker:
         chunk_size: int = 400,
         chunk_overlap: int = 60,
         max_chunks: int | None = None,
+        min_chunk_tokens: int = 1,
         tokenizer: Tokenizer | None = None,
     ) -> None:
         if chunk_size <= 0:
             raise ValueError("chunk_size must be a positive integer.")
         if not 0 <= chunk_overlap < chunk_size:
             raise ValueError("chunk_overlap must satisfy 0 <= overlap < chunk_size.")
+        if min_chunk_tokens <= 0:
+            raise ValueError("min_chunk_tokens must be >= 1.")
+        if min_chunk_tokens > chunk_size:
+            raise ValueError("min_chunk_tokens must be <= chunk_size.")
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
         self.max_chunks = max_chunks
+        self.min_chunk_tokens = min_chunk_tokens
         self.tokenizer = tokenizer or SimpleTokenizer()
 
     def chunk_text(
@@ -72,9 +79,18 @@ class Chunker:
         source_namespace: str = "profile",
         start_index: int = 0,
         max_chunks: int | None = None,
+        min_chunk_tokens: int | None = None,
+        allow_short_single_chunk: bool = True,
     ) -> list[Chunk]:
         if start_index < 0:
             raise ValueError("start_index must be >= 0.")
+        effective_min_tokens = (
+            self.min_chunk_tokens if min_chunk_tokens is None else min_chunk_tokens
+        )
+        if effective_min_tokens <= 0:
+            raise ValueError("min_chunk_tokens must be >= 1.")
+        if effective_min_tokens > self.chunk_size:
+            raise ValueError("min_chunk_tokens must be <= chunk_size.")
         tokens = self.tokenizer.tokenize(text)
         if not tokens:
             return []
@@ -82,17 +98,29 @@ class Chunker:
         step = self.chunk_size - self.chunk_overlap
         total = len(tokens)
         chunks: list[Chunk] = []
+        seen_text_signatures: set[str] = set()
         namespace = _normalize_source_namespace(source_namespace)
         chunk_limit = self.max_chunks if max_chunks is None else max_chunks
 
-        for index, start in enumerate(range(0, total, step)):
+        for start in range(0, total, step):
             end = min(start + self.chunk_size, total)
             window = tokens[start:end]
             if not window:
                 continue
-            global_index = start_index + index
+            # Preserve short single-source documents when explicitly allowed while
+            # still dropping tiny tail windows.
+            if len(window) < effective_min_tokens:
+                if chunks:
+                    continue
+                if not allow_short_single_chunk:
+                    continue
+            global_index = start_index + len(chunks)
             chunk_id = f"{staff_slug}-{namespace}-{global_index:04d}"
             chunk_text = self.tokenizer.detokenize(window)
+            text_signature = _chunk_text_signature(chunk_text)
+            if text_signature in seen_text_signatures:
+                continue
+            seen_text_signatures.add(text_signature)
             chunk = Chunk(
                 staff_slug=staff_slug,
                 chunk_id=chunk_id,
@@ -116,3 +144,8 @@ class Chunker:
 def _normalize_source_namespace(value: str) -> str:
     normalized = NON_ALNUM_RE.sub("-", (value or "").strip().lower()).strip("-")
     return normalized or "source"
+
+
+def _chunk_text_signature(value: str) -> str:
+    normalized = NON_WORD_RE.sub(" ", (value or "").casefold())
+    return normalize_text(normalized)

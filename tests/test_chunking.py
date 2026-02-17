@@ -76,6 +76,55 @@ def test_chunker_respects_per_call_max_chunks_override() -> None:
     assert len(chunks) == 2
 
 
+def test_chunker_drops_short_tail_chunks_when_minimum_is_set() -> None:
+    chunker = Chunker(chunk_size=5, chunk_overlap=1, min_chunk_tokens=4)
+    words = " ".join(f"ord{i}" for i in range(11))
+    chunks = chunker.chunk_text(
+        staff_slug="slug",
+        text=words,
+        source_url="https://example.com",
+    )
+
+    assert len(chunks) == 2
+    assert [chunk.token_count for chunk in chunks] == [5, 5]
+
+
+def test_chunker_keeps_short_single_chunk_documents() -> None:
+    chunker = Chunker(chunk_size=10, chunk_overlap=2, min_chunk_tokens=8)
+    chunks = chunker.chunk_text(
+        staff_slug="slug",
+        text="kort tekst med fire ord",
+        source_url="https://example.com",
+    )
+
+    assert len(chunks) == 1
+    assert chunks[0].token_count == 5
+
+
+def test_chunker_can_drop_short_single_chunk_documents() -> None:
+    chunker = Chunker(chunk_size=10, chunk_overlap=2, min_chunk_tokens=8)
+    chunks = chunker.chunk_text(
+        staff_slug="slug",
+        text="kort tekst med fire ord",
+        source_url="https://example.com",
+        allow_short_single_chunk=False,
+    )
+
+    assert chunks == []
+
+
+def test_chunker_deduplicates_identical_windows() -> None:
+    chunker = Chunker(chunk_size=4, chunk_overlap=0)
+    chunks = chunker.chunk_text(
+        staff_slug="slug",
+        text="a b c d a b c d",
+        source_url="https://example.com",
+    )
+
+    assert len(chunks) == 1
+    assert chunks[0].chunk_id == "slug-profile-0000"
+
+
 @pytest.mark.parametrize(
     "chunk_size, overlap", [(0, 0), (5, 5), (5, 6), (-1, 0), (5, -1)]
 )
@@ -93,3 +142,9 @@ def test_chunker_validates_start_index() -> None:
             source_url="https://example.com",
             start_index=-1,
         )
+
+
+@pytest.mark.parametrize("min_chunk_tokens", [0, -1, 6])
+def test_chunker_validates_min_chunk_tokens(min_chunk_tokens: int) -> None:
+    with pytest.raises(ValueError):
+        Chunker(chunk_size=5, chunk_overlap=1, min_chunk_tokens=min_chunk_tokens)

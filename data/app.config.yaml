@@ -17,12 +17,54 @@ results:
   max-candidates: 10
   min-similarity-score: 0.25
   diversity-weight: 0.1
+  scoring-weights:
+    semantic: 1.0
+    keywords: 0.1
+    tags: 0.15
+    methods: 0.15
+  mode-scoring-profiles:
+    publication_grounded:
+      source-kind-boosts:
+        nva: 0.18
+        profile: 0.03
+        staffinfo: 0.0
+      citation-overlap-weight: 0.12
+      nva-citation-bonus: 0.08
+    profile_grounded:
+      source-kind-boosts:
+        nva: 0.03
+        profile: 0.14
+        staffinfo: 0.09
+      citation-overlap-weight: 0.06
+      nva-citation-bonus: 0.0
+  overexposure-penalty:
+    enabled: true
+    low-signal-threshold: 0.35
+    profile-source-weight: 0.2
+    staffinfo-source-weight: 0.12
+    publication-without-nva-penalty: 0.04
+    max-penalty: 0.1
+  citation-source-priority:
+    - "nva"
+    - "profile"
+    - "staffinfo"
+  min-query-overlap-per-citation: 1
 
 rag:
   index-root: "data/index"
   chunk-size: 400
   chunk-overlap: 60
   max-chunks-per-profile: 40
+  hybrid-semantic-weight: 0.85
+  hybrid-lexical-weight: 0.15
+  source-weights:
+    nva: 1.0
+    profile: 0.8
+    staffinfo: 0.45
+  max-chunks-per-source-per-staff:
+    nva: 3
+    profile: 1
+    staffinfo: 1
   embedding-model: "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
   embedding-batch-size: 32
 

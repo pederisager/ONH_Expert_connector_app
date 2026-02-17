@@ -6,7 +6,7 @@ import asyncio
 import hashlib
 import logging
 import re
-from typing import Any
+from typing import Any, Literal, Sequence
 
 import httpx
 from fastapi import APIRouter, HTTPException, Request, status
@@ -59,6 +59,11 @@ METHOD_KEYWORDS = {
     "mixed-methods",
     "tverrsnitt",
 }
+DEFAULT_CITATION_SOURCE_PRIORITY = ["nva", "profile", "staffinfo"]
+MATCH_MODE_PUBLICATION = "publication_grounded"
+MATCH_MODE_PROFILE = "profile_grounded"
+DEFAULT_MATCH_MODE = MATCH_MODE_PUBLICATION
+MATCH_MODES = {MATCH_MODE_PUBLICATION, MATCH_MODE_PROFILE}
 
 
 # --------------------------------------------------------------------------- #
@@ -74,6 +79,7 @@ class AnalyzeTopicResponse(BaseModel):
 class MatchRequest(BaseModel):
     themes: list[str]
     department: str | None = None
+    mode: Literal["publication_grounded", "profile_grounded"] = DEFAULT_MATCH_MODE
 
 
 class Citation(BaseModel):
@@ -557,10 +563,16 @@ def _match_via_retriever(
     *,
     retriever: EmbeddingRetriever,
     payload: MatchRequest,
+    match_mode: str,
     max_candidates: int,
     translator: Translator,
     language_ctx: LanguageContext,
     query_text: str,
+    citation_source_priority: Sequence[str],
+    min_query_overlap_per_citation: int,
+    scoring_weights: dict[str, float],
+    mode_scoring_profiles: dict[str, dict[str, Any]],
+    overexposure_penalty_config: dict[str, Any],
 ) -> list[MatchItem]:
     if not query_text:
         return []
@@ -588,15 +600,31 @@ def _match_via_retriever(
         item = _retrieval_result_to_match_item(
             result,
             payload.themes,
+            match_mode=match_mode,
             language_ctx=language_ctx,
+            citation_source_priority=citation_source_priority,
+            min_query_overlap_per_citation=min_query_overlap_per_citation,
+            scoring_weights=scoring_weights,
+            mode_scoring_profiles=mode_scoring_profiles,
+            overexposure_penalty_config=overexposure_penalty_config,
         )
         if item:
             items.append(item)
+    items.sort(key=lambda item: item.score, reverse=True)
     return items
 
 
 def _retrieval_result_to_match_item(
-    result, themes: Sequence[str], *, language_ctx: LanguageContext
+    result,
+    themes: Sequence[str],
+    *,
+    match_mode: str,
+    language_ctx: LanguageContext,
+    citation_source_priority: Sequence[str],
+    min_query_overlap_per_citation: int,
+    scoring_weights: dict[str, float],
+    mode_scoring_profiles: dict[str, dict[str, Any]],
+    overexposure_penalty_config: dict[str, Any],
 ) -> MatchItem | None:
     if not result.chunks:
         return None
@@ -613,16 +641,61 @@ def _retrieval_result_to_match_item(
     display_name = result.staff_name or str(
         primary_chunk.metadata.get("name") or result.staff_slug
     )
-    citations = _chunks_to_citations(result.chunks, themes)
-    keywords = _collect_chunk_keywords(result.chunks)
-    semantic_score = max(0.0, min(1.0, float(result.score)))
-    keyword_score = _keyword_overlap_score(result.chunks, themes)
-    tag_score = _tag_overlap_score(keywords, themes)
-    method_score = _method_overlap_score(keywords, themes)
-    adjusted_score = min(
-        1.0,
-        semantic_score + 0.1 * keyword_score + 0.15 * tag_score + 0.15 * method_score,
+    citations = _chunks_to_citations(
+        result.chunks,
+        themes,
+        source_priority=citation_source_priority,
+        min_query_overlap=min_query_overlap_per_citation,
+        match_mode=match_mode,
     )
+    keywords = _collect_chunk_keywords(result.chunks)
+    scoring_chunks = _chunks_for_scoring(result.chunks)
+    scoring_keywords = _collect_chunk_keywords(scoring_chunks)
+    semantic_score = max(
+        0.0,
+        min(1.0, float(result.metadata.get("semantic_score", result.score))),
+    )
+    lexical_retrieval_score = max(
+        0.0,
+        min(1.0, float(result.metadata.get("lexical_score", 0.0))),
+    )
+    hybrid_retrieval_score = max(
+        0.0,
+        min(1.0, float(result.metadata.get("hybrid_score", result.score))),
+    )
+    keyword_score = _keyword_overlap_score(scoring_chunks, themes)
+    tag_score = _tag_overlap_score(scoring_keywords, themes)
+    method_score = _method_overlap_score(scoring_keywords, themes)
+    mode_bonus = _mode_score_bonus(
+        chunks=result.chunks,
+        citations=citations,
+        themes=themes,
+        match_mode=match_mode,
+        mode_scoring_profiles=mode_scoring_profiles,
+    )
+    overexposure_penalty = _overexposure_score_penalty(
+        chunks=result.chunks,
+        citations=citations,
+        themes=themes,
+        match_mode=match_mode,
+        keyword_score=keyword_score,
+        tag_score=tag_score,
+        method_score=method_score,
+        overexposure_penalty_config=overexposure_penalty_config,
+    )
+    semantic_weight = max(0.0, float(scoring_weights.get("semantic", 1.0)))
+    keyword_weight = max(0.0, float(scoring_weights.get("keywords", 0.1)))
+    tag_weight = max(0.0, float(scoring_weights.get("tags", 0.15)))
+    method_weight = max(0.0, float(scoring_weights.get("methods", 0.15)))
+    raw_score = min(
+        1.0,
+        semantic_weight * semantic_score
+        + keyword_weight * keyword_score
+        + tag_weight * tag_score
+        + method_weight * method_score
+        + mode_bonus,
+    )
+    adjusted_score = max(0.0, raw_score - overexposure_penalty)
 
     if language_ctx.user_lang.startswith("en"):
         why_default = f"{display_name} matches {', '.join(themes) or 'the topic'} based on semantic similarity."
@@ -642,8 +715,13 @@ def _retrieval_result_to_match_item(
         citations=citations,
         scoreBreakdown={
             "semantic": round(semantic_score, 4),
+            "lexical": round(lexical_retrieval_score, 4),
+            "retrieval": round(hybrid_retrieval_score, 4),
             "keywords": round(keyword_score, 4),
             "tags": round(tag_score, 4),
+            "methods": round(method_score, 4),
+            "mode_bonus": round(mode_bonus, 4),
+            "overexposure_penalty": round(overexposure_penalty, 4),
         },
         keywords=keywords,
     )
@@ -686,22 +764,172 @@ def _resolve_citation_url(chunk: Chunk) -> str:
     return source_url
 
 
-def _chunks_to_citations(
-    chunks: Sequence[Chunk], themes: Sequence[str]
-) -> list[Citation]:
-    def _priority(url: str) -> int:
-        if url.startswith("staffinfo://"):
-            return 0
-        if "oslonyehoyskole.no" in url:
-            return 1
-        return 2
+def _source_kind_for_chunk(chunk: Chunk) -> str:
+    metadata = chunk.metadata or {}
+    source_kind = str(metadata.get("source_kind") or "").strip().lower()
+    if source_kind:
+        return source_kind
+    url = (chunk.source_url or "").lower()
+    if url.startswith("staffinfo://"):
+        return "staffinfo"
+    if "oslonyehoyskole.no" in url:
+        return "profile"
+    return "nva"
 
-    sorted_chunks = sorted(chunks, key=lambda c: _priority(c.source_url))
-    citations: list[Citation] = []
-    for idx, chunk in enumerate(sorted_chunks, start=1):
+
+def _priority_by_source_kind(source_priority: Sequence[str]) -> dict[str, int]:
+    ordering = [item.strip().lower() for item in source_priority if item.strip()]
+    if not ordering:
+        ordering = list(DEFAULT_CITATION_SOURCE_PRIORITY)
+    return {source_kind: idx for idx, source_kind in enumerate(ordering)}
+
+
+def _theme_token_set(themes: Sequence[str]) -> set[str]:
+    return {
+        token.lower()
+        for theme in themes
+        for token in tokenize(theme)
+        if len(token.strip()) > 2
+    }
+
+
+def _chunk_metadata_tags(chunk: Chunk) -> list[str]:
+    metadata = chunk.metadata or {}
+    raw_tags = metadata.get("tags")
+    if not isinstance(raw_tags, list):
+        return []
+    tags: list[str] = []
+    seen: set[str] = set()
+    for tag in raw_tags:
+        if not isinstance(tag, str):
+            continue
+        normalized = tag.strip()
+        if not normalized:
+            continue
+        lowered = normalized.lower()
+        if lowered in seen:
+            continue
+        seen.add(lowered)
+        tags.append(normalized)
+    return tags
+
+
+def _query_overlap_count(snippet: str, theme_tokens: set[str]) -> int:
+    if not snippet or not theme_tokens:
+        return 0
+    snippet_tokens = {token.lower() for token in tokenize(snippet) if len(token) > 2}
+    return len(theme_tokens & snippet_tokens)
+
+
+def _augment_citation_snippet_for_publication(
+    *,
+    chunk: Chunk,
+    snippet: str,
+    theme_tokens: set[str],
+    limit: int = CITATION_SNIPPET_LIMIT,
+) -> str:
+    tags = _chunk_metadata_tags(chunk)
+    if not tags:
+        return snippet
+
+    ranked_tags = sorted(
+        tags,
+        key=lambda tag: (-_query_overlap_count(tag, theme_tokens), len(tag)),
+    )
+    matched_tags = [
+        tag for tag in ranked_tags if _query_overlap_count(tag, theme_tokens) > 0
+    ]
+    selected_tags = (matched_tags or ranked_tags)[:6]
+    if not selected_tags:
+        return snippet
+
+    addition = f"Nokkelord: {', '.join(selected_tags)}"
+    if addition.lower() in snippet.lower():
+        return snippet
+
+    combined = f"{snippet} {addition}".strip()
+    if len(combined) <= limit:
+        return combined
+
+    truncated = combined[:limit]
+    last_space = truncated.rfind(" ")
+    if last_space > int(limit * 0.6):
+        truncated = truncated[:last_space]
+    return truncated.strip()
+
+
+def _chunks_for_scoring(chunks: Sequence[Chunk]) -> list[Chunk]:
+    prioritized = [
+        chunk
+        for chunk in chunks
+        if _source_kind_for_chunk(chunk) in {"nva", "profile"}
+    ]
+    return prioritized or list(chunks)
+
+
+def _chunks_to_citations(
+    chunks: Sequence[Chunk],
+    themes: Sequence[str],
+    *,
+    source_priority: Sequence[str] | None = None,
+    min_query_overlap: int = 1,
+    match_mode: str = DEFAULT_MATCH_MODE,
+) -> list[Citation]:
+    priority = _priority_by_source_kind(
+        source_priority or DEFAULT_CITATION_SOURCE_PRIORITY
+    )
+    sorted_chunks = sorted(
+        chunks,
+        key=lambda chunk: (
+            priority.get(_source_kind_for_chunk(chunk), len(priority)),
+            chunk.order,
+        ),
+    )
+
+    min_overlap = max(0, int(min_query_overlap))
+    theme_tokens = _theme_token_set(themes)
+
+    candidates: list[tuple[Chunk, str, int, str]] = []
+    for chunk in sorted_chunks:
         snippet = _extract_citation_snippet(chunk.text, themes)
         if not snippet:
             continue
+        source_kind = _source_kind_for_chunk(chunk)
+        overlap = _query_overlap_count(snippet, theme_tokens)
+        if (
+            match_mode == MATCH_MODE_PUBLICATION
+            and source_kind == "nva"
+            and overlap < min_overlap
+        ):
+            snippet = _augment_citation_snippet_for_publication(
+                chunk=chunk,
+                snippet=snippet,
+                theme_tokens=theme_tokens,
+            )
+            overlap = _query_overlap_count(snippet, theme_tokens)
+        if overlap < min_overlap:
+            continue
+        candidates.append((chunk, snippet, overlap, source_kind))
+
+    selected: list[tuple[Chunk, str, int, str]]
+    nva_candidates = [item for item in candidates if item[3] == "nva"]
+    if nva_candidates:
+        selected = nva_candidates
+    elif candidates:
+        selected = candidates
+    else:
+        fallback: list[tuple[Chunk, str, int, str]] = []
+        for chunk in sorted_chunks:
+            snippet = _extract_citation_snippet(chunk.text, themes)
+            if not snippet:
+                continue
+            fallback.append((chunk, snippet, 0, _source_kind_for_chunk(chunk)))
+            if len(fallback) >= 3:
+                break
+        selected = fallback
+
+    citations: list[Citation] = []
+    for idx, (chunk, snippet, _, _) in enumerate(selected, start=1):
         title = str(
             chunk.metadata.get("source_title") or chunk.metadata.get("name") or "Kilde"
         )
@@ -715,6 +943,168 @@ def _chunks_to_citations(
             )
         )
     return citations
+
+
+def _citation_source_kind(citation: Citation) -> str:
+    url = (citation.url or "").lower()
+    if "doi.org" in url or "nva.sikt.no/registration/" in url:
+        return "nva"
+    if url.startswith("staffinfo://"):
+        return "staffinfo"
+    return "profile"
+
+
+def _chunk_source_coverage(chunks: Sequence[Chunk]) -> dict[str, float]:
+    if not chunks:
+        return {}
+    counts: dict[str, int] = {}
+    for chunk in chunks:
+        source_kind = _source_kind_for_chunk(chunk)
+        counts[source_kind] = counts.get(source_kind, 0) + 1
+    total = float(len(chunks))
+    return {source_kind: count / total for source_kind, count in counts.items()}
+
+
+def _citation_overlap_score(citations: Sequence[Citation], themes: Sequence[str]) -> float:
+    theme_tokens = _theme_token_set(themes)
+    if not theme_tokens or not citations:
+        return 0.0
+    best_overlap = 0.0
+    denominator = float(len(theme_tokens))
+    for citation in citations:
+        overlap = _query_overlap_count(citation.snippet, theme_tokens)
+        best_overlap = max(best_overlap, overlap / max(1.0, denominator))
+    return min(1.0, best_overlap)
+
+
+def _normalize_mode_scoring_profile(
+    *,
+    match_mode: str,
+    mode_scoring_profiles: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    normalized_mode = (
+        match_mode if match_mode in MATCH_MODES else DEFAULT_MATCH_MODE
+    )
+    profile = mode_scoring_profiles.get(normalized_mode) or {}
+    source_kind_boosts_raw = profile.get("source_kind_boosts") or {}
+    source_kind_boosts = {}
+    if isinstance(source_kind_boosts_raw, dict):
+        source_kind_boosts = {
+            str(source_kind).strip().lower(): max(0.0, float(boost))
+            for source_kind, boost in source_kind_boosts_raw.items()
+            if str(source_kind).strip()
+        }
+    return {
+        "source_kind_boosts": source_kind_boosts,
+        "citation_overlap_weight": max(
+            0.0,
+            float(profile.get("citation_overlap_weight", 0.0)),
+        ),
+        "nva_citation_bonus": max(
+            0.0,
+            float(profile.get("nva_citation_bonus", 0.0)),
+        ),
+    }
+
+
+def _mode_score_bonus(
+    *,
+    chunks: Sequence[Chunk],
+    citations: Sequence[Citation],
+    themes: Sequence[str],
+    match_mode: str,
+    mode_scoring_profiles: dict[str, dict[str, Any]],
+) -> float:
+    profile = _normalize_mode_scoring_profile(
+        match_mode=match_mode,
+        mode_scoring_profiles=mode_scoring_profiles,
+    )
+    source_coverage = _chunk_source_coverage(chunks)
+    source_bonus = sum(
+        float(profile["source_kind_boosts"].get(source_kind, 0.0)) * coverage
+        for source_kind, coverage in source_coverage.items()
+    )
+    citation_overlap_bonus = float(profile["citation_overlap_weight"]) * _citation_overlap_score(
+        citations, themes
+    )
+    has_nva_citation = any(_citation_source_kind(citation) == "nva" for citation in citations)
+    nva_bonus = float(profile["nva_citation_bonus"]) if has_nva_citation else 0.0
+    return source_bonus + citation_overlap_bonus + nva_bonus
+
+
+def _normalize_overexposure_penalty_config(
+    overexposure_penalty_config: dict[str, Any],
+) -> dict[str, float | bool]:
+    config = overexposure_penalty_config or {}
+    return {
+        "enabled": bool(config.get("enabled", True)),
+        "low_signal_threshold": min(
+            1.0,
+            max(0.0, float(config.get("low_signal_threshold", 0.35))),
+        ),
+        "profile_source_weight": max(
+            0.0,
+            float(config.get("profile_source_weight", 0.2)),
+        ),
+        "staffinfo_source_weight": max(
+            0.0,
+            float(config.get("staffinfo_source_weight", 0.12)),
+        ),
+        "publication_without_nva_penalty": max(
+            0.0,
+            float(config.get("publication_without_nva_penalty", 0.04)),
+        ),
+        "max_penalty": max(
+            0.0,
+            float(config.get("max_penalty", 0.1)),
+        ),
+    }
+
+
+def _overexposure_score_penalty(
+    *,
+    chunks: Sequence[Chunk],
+    citations: Sequence[Citation],
+    themes: Sequence[str],
+    match_mode: str,
+    keyword_score: float,
+    tag_score: float,
+    method_score: float,
+    overexposure_penalty_config: dict[str, Any],
+) -> float:
+    profile = _normalize_overexposure_penalty_config(overexposure_penalty_config)
+    if not bool(profile.get("enabled")):
+        return 0.0
+
+    support_signal = max(
+        0.0,
+        min(
+            1.0,
+            max(
+                keyword_score,
+                tag_score,
+                method_score,
+                _citation_overlap_score(citations, themes),
+            ),
+        ),
+    )
+    low_signal_threshold = float(profile["low_signal_threshold"])
+    if support_signal >= low_signal_threshold:
+        return 0.0
+
+    source_coverage = _chunk_source_coverage(chunks)
+    dominance_weight = (
+        float(profile["profile_source_weight"]) * source_coverage.get("profile", 0.0)
+        + float(profile["staffinfo_source_weight"])
+        * source_coverage.get("staffinfo", 0.0)
+    )
+    penalty = max(0.0, low_signal_threshold - support_signal) * dominance_weight
+
+    has_nva_citation = any(_citation_source_kind(citation) == "nva" for citation in citations)
+    if match_mode == MATCH_MODE_PUBLICATION and not has_nva_citation:
+        penalty += float(profile["publication_without_nva_penalty"])
+
+    return min(float(profile["max_penalty"]), max(0.0, penalty))
 
 
 def _collect_chunk_keywords(chunks: Sequence[Chunk]) -> list[str]:
@@ -739,12 +1129,14 @@ def _collect_chunk_keywords(chunks: Sequence[Chunk]) -> list[str]:
 
 
 def _keyword_overlap_score(chunks: Sequence[Chunk], themes: Sequence[str]) -> float:
-    theme_tokens = {theme.strip().lower() for theme in themes if theme.strip()}
+    theme_tokens = _theme_token_set(themes)
     if not theme_tokens:
         return 0.0
     text_tokens: set[str] = set()
     for chunk in chunks:
-        text_tokens.update(tokenize(chunk.text))
+        text_tokens.update(
+            token.lower() for token in tokenize(chunk.text) if len(token) > 2
+        )
     if not text_tokens:
         return 0.0
     overlap = len(theme_tokens & text_tokens)
@@ -754,25 +1146,40 @@ def _keyword_overlap_score(chunks: Sequence[Chunk], themes: Sequence[str]) -> fl
 def _tag_overlap_score(keywords: Sequence[str], themes: Sequence[str]) -> float:
     if not keywords or not themes:
         return 0.0
-    keyword_tokens = {tag.strip().lower() for tag in keywords if tag.strip()}
-    theme_tokens = {theme.strip().lower() for theme in themes if theme.strip()}
+    keyword_tokens = {
+        token.lower()
+        for keyword in keywords
+        for token in tokenize(keyword)
+        if len(token) > 2
+    }
+    theme_tokens = _theme_token_set(themes)
     if not keyword_tokens or not theme_tokens:
         return 0.0
     overlap = len(keyword_tokens & theme_tokens)
-    return overlap / max(1, len(keyword_tokens))
+    return overlap / max(1, len(theme_tokens))
 
 
 def _method_overlap_score(keywords: Sequence[str], themes: Sequence[str]) -> float:
     if not keywords or not themes:
         return 0.0
-    method_tokens = {
-        k.strip().lower() for k in keywords if k.strip().lower() in METHOD_KEYWORDS
+    method_query_tokens = {
+        token.lower()
+        for method_keyword in METHOD_KEYWORDS
+        for token in tokenize(method_keyword)
+        if len(token) > 2
     }
-    theme_tokens = {t.strip().lower() for t in themes if t.strip()}
-    if not method_tokens or not theme_tokens:
+    method_tokens = {
+        token.lower()
+        for keyword in keywords
+        for token in tokenize(keyword)
+        if len(token) > 2 and token.lower() in method_query_tokens
+    }
+    theme_tokens = _theme_token_set(themes)
+    relevant_theme_method_tokens = theme_tokens & method_query_tokens
+    if not method_tokens or not relevant_theme_method_tokens:
         return 0.0
-    overlap = len(method_tokens & theme_tokens)
-    return overlap / max(1, len(theme_tokens))
+    overlap = len(method_tokens & relevant_theme_method_tokens)
+    return overlap / max(1, len(relevant_theme_method_tokens))
 
 
 def _request_state(request: Request) -> Any:
@@ -858,13 +1265,27 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
     ).lower()
 
     if retriever and vector_index_ready:
+        mode_scoring_profiles = {
+            mode: profile.model_dump()
+            for mode, profile in app_config.results.mode_scoring_profiles.items()
+        }
         rag_results = _match_via_retriever(
             retriever=retriever,
             payload=payload,
+            match_mode=payload.mode,
             max_candidates=app_config.results.max_candidates,
             translator=translator,
             language_ctx=language_ctx,
             query_text=query_text,
+            citation_source_priority=app_config.results.citation_source_priority,
+            min_query_overlap_per_citation=(
+                app_config.results.min_query_overlap_per_citation
+            ),
+            scoring_weights=app_config.results.scoring_weights.model_dump(),
+            mode_scoring_profiles=mode_scoring_profiles,
+            overexposure_penalty_config=(
+                app_config.results.overexposure_penalty.model_dump()
+            ),
         )
         if not retriever.is_active:
             state.vector_index_ready = False

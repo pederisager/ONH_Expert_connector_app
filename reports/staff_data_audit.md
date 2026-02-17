@@ -1,6 +1,6 @@
 # Staff Data Audit
 
-- Generated at: 2026-02-14T21:09:03.005212+00:00
+- Generated at: 2026-02-17T06:38:48.567404+00:00
 - Staff with issues: 85
 - High issues: 13
 - Medium issues: 45
@@ -82,7 +82,7 @@
 
 ### Bernt Hagtvet (Statsvitenskap og internasjonale relasjoner)
 
-- [low] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.221).
+- [low] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.243).
 - [low] nva_domain_outlier: NVA publications weakly align with profile/department terms (alignment_rate=0.49).
 
 ### Bjørnar Østby (Statsvitenskap og internasjonale relasjoner)
@@ -196,7 +196,7 @@
 
 ### Henrik Syse (Statsvitenskap og internasjonale relasjoner)
 
-- [low] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.221).
+- [low] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.223).
 - [medium] nva_domain_outlier: NVA publications weakly align with profile/department terms (alignment_rate=0.43).
 
 ### Henrik Wiig (Økonomi og administrasjon)
@@ -210,7 +210,7 @@
 
 ### Herman van Dijk (Helsefag)
 
-- [low] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.291).
+- [low] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.288).
 
 ### Hilde Eliassen Restad (Statsvitenskap og internasjonale relasjoner)
 
@@ -348,7 +348,7 @@
 
 ### Synne Groufh-Jacobsen (Helsefag)
 
-- [medium] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.139).
+- [medium] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.140).
 
 ### Tora Sagård (Statsvitenskap og internasjonale relasjoner)
 
@@ -365,7 +365,7 @@
 
 ### Torunn Sivertsen (Psykologi)
 
-- [medium] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.160).
+- [medium] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.159).
 
 ### Trude Hagen Kølbel (Psykologi)
 
@@ -377,7 +377,7 @@
 
 ### Umar Burki (Økonomi og administrasjon)
 
-- [medium] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.150).
+- [medium] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.157).
 
 ### Åste Herheim (Psykologi)
 

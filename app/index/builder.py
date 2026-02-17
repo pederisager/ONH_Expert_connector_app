@@ -12,7 +12,7 @@ import numpy as np
 
 from .chunking import Chunker
 from .embeddings import EmbeddingBackend
-from .models import Chunk, IndexPaths, StaffRecord
+from .models import Chunk, IndexPaths, NvaPublicationSnippet, StaffRecord
 from .staff_info_loader import (
     StaffInfo,
     extract_method_tags,
@@ -40,6 +40,8 @@ class StaffIndexBuilder:
         vector_store: LocalVectorStore | None = None,
         staff_info: dict[str, StaffInfo] | None = None,
         max_chunks_per_source: dict[str, int] | None = None,
+        max_chunks_per_document_per_source: dict[str, int] | None = None,
+        min_chunk_tokens_per_source: dict[str, int] | None = None,
     ) -> None:
         self.paths = paths
         self.chunker = chunker
@@ -50,6 +52,16 @@ class StaffIndexBuilder:
             key.lower(): value
             for key, value in (max_chunks_per_source or {}).items()
             if value >= 0
+        }
+        self.max_chunks_per_document_per_source = {
+            key.lower(): value
+            for key, value in (max_chunks_per_document_per_source or {}).items()
+            if value >= 0
+        }
+        self.min_chunk_tokens_per_source = {
+            key.lower(): value
+            for key, value in (min_chunk_tokens_per_source or {}).items()
+            if value > 0
         }
 
     def build(self, records: Sequence[StaffRecord]) -> BuildSummary:
@@ -137,6 +149,12 @@ class StaffIndexBuilder:
                 metadata=synthetic_metadata,
                 source_offsets=source_offsets,
                 source_counts=source_counts,
+                max_chunks_override=self._document_chunk_limit(
+                    source_kind="staffinfo",
+                    source_counts=source_counts,
+                    remaining_documents=1,
+                ),
+                min_chunk_tokens=self.min_chunk_tokens_per_source.get("staffinfo"),
             )
             chunks.extend(synthetic_chunks)
 
@@ -149,6 +167,12 @@ class StaffIndexBuilder:
             metadata=base_metadata,
             source_offsets=source_offsets,
             source_counts=source_counts,
+            max_chunks_override=self._document_chunk_limit(
+                source_kind="profile",
+                source_counts=source_counts,
+                remaining_documents=1,
+            ),
+            min_chunk_tokens=self.min_chunk_tokens_per_source.get("profile"),
         )
         chunks.extend(summary_chunks)
 
@@ -187,10 +211,27 @@ class StaffIndexBuilder:
         source_counts: dict[str, int],
     ) -> list[Chunk]:
         nva_chunks: list[Chunk] = []
+        valid_publications: list[tuple[NvaPublicationSnippet, str]] = []
+        nva_min_tokens = self.min_chunk_tokens_per_source.get("nva")
         for result in record.nva_publications:
             text = result.as_text()
             if not text:
                 continue
+            if nva_min_tokens is not None:
+                token_count = self.chunker.estimate_tokens(text)
+                if token_count < nva_min_tokens:
+                    continue
+            valid_publications.append((result, text))
+        total_publications = len(valid_publications)
+        for index, (result, text) in enumerate(valid_publications):
+            remaining_documents = total_publications - index
+            per_document_limit = self._document_chunk_limit(
+                source_kind="nva",
+                source_counts=source_counts,
+                remaining_documents=remaining_documents,
+            )
+            if per_document_limit == 0:
+                break
             source_url = result.source_url or record.profile_url
             combined_tags = (
                 list(dict.fromkeys([*record.tags, *(result.tags or [])]))
@@ -219,6 +260,9 @@ class StaffIndexBuilder:
                     metadata=metadata,
                     source_offsets=source_offsets,
                     source_counts=source_counts,
+                    max_chunks_override=per_document_limit,
+                    min_chunk_tokens=self.min_chunk_tokens_per_source.get("nva"),
+                    allow_short_single_chunk=False,
                 )
             )
         return nva_chunks
@@ -234,6 +278,9 @@ class StaffIndexBuilder:
         metadata: dict[str, object],
         source_offsets: dict[str, int],
         source_counts: dict[str, int],
+        max_chunks_override: int | None = None,
+        min_chunk_tokens: int | None = None,
+        allow_short_single_chunk: bool = True,
     ) -> list[Chunk]:
         normalized_kind = source_kind.lower()
         configured_limit = self.max_chunks_per_source.get(normalized_kind)
@@ -243,6 +290,14 @@ class StaffIndexBuilder:
             remaining = max(0, configured_limit - consumed)
             if remaining == 0:
                 return []
+        if max_chunks_override is not None:
+            max_chunks_override = max(0, max_chunks_override)
+            if max_chunks_override == 0:
+                return []
+            if remaining is None:
+                remaining = max_chunks_override
+            else:
+                remaining = min(remaining, max_chunks_override)
 
         new_chunks = self.chunker.chunk_text(
             staff_slug=staff_slug,
@@ -252,6 +307,8 @@ class StaffIndexBuilder:
             source_namespace=source_namespace,
             start_index=source_offsets.get(normalized_kind, 0),
             max_chunks=remaining,
+            min_chunk_tokens=min_chunk_tokens,
+            allow_short_single_chunk=allow_short_single_chunk,
         )
         source_offsets[normalized_kind] = source_offsets.get(normalized_kind, 0) + len(
             new_chunks
@@ -260,6 +317,32 @@ class StaffIndexBuilder:
             new_chunks
         )
         return new_chunks
+
+    def _document_chunk_limit(
+        self,
+        *,
+        source_kind: str,
+        source_counts: dict[str, int],
+        remaining_documents: int,
+    ) -> int | None:
+        normalized_kind = source_kind.lower()
+        limit = self.max_chunks_per_document_per_source.get(normalized_kind)
+        if remaining_documents <= 0:
+            return limit
+
+        total_limit = self.max_chunks_per_source.get(normalized_kind)
+        if total_limit is None:
+            return limit
+
+        consumed = source_counts.get(normalized_kind, 0)
+        remaining_budget = max(0, total_limit - consumed)
+        if remaining_budget == 0:
+            return 0
+
+        fair_share = max(1, remaining_budget // remaining_documents)
+        if limit is None:
+            return fair_share
+        return min(limit, fair_share)
 
     def _write_chunks_snapshot(self, slug: str, chunks: Iterable[Chunk]) -> None:
         payload = [self._chunk_to_dict(chunk) for chunk in chunks]

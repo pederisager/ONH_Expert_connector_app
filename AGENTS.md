@@ -27,6 +27,7 @@ Staff documents fetched from ONH/NVA sources are cached as whole `StaffDocument`
 
 Citation snippets returned from `/match` now use a theme-aware sentence window and allow up to ~3000 characters (see `routes.CITATION_SNIPPET_LIMIT`) so the LLM receives full chunk context. Avoid shrinking this limit without revalidating match quality.
 For `publication_grounded` queries, citation building now enriches low-overlap NVA snippets with ranked chunk `tags` as `Nokkelord` context (see `routes._augment_citation_snippet_for_publication` and `routes._chunks_to_citations`). Preserve this mode-specific behavior and its tests when adjusting citation logic.
+RAG match scoring now supports `results.overexposure-penalty` in `data/app.config.yaml`, applied in `routes._overexposure_score_penalty` for low-signal profile/staffinfo-heavy matches (with extra publication-mode penalty when NVA evidence is absent). Keep this config-driven and covered by route tests when tuning overexposure behavior.
 
 Language handling
 - `data/app.config.yaml` now contains a `language` block controlling detection, embedding/LLM language modes (`multilingual` vs `en-only`), and the translation backend. Translation is off by default and uses a local/no-op translator unless explicitly enabled.

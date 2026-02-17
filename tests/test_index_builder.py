@@ -122,3 +122,113 @@ def test_index_builder_assigns_unique_chunk_ids_across_sources(tmp_path: Path) -
     assert any(chunk_id.startswith("alpha-staffinfo-") for chunk_id in ids)
     assert any(chunk_id.startswith("alpha-profile-") for chunk_id in ids)
     assert any(chunk_id.startswith("alpha-nva-") for chunk_id in ids)
+
+
+def test_index_builder_applies_nva_document_budget_caps(tmp_path: Path) -> None:
+    paths = IndexPaths(root=tmp_path / "index")
+    chunker = Chunker(chunk_size=6, chunk_overlap=0)
+    embedder = DummyEmbeddingBackend(dimension=4)
+    builder = StaffIndexBuilder(
+        paths=paths,
+        chunker=chunker,
+        embedder=embedder,
+        vector_store=LocalVectorStore(paths.vectors_dir),
+        max_chunks_per_source={"nva": 3, "profile": 1, "staffinfo": 1},
+        max_chunks_per_document_per_source={"nva": 1},
+        min_chunk_tokens_per_source={"nva": 1},
+    )
+
+    record = StaffRecord(
+        slug="alpha",
+        name="Navn alpha",
+        title="FÃ¸rsteamanuensis",
+        department="Psykologi",
+        profile_url="https://example.com/alpha",
+        summary="Kort profiltekst om psykologi og traumer.",
+        sources=[SourceLink(url="https://example.com/alpha")],
+        nva_publications=[
+            NvaPublicationSnippet(
+                publication_id="p1",
+                title="Traumeinformert behandling",
+                abstract="klinisk psykologi forskning behandling evaluering",
+                source_url="https://example.com/nva/p1",
+            ),
+            NvaPublicationSnippet(
+                publication_id="p2",
+                title="Psykisk helse i ungdom",
+                abstract="skole psykologi forebygging evaluering tiltak",
+                source_url="https://example.com/nva/p2",
+            ),
+            NvaPublicationSnippet(
+                publication_id="p3",
+                title="Arbeid og helse",
+                abstract="arbeidsliv organisasjon psykisk helse inkludering tiltak",
+                source_url="https://example.com/nva/p3",
+            ),
+        ],
+    )
+
+    builder.build([record])
+
+    chunk_file = paths.chunks_dir / "alpha.json"
+    payload = json.loads(chunk_file.read_text(encoding="utf-8"))
+    nva_chunks = [
+        item
+        for item in payload
+        if item.get("metadata", {}).get("source_kind") == "nva"
+    ]
+    assert len(nva_chunks) == 3
+    assert {
+        item.get("metadata", {}).get("nva_publication_id") for item in nva_chunks
+    } == {"p1", "p2", "p3"}
+
+
+def test_index_builder_drops_short_nva_singleton_chunks(tmp_path: Path) -> None:
+    paths = IndexPaths(root=tmp_path / "index")
+    chunker = Chunker(chunk_size=50, chunk_overlap=0)
+    embedder = DummyEmbeddingBackend(dimension=4)
+    builder = StaffIndexBuilder(
+        paths=paths,
+        chunker=chunker,
+        embedder=embedder,
+        vector_store=LocalVectorStore(paths.vectors_dir),
+        max_chunks_per_source={"nva": 5, "profile": 1, "staffinfo": 1},
+        max_chunks_per_document_per_source={"nva": 1},
+        min_chunk_tokens_per_source={"nva": 10},
+    )
+
+    record = StaffRecord(
+        slug="alpha",
+        name="Navn alpha",
+        title="FÃ¸rsteamanuensis",
+        department="Psykologi",
+        profile_url="https://example.com/alpha",
+        summary="Kort profiltekst om psykologi og traumer.",
+        sources=[SourceLink(url="https://example.com/alpha")],
+        nva_publications=[
+            NvaPublicationSnippet(
+                publication_id="p-long",
+                title="Studie av beslutningspsykologi i komplekse organisasjoner",
+                abstract="klinisk psykologi forskning behandling evaluering i flere kontekster",
+                source_url="https://example.com/nva/p-long",
+            ),
+            NvaPublicationSnippet(
+                publication_id="p-short",
+                title="Kort tittel",
+                abstract="",
+                source_url="https://example.com/nva/p-short",
+            ),
+        ],
+    )
+
+    builder.build([record])
+
+    chunk_file = paths.chunks_dir / "alpha.json"
+    payload = json.loads(chunk_file.read_text(encoding="utf-8"))
+    nva_chunks = [
+        item
+        for item in payload
+        if item.get("metadata", {}).get("source_kind") == "nva"
+    ]
+    assert len(nva_chunks) == 1
+    assert nva_chunks[0].get("metadata", {}).get("nva_publication_id") == "p-long"

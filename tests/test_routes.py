@@ -10,8 +10,9 @@ from app.fetch_utils import FetchUtils
 from app.index.builder import DummyEmbeddingBackend
 from app.index.models import Chunk
 from app.index.vector_store import LocalVectorStore
+from app.language_utils import LanguageContext
 from app.match_engine import StaffProfile
-from app.rag.retriever import EmbeddingRetriever
+from app.rag.retriever import EmbeddingRetriever, RetrievalResult
 
 
 @pytest.mark.asyncio
@@ -248,3 +249,486 @@ def test_chunks_to_citations_maps_nva_url() -> None:
     citations = routes._chunks_to_citations([chunk], themes=[])
     assert citations
     assert citations[0].url == "https://nva.sikt.no/registration/abc123"
+
+
+def test_chunks_to_citations_prefers_nva_when_overlap_exists() -> None:
+    staffinfo = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-staffinfo-0000",
+        text="Generell beskrivelse uten relevante nøkkelord.",
+        order=0,
+        token_count=6,
+        source_url="staffinfo://slug",
+        metadata={"source_kind": "staffinfo", "source_title": "Staffinfo"},
+    )
+    nva = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-nva-0000",
+        text="Denne artikkelen handler om personvern og digital sikkerhet.",
+        order=1,
+        token_count=9,
+        source_url="https://api.nva.unit.no/publication/abc123",
+        metadata={
+            "source_kind": "nva",
+            "source_title": "NVA",
+            "nva_publication_id": "abc123",
+        },
+    )
+
+    citations = routes._chunks_to_citations(
+        [staffinfo, nva],
+        themes=["personvern"],
+        source_priority=["nva", "profile", "staffinfo"],
+        min_query_overlap=1,
+    )
+
+    assert citations
+    assert citations[0].url == "https://nva.sikt.no/registration/abc123"
+
+
+def test_chunks_to_citations_fallbacks_when_nva_overlap_missing() -> None:
+    nva = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-nva-0000",
+        text="Denne artikkelen handler om helt andre temaer.",
+        order=0,
+        token_count=8,
+        source_url="https://api.nva.unit.no/publication/abc123",
+        metadata={
+            "source_kind": "nva",
+            "source_title": "NVA",
+            "nva_publication_id": "abc123",
+        },
+    )
+    profile = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-profile-0000",
+        text="Profilen omtaler personvern i undervisning.",
+        order=1,
+        token_count=6,
+        source_url="https://oslonyehoyskole.no/ansatt/test",
+        metadata={"source_kind": "profile", "source_title": "Profil"},
+    )
+
+    citations = routes._chunks_to_citations(
+        [nva, profile],
+        themes=["personvern"],
+        source_priority=["nva", "profile", "staffinfo"],
+        min_query_overlap=1,
+    )
+
+    assert citations
+    assert citations[0].url == "https://oslonyehoyskole.no/ansatt/test"
+
+
+def test_chunks_to_citations_publication_mode_uses_nva_tags_for_overlap() -> None:
+    nva = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-nva-0001",
+        text="Predictors of internalising behaviour problems in adolescents.",
+        order=0,
+        token_count=10,
+        source_url="https://api.nva.unit.no/publication/abc124",
+        metadata={
+            "source_kind": "nva",
+            "source_title": "Predictors of internalising behaviour problems",
+            "nva_publication_id": "abc124",
+            "tags": ["Utviklingspsykopatologi", "Longitudinelle studier"],
+        },
+    )
+    profile = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-profile-0001",
+        text="Profilen omtaler utviklingspsykopatologi i norske studier.",
+        order=1,
+        token_count=8,
+        source_url="https://oslonyehoyskole.no/ansatt/test",
+        metadata={"source_kind": "profile", "source_title": "Profil"},
+    )
+
+    publication_citations = routes._chunks_to_citations(
+        [profile, nva],
+        themes=["utviklingspsykopatologi"],
+        source_priority=["nva", "profile"],
+        min_query_overlap=1,
+        match_mode="publication_grounded",
+    )
+    profile_citations = routes._chunks_to_citations(
+        [profile, nva],
+        themes=["utviklingspsykopatologi"],
+        source_priority=["nva", "profile"],
+        min_query_overlap=1,
+        match_mode="profile_grounded",
+    )
+
+    assert publication_citations
+    assert publication_citations[0].url == "https://nva.sikt.no/registration/abc124"
+    assert "Nokkelord:" in publication_citations[0].snippet
+    assert "Utviklingspsykopatologi" in publication_citations[0].snippet
+    assert profile_citations
+    assert profile_citations[0].url == "https://oslonyehoyskole.no/ansatt/test"
+
+
+def test_keyword_overlap_score_uses_tokenized_themes() -> None:
+    chunk = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-0001",
+        text="Digital sikkerhet og personvern i undervisning.",
+        order=0,
+        token_count=6,
+        source_url="https://example.org/source",
+        metadata={},
+    )
+
+    score = routes._keyword_overlap_score(  # type: ignore[attr-defined]
+        [chunk], ["digital sikkerhet", "personvern"]
+    )
+    assert score == pytest.approx(1.0)
+
+
+def test_method_overlap_score_detects_multiword_method_tokens() -> None:
+    score = routes._method_overlap_score(  # type: ignore[attr-defined]
+        ["Mixed methods", "Psykologi"],
+        ["mixed methods i helsefag"],
+    )
+    assert score > 0.0
+
+
+def test_retrieval_result_scoring_weights_are_applied() -> None:
+    chunk = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-0002",
+        text="Personvern og digital sikkerhet i undervisning.",
+        order=0,
+        token_count=6,
+        source_url="https://example.org/source",
+        metadata={
+            "name": "Test Forsker",
+            "department": "Psykologi",
+            "profile_url": "https://example.org/profile",
+            "tags": ["digital sikkerhet"],
+            "source_kind": "profile",
+        },
+    )
+    result = RetrievalResult(
+        staff_slug="slug",
+        score=0.4,
+        chunks=[chunk],
+        staff_name="Test Forsker",
+        metadata={"department": "Psykologi"},
+    )
+    language_ctx = LanguageContext(
+        user_lang="no",
+        query_lang="no",
+        embed_lang="no",
+        llm_lang="no",
+        translation_enabled=False,
+        translate_for_embedding=False,
+        translate_for_llm_input=False,
+        translate_llm_output=False,
+    )
+
+    semantic_only = routes._retrieval_result_to_match_item(  # type: ignore[attr-defined]
+        result,
+        ["digital sikkerhet"],
+        match_mode="publication_grounded",
+        language_ctx=language_ctx,
+        citation_source_priority=["profile"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles={
+            "publication_grounded": {},
+            "profile_grounded": {},
+        },
+        overexposure_penalty_config={},
+    )
+    boosted = routes._retrieval_result_to_match_item(  # type: ignore[attr-defined]
+        result,
+        ["digital sikkerhet"],
+        match_mode="publication_grounded",
+        language_ctx=language_ctx,
+        citation_source_priority=["profile"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.2, "tags": 0.2, "methods": 0.0},
+        mode_scoring_profiles={
+            "publication_grounded": {},
+            "profile_grounded": {},
+        },
+        overexposure_penalty_config={},
+    )
+
+    assert semantic_only is not None
+    assert boosted is not None
+    assert semantic_only.score == pytest.approx(0.4, abs=1e-4)
+    assert boosted.score > semantic_only.score
+
+
+def test_mode_scoring_prefers_nva_for_publication_grounded() -> None:
+    nva_chunk = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-0003",
+        text="Personvern og digital sikkerhet i publisering.",
+        order=0,
+        token_count=7,
+        source_url="https://api.nva.unit.no/publication/abc123",
+        metadata={
+            "name": "Publikasjonsforsker",
+            "department": "Psykologi",
+            "profile_url": "https://example.org/publikasjon",
+            "source_kind": "nva",
+            "nva_publication_id": "abc123",
+        },
+    )
+    result = RetrievalResult(
+        staff_slug="slug",
+        score=0.4,
+        chunks=[nva_chunk],
+        staff_name="Publikasjonsforsker",
+        metadata={"department": "Psykologi", "semantic_score": 0.4},
+    )
+    language_ctx = LanguageContext(
+        user_lang="no",
+        query_lang="no",
+        embed_lang="no",
+        llm_lang="no",
+        translation_enabled=False,
+        translate_for_embedding=False,
+        translate_for_llm_input=False,
+        translate_llm_output=False,
+    )
+    mode_profiles = {
+        "publication_grounded": {
+            "source_kind_boosts": {"nva": 0.2},
+            "citation_overlap_weight": 0.1,
+            "nva_citation_bonus": 0.1,
+        },
+        "profile_grounded": {
+            "source_kind_boosts": {"profile": 0.2, "staffinfo": 0.1},
+            "citation_overlap_weight": 0.0,
+            "nva_citation_bonus": 0.0,
+        },
+    }
+
+    publication_item = routes._retrieval_result_to_match_item(  # type: ignore[attr-defined]
+        result,
+        ["personvern"],
+        match_mode="publication_grounded",
+        language_ctx=language_ctx,
+        citation_source_priority=["nva", "profile"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles=mode_profiles,
+        overexposure_penalty_config={},
+    )
+    profile_item = routes._retrieval_result_to_match_item(  # type: ignore[attr-defined]
+        result,
+        ["personvern"],
+        match_mode="profile_grounded",
+        language_ctx=language_ctx,
+        citation_source_priority=["nva", "profile"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles=mode_profiles,
+        overexposure_penalty_config={},
+    )
+
+    assert publication_item is not None
+    assert profile_item is not None
+    assert publication_item.score > profile_item.score
+    assert publication_item.score_breakdown["mode_bonus"] > profile_item.score_breakdown["mode_bonus"]
+
+
+def test_mode_scoring_prefers_profile_for_profile_grounded() -> None:
+    profile_chunk = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-0004",
+        text="Klinisk psykologi og praksisnaer veiledning.",
+        order=0,
+        token_count=6,
+        source_url="https://oslonyehoyskole.no/ansatt/test",
+        metadata={
+            "name": "Profilforsker",
+            "department": "Psykologi",
+            "profile_url": "https://oslonyehoyskole.no/ansatt/test",
+            "source_kind": "profile",
+        },
+    )
+    result = RetrievalResult(
+        staff_slug="slug",
+        score=0.4,
+        chunks=[profile_chunk],
+        staff_name="Profilforsker",
+        metadata={"department": "Psykologi", "semantic_score": 0.4},
+    )
+    language_ctx = LanguageContext(
+        user_lang="no",
+        query_lang="no",
+        embed_lang="no",
+        llm_lang="no",
+        translation_enabled=False,
+        translate_for_embedding=False,
+        translate_for_llm_input=False,
+        translate_llm_output=False,
+    )
+    mode_profiles = {
+        "publication_grounded": {
+            "source_kind_boosts": {"nva": 0.2},
+            "citation_overlap_weight": 0.1,
+            "nva_citation_bonus": 0.1,
+        },
+        "profile_grounded": {
+            "source_kind_boosts": {"profile": 0.25, "staffinfo": 0.1},
+            "citation_overlap_weight": 0.0,
+            "nva_citation_bonus": 0.0,
+        },
+    }
+
+    publication_item = routes._retrieval_result_to_match_item(  # type: ignore[attr-defined]
+        result,
+        ["klinisk psykologi"],
+        match_mode="publication_grounded",
+        language_ctx=language_ctx,
+        citation_source_priority=["profile", "nva"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles=mode_profiles,
+        overexposure_penalty_config={},
+    )
+    profile_item = routes._retrieval_result_to_match_item(  # type: ignore[attr-defined]
+        result,
+        ["klinisk psykologi"],
+        match_mode="profile_grounded",
+        language_ctx=language_ctx,
+        citation_source_priority=["profile", "nva"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles=mode_profiles,
+        overexposure_penalty_config={},
+    )
+
+    assert publication_item is not None
+    assert profile_item is not None
+    assert profile_item.score > publication_item.score
+    assert profile_item.score_breakdown["mode_bonus"] > publication_item.score_breakdown["mode_bonus"]
+
+
+def test_overexposure_penalty_reduces_low_signal_profile_spillover() -> None:
+    profile_chunk = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-0005",
+        text="Bred erfaring med undervisning, ledelse og veiledning i organisasjoner.",
+        order=0,
+        token_count=9,
+        source_url="https://oslonyehoyskole.no/ansatt/test",
+        metadata={
+            "name": "Bred Profil",
+            "department": "Psykologi",
+            "profile_url": "https://oslonyehoyskole.no/ansatt/test",
+            "source_kind": "profile",
+        },
+    )
+    result = RetrievalResult(
+        staff_slug="slug",
+        score=0.6,
+        chunks=[profile_chunk],
+        staff_name="Bred Profil",
+        metadata={"department": "Psykologi", "semantic_score": 0.6},
+    )
+    language_ctx = LanguageContext(
+        user_lang="no",
+        query_lang="no",
+        embed_lang="no",
+        llm_lang="no",
+        translation_enabled=False,
+        translate_for_embedding=False,
+        translate_for_llm_input=False,
+        translate_llm_output=False,
+    )
+
+    item = routes._retrieval_result_to_match_item(  # type: ignore[attr-defined]
+        result,
+        ["konfliktforskning", "etiopia"],
+        match_mode="publication_grounded",
+        language_ctx=language_ctx,
+        citation_source_priority=["profile", "nva"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles={
+            "publication_grounded": {},
+            "profile_grounded": {},
+        },
+        overexposure_penalty_config={
+            "enabled": True,
+            "low_signal_threshold": 0.4,
+            "profile_source_weight": 0.4,
+            "staffinfo_source_weight": 0.3,
+            "publication_without_nva_penalty": 0.08,
+            "max_penalty": 0.2,
+        },
+    )
+
+    assert item is not None
+    assert item.score < 0.6
+    assert item.score_breakdown["overexposure_penalty"] > 0.0
+
+
+def test_overexposure_penalty_keeps_high_signal_nva_match_intact() -> None:
+    nva_chunk = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-0006",
+        text="Konfliktforskning i Etiopia med analyser av fredsforhandlinger.",
+        order=0,
+        token_count=8,
+        source_url="https://api.nva.unit.no/publication/abc333",
+        metadata={
+            "name": "Konfliktforsker",
+            "department": "Statsvitenskap",
+            "profile_url": "https://example.org/konflikt",
+            "source_kind": "nva",
+            "nva_publication_id": "abc333",
+            "tags": ["konfliktforskning", "Etiopia"],
+        },
+    )
+    result = RetrievalResult(
+        staff_slug="slug",
+        score=0.6,
+        chunks=[nva_chunk],
+        staff_name="Konfliktforsker",
+        metadata={"department": "Statsvitenskap", "semantic_score": 0.6},
+    )
+    language_ctx = LanguageContext(
+        user_lang="no",
+        query_lang="no",
+        embed_lang="no",
+        llm_lang="no",
+        translation_enabled=False,
+        translate_for_embedding=False,
+        translate_for_llm_input=False,
+        translate_llm_output=False,
+    )
+
+    item = routes._retrieval_result_to_match_item(  # type: ignore[attr-defined]
+        result,
+        ["konfliktforskning", "etiopia"],
+        match_mode="publication_grounded",
+        language_ctx=language_ctx,
+        citation_source_priority=["nva", "profile"],
+        min_query_overlap_per_citation=1,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles={
+            "publication_grounded": {},
+            "profile_grounded": {},
+        },
+        overexposure_penalty_config={
+            "enabled": True,
+            "low_signal_threshold": 0.4,
+            "profile_source_weight": 0.4,
+            "staffinfo_source_weight": 0.3,
+            "publication_without_nva_penalty": 0.08,
+            "max_penalty": 0.2,
+        },
+    )
+
+    assert item is not None
+    assert item.score == pytest.approx(0.6, abs=1e-4)
+    assert item.score_breakdown["overexposure_penalty"] == pytest.approx(0.0, abs=1e-4)

@@ -39,9 +39,91 @@ class CacheConfig(BaseModel):
 
 
 class ResultsConfig(BaseModel):
+    class ResultsScoringWeights(BaseModel):
+        semantic: float = Field(default=1.0, ge=0.0)
+        keywords: float = Field(default=0.1, ge=0.0)
+        tags: float = Field(default=0.15, ge=0.0)
+        methods: float = Field(default=0.15, ge=0.0)
+
+    class ResultsModeScoringProfile(BaseModel):
+        source_kind_boosts: dict[str, float] = Field(
+            alias="source-kind-boosts",
+            default_factory=dict,
+        )
+        citation_overlap_weight: float = Field(
+            alias="citation-overlap-weight",
+            default=0.0,
+            ge=0.0,
+        )
+        nva_citation_bonus: float = Field(
+            alias="nva-citation-bonus",
+            default=0.0,
+            ge=0.0,
+        )
+
+    class ResultsOverexposurePenalty(BaseModel):
+        enabled: bool = Field(default=True)
+        low_signal_threshold: float = Field(
+            alias="low-signal-threshold",
+            default=0.35,
+            ge=0.0,
+            le=1.0,
+        )
+        profile_source_weight: float = Field(
+            alias="profile-source-weight",
+            default=0.2,
+            ge=0.0,
+        )
+        staffinfo_source_weight: float = Field(
+            alias="staffinfo-source-weight",
+            default=0.12,
+            ge=0.0,
+        )
+        publication_without_nva_penalty: float = Field(
+            alias="publication-without-nva-penalty",
+            default=0.04,
+            ge=0.0,
+        )
+        max_penalty: float = Field(
+            alias="max-penalty",
+            default=0.1,
+            ge=0.0,
+        )
+
     max_candidates: int = Field(alias="max-candidates", default=10)
     min_similarity_score: float = Field(alias="min-similarity-score", default=0.25)
     diversity_weight: float = Field(alias="diversity-weight", default=0.1)
+    citation_source_priority: list[str] = Field(
+        alias="citation-source-priority",
+        default_factory=lambda: ["nva", "profile", "staffinfo"],
+    )
+    min_query_overlap_per_citation: int = Field(
+        alias="min-query-overlap-per-citation",
+        default=1,
+    )
+    scoring_weights: ResultsScoringWeights = Field(
+        alias="scoring-weights",
+        default_factory=ResultsScoringWeights,
+    )
+    mode_scoring_profiles: dict[str, ResultsModeScoringProfile] = Field(
+        alias="mode-scoring-profiles",
+        default_factory=lambda: {
+            "publication_grounded": {
+                "source-kind-boosts": {"nva": 0.18, "profile": 0.03, "staffinfo": 0.0},
+                "citation-overlap-weight": 0.12,
+                "nva-citation-bonus": 0.08,
+            },
+            "profile_grounded": {
+                "source-kind-boosts": {"nva": 0.03, "profile": 0.14, "staffinfo": 0.09},
+                "citation-overlap-weight": 0.06,
+                "nva-citation-bonus": 0.0,
+            },
+        },
+    )
+    overexposure_penalty: ResultsOverexposurePenalty = Field(
+        alias="overexposure-penalty",
+        default_factory=ResultsOverexposurePenalty,
+    )
 
 
 class RagConfig(BaseModel):
@@ -49,6 +131,24 @@ class RagConfig(BaseModel):
     chunk_size: int = Field(alias="chunk-size", default=400)
     chunk_overlap: int = Field(alias="chunk-overlap", default=60)
     max_chunks_per_profile: int = Field(alias="max-chunks-per-profile", default=40)
+    hybrid_semantic_weight: float = Field(
+        alias="hybrid-semantic-weight",
+        default=0.85,
+        ge=0.0,
+    )
+    hybrid_lexical_weight: float = Field(
+        alias="hybrid-lexical-weight",
+        default=0.15,
+        ge=0.0,
+    )
+    source_weights: dict[str, float] = Field(
+        alias="source-weights",
+        default_factory=lambda: {"nva": 1.0, "profile": 0.8, "staffinfo": 0.45},
+    )
+    max_chunks_per_source_per_staff: dict[str, int] = Field(
+        alias="max-chunks-per-source-per-staff",
+        default_factory=lambda: {"nva": 3, "profile": 1, "staffinfo": 1},
+    )
     embedding_model: str = Field(
         alias="embedding-model",
         default="sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
