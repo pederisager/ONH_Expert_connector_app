@@ -37,7 +37,7 @@ This repo includes `Dockerfile`, `.dockerignore`, `railway.json`, and `requireme
    - `GET /queue` returns `204`/healthy.
    - Open `/` and run one query through the UI.
 
-The image build runs `python3 -m app.index.build --index-root data/index`, so the deployed container always has a local vector index even though `data/index` is git-ignored.
+`data/index` is git-ignored, so first deploys run in lexical fallback mode unless you explicitly commit/provide an index artifact.
 
 ### Staff summaries
 - Source of truth: `staff_info.json` (maintained manually).

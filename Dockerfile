@@ -17,10 +17,6 @@ RUN pip install --upgrade pip && \
 
 COPY . .
 
-# Build a local vector index into the image so deploy/runtime never depends on
-# checked-in data/index artifacts.
-RUN python3 -m app.index.build --index-root data/index
-
 EXPOSE 8080
 
 CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8080}"]

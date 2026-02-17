@@ -70,30 +70,39 @@ def create_app() -> FastAPI:
     llm_explainer = LLMExplainer(model_config=models_config.llm_model.model_dump())
     translator = create_translator(app_config.language.translation)
 
-    match_engine = MatchEngine(
-        embedding_model_name=models_config.embedding_model.name,
-        embedding_backend=models_config.embedding_model.backend,
-        embedding_device=models_config.embedding_model.device or "auto",
-        embedding_endpoint=models_config.embedding_model.endpoint,
-    )
-
     index_root = (PROJECT_ROOT / app_config.rag.index_root).resolve()
     index_paths = IndexPaths(root=index_root)
     vector_store = LocalVectorStore(index_paths.vectors_dir)
-    retriever_embedder = create_embedding_backend(models_config, app_config=app_config)
-    max_chunks_per_source = app_config.rag.max_chunks_per_source_per_staff
-    max_chunks_per_staff = max(1, sum(max_chunks_per_source.values()))
-    embedding_retriever = EmbeddingRetriever(
-        vector_store=vector_store,
-        embedder=retriever_embedder,
-        min_score=app_config.results.min_similarity_score,
-        max_chunks_per_staff=max_chunks_per_staff,
-        semantic_weight=app_config.rag.hybrid_semantic_weight,
-        lexical_weight=app_config.rag.hybrid_lexical_weight,
-        source_weights=app_config.rag.source_weights,
-        max_chunks_per_source=max_chunks_per_source,
-    )
     vector_index_ready = len(vector_store) > 0
+    if vector_index_ready:
+        match_engine = MatchEngine(
+            embedding_model_name=models_config.embedding_model.name,
+            embedding_backend=models_config.embedding_model.backend,
+            embedding_device=models_config.embedding_model.device or "auto",
+            embedding_endpoint=models_config.embedding_model.endpoint,
+        )
+        retriever_embedder = create_embedding_backend(
+            models_config, app_config=app_config
+        )
+        max_chunks_per_source = app_config.rag.max_chunks_per_source_per_staff
+        max_chunks_per_staff = max(1, sum(max_chunks_per_source.values()))
+        embedding_retriever: EmbeddingRetriever | None = EmbeddingRetriever(
+            vector_store=vector_store,
+            embedder=retriever_embedder,
+            min_score=app_config.results.min_similarity_score,
+            max_chunks_per_staff=max_chunks_per_staff,
+            semantic_weight=app_config.rag.hybrid_semantic_weight,
+            lexical_weight=app_config.rag.hybrid_lexical_weight,
+            source_weights=app_config.rag.source_weights,
+            max_chunks_per_source=max_chunks_per_source,
+        )
+    else:
+        LOGGER.warning(
+            "Vector index not found in %s. Starting in lexical fallback mode.",
+            index_paths.vectors_dir,
+        )
+        match_engine = MatchEngine()
+        embedding_retriever = None
 
     app.state.app_config = app_config
     app.state.models_config = models_config
