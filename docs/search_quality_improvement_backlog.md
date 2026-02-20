@@ -3,6 +3,7 @@
 ## Purpose
 This file is the handoff contract for long-running search quality work that spans multiple chat sessions.
 Any new chat should be able to continue from this file alone.
+For user-test-driven priorities and the live cross-session queue, also consult `docs/TODO.md`.
 
 Strict gate target remains:
 - benchmark: `tests/benchmarks/search_relevance_100_v1.yaml`

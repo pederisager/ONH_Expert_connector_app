@@ -1,0 +1,183 @@
+Evaluation of the ONH Expert Connector Search
+Overview
+As part of a benchmark user test for the Oslo Nye Høyskole (ONH) Expert Connector , I evaluated the
+retrieval‑augmented generation (RAG) search engine that links user queries to staff expertise. The goal was
+to  determine  whether  the  application  correctly  identifies  the  most  relevant  experts,  ranks  them
+appropriately and provides attributable evidence. To conduct the evaluation I first built a  gold‑standard
+staff‑expertise reference, drawing on the official Finn en ekspert page and staff profile pages on the ONH
+website as well as available publications on the NVA database. This reference lists dozens of topics (e.g.
+Arbeidsmiljø,  Anatomi,  Digitalisering,  Afrikas Horn) and maps them to staff members who have declared
+expertise in those areas. I then crafted a diverse set of 64 search queries covering psychology/HR,
+economics  and  administration,  health/medicine,  international  relations  and  cross‑cutting  themes.  Each
+query was executed in the ONH Expert Connector , and I recorded the actual results alongside the expected
+experts,  missing  experts,  unexpected  results  and  evidence  quality  in  a  structured  log  (see
+onh_test_log.md).
+Staff‑Expertise Reference (Gold Standard)
+The Finn en ekspert page groups ONH expertise into categories such as Psykologi og HR, Økonomi og
+administrasjon,  Helse, medisin og ernæring and  Statsvitenskap og internasjonale relasjoner. Each
+topic on that page points to one or more staff profiles, providing a reliable mapping between expertise and
+individuals.  For  example,  under  psychology/HR,  topics  like  Arbeidsmiljø and  Arbeidspsykologi map  to
+Anniken Grønstad, Ingvild Sagberg, Linda Mari Seem Sundvik and Mona Berthelsen;  Kritisk psykologi
+maps  to  Erik   Nakkerud,  Sandra   Gabrielsen  and  Joshua   Phelps;  and  Motivasjon and  AI   i   utdanning
+og   vurderingsformer map  to  Eirik   Kjelstrup.  In  the  economics  category,  Digitalisering is  assigned  to
+Kateryna Reiby and  Endringsledelse to Johan Bergh. In health/medicine, topics such as  Anatomi and
+Cellebiologi list  Stian   Walle   Larsen,  Suvi   Sagbraaten,  Elin   Lund   Transeth  and  Ulrike   Liisberg,  while
+Diabetes and  Epidemiologi map to Dagfinn Aune. For international relations,  Afrikas Horn and  Autoritære
+regimer map to Kjetil Tronvoll, Spionasje to Stig Stenslie and Amerikansk politikk to Hilde Eliassen Restad.
+This reference enabled me to identify which staff should appear for each query and provided justification
+for expected rankings. Where additional context was needed, I consulted staff profile pages to confirm
+areas of expertise (e.g. Eirik Kjelstrup’s profile highlights his work on decision‑making, emotions and stress
+).
+1 2
+1
+3
+4
+5
+2
+6
+1
+
+Summary of Search Performance
+Strengths
+Correct retrieval for some well‑defined topics. When queries exactly matched the topic names on
+the official list, the system often returned the correct expert(s) with appropriate ranking. Examples
+include:
+arbeidspsykologi → Mona Berthelsen, Linda Mari Seem Sundvik and Brita Bjørkelo appear , matching
+the official list with correct ordering (severity Low). 
+digitalisering and anatomy/cell biology/biochemistry queries returned Kateryna Reiby,
+Suvi Sagbraaten/Stian Walle Larsen or Øyvind Jacobsen with high precision.
+Several marketing queries (digital markedsføring, finans, regnskap, merkevareledelse, 
+kampanjeplanlegging) produced the expected lecturers in top positions.
+In international relations, topics like Afrikas Horn and Spionasje correctly surfaced Kjetil Tronvoll and
+Stig Stenslie respectively, demonstrating the model can retrieve some niche geopolitical expertise.
+Support for Norwegian queries and compound nouns. Many queries used Norwegian compound
+phrases  (e.g.  beslutningspsykologi,  livsstilssykdommer).  The  system  generally  tokenised  these
+correctly, matching them to staff keywords and returning relevant experts (e.g. Eirik Kjelstrup for
+beslutningspsykologi, Ella Marie Heyerdahl for livsstilssykdommer).
+Key Failure Modes
+Despite some successes, numerous systematic issues emerged:
+High false‑negative rate for many topics. In 25 out of 64 queries the primary expected expert was
+missing entirely, including alkoholmisbruk ungdom (missing Anne Kjeldsen), kritisk psykologi (missing
+Erik   Nakkerud  and  co.),  beslutningsbias,  stressmestring,  graviditetstrening,  radikalisering,  FN and
+autoritaere regimer. These failures suggest that the retrieval stage is not indexing or matching the
+official keywords effectively.
+Frequent false positives and category leakage. Many queries returned staff from unrelated fields.
+For instance, arbeidsmiljø og hybridarbeid produced a long list of names from international relations
+and nutrition; spionasje and fred og konflikt included political scientists not connected to espionage;
+and  diabetes returned a psychologist (Line Wisting) before the epidemiologist Dagfinn Aune. The
+presence  of  Beate   Mangset  (a  health  ethicist)  in  numerous  unrelated  queries  (e.g.
+kommunikasjonstrening,  arbeidskonflikter,  styrketrening)  indicates  the  ranking  model  is  overly
+influenced by generic terms like “veiledning” found in many profiles.
+Poor ranking within retrieved candidates. Even when the expected expert was retrieved, they
+were  often  not  ranked  first.  E.g.  AI   i   utdanning placed  Eirik   Kjelstrup  fourth  behind  two
+digital‑marketing  lecturers;  endringsledelse placed  the  actual  course  leader  Johan   Bergh  below
+Sandra   Gabrielsen;  komparativ  politikk put  Henry   Allen  ahead  of  the  comparativist
+Jonas Bergan Dræge. The algorithm seems to weight generic similarity or recency over domain
+relevance.
+• 
+• 
+• 
+4 5
+• 
+• 
+• 
+• 
+• 
+• 
+2
+
+Evidence/citation mismatch. The RAG system surfaces evidence snippets next to each expert, but
+these are sometimes generic (e.g. listing courses taught) rather than directly supporting the query.
+For example, the evidence for Eirik Kjelstrup in AI i utdanning referenced his psychological research
+rather than his AI work; some results displayed tags not obviously related to the query. In several
+cases (e.g. FN, bistand) the sole result had no connection to the query at all.
+Limited handling of synonyms and language variants. Queries using synonyms, abbreviations or
+adjacent  phrases  often  failed.  Kommunikasjonstrening (communication  training)  and  teambygging
+(team building) did not retrieve the organisational psychology lecturers, while  autoritaere regimer
+returned  a  comparativist  instead  of  the  authoritarian‑regime  specialists  Kjetil   Tronvoll  and
+Stig Stenslie. Abbreviations such as FN (United Nations) matched “Folkehelse ernæring” rather than
+the intended international‑relations term.
+Patterns of Errors
+Keyword leakage across categories: The search tends to match keywords at surface level, ignoring
+disciplinary context. Staff who mention “stress” or “veiledning” in any context were retrieved for
+queries about stress management or team building, irrespective of their field. Similarly, nutrition
+lecturers appeared for UN‑related queries because their tags contained two letters matching the
+acronym.
+Insufficient use of official topic mapping: The RAG pipeline does not appear to prioritise the
+authoritative mapping between topics and experts provided on the ONH website. Incorporating this
+structured knowledge as a high‑weight signal could dramatically improve recall and ranking.
+Lack of query expansion: Many queries could benefit from synonym expansion (e.g. beslutningsbias
+→ decision bias) and morphological normalization to capture variations (e.g. arbeidsmiljø vs 
+arbeidsmiljø og hybridarbeid). The current system seems brittle to such variation.
+Minimal filtering of evidence snippets: The sources shown often consist of full profile descriptions.
+Shorter , targeted excerpts that mention the query terms would improve user trust and highlight
+relevance. In some cases, the evidence for irrelevant experts did not contain the query at all.
+Recommendations
+Incorporate  the  official  “Finn   en   ekspert”  mapping  into  the  retrieval  pipeline. Use  the
+structured  list  of  topics  and  associated  staff  as  a  knowledge  base.  When  a  query  matches  or
+semantically relates to a listed topic, those experts should be given a very high prior probability. This
+would prevent obvious misses such as alkoholmisbruk ungdom and kritisk psykologi.
+Improve semantic search with synonym and abbreviation handling. Implement query expansion
+to include synonyms, morphological variants and common abbreviations. For example, map  FN to
+“United   Nations”,  autoritaere  regimer to  “authoritarian  regimes”,  and  recognise  that
+kommunikasjonstrening relates to organisational communication training. This could be achieved by
+enriching the embedding model with a Norwegian thesaurus or manually curated synonym lists.
+Apply  category‑aware  filtering  and  weighting. Each  staff  member  belongs  to  one  or  more
+categories (psychology/HR, economics, health, international relations). When a query clearly falls
+within a category, experts from unrelated categories should be heavily down‑weighted. This would
+reduce false positives such as nutrition lecturers appearing in political science queries.
+• 
+• 
+1. 
+2. 
+3. 
+4. 
+1. 
+2. 
+3. 
+3
+
+Re‑train  ranking  with  relevance  feedback. Use  the  gold‑standard  dataset  constructed  here
+(queries  with  expected  experts)  to  train  or  fine‑tune  the  ranking  model.  The  objective  should
+prioritise  recall  of  true  experts  and  penalise  the  elevation  of  irrelevant  candidates.
+Human‑in‑the‑loop evaluations could iteratively refine weights.
+Improve evidence snippet extraction. The RAG system should return concise passages from staff
+profiles or publications that explicitly mention the query topic. This may involve chunking profiles
+into smaller segments and scoring them against the query. Irrelevant evidence should be filtered
+out.
+Support multi‑language queries. Although Norwegian queries were accepted, some English or
+mixed‑language  queries  (e.g.  “cognitive  remediation  therapy”)  performed  poorly.  Adding
+multilingual  embedding  models  and  translation  layers  could  expand  coverage  to  English
+terminology used by students and faculty.
+Suggested Benchmark Structure for Regression Testing
+Dataset: Use the 64 queries and their expected experts provided in onh_test_log.md as the
+baseline benchmark. For each query, include the list of expected experts and a severity rating
+reflecting the impact of missing them.
+Metrics: Measure recall (percentage of expected experts retrieved), precision (percentage of
+retrieved experts that are relevant) and ranking quality (e.g. mean reciprocal rank of the top
+expected expert). Also assess evidence quality by checking that returned snippets mention the query
+terms.
+Regression procedure: After each update to the search algorithm, re‑run the benchmark queries
+and record metrics. Highlight regressions where previously correct queries now fail or ranking
+deteriorates. Use the severity ratings to prioritise fixes.
+Conclusion
+The ONH Expert Connector shows promise but currently struggles to consistently retrieve and rank the
+most relevant experts. Reliance on loose keyword matching leads to high false‑negative and false‑positive
+rates, and the ranking often misplaces key experts beneath unrelated staff. By integrating the authoritative
+expertise  mapping  from  the  ONH  website,  enhancing  semantic  understanding  and  implementing
+category‑aware filtering and better evidence extraction, the system can significantly improve both precision
+and  user  trust.  The  comprehensive  benchmark  developed  here  provides  a  foundation  for  iterative
+improvements and future regression testing.
+Finn en ekspert | Eksperter ved ONH | Oslo Nye Høyskole
+https://oslonyehoyskole.no/Forskning/Finn-en-ekspert
+Eirik Kjelstrup | Oslo Nye Høyskole
+https://oslonyehoyskole.no/om-oss/Ansatte/Eirik-Kjelstrup
+4. 
+5. 
+6. 
+• 
+• 
+• 
+1 2 3 4 5
+6
+4
