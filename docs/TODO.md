@@ -1,8 +1,8 @@
 # TODO (Autonomous Agent Queue)
 
-Last updated: 2026-02-20
+Last updated: 2026-02-22
 Queue state: `active`
-Next task id: `SQ-UT-001`
+Next task id: `SQ-UT-008`
 Canonical queue file: `docs/TODO.md`
 
 ## Agent Autonomy Contract
@@ -105,12 +105,12 @@ Keep this table synchronized with `Task Ledger` status values.
 | ID | Priority | Status | Title |
 |---|---|---|---|
 | SQ-UT-000 | P0 | completed | Archive user-test artifacts in repo |
-| SQ-UT-001 | P0 | pending | Build machine-readable benchmark from empirical table |
-| SQ-UT-002 | P0 | pending | Exact keyword hard promotion |
-| SQ-UT-003 | P0 | pending | Increase trusted keyword influence + conceptual keyword mapping |
-| SQ-UT-004 | P0 | pending | Synonym + abbreviation expansion layer |
-| SQ-UT-005 | P0 | pending | Category-aware filtering/down-weighting |
-| SQ-UT-006 | P0 | pending | Staff profile preprocessing and noise stripping pipeline |
+| SQ-UT-001 | P0 | completed | Build machine-readable benchmark from empirical table |
+| SQ-UT-002 | P0 | revised | Exact keyword hard promotion |
+| SQ-UT-003 | P0 | revised | Increase trusted keyword influence + conceptual keyword mapping |
+| SQ-UT-004 | P0 | revised | Synonym + abbreviation expansion layer |
+| SQ-UT-005 | P0 | revised | Category-aware filtering/down-weighting |
+| SQ-UT-006 | P0 | revised | Staff profile preprocessing and noise stripping pipeline |
 | SQ-UT-007 | P1 | pending | Evidence snippet quality gate tightening |
 | SQ-UT-008 | P0 | pending | Embedding model sweep on RTX 4070 with user64 + strict100 scoring |
 | SQ-UT-009 | P1 | pending | Relevance-feedback tuning pass using user64 gold labels |
@@ -139,7 +139,7 @@ Files changed:
 - `docs/user_testing/2026-02-20_chatgpt_railway_user_test/README.md`
 
 ### [ ] SQ-UT-001 Build machine-readable benchmark from empirical table (P0)
-Status: `pending`
+Status: `completed`
 Depends on: `<none>`
 Blocked by: `<none>`
 
@@ -160,9 +160,9 @@ Run commands (bounded):
 - `timeout 1200 python3 scripts/run_search_benchmark.py --benchmark tests/benchmarks/search_relevance_chatgpt_user64_v1.yaml --base-url http://127.0.0.1:8000 --output reports/benchmark_results_user64_baseline.json`
 
 ### [ ] SQ-UT-002 Exact keyword hard promotion (P0, requester requirement #1)
-Status: `pending`
+Status: `revised`
 Depends on: `SQ-UT-001`
-Blocked by: `<none>`
+Blocked by: `Acceptance criterion #2 remains unmet after rerun: user64 baseline metrics unchanged and high-severity exact-topic misses persist.`
 
 Goal:
 If query matches staff keyword/tag exactly, promote that staff member to the top tier before weaker semantic matches.
@@ -178,7 +178,7 @@ Acceptance criteria:
 3. No regression on strict exclusion controls.
 
 ### [ ] SQ-UT-003 Increase trusted keyword influence + conceptual keyword mapping (P0, requester requirement #2)
-Status: `pending`
+Status: `revised`
 Depends on: `SQ-UT-002`
 Blocked by: `<none>`
 
@@ -197,7 +197,7 @@ Acceptance criteria:
 3. Overexposure/false-positive metrics do not regress beyond agreed threshold.
 
 ### [ ] SQ-UT-004 Synonym + abbreviation expansion layer (P0, user-test recommendation)
-Status: `pending`
+Status: `revised`
 Depends on: `SQ-UT-001`
 Blocked by: `<none>`
 
@@ -216,7 +216,7 @@ Acceptance criteria:
 3. Non-target domains are not significantly polluted.
 
 ### [ ] SQ-UT-005 Category-aware filtering/down-weighting (P0, user-test recommendation)
-Status: `pending`
+Status: `revised`
 Depends on: `SQ-UT-001`
 Blocked by: `<none>`
 
@@ -234,9 +234,9 @@ Acceptance criteria:
 3. Strict benchmark exclusion metrics hold or improve.
 
 ### [ ] SQ-UT-006 Staff profile preprocessing and noise stripping pipeline (P0, requester requirement #3)
-Status: `pending`
+Status: `revised`
 Depends on: `<none>`
-Blocked by: `<none>`
+Blocked by: `Acceptance criterion #2 requires benchmark verification after retrieval rerun.`
 
 Goal:
 Strip non-expertise junk from harvested profile text before indexing.
@@ -368,3 +368,155 @@ Add one entry per completed/revised task.
 - `timeout 20 rg -n "TODO\\.md|search_quality_live_todo" AGENTS.md docs/*.md`
 - Decision: keep
 - Next recommended task: `SQ-UT-001`
+
+### 2026-02-21 - SQ-UT-001
+- Status change: `pending -> in_progress -> revised`
+- Files changed:
+- `tests/benchmarks/search_relevance_chatgpt_user64_v1.yaml`
+- `scripts/build_user64_benchmark.py`
+- `scripts/run_user64_baseline_with_local_server.py`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 30 -FilePath powershell -ArgumentList @('-NoProfile','-Command','Get-ChildItem tests/benchmarks | Select-Object Name')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 120 -FilePath python -ArgumentList @('scripts/build_user64_benchmark.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1200 -FilePath python -ArgumentList @('scripts/run_search_benchmark.py','--benchmark','tests/benchmarks/search_relevance_chatgpt_user64_v1.yaml','--base-url','http://127.0.0.1:8000','--output','reports/benchmark_results_user64_baseline.json')` (failed: target API not running)
+- `scripts/run_with_timeout.ps1 -TimeoutSec 60 -FilePath python -ArgumentList @('-m','uvicorn','app.main:app','--host','127.0.0.1','--port','8000')` (failed: `ModuleNotFoundError: No module named 'sklearn'`)
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1200 -FilePath python -ArgumentList @('-m','pip','install','-r','requirements.txt')` (failed: Windows access denied in user-site package path)
+- Benchmark output path: `reports/benchmark_results_user64_baseline.json` (not generated due environment blocker)
+- Metric/verification summary: generated user64 benchmark YAML with 64/64 queries from empirical table; benchmark execution remains blocked by local Python environment setup.
+- Decision: revise
+- Next recommended task: `SQ-UT-001`
+
+### 2026-02-21 - SQ-UT-001 (completion pass)
+- Status change: `revised -> in_progress -> completed`
+- Files changed:
+- `.venv/` (local project environment)
+- `reports/benchmark_results_user64_baseline.json`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 180 -FilePath python -ArgumentList @('-m','venv','.venv')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1800 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','pip','install','-r','requirements.txt')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1800 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/run_user64_baseline_with_local_server.py')`
+- Benchmark output path: `reports/benchmark_results_user64_baseline.json`
+- Metric/verification summary: report generated with per-query outcomes and aggregate metrics (`MustInclude@3=0.296875`, `ShouldInclude@10=0.25`) for all 64 queries.
+- Decision: keep
+- Next recommended task: `SQ-UT-002`
+
+### 2026-02-21 - SQ-UT-002
+- Status change: `pending -> in_progress -> revised`
+- Files changed:
+- `app/routes.py`
+- `app/config_loader.py`
+- `data/app.config.yaml`
+- `tests/test_routes.py`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 180 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','py_compile','app/routes.py','app/config_loader.py','tests/test_routes.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1200 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','pytest','tests/test_routes.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 600 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','pytest','tests/test_config_loader.py','tests/test_routes.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 2400 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/run_user64_baseline_with_local_server.py')` (stalled; terminated)
+- Benchmark/test output paths:
+- `reports/benchmark_results_user64_baseline.json` (pre-existing baseline; no fresh SQ-UT-002 comparative run produced)
+- Metric/verification summary: added exact keyword promotion config + scoring breakdown + rank-tier sort (`exact_keyword_match` before raw score). Added tests proving (a) exact keyword matches outrank non-exact hits and (b) exact-match tie keeps score order. Full targeted suite passed: `27 passed`.
+- Decision: revise
+- Next recommended task: `SQ-UT-002`
+
+### 2026-02-21 - SQ-UT-002 (validation pass)
+- Status change: `revised -> in_progress -> revised`
+- Files changed:
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 900 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','pytest','tests/test_routes.py','-k','exact_keyword_promotion','-q')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1200 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','pytest','tests/test_routes.py','-q')`
+- Benchmark/test output paths:
+- `reports/benchmark_results_user64_baseline.json` (existing baseline used for acceptance review)
+- Metric/verification summary: exact-keyword promotion tests passed (`2 passed`) and full `tests/test_routes.py` passed (`23 passed`), but acceptance criterion #2 remains unmet against current user64 baseline (high-severity exact-topic misses still present).
+- Decision: revise
+- Next recommended task: `SQ-UT-002`
+
+### 2026-02-22 - SQ-UT-002 (benchmark rerun)
+- Status change: `in_progress -> revised`
+- Files changed:
+- `reports/benchmark_results_user64_baseline.json`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 2400 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/run_user64_baseline_with_local_server.py')`
+- Benchmark/test output paths:
+- `reports/benchmark_results_user64_baseline.json`
+- Metric/verification summary: fresh baseline generated (`generated_at: 2026-02-22T00:31:36Z`) with unchanged aggregate metrics (`MustInclude@3=0.296875`, `ShouldInclude@10=0.25`). High-severity exact-topic misses remain (e.g., `U003`, `U008`, `U010`, `U013`, `U017`, `U018`, `U019`).
+- Decision: revise
+- Next recommended task: `SQ-UT-002`
+
+### 2026-02-22 - SQ-UT-003
+- Status change: `pending -> in_progress -> revised`
+- Files changed:
+- `app/routes.py`
+- `app/config_loader.py`
+- `data/app.config.yaml`
+- `tests/test_routes.py`
+- `tests/test_config_loader.py`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 180 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','py_compile','app/routes.py','app/config_loader.py','tests/test_routes.py','tests/test_config_loader.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1200 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','pytest','tests/test_config_loader.py','tests/test_routes.py','-q')`
+- Benchmark/test output paths:
+- `pytest stdout` (`28 passed, 16 warnings in 6.70s`)
+- Metric/verification summary: increased trusted keyword/tag scoring weights (`keywords 0.2`, `tags 0.25`) and added config-driven concept keyword mapping used in overlap scoring; added test coverage for config loading + concept map overlap.
+- Decision: revise
+- Next recommended task: `SQ-UT-003`
+
+### 2026-02-22 - SQ-UT-004
+- Status change: `pending -> in_progress -> revised`
+- Files changed:
+- `app/routes.py`
+- `app/config_loader.py`
+- `data/app.config.yaml`
+- `tests/test_routes.py`
+- `tests/test_config_loader.py`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 240 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','py_compile','app/routes.py','app/config_loader.py','tests/test_routes.py','tests/test_config_loader.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1200 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','pytest','tests/test_config_loader.py','tests/test_routes.py','-q')`
+- Benchmark/test output paths:
+- `pytest stdout` (`31 passed, 16 warnings in 6.79s`)
+- Metric/verification summary: added deterministic config-driven synonym/abbreviation expansion layer (including `FN`, `humanitærrett`, `diplomati`, `kognitiv atferdsterapi`), wired expansion into query text + lexical/tag/citation overlap paths, and exposed `expanded_query_terms_count` in score breakdown for traceability.
+- Decision: revise
+- Next recommended task: `SQ-UT-004`
+
+### 2026-02-22 - SQ-UT-005
+- Status change: `pending -> in_progress -> revised`
+- Files changed:
+- `app/routes.py`
+- `app/config_loader.py`
+- `data/app.config.yaml`
+- `tests/test_routes.py`
+- `tests/test_config_loader.py`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 240 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','py_compile','app/routes.py','app/config_loader.py','tests/test_routes.py','tests/test_config_loader.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1200 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','pytest','tests/test_config_loader.py','tests/test_routes.py','-q')`
+- Benchmark/test output paths:
+- `pytest stdout` (`33 passed, 16 warnings in 6.78s`)
+- Metric/verification summary: added config-driven category-intent penalty to down-weight unrelated department matches while preserving cross-disciplinary results with explicit topical evidence; surfaced `category_intent_penalty` in score breakdown and added targeted regression tests.
+- Decision: revise
+- Next recommended task: `SQ-UT-005`
+
+### 2026-02-22 - SQ-UT-006
+- Status change: `pending -> in_progress -> revised`
+- Files changed:
+- `app/index/refresh_staff.py`
+- `tests/test_refresh_staff.py`
+- `reports/staff_data_audit.json`
+- `reports/staff_data_audit.md`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 240 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','py_compile','app/index/refresh_staff.py','tests/test_refresh_staff.py','tests/test_refresh_staff_parsing.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1200 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','pytest','tests/test_refresh_staff.py','tests/test_refresh_staff_parsing.py','-q')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1200 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/audit_staff_data.py')`
+- Benchmark/test output paths:
+- `pytest stdout` (`8 passed, 2 warnings in 0.16s`)
+- `reports/staff_data_audit.json`
+- `reports/staff_data_audit.md`
+- Metric/verification summary: added section-aware summary extraction with expertise-priority cues and low-value CV/admin/contact filtering, plus fallback to avoid empty summaries when pages only contain low-priority sections. Added focused parser tests for noise stripping and fallback behavior. Audit regenerated (`staff_with_issues=87`, `unresolved_high_count=13`) for post-change tracking.
+- Decision: revise
+- Next recommended task: `SQ-UT-008`

@@ -365,16 +365,143 @@ def _find_profile_container(soup: BeautifulSoup) -> Tag:
     return container
 
 
+HIGH_VALUE_SECTION_CUES = (
+    "jobber med",
+    "forskning",
+    "forsker",
+    "forsknings",
+    "fagomrade",
+    "fagområde",
+    "kompetanse",
+    "ekspertise",
+    "tema",
+    "interesse",
+    "undervisning",
+    "teaching",
+    "research",
+)
+LOW_VALUE_SECTION_CUES = (
+    "cv",
+    "administr",
+    "kontakt",
+    "kontaktinformasjon",
+    "personalia",
+    "verv",
+    "styre",
+    "lenker",
+    "links",
+)
+BOILERPLATE_LINE_CUES = (
+    "les mer",
+    "vis mer",
+    "read more",
+    "klikk her",
+    "personvern",
+    "cookies",
+    "telefon",
+    "tlf",
+    "epost",
+    "e-post",
+    "email",
+    "post@",
+)
+
+
+def _normalize_section_text(value: str) -> str:
+    lowered = value.casefold()
+    lowered = re.sub(r"\s+", " ", lowered)
+    normalized = re.sub(r"[^\wæøå\- ]", "", lowered, flags=re.UNICODE).strip()
+    return normalized
+
+
+def _contains_cue(text: str, cues: Sequence[str]) -> bool:
+    return any(cue in text for cue in cues)
+
+
+def _clean_summary_line(text: str) -> str:
+    return " ".join(text.split())
+
+
+def _is_boilerplate_line(text: str) -> bool:
+    cleaned = _clean_summary_line(text)
+    if not cleaned:
+        return True
+    normalized = _normalize_section_text(cleaned)
+    if not normalized:
+        return True
+    if "http://" in cleaned or "https://" in cleaned or "www." in cleaned:
+        return True
+    return _contains_cue(normalized, BOILERPLATE_LINE_CUES)
+
+
+def _section_priority(heading_text: str) -> str:
+    normalized = _normalize_section_text(heading_text)
+    if _contains_cue(normalized, HIGH_VALUE_SECTION_CUES):
+        return "high"
+    if _contains_cue(normalized, LOW_VALUE_SECTION_CUES):
+        return "low"
+    return "neutral"
+
+
+def _compress_summary_lines(lines: Sequence[str], *, max_lines: int = 24, max_chars: int = 2400) -> list[str]:
+    deduped = dedupe_preserve_order(lines)
+    if len(deduped) > max_lines:
+        deduped = deduped[:max_lines]
+
+    compressed: list[str] = []
+    current_len = 0
+    for line in deduped:
+        projected = current_len + len(line) + (1 if compressed else 0)
+        if projected > max_chars:
+            break
+        compressed.append(line)
+        current_len = projected
+    return compressed
+
+
 def extract_profile_summary(html: str) -> str:
     soup = BeautifulSoup(html, "html.parser")
     container = _find_profile_container(soup)
-    texts: list[str] = []
+
+    prioritized_lines: list[str] = []
+    neutral_lines: list[str] = []
+    fallback_lines: list[str] = []
+    active_section = "neutral"
+
     for element in container.find_all(["h2", "h3", "h4", "p", "li"]):
-        text = element.get_text(separator=" ", strip=True)
-        if text:
-            texts.append(text)
-    summary = "\n".join(texts)
-    return summary
+        raw_text = element.get_text(separator=" ", strip=True)
+        cleaned = _clean_summary_line(raw_text)
+        if not cleaned:
+            continue
+
+        if not _is_boilerplate_line(cleaned):
+            fallback_lines.append(cleaned)
+
+        tag_name = (element.name or "").lower()
+        if tag_name in {"h2", "h3", "h4"}:
+            active_section = _section_priority(cleaned)
+            if active_section == "high":
+                prioritized_lines.append(cleaned)
+            elif active_section == "neutral" and not _is_boilerplate_line(cleaned):
+                neutral_lines.append(cleaned)
+            continue
+
+        line_normalized = _normalize_section_text(cleaned)
+        line_has_expertise_signal = _contains_cue(line_normalized, HIGH_VALUE_SECTION_CUES)
+
+        if active_section == "high" or line_has_expertise_signal:
+            prioritized_lines.append(cleaned)
+            continue
+        if active_section == "low":
+            continue
+        if _is_boilerplate_line(cleaned):
+            continue
+        neutral_lines.append(cleaned)
+
+    summary_lines = _compress_summary_lines(prioritized_lines + neutral_lines)
+    if not summary_lines:
+        summary_lines = _compress_summary_lines(fallback_lines)
+    return "\n".join(summary_lines)
 
 
 def extract_profile_title(html: str) -> str | None:

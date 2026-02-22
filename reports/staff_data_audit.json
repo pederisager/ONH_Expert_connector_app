@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-02-17T06:38:48.567404+00:00",
+  "generated_at": "2026-02-22T15:53:43.121653+00:00",
   "summary": {
-    "staff_with_issues": 85,
+    "staff_with_issues": 87,
     "issue_counts": {
       "high": 13,
-      "medium": 45,
+      "medium": 47,
       "low": 50
     },
     "unresolved_high_count": 13
@@ -1547,6 +1547,23 @@
       ]
     },
     {
+      "name": "Imac Zambrana",
+      "slug": "imac-zambrana",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "nva_presence_mismatch",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff.csv has NVA profile but no local NVA results.",
+          "metrics": {
+            "nva_profile_url": "https://nva.sikt.no/research-profile/4119"
+          }
+        }
+      ]
+    },
+    {
       "name": "Ingrid Aas Vissheim",
       "slug": "Ingrid-Aas-Vissheim",
       "department": "Helsefag",
@@ -1810,6 +1827,23 @@
               "selvsporing",
               "transformasjon"
             ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "kjersti nesje",
+      "slug": "kjersti-nesje",
+      "department": "Psykologi",
+      "nva_publication_count": 0,
+      "issues": [
+        {
+          "check": "nva_presence_mismatch",
+          "severity": "medium",
+          "status": "open",
+          "message": "staff.csv has NVA profile but no local NVA results.",
+          "metrics": {
+            "nva_profile_url": "https://nva.sikt.no/research-profile/3901"
           }
         }
       ]

@@ -1,9 +1,9 @@
 # Staff Data Audit
 
-- Generated at: 2026-02-17T06:38:48.567404+00:00
-- Staff with issues: 85
+- Generated at: 2026-02-22T15:53:43.121653+00:00
+- Staff with issues: 87
 - High issues: 13
-- Medium issues: 45
+- Medium issues: 47
 - Low issues: 50
 - Unresolved high issues: 13
 
@@ -220,6 +220,10 @@
 
 - [medium] nva_domain_outlier: NVA publications weakly align with profile/department terms (alignment_rate=0.36).
 
+### Imac Zambrana (Psykologi)
+
+- [medium] nva_presence_mismatch: staff.csv has NVA profile but no local NVA results.
+
 ### Ingrid Aas Vissheim (Helsefag)
 
 - [low] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.301).
@@ -254,6 +258,10 @@
 ### Kateryna Reiby (Økonomi og administrasjon)
 
 - [low] staff_info_vs_profile_divergence: staff_info content diverges from profile summary (score=0.235).
+
+### kjersti nesje (Psykologi)
+
+- [medium] nva_presence_mismatch: staff.csv has NVA profile but no local NVA results.
 
 ### Kjersti Skarstad (Statsvitenskap og internasjonale relasjoner)
 
