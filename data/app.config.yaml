@@ -19,9 +19,34 @@ results:
   diversity-weight: 0.1
   scoring-weights:
     semantic: 1.0
-    keywords: 0.1
-    tags: 0.15
+    keywords: 0.2
+    tags: 0.25
     methods: 0.15
+  concept-keyword-map:
+    diskursanalyse:
+      - "kvalitativ metode"
+      - "kvalitativ"
+    statistikk:
+      - "kvantitativ metode"
+      - "kvantitativ"
+    anoreksi:
+      - "spiseforstyrrelser"
+  synonym-expansion-map:
+    fn:
+      - "forente nasjoner"
+      - "un"
+    humanitærrett:
+      - "internasjonal humanitærrett"
+      - "ihl"
+    diplomati:
+      - "utenrikspolitikk"
+      - "forhandling"
+    kognitiv atferdsterapi:
+      - "kognitiv terapi"
+      - "kat"
+    autoritaere:
+      - "autoritære"
+      - "authoritarian"
   mode-scoring-profiles:
     publication_grounded:
       source-kind-boosts:
@@ -37,6 +62,10 @@ results:
         staffinfo: 0.09
       citation-overlap-weight: 0.06
       nva-citation-bonus: 0.0
+  exact-keyword-promotion:
+    enabled: true
+    keyword-bonus: 0.35
+    min-token-length: 2
   overexposure-penalty:
     enabled: true
     low-signal-threshold: 0.35
@@ -44,11 +73,25 @@ results:
     staffinfo-source-weight: 0.12
     publication-without-nva-penalty: 0.04
     max-penalty: 0.1
+  category-intent-penalty:
+    enabled: true
+    base-penalty: 0.08
+    max-penalty: 0.16
+    evidence-overlap-threshold: 0.2
+    intent-signals:
+      psychology: ["psykologi", "kognitiv", "atferd", "stress", "ledelse"]
+      international_relations: ["humanitærrett", "diplomati", "fn", "bistand", "radikalisering"]
+      physiotherapy: ["fysioterapi", "styrketrening", "graviditetstrening", "rehabilitering"]
+    intent-department-map:
+      psychology: ["psykologi"]
+      international_relations: ["statsvitenskap", "internasjonale relasjoner"]
+      physiotherapy: ["fysioterapi", "idrett"]
   citation-source-priority:
     - "nva"
     - "profile"
     - "staffinfo"
   min-query-overlap-per-citation: 1
+  profile-staffinfo-min-query-overlap-per-citation: 2
 
 rag:
   index-root: "data/index"

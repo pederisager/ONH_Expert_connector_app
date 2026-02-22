@@ -6,6 +6,7 @@ import asyncio
 import hashlib
 import logging
 import re
+import unicodedata
 from typing import Any, Literal, Sequence
 
 import httpx
@@ -555,8 +556,15 @@ def _choose_why_text(
     )
 
 
-def _rag_query_from_themes(themes: Sequence[str]) -> str:
-    return " ".join(theme.strip() for theme in themes if theme.strip()).strip()
+def _rag_query_from_themes(
+    themes: Sequence[str],
+    synonym_expansion_map: dict[str, Sequence[str]] | None = None,
+) -> str:
+    expanded_terms = _expand_themes_for_query(
+        themes,
+        synonym_expansion_map=synonym_expansion_map,
+    )
+    return " ".join(expanded_terms).strip()
 
 
 def _match_via_retriever(
@@ -572,7 +580,12 @@ def _match_via_retriever(
     min_query_overlap_per_citation: int,
     scoring_weights: dict[str, float],
     mode_scoring_profiles: dict[str, dict[str, Any]],
+    exact_keyword_promotion_config: dict[str, Any],
     overexposure_penalty_config: dict[str, Any],
+    profile_staffinfo_min_query_overlap_per_citation: int | None = None,
+    category_intent_penalty_config: dict[str, Any] | None = None,
+    concept_keyword_map: dict[str, Sequence[str]] | None = None,
+    synonym_expansion_map: dict[str, Sequence[str]] | None = None,
 ) -> list[MatchItem]:
     if not query_text:
         return []
@@ -604,13 +617,26 @@ def _match_via_retriever(
             language_ctx=language_ctx,
             citation_source_priority=citation_source_priority,
             min_query_overlap_per_citation=min_query_overlap_per_citation,
+            profile_staffinfo_min_query_overlap_per_citation=(
+                profile_staffinfo_min_query_overlap_per_citation
+            ),
             scoring_weights=scoring_weights,
             mode_scoring_profiles=mode_scoring_profiles,
+            exact_keyword_promotion_config=exact_keyword_promotion_config,
             overexposure_penalty_config=overexposure_penalty_config,
+            concept_keyword_map=concept_keyword_map,
+            synonym_expansion_map=synonym_expansion_map,
+            category_intent_penalty_config=category_intent_penalty_config,
         )
         if item:
             items.append(item)
-    items.sort(key=lambda item: item.score, reverse=True)
+    items.sort(
+        key=lambda item: (
+            float(item.score_breakdown.get("exact_keyword_match", 0.0)),
+            item.score,
+        ),
+        reverse=True,
+    )
     return items
 
 
@@ -624,7 +650,12 @@ def _retrieval_result_to_match_item(
     min_query_overlap_per_citation: int,
     scoring_weights: dict[str, float],
     mode_scoring_profiles: dict[str, dict[str, Any]],
-    overexposure_penalty_config: dict[str, Any],
+    profile_staffinfo_min_query_overlap_per_citation: int | None = None,
+    exact_keyword_promotion_config: dict[str, Any] | None = None,
+    overexposure_penalty_config: dict[str, Any] | None = None,
+    category_intent_penalty_config: dict[str, Any] | None = None,
+    concept_keyword_map: dict[str, Sequence[str]] | None = None,
+    synonym_expansion_map: dict[str, Sequence[str]] | None = None,
 ) -> MatchItem | None:
     if not result.chunks:
         return None
@@ -646,7 +677,12 @@ def _retrieval_result_to_match_item(
         themes,
         source_priority=citation_source_priority,
         min_query_overlap=min_query_overlap_per_citation,
+        profile_staffinfo_min_query_overlap=(
+            profile_staffinfo_min_query_overlap_per_citation
+        ),
         match_mode=match_mode,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
     )
     keywords = _collect_chunk_keywords(result.chunks)
     scoring_chunks = _chunks_for_scoring(result.chunks)
@@ -663,15 +699,44 @@ def _retrieval_result_to_match_item(
         0.0,
         min(1.0, float(result.metadata.get("hybrid_score", result.score))),
     )
-    keyword_score = _keyword_overlap_score(scoring_chunks, themes)
-    tag_score = _tag_overlap_score(scoring_keywords, themes)
+    keyword_score = _keyword_overlap_score(
+        scoring_chunks,
+        themes,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
+    )
+    tag_score = _tag_overlap_score(
+        scoring_keywords,
+        themes,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
+    )
     method_score = _method_overlap_score(scoring_keywords, themes)
+    expanded_theme_terms = _expanded_theme_tokens(
+        themes,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
+    )
+    base_theme_terms = {
+        token.lower()
+        for theme in themes
+        for token in tokenize(theme)
+        if len(token.strip()) > 1
+    }
+    expansion_terms_count = max(0, len(expanded_theme_terms) - len(base_theme_terms))
+    exact_keyword_match, exact_keyword_match_count = _exact_keyword_match_features(
+        keywords=scoring_keywords,
+        themes=themes,
+        exact_keyword_promotion_config=exact_keyword_promotion_config,
+    )
     mode_bonus = _mode_score_bonus(
         chunks=result.chunks,
         citations=citations,
         themes=themes,
         match_mode=match_mode,
         mode_scoring_profiles=mode_scoring_profiles,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
     )
     overexposure_penalty = _overexposure_score_penalty(
         chunks=result.chunks,
@@ -681,21 +746,36 @@ def _retrieval_result_to_match_item(
         keyword_score=keyword_score,
         tag_score=tag_score,
         method_score=method_score,
-        overexposure_penalty_config=overexposure_penalty_config,
+        overexposure_penalty_config=overexposure_penalty_config or {},
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
+    )
+    category_intent_penalty = _category_intent_score_penalty(
+        chunks=result.chunks,
+        department=department,
+        themes=themes,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
+        category_intent_penalty_config=category_intent_penalty_config,
     )
     semantic_weight = max(0.0, float(scoring_weights.get("semantic", 1.0)))
     keyword_weight = max(0.0, float(scoring_weights.get("keywords", 0.1)))
     tag_weight = max(0.0, float(scoring_weights.get("tags", 0.15)))
     method_weight = max(0.0, float(scoring_weights.get("methods", 0.15)))
+    exact_keyword_bonus = _exact_keyword_bonus(
+        exact_keyword_match=exact_keyword_match,
+        exact_keyword_promotion_config=exact_keyword_promotion_config,
+    )
     raw_score = min(
         1.0,
         semantic_weight * semantic_score
         + keyword_weight * keyword_score
         + tag_weight * tag_score
         + method_weight * method_score
-        + mode_bonus,
+        + mode_bonus
+        + exact_keyword_bonus,
     )
-    adjusted_score = max(0.0, raw_score - overexposure_penalty)
+    adjusted_score = max(0.0, raw_score - overexposure_penalty - category_intent_penalty)
 
     if language_ctx.user_lang.startswith("en"):
         why_default = f"{display_name} matches {', '.join(themes) or 'the topic'} based on semantic similarity."
@@ -720,8 +800,13 @@ def _retrieval_result_to_match_item(
             "keywords": round(keyword_score, 4),
             "tags": round(tag_score, 4),
             "methods": round(method_score, 4),
+            "exact_keyword_match": float(exact_keyword_match),
+            "exact_keyword_match_count": float(exact_keyword_match_count),
+            "expanded_query_terms_count": float(expansion_terms_count),
+            "exact_keyword_bonus": round(exact_keyword_bonus, 4),
             "mode_bonus": round(mode_bonus, 4),
             "overexposure_penalty": round(overexposure_penalty, 4),
+            "category_intent_penalty": round(category_intent_penalty, 4),
         },
         keywords=keywords,
     )
@@ -784,13 +869,140 @@ def _priority_by_source_kind(source_priority: Sequence[str]) -> dict[str, int]:
     return {source_kind: idx for idx, source_kind in enumerate(ordering)}
 
 
-def _theme_token_set(themes: Sequence[str]) -> set[str]:
-    return {
+def _normalize_expansion_map(
+    expansion_map: dict[str, Sequence[str]] | None,
+) -> dict[str, set[str]]:
+    normalized: dict[str, set[str]] = {}
+    if not expansion_map:
+        return normalized
+    for key, values in expansion_map.items():
+        key_tokens = [token.lower() for token in tokenize(str(key)) if len(token) > 1]
+        if not key_tokens:
+            continue
+        expansions = {token.lower() for token in key_tokens}
+        for value in values or []:
+            expansions.update(
+                token.lower() for token in tokenize(str(value)) if len(token) > 1
+            )
+        for token in key_tokens:
+            normalized.setdefault(token, set()).update(expansions)
+    return normalized
+
+
+def _expanded_theme_tokens(
+    themes: Sequence[str],
+    concept_keyword_map: dict[str, Sequence[str]] | None = None,
+    synonym_expansion_map: dict[str, Sequence[str]] | None = None,
+) -> set[str]:
+    base_tokens = {
         token.lower()
         for theme in themes
         for token in tokenize(theme)
-        if len(token.strip()) > 2
+        if len(token.strip()) > 1
     }
+    if not base_tokens:
+        return set()
+    expanded = set(base_tokens)
+    for mapping in (
+        _normalize_expansion_map(concept_keyword_map),
+        _normalize_expansion_map(synonym_expansion_map),
+    ):
+        for token in list(expanded):
+            expanded.update(mapping.get(token, set()))
+    return expanded
+
+
+def _expand_themes_for_query(
+    themes: Sequence[str],
+    synonym_expansion_map: dict[str, Sequence[str]] | None = None,
+) -> list[str]:
+    expanded_tokens = _expanded_theme_tokens(
+        themes,
+        synonym_expansion_map=synonym_expansion_map,
+    )
+    theme_tokens = [
+        token.lower() for theme in themes for token in tokenize(theme) if len(token) > 1
+    ]
+    ordered: list[str] = []
+    seen: set[str] = set()
+    for token in theme_tokens + sorted(expanded_tokens):
+        if token in seen:
+            continue
+        seen.add(token)
+        ordered.append(token)
+    return ordered
+
+
+def _normalize_exact_keyword_value(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value or "")
+    folded = normalized.casefold()
+    compact = "".join(
+        char if (char.isalnum() or char.isspace()) else " "
+        for char in folded
+    )
+    return " ".join(compact.split())
+
+
+def _normalize_exact_keyword_promotion_config(
+    exact_keyword_promotion_config: dict[str, Any] | None,
+) -> dict[str, float | bool | int]:
+    if exact_keyword_promotion_config is None:
+        return {
+            "enabled": False,
+            "keyword_bonus": 0.0,
+            "min_token_length": 2,
+        }
+    config = exact_keyword_promotion_config
+    return {
+        "enabled": bool(config.get("enabled", True)),
+        "keyword_bonus": max(0.0, float(config.get("keyword_bonus", 0.35))),
+        "min_token_length": max(1, int(config.get("min_token_length", 2))),
+    }
+
+
+def _exact_keyword_term_set(values: Sequence[str], *, min_token_length: int) -> set[str]:
+    terms: set[str] = set()
+    for value in values:
+        normalized = _normalize_exact_keyword_value(value)
+        if not normalized:
+            continue
+        if len(normalized.replace(" ", "")) >= min_token_length:
+            terms.add(normalized)
+        for token in normalized.split():
+            if len(token) >= min_token_length:
+                terms.add(token)
+    return terms
+
+
+def _exact_keyword_match_features(
+    *,
+    keywords: Sequence[str],
+    themes: Sequence[str],
+    exact_keyword_promotion_config: dict[str, Any] | None,
+) -> tuple[bool, int]:
+    config = _normalize_exact_keyword_promotion_config(exact_keyword_promotion_config)
+    if not bool(config.get("enabled")):
+        return False, 0
+
+    min_token_length = int(config.get("min_token_length", 2))
+    keyword_terms = _exact_keyword_term_set(keywords, min_token_length=min_token_length)
+    theme_terms = _exact_keyword_term_set(themes, min_token_length=min_token_length)
+    if not keyword_terms or not theme_terms:
+        return False, 0
+
+    overlap_count = len(keyword_terms & theme_terms)
+    return overlap_count > 0, overlap_count
+
+
+def _exact_keyword_bonus(
+    *,
+    exact_keyword_match: bool,
+    exact_keyword_promotion_config: dict[str, Any] | None,
+) -> float:
+    config = _normalize_exact_keyword_promotion_config(exact_keyword_promotion_config)
+    if not bool(config.get("enabled")) or not exact_keyword_match:
+        return 0.0
+    return float(config.get("keyword_bonus", 0.35))
 
 
 def _chunk_metadata_tags(chunk: Chunk) -> list[str]:
@@ -873,7 +1085,10 @@ def _chunks_to_citations(
     *,
     source_priority: Sequence[str] | None = None,
     min_query_overlap: int = 1,
+    profile_staffinfo_min_query_overlap: int | None = None,
     match_mode: str = DEFAULT_MATCH_MODE,
+    concept_keyword_map: dict[str, Sequence[str]] | None = None,
+    synonym_expansion_map: dict[str, Sequence[str]] | None = None,
 ) -> list[Citation]:
     priority = _priority_by_source_kind(
         source_priority or DEFAULT_CITATION_SOURCE_PRIORITY
@@ -887,7 +1102,19 @@ def _chunks_to_citations(
     )
 
     min_overlap = max(0, int(min_query_overlap))
-    theme_tokens = _theme_token_set(themes)
+    profile_staffinfo_min_overlap = max(
+        min_overlap,
+        int(
+            profile_staffinfo_min_query_overlap
+            if profile_staffinfo_min_query_overlap is not None
+            else min_overlap
+        ),
+    )
+    theme_tokens = _expanded_theme_tokens(
+        themes,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
+    )
 
     candidates: list[tuple[Chunk, str, int, str]] = []
     for chunk in sorted_chunks:
@@ -895,11 +1122,16 @@ def _chunks_to_citations(
         if not snippet:
             continue
         source_kind = _source_kind_for_chunk(chunk)
+        required_overlap = (
+            profile_staffinfo_min_overlap
+            if source_kind in {"profile", "staffinfo"}
+            else min_overlap
+        )
         overlap = _query_overlap_count(snippet, theme_tokens)
         if (
             match_mode == MATCH_MODE_PUBLICATION
             and source_kind == "nva"
-            and overlap < min_overlap
+            and overlap < required_overlap
         ):
             snippet = _augment_citation_snippet_for_publication(
                 chunk=chunk,
@@ -907,7 +1139,7 @@ def _chunks_to_citations(
                 theme_tokens=theme_tokens,
             )
             overlap = _query_overlap_count(snippet, theme_tokens)
-        if overlap < min_overlap:
+        if overlap < required_overlap:
             continue
         candidates.append((chunk, snippet, overlap, source_kind))
 
@@ -923,10 +1155,18 @@ def _chunks_to_citations(
             snippet = _extract_citation_snippet(chunk.text, themes)
             if not snippet:
                 continue
-            fallback.append((chunk, snippet, 0, _source_kind_for_chunk(chunk)))
-            if len(fallback) >= 3:
-                break
-        selected = fallback
+            source_kind = _source_kind_for_chunk(chunk)
+            fallback.append(
+                (chunk, snippet, _query_overlap_count(snippet, theme_tokens), source_kind)
+            )
+        fallback.sort(
+            key=lambda item: (
+                -item[2],
+                priority.get(item[3], len(priority)),
+                item[0].order,
+            )
+        )
+        selected = fallback[:3]
 
     citations: list[Citation] = []
     for idx, (chunk, snippet, _, _) in enumerate(selected, start=1):
@@ -965,8 +1205,18 @@ def _chunk_source_coverage(chunks: Sequence[Chunk]) -> dict[str, float]:
     return {source_kind: count / total for source_kind, count in counts.items()}
 
 
-def _citation_overlap_score(citations: Sequence[Citation], themes: Sequence[str]) -> float:
-    theme_tokens = _theme_token_set(themes)
+def _citation_overlap_score(
+    citations: Sequence[Citation],
+    themes: Sequence[str],
+    *,
+    concept_keyword_map: dict[str, Sequence[str]] | None = None,
+    synonym_expansion_map: dict[str, Sequence[str]] | None = None,
+) -> float:
+    theme_tokens = _expanded_theme_tokens(
+        themes,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
+    )
     if not theme_tokens or not citations:
         return 0.0
     best_overlap = 0.0
@@ -1014,6 +1264,8 @@ def _mode_score_bonus(
     themes: Sequence[str],
     match_mode: str,
     mode_scoring_profiles: dict[str, dict[str, Any]],
+    concept_keyword_map: dict[str, Sequence[str]] | None = None,
+    synonym_expansion_map: dict[str, Sequence[str]] | None = None,
 ) -> float:
     profile = _normalize_mode_scoring_profile(
         match_mode=match_mode,
@@ -1025,11 +1277,95 @@ def _mode_score_bonus(
         for source_kind, coverage in source_coverage.items()
     )
     citation_overlap_bonus = float(profile["citation_overlap_weight"]) * _citation_overlap_score(
-        citations, themes
+        citations,
+        themes,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
     )
     has_nva_citation = any(_citation_source_kind(citation) == "nva" for citation in citations)
     nva_bonus = float(profile["nva_citation_bonus"]) if has_nva_citation else 0.0
     return source_bonus + citation_overlap_bonus + nva_bonus
+
+
+def _normalize_category_intent_penalty_config(
+    category_intent_penalty_config: dict[str, Any] | None,
+) -> dict[str, Any]:
+    config = category_intent_penalty_config or {}
+    return {
+        "enabled": bool(config.get("enabled", True)),
+        "base_penalty": max(0.0, float(config.get("base_penalty", 0.08))),
+        "max_penalty": max(0.0, float(config.get("max_penalty", 0.16))),
+        "evidence_overlap_threshold": min(
+            1.0,
+            max(0.0, float(config.get("evidence_overlap_threshold", 0.2))),
+        ),
+        "intent_signals": config.get("intent_signals") or {},
+        "intent_department_map": config.get("intent_department_map") or {},
+    }
+
+
+def _category_intent_score_penalty(
+    *,
+    chunks: Sequence[Chunk],
+    department: str,
+    themes: Sequence[str],
+    concept_keyword_map: dict[str, Sequence[str]] | None,
+    synonym_expansion_map: dict[str, Sequence[str]] | None,
+    category_intent_penalty_config: dict[str, Any] | None,
+) -> float:
+    profile = _normalize_category_intent_penalty_config(category_intent_penalty_config)
+    if not bool(profile.get("enabled")):
+        return 0.0
+
+    theme_tokens = _expanded_theme_tokens(
+        themes,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
+    )
+    if not theme_tokens:
+        return 0.0
+
+    intent_signals_raw = profile.get("intent_signals") or {}
+    intent_departments_raw = profile.get("intent_department_map") or {}
+    if not isinstance(intent_signals_raw, dict):
+        return 0.0
+
+    department_norm = _normalize_exact_keyword_value(department)
+    chunk_tokens: set[str] = set()
+    for chunk in chunks:
+        chunk_tokens.update(token.lower() for token in tokenize(chunk.text) if len(token) > 1)
+        for tag in _chunk_metadata_tags(chunk):
+            chunk_tokens.update(token.lower() for token in tokenize(tag) if len(token) > 1)
+
+    total_penalty = 0.0
+    for intent, signals in intent_signals_raw.items():
+        signal_tokens = {
+            token.lower()
+            for signal in (signals or [])
+            for token in tokenize(str(signal))
+            if len(token) > 1
+        }
+        if not signal_tokens:
+            continue
+        query_overlap = len(theme_tokens & signal_tokens)
+        if query_overlap == 0:
+            continue
+
+        allowed_departments = {
+            _normalize_exact_keyword_value(dep)
+            for dep in (intent_departments_raw.get(intent, []) if isinstance(intent_departments_raw, dict) else [])
+            if str(dep).strip()
+        }
+        if allowed_departments and any(dep in department_norm for dep in allowed_departments):
+            continue
+
+        evidence_overlap = len(chunk_tokens & signal_tokens) / max(1, len(signal_tokens))
+        if evidence_overlap >= float(profile["evidence_overlap_threshold"]):
+            continue
+
+        total_penalty += float(profile["base_penalty"])
+
+    return min(float(profile["max_penalty"]), max(0.0, total_penalty))
 
 
 def _normalize_overexposure_penalty_config(
@@ -1071,6 +1407,8 @@ def _overexposure_score_penalty(
     tag_score: float,
     method_score: float,
     overexposure_penalty_config: dict[str, Any],
+    concept_keyword_map: dict[str, Sequence[str]] | None = None,
+    synonym_expansion_map: dict[str, Sequence[str]] | None = None,
 ) -> float:
     profile = _normalize_overexposure_penalty_config(overexposure_penalty_config)
     if not bool(profile.get("enabled")):
@@ -1084,7 +1422,12 @@ def _overexposure_score_penalty(
                 keyword_score,
                 tag_score,
                 method_score,
-                _citation_overlap_score(citations, themes),
+                _citation_overlap_score(
+                    citations,
+                    themes,
+                    concept_keyword_map=concept_keyword_map,
+                    synonym_expansion_map=synonym_expansion_map,
+                ),
             ),
         ),
     )
@@ -1128,8 +1471,18 @@ def _collect_chunk_keywords(chunks: Sequence[Chunk]) -> list[str]:
     return keywords
 
 
-def _keyword_overlap_score(chunks: Sequence[Chunk], themes: Sequence[str]) -> float:
-    theme_tokens = _theme_token_set(themes)
+def _keyword_overlap_score(
+    chunks: Sequence[Chunk],
+    themes: Sequence[str],
+    *,
+    concept_keyword_map: dict[str, Sequence[str]] | None = None,
+    synonym_expansion_map: dict[str, Sequence[str]] | None = None,
+) -> float:
+    theme_tokens = _expanded_theme_tokens(
+        themes,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
+    )
     if not theme_tokens:
         return 0.0
     text_tokens: set[str] = set()
@@ -1143,7 +1496,13 @@ def _keyword_overlap_score(chunks: Sequence[Chunk], themes: Sequence[str]) -> fl
     return overlap / max(1, len(theme_tokens))
 
 
-def _tag_overlap_score(keywords: Sequence[str], themes: Sequence[str]) -> float:
+def _tag_overlap_score(
+    keywords: Sequence[str],
+    themes: Sequence[str],
+    *,
+    concept_keyword_map: dict[str, Sequence[str]] | None = None,
+    synonym_expansion_map: dict[str, Sequence[str]] | None = None,
+) -> float:
     if not keywords or not themes:
         return 0.0
     keyword_tokens = {
@@ -1152,7 +1511,11 @@ def _tag_overlap_score(keywords: Sequence[str], themes: Sequence[str]) -> float:
         for token in tokenize(keyword)
         if len(token) > 2
     }
-    theme_tokens = _theme_token_set(themes)
+    theme_tokens = _expanded_theme_tokens(
+        themes,
+        concept_keyword_map=concept_keyword_map,
+        synonym_expansion_map=synonym_expansion_map,
+    )
     if not keyword_tokens or not theme_tokens:
         return 0.0
     overlap = len(keyword_tokens & theme_tokens)
@@ -1174,7 +1537,7 @@ def _method_overlap_score(keywords: Sequence[str], themes: Sequence[str]) -> flo
         for token in tokenize(keyword)
         if len(token) > 2 and token.lower() in method_query_tokens
     }
-    theme_tokens = _theme_token_set(themes)
+    theme_tokens = _expanded_theme_tokens(themes)
     relevant_theme_method_tokens = theme_tokens & method_query_tokens
     if not method_tokens or not relevant_theme_method_tokens:
         return 0.0
@@ -1253,7 +1616,10 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
         "en": {},
     }
 
-    query_text = _rag_query_from_themes(payload.themes)
+    query_text = _rag_query_from_themes(
+        payload.themes,
+        synonym_expansion_map=app_config.results.synonym_expansion_map,
+    )
     user_lang = _resolve_user_language(request, app_config)
     language_ctx = build_language_context(
         query_text=query_text,
@@ -1281,11 +1647,22 @@ async def match(request: Request, payload: MatchRequest) -> MatchResponse:
             min_query_overlap_per_citation=(
                 app_config.results.min_query_overlap_per_citation
             ),
+            profile_staffinfo_min_query_overlap_per_citation=(
+                app_config.results.profile_staffinfo_min_query_overlap_per_citation
+            ),
             scoring_weights=app_config.results.scoring_weights.model_dump(),
             mode_scoring_profiles=mode_scoring_profiles,
+            exact_keyword_promotion_config=(
+                app_config.results.exact_keyword_promotion.model_dump()
+            ),
             overexposure_penalty_config=(
                 app_config.results.overexposure_penalty.model_dump()
             ),
+            category_intent_penalty_config=(
+                app_config.results.category_intent_penalty.model_dump()
+            ),
+            concept_keyword_map=app_config.results.concept_keyword_map,
+            synonym_expansion_map=app_config.results.synonym_expansion_map,
         )
         if not retriever.is_active:
             state.vector_index_ready = False

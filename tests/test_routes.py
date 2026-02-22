@@ -10,7 +10,7 @@ from app.fetch_utils import FetchUtils
 from app.index.builder import DummyEmbeddingBackend
 from app.index.models import Chunk
 from app.index.vector_store import LocalVectorStore
-from app.language_utils import LanguageContext
+from app.language_utils import LanguageContext, NoOpTranslator
 from app.match_engine import StaffProfile
 from app.rag.retriever import EmbeddingRetriever, RetrievalResult
 
@@ -321,6 +321,78 @@ def test_chunks_to_citations_fallbacks_when_nva_overlap_missing() -> None:
     assert citations[0].url == "https://oslonyehoyskole.no/ansatt/test"
 
 
+def test_chunks_to_citations_requires_stronger_profile_staffinfo_overlap() -> None:
+    nva = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-nva-0002",
+        text="Denne publikasjonen handler om personvern.",
+        order=0,
+        token_count=6,
+        source_url="https://api.nva.unit.no/publication/abc126",
+        metadata={
+            "source_kind": "nva",
+            "source_title": "NVA",
+            "nva_publication_id": "abc126",
+        },
+    )
+    profile = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-profile-0002",
+        text="Profilen nevner personvern.",
+        order=1,
+        token_count=4,
+        source_url="https://oslonyehoyskole.no/ansatt/test",
+        metadata={"source_kind": "profile", "source_title": "Profil"},
+    )
+
+    citations = routes._chunks_to_citations(
+        [profile, nva],
+        themes=["personvern"],
+        source_priority=["nva", "profile", "staffinfo"],
+        min_query_overlap=1,
+        profile_staffinfo_min_query_overlap=2,
+    )
+
+    assert citations
+    assert citations[0].url == "https://nva.sikt.no/registration/abc126"
+
+
+def test_chunks_to_citations_fallback_downranks_zero_overlap_sources() -> None:
+    nva = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-nva-0003",
+        text="Publikasjonen dekker personvern i akademia.",
+        order=0,
+        token_count=6,
+        source_url="https://api.nva.unit.no/publication/abc127",
+        metadata={
+            "source_kind": "nva",
+            "source_title": "NVA",
+            "nva_publication_id": "abc127",
+        },
+    )
+    profile = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-profile-0003",
+        text="Profilen beskriver generell undervisningserfaring.",
+        order=1,
+        token_count=5,
+        source_url="https://oslonyehoyskole.no/ansatt/test",
+        metadata={"source_kind": "profile", "source_title": "Profil"},
+    )
+
+    citations = routes._chunks_to_citations(
+        [profile, nva],
+        themes=["personvern", "compliance"],
+        source_priority=["nva", "profile", "staffinfo"],
+        min_query_overlap=2,
+        profile_staffinfo_min_query_overlap=3,
+    )
+
+    assert citations
+    assert citations[0].url == "https://nva.sikt.no/registration/abc127"
+
+
 def test_chunks_to_citations_publication_mode_uses_nva_tags_for_overlap() -> None:
     nva = Chunk(
         staff_slug="slug",
@@ -394,6 +466,98 @@ def test_method_overlap_score_detects_multiword_method_tokens() -> None:
     assert score > 0.0
 
 
+def test_tag_overlap_score_uses_concept_keyword_mapping() -> None:
+    score = routes._tag_overlap_score(  # type: ignore[attr-defined]
+        ["kvalitativ metode"],
+        ["diskursanalyse"],
+        concept_keyword_map={"diskursanalyse": ["kvalitativ metode"]},
+    )
+    assert score > 0.0
+
+
+def test_synonym_expansion_handles_fn_and_humanitaerrett() -> None:
+    expanded = routes._expand_themes_for_query(  # type: ignore[attr-defined]
+        ["FN", "humanitærrett"],
+        synonym_expansion_map={
+            "fn": ["forente nasjoner", "un"],
+            "humanitærrett": ["internasjonal humanitærrett", "ihl"],
+        },
+    )
+    expanded_set = set(expanded)
+    assert "fn" in expanded_set
+    assert "forente" in expanded_set
+    assert "nasjoner" in expanded_set
+    assert "humanitærrett" in expanded_set
+    assert "internasjonal" in expanded_set
+
+
+def test_synonym_expansion_supports_diplomati_and_kat() -> None:
+    score = routes._tag_overlap_score(  # type: ignore[attr-defined]
+        ["kognitiv terapi", "diplomati"],
+        ["kognitiv atferdsterapi", "utenrikspolitikk"],
+        synonym_expansion_map={
+            "kognitiv": ["kognitiv terapi"],
+            "atferdsterapi": ["kognitiv terapi", "kat"],
+            "utenrikspolitikk": ["diplomati"],
+        },
+    )
+    assert score > 0.0
+
+
+def test_score_breakdown_exposes_expanded_query_terms_count() -> None:
+    chunk = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-9999",
+        text="Arbeid med internasjonal humanitærrett og konflikt.",
+        order=0,
+        token_count=7,
+        source_url="https://example.org/source",
+        metadata={
+            "name": "Ekspansjon Test",
+            "department": "Statsvitenskap",
+            "profile_url": "https://example.org/profile",
+            "tags": ["internasjonal humanitærrett"],
+            "source_kind": "profile",
+        },
+    )
+    result = RetrievalResult(
+        staff_slug="slug",
+        score=0.4,
+        chunks=[chunk],
+        staff_name="Ekspansjon Test",
+        metadata={"department": "Statsvitenskap", "semantic_score": 0.4},
+    )
+    language_ctx = LanguageContext(
+        user_lang="no",
+        query_lang="no",
+        embed_lang="no",
+        llm_lang="no",
+        translation_enabled=False,
+        translate_for_embedding=False,
+        translate_for_llm_input=False,
+        translate_llm_output=False,
+    )
+
+    item = routes._retrieval_result_to_match_item(  # type: ignore[attr-defined]
+        result,
+        ["humanitærrett"],
+        match_mode="publication_grounded",
+        language_ctx=language_ctx,
+        citation_source_priority=["profile"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles={
+            "publication_grounded": {},
+            "profile_grounded": {},
+        },
+        synonym_expansion_map={"humanitærrett": ["internasjonal humanitærrett", "ihl"]},
+        overexposure_penalty_config={},
+    )
+
+    assert item is not None
+    assert item.score_breakdown["expanded_query_terms_count"] > 0
+
+
 def test_retrieval_result_scoring_weights_are_applied() -> None:
     chunk = Chunk(
         staff_slug="slug",
@@ -461,6 +625,179 @@ def test_retrieval_result_scoring_weights_are_applied() -> None:
     assert boosted is not None
     assert semantic_only.score == pytest.approx(0.4, abs=1e-4)
     assert boosted.score > semantic_only.score
+
+
+def test_exact_keyword_promotion_ranks_exact_match_above_non_exact() -> None:
+    exact_chunk = Chunk(
+        staff_slug="slug-exact",
+        chunk_id="slug-exact-0001",
+        text="Fagprofil med kommunikasjonstrening i organisasjoner.",
+        order=0,
+        token_count=6,
+        source_url="https://example.org/exact",
+        metadata={
+            "name": "Eksakt Match",
+            "department": "Psykologi",
+            "profile_url": "https://example.org/exact",
+            "tags": ["kommunikasjonstrening"],
+            "source_kind": "profile",
+        },
+    )
+    non_exact_chunk = Chunk(
+        staff_slug="slug-non-exact",
+        chunk_id="slug-non-exact-0001",
+        text="Bred organisasjonspsykologi og ledelse.",
+        order=0,
+        token_count=5,
+        source_url="https://example.org/non-exact",
+        metadata={
+            "name": "Sterk Semantikk",
+            "department": "Psykologi",
+            "profile_url": "https://example.org/non-exact",
+            "tags": ["organisasjon"],
+            "source_kind": "profile",
+        },
+    )
+
+    exact_result = RetrievalResult(
+        staff_slug="slug-exact",
+        score=0.35,
+        chunks=[exact_chunk],
+        staff_name="Eksakt Match",
+        metadata={"department": "Psykologi", "semantic_score": 0.35},
+    )
+    non_exact_result = RetrievalResult(
+        staff_slug="slug-non-exact",
+        score=0.92,
+        chunks=[non_exact_chunk],
+        staff_name="Sterk Semantikk",
+        metadata={"department": "Psykologi", "semantic_score": 0.92},
+    )
+
+    class StubRetriever:
+        def __init__(self, results):
+            self._results = results
+
+        def retrieve(self, query):
+            return self._results
+
+    language_ctx = LanguageContext(
+        user_lang="no",
+        query_lang="no",
+        embed_lang="no",
+        llm_lang="no",
+        translation_enabled=False,
+        translate_for_embedding=False,
+        translate_for_llm_input=False,
+        translate_llm_output=False,
+    )
+
+    items = routes._match_via_retriever(  # type: ignore[attr-defined]
+        retriever=StubRetriever([non_exact_result, exact_result]),
+        payload=routes.MatchRequest(themes=["kommunikasjonstrening"], mode="profile_grounded"),
+        match_mode="profile_grounded",
+        max_candidates=10,
+        translator=NoOpTranslator(),
+        language_ctx=language_ctx,
+        query_text="kommunikasjonstrening",
+        citation_source_priority=["profile"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles={"publication_grounded": {}, "profile_grounded": {}},
+        exact_keyword_promotion_config={"enabled": True, "keyword_bonus": 0.0, "min_token_length": 2},
+        overexposure_penalty_config={"enabled": False},
+    )
+
+    assert len(items) == 2
+    assert items[0].name == "Eksakt Match"
+    assert items[0].score_breakdown["exact_keyword_match"] == pytest.approx(1.0)
+    assert items[1].score_breakdown["exact_keyword_match"] == pytest.approx(0.0)
+
+
+def test_exact_keyword_promotion_tie_keeps_score_order() -> None:
+    high_score_exact_chunk = Chunk(
+        staff_slug="slug-high",
+        chunk_id="slug-high-0001",
+        text="Kommunikasjonstrening med dokumentert effekt.",
+        order=0,
+        token_count=6,
+        source_url="https://example.org/high",
+        metadata={
+            "name": "Eksakt Høy",
+            "department": "Psykologi",
+            "profile_url": "https://example.org/high",
+            "tags": ["kommunikasjonstrening"],
+            "source_kind": "profile",
+        },
+    )
+    low_score_exact_chunk = Chunk(
+        staff_slug="slug-low",
+        chunk_id="slug-low-0001",
+        text="Kommunikasjonstrening i praksis.",
+        order=0,
+        token_count=4,
+        source_url="https://example.org/low",
+        metadata={
+            "name": "Eksakt Lav",
+            "department": "Psykologi",
+            "profile_url": "https://example.org/low",
+            "tags": ["kommunikasjonstrening"],
+            "source_kind": "profile",
+        },
+    )
+
+    high_result = RetrievalResult(
+        staff_slug="slug-high",
+        score=0.8,
+        chunks=[high_score_exact_chunk],
+        staff_name="Eksakt Høy",
+        metadata={"department": "Psykologi", "semantic_score": 0.8},
+    )
+    low_result = RetrievalResult(
+        staff_slug="slug-low",
+        score=0.4,
+        chunks=[low_score_exact_chunk],
+        staff_name="Eksakt Lav",
+        metadata={"department": "Psykologi", "semantic_score": 0.4},
+    )
+
+    class StubRetriever:
+        def __init__(self, results):
+            self._results = results
+
+        def retrieve(self, query):
+            return self._results
+
+    language_ctx = LanguageContext(
+        user_lang="no",
+        query_lang="no",
+        embed_lang="no",
+        llm_lang="no",
+        translation_enabled=False,
+        translate_for_embedding=False,
+        translate_for_llm_input=False,
+        translate_llm_output=False,
+    )
+
+    items = routes._match_via_retriever(  # type: ignore[attr-defined]
+        retriever=StubRetriever([low_result, high_result]),
+        payload=routes.MatchRequest(themes=["kommunikasjonstrening"], mode="profile_grounded"),
+        match_mode="profile_grounded",
+        max_candidates=10,
+        translator=NoOpTranslator(),
+        language_ctx=language_ctx,
+        query_text="kommunikasjonstrening",
+        citation_source_priority=["profile"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles={"publication_grounded": {}, "profile_grounded": {}},
+        exact_keyword_promotion_config={"enabled": True, "keyword_bonus": 0.0, "min_token_length": 2},
+        overexposure_penalty_config={"enabled": False},
+    )
+
+    assert len(items) == 2
+    assert items[0].name == "Eksakt Høy"
+    assert items[1].name == "Eksakt Lav"
 
 
 def test_mode_scoring_prefers_nva_for_publication_grounded() -> None:
@@ -670,6 +1007,124 @@ def test_overexposure_penalty_reduces_low_signal_profile_spillover() -> None:
     assert item is not None
     assert item.score < 0.6
     assert item.score_breakdown["overexposure_penalty"] > 0.0
+
+
+def test_category_intent_penalty_downweights_unrelated_department() -> None:
+    profile_chunk = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-cat-0001",
+        text="Generell undervisningserfaring og administrasjon.",
+        order=0,
+        token_count=5,
+        source_url="https://example.org/profile",
+        metadata={
+            "name": "Urelatert Profil",
+            "department": "Psykologi",
+            "profile_url": "https://example.org/profile",
+            "source_kind": "profile",
+            "tags": ["administrasjon"],
+        },
+    )
+    result = RetrievalResult(
+        staff_slug="slug",
+        score=0.6,
+        chunks=[profile_chunk],
+        staff_name="Urelatert Profil",
+        metadata={"department": "Psykologi", "semantic_score": 0.6},
+    )
+    language_ctx = LanguageContext(
+        user_lang="no",
+        query_lang="no",
+        embed_lang="no",
+        llm_lang="no",
+        translation_enabled=False,
+        translate_for_embedding=False,
+        translate_for_llm_input=False,
+        translate_llm_output=False,
+    )
+
+    item = routes._retrieval_result_to_match_item(  # type: ignore[attr-defined]
+        result,
+        ["humanitærrett", "diplomati"],
+        match_mode="publication_grounded",
+        language_ctx=language_ctx,
+        citation_source_priority=["profile"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles={"publication_grounded": {}, "profile_grounded": {}},
+        category_intent_penalty_config={
+            "enabled": True,
+            "base_penalty": 0.1,
+            "max_penalty": 0.2,
+            "evidence_overlap_threshold": 0.2,
+            "intent_signals": {"international_relations": ["humanitærrett", "diplomati"]},
+            "intent_department_map": {"international_relations": ["statsvitenskap"]},
+        },
+        overexposure_penalty_config={"enabled": False},
+    )
+
+    assert item is not None
+    assert item.score_breakdown["category_intent_penalty"] > 0.0
+    assert item.score < 0.6
+
+
+def test_category_intent_penalty_keeps_cross_disciplinary_evidence() -> None:
+    profile_chunk = Chunk(
+        staff_slug="slug",
+        chunk_id="slug-cat-0002",
+        text="Forskning på humanitærrett og diplomati i konfliktsoner.",
+        order=0,
+        token_count=8,
+        source_url="https://example.org/profile",
+        metadata={
+            "name": "Tverrfaglig Profil",
+            "department": "Psykologi",
+            "profile_url": "https://example.org/profile2",
+            "source_kind": "profile",
+            "tags": ["humanitærrett", "diplomati"],
+        },
+    )
+    result = RetrievalResult(
+        staff_slug="slug",
+        score=0.6,
+        chunks=[profile_chunk],
+        staff_name="Tverrfaglig Profil",
+        metadata={"department": "Psykologi", "semantic_score": 0.6},
+    )
+    language_ctx = LanguageContext(
+        user_lang="no",
+        query_lang="no",
+        embed_lang="no",
+        llm_lang="no",
+        translation_enabled=False,
+        translate_for_embedding=False,
+        translate_for_llm_input=False,
+        translate_llm_output=False,
+    )
+
+    item = routes._retrieval_result_to_match_item(  # type: ignore[attr-defined]
+        result,
+        ["humanitærrett", "diplomati"],
+        match_mode="publication_grounded",
+        language_ctx=language_ctx,
+        citation_source_priority=["profile"],
+        min_query_overlap_per_citation=0,
+        scoring_weights={"semantic": 1.0, "keywords": 0.0, "tags": 0.0, "methods": 0.0},
+        mode_scoring_profiles={"publication_grounded": {}, "profile_grounded": {}},
+        category_intent_penalty_config={
+            "enabled": True,
+            "base_penalty": 0.1,
+            "max_penalty": 0.2,
+            "evidence_overlap_threshold": 0.2,
+            "intent_signals": {"international_relations": ["humanitærrett", "diplomati"]},
+            "intent_department_map": {"international_relations": ["statsvitenskap"]},
+        },
+        overexposure_penalty_config={"enabled": False},
+    )
+
+    assert item is not None
+    assert item.score_breakdown["category_intent_penalty"] == pytest.approx(0.0, abs=1e-4)
+    assert item.score == pytest.approx(0.6, abs=1e-4)
 
 
 def test_overexposure_penalty_keeps_high_signal_nva_match_intact() -> None:

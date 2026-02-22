@@ -21,10 +21,22 @@ def test_load_app_config_has_expected_defaults() -> None:
     assert config.rag.max_chunks_per_source_per_staff["staffinfo"] == 1
     assert config.results.citation_source_priority == ["nva", "profile", "staffinfo"]
     assert config.results.min_query_overlap_per_citation == 1
+    assert config.results.profile_staffinfo_min_query_overlap_per_citation == 2
     assert config.results.scoring_weights.semantic == 1.0
-    assert config.results.scoring_weights.keywords == 0.1
-    assert config.results.scoring_weights.tags == 0.15
+    assert config.results.scoring_weights.keywords == 0.2
+    assert config.results.scoring_weights.tags == 0.25
     assert config.results.scoring_weights.methods == 0.15
+    assert config.results.concept_keyword_map["diskursanalyse"] == [
+        "kvalitativ metode",
+        "kvalitativ",
+    ]
+    assert config.results.synonym_expansion_map["fn"] == [
+        "forente nasjoner",
+        "un",
+    ]
+    assert config.results.category_intent_penalty.base_penalty == 0.08
+    assert "psychology" in config.results.category_intent_penalty.intent_signals
+    assert "psychology" in config.results.category_intent_penalty.intent_department_map
     assert "publication_grounded" in config.results.mode_scoring_profiles
     assert "profile_grounded" in config.results.mode_scoring_profiles
     publication_profile = config.results.mode_scoring_profiles["publication_grounded"]

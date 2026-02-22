@@ -2,7 +2,7 @@
 
 Last updated: 2026-02-22
 Queue state: `active`
-Next task id: `SQ-UT-007`
+Next task id: `SQ-UT-009`
 Canonical queue file: `docs/TODO.md`
 
 ## Agent Autonomy Contract
@@ -111,7 +111,7 @@ Keep this table synchronized with `Task Ledger` status values.
 | SQ-UT-004 | P0 | revised | Synonym + abbreviation expansion layer |
 | SQ-UT-005 | P0 | revised | Category-aware filtering/down-weighting |
 | SQ-UT-006 | P0 | revised | Staff profile preprocessing and noise stripping pipeline |
-| SQ-UT-007 | P1 | pending | Evidence snippet quality gate tightening |
+| SQ-UT-007 | P1 | revised | Evidence snippet quality gate tightening |
 | SQ-UT-008 | P0 | revised | Embedding model sweep on RTX 4070 with user64 + strict100 scoring |
 | SQ-UT-009 | P1 | pending | Relevance-feedback tuning pass using user64 gold labels |
 | SQ-UT-010 | P2 | pending | Link missing local artifact or declare replacement |
@@ -257,9 +257,9 @@ Run commands (bounded):
 - `timeout 1200 python3 scripts/audit_staff_data.py`
 
 ### [ ] SQ-UT-007 Evidence snippet quality gate tightening (P1, user-test recommendation)
-Status: `pending`
+Status: `revised`
 Depends on: `SQ-UT-001`
-Blocked by: `<none>`
+Blocked by: `Acceptance criteria #1-#2 need benchmark-level validation on user64/strict100 after this citation gate change.`
 
 Goal:
 Ensure citation snippets directly support the query/topic and avoid generic filler text.
@@ -538,3 +538,21 @@ Add one entry per completed/revised task.
 - Metric/verification summary: added a deterministic sweep runner that updates `data/models.yaml` per candidate, rebuilds index, runs user64 + strict100 benchmarks with bounded timeouts, records command logs, extracts benchmark metrics, captures GPU snapshots, and emits machine-readable summary + decision memo. Dry-run executed for all four candidate models and produced reproducible artifacts; runtime environment reports `NVIDIA GeForce GTX 1060` (not RTX 4070), so full quality/performance comparison remains pending.
 - Decision: revise
 - Next recommended task: `SQ-UT-007`
+
+### 2026-02-22 - SQ-UT-007
+- Status change: `pending -> in_progress -> revised`
+- Files changed:
+- `app/routes.py`
+- `app/config_loader.py`
+- `data/app.config.yaml`
+- `tests/test_routes.py`
+- `tests/test_config_loader.py`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 240 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','py_compile','app/routes.py','app/config_loader.py','tests/test_routes.py','tests/test_config_loader.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 1200 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','pytest','tests/test_config_loader.py','tests/test_routes.py','-q')`
+- Benchmark/test output paths:
+- `pytest stdout` (`35 passed, 16 warnings in 6.73s`)
+- Metric/verification summary: tightened citation evidence gate by enforcing stronger query-overlap minimum specifically for `profile`/`staffinfo` snippets (`profile-staffinfo-min-query-overlap-per-citation: 2`) while preserving publication-mode NVA tag augmentation path. Added fallback ranking to down-rank zero-overlap citations when strict gating yields no direct candidates. Added route tests for stronger profile/staffinfo gating and fallback ordering.
+- Decision: revise
+- Next recommended task: `SQ-UT-009`

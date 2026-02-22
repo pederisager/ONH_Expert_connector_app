@@ -90,6 +90,30 @@ class ResultsConfig(BaseModel):
             ge=0.0,
         )
 
+    class ResultsCategoryIntentPenalty(BaseModel):
+        enabled: bool = Field(default=True)
+        base_penalty: float = Field(alias="base-penalty", default=0.08, ge=0.0)
+        max_penalty: float = Field(alias="max-penalty", default=0.16, ge=0.0)
+        evidence_overlap_threshold: float = Field(
+            alias="evidence-overlap-threshold",
+            default=0.2,
+            ge=0.0,
+            le=1.0,
+        )
+        intent_signals: dict[str, list[str]] = Field(
+            alias="intent-signals",
+            default_factory=dict,
+        )
+        intent_department_map: dict[str, list[str]] = Field(
+            alias="intent-department-map",
+            default_factory=dict,
+        )
+
+    class ResultsExactKeywordPromotion(BaseModel):
+        enabled: bool = Field(default=True)
+        keyword_bonus: float = Field(alias="keyword-bonus", default=0.35, ge=0.0)
+        min_token_length: int = Field(alias="min-token-length", default=2, ge=1)
+
     max_candidates: int = Field(alias="max-candidates", default=10)
     min_similarity_score: float = Field(alias="min-similarity-score", default=0.25)
     diversity_weight: float = Field(alias="diversity-weight", default=0.1)
@@ -100,6 +124,11 @@ class ResultsConfig(BaseModel):
     min_query_overlap_per_citation: int = Field(
         alias="min-query-overlap-per-citation",
         default=1,
+    )
+    profile_staffinfo_min_query_overlap_per_citation: int = Field(
+        alias="profile-staffinfo-min-query-overlap-per-citation",
+        default=1,
+        ge=0,
     )
     scoring_weights: ResultsScoringWeights = Field(
         alias="scoring-weights",
@@ -120,9 +149,25 @@ class ResultsConfig(BaseModel):
             },
         },
     )
+    exact_keyword_promotion: ResultsExactKeywordPromotion = Field(
+        alias="exact-keyword-promotion",
+        default_factory=ResultsExactKeywordPromotion,
+    )
+    concept_keyword_map: dict[str, list[str]] = Field(
+        alias="concept-keyword-map",
+        default_factory=dict,
+    )
+    synonym_expansion_map: dict[str, list[str]] = Field(
+        alias="synonym-expansion-map",
+        default_factory=dict,
+    )
     overexposure_penalty: ResultsOverexposurePenalty = Field(
         alias="overexposure-penalty",
         default_factory=ResultsOverexposurePenalty,
+    )
+    category_intent_penalty: ResultsCategoryIntentPenalty = Field(
+        alias="category-intent-penalty",
+        default_factory=ResultsCategoryIntentPenalty,
     )
 
 
