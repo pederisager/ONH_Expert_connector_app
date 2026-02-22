@@ -2,7 +2,7 @@
 
 Last updated: 2026-02-22
 Queue state: `active`
-Next task id: `SQ-UT-008`
+Next task id: `SQ-UT-007`
 Canonical queue file: `docs/TODO.md`
 
 ## Agent Autonomy Contract
@@ -112,7 +112,7 @@ Keep this table synchronized with `Task Ledger` status values.
 | SQ-UT-005 | P0 | revised | Category-aware filtering/down-weighting |
 | SQ-UT-006 | P0 | revised | Staff profile preprocessing and noise stripping pipeline |
 | SQ-UT-007 | P1 | pending | Evidence snippet quality gate tightening |
-| SQ-UT-008 | P0 | pending | Embedding model sweep on RTX 4070 with user64 + strict100 scoring |
+| SQ-UT-008 | P0 | revised | Embedding model sweep on RTX 4070 with user64 + strict100 scoring |
 | SQ-UT-009 | P1 | pending | Relevance-feedback tuning pass using user64 gold labels |
 | SQ-UT-010 | P2 | pending | Link missing local artifact or declare replacement |
 
@@ -275,9 +275,9 @@ Acceptance criteria:
 3. Existing publication evidence improvements are preserved.
 
 ### [ ] SQ-UT-008 Embedding model sweep on RTX 4070 with user64 + strict100 scoring (P0, requester requirement #4)
-Status: `pending`
+Status: `revised`
 Depends on: `SQ-UT-001, SQ-UT-006`
-Blocked by: `<none>`
+Blocked by: `Full candidate benchmark runs still pending; this pass added automation and dry-run artifacts only.`
 
 Goal:
 Evaluate stronger embedding models and keep the best quality model that is practical on RTX 4070.
@@ -520,3 +520,21 @@ Add one entry per completed/revised task.
 - Metric/verification summary: added section-aware summary extraction with expertise-priority cues and low-value CV/admin/contact filtering, plus fallback to avoid empty summaries when pages only contain low-priority sections. Added focused parser tests for noise stripping and fallback behavior. Audit regenerated (`staff_with_issues=87`, `unresolved_high_count=13`) for post-change tracking.
 - Decision: revise
 - Next recommended task: `SQ-UT-008`
+
+### 2026-02-22 - SQ-UT-008
+- Status change: `pending -> in_progress -> revised`
+- Files changed:
+- `scripts/run_embedding_model_sweep.py`
+- `reports/model_sweeps/2026-02-22/sweep_summary.json`
+- `reports/model_sweeps/2026-02-22/decision_memo.md`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 240 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','py_compile','scripts/run_embedding_model_sweep.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 240 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/run_embedding_model_sweep.py','--help')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 240 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/run_embedding_model_sweep.py','--run-date','2026-02-22','--max-models','4','--dry-run')`
+- Benchmark/test output paths:
+- `reports/model_sweeps/2026-02-22/sweep_summary.json`
+- `reports/model_sweeps/2026-02-22/decision_memo.md`
+- Metric/verification summary: added a deterministic sweep runner that updates `data/models.yaml` per candidate, rebuilds index, runs user64 + strict100 benchmarks with bounded timeouts, records command logs, extracts benchmark metrics, captures GPU snapshots, and emits machine-readable summary + decision memo. Dry-run executed for all four candidate models and produced reproducible artifacts; runtime environment reports `NVIDIA GeForce GTX 1060` (not RTX 4070), so full quality/performance comparison remains pending.
+- Decision: revise
+- Next recommended task: `SQ-UT-007`
