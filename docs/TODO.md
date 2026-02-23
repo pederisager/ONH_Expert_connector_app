@@ -277,7 +277,7 @@ Acceptance criteria:
 ### [ ] SQ-UT-008 Embedding model sweep on RTX 4070 with user64 + strict100 scoring (P0, requester requirement #4)
 Status: `revised`
 Depends on: `SQ-UT-001, SQ-UT-006`
-Blocked by: `No model has yet passed strict100 thresholds; BAAI/bge-m3 index build fails due torch<2.6 safety restriction when loading model weights.`
+Blocked by: `No model has yet passed strict100 thresholds; strict100 runs still show intermittent request errors under local server load; BAAI/bge-m3 index build fails due torch<2.6 safety restriction when loading model weights.`
 
 Goal:
 Evaluate stronger embedding models and keep the best quality model that is practical on RTX 4070.
@@ -616,5 +616,27 @@ Add one entry per completed/revised task.
 - `reports/model_sweeps/2026-02-23/sentence-transformers-paraphrase-multilingual-minilm-l12-v2_user64.json`
 - `reports/model_sweeps/2026-02-23/sentence-transformers-paraphrase-multilingual-minilm-l12-v2_strict100.json`
 - Metric/verification summary: completed non-dry sweep across four candidates on local `NVIDIA GeForce GTX 1060` host. User64 metrics: mpnet (`MustInclude@3=0.6875`, `ShouldInclude@10=0.7083`), MiniLM (`0.6094`, `0.6042`), e5-large (`0.5000`, `0.3750`). All strict100 runs failed benchmark thresholds (e.g., mpnet strict100 `MustInclude@3=0.73`, `ShouldInclude@10=0.4898`, `HardExcludeRate@10=0.88`, `PublicationEvidencePassRate=0.6167`). `BAAI/bge-m3` build failed due transformers safety gate requiring torch >=2.6 when loading non-safetensor weights.
+- Decision: revise
+- Next recommended task: `SQ-UT-008`
+
+### 2026-02-23 - SQ-UT-008 (benchmark reliability + retry classification)
+- Status change: `revised -> in_progress -> revised`
+- Files changed:
+- `scripts/run_embedding_model_sweep.py`
+- `reports/model_sweeps/2026-02-23-retry-pass/sweep_summary.json`
+- `reports/model_sweeps/2026-02-23-retry-pass/decision_memo.md`
+- `reports/model_sweeps/2026-02-23-retry-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_user64.json`
+- `reports/model_sweeps/2026-02-23-retry-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_strict100.json`
+- `reports/model_sweeps/2026-02-23-retry-pass/logs/*`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 240 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','py_compile','scripts/run_embedding_model_sweep.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 2400 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/run_embedding_model_sweep.py','--run-date','2026-02-23-retry-pass','--models','sentence-transformers/paraphrase-multilingual-mpnet-base-v2','--max-models','1','--skip-index','--benchmark-retries','1')`
+- Benchmark/test output paths:
+- `reports/model_sweeps/2026-02-23-retry-pass/sweep_summary.json`
+- `reports/model_sweeps/2026-02-23-retry-pass/decision_memo.md`
+- `reports/model_sweeps/2026-02-23-retry-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_user64.json`
+- `reports/model_sweeps/2026-02-23-retry-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_strict100.json`
+- Metric/verification summary: enhanced sweep runner to (a) retry benchmark runs when output contains request errors, (b) distinguish infra failures vs threshold failures in candidate status, and (c) persist benchmark metrics even when benchmark exits non-zero. Smoke non-dry pass confirms strict100 is now flagged as `strict100_infra_failed` with explicit retry note (`strict100 retry 1/1 after 9 request errors`) and retains metrics for diagnosis.
 - Decision: revise
 - Next recommended task: `SQ-UT-008`

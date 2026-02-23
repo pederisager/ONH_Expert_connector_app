@@ -116,16 +116,45 @@ def _wait_for_port(host: str, port: int, timeout_sec: int) -> bool:
     return False
 
 
-def _load_benchmark_metrics(path: Path) -> BenchmarkMetrics | None:
+def _load_benchmark_payload(path: Path) -> dict[str, Any] | None:
     if not path.exists():
         return None
-    payload = json.loads(path.read_text(encoding="utf-8"))
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return None
+
+
+def _load_benchmark_metrics(path: Path) -> BenchmarkMetrics | None:
+    payload = _load_benchmark_payload(path)
+    if not payload:
+        return None
     metrics = payload.get("metrics") or {}
     return BenchmarkMetrics(
         must_include_at_3=_as_float(metrics.get("MustInclude@3")),
         should_include_at_10=_as_float(metrics.get("ShouldInclude@10")),
         hard_exclude_rate_at_10=_as_float(metrics.get("HardExcludeRate@10")),
         publication_evidence_pass_rate=_as_float(metrics.get("PublicationEvidencePassRate")),
+    )
+
+
+def _benchmark_request_error_count(payload: dict[str, Any] | None) -> int:
+    if not payload:
+        return 0
+    count = 0
+    for row in payload.get("query_results") or []:
+        if isinstance(row, dict) and row.get("request_error"):
+            count += 1
+    return count
+
+
+def _benchmark_failure_count(payload: dict[str, Any] | None) -> int:
+    if not payload:
+        return 0
+    return (
+        len(payload.get("threshold_failures") or [])
+        + len(payload.get("mode_threshold_failures") or [])
+        + len(payload.get("overexposure_violations") or [])
     )
 
 
@@ -357,6 +386,12 @@ def build_parser() -> argparse.ArgumentParser:
         default=120,
     )
     parser.add_argument(
+        "--benchmark-retries",
+        type=int,
+        default=1,
+        help="Retry count when benchmark output contains request errors (default: 1).",
+    )
+    parser.add_argument(
         "--device",
         default="auto",
         help="Embedding device to write in models.yaml (default: auto).",
@@ -452,6 +487,7 @@ def main(argv: list[str] | None = None) -> int:
                     notes.append("index build failed")
 
             if status == "ok" and not args.skip_benchmarks:
+                benchmark_retries = max(0, int(args.benchmark_retries))
                 user64_output = output_dir / f"{model_slug}_user64.json"
                 strict_output = output_dir / f"{model_slug}_strict100.json"
 
@@ -467,11 +503,43 @@ def main(argv: list[str] | None = None) -> int:
                     start_timeout_sec=args.server_start_timeout_sec,
                     benchmark_timeout_sec=args.benchmark_timeout_sec,
                 )
+                user64_payload = _load_benchmark_payload(user64_output)
+                user64_request_errors = _benchmark_request_error_count(user64_payload)
+                retry_index = 0
+                while user64_request_errors > 0 and retry_index < benchmark_retries:
+                    retry_index += 1
+                    notes.append(
+                        "user64 retry "
+                        f"{retry_index}/{benchmark_retries} after {user64_request_errors} request errors"
+                    )
+                    user64_result = _run_benchmark_with_local_server(
+                        python_executable=args.python,
+                        benchmark_path=(ROOT / args.user64_benchmark).resolve()
+                        if not args.user64_benchmark.is_absolute()
+                        else args.user64_benchmark,
+                        output_path=user64_output,
+                        logs_dir=logs_dir,
+                        model_slug=model_slug,
+                        benchmark_slug="user64",
+                        start_timeout_sec=args.server_start_timeout_sec,
+                        benchmark_timeout_sec=args.benchmark_timeout_sec,
+                    )
+                    user64_payload = _load_benchmark_payload(user64_output)
+                    user64_request_errors = _benchmark_request_error_count(user64_payload)
+
+                user64_metrics = _load_benchmark_metrics(user64_output)
                 if user64_result.returncode != 0:
-                    status = "user64_failed"
-                    notes.append("user64 benchmark failed")
-                else:
-                    user64_metrics = _load_benchmark_metrics(user64_output)
+                    if user64_request_errors > 0:
+                        status = "user64_infra_failed"
+                        notes.append(
+                            f"user64 benchmark ended with {user64_request_errors} request errors"
+                        )
+                    elif _benchmark_failure_count(user64_payload) > 0:
+                        status = "user64_threshold_failed"
+                        notes.append("user64 benchmark failed thresholds")
+                    else:
+                        status = "user64_failed"
+                        notes.append("user64 benchmark failed")
 
                 if status == "ok":
                     strict_result = _run_benchmark_with_local_server(
@@ -486,11 +554,43 @@ def main(argv: list[str] | None = None) -> int:
                         start_timeout_sec=args.server_start_timeout_sec,
                         benchmark_timeout_sec=args.benchmark_timeout_sec,
                     )
+                    strict_payload = _load_benchmark_payload(strict_output)
+                    strict_request_errors = _benchmark_request_error_count(strict_payload)
+                    retry_index = 0
+                    while strict_request_errors > 0 and retry_index < benchmark_retries:
+                        retry_index += 1
+                        notes.append(
+                            "strict100 retry "
+                            f"{retry_index}/{benchmark_retries} after {strict_request_errors} request errors"
+                        )
+                        strict_result = _run_benchmark_with_local_server(
+                            python_executable=args.python,
+                            benchmark_path=(ROOT / args.strict100_benchmark).resolve()
+                            if not args.strict100_benchmark.is_absolute()
+                            else args.strict100_benchmark,
+                            output_path=strict_output,
+                            logs_dir=logs_dir,
+                            model_slug=model_slug,
+                            benchmark_slug="strict100",
+                            start_timeout_sec=args.server_start_timeout_sec,
+                            benchmark_timeout_sec=args.benchmark_timeout_sec,
+                        )
+                        strict_payload = _load_benchmark_payload(strict_output)
+                        strict_request_errors = _benchmark_request_error_count(strict_payload)
+
+                    strict_metrics = _load_benchmark_metrics(strict_output)
                     if strict_result.returncode != 0:
-                        status = "strict100_failed"
-                        notes.append("strict100 benchmark failed")
-                    else:
-                        strict_metrics = _load_benchmark_metrics(strict_output)
+                        if strict_request_errors > 0:
+                            status = "strict100_infra_failed"
+                            notes.append(
+                                f"strict100 benchmark ended with {strict_request_errors} request errors"
+                            )
+                        elif _benchmark_failure_count(strict_payload) > 0:
+                            status = "strict100_threshold_failed"
+                            notes.append("strict100 benchmark failed thresholds")
+                        else:
+                            status = "strict100_failed"
+                            notes.append("strict100 benchmark failed")
 
             results.append(
                 CandidateResult(

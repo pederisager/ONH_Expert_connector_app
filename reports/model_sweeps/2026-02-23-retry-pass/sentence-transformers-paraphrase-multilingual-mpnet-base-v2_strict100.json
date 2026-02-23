@@ -1,0 +1,2579 @@
+{
+  "generated_at": "2026-02-23T15:58:44.891724+00:00",
+  "benchmark_version": "search_relevance_100_v1",
+  "metrics": {
+    "MustInclude@3": 0.53,
+    "ShouldInclude@10": 0.2857142857142857,
+    "HardExcludeRate@10": 0.8233333333333334,
+    "PublicationEvidencePassRate": 0.0
+  },
+  "metrics_by_domain": {
+    "Psykologi": {
+      "MustInclude@3": 0.32,
+      "ShouldInclude@10": 0.07692307692307693,
+      "HardExcludeRate@10": 0.6133333333333333,
+      "PublicationEvidencePassRate": 0.0,
+      "QueryCount": 25.0
+    },
+    "Helsefag": {
+      "MustInclude@3": 0.48,
+      "ShouldInclude@10": 0.46153846153846156,
+      "HardExcludeRate@10": 0.9333333333333333,
+      "PublicationEvidencePassRate": 0.0,
+      "QueryCount": 25.0
+    },
+    "Statsvitenskap og internasjonale relasjoner": {
+      "MustInclude@3": 0.64,
+      "ShouldInclude@10": 0.30434782608695654,
+      "HardExcludeRate@10": 0.8666666666666667,
+      "PublicationEvidencePassRate": 0.0,
+      "QueryCount": 25.0
+    },
+    "Økonomi og administrasjon": {
+      "MustInclude@3": 0.68,
+      "ShouldInclude@10": 0.30434782608695654,
+      "HardExcludeRate@10": 0.88,
+      "PublicationEvidencePassRate": 0.0,
+      "QueryCount": 25.0
+    }
+  },
+  "metrics_by_mode": {
+    "publication_grounded": {
+      "MustInclude@3": 0.4166666666666667,
+      "ShouldInclude@10": 0.29850746268656714,
+      "HardExcludeRate@10": 0.7722222222222223,
+      "PublicationEvidencePassRate": 0.0,
+      "QueryCount": 60.0
+    },
+    "profile_grounded": {
+      "MustInclude@3": 0.7,
+      "ShouldInclude@10": 0.25806451612903225,
+      "HardExcludeRate@10": 0.9,
+      "PublicationEvidencePassRate": 0.0,
+      "QueryCount": 40.0
+    }
+  },
+  "threshold_failures": [
+    "MustInclude@3=0.530 below threshold 0.700",
+    "ShouldInclude@10=0.286 below threshold 0.800",
+    "HardExcludeRate@10=0.823 below threshold 0.970",
+    "PublicationEvidencePassRate=0.000 below threshold 0.700"
+  ],
+  "mode_threshold_failures": [
+    "publication_grounded:MustInclude@3=0.417 below threshold 0.750",
+    "publication_grounded:ShouldInclude@10=0.299 below threshold 0.780",
+    "publication_grounded:HardExcludeRate@10=0.772 below threshold 0.970",
+    "publication_grounded:PublicationEvidencePassRate=0.000 below threshold 0.750",
+    "profile_grounded:ShouldInclude@10=0.258 below threshold 0.820",
+    "profile_grounded:HardExcludeRate@10=0.900 below threshold 0.970"
+  ],
+  "overexposure_violations": [],
+  "query_failures": [
+    {
+      "query_id": "B001",
+      "query_text": "ARFID og restriktive spiseforstyrrelser hos ungdom",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 5,
+      "reasons": [
+        "request_error=ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it",
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=2/2",
+        "hard_exclude_violations=3/3"
+      ]
+    },
+    {
+      "query_id": "B002",
+      "query_text": "Kroppsbilde, Body Project og forebygging av spiseforstyrrelser",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 5,
+      "reasons": [
+        "request_error=ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it",
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=3/3"
+      ]
+    },
+    {
+      "query_id": "B003",
+      "query_text": "Idrettspsykologi, mental trening og prestasjon i toppidrett",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 5,
+      "reasons": [
+        "request_error=ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it",
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=2/2",
+        "hard_exclude_violations=3/3"
+      ]
+    },
+    {
+      "query_id": "B004",
+      "query_text": "Motivasjon og relasjoner i hoyprestasjonsgrupper",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 5,
+      "reasons": [
+        "request_error=ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it",
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=3/3"
+      ]
+    },
+    {
+      "query_id": "B005",
+      "query_text": "Barn og unges psykiske helse med atferdsvansker",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 5,
+      "reasons": [
+        "request_error=ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it",
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=3/3"
+      ]
+    },
+    {
+      "query_id": "B006",
+      "query_text": "Utviklingspsykopatologi og longitudinelle studier av ungdom",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 5,
+      "reasons": [
+        "request_error=ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it",
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=3/3"
+      ]
+    },
+    {
+      "query_id": "B007",
+      "query_text": "Arbeidsmiljo, omstilling og organisasjonspsykologi i arbeidslivet",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 5,
+      "reasons": [
+        "request_error=ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it",
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=2/2",
+        "hard_exclude_violations=3/3"
+      ]
+    },
+    {
+      "query_id": "B008",
+      "query_text": "Sykefravaer, inkludering og HR i den nordiske modellen",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 5,
+      "reasons": [
+        "request_error=ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it",
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=3/3"
+      ]
+    },
+    {
+      "query_id": "B009",
+      "query_text": "Kulturpsykologi, kommunikasjon og ideologi i samfunnet",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 5,
+      "reasons": [
+        "request_error=ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it",
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=2/2",
+        "hard_exclude_violations=3/3"
+      ]
+    },
+    {
+      "query_id": "B052",
+      "query_text": "Havrett, geopolitikk og sikkerhet i nordomradene",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 4,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B059",
+      "query_text": "Afrikas Horn, fredsprosesser og overgangsjustis",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 4,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B078",
+      "query_text": "KI-anbefalingssystemer og forbrukerrespons i markedet",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 4,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=2/3"
+      ]
+    },
+    {
+      "query_id": "B013",
+      "query_text": "Arbeid og psykisk helse i organisasjoner og utdanning",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B014",
+      "query_text": "Emosjonsfokusert terapi, relasjonskompetanse og kommunikasjon",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B026",
+      "query_text": "Ernaeringsepidemiologi, meta-analyser og kosthold ved kreft/overvekt",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 3,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=2/2",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B027",
+      "query_text": "Diabetes, dodelighet og fysisk aktivitet i folkehelseforskning",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 3,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B028",
+      "query_text": "Klinisk ernaering, kostveiledning og livsstilssykdommer",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B030",
+      "query_text": "Anatomi, fysiologi og farmakologi i medisinutdanning",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B033",
+      "query_text": "Hjertets struktur og funksjon, MR og fysikalsk kjemi",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 3,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B036",
+      "query_text": "Kosthold for barn og familier i forebyggende helsearbeid",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B037",
+      "query_text": "Klinisk ernaering ved diabetes og overvekt",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B040",
+      "query_text": "Samfunnsernaering og kostholdsrad i befolkningsarbeid",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B054",
+      "query_text": "Amerikanske valg, sikkerhetsstudier og internasjonale relasjoner",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B055",
+      "query_text": "Politikk i Midtosten, sosiale bevegelser og komparativ politikk",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B056",
+      "query_text": "Saudi-Arabia, Syria og Tyrkia i regional politikk",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B060",
+      "query_text": "Autoritaere regimer, demokratisering og konflikt i Etiopia/Eritrea",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B062",
+      "query_text": "Folkemord, massevold og etterretningshistorie",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B064",
+      "query_text": "Kina, etterretning og autoritaere regimer i Midtosten",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B065",
+      "query_text": "Fredsarbeid, konfliktlosning og utviklingsarbeid i Ost-Afrika",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B066",
+      "query_text": "Konfliktforhandling og fredsmekling i Midtosten",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B080",
+      "query_text": "Entreprenorskap i hoyere utdanning og innovasjonslaering",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B081",
+      "query_text": "Schumpeteriansk teori, makrookonomi og innovasjon",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B082",
+      "query_text": "Finance-innovation nexus og kredittskapning i kapitalismen",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B086",
+      "query_text": "Arbeidsmiljo, HR og organisasjonspsykologi i virksomheter",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B088",
+      "query_text": "KI, menneske-maskin-interaksjon og forretningsmodeller",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B089",
+      "query_text": "Digitalisering og kommunikasjon i organisasjoner",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 3,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B011",
+      "query_text": "Forebygging og folkehelse i psykisk helsearbeid",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B012",
+      "query_text": "AI i utdanning, vurderingsformer og akademisk skriving",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B015",
+      "query_text": "Kvantitativ metode, nevrovitenskap og psykopatologi",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B016",
+      "query_text": "Suicidforebygging og krisehandtering i klinisk voksenpsykologi",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B017",
+      "query_text": "Miljoterapi i rusbehandling for ungdom",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B020",
+      "query_text": "Kritisk psykologi, minoritetspsykologi og diskursanalyse",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B021",
+      "query_text": "Forvaltning og politikk pa psykisk helse-feltet",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B022",
+      "query_text": "Akutt psykologi og psykodynamisk terapi i krisearbeid",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B031",
+      "query_text": "Samfunnsernaering, folkehelse og forebygging av livsstilssykdommer",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B032",
+      "query_text": "Anvendt statistikk og numeriske metoder i helsefaglig forskning",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 2,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B034",
+      "query_text": "Systematiske litteraturgjennomganger innen ernaering og helse",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B035",
+      "query_text": "Cellebiologi og fysiologi i ernaeringsundervisning",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B039",
+      "query_text": "Kosthold og psykisk helse (ernaeringspsykologi)",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B041",
+      "query_text": "Klinisk fysioterapi og rehabiliteringsforlop ved muskel- og skjelettplager",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "should_include_missed=1/2",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B043",
+      "query_text": "Idrettsfysioterapi, fysisk aktivitet og rehabilitering",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B045",
+      "query_text": "Anatomi, trening og behandling av muskel- og skjelettlidelser",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B047",
+      "query_text": "Tverrfaglig rehabilitering og oppfolging i fysioterapi",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B051",
+      "query_text": "Arktis, nordomradepolitikk, maritim sikkerhet og ressurskonflikter",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 2,
+      "reasons": [
+        "publication_evidence_missing",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B053",
+      "query_text": "Amerikansk utenrikspolitikk, nasjonalisme og amerikansk eksepsjonalisme",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B058",
+      "query_text": "FN, likestilling og inkludering av sarbare grupper",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 2,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B061",
+      "query_text": "Ekstremisme, radikalisering og totalitarisme i europeisk politikk",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B071",
+      "query_text": "Geopolitisk risikovurdering i nordomradene",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 2,
+      "reasons": [
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B073",
+      "query_text": "Fredsprosesser og bistandsarbeid i Ost-Afrika",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 2,
+      "reasons": [
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B079",
+      "query_text": "Design thinking, tjenestedesign og entreprenorskap",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 2,
+      "reasons": [
+        "publication_evidence_missing",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B083",
+      "query_text": "Langsiktige okonomiske effekter av pandemier og baerekraft",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 2,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B084",
+      "query_text": "Digitalisering og ambidekster organisasjon i finanssektoren",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 2,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B087",
+      "query_text": "Endringsledelse, organisasjonsutvikling og prosjektledelse",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "publication_evidence_missing",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B090",
+      "query_text": "Design thinking i innovasjonsprosjekter og entreprenorskap",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "publication_evidence_missing",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B092",
+      "query_text": "Kredittvurdering og studentokonomi i privatokonomiundervisning",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B093",
+      "query_text": "Etikk i naeringslivet, merkevarebygging og omstillingsprosesser",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B096",
+      "query_text": "Forretningsmodeller og AI i tjenesteutvikling",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 2,
+      "reasons": [
+        "should_include_missed=1/1",
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B098",
+      "query_text": "Forbrukeratferd i digitale kundereiser",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 2,
+      "reasons": [
+        "must_include_missing_top3",
+        "hard_exclude_violations=2/3"
+      ]
+    },
+    {
+      "query_id": "B010",
+      "query_text": "Samfunnspsykologi, diskurspsykologi og sprak i offentligheten",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 1,
+      "reasons": [
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B018",
+      "query_text": "Hybrid- og hjemmearbeid i fremtidens arbeidsliv",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 1,
+      "reasons": [
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B019",
+      "query_text": "Job crafting, jobbengasjement og motivasjon pa jobb",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 1,
+      "reasons": [
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B023",
+      "query_text": "Middelalderens klosterarkitektur i Nord-Italia",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "failure_score": 1,
+      "reasons": [
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B025",
+      "query_text": "Astrofysikk, gravitasjonsbolger og eksoplaneter",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "failure_score": 1,
+      "reasons": [
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B029",
+      "query_text": "Ernaering for barn, folkehelse og kostholdstiltak",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 1,
+      "reasons": [
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B038",
+      "query_text": "Patologi og legevitenskap i grunnutdanning helsefag",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 1,
+      "reasons": [
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B044",
+      "query_text": "ACT, mindfulness og psykosomatikk i klinisk praksis",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 1,
+      "reasons": [
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B046",
+      "query_text": "Kostveiledning for barn i kommunehelsetjenesten",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 1,
+      "reasons": [
+        "must_include_missing_top3"
+      ]
+    },
+    {
+      "query_id": "B057",
+      "query_text": "Menneskerettigheter, ikke-diskriminering og funksjonsnedsettelse",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 1,
+      "reasons": [
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B063",
+      "query_text": "EU-politikk, interessegrupper og offentlig politikk",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 1,
+      "reasons": [
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B070",
+      "query_text": "Demokrati, minoritetspolitikk og sosialdemokrati i Norden",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 1,
+      "reasons": [
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B072",
+      "query_text": "Etterretning og spionasje i autoritaere systemer",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 1,
+      "reasons": [
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B074",
+      "query_text": "Geoteknikk for tunnelboring i granitt",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "failure_score": 1,
+      "reasons": [
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B075",
+      "query_text": "Veterinaer obstetrikk hos storfe",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "failure_score": 1,
+      "reasons": [
+        "hard_exclude_violations=1/3"
+      ]
+    },
+    {
+      "query_id": "B076",
+      "query_text": "Digital markedsforing, forbrukeratferd og sosiale medier",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 1,
+      "reasons": [
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B077",
+      "query_text": "Message strategy og forbrukerengasjement i sosiale medier",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "failure_score": 1,
+      "reasons": [
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B085",
+      "query_text": "Onboarding, organisasjonssosialisering og HR-praksis",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "failure_score": 1,
+      "reasons": [
+        "publication_evidence_missing"
+      ]
+    },
+    {
+      "query_id": "B091",
+      "query_text": "Regnskap, internasjonal skatt og okonomisystemer",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "failure_score": 1,
+      "reasons": [
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B095",
+      "query_text": "Lederutvikling og organisasjonsledelse i smaa og mellomstore bedrifter",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 1,
+      "reasons": [
+        "should_include_missed=1/1"
+      ]
+    },
+    {
+      "query_id": "B097",
+      "query_text": "HRM-tiltak for onboarding av nyansatte",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "failure_score": 1,
+      "reasons": [
+        "should_include_missed=1/1"
+      ]
+    }
+  ],
+  "query_results": [
+    {
+      "query_id": "B001",
+      "query_text": "ARFID og restriktive spiseforstyrrelser hos ungdom",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 2,
+      "hard_exclude_hits": 0,
+      "hard_exclude_total": 3,
+      "request_error": "ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "query_id": "B002",
+      "query_text": "Kroppsbilde, Body Project og forebygging av spiseforstyrrelser",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 0,
+      "hard_exclude_total": 3,
+      "request_error": "ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "query_id": "B003",
+      "query_text": "Idrettspsykologi, mental trening og prestasjon i toppidrett",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 2,
+      "hard_exclude_hits": 0,
+      "hard_exclude_total": 3,
+      "request_error": "ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "query_id": "B004",
+      "query_text": "Motivasjon og relasjoner i hoyprestasjonsgrupper",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 0,
+      "hard_exclude_total": 3,
+      "request_error": "ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "query_id": "B005",
+      "query_text": "Barn og unges psykiske helse med atferdsvansker",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 0,
+      "hard_exclude_total": 3,
+      "request_error": "ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "query_id": "B006",
+      "query_text": "Utviklingspsykopatologi og longitudinelle studier av ungdom",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 0,
+      "hard_exclude_total": 3,
+      "request_error": "ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "query_id": "B007",
+      "query_text": "Arbeidsmiljo, omstilling og organisasjonspsykologi i arbeidslivet",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 2,
+      "hard_exclude_hits": 0,
+      "hard_exclude_total": 3,
+      "request_error": "ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "query_id": "B008",
+      "query_text": "Sykefravaer, inkludering og HR i den nordiske modellen",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 0,
+      "hard_exclude_total": 3,
+      "request_error": "ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "query_id": "B009",
+      "query_text": "Kulturpsykologi, kommunikasjon og ideologi i samfunnet",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 2,
+      "hard_exclude_hits": 0,
+      "hard_exclude_total": 3,
+      "request_error": "ConnectError: [WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "query_id": "B010",
+      "query_text": "Samfunnspsykologi, diskurspsykologi og sprak i offentligheten",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B011",
+      "query_text": "Forebygging og folkehelse i psykisk helsearbeid",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B012",
+      "query_text": "AI i utdanning, vurderingsformer og akademisk skriving",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B013",
+      "query_text": "Arbeid og psykisk helse i organisasjoner og utdanning",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B014",
+      "query_text": "Emosjonsfokusert terapi, relasjonskompetanse og kommunikasjon",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B015",
+      "query_text": "Kvantitativ metode, nevrovitenskap og psykopatologi",
+      "domain": "Psykologi",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B016",
+      "query_text": "Suicidforebygging og krisehandtering i klinisk voksenpsykologi",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B017",
+      "query_text": "Miljoterapi i rusbehandling for ungdom",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B018",
+      "query_text": "Hybrid- og hjemmearbeid i fremtidens arbeidsliv",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B019",
+      "query_text": "Job crafting, jobbengasjement og motivasjon pa jobb",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B020",
+      "query_text": "Kritisk psykologi, minoritetspsykologi og diskursanalyse",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B021",
+      "query_text": "Forvaltning og politikk pa psykisk helse-feltet",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B022",
+      "query_text": "Akutt psykologi og psykodynamisk terapi i krisearbeid",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B023",
+      "query_text": "Middelalderens klosterarkitektur i Nord-Italia",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 0,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B024",
+      "query_text": "Kvantekromodynamikk og partikkelfysikk ved CERN",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 0,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B025",
+      "query_text": "Astrofysikk, gravitasjonsbolger og eksoplaneter",
+      "domain": "Psykologi",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 0,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B026",
+      "query_text": "Ernaeringsepidemiologi, meta-analyser og kosthold ved kreft/overvekt",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 2,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B027",
+      "query_text": "Diabetes, dodelighet og fysisk aktivitet i folkehelseforskning",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B028",
+      "query_text": "Klinisk ernaering, kostveiledning og livsstilssykdommer",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B029",
+      "query_text": "Ernaering for barn, folkehelse og kostholdstiltak",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 2,
+      "should_total": 2,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B030",
+      "query_text": "Anatomi, fysiologi og farmakologi i medisinutdanning",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B031",
+      "query_text": "Samfunnsernaering, folkehelse og forebygging av livsstilssykdommer",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 2,
+      "should_total": 2,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B032",
+      "query_text": "Anvendt statistikk og numeriske metoder i helsefaglig forskning",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B033",
+      "query_text": "Hjertets struktur og funksjon, MR og fysikalsk kjemi",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B034",
+      "query_text": "Systematiske litteraturgjennomganger innen ernaering og helse",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B035",
+      "query_text": "Cellebiologi og fysiologi i ernaeringsundervisning",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B036",
+      "query_text": "Kosthold for barn og familier i forebyggende helsearbeid",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B037",
+      "query_text": "Klinisk ernaering ved diabetes og overvekt",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B038",
+      "query_text": "Patologi og legevitenskap i grunnutdanning helsefag",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B039",
+      "query_text": "Kosthold og psykisk helse (ernaeringspsykologi)",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B040",
+      "query_text": "Samfunnsernaering og kostholdsrad i befolkningsarbeid",
+      "domain": "Helsefag",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B041",
+      "query_text": "Klinisk fysioterapi og rehabiliteringsforlop ved muskel- og skjelettplager",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 1,
+      "should_total": 2,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B042",
+      "query_text": "Barnefysioterapi, kvinnehelse og svangerskapstrening",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B043",
+      "query_text": "Idrettsfysioterapi, fysisk aktivitet og rehabilitering",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B044",
+      "query_text": "ACT, mindfulness og psykosomatikk i klinisk praksis",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B045",
+      "query_text": "Anatomi, trening og behandling av muskel- og skjelettlidelser",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B046",
+      "query_text": "Kostveiledning for barn i kommunehelsetjenesten",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B047",
+      "query_text": "Tverrfaglig rehabilitering og oppfolging i fysioterapi",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B048",
+      "query_text": "Romersk mynthistorie i senantikken",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 0,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B049",
+      "query_text": "Klassisk ballettteori og pointe-teknikk",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 0,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B050",
+      "query_text": "Maritim geologi og havbunnsseismikk",
+      "domain": "Helsefag",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 0,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B051",
+      "query_text": "Arktis, nordomradepolitikk, maritim sikkerhet og ressurskonflikter",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B052",
+      "query_text": "Havrett, geopolitikk og sikkerhet i nordomradene",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B053",
+      "query_text": "Amerikansk utenrikspolitikk, nasjonalisme og amerikansk eksepsjonalisme",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B054",
+      "query_text": "Amerikanske valg, sikkerhetsstudier og internasjonale relasjoner",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B055",
+      "query_text": "Politikk i Midtosten, sosiale bevegelser og komparativ politikk",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B056",
+      "query_text": "Saudi-Arabia, Syria og Tyrkia i regional politikk",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B057",
+      "query_text": "Menneskerettigheter, ikke-diskriminering og funksjonsnedsettelse",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B058",
+      "query_text": "FN, likestilling og inkludering av sarbare grupper",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B059",
+      "query_text": "Afrikas Horn, fredsprosesser og overgangsjustis",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B060",
+      "query_text": "Autoritaere regimer, demokratisering og konflikt i Etiopia/Eritrea",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B061",
+      "query_text": "Ekstremisme, radikalisering og totalitarisme i europeisk politikk",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B062",
+      "query_text": "Folkemord, massevold og etterretningshistorie",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B063",
+      "query_text": "EU-politikk, interessegrupper og offentlig politikk",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B064",
+      "query_text": "Kina, etterretning og autoritaere regimer i Midtosten",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B065",
+      "query_text": "Fredsarbeid, konfliktlosning og utviklingsarbeid i Ost-Afrika",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B066",
+      "query_text": "Konfliktforhandling og fredsmekling i Midtosten",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B067",
+      "query_text": "Diplomati og internasjonale relasjoner i konfliktsoner",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B068",
+      "query_text": "Politisk antropologi og feltmetode i konfliktsamfunn",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B069",
+      "query_text": "Britisk politikk, konspirasjonsteorier og offentlig administrasjon",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B070",
+      "query_text": "Demokrati, minoritetspolitikk og sosialdemokrati i Norden",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B071",
+      "query_text": "Geopolitisk risikovurdering i nordomradene",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B072",
+      "query_text": "Etterretning og spionasje i autoritaere systemer",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B073",
+      "query_text": "Fredsprosesser og bistandsarbeid i Ost-Afrika",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B074",
+      "query_text": "Geoteknikk for tunnelboring i granitt",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 0,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B075",
+      "query_text": "Veterinaer obstetrikk hos storfe",
+      "domain": "Statsvitenskap og internasjonale relasjoner",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 0,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B076",
+      "query_text": "Digital markedsforing, forbrukeratferd og sosiale medier",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B077",
+      "query_text": "Message strategy og forbrukerengasjement i sosiale medier",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B078",
+      "query_text": "KI-anbefalingssystemer og forbrukerrespons i markedet",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 1,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B079",
+      "query_text": "Design thinking, tjenestedesign og entreprenorskap",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B080",
+      "query_text": "Entreprenorskap i hoyere utdanning og innovasjonslaering",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B081",
+      "query_text": "Schumpeteriansk teori, makrookonomi og innovasjon",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B082",
+      "query_text": "Finance-innovation nexus og kredittskapning i kapitalismen",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B083",
+      "query_text": "Langsiktige okonomiske effekter av pandemier og baerekraft",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B084",
+      "query_text": "Digitalisering og ambidekster organisasjon i finanssektoren",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "easy",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B085",
+      "query_text": "Onboarding, organisasjonssosialisering og HR-praksis",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B086",
+      "query_text": "Arbeidsmiljo, HR og organisasjonspsykologi i virksomheter",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B087",
+      "query_text": "Endringsledelse, organisasjonsutvikling og prosjektledelse",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B088",
+      "query_text": "KI, menneske-maskin-interaksjon og forretningsmodeller",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B089",
+      "query_text": "Digitalisering og kommunikasjon i organisasjoner",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": false,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B090",
+      "query_text": "Design thinking i innovasjonsprosjekter og entreprenorskap",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "publication_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": false,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B091",
+      "query_text": "Regnskap, internasjonal skatt og okonomisystemer",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B092",
+      "query_text": "Kredittvurdering og studentokonomi i privatokonomiundervisning",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B093",
+      "query_text": "Etikk i naeringslivet, merkevarebygging og omstillingsprosesser",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B094",
+      "query_text": "Digital markedsforing og kampanjeplanlegging i sosiale medier",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "medium",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B095",
+      "query_text": "Lederutvikling og organisasjonsledelse i smaa og mellomstore bedrifter",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B096",
+      "query_text": "Forretningsmodeller og AI i tjenesteutvikling",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 2,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B097",
+      "query_text": "HRM-tiltak for onboarding av nyansatte",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 1,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B098",
+      "query_text": "Forbrukeratferd i digitale kundereiser",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "hard",
+      "must_include_pass": false,
+      "publication_evidence_pass": null,
+      "should_hits": 1,
+      "should_total": 1,
+      "hard_exclude_hits": 1,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B099",
+      "query_text": "Oldtidens egyptiske hieroglyfer og papyrologi",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 0,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    },
+    {
+      "query_id": "B100",
+      "query_text": "Paleontologi og dinosaursporfossiler",
+      "domain": "Økonomi og administrasjon",
+      "query_mode": "profile_grounded",
+      "difficulty": "negative",
+      "must_include_pass": true,
+      "publication_evidence_pass": null,
+      "should_hits": 0,
+      "should_total": 0,
+      "hard_exclude_hits": 3,
+      "hard_exclude_total": 3,
+      "request_error": null
+    }
+  ]
+}

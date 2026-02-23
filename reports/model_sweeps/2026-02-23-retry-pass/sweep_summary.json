@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-02-23T15:58:45.060728+00:00",
+  "run_date": "2026-02-23-retry-pass",
+  "models": [
+    {
+      "model_name": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+      "model_slug": "sentence-transformers-paraphrase-multilingual-mpnet-base-v2",
+      "build": null,
+      "user64": {
+        "command": [
+          "C:\\Users\\pader\\.openclaw\\workspace\\ONH_Expert_connector_app\\.venv\\Scripts\\python.exe",
+          "scripts/run_search_benchmark.py",
+          "--benchmark",
+          "tests/benchmarks/search_relevance_chatgpt_user64_v1.yaml",
+          "--base-url",
+          "http://127.0.0.1:8000",
+          "--output",
+          "reports/model_sweeps/2026-02-23-retry-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_user64.json"
+        ],
+        "returncode": 0,
+        "duration_sec": 75.432,
+        "stdout_path": "reports/model_sweeps/2026-02-23-retry-pass/logs/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_user64_stdout.log",
+        "stderr_path": "reports/model_sweeps/2026-02-23-retry-pass/logs/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_user64_stderr.log",
+        "timed_out": false
+      },
+      "strict100": {
+        "command": [
+          "C:\\Users\\pader\\.openclaw\\workspace\\ONH_Expert_connector_app\\.venv\\Scripts\\python.exe",
+          "scripts/run_search_benchmark.py",
+          "--benchmark",
+          "tests/benchmarks/search_relevance_100_v1.yaml",
+          "--base-url",
+          "http://127.0.0.1:8000",
+          "--output",
+          "reports/model_sweeps/2026-02-23-retry-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_strict100.json"
+        ],
+        "returncode": 1,
+        "duration_sec": 123.11,
+        "stdout_path": "reports/model_sweeps/2026-02-23-retry-pass/logs/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_strict100_stdout.log",
+        "stderr_path": "reports/model_sweeps/2026-02-23-retry-pass/logs/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_strict100_stderr.log",
+        "timed_out": false
+      },
+      "user64_metrics": {
+        "must_include_at_3": 0.3125,
+        "should_include_at_10": 0.5,
+        "hard_exclude_rate_at_10": 0.0,
+        "publication_evidence_pass_rate": 0.0
+      },
+      "strict100_metrics": {
+        "must_include_at_3": 0.53,
+        "should_include_at_10": 0.2857142857142857,
+        "hard_exclude_rate_at_10": 0.8233333333333334,
+        "publication_evidence_pass_rate": 0.0
+      },
+      "gpu_before": {
+        "name": "NVIDIA GeForce GTX 1060",
+        "memory_total_mb": 6144.0,
+        "memory_used_mb": 0.0,
+        "gpu_utilization_pct": 1.0
+      },
+      "gpu_after": {
+        "name": "NVIDIA GeForce GTX 1060",
+        "memory_total_mb": 6144.0,
+        "memory_used_mb": 0.0,
+        "gpu_utilization_pct": 0.0
+      },
+      "status": "strict100_infra_failed",
+      "notes": [
+        "strict100 retry 1/1 after 9 request errors",
+        "strict100 benchmark ended with 9 request errors"
+      ]
+    }
+  ],
+  "recommended_model": null
+}
