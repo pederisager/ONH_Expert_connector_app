@@ -277,7 +277,7 @@ Acceptance criteria:
 ### [ ] SQ-UT-008 Embedding model sweep on RTX 4070 with user64 + strict100 scoring (P0, requester requirement #4)
 Status: `revised`
 Depends on: `SQ-UT-001, SQ-UT-006`
-Blocked by: `Full candidate benchmark runs still pending; this pass added automation and dry-run artifacts only.`
+Blocked by: `No model has yet passed strict100 thresholds; BAAI/bge-m3 index build fails due torch<2.6 safety restriction when loading model weights.`
 
 Goal:
 Evaluate stronger embedding models and keep the best quality model that is practical on RTX 4070.
@@ -592,4 +592,29 @@ Add one entry per completed/revised task.
 - `reports/query_test_expected_vs_actual.csv`
 - Metric/verification summary: the legacy CSV was not present in workspace/home scans, so a deterministic replacement export is now generated from `tests/benchmarks/search_relevance_chatgpt_user64_v1.yaml` + `reports/benchmark_results_user64_baseline.json`. Replacement contains 64 rows (U001-U064) with expected includes and actual benchmark outcomes.
 - Decision: keep
+- Next recommended task: `SQ-UT-008`
+
+### 2026-02-23 - SQ-UT-008 (full non-dry sweep pass)
+- Status change: `revised -> in_progress -> revised`
+- Files changed:
+- `reports/model_sweeps/2026-02-23/sweep_summary.json`
+- `reports/model_sweeps/2026-02-23/decision_memo.md`
+- `reports/model_sweeps/2026-02-23/*_user64.json`
+- `reports/model_sweeps/2026-02-23/*_strict100.json`
+- `reports/model_sweeps/2026-02-23/logs/*`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 7200 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/run_embedding_model_sweep.py','--run-date','2026-02-23','--max-models','4')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 60 -FilePath git -ArgumentList @('restore','--worktree','data/models.yaml')`
+- Benchmark/test output paths:
+- `reports/model_sweeps/2026-02-23/sweep_summary.json`
+- `reports/model_sweeps/2026-02-23/decision_memo.md`
+- `reports/model_sweeps/2026-02-23/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_user64.json`
+- `reports/model_sweeps/2026-02-23/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_strict100.json`
+- `reports/model_sweeps/2026-02-23/intfloat-multilingual-e5-large_user64.json`
+- `reports/model_sweeps/2026-02-23/intfloat-multilingual-e5-large_strict100.json`
+- `reports/model_sweeps/2026-02-23/sentence-transformers-paraphrase-multilingual-minilm-l12-v2_user64.json`
+- `reports/model_sweeps/2026-02-23/sentence-transformers-paraphrase-multilingual-minilm-l12-v2_strict100.json`
+- Metric/verification summary: completed non-dry sweep across four candidates on local `NVIDIA GeForce GTX 1060` host. User64 metrics: mpnet (`MustInclude@3=0.6875`, `ShouldInclude@10=0.7083`), MiniLM (`0.6094`, `0.6042`), e5-large (`0.5000`, `0.3750`). All strict100 runs failed benchmark thresholds (e.g., mpnet strict100 `MustInclude@3=0.73`, `ShouldInclude@10=0.4898`, `HardExcludeRate@10=0.88`, `PublicationEvidencePassRate=0.6167`). `BAAI/bge-m3` build failed due transformers safety gate requiring torch >=2.6 when loading non-safetensor weights.
+- Decision: revise
 - Next recommended task: `SQ-UT-008`
