@@ -277,7 +277,7 @@ Acceptance criteria:
 ### [ ] SQ-UT-008 Embedding model sweep on RTX 4070 with user64 + strict100 scoring (P0, requester requirement #4)
 Status: `revised`
 Depends on: `SQ-UT-001, SQ-UT-006`
-Blocked by: `No model has yet passed strict100 thresholds; strict100 runs still show intermittent request errors under local server load; BAAI/bge-m3 index build fails due torch<2.6 safety restriction when loading model weights.`
+Blocked by: `No model has yet passed strict100 thresholds; full four-candidate rerun with new server-port/probe stabilization is still pending; BAAI/bge-m3 index build fails due torch<2.6 safety restriction when loading model weights.`
 
 Goal:
 Evaluate stronger embedding models and keep the best quality model that is practical on RTX 4070.
@@ -638,5 +638,27 @@ Add one entry per completed/revised task.
 - `reports/model_sweeps/2026-02-23-retry-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_user64.json`
 - `reports/model_sweeps/2026-02-23-retry-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_strict100.json`
 - Metric/verification summary: enhanced sweep runner to (a) retry benchmark runs when output contains request errors, (b) distinguish infra failures vs threshold failures in candidate status, and (c) persist benchmark metrics even when benchmark exits non-zero. Smoke non-dry pass confirms strict100 is now flagged as `strict100_infra_failed` with explicit retry note (`strict100 retry 1/1 after 9 request errors`) and retains metrics for diagnosis.
+- Decision: revise
+- Next recommended task: `SQ-UT-008`
+
+### 2026-02-23 - SQ-UT-008 (dedicated server port + readiness probe)
+- Status change: `revised -> in_progress -> revised`
+- Files changed:
+- `scripts/run_embedding_model_sweep.py`
+- `reports/model_sweeps/2026-02-23-port-probe-pass/sweep_summary.json`
+- `reports/model_sweeps/2026-02-23-port-probe-pass/decision_memo.md`
+- `reports/model_sweeps/2026-02-23-port-probe-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_user64.json`
+- `reports/model_sweeps/2026-02-23-port-probe-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_strict100.json`
+- `reports/model_sweeps/2026-02-23-port-probe-pass/logs/*`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 240 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','py_compile','scripts/run_embedding_model_sweep.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 3000 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/run_embedding_model_sweep.py','--run-date','2026-02-23-port-probe-pass','--models','sentence-transformers/paraphrase-multilingual-mpnet-base-v2','--max-models','1','--skip-index','--benchmark-retries','1')`
+- Benchmark/test output paths:
+- `reports/model_sweeps/2026-02-23-port-probe-pass/sweep_summary.json`
+- `reports/model_sweeps/2026-02-23-port-probe-pass/decision_memo.md`
+- `reports/model_sweeps/2026-02-23-port-probe-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_user64.json`
+- `reports/model_sweeps/2026-02-23-port-probe-pass/sentence-transformers-paraphrase-multilingual-mpnet-base-v2_strict100.json`
+- Metric/verification summary: sweep runner now launches each benchmark server on a reserved ephemeral localhost port and requires a `/queue` readiness probe before running benchmarks, reducing startup race/connect-refused noise seen on fixed port 8000. Smoke pass with mpnet classified strict100 as `strict100_threshold_failed` (not infra failure), with metrics persisted for diagnosis (`MustInclude@3=0.60`, `ShouldInclude@10=0.3061`, `HardExcludeRate@10=0.91`, `PublicationEvidencePassRate=0.0`).
 - Decision: revise
 - Next recommended task: `SQ-UT-008`
