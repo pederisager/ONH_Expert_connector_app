@@ -1,0 +1,65 @@
+query_id,query_text,domain,difficulty,query_mode,expected_must_include,expected_should_include,expected_hard_exclude,actual_must_include_pass_top3,actual_should_hits_top10,actual_should_total,actual_hard_exclude_hits_top10,actual_hard_exclude_total,actual_publication_evidence_pass,request_error,failure_reasons
+U001,beslutningspsykologi,Psykologi,easy,profile_grounded,Eirik Kjelstrup,Tore Pedersen,,true,1,1,0,0,,,
+U002,arbeidsmiljø og hybridarbeid,Psykologi,hard,profile_grounded,Linda Mari Seem Sundvik,Anniken Grønstad | Ingvild Sagberg | Mona Berthelsen,,false,3,3,0,0,,,must_include_missing_top3
+U003,kommunikasjonstrening,Psykologi,hard,profile_grounded,Kristin Kloster,,,false,0,0,0,0,,,must_include_missing_top3
+U004,open science,Psykologi,medium,profile_grounded,Peder Mortvedt Isager,,,true,0,0,0,0,,,
+U005,cognitive remediation therapy,Psykologi,medium,profile_grounded,Camilla Lindvall Dahlgren,,,true,0,0,0,0,,,
+U006,biologisk psykologi,Psykologi,medium,profile_grounded,Magnus Helgheim Blystad,,,true,0,0,0,0,,,
+U007,AI i utdanning,Psykologi,medium,profile_grounded,Eirik Kjelstrup,,,true,0,0,0,0,,,
+U008,alkoholmisbruk ungdom,Psykologi,hard,profile_grounded,Anne Kjeldsen,,,false,0,0,0,0,,,must_include_missing_top3
+U009,kritisk psykologi,Psykologi,hard,profile_grounded,Erik Nakkerud,Sandra Gabrielsen | Joshua Phelps,,false,0,2,0,0,,,must_include_missing_top3 | should_include_missed=2/2
+U010,kognitiv atferdsterapi,Psykologi,hard,profile_grounded,Camilla Lindvall Dahlgren,,,false,0,0,0,0,,,must_include_missing_top3
+U011,klinisk psykologi,Psykologi,medium,profile_grounded,Camilla Lindvall Dahlgren,Anne Kjeldsen | Helene Faksvåg | Sigrid Skeide,,false,0,3,0,0,,,must_include_missing_top3 | should_include_missed=3/3
+U012,motivasjon,Psykologi,easy,profile_grounded,Eirik Kjelstrup,,,true,0,0,0,0,,,
+U013,beslutningsbias,Psykologi,hard,profile_grounded,Eirik Kjelstrup,Tore Pedersen,,false,0,1,0,0,,,must_include_missing_top3 | should_include_missed=1/1
+U014,arbeidspsykologi,Psykologi,easy,profile_grounded,Mona Berthelsen,Linda Mari Seem Sundvik | Brita Bjørkelo,,true,2,2,0,0,,,
+U015,utenforskap,Psykologi,easy,profile_grounded,,,,true,0,0,0,0,,,
+U016,hms,Psykologi,easy,profile_grounded,Anniken Grønstad,,,true,0,0,0,0,,,
+U017,teambygging,Psykologi,hard,profile_grounded,Linda Mari Seem Sundvik,Mona Berthelsen,,false,0,1,0,0,,,must_include_missing_top3 | should_include_missed=1/1
+U018,stress og høyaktivitet,Psykologi,hard,profile_grounded,Eirik Kjelstrup,Mona Berthelsen,,false,1,1,0,0,,,must_include_missing_top3
+U019,arbeidskonflikter,Psykologi,hard,profile_grounded,Anniken Grønstad,Mona Berthelsen,,false,0,1,0,0,,,must_include_missing_top3 | should_include_missed=1/1
+U020,digitalisering,Psykologi,easy,profile_grounded,Kateryna Reiby,Johan Bergh,,true,1,1,0,0,,,
+U021,endringsledelse,Psykologi,medium,profile_grounded,Johan Bergh,Sandra Gabrielsen,,true,1,1,0,0,,,
+U022,bedriftsøkonomi,Økonomi og administrasjon,easy,profile_grounded,Christian Wolff,,,true,0,0,0,0,,,
+U023,forbrukeratferd,Økonomi og administrasjon,easy,profile_grounded,Anders Hauge Wien,Kateryna Reiby | Cathrine Lilleløkken,,true,2,2,0,0,,,
+U024,prosjektledelse,Økonomi og administrasjon,medium,profile_grounded,Johan Bergh,Kateryna Reiby,,true,0,1,0,0,,,should_include_missed=1/1
+U025,personalledelse,Økonomi og administrasjon,easy,profile_grounded,Anniken Grønstad,,,true,0,0,0,0,,,
+U026,digital markedsføring,Økonomi og administrasjon,easy,profile_grounded,Cathrine Lilleløkken,Anders Hauge Wien,,true,1,1,0,0,,,
+U027,strategisk planlegging,Psykologi,easy,profile_grounded,Kateryna Reiby,Melissa Malka Busch‑Christensen,,true,0,1,0,0,,,should_include_missed=1/1
+U028,finans,Økonomi og administrasjon,easy,profile_grounded,Fredrik Harboe,,,true,0,0,0,0,,,
+U029,regnskap,Økonomi og administrasjon,easy,profile_grounded,Christian Wolff,,,true,0,0,0,0,,,
+U030,anatomi,Helsefag,easy,profile_grounded,Stian Walle Larsen,Suvi Sagbraaten,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U031,cellebiologi,Helsefag,easy,profile_grounded,Elin Lund Transeth,Ulrike Liisberg | Henriette Marstein,,false,0,2,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=2/2
+U032,biokjemi,Helsefag,easy,profile_grounded,Øyvind Jacobsen,Elin Sørli Kildahl | Henriette Marstein,,false,0,2,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=2/2
+U033,diabetes,Helsefag,medium,profile_grounded,Dagfinn Aune,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U034,epidemiologi,Helsefag,medium,profile_grounded,Dagfinn Aune,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U035,ernæring,Helsefag,medium,profile_grounded,Dagfinn Aune,Ella Marie Heyerdahl | Evelina Svensson,,false,0,2,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=2/2
+U036,farmakologi,Helsefag,easy,profile_grounded,Suvi Sagbraaten,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U037,fysioterapi,Helsefag,medium,profile_grounded,Stian Walle Larsen,Johanne Fredrikke Berg | Ingrid Aas Vissheim,,false,0,2,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=2/2
+U038,immunologi,Helsefag,easy,profile_grounded,Henriette Marstein,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U039,graviditetstrening,Helsefag,hard,profile_grounded,Stian Walle Larsen,Ingrid Aas Vissheim,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U040,amerikansk politikk,Statsvitenskap og internasjonale relasjoner,easy,profile_grounded,Hilde Eliassen Restad,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U041,humanitærrett,Statsvitenskap og internasjonale relasjoner,hard,profile_grounded,Kjersti Skarstad,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U042,spionasje,Statsvitenskap og internasjonale relasjoner,easy,profile_grounded,Stig Stenslie,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U043,Afrikas Horn,Statsvitenskap og internasjonale relasjoner,easy,profile_grounded,Kjetil Tronvoll,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U044,radikalisering,Statsvitenskap og internasjonale relasjoner,hard,profile_grounded,Henrik Syse,Nik Brandal,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U045,FN,Statsvitenskap og internasjonale relasjoner,hard,profile_grounded,Kjersti Skarstad,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U046,komparativ politikk,Statsvitenskap og internasjonale relasjoner,medium,profile_grounded,Jonas Bergan Dræge,Henry Allen,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U047,demokratisering,Statsvitenskap og internasjonale relasjoner,easy,profile_grounded,Kjetil Tronvoll,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U048,fred og konflikt,Statsvitenskap og internasjonale relasjoner,medium,profile_grounded,Henrik Syse,Kjetil Tronvoll,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U049,diplomati,Statsvitenskap og internasjonale relasjoner,hard,profile_grounded,Kjetil Tronvoll,Hilde Eliassen Restad,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U050,bistand,Statsvitenskap og internasjonale relasjoner,hard,profile_grounded,Torstein Dale‑Åkerlund,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U051,autoritaere regimer,Statsvitenskap og internasjonale relasjoner,hard,profile_grounded,Kjetil Tronvoll,Stig Stenslie,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U052,menneskerettigheter,Statsvitenskap og internasjonale relasjoner,medium,profile_grounded,Kjersti Skarstad,Bernt Hagtvet,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U053,folkemord,Statsvitenskap og internasjonale relasjoner,easy,profile_grounded,Nik. Brandal,Bernt Hagtvet,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U054,sosialpsykologi,Psykologi,hard,profile_grounded,Erik Carlquist,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U055,ledelsespsykologi,Psykologi,hard,profile_grounded,Linda Mari Seem Sundvik,Mona Berthelsen,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U056,kvantitativ metode,Psykologi,easy,profile_grounded,Mona Berthelsen,Peder Mortvedt Isager,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U057,stressmestring,Psykologi,hard,profile_grounded,Eirik Kjelstrup,Mona Berthelsen,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U058,fysiologi,Helsefag,easy,profile_grounded,Suvi Sagbraaten,Stian Walle Larsen,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U059,kosthold for barn,Helsefag,medium,profile_grounded,Ella Marie Heyerdahl,Dagfinn Aune,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U060,livsstilssykdommer,Helsefag,easy,profile_grounded,Ella Marie Heyerdahl,Evelina Svensson,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U061,styrketrening,Helsefag,hard,profile_grounded,Stian Walle Larsen,,,false,0,0,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3
+U062,merkevareledelse,Økonomi og administrasjon,easy,profile_grounded,Cathrine Lilleløkken,Melissa Malka Busch‑Christensen,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U063,kampanjeplanlegging,Økonomi og administrasjon,easy,profile_grounded,Cathrine Lilleløkken,Anders Hauge Wien,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1
+U064,KI i markedsføring,Økonomi og administrasjon,medium,profile_grounded,Kateryna Reiby,Anders Hauge Wien,,false,0,1,0,0,,ReadTimeout: timed out,request_error=ReadTimeout: timed out | must_include_missing_top3 | should_include_missed=1/1

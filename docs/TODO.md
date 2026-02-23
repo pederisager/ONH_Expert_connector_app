@@ -2,7 +2,7 @@
 
 Last updated: 2026-02-23
 Queue state: `active`
-Next task id: `SQ-UT-010`
+Next task id: `SQ-UT-008`
 Canonical queue file: `docs/TODO.md`
 
 ## Agent Autonomy Contract
@@ -114,7 +114,7 @@ Keep this table synchronized with `Task Ledger` status values.
 | SQ-UT-007 | P1 | revised | Evidence snippet quality gate tightening |
 | SQ-UT-008 | P0 | revised | Embedding model sweep on RTX 4070 with user64 + strict100 scoring |
 | SQ-UT-009 | P1 | revised | Relevance-feedback tuning pass using user64 gold labels |
-| SQ-UT-010 | P2 | pending | Link missing local artifact or declare replacement |
+| SQ-UT-010 | P2 | completed | Link missing local artifact or declare replacement |
 
 ## Queue Exit Criteria
 Treat the queue as truly complete only when all are true:
@@ -322,7 +322,7 @@ Acceptance criteria:
 3. Tuning process is reproducible from commands in this file.
 
 ### [ ] SQ-UT-010 Link missing local artifact (`query_test_expected_vs_actual.csv`) or declare replacement (P2)
-Status: `pending`
+Status: `completed` (2026-02-23)
 Depends on: `SQ-UT-001`
 Blocked by: `<none>`
 
@@ -574,3 +574,22 @@ Add one entry per completed/revised task.
 - Metric/verification summary: added deterministic relevance-feedback tuning runner that sweeps score/penalty candidates, writes per-trial config snapshots, executes user64 + strict100 benchmarks against a local server (non-dry mode), computes a combined tuning score, and can optionally apply the best trial back to `data/app.config.yaml`. Dry-run produced reproducible 5-trial artifacts (`T00`..`T04`) with no benchmark executions yet.
 - Decision: revise
 - Next recommended task: `SQ-UT-010`
+
+### 2026-02-23 - SQ-UT-010
+- Status change: `pending -> in_progress -> completed`
+- Files changed:
+- `scripts/export_query_test_expected_vs_actual.py`
+- `reports/query_test_expected_vs_actual.csv`
+- `docs/user_testing/2026-02-20_chatgpt_railway_user_test/README.md`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 120 -FilePath powershell -ArgumentList @('-NoProfile','-Command','Get-ChildItem -Path ''C:\Users\pader\.openclaw\workspace'' -Recurse -Filter ''query_test_expected_vs_actual.csv'' | ForEach-Object { $_.FullName }')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 300 -FilePath cmd -ArgumentList @('/c','where /r C:\Users\pader query_test_expected_vs_actual.csv')` (not found)
+- `scripts/run_with_timeout.ps1 -TimeoutSec 60 -FilePath git -ArgumentList @('grep','-n','query_test_expected_vs_actual.csv')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 120 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','py_compile','scripts/export_query_test_expected_vs_actual.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 120 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/export_query_test_expected_vs_actual.py')`
+- Benchmark/test output paths:
+- `reports/query_test_expected_vs_actual.csv`
+- Metric/verification summary: the legacy CSV was not present in workspace/home scans, so a deterministic replacement export is now generated from `tests/benchmarks/search_relevance_chatgpt_user64_v1.yaml` + `reports/benchmark_results_user64_baseline.json`. Replacement contains 64 rows (U001-U064) with expected includes and actual benchmark outcomes.
+- Decision: keep
+- Next recommended task: `SQ-UT-008`

@@ -24,5 +24,7 @@ These `.txt` files are lossy extracts for engineering triage. The PDF/DOCX origi
 - Canonical Codex task queue: `docs/search_quality_live_todo.md`
 - Existing strict 100-query campaign: `docs/search_quality_improvement_backlog.md`
 
-## Missing artifact noted
-- `query_test_expected_vs_actual.csv` was referenced by the requester context but was not found in the workspace or user home path scan at task time.
+## Missing artifact resolution
+- `query_test_expected_vs_actual.csv` was referenced by requester context but was not found in workspace or user home path scans.
+- Replacement export committed at `reports/query_test_expected_vs_actual.csv`.
+- Rebuild command: `python scripts/export_query_test_expected_vs_actual.py`.
