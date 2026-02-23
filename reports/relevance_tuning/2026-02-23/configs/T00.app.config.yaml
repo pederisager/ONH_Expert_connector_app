@@ -1,0 +1,156 @@
+fetch:
+  max-pages-per-staff: 2
+  max-kb-per-page: 100
+  allowlist-domains:
+  - oslonyehoyskole.no
+  - nva.sikt.no
+  - scholar.google.com
+  - orcid.org
+  offline-snapshots-dir: data/offline_snapshots
+cache:
+  enabled: true
+  retention-days: 14
+  directory: data/cache
+results:
+  max-candidates: 10
+  min-similarity-score: 0.25
+  diversity-weight: 0.1
+  scoring-weights:
+    semantic: 1.0
+    keywords: 0.2
+    tags: 0.25
+    methods: 0.15
+  concept-keyword-map:
+    diskursanalyse:
+    - kvalitativ metode
+    - kvalitativ
+    statistikk:
+    - kvantitativ metode
+    - kvantitativ
+    anoreksi:
+    - spiseforstyrrelser
+  synonym-expansion-map:
+    fn:
+    - forente nasjoner
+    - un
+    humanitærrett:
+    - internasjonal humanitærrett
+    - ihl
+    diplomati:
+    - utenrikspolitikk
+    - forhandling
+    kognitiv atferdsterapi:
+    - kognitiv terapi
+    - kat
+    autoritaere:
+    - autoritære
+    - authoritarian
+  mode-scoring-profiles:
+    publication_grounded:
+      source-kind-boosts:
+        nva: 0.18
+        profile: 0.03
+        staffinfo: 0.0
+      citation-overlap-weight: 0.12
+      nva-citation-bonus: 0.08
+    profile_grounded:
+      source-kind-boosts:
+        nva: 0.03
+        profile: 0.14
+        staffinfo: 0.09
+      citation-overlap-weight: 0.06
+      nva-citation-bonus: 0.0
+  exact-keyword-promotion:
+    enabled: true
+    keyword-bonus: 0.35
+    min-token-length: 2
+  overexposure-penalty:
+    enabled: true
+    low-signal-threshold: 0.35
+    profile-source-weight: 0.2
+    staffinfo-source-weight: 0.12
+    publication-without-nva-penalty: 0.04
+    max-penalty: 0.1
+  category-intent-penalty:
+    enabled: true
+    base-penalty: 0.08
+    max-penalty: 0.16
+    evidence-overlap-threshold: 0.2
+    intent-signals:
+      psychology:
+      - psykologi
+      - kognitiv
+      - atferd
+      - stress
+      - ledelse
+      international_relations:
+      - humanitærrett
+      - diplomati
+      - fn
+      - bistand
+      - radikalisering
+      physiotherapy:
+      - fysioterapi
+      - styrketrening
+      - graviditetstrening
+      - rehabilitering
+    intent-department-map:
+      psychology:
+      - psykologi
+      international_relations:
+      - statsvitenskap
+      - internasjonale relasjoner
+      physiotherapy:
+      - fysioterapi
+      - idrett
+  citation-source-priority:
+  - nva
+  - profile
+  - staffinfo
+  min-query-overlap-per-citation: 1
+  profile-staffinfo-min-query-overlap-per-citation: 2
+rag:
+  index-root: data/index
+  chunk-size: 400
+  chunk-overlap: 60
+  max-chunks-per-profile: 40
+  hybrid-semantic-weight: 0.85
+  hybrid-lexical-weight: 0.15
+  source-weights:
+    nva: 1.0
+    profile: 0.8
+    staffinfo: 0.45
+  max-chunks-per-source-per-staff:
+    nva: 3
+    profile: 1
+    staffinfo: 1
+  embedding-model: sentence-transformers/paraphrase-multilingual-mpnet-base-v2
+  embedding-batch-size: 32
+language:
+  default-ui: 'no'
+  detection-enabled: true
+  embedding-language-mode: multilingual
+  llm-language-mode: match-user
+  translation:
+    enabled: false
+    provider: none
+    model-name: null
+    endpoint: null
+    device: cpu
+    timeout-seconds: 20
+    cache-size: 256
+    max-chars: 4000
+ui:
+  allow-department-filter: true
+  language: 'no'
+  export-formats:
+  - pdf
+  - json
+security:
+  allow-file-types:
+  - pdf
+  - docx
+  - pptx
+  - txt
+  - md
+  max-upload-mb: 10

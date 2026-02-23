@@ -1,8 +1,8 @@
 # TODO (Autonomous Agent Queue)
 
-Last updated: 2026-02-22
+Last updated: 2026-02-23
 Queue state: `active`
-Next task id: `SQ-UT-009`
+Next task id: `SQ-UT-010`
 Canonical queue file: `docs/TODO.md`
 
 ## Agent Autonomy Contract
@@ -113,7 +113,7 @@ Keep this table synchronized with `Task Ledger` status values.
 | SQ-UT-006 | P0 | revised | Staff profile preprocessing and noise stripping pipeline |
 | SQ-UT-007 | P1 | revised | Evidence snippet quality gate tightening |
 | SQ-UT-008 | P0 | revised | Embedding model sweep on RTX 4070 with user64 + strict100 scoring |
-| SQ-UT-009 | P1 | pending | Relevance-feedback tuning pass using user64 gold labels |
+| SQ-UT-009 | P1 | revised | Relevance-feedback tuning pass using user64 gold labels |
 | SQ-UT-010 | P2 | pending | Link missing local artifact or declare replacement |
 
 ## Queue Exit Criteria
@@ -304,9 +304,9 @@ Run commands (bounded examples):
 - `timeout 2400 python3 scripts/run_search_benchmark.py --benchmark tests/benchmarks/search_relevance_100_v1.yaml --base-url http://127.0.0.1:8000 --output reports/model_sweeps/<date>/<model>_strict100.json`
 
 ### [ ] SQ-UT-009 Relevance-feedback tuning pass using user64 gold labels (P1, user-test recommendation)
-Status: `pending`
+Status: `revised`
 Depends on: `SQ-UT-001, SQ-UT-002, SQ-UT-003, SQ-UT-004, SQ-UT-005`
-Blocked by: `<none>`
+Blocked by: `Full benchmark-backed tuning pass (non-dry user64 + strict100) still pending; current pass added deterministic sweep tooling + dry-run artifacts.`
 
 Goal:
 Use user64 labels to tune scoring weights and penalties systematically rather than ad-hoc.
@@ -556,3 +556,21 @@ Add one entry per completed/revised task.
 - Metric/verification summary: tightened citation evidence gate by enforcing stronger query-overlap minimum specifically for `profile`/`staffinfo` snippets (`profile-staffinfo-min-query-overlap-per-citation: 2`) while preserving publication-mode NVA tag augmentation path. Added fallback ranking to down-rank zero-overlap citations when strict gating yields no direct candidates. Added route tests for stronger profile/staffinfo gating and fallback ordering.
 - Decision: revise
 - Next recommended task: `SQ-UT-009`
+
+### 2026-02-23 - SQ-UT-009
+- Status change: `pending -> in_progress -> revised`
+- Files changed:
+- `scripts/run_relevance_feedback_tuning.py`
+- `reports/relevance_tuning/2026-02-23/tuning_summary.json`
+- `reports/relevance_tuning/2026-02-23/decision_memo.md`
+- `docs/TODO.md`
+- Command log (with timeout):
+- `scripts/run_with_timeout.ps1 -TimeoutSec 240 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('-m','py_compile','scripts/run_relevance_feedback_tuning.py')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 240 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/run_relevance_feedback_tuning.py','--help')`
+- `scripts/run_with_timeout.ps1 -TimeoutSec 300 -FilePath .\.venv\Scripts\python.exe -ArgumentList @('scripts/run_relevance_feedback_tuning.py','--run-date','2026-02-23','--max-trials','5','--dry-run')`
+- Benchmark/test output paths:
+- `reports/relevance_tuning/2026-02-23/tuning_summary.json`
+- `reports/relevance_tuning/2026-02-23/decision_memo.md`
+- Metric/verification summary: added deterministic relevance-feedback tuning runner that sweeps score/penalty candidates, writes per-trial config snapshots, executes user64 + strict100 benchmarks against a local server (non-dry mode), computes a combined tuning score, and can optionally apply the best trial back to `data/app.config.yaml`. Dry-run produced reproducible 5-trial artifacts (`T00`..`T04`) with no benchmark executions yet.
+- Decision: revise
+- Next recommended task: `SQ-UT-010`
