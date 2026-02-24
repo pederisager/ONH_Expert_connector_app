@@ -371,6 +371,10 @@ def _write_decision_memo(
     memo_path.write_text("\n".join(lines), encoding="utf-8")
 
 
+def _resolve_path(path: Path) -> Path:
+    return (ROOT / path).resolve() if not path.is_absolute() else path
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Run embedding model sweep with index rebuild + user64/strict100 benchmarks.",
@@ -453,7 +457,21 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    models_path = (ROOT / args.models_config).resolve() if not args.models_config.is_absolute() else args.models_config
+    models_path = _resolve_path(args.models_config)
+    user64_benchmark_path = _resolve_path(args.user64_benchmark)
+    strict100_benchmark_path = _resolve_path(args.strict100_benchmark)
+    missing_inputs: list[str] = []
+    if not models_path.exists():
+        missing_inputs.append(f"models config: {models_path}")
+    if not user64_benchmark_path.exists():
+        missing_inputs.append(f"user64 benchmark: {user64_benchmark_path}")
+    if not strict100_benchmark_path.exists():
+        missing_inputs.append(f"strict100 benchmark: {strict100_benchmark_path}")
+    if missing_inputs:
+        for missing in missing_inputs:
+            print(f"[sweep] missing required input: {missing}", file=sys.stderr)
+        return 2
+
     output_dir = (ROOT / args.output_root / args.run_date).resolve()
     logs_dir = output_dir / "logs"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -526,9 +544,7 @@ def main(argv: list[str] | None = None) -> int:
 
                 user64_result = _run_benchmark_with_local_server(
                     python_executable=args.python,
-                    benchmark_path=(ROOT / args.user64_benchmark).resolve()
-                    if not args.user64_benchmark.is_absolute()
-                    else args.user64_benchmark,
+                    benchmark_path=user64_benchmark_path,
                     output_path=user64_output,
                     logs_dir=logs_dir,
                     model_slug=model_slug,
@@ -547,9 +563,7 @@ def main(argv: list[str] | None = None) -> int:
                     )
                     user64_result = _run_benchmark_with_local_server(
                         python_executable=args.python,
-                        benchmark_path=(ROOT / args.user64_benchmark).resolve()
-                        if not args.user64_benchmark.is_absolute()
-                        else args.user64_benchmark,
+                        benchmark_path=user64_benchmark_path,
                         output_path=user64_output,
                         logs_dir=logs_dir,
                         model_slug=model_slug,
@@ -577,9 +591,7 @@ def main(argv: list[str] | None = None) -> int:
                 if status == "ok":
                     strict_result = _run_benchmark_with_local_server(
                         python_executable=args.python,
-                        benchmark_path=(ROOT / args.strict100_benchmark).resolve()
-                        if not args.strict100_benchmark.is_absolute()
-                        else args.strict100_benchmark,
+                        benchmark_path=strict100_benchmark_path,
                         output_path=strict_output,
                         logs_dir=logs_dir,
                         model_slug=model_slug,
@@ -598,9 +610,7 @@ def main(argv: list[str] | None = None) -> int:
                         )
                         strict_result = _run_benchmark_with_local_server(
                             python_executable=args.python,
-                            benchmark_path=(ROOT / args.strict100_benchmark).resolve()
-                            if not args.strict100_benchmark.is_absolute()
-                            else args.strict100_benchmark,
+                            benchmark_path=strict100_benchmark_path,
                             output_path=strict_output,
                             logs_dir=logs_dir,
                             model_slug=model_slug,

@@ -7,6 +7,8 @@ import socket
 import subprocess
 import sys
 import time
+import urllib.error
+import urllib.request
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -101,6 +103,26 @@ def _wait_for_port(host: str, port: int, timeout_sec: int) -> bool:
     return False
 
 
+def _reserve_tcp_port(host: str = "127.0.0.1") -> int:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:
+        probe.bind((host, 0))
+        return int(probe.getsockname()[1])
+
+
+def _wait_for_queue_probe(base_url: str, timeout_sec: int) -> bool:
+    deadline = time.time() + max(1, timeout_sec)
+    probe_url = f"{base_url.rstrip('/')}/queue"
+    while time.time() < deadline:
+        try:
+            with urllib.request.urlopen(probe_url, timeout=2.0) as response:  # noqa: S310
+                if int(getattr(response, "status", 0)) == 200:
+                    return True
+        except (urllib.error.URLError, TimeoutError, OSError):
+            pass
+        time.sleep(0.4)
+    return False
+
+
 def _run_benchmark_with_local_server(
     *,
     python_executable: str,
@@ -112,6 +134,8 @@ def _run_benchmark_with_local_server(
     server_start_timeout_sec: int,
     benchmark_timeout_sec: int,
 ) -> CommandResult:
+    server_port = _reserve_tcp_port("127.0.0.1")
+    server_base_url = f"http://127.0.0.1:{server_port}"
     server_stdout = logs_dir / f"{trial_id}_{benchmark_slug}_uvicorn_stdout.log"
     server_stderr = logs_dir / f"{trial_id}_{benchmark_slug}_uvicorn_stderr.log"
     with server_stdout.open("w", encoding="utf-8") as out_handle, server_stderr.open(
@@ -126,16 +150,25 @@ def _run_benchmark_with_local_server(
                 "--host",
                 "127.0.0.1",
                 "--port",
-                "8000",
+                str(server_port),
             ],
             cwd=ROOT,
             stdout=out_handle,
             stderr=err_handle,
         )
     try:
-        if not _wait_for_port("127.0.0.1", 8000, timeout_sec=server_start_timeout_sec):
+        if not _wait_for_port("127.0.0.1", server_port, timeout_sec=server_start_timeout_sec):
             return CommandResult(
-                command=[python_executable, "-m", "uvicorn", "app.main:app"],
+                command=[python_executable, "-m", "uvicorn", "app.main:app", "--port", str(server_port)],
+                returncode=1,
+                duration_sec=0.0,
+                stdout_path=str(server_stdout.relative_to(ROOT)).replace("\\", "/"),
+                stderr_path=str(server_stderr.relative_to(ROOT)).replace("\\", "/"),
+                timed_out=False,
+            )
+        if not _wait_for_queue_probe(server_base_url, timeout_sec=server_start_timeout_sec):
+            return CommandResult(
+                command=[python_executable, "-m", "uvicorn", "app.main:app", "--port", str(server_port)],
                 returncode=1,
                 duration_sec=0.0,
                 stdout_path=str(server_stdout.relative_to(ROOT)).replace("\\", "/"),
@@ -152,7 +185,7 @@ def _run_benchmark_with_local_server(
             "--benchmark",
             str(benchmark_path.relative_to(ROOT)).replace("\\", "/"),
             "--base-url",
-            "http://127.0.0.1:8000",
+            server_base_url,
             "--output",
             str(output_path.relative_to(ROOT)).replace("\\", "/"),
         ]
@@ -396,6 +429,10 @@ def _write_decision_memo(
     memo_path.write_text("\n".join(lines), encoding="utf-8")
 
 
+def _resolve_path(path: Path) -> Path:
+    return (ROOT / path).resolve() if not path.is_absolute() else path
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Run relevance-feedback tuning sweeps against user64 + strict100 benchmarks.",
@@ -418,7 +455,21 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
 
-    app_config_path = (ROOT / args.app_config).resolve() if not args.app_config.is_absolute() else args.app_config
+    app_config_path = _resolve_path(args.app_config)
+    user64_benchmark_path = _resolve_path(args.user64_benchmark)
+    strict100_benchmark_path = _resolve_path(args.strict100_benchmark)
+    missing_inputs: list[str] = []
+    if not app_config_path.exists():
+        missing_inputs.append(f"app config: {app_config_path}")
+    if not user64_benchmark_path.exists():
+        missing_inputs.append(f"user64 benchmark: {user64_benchmark_path}")
+    if not args.skip_strict100 and not strict100_benchmark_path.exists():
+        missing_inputs.append(f"strict100 benchmark: {strict100_benchmark_path}")
+    if missing_inputs:
+        for missing in missing_inputs:
+            print(f"[tuning] missing required input: {missing}", file=sys.stderr)
+        return 2
+
     output_dir = (ROOT / args.output_root / args.run_date).resolve()
     logs_dir = output_dir / "logs"
     configs_dir = output_dir / "configs"
@@ -470,9 +521,7 @@ def main(argv: list[str] | None = None) -> int:
 
             user64_cmd = _run_benchmark_with_local_server(
                 python_executable=args.python,
-                benchmark_path=(ROOT / args.user64_benchmark).resolve()
-                if not args.user64_benchmark.is_absolute()
-                else args.user64_benchmark,
+                benchmark_path=user64_benchmark_path,
                 output_path=user64_output,
                 logs_dir=logs_dir,
                 trial_id=trial.trial_id,
@@ -492,9 +541,7 @@ def main(argv: list[str] | None = None) -> int:
             if status == "ok" and not args.skip_strict100:
                 strict100_cmd = _run_benchmark_with_local_server(
                     python_executable=args.python,
-                    benchmark_path=(ROOT / args.strict100_benchmark).resolve()
-                    if not args.strict100_benchmark.is_absolute()
-                    else args.strict100_benchmark,
+                    benchmark_path=strict100_benchmark_path,
                     output_path=strict100_output,
                     logs_dir=logs_dir,
                     trial_id=trial.trial_id,

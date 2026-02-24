@@ -31,7 +31,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--report",
         type=Path,
-        default=Path("reports/benchmark_results_user64_baseline.json"),
+        default=Path("reports/benchmark_results_user64_latest.json"),
     )
     parser.add_argument(
         "--output",
@@ -43,6 +43,19 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    if not args.benchmark.exists():
+        raise SystemExit(
+            "Missing benchmark YAML. Run "
+            "`python3 scripts/build_user64_benchmark.py` or pass --benchmark."
+        )
+    if not args.report.exists():
+        raise SystemExit(
+            "Missing benchmark report JSON. Run "
+            "`python3 scripts/run_search_benchmark.py --benchmark "
+            "tests/benchmarks/search_relevance_chatgpt_user64_v1.yaml --base-url "
+            "http://127.0.0.1:8000 --output reports/benchmark_results_user64_latest.json` "
+            "or pass --report."
+        )
 
     benchmark = yaml.safe_load(args.benchmark.read_text(encoding="utf-8"))
     report = json.loads(args.report.read_text(encoding="utf-8"))

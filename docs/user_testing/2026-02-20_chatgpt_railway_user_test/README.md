@@ -21,10 +21,12 @@ These `.txt` files are lossy extracts for engineering triage. The PDF/DOCX origi
 - Recurring failure pattern: generic profile language appears to over-score some unrelated staff across many queries.
 
 ## Related live backlog
-- Canonical Codex task queue: `docs/search_quality_live_todo.md`
+- Canonical task queue: `docs/TODO.md`
 - Existing strict 100-query campaign: `docs/search_quality_improvement_backlog.md`
 
 ## Missing artifact resolution
 - `query_test_expected_vs_actual.csv` was referenced by requester context but was not found in workspace or user home path scans.
 - Replacement export committed at `reports/query_test_expected_vs_actual.csv`.
-- Rebuild command: `python scripts/export_query_test_expected_vs_actual.py`.
+- Rebuild benchmark file: `python3 scripts/build_user64_benchmark.py`.
+- Rebuild export (after generating a fresh user64 benchmark report):
+  `python3 scripts/export_query_test_expected_vs_actual.py --report reports/benchmark_results_user64_latest.json`.

@@ -1,68 +1,52 @@
 ﻿# Repository Guidelines
 
+## Purpose
+This file is the minimum project-specific guidance for agents working in this repo.
+
+## Non-Negotiable Runtime Safety
+1. Wrap long-running commands with an explicit timeout.
+2. On PowerShell, always use:
+   - `Set-ExecutionPolicy -Scope Process Bypass -Force`
+   - `scripts/run_with_timeout.ps1 -TimeoutSec <sec> ...`
+3. If a required input/artifact is missing, mark task `blocked` in `docs/TODO.md` and stop pretending completion.
+
+## Queue Discipline
+1. `docs/TODO.md` is the canonical autonomous work queue.
+2. If instructed to work on tasks listed in `docs/TODO.md`, focus on one primary task per run.
+3. Update `docs/TODO.md` in the same run with:
+   - status transition
+   - bounded command log
+   - output paths
+   - decision (`keep`/`revise`/`revert`)
+   - next task id
+
+## Artifact Hygiene (Do Not Commit)
+- `reports/model_sweeps/`
+- `reports/relevance_tuning/`
+- `reports/worker_*`
+- `app/**/__pycache__/`
+- `data/cache/`
+
+Commit source code, tests, config, and stable benchmark definitions only.
+
+## Product/Domain Guardrails
+- Keep shortlist feature removed (no shortlist UI/API reintroduction).
+- File uploads remain disabled; keep `/analyze-topic` text-only unless explicitly requested.
+- `staff.csv` is the entry point for staff data refresh; propagate via `scripts/update_staff.sh`.
+- Precomputed summaries are loaded from `data/precomputed_summaries.json`; do not add online LLM summary generation in `/match`.
+
+## Search Quality Workflow
+- Strict benchmark: `tests/benchmarks/search_relevance_100_v1.yaml`
+- User-test benchmark: `tests/benchmarks/search_relevance_chatgpt_user64_v1.yaml`
+- Rebuild user64 benchmark file from CSV source:
+  - `python3 scripts/build_user64_benchmark.py`
+
+When editing retrieval/scoring (`app/routes.py`, `app/rag/retriever.py`, `data/app.config.yaml`), run targeted route/retriever tests and at least one bounded benchmark run.
+
+## Useful Commands
+- Tests: `python3 -m pytest`
+- Targeted retrieval tests: `python3 -m pytest tests/test_routes.py tests/test_retriever.py tests/test_config_loader.py`
+- Strict benchmark: `python3 scripts/run_search_benchmark.py --benchmark tests/benchmarks/search_relevance_100_v1.yaml --base-url http://127.0.0.1:8000 --output reports/benchmark_results_100_latest.json`
+
 ## Agent Maintenance
-Codex must automatically update this document whenever its changes introduce, remove, or materially alter guidance that future agents need to follow. Make that edit in the same task so the new expectations are captured immediately. Skip touching `AGENTS.md` for routine prompts that leave the policies and workflows unchanged.
-
-## Execution Safeguards
-- Wrap every potentially long-running shell command (index builds, sync scripts, uvicorn, pytest, etc.) in an explicit timeout so Codex never relies on a human to stop a hung process. Prefer the POSIX `timeout` utility or command-specific flags (e.g., `pytest --maxfail=1 --timeout=900`).
-- On Windows/PowerShell (no POSIX `timeout`), prefer `scripts/run_with_timeout.ps1` to enforce a hard timeout and kill the full process tree; set `Set-ExecutionPolicy -Scope Process Bypass -Force` in the current session before invoking PowerShell scripts.
-- Before launching background servers or loops, document in the task notes how to stop them and enforce an upper bound on runtime (e.g., `timeout 1200 uvicorn ...`).
-- If a tool lacks built-in timeout support, run it via `timeout <seconds> bash -lc "..."` and surface the timeout value in the response so future agents know the guard is active.
-- When writing automation/scripts, bake the timeout policy into the code (e.g., `subprocess.run(..., timeout=300)`), and mention the safeguard in the PR/task summary so reviewers know it exists.
-
-## Project Structure & Module Organization
-Keep feature code under `app/` with `main.py` as the FastAPI entry point and routers in `routes.py`. RAG components should be split between the offline index builder (`app/index/` packages) and the online retriever/orchestrator (`app/rag/` helpers) that power `/match`. Legacy utilities (`match_engine.py`, `llm_explainer.py`, `fetch_utils.py`) remain until fully refactored or wrapped by the new flow. Front-end assets live in `app/static/` (plain HTML/CSS/JS). Configuration, curated data, and generated indexes sit in `data/` (`staff.yaml`, `models.yaml`, `app.config.yaml`, `index/`); treat YAML files as the source of truth. Use `models/` for large model checkpoints. Mirror modules with test files under `tests/`.
-
-The former "Kortliste"/shortlist feature (UI drawer, `/shortlist` API, and export helpers) has been removed. Do not reintroduce shortlist buttons, drawers, or export endpoints; new selection/export work should be designed separately if needed.
-
-File uploads are temporarily disabled. The `/analyze-topic` endpoint now accepts text only (JSON or simple form field). Keep the UI to text-only input; do not re-add file inputs or upload parsing without an explicit product request.
-
-Playwright smoke tests: a portable Node.js toolchain lives under `node-portable/node-v20.18.1-win-x64`. Run smoke tests with that binary and the bundled Playwright CLI, e.g. `node-portable/node-v20.18.1-win-x64/node.exe node_modules/playwright/cli.js test tests/ui_smoke.spec.ts --project=chromium --reporter=line --timeout=120000`. Ensure the FastAPI server is running (e.g., `timeout 1200 uvicorn app.main:app --reload`) before running the smoke; otherwise the test will fail on `page.goto('/')`.
-
-Legacy references labeled "Cristin" point to the same NVA research data; new ingestion lives under `app/index/nva`, and older Cristin-specific files are kept only for historical reference. `staff.csv` is the user-facing source of staff entries; regenerate downstream files via `scripts/update_staff.sh`.
-
-Staff `tags` in `data/staff.yaml` now surface as "Nokkelord" on the results/cards UI and contribute to the RAG score, so keep them descriptive, deduplicated, and localized where possible.
-
-Staff documents fetched from ONH/NVA sources are cached as whole `StaffDocument` objects (see `routes._fetch_staff_documents`) and warmed during FastAPI startup so repeat "Finn relevante ansatte" queries stay responsive. Preserve this cache and update the invalidation rules if you change how sources are assembled. `StaffDocument.combined_text` is capped at roughly 6k characters to keep TF-IDF costs predictable; adjust tests and docs if you tweak that limit.
-
-Citation snippets returned from `/match` now use a theme-aware sentence window and allow up to ~3000 characters (see `routes.CITATION_SNIPPET_LIMIT`) so the LLM receives full chunk context. Avoid shrinking this limit without revalidating match quality.
-For `publication_grounded` queries, citation building now enriches low-overlap NVA snippets with ranked chunk `tags` as `Nokkelord` context (see `routes._augment_citation_snippet_for_publication` and `routes._chunks_to_citations`). Preserve this mode-specific behavior and its tests when adjusting citation logic.
-RAG match scoring now supports `results.overexposure-penalty` in `data/app.config.yaml`, applied in `routes._overexposure_score_penalty` for low-signal profile/staffinfo-heavy matches (with extra publication-mode penalty when NVA evidence is absent). Keep this config-driven and covered by route tests when tuning overexposure behavior.
-
-Language handling
-- `data/app.config.yaml` now contains a `language` block controlling detection, embedding/LLM language modes (`multilingual` vs `en-only`), and the translation backend. Translation is off by default and uses a local/no-op translator unless explicitly enabled.
-- `create_app` attaches `translator` and `language_config` to `app.state`; `routes.match` builds a per-request `LanguageContext` from the `lang` query param or `X-UI-Language`/`X-Language` headers (fallback: `ui.language`).
-- When `llm_language_mode` is `en-only`, snippets/themes are translated to EN before LLM prompts and translated back to the user language if translation is enabled. RAG queries are translated only if `embedding_language_mode` is `en-only`.
-- Staff card summaries are pre-generated offline from `staff_info.json` via `scripts/build_summaries_from_staff_info.py` and loaded from `data/precomputed_summaries.json` at startup. Do not invoke the LLM during search for summaries; regenerate the precomputed file after editing `staff_info.json`.
-
-## Build, Test, and Development Commands
-Default to the python3 command for all scripts/CLI examples on this project (some environments reject python).
-Create a virtual environment before installing dependencies: `python3 -m venv .venv && source .venv/bin/activate`. Install Python packages with `pip install -r requirements.txt` (pins torch 2.3.1+cu118 via `--extra-index-url https://download.pytorch.org/whl/cu118` so Pascal GPUs stay supported; do not bump torch without checking sm_61 coverage). Build or refresh the retrieval index after editing `data/staff.yaml` or source content (`python3 -m app.index.build`). Run the API locally with `uvicorn app.main:app --reload` so the static UI served from `app/static` stays current. Run the full suite with `pytest` (add `--cov=app` before merging). Static assets are plain files in `app/static`-no bundler is needed. The default embedding backend is multilingual SentenceTransformers (`paraphrase-multilingual-MiniLM-L12-v2`) for lower cloud memory usage; keep CUDA-enabled local dependencies in `requirements.txt` for workstation/GPU workflows, or update `data/models.yaml` to another backend (e.g., Ollama) and rebuild the index if you deviate. Leaving `embedding_model.device` empty or set to `auto` now lets the embedder factory auto-detect CUDA (then MPS, then CPU) for both the offline index builder and online retriever-only pin it to `cpu` if you explicitly need to disable accelerators.
-`llm_model` in `data/models.yaml` supports both `ollama` and `groq` backends. For Groq, set `llm_model.backend: groq`, keep the endpoint on `https://api.groq.com/openai/v1` (or compatible), and provide credentials via `llm_model.api-key` or env var `GROQ_API_KEY` (preferred via `llm_model.api-key-env`).
-
-- Railway deploys use `Dockerfile` + `railway.json` at repo root and install runtime dependencies from `requirements.deploy.txt` (lightweight CPU profile). Keep these files aligned with runtime/model changes. Because `data/index` is git-ignored, first deploys run lexical fallback unless index artifacts are explicitly supplied.
-
-- Keep `staff.csv` as the entry point. Run `bash scripts/update_staff.sh [key_file] [base_url]` to refresh `data/staff.yaml`, `data/staff_records.jsonl`, sync NVA publications to `data/nva/results.jsonl`, and rebuild the index. Defaults: `nva_api_keys_test.json`, `https://api.test.nva.aws.unit.no`. API key files are git-ignored; never commit secrets.
-- Run `python3 scripts/audit_staff_data.py` after staff/source edits. The script writes `reports/staff_data_audit.json` and `reports/staff_data_audit.md`; treat unresolved `high` severity findings as release blockers until manually curated.
-- Run `python3 scripts/run_search_benchmark.py --benchmark tests/benchmarks/search_relevance_pilot_v1.yaml` to evaluate retrieval regressions. The benchmark now uses dual modes per query: `publication_grounded` (expects NVA-backed evidence) and `profile_grounded` (profile evidence allowed; staffinfo fallback only).
-- The strict 100-query improvement campaign is tracked in `docs/search_quality_improvement_backlog.md`. If you work on any step in that campaign, update the plan doc in the same task with status, command log (with timeout values), benchmark output path, and metric deltas so a fresh chat can continue without re-discovery.
-- The Railway user-test driven queue is tracked in `docs/TODO.md`, with source artifacts in `docs/user_testing/2026-02-20_chatgpt_railway_user_test/`. If you work on tasks from that queue, update `docs/TODO.md` in-task with status changes, touched files, bounded command log, and benchmark deltas.
-- If `app.index.refresh_staff` is run without a working NVA API key/snapshot set, NVA profile links in `data/staff.yaml` may not resolve. Prefer providing API credentials/snapshots before refresh, or explicitly confirm this downgrade with the requester.
-- Profile `/match` hot spots with `python3 scripts/profile_match.py ...` (see `docs/performance_profiling.md`). The script reuses the production helpers and records per-stage timings (NVA merge, TF-IDF, embeddings, LLM explainer) so we can justify performance tweaks before merging.
-
-You have access to the mpc tool context7. Use it for documentation lookup whenever that would be beneficial to solving a task. 
-
-## Coding Style & Naming Conventions
-Follow PEP 8 with `black` (line length 88) and validate imports/order with `ruff` (`ruff check app tests`). Use type hints for new Python functions. Modules and files are snake_case; classes are PascalCase; constants are UPPER_SNAKE_CASE. Keep JavaScript in `app/static/app.js` formatted with Prettier (2-space indent). Configuration keys in YAML are lower-case kebab-case to match existing examples.
-
-## Testing Guidelines
-Write unit tests with `pytest` and `pytest-asyncio` for async endpoints. Name tests after the module under test (e.g., `tests/test_match_engine.py::test_rank_ordering`). Back RAG features with fixtures referencing `data/staff.yaml` and seeding a lightweight index under a temp directory. Maintain ≥85% coverage on `app/` and cover the `/match` route in integration tests, ensuring retrieved passages and explanations remain grounded. Use temporary directories when touching cache or index paths.
-
-## Commit & Pull Request Guidelines
-Adopt Conventional Commits (`feat:`, `fix:`, `docs:`) and limit subject lines to 72 characters. Reference relevant config or spec files (e.g., `ONH_Expert_Connector_Structure.txt`) in the body. Each PR should describe functional changes, list config updates, and add screenshots or JSON snippets for UI or export tweaks. Request review only when CI (lint + tests) is green and include a checklist confirming cache, data, and security settings were considered.
-
-## Security & Configuration Tips
-Never add external domains to `data/app.config.yaml` without approval; keep `allowlist_domains` tight. Store staff metadata solely in `data/staff.yaml` and cite their public sources. File uploads are disabled; if re-enabled, scrub uploads in `fetch_utils.py` for unsupported MIME types and enforce the `max_upload_mb` guardrails. Rotate cache contents by respecting `retention_days`, and document experimental model changes inside `models/README.txt`.
-For Groq/API-backed LLM usage, never commit API secrets to `data/models.yaml`; prefer environment variables (default: `GROQ_API_KEY`) or local secret injection in the runtime environment.
-
-If future agents detect that the NVA search endpoints have stopped responding, assume the service may have been deprecated and immediately notify the requester. Suggest rebuilding the integration against the latest NVA REST API as a fallback.
+If you change operational workflow/policy for future agents, update this file in the same task.

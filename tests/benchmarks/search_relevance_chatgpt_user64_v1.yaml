@@ -1,0 +1,1018 @@
+version: search_relevance_chatgpt_user64_v1
+description: 64-query benchmark derived from the ChatGPT user-test empirical table.
+  Use for ranking/regression checks against the user-test query set.
+source_snapshot:
+  source_csv: reports/query_test_expected_vs_actual.csv
+global_rules:
+  default_top_k: 10
+  default_min_query_term_overlap_per_citation: 1
+  require_citation_for_must_include: true
+queries:
+- id: U001
+  domain: Psykologi
+  difficulty: easy
+  query_text: beslutningspsykologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Eirik Kjelstrup
+    should_include:
+    - Tore Pedersen
+    hard_exclude: []
+- id: U002
+  domain: Psykologi
+  difficulty: hard
+  query_text: arbeidsmiljø og hybridarbeid
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Linda Mari Seem Sundvik
+    should_include:
+    - Anniken Grønstad
+    - Ingvild Sagberg
+    - Mona Berthelsen
+    hard_exclude: []
+- id: U003
+  domain: Psykologi
+  difficulty: hard
+  query_text: kommunikasjonstrening
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kristin Kloster
+    should_include: []
+    hard_exclude: []
+- id: U004
+  domain: Psykologi
+  difficulty: medium
+  query_text: open science
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Peder Mortvedt Isager
+    should_include: []
+    hard_exclude: []
+- id: U005
+  domain: Psykologi
+  difficulty: medium
+  query_text: cognitive remediation therapy
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Camilla Lindvall Dahlgren
+    should_include: []
+    hard_exclude: []
+- id: U006
+  domain: Psykologi
+  difficulty: medium
+  query_text: biologisk psykologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Magnus Helgheim Blystad
+    should_include: []
+    hard_exclude: []
+- id: U007
+  domain: Psykologi
+  difficulty: medium
+  query_text: AI i utdanning
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Eirik Kjelstrup
+    should_include: []
+    hard_exclude: []
+- id: U008
+  domain: Psykologi
+  difficulty: hard
+  query_text: alkoholmisbruk ungdom
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anne Kjeldsen
+    should_include: []
+    hard_exclude: []
+- id: U009
+  domain: Psykologi
+  difficulty: hard
+  query_text: kritisk psykologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Erik Nakkerud
+    should_include:
+    - Sandra Gabrielsen
+    - Joshua Phelps
+    hard_exclude: []
+- id: U010
+  domain: Psykologi
+  difficulty: hard
+  query_text: kognitiv atferdsterapi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Camilla Lindvall Dahlgren
+    should_include: []
+    hard_exclude: []
+- id: U011
+  domain: Psykologi
+  difficulty: medium
+  query_text: klinisk psykologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Camilla Lindvall Dahlgren
+    should_include:
+    - Anne Kjeldsen
+    - Helene Faksvåg
+    - Sigrid Skeide
+    hard_exclude: []
+- id: U012
+  domain: Psykologi
+  difficulty: easy
+  query_text: motivasjon
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Eirik Kjelstrup
+    should_include: []
+    hard_exclude: []
+- id: U013
+  domain: Psykologi
+  difficulty: hard
+  query_text: beslutningsbias
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Eirik Kjelstrup
+    should_include:
+    - Tore Pedersen
+    hard_exclude: []
+- id: U014
+  domain: Psykologi
+  difficulty: easy
+  query_text: arbeidspsykologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Mona Berthelsen
+    should_include:
+    - Linda Mari Seem Sundvik
+    - Brita Bjørkelo
+    hard_exclude: []
+- id: U015
+  domain: Psykologi
+  difficulty: easy
+  query_text: utenforskap
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include: []
+    should_include: []
+    hard_exclude: []
+- id: U016
+  domain: Psykologi
+  difficulty: easy
+  query_text: hms
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anniken Grønstad
+    should_include: []
+    hard_exclude: []
+- id: U017
+  domain: Psykologi
+  difficulty: hard
+  query_text: teambygging
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Linda Mari Seem Sundvik
+    should_include:
+    - Mona Berthelsen
+    hard_exclude: []
+- id: U018
+  domain: Psykologi
+  difficulty: hard
+  query_text: stress og høyaktivitet
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Eirik Kjelstrup
+    should_include:
+    - Mona Berthelsen
+    hard_exclude: []
+- id: U019
+  domain: Psykologi
+  difficulty: hard
+  query_text: arbeidskonflikter
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anniken Grønstad
+    should_include:
+    - Mona Berthelsen
+    hard_exclude: []
+- id: U020
+  domain: Psykologi
+  difficulty: easy
+  query_text: digitalisering
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kateryna Reiby
+    should_include:
+    - Johan Bergh
+    hard_exclude: []
+- id: U021
+  domain: Psykologi
+  difficulty: medium
+  query_text: endringsledelse
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Johan Bergh
+    should_include:
+    - Sandra Gabrielsen
+    hard_exclude: []
+- id: U022
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: bedriftsøkonomi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Christian Wolff
+    should_include: []
+    hard_exclude: []
+- id: U023
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: forbrukeratferd
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anders Hauge Wien
+    should_include:
+    - Kateryna Reiby
+    - Cathrine Lilleløkken
+    hard_exclude: []
+- id: U024
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: prosjektledelse
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Johan Bergh
+    should_include:
+    - Kateryna Reiby
+    hard_exclude: []
+- id: U025
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: personalledelse
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Anniken Grønstad
+    should_include: []
+    hard_exclude: []
+- id: U026
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: digital markedsføring
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Cathrine Lilleløkken
+    should_include:
+    - Anders Hauge Wien
+    hard_exclude: []
+- id: U027
+  domain: Psykologi
+  difficulty: easy
+  query_text: strategisk planlegging
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kateryna Reiby
+    should_include:
+    - Melissa Malka Busch‑Christensen
+    hard_exclude: []
+- id: U028
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: finans
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Fredrik Harboe
+    should_include: []
+    hard_exclude: []
+- id: U029
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: regnskap
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Christian Wolff
+    should_include: []
+    hard_exclude: []
+- id: U030
+  domain: Helsefag
+  difficulty: easy
+  query_text: anatomi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Stian Walle Larsen
+    should_include:
+    - Suvi Sagbraaten
+    hard_exclude: []
+- id: U031
+  domain: Helsefag
+  difficulty: easy
+  query_text: cellebiologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Elin Lund Transeth
+    should_include:
+    - Ulrike Liisberg
+    - Henriette Marstein
+    hard_exclude: []
+- id: U032
+  domain: Helsefag
+  difficulty: easy
+  query_text: biokjemi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Øyvind Jacobsen
+    should_include:
+    - Elin Sørli Kildahl
+    - Henriette Marstein
+    hard_exclude: []
+- id: U033
+  domain: Helsefag
+  difficulty: medium
+  query_text: diabetes
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Dagfinn Aune
+    should_include: []
+    hard_exclude: []
+- id: U034
+  domain: Helsefag
+  difficulty: medium
+  query_text: epidemiologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Dagfinn Aune
+    should_include: []
+    hard_exclude: []
+- id: U035
+  domain: Helsefag
+  difficulty: medium
+  query_text: ernæring
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Dagfinn Aune
+    should_include:
+    - Ella Marie Heyerdahl
+    - Evelina Svensson
+    hard_exclude: []
+- id: U036
+  domain: Helsefag
+  difficulty: easy
+  query_text: farmakologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Suvi Sagbraaten
+    should_include: []
+    hard_exclude: []
+- id: U037
+  domain: Helsefag
+  difficulty: medium
+  query_text: fysioterapi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Stian Walle Larsen
+    should_include:
+    - Johanne Fredrikke Berg
+    - Ingrid Aas Vissheim
+    hard_exclude: []
+- id: U038
+  domain: Helsefag
+  difficulty: easy
+  query_text: immunologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Henriette Marstein
+    should_include: []
+    hard_exclude: []
+- id: U039
+  domain: Helsefag
+  difficulty: hard
+  query_text: graviditetstrening
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Stian Walle Larsen
+    should_include:
+    - Ingrid Aas Vissheim
+    hard_exclude: []
+- id: U040
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: amerikansk politikk
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Hilde Eliassen Restad
+    should_include: []
+    hard_exclude: []
+- id: U041
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: humanitærrett
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjersti Skarstad
+    should_include: []
+    hard_exclude: []
+- id: U042
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: spionasje
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Stig Stenslie
+    should_include: []
+    hard_exclude: []
+- id: U043
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: Afrikas Horn
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjetil Tronvoll
+    should_include: []
+    hard_exclude: []
+- id: U044
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: radikalisering
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Henrik Syse
+    should_include:
+    - Nik Brandal
+    hard_exclude: []
+- id: U045
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: FN
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjersti Skarstad
+    should_include: []
+    hard_exclude: []
+- id: U046
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: komparativ politikk
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Jonas Bergan Dræge
+    should_include:
+    - Henry Allen
+    hard_exclude: []
+- id: U047
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: demokratisering
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjetil Tronvoll
+    should_include: []
+    hard_exclude: []
+- id: U048
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: fred og konflikt
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Henrik Syse
+    should_include:
+    - Kjetil Tronvoll
+    hard_exclude: []
+- id: U049
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: diplomati
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjetil Tronvoll
+    should_include:
+    - Hilde Eliassen Restad
+    hard_exclude: []
+- id: U050
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: bistand
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Torstein Dale‑Åkerlund
+    should_include: []
+    hard_exclude: []
+- id: U051
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: hard
+  query_text: autoritaere regimer
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjetil Tronvoll
+    should_include:
+    - Stig Stenslie
+    hard_exclude: []
+- id: U052
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: medium
+  query_text: menneskerettigheter
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kjersti Skarstad
+    should_include:
+    - Bernt Hagtvet
+    hard_exclude: []
+- id: U053
+  domain: Statsvitenskap og internasjonale relasjoner
+  difficulty: easy
+  query_text: folkemord
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Nik. Brandal
+    should_include:
+    - Bernt Hagtvet
+    hard_exclude: []
+- id: U054
+  domain: Psykologi
+  difficulty: hard
+  query_text: sosialpsykologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Erik Carlquist
+    should_include: []
+    hard_exclude: []
+- id: U055
+  domain: Psykologi
+  difficulty: hard
+  query_text: ledelsespsykologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Linda Mari Seem Sundvik
+    should_include:
+    - Mona Berthelsen
+    hard_exclude: []
+- id: U056
+  domain: Psykologi
+  difficulty: easy
+  query_text: kvantitativ metode
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Mona Berthelsen
+    should_include:
+    - Peder Mortvedt Isager
+    hard_exclude: []
+- id: U057
+  domain: Psykologi
+  difficulty: hard
+  query_text: stressmestring
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Eirik Kjelstrup
+    should_include:
+    - Mona Berthelsen
+    hard_exclude: []
+- id: U058
+  domain: Helsefag
+  difficulty: easy
+  query_text: fysiologi
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Suvi Sagbraaten
+    should_include:
+    - Stian Walle Larsen
+    hard_exclude: []
+- id: U059
+  domain: Helsefag
+  difficulty: medium
+  query_text: kosthold for barn
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Ella Marie Heyerdahl
+    should_include:
+    - Dagfinn Aune
+    hard_exclude: []
+- id: U060
+  domain: Helsefag
+  difficulty: easy
+  query_text: livsstilssykdommer
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Ella Marie Heyerdahl
+    should_include:
+    - Evelina Svensson
+    hard_exclude: []
+- id: U061
+  domain: Helsefag
+  difficulty: hard
+  query_text: styrketrening
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Stian Walle Larsen
+    should_include: []
+    hard_exclude: []
+- id: U062
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: merkevareledelse
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Cathrine Lilleløkken
+    should_include:
+    - Melissa Malka Busch‑Christensen
+    hard_exclude: []
+- id: U063
+  domain: Økonomi og administrasjon
+  difficulty: easy
+  query_text: kampanjeplanlegging
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Cathrine Lilleløkken
+    should_include:
+    - Anders Hauge Wien
+    hard_exclude: []
+- id: U064
+  domain: Økonomi og administrasjon
+  difficulty: medium
+  query_text: KI i markedsføring
+  query_mode: profile_grounded
+  required_source_kinds:
+  - profile
+  - staffinfo
+  citation_overlap_rules:
+    min_query_term_overlap_per_citation: 1
+  expected:
+    must_include:
+    - Kateryna Reiby
+    should_include:
+    - Anders Hauge Wien
+    hard_exclude: []
+overexposure_controls: []

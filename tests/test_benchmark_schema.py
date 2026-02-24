@@ -8,6 +8,11 @@ import yaml
 BENCHMARK_PATHS = [
     Path("tests/benchmarks/search_relevance_pilot_v1.yaml"),
     Path("tests/benchmarks/search_relevance_100_v1.yaml"),
+    Path("tests/benchmarks/search_relevance_chatgpt_user64_v1.yaml"),
+]
+PUBLICATION_BENCHMARK_PATHS = [
+    Path("tests/benchmarks/search_relevance_pilot_v1.yaml"),
+    Path("tests/benchmarks/search_relevance_100_v1.yaml"),
 ]
 
 
@@ -28,7 +33,7 @@ def test_search_benchmark_dual_mode_schema() -> None:
 
 
 def test_publication_grounded_queries_require_nva_source() -> None:
-    for path in BENCHMARK_PATHS:
+    for path in PUBLICATION_BENCHMARK_PATHS:
         payload = yaml.safe_load(path.read_text(encoding="utf-8"))
         queries = payload.get("queries") or []
 
